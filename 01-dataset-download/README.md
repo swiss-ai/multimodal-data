@@ -63,7 +63,7 @@ The download process uses **two separate cache locations** both can be configure
 - Your team might have a central cache location for datasets and the hf hub files. Set the cache paths accordingly.
 - Especially for large files and datasets its recommended to use a cache location on the cluster filesystems (ex. capstor on alps)
 - Ex. for vision datasets we use:
-  - `CACHE_DIR=/capstor/store/cscs/swissai/infra01/vision-datasets/hf_cache` 
+  - `CACHE_DIR=/capstor/store/cscs/swissai/infra01/vision-datasets/hf_datasets_cache` 
   - `HF_HUB_CACHE=/capstor/store/cscs/swissai/infra01/vision-datasets/hf_hub_cache`
 
 **Setting the cache location example:**
@@ -124,6 +124,7 @@ This script is specific to Alps cluster so best check the paths and configuratio
 - `BACKOFF_FACTOR`: Backoff multiplier (default: 1.2)
 - `FORCE_REDOWNLOAD`: Re-download if cached (default: false)
 - `USE_HF_TRANSFER`: Enable fast transfer of actual downloads (default: false, bypasses retry logic)
+- `CLUSTER_REPO_HOME`: Defaults to `SLURM_SUBMIT_DIR`, must point to location of this repository in the cluster environment
 
 **Example:**
 ```bash

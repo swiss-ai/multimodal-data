@@ -36,6 +36,7 @@
 #   BACKOFF_FACTOR   - Exponential backoff multiplier (default: 1.2)
 #   USE_HF_TRANSFER  - Use hf_transfer for faster downloads (default: false)
 #                      WARNING: Bypasses HTTP retry logic on download/resolve
+#   CLUSTER_REPO_HOME - defaults to $SLURM_SUBMIT_DIR, must point to location of repository in the cluster env
 #
 # EXAMPLES:
 #   sbatch download_dataset_hf.slurm laion_gpt4v
@@ -56,13 +57,14 @@
 DATASET_NAME="${DATASET_NAME:-mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M}"
 SUBSET_NAME="${SUBSET_NAME:-$1}"  # Use first argument if SUBSET_NAME not set
 SPLIT="${SPLIT:-train}"
-CACHE_DIR="${CACHE_DIR:-}"
+CACHE_DIR="${CACHE_DIR:-${HOME}/.cache/huggingface/datasets}"
 FORCE_REDOWNLOAD="${FORCE_REDOWNLOAD:-false}"
 NUM_PROC="${NUM_PROC:-auto}"
 MAX_RETRIES="${MAX_RETRIES:-10}"
 BACKOFF_FACTOR="${BACKOFF_FACTOR:-1.2}"
 USE_HF_TRANSFER="${USE_HF_TRANSFER:-false}"
 HF_HUB_CACHE="${HF_HUB_CACHE:-${HOME}/.cache/huggingface/hub}"
+CLUSTER_REPO_HOME="${CLUSTER_MOME:-$SLURM_SUBMIT_DIR}" # directory where to find this repository
 
 # Auto-detect number of processes if set to "auto"
 if [ "$NUM_PROC" = "auto" ]; then
@@ -79,12 +81,6 @@ if [ "$NUM_PROC" = "auto" ]; then
     fi
 fi
 
-# Create log directory
-mkdir -p /iopsstor/scratch/cscs/$USER/multimodal-data/01-dataset-download/logs
-
-# Set threading per process for openMP enabled libs
-export OMP_NUM_THREADS=1
-
 # ========================================
 # Display Configuration
 # ========================================
@@ -92,6 +88,7 @@ export OMP_NUM_THREADS=1
 echo "=========================================="
 echo "HuggingFace Dataset Download Job"
 echo "=========================================="
+echo "Repo-Root: $CLUSTER_REPO_HOME"
 echo "Job ID: $SLURM_JOB_ID"
 echo "Node: $SLURM_NODELIST"
 echo "CPUs: $NUM_PROC"
@@ -118,7 +115,10 @@ echo "=========================================="
 
 # Create cache directory
 mkdir -p "$CACHE_DIR"
-
+# Create log directory
+mkdir -p $CLUSTER_REPO_HOME/01-dataset-download/logs
+# Set threading per process for openMP enabled libs
+export OMP_NUM_THREADS=1
 
 # ========================================
 # Python Environment Setup
@@ -127,12 +127,9 @@ mkdir -p "$CACHE_DIR"
 echo ""
 echo "Setting up Python environment..."
 
-# Get the directory where this script is located
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 # Install all required packages from requirements.txt
 echo "Installing required packages from requirements.txt..."
-pip install -q -r "${SCRIPT_DIR}/requirements.txt"
+pip install -q -r "${CLUSTER_REPO_HOME}/01-dataset-download/requirements.txt"
 
 if [ $? -eq 0 ]; then
     echo "  ✓ All packages installed successfully"
@@ -211,7 +208,7 @@ echo ""
 echo "Starting dataset download..."
 echo ""
 
-PYTHON_CMD="python3 /iopsstor/scratch/cscs/${USER}/multimodal-data/01-dataset-download/download_hf_dataset.py \
+PYTHON_CMD="python3 $CLUSTER_REPO_HOME/01-dataset-download/download_hf_dataset.py \
     --dataset-name \"${DATASET_NAME}\" \
     --cache-dir \"${CACHE_DIR}\" \
     --num-proc ${NUM_PROC} \
