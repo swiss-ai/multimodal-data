@@ -4,8 +4,9 @@ This repository contains the code, scripts and configurations to download and pr
 
 ## 01 dataset-download
 
-This folder contains
-- robust download script for huggingface datasets (+ slurm script)
-- util to check the hf hub cache for corruption
+This folder contains:
+- Robust download script for HuggingFace datasets (+ SLURM script)
+- Util to check the HF hub cache for corruption
+- **Important**: Configure cache directories (HF datasets cache and HF Hub cache) correctly (see subfolder README)
 
-Check the respective sub ReadMe for more details.
+Check the respective sub README for more details.

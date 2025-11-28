@@ -24,19 +24,26 @@
 #                      (default: $1, use "" for auto-detect all configs)
 #   SPLIT            - Dataset split (default: train) - NOTE: Currently ignored,
 #                      all splits are downloaded by download_and_prepare()
-#   CACHE_DIR        - Cache path (default: /capstor/.../hf_cache)
+#   CACHE_DIR        - Datasets cache path for processed datasets
+#                      (default: /capstor/.../hf_cache)
+#   HF_HUB_CACHE     - HuggingFace Hub cache path for raw downloads
+#                      (default: ~/.cache/huggingface/hub)
+#                      IMPORTANT: Set this for large datasets or when using
+#                      central cluster cache to avoid filling home directory
 #   NUM_PROC         - Download processes (default: auto = CPUs available)
 #   FORCE_REDOWNLOAD - Re-download if cached (default: false)
 #   MAX_RETRIES      - Maximum retry attempts on failure (default: 10)
 #   BACKOFF_FACTOR   - Exponential backoff multiplier (default: 1.2)
 #   USE_HF_TRANSFER  - Use hf_transfer for faster downloads (default: false)
 #                      WARNING: Bypasses HTTP retry logic on download/resolve
+#   CLUSTER_REPO_HOME - defaults to $SLURM_SUBMIT_DIR, must point to location of repository in the cluster env
 #
 # EXAMPLES:
 #   sbatch download_dataset_hf.slurm laion_gpt4v
 #   DATASET_NAME="google/docci" sbatch download_dataset_hf.slurm ""
 #   SUBSET_NAME="ParaphraseRC,SelfRC" sbatch download_dataset_hf.slurm
 #   CACHE_DIR="/custom/path" sbatch download_dataset_hf.slurm ocrvqa
+#   HF_HUB_CACHE="/capstor/cache/hf_hub" sbatch download_dataset_hf.slurm ocrvqa
 #   NUM_PROC=64 sbatch download_dataset_hf.slurm lvis_instruct4v
 #   MAX_RETRIES=20 BACKOFF_FACTOR=1.5 sbatch download_dataset_hf.slurm ocrvqa
 #   USE_HF_TRANSFER=true sbatch download_dataset_hf.slurm ocrvqa
@@ -50,12 +57,14 @@
 DATASET_NAME="${DATASET_NAME:-mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M}"
 SUBSET_NAME="${SUBSET_NAME:-$1}"  # Use first argument if SUBSET_NAME not set
 SPLIT="${SPLIT:-train}"
-CACHE_DIR="${CACHE_DIR:-/capstor/store/cscs/swissai/infra01/vision-datasets/hf_cache}"
+CACHE_DIR="${CACHE_DIR:-${HOME}/.cache/huggingface/datasets}"
 FORCE_REDOWNLOAD="${FORCE_REDOWNLOAD:-false}"
 NUM_PROC="${NUM_PROC:-auto}"
 MAX_RETRIES="${MAX_RETRIES:-10}"
 BACKOFF_FACTOR="${BACKOFF_FACTOR:-1.2}"
 USE_HF_TRANSFER="${USE_HF_TRANSFER:-false}"
+HF_HUB_CACHE="${HF_HUB_CACHE:-${HOME}/.cache/huggingface/hub}"
+CLUSTER_REPO_HOME="${CLUSTER_MOME:-$SLURM_SUBMIT_DIR}" # directory where to find this repository
 
 # Auto-detect number of processes if set to "auto"
 if [ "$NUM_PROC" = "auto" ]; then
@@ -72,12 +81,6 @@ if [ "$NUM_PROC" = "auto" ]; then
     fi
 fi
 
-# Create log directory
-mkdir -p /iopsstor/scratch/cscs/$USER/multimodal-data/01-dataset-download/logs
-
-# Set threading per process for openMP enabled libs
-export OMP_NUM_THREADS=1
-
 # ========================================
 # Display Configuration
 # ========================================
@@ -85,6 +88,7 @@ export OMP_NUM_THREADS=1
 echo "=========================================="
 echo "HuggingFace Dataset Download Job"
 echo "=========================================="
+echo "Repo-Root: $CLUSTER_REPO_HOME"
 echo "Job ID: $SLURM_JOB_ID"
 echo "Node: $SLURM_NODELIST"
 echo "CPUs: $NUM_PROC"
@@ -94,7 +98,14 @@ echo "Configuration:"
 echo "  Dataset:          $DATASET_NAME"
 echo "  Subset:           ${SUBSET_NAME:-<none>}"
 echo "  Split:            $SPLIT"
-echo "  Cache Directory:  $CACHE_DIR"
+echo ""
+echo "Cache Locations:"
+echo "  Datasets Cache:   $CACHE_DIR"
+echo "                    (Processed datasets, ready for use)"
+echo "  HF Hub Cache:     $HF_HUB_CACHE"
+echo "                    (Raw downloads from HuggingFace Hub)"
+echo ""
+echo "Download Settings:"
 echo "  Num Processes:    $NUM_PROC"
 echo "  Force Redownload: $FORCE_REDOWNLOAD"
 echo "  Max Retries:      $MAX_RETRIES"
@@ -104,18 +115,43 @@ echo "=========================================="
 
 # Create cache directory
 mkdir -p "$CACHE_DIR"
+# Create log directory
+mkdir -p $CLUSTER_REPO_HOME/01-dataset-download/logs
+# Set threading per process for openMP enabled libs
+export OMP_NUM_THREADS=1
 
-# Function to convert dataset name to HuggingFace cache folder name
-# HF replaces '/' with '___' (three underscores) in dataset names
+# ========================================
+# Python Environment Setup
+# ========================================
+
+echo ""
+echo "Setting up Python environment..."
+
+# Install all required packages from requirements.txt
+echo "Installing required packages from requirements.txt..."
+pip install -q -r "${CLUSTER_REPO_HOME}/01-dataset-download/requirements.txt"
+
+if [ $? -eq 0 ]; then
+    echo "  ✓ All packages installed successfully"
+else
+    echo "  ✗ Package installation failed!"
+    exit 1
+fi
+
+echo "Environment setup complete"
+
+# Convert hf datasets identifier to cache name
+hf_dataset_to_cache_name() {
+    python3 -c "from datasets.naming import camelcase_to_snakecase as c; n='$1'; print((n.split('/')[0]+'___'+c(n.split('/')[1])) if '/' in n else c(n))"
+}
+
 get_hf_dataset_cache_path() {
     local dataset_name="$1"
     local subset_name="$2"
     local cache_dir="$3"
 
-    # Sanitize dataset name: replace '/' with '___'
-    local sanitized_name="${dataset_name//\//___}"
+    local sanitized_name=$(hf_dataset_to_cache_name "$dataset_name")
 
-    # Build path: cache_dir/sanitized_name/subset_name (if subset exists)
     if [ -n "$subset_name" ]; then
         echo "${cache_dir}/${sanitized_name}/${subset_name}"
     else
@@ -123,11 +159,9 @@ get_hf_dataset_cache_path() {
     fi
 }
 
-# Clean stale lock files (only within this specific dataset's directory)
 echo ""
 echo "Cleaning up stale lock files for this dataset..."
 
-# Get the dataset-specific cache path
 DATASET_CACHE_PATH=$(get_hf_dataset_cache_path "$DATASET_NAME" "$SUBSET_NAME" "$CACHE_DIR")
 echo "Dataset cache path: $DATASET_CACHE_PATH"
 
@@ -146,47 +180,6 @@ else
     echo "  Skipping lock file cleanup"
 fi
 
-# ========================================
-# Python Environment Setup
-# ========================================
-
-echo ""
-echo "Setting up Python environment..."
-
-# Function to check if package is installed with correct version
-check_and_install_package() {
-    local package_name="$1"
-    local required_version="$2"
-
-    # Check if package exists and get its version
-    installed_version=$(python3 -c "import $package_name; print($package_name.__version__)" 2>/dev/null)
-
-    if [ $? -eq 0 ] && [ "$installed_version" = "$required_version" ]; then
-        echo "  ✓ $package_name $installed_version (already installed)"
-    else
-        if [ -n "$installed_version" ]; then
-            echo "  ⚠ $package_name $installed_version → $required_version (updating...)"
-        else
-            echo "  ✗ $package_name not found (installing $required_version...)"
-        fi
-        # Install with quiet flag (-q suppresses most output, shows only warnings/errors)
-        pip install -q "${package_name}==${required_version}"
-        if [ $? -eq 0 ]; then
-            echo "    Installed successfully"
-        else
-            echo "    ⚠ Installation failed!"
-            return 1
-        fi
-    fi
-}
-
-# Check and install each package individually
-echo "Checking required packages..."
-check_and_install_package "datasets" "3.2.0"
-check_and_install_package "hf_transfer" "0.1.8"
-check_and_install_package "huggingface_hub" "0.26.2"
-echo "Environment setup complete"
-
 # Configure HF transfer and caching
 if [ "$USE_HF_TRANSFER" = "true" ]; then
     echo ""
@@ -204,16 +197,18 @@ fi
 # Xet Cache does not have benefit on first time download
 unset HF_HUB_ENABLE_XET_CACHE
 
+# Export HF_HUB_CACHE so Python scripts inherit it
+export HF_HUB_CACHE
+
+
 # ========================================
 # Download Dataset using Builder
 # ========================================
 echo ""
-echo "Starting dataset download (builder mode)..."
+echo "Starting dataset download..."
 echo ""
 
-
-# Build the Python command with arguments
-PYTHON_CMD="python3 /iopsstor/scratch/cscs/${USER}/multimodal-data/01-dataset-download/download_hf_dataset.py \
+PYTHON_CMD="python3 $CLUSTER_REPO_HOME/01-dataset-download/download_hf_dataset.py \
     --dataset-name \"${DATASET_NAME}\" \
     --cache-dir \"${CACHE_DIR}\" \
     --num-proc ${NUM_PROC} \

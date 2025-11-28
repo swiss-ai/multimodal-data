@@ -1,0 +1,14 @@
+# HuggingFace Dataset Download Scripts - Dependencies
+# Minimum required versions for dataset download and cache verification scripts
+
+# HuggingFace packages - CRITICAL: Must cap huggingface_hub <1.0.0
+huggingface_hub>=0.16.0,<1.0.0  # configure_http_backend removed in 1.0.0
+datasets>=2.14.0                # Dataset loading and preparation
+hf_transfer>=0.1.0              # Optional: faster downloads
+
+# HTTP and retry logic
+requests>=2.28.0                # HTTP session with security fixes
+urllib3>=1.26.0                 # Retry mechanism
+
+# Utilities
+tqdm>=4.64.0                    # Progress bars for cache check
