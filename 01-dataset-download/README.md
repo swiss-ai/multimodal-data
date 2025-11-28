@@ -12,7 +12,7 @@ skipping already-downloaded configs.
 
 **What it does:**
 - Downloads datasets from HuggingFace Hub with configurable retry logic
-- Auto-detects and downloads all dataset configurations when subset not specified
+- If subset not specified - Auto-detects and downloads all dataset configurations
 - Skips already-cached configurations automatically
 - Supports parallel downloads with configurable workers
 - Provides detailed error reports for failed downloads
@@ -26,12 +26,45 @@ skipping already-downloaded configs.
 - `--backoff-factor`: Exponential backoff multiplier (default: 1.0)
 - `--force-redownload`: Force re-download even if cached
 
+**Cache Configuration:**
+
+The download process uses **two separate cache locations** both can be configured:
+
+1. **HF Hub Cache (`HF_HUB_CACHE`)**:
+   - Stores raw files downloaded from HuggingFace Hub
+   - Default: `~/.cache/huggingface/hub`
+   - These are the original files before any processing
+
+2. **Datasets Cache (`CACHE_DIR`)**:
+   - Stores processed datasets ready for use
+   - Must be specified via `--cache-dir` parameter
+   - These are the files after `download_and_prepare()` processing
+
+**Consideration son clusters like clariden**
+- Your team might have a central cache location for datasets and the hf hub files. Set the cache paths accordingly.
+- Especially for large files and datasets its recommended to use a cache location on the cluster filesystems (ex. capstor on alps)
+- Ex. for vision datasets we use:
+  - `CACHE_DIR=/capstor/store/cscs/swissai/infra01/vision-datasets/hf_cache` 
+  - `HF_HUB_CACHE=/capstor/store/cscs/swissai/infra01/vision-datasets/hf_hub_cache`
+
+**Setting the cache location example:**
+```bash
+# Set custom hub cache location for large downloads
+export HF_HUB_CACHE="/capstor/cache/hf_hub"
+python download_hf_dataset.py --dataset-name "..." --cache-dir "/path/to/cache"
+
+# Or inline:
+HF_HUB_CACHE="/capstor/cache/hf_hub" python download_hf_dataset.py ...
+```
+
+If `HF_HUB_CACHE` is not set, HuggingFace libraries default to `~/.cache/huggingface/hub`.
+
 **Tips/Useful Knowledge:**
 - When network is unstable (use higher `--max-retries` and `--backoff-factor`)
 - Hf datasets are first downloaded by the huggingface hub and then processed by hf datasets library.
 - If an error occurs during processing after download, it might be that the cache is corrupted (can happen especially with large datasets on the distributed filesystem)
 - In such case, run the hf_hub_cache_check provided to make sure the cache is valid
-- The retry logic doesn't overwhelm the hub api, it respects retry-after headers and waits for the specified time before retrying - you will not be blocked ;) 
+- The retry logic doesn't overwhelm the hub api, it respects retry-after headers and waits for the specified time before retrying - you will not be blocked ;)
 
 **Example:**
 ```bash
@@ -65,7 +98,8 @@ This script is specific to Alps cluster so best check the paths and configuratio
 **Configuration via environment variables:**
 - `DATASET_NAME`: HF dataset repo (default: mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M)
 - `SUBSET_NAME`: Dataset config(s) or use `""` to auto-detect all
-- `CACHE_DIR`: Cache path (default: /capstor/store/cscs/swissai/infra01/vision-datasets/hf_cache)
+- `CACHE_DIR`: Datasets cache path for processed datasets (default: /capstor/store/cscs/swissai/infra01/vision-datasets/hf_cache)
+- `HF_HUB_CACHE`: HuggingFace Hub cache path for raw downloads (default: ~/.cache/huggingface/hub) - IMPORTANT for large datasets
 - `NUM_PROC`: Download workers (default: auto = half of CPUs)
 - `MAX_RETRIES`: Max retry attempts for each specific http download request (default: 10)
 - `BACKOFF_FACTOR`: Backoff multiplier (default: 1.2)
@@ -79,6 +113,9 @@ sbatch download_hf_dataset.slurm
 
 # Override dataset
 DATASET_NAME="google/docci" sbatch download_hf_dataset.slurm ""
+
+# Set custom hub cache for large datasets
+HF_HUB_CACHE="/capstor/cache/hf_hub" sbatch download_hf_dataset.slurm ocrvqa
 
 # Tune for unstable network
 MAX_RETRIES=20 BACKOFF_FACTOR=1.5 sbatch download_hf_dataset.slurm ocrvqa

@@ -302,13 +302,14 @@ def main():
     # (hf hub files have hash as filename so could run check directly on it manually)
     verification_mode = VerificationMode.BASIC_CHECKS
 
-    print(f"Dataset:       {args.dataset_name}")
-    print(f"Subset:        {args.subset_name or '<auto-detect all configs>'}")
-    print(f"Cache dir:     {args.cache_dir}")
-    print(f"Num processes: {args.num_proc or 'auto'}")
-    print(f"Download mode: {download_mode}")
-    print(f"Max retries:   {args.max_retries}")
-    print(f"Backoff factor: {args.backoff_factor}")
+    print(f"Dataset:                {args.dataset_name}")
+    print(f"Subset:                 {args.subset_name or '<auto-detect all configs>'}")
+    print(f"HF datasets Cache dir:  {args.cache_dir}")
+    print(f"HF Hub Cache dir:       {os.environ.get('HF_HUB_CACHE') or '<default>'}")
+    print(f"Num processes:          {args.num_proc or 'auto'}")
+    print(f"Download mode:          {download_mode}")
+    print(f"Max retries:            {args.max_retries}")
+    print(f"Backoff factor:         {args.backoff_factor}")
 
     # Warn if split argument was provided
     if args.split != "train":
