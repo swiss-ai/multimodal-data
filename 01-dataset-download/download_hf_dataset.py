@@ -12,8 +12,8 @@ downloads all splits by default. To work with specific splits, use the dataset
 after downloading.
 
 Example Usage:
-    # Single config
-    python download_hf_dataset.py \
+    # Single config (here ex. with setting custom HF_HUB_CACHE dir)
+    HF_HUB_CACHE=".test_hub_cache" python download_hf_dataset.py \
         --dataset-name "ibm-research/duorc" \
         --subset-name "ParaphraseRC" \
         --cache-dir "./test_cache"

@@ -127,38 +127,20 @@ mkdir -p "$CACHE_DIR"
 echo ""
 echo "Setting up Python environment..."
 
-# Function to check if package is installed with correct version
-check_and_install_package() {
-    local package_name="$1"
-    local required_version="$2"
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-    # Check if package exists and get its version
-    installed_version=$(python3 -c "import $package_name; print($package_name.__version__)" 2>/dev/null)
+# Install all required packages from requirements.txt
+echo "Installing required packages from requirements.txt..."
+pip install -q -r "${SCRIPT_DIR}/requirements.txt"
 
-    if [ $? -eq 0 ] && [ "$installed_version" = "$required_version" ]; then
-        echo "  ✓ $package_name $installed_version (already installed)"
-    else
-        if [ -n "$installed_version" ]; then
-            echo "  ⚠ $package_name $installed_version → $required_version (updating...)"
-        else
-            echo "  ✗ $package_name not found (installing $required_version...)"
-        fi
-        # Install with quiet flag (-q suppresses most output, shows only warnings/errors)
-        pip install -q "${package_name}==${required_version}"
-        if [ $? -eq 0 ]; then
-            echo "    Installed successfully"
-        else
-            echo "    ⚠ Installation failed!"
-            return 1
-        fi
-    fi
-}
+if [ $? -eq 0 ]; then
+    echo "  ✓ All packages installed successfully"
+else
+    echo "  ✗ Package installation failed!"
+    exit 1
+fi
 
-# Check and install each package individually
-echo "Checking required packages..."
-check_and_install_package "datasets" "3.2.0"
-check_and_install_package "hf_transfer" "0.1.8"
-check_and_install_package "huggingface_hub" "0.26.2"
 echo "Environment setup complete"
 
 # Convert hf datasets identifier to cache name

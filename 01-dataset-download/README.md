@@ -2,6 +2,25 @@
 
 Tools for downloading and verifying HuggingFace datasets with robust error handling and caching support.
 
+## Dependencies
+
+All required Python packages are specified in `requirements.txt` with minimum version requirements:
+
+```bash
+# Install dependencies locally
+pip install -r requirements.txt
+```
+
+**Key dependencies:**
+- `huggingface_hub>=0.16.0,<1.0.0` - **CRITICAL**: Must be <1.0.0 (configure_http_backend removed in 1.0.0)
+- `datasets>=2.14.0` - Dataset loading and preparation
+- `hf_transfer>=0.1.0` - Optional: faster downloads
+- `requests>=2.28.0` - HTTP session with security fixes
+- `urllib3>=1.26.0` - Retry mechanism
+- `tqdm>=4.64.0` - Progress bars for cache verification
+
+**Note**: The SLURM script automatically installs these dependencies at runtime using `requirements.txt`.
+
 ## Scripts Overview
 
 ### 1. `download_hf_dataset.py`
