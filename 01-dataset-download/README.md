@@ -211,6 +211,100 @@ DATASET_NAME="google/docci" sbatch hf_hub_cache_check.slurm
 
 ---
 
+### 5. `load_dataset_test.py`
+
+Tests loading of downloaded HuggingFace datasets with comprehensive statistics reporting.
+
+**What it does:**
+- Tests dataset loading using two methods: "default" (load_dataset) or "builder_load" (builder.as_dataset)
+- Auto-detects and tests all configs when `--subset-name` is not specified
+- Supports comma-separated config names for batch testing
+- Prints condensed stats for multi-config tests, full details for single config
+- Provides summary report with success/failure counts
+- Supports both streaming and non-streaming modes
+- Supports split slicing notation (e.g., "train[:100]")
+
+**Key options:**
+- `--dataset-name`: HuggingFace dataset repository (required)
+- `--subset-name`: Config name(s) - single, comma-separated, or omit to auto-detect all (optional)
+- `--split`: Split to load, supports slicing (default: train)
+- `--cache-dir`: Datasets cache directory (required)
+- `--method`: Loading method - "default" or "builder_load" (default: builder_load)
+- `--streaming`: Enable streaming mode (default: False)
+- `--num-proc`: Number of parallel processes (optional)
+
+**Cache Configuration:**
+
+Uses the same two-cache system as download scripts:
+- **HF Hub Cache (`HF_HUB_CACHE`)**: Raw downloads from HuggingFace
+- **Datasets Cache (`--cache-dir`)**: Processed datasets ready for use
+
+**Example:**
+```bash
+# Test all configs (auto-detect)
+python load_dataset_test.py \
+    --dataset-name "ibm-research/duorc" \
+    --cache-dir "/capstor/.../hf_datasets_cache"
+
+# Test specific configs (comma-separated)
+python load_dataset_test.py \
+    --dataset-name "ibm-research/duorc" \
+    --subset-name "ParaphraseRC,SelfRC" \
+    --cache-dir "./cache"
+
+# Test single config with full details
+python load_dataset_test.py \
+    --dataset-name "google/docci" \
+    --subset-name "default" \
+    --cache-dir "./cache" \
+    --method builder_load
+
+# Test with streaming and slice
+python load_dataset_test.py \
+    --dataset-name "google/docci" \
+    --cache-dir "./cache" \
+    --method default \
+    --streaming \
+    --split "train[:1000]"
+```
+
+---
+
+### 6. `load_dataset_test.slurm`
+
+SLURM wrapper for `load_dataset_test.py` for cluster-based dataset testing.
+
+**What it does:**
+- Runs dataset loading test as a SLURM job
+- Installs dependencies from requirements.txt
+- Configures cache locations and loading parameters
+- Provides detailed job logging
+
+**Configuration via environment variables:**
+- `DATASET_NAME`: HF dataset repo (default: mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M)
+- `SUBSET_NAME`: Dataset config (optional)
+- `SPLIT`: Split to load (default: train)
+- `CACHE_DIR`: Datasets cache path (default: /capstor/.../hf_datasets_cache)
+- `HF_HUB_CACHE`: Hub cache path (default: /capstor/.../hf_hub_cache)
+- `METHOD`: Loading method - "default" or "builder_load" (default: builder_load)
+- `STREAMING`: Enable streaming (default: false)
+- `NUM_PROC`: Number of processes (default: auto)
+- `CLUSTER_REPO_HOME`: Repository location (default: $SLURM_SUBMIT_DIR)
+
+**Example:**
+```bash
+# Test with defaults
+sbatch builder_loader_test.slurm
+
+# Test specific dataset
+DATASET_NAME="google/docci" sbatch builder_loader_test.slurm
+
+# Test with streaming mode
+METHOD="default" STREAMING=true sbatch builder_loader_test.slurm
+```
+
+---
+
 ## Important Notes
 
 **HuggingFace Authentication:**
@@ -236,5 +330,10 @@ Make sure you point the cache-dir to the spot where the dataset should be for fu
    DATASET_NAME="google/docci" sbatch hf_hub_cache_check.slurm
    ```
 
-3. **Use in training:**
+3. **Test dataset loading:**
+   ```bash
+   DATASET_NAME="google/docci" sbatch load_dataset_test.slurm
+   ```
+
+4. **Use in training:**
    Point your training script to the cache directory with `--cache-dir` flag.

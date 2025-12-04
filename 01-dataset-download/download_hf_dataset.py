@@ -42,6 +42,56 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
+def get_configs_to_process(
+    dataset_name: str,
+    subset_name: Optional[str]
+) -> List[Optional[str]]:
+    """
+    Get list of dataset configs to process.
+
+    Args:
+        dataset_name: HuggingFace dataset repository name
+        subset_name: Config name(s) - single, comma-separated, or None for auto-detect
+
+    Returns:
+        List of config names to process. [None] means default config.
+
+    Examples:
+        >>> get_configs_to_process("dataset", "config1")
+        ['config1']
+        >>> get_configs_to_process("dataset", "config1,config2")
+        ['config1', 'config2']
+        >>> get_configs_to_process("dataset", None)  # Auto-detects
+        ['detected_config1', 'detected_config2']
+    """
+    if subset_name is not None:
+        # Parse comma-separated config names
+        configs = [s.strip() for s in subset_name.split(',') if s.strip()]
+        return configs
+    else:
+        # No config specified - attempt to enumerate all configs
+        print("Mode: Auto-detecting configurations...")
+        try:
+            all_configs = get_dataset_config_names(dataset_name)
+            if all_configs:
+                print(f"Found {len(all_configs)} configurations:")
+                for i, config in enumerate(all_configs, 1):
+                    print(f"  {i}. {config}")
+                print()
+                return all_configs
+            else:
+                # No configs found - use default (None)
+                print("No configurations found - using default config")
+                print()
+                return [None]
+        except Exception as e:
+            # Failed to enumerate - use default (None)
+            print(f"Could not enumerate configs ({type(e).__name__})")
+            print("Proceeding with default config")
+            print()
+            return [None]
+
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Download HuggingFace datasets to cache",
@@ -320,10 +370,11 @@ def main():
 
     print()
 
-    if args.subset_name is not None:
-        # Parse comma-separated config names
-        configs_to_download = [s.strip() for s in args.subset_name.split(',') if s.strip()]
+    # Get list of configs to download
+    configs_to_download = get_configs_to_process(args.dataset_name, args.subset_name)
 
+    # Show mode information
+    if args.subset_name is not None:
         if len(configs_to_download) == 1:
             print(f"Mode: Single configuration download")
         else:
@@ -331,28 +382,6 @@ def main():
             for i, config in enumerate(configs_to_download, 1):
                 print(f"  {i}. {config}")
         print()
-    else:
-        # No config specified - attempt to enumerate all configs
-        print("Mode: Auto-detecting configurations...")
-        try:
-            all_configs = get_dataset_config_names(args.dataset_name)
-            if all_configs:
-                configs_to_download = all_configs
-                print(f"Found {len(all_configs)} configurations:")
-                for i, config in enumerate(all_configs, 1):
-                    print(f"  {i}. {config}")
-                print()
-            else:
-                # No configs found - use default (None)
-                configs_to_download = [None]
-                print("No configurations found - using default config")
-                print()
-        except Exception as e:
-            # Failed to enumerate - use default (None)
-            configs_to_download = [None]
-            print(f"Could not enumerate configs ({type(e).__name__})")
-            print("Proceeding with default config")
-            print()
 
     # Download all configs
     total_configs = len(configs_to_download)
