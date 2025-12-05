@@ -1,6 +1,7 @@
 .claude
 CLAUDE.md
-core_clariden_*
+core_clariden*
+core_nid*
 *.out
 *.err
 
