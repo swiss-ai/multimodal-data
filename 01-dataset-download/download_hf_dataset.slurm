@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=a-infra01
+#SBATCH --account=infra01
 #SBATCH --environment=emu3
 #SBATCH --job-name=dwnldHFdset
 #SBATCH --output=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/hf-%x-%A.out
