@@ -44,6 +44,7 @@ skipping already-downloaded configs.
 - `--max-retries`: Maximum retry attempts on failure (default: 5)
 - `--backoff-factor`: Exponential backoff multiplier (default: 1.0)
 - `--force-redownload`: Force re-download even if cached
+- `--trust-remote-code`: Allow using dataset script
 
 **Cache Configuration:**
 
