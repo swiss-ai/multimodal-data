@@ -153,6 +153,12 @@ def parse_args():
         help="Exponential backoff multiplier in seconds (default: 1.0)",
     )
 
+    parser.add_argument(
+        "--trust-remote-code",
+        action="store_true",
+        help="Allow executing code present on the Hub",
+    )
+
     return parser.parse_args()
 
 
@@ -250,6 +256,7 @@ def download_single_config(
     num_proc: Optional[int],
     download_mode: DownloadMode,
     verification_mode: VerificationMode,
+    trust_remote_code: bool,
 ) -> Tuple[bool, Optional[str], Optional[dict]]:
     """
     Download a single dataset configuration.
@@ -274,6 +281,7 @@ def download_single_config(
             dataset_name,
             name=config_name,
             cache_dir=cache_dir,
+            trust_remote_code=trust_remote_code,
         )
         print(f"  Builder loaded: {builder.info.builder_name}")
 
@@ -403,6 +411,7 @@ def main():
             num_proc=args.num_proc,
             download_mode=download_mode,
             verification_mode=verification_mode,
+            trust_remote_code=args.trust_remote_code,
         )
 
         if success:
