@@ -1,0 +1,9 @@
+[project]
+name = "standardisation"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "msgspec>=0.20.0",
+]
