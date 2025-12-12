@@ -1,3 +1,4 @@
+from enum import Enum, auto
 from typing import Any, Dict, Optional, Union
 
 import msgspec
@@ -44,9 +45,20 @@ class ImageTextSample(msgspec.Struct):
 #     meta: SampleMetadata
 
 
+class SampleType(Enum):
+    TEXT = auto()
+    IMAGE = auto()
+    IMAGE_TEXT = auto()
+
+
+SampleTypeMap = {
+    SampleType.TEXT: TextSample,
+    SampleType.IMAGE: ImageSample,
+    SampleType.IMAGE_TEXT: ImageTextSample,
+}
+
 RawSample = Union[
     TextSample,
     ImageSample,
     ImageTextSample,
-    # AudioSample,
 ]
