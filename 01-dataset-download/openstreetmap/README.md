@@ -2,12 +2,9 @@
 
 This directory contains scripts to download and process OpenStreetMap (OSM) data for generating map tiles.
 
-## Overview
+## License
 
-1. Download the planet `.osm.pbf` file using `dl_planet.sh`.
-2. Slice the planet file into smaller bounding boxes using `slice_osm.sh`.
-3. Convert the sliced OSM files into PostgreSQL databases using `import_osm.sh`.
-4. Run the tile server and scrape tiles using `run.sh`.
+The tiles generated from OpenStreetMap data are licensed under the Open Database License (ODbL). See [Copyright and License | OpenStreetMap](https://www.openstreetmap.org/copyright) for more details.
 
 ## Requirements
 
@@ -20,7 +17,17 @@ This directory contains scripts to download and process OpenStreetMap (OSM) data
 - Sufficient disk space for OSM data and tiles
     - For reference, the planet file is over 80GB, and processed data can require several TBs.
 
-## Downloading OSM Planet File
+## Usage
+
+### Overview
+
+1. Download the planet `.osm.pbf` file using `dl_planet.sh`.
+2. Slice the planet file into smaller bounding boxes using `slice_osm.sh`.
+3. Convert the sliced OSM files into PostgreSQL databases using `import_osm.sh`.
+4. Run the tile server and scrape tiles using `run.sh`.
+
+
+### Downloading OSM Planet File
 
 To download the entire OSM planet file, with:
 
@@ -30,7 +37,7 @@ bash dl_planet.sh --download-dir <path to download directory>
 
 This uses [openmaptiles-tools](https://github.com/openmaptiles/openmaptiles-tools) in a Podman container to handle the download.
 
-## Slicing 
+### Slicing 
 
 Due to memory constraints, the planet file is sliced into smaller bounding boxes. Use:
 
@@ -45,7 +52,7 @@ bash slice_osm.sh \
 
 This will create multiple `slice_<west>_<south>_<east>_<north>.pbf` files in the specified slice directory.
 
-## Importing Slices into PostgreSQL
+### Importing Slices into PostgreSQL
 
 To import the sliced OSM files into PostgreSQL databases, use:
 
@@ -61,7 +68,7 @@ This will create a `osm-data_<bounding box>.tar` file for each slice in the spec
 
 If you encounter memory issues during import, consider reducing the size of the bounding boxes in the slicing step.
 
-## Running Tile Server and Scraping Tiles
+### Running Tile Server and Scraping Tiles
 
 Finally, to run the tile server and scrape tiles, use:
 
@@ -81,7 +88,7 @@ The tiles are saved as `<zoom>_<x>_<y>.png` files in the specified save director
 
 For setting the correct zoom levels and understanding tile coordinates, refer to the [Zoom Levels](https://wiki.openstreetmap.org/wiki/Zoom_levels) and [Slippy Map Tilenames](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames) documentation.
 
-## (Optional) Scrape Script
+### (Optional) Scrape Script
 
 The `run.py` script can also be used independently to scrape tiles from a running tile server. Usage:
 
@@ -99,7 +106,7 @@ options:
   --url URL             Tile server base URL
 ```
 
-## Example Workflow
+## Example
 
 ```sh
 # Step 1: Download pbf file (Here we only download the extract for Taiwan for demonstration)
