@@ -51,14 +51,18 @@ class SampleType(Enum):
     IMAGE_TEXT = auto()
 
 
-SampleTypeMap = {
-    SampleType.TEXT: TextSample,
-    SampleType.IMAGE: ImageSample,
-    SampleType.IMAGE_TEXT: ImageTextSample,
-}
-
 RawSample = Union[
     TextSample,
     ImageSample,
     ImageTextSample,
 ]
+
+SAMPLE_TYPE_MAP = {
+    TextSample: SampleType.TEXT,
+    ImageSample: SampleType.IMAGE,
+    ImageTextSample: SampleType.IMAGE_TEXT,
+}
+
+
+def get_sample_type(sample: RawSample) -> SampleType:
+    return SAMPLE_TYPE_MAP[type(sample)]

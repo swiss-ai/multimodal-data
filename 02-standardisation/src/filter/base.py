@@ -30,7 +30,7 @@ class BaseFilter(ABC):
         pass
 
     @abstractmethod
-    def type(self) -> SampleType:
+    def sample_type(self) -> SampleType:
         """
         Returns the type of samples this filter processes.
         """

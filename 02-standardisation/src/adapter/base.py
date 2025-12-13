@@ -21,14 +21,5 @@ class BaseAdapter(ABC):
     def hydrate(self, sample: RawSample) -> RawSample:
         """
         Populates the heavy data (image bytes, full text) for a given sample.
-        This is only called by the pipeline if the sample passes metadata filtering
-        or is pre-determined to require full content.
-        """
-        pass
-
-    @abstractmethod
-    def type(self) -> SampleType:
-        """
-        Returns the type of samples this adapter produces.
         """
         pass
