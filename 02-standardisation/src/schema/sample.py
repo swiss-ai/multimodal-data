@@ -29,9 +29,9 @@ class ImageSample(msgspec.Struct):
 
 
 class ImageTextSample(msgspec.Struct):
-    text: str
+    text: Optional[str]
     language: Language
-    image: bytes
+    image: Optional[bytes]
     resolution: tuple[int, int]
     format: ImageFormat
     meta: SampleMetadata
