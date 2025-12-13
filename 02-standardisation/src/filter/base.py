@@ -23,10 +23,9 @@ class BaseFilter(ABC):
         return False
 
     @abstractmethod
-    def process(self, samples: Iterator[RawSample]) -> Iterator[bool]:
+    def process(self, samples: RawSample) -> bool:
         """
-        Processes an iterator of samples and yields a boolean for each sample
-        indicating whether the sample passes the filter.
+        Returns whether the sample passes the filter.
         """
         pass
 
