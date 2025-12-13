@@ -5,11 +5,28 @@ from src.schema.sample import RawSample, SampleType
 
 
 class BaseFilter(ABC):
+    """
+    Contract for sample filters in the data processing pipeline.
+    Filters determine whether samples should be kept or discarded based
+    on metadata and/or full content.
+    """
+
+    @property
+    @abstractmethod
+    def requires_content(self) -> bool:
+        """
+        Filter must specify whether they need full content to operate.
+
+        True if the filter needs full content (e.g., image bytes, full text),
+        False if it can operate on metadata alone.
+        """
+        return False
+
     @abstractmethod
     def process(self, samples: Iterator[RawSample]) -> Iterator[bool]:
         """
         Processes an iterator of samples and yields a boolean for each sample
-        indicating whether to keep (True) or discard (False) the sample.
+        indicating whether the sample passes the filter.
         """
         pass
 
