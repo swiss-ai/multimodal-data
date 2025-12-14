@@ -1,14 +1,13 @@
 from abc import ABC, abstractmethod
-from typing import Iterator
 
 from src.schema.sample import RawSample, SampleType
 
 
 class BaseFilter(ABC):
     """
-    Contract for sample filters in the data processing pipeline.
-    Filters determine whether samples should be kept or discarded based
-    on metadata and/or full content.
+    Contract for sample filters.
+
+    Implements logic to determine whether a sample is accepted or rejected.
     """
 
     @property
@@ -20,18 +19,19 @@ class BaseFilter(ABC):
         True if the filter needs full content (e.g., image bytes, full text),
         False if it can operate on metadata alone.
         """
-        return False
+        pass
 
+    @property
     @abstractmethod
-    def process(self, samples: RawSample) -> bool:
+    def sample_type(self) -> SampleType:
         """
-        Returns whether the sample passes the filter.
+        SampleType this filter targets.
         """
         pass
 
     @abstractmethod
-    def sample_type(self) -> SampleType:
+    def __call__(self, samples: RawSample) -> bool:
         """
-        Returns the type of samples this filter processes.
+        Returns whether the sample passes the filter.
         """
         pass

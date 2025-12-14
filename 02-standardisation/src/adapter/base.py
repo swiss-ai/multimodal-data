@@ -1,12 +1,12 @@
 from abc import ABC, abstractmethod
 from typing import Iterator
 
-from src.schema.sample import RawSample, SampleType
+from src.schema.sample import RawSample
 
 
 class BaseAdapter(ABC):
     """
-    Contract for data source adapters in the data processing pipeline.
+    Contract for data source adapters.
     """
 
     @abstractmethod
