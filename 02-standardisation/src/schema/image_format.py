@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class ImageFormat(str, Enum):
-    JPEG = "jpeg"
+    JPEG = "jpg"
     PNG = "png"
 
     # BMP = "bmp"

@@ -15,26 +15,56 @@ class SampleMetadata(msgspec.Struct):
     properties: Dict[str, Any]
 
 
-class TextSample(msgspec.Struct):
-    text: Optional[str]
+class TextSampleMetadata(SampleMetadata):
     language: Language
-    meta: SampleMetadata
+    text_length: int
 
 
-class ImageSample(msgspec.Struct):
-    image: Optional[bytes]
+class ImageSampleMetadata(SampleMetadata):
     resolution: tuple[int, int]
     format: ImageFormat
-    meta: SampleMetadata
 
 
-class ImageTextSample(msgspec.Struct):
+class TextImageSampleMetadata(SampleMetadata):
+    text_language: Language
+    text_length: int
+    image_resolution: tuple[int, int]
+    image_format: ImageFormat
+
+
+class TextSample:
     text: Optional[str]
-    language: Language
+    meta: TextSampleMetadata
+
+    def export_content(self) -> Dict[str, bytes]:
+        if self.text:
+            return {"txt": self.text.encode("utf-8")}
+        return {}
+
+
+class ImageSample:
     image: Optional[bytes]
-    resolution: tuple[int, int]
-    format: ImageFormat
-    meta: SampleMetadata
+    meta: ImageSampleMetadata
+
+    def export_content(self) -> Dict[str, bytes]:
+        if self.image:
+            ext = self.meta.format.value
+            return {ext: self.image}
+        return {}
+
+
+class ImageTextSample:
+    text: Optional[str]
+    image: Optional[bytes]
+    meta: TextImageSampleMetadata
+
+    def export_content(self) -> Dict[str, bytes]:
+        content = {}
+        if self.text:
+            content["txt"] = self.text.encode("utf-8")
+        if self.image:
+            content[self.meta.image_format.value] = self.image
+        return content
 
 
 # class AudioSample(msgspec.Struct):

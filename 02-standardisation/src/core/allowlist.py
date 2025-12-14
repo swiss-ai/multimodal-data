@@ -3,7 +3,7 @@ from sqlite3 import Connection
 from typing import List, Tuple
 
 
-class AllowlistFile:
+class AllowlistDB:
     """
     Manages the SQLite list of approved samples.
     Schema:
