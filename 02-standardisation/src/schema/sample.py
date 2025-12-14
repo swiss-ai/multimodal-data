@@ -3,7 +3,7 @@ from typing import Any, Dict, Optional, Union
 
 import msgspec
 
-from src.schema.image import ImageFormat
+from src.schema.image_format import ImageFormat
 from src.schema.language import Language
 from src.schema.license import License
 
