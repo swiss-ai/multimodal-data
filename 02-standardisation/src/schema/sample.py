@@ -25,7 +25,7 @@ class ImageSampleMetadata(SampleMetadata):
     format: ImageFormat
 
 
-class TextImageSampleMetadata(SampleMetadata):
+class ImageTextSampleMetadata(SampleMetadata):
     text_language: Language
     text_length: int
     image_resolution: tuple[int, int]
@@ -54,16 +54,16 @@ class ImageSample:
 
 
 class ImageTextSample:
-    text: Optional[str]
     image: Optional[bytes]
-    meta: TextImageSampleMetadata
+    text: Optional[str]
+    meta: ImageTextSampleMetadata
 
     def export_content(self) -> Dict[str, bytes]:
         content = {}
-        if self.text:
-            content["txt"] = self.text.encode("utf-8")
         if self.image:
             content[self.meta.image_format.value] = self.image
+        if self.text:
+            content["txt"] = self.text.encode("utf-8")
         return content
 
 
