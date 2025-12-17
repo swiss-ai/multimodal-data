@@ -6,6 +6,8 @@ This directory contains scripts to download and process OpenStreetMap (OSM) data
 
 The tiles generated from OpenStreetMap data are licensed under the Open Database License (ODbL). See [Copyright and License | OpenStreetMap](https://www.openstreetmap.org/copyright) for more details.
 
+---
+
 ## Requirements
 
 - Podman
@@ -13,9 +15,12 @@ The tiles generated from OpenStreetMap data are licensed under the Open Database
 - [Osmium Tool](https://osmcode.org/osmium-tool/)
 - [uv](https://github.com/astral-sh/uv)
     - Or other Python environment management tool
-- SLURM workload manager for job scheduling
+    - Dependencies can be installed via `pip install -r requirements.txt`
+- (Optional) SLURM workload manager for job scheduling
 - Sufficient disk space for OSM data and tiles
     - For reference, the planet file is over 80GB, and processed data can require several TBs.
+
+---
 
 ## Usage
 
@@ -26,13 +31,15 @@ The tiles generated from OpenStreetMap data are licensed under the Open Database
 3. Convert the sliced OSM files into PostgreSQL databases using `import_osm.sh`.
 4. Run the tile server and scrape tiles using `run.sh`.
 
+The scripts are preconfigured with slurm parameters specific to the Alps cluster. Please adjust them as necessary for your environment.
+
 
 ### Downloading OSM Planet File
 
 To download the entire OSM planet file, with:
 
 ```plaintext
-bash dl_planet.sh --download-dir <path to download directory>
+bash scripts/dl_planet.sh --download-dir <path to download directory>
 ```
 
 This uses [openmaptiles-tools](https://github.com/openmaptiles/openmaptiles-tools) in a Podman container to handle the download.
@@ -42,7 +49,7 @@ This uses [openmaptiles-tools](https://github.com/openmaptiles/openmaptiles-tool
 Due to memory constraints, the planet file is sliced into smaller bounding boxes. Use:
 
 ```plaintext
-bash slice_osm.sh \
+bash scripts/slice_osm.sh \
     --planet-path <path to planet.osm.pbf> \
     --slice-dir <path to output slice directory> \
     --west -180 --east 180 \
@@ -57,7 +64,7 @@ This will create multiple `slice_<west>_<south>_<east>_<north>.pbf` files in the
 To import the sliced OSM files into PostgreSQL databases, use:
 
 ```plaintext
-bash import_osm.sh \
+bash scripts/import_osm.sh \
     --slice-dir <path to slice directory> \
     --volume-dir <path to output volume directory>
     --import-split <split index from 0> \
@@ -73,7 +80,7 @@ If you encounter memory issues during import, consider reducing the size of the 
 Finally, to run the tile server and scrape tiles, use:
 
 ```plaintext
-bash run.sh \
+bash scripts/run.sh \
     --volume-dir <path to volume directory> \
     --save-dir <path to save tiles> \
     --zoom-level <zoom level> \
@@ -90,7 +97,7 @@ For setting the correct zoom levels and understanding tile coordinates, refer to
 
 ### (Optional) Scrape Script
 
-The `run.py` script can also be used independently to scrape tiles from a running tile server. Usage:
+The `scripts/run.py` script can also be used independently to scrape tiles from a running tile server. Usage:
 
 ```plaintext
 run.py [-h] [--bbox MIN_LON MIN_LAT MAX_LON MAX_LAT] --zoom ZOOM [--sample_ratio SAMPLE_RATIO] --save_dir SAVE_DIR [--url URL]
@@ -106,26 +113,28 @@ options:
   --url URL             Tile server base URL
 ```
 
+---
+
 ## Example
 
 ```sh
 # Step 1: Download pbf file (Here we only download the extract for Taiwan for demonstration)
 wget -P ./work https://download.geofabrik.de/asia/taiwan-latest.osm.pbf
 # Step 2: Slice the pbf file into smaller bounding boxes
-bash slice_osm.sh \
+bash scripts/slice_osm.sh \
     --planet-path ./work/taiwan-latest.osm.pbf \
     --slice-dir ./work/slices \
     --west 121.5 --east 121.6 \
     --south 25.0 --north 25.1 \
     --lon-step 0.05 --lat-step 0.05
 # Step 3: Import the slices into PostgreSQL databases
-bash import_osm.sh \
+bash scripts/import_osm.sh \
     --slice-dir ./work/slices \
     --volume-dir ./work/volumes \
     --import-split 0 \
     --total-splits 1
 # Step 4: Run the tile server and scrape tiles
-bash run.sh \
+bash scripts/run.sh \
     --volume-dir ./work/volumes \
     --save-dir ./work/tiles \
     --zoom-level 15 \

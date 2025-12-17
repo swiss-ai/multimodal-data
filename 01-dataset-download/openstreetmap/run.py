@@ -1,8 +1,8 @@
 import random
 
-from scrape import fetch_raster_tile
+from lib.scrape import fetch_raster_tile
+from lib.utils import get_tile_coordinates
 from tqdm.auto import tqdm
-from utils import get_tile_coordinates
 
 
 def sample_from_bounding_box(
