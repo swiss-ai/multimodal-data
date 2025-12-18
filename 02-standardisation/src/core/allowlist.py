@@ -1,3 +1,4 @@
+import os
 import sqlite3
 from sqlite3 import Connection
 from typing import List, Tuple
@@ -16,14 +17,9 @@ class AllowlistDB:
         self.conn: Connection
 
     def __enter__(self):
+        os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
         self.conn = sqlite3.connect(self.db_path)
         self.create_table()
-
-        # allow fast writes, data loss is acceptable on crash
-        self.conn.execute("PRAGMA synchronous = OFF")
-        # allow concurrent reads/writes
-        self.conn.execute("PRAGMA journal_mode = WAL")
-
         return self
 
     def __exit__(self, *_):
@@ -49,7 +45,7 @@ class AllowlistDB:
         """
         with self.conn:
             self.conn.executemany(
-                "INSERT INTO allowlist (dataset_name, sample_id) VALUES (?, ?)",
+                "INSERT OR IGNORE INTO allowlist (dataset_name, sample_id) VALUES (?, ?)",
                 entries,
             )
 
@@ -59,7 +55,7 @@ class AllowlistDB:
         """
         with self.conn:
             self.conn.execute(
-                "INSERT INTO allowlist (dataset_name, sample_id) VALUES (?, ?)",
+                "INSERT OR IGNORE INTO allowlist (dataset_name, sample_id) VALUES (?, ?)",
                 (dataset_name, sample_id),
             )
 

@@ -30,7 +30,7 @@ class BaseFilter(ABC):
         pass
 
     @abstractmethod
-    def __call__(self, samples: RawSample) -> bool:
+    def __call__(self, sample: RawSample) -> bool:
         """
         Returns whether the sample passes the filter.
         """
