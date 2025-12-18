@@ -1,4 +1,5 @@
 from collections import defaultdict
+from logging import Logger
 from typing import List
 
 from src.adapter.base import BaseAdapter
@@ -11,7 +12,13 @@ from src.schema.sample import RawSample, get_sample_type
 
 
 class Pipeline:
-    def __init__(self, adapters: List[BaseAdapter], filters: List[BaseFilter]):
+    def __init__(
+        self,
+        logger: Logger,
+        adapters: List[BaseAdapter],
+        filters: List[BaseFilter],
+    ):
+        self.logger = logger
         self.adapters = adapters
         self.filters = filters
 
@@ -30,9 +37,13 @@ class Pipeline:
         """
         with AllowlistDB(allowlist_path) as allowlist:
             for adapter in self.adapters:
+                self.logger.info(f"scanning adapter: {adapter.name}")
+
                 batch_buffer = []
 
                 for sample in adapter.stream():
+                    self.logger.debug(f"scanning sample: {sample.meta.sample_id}")
+
                     s_type = get_sample_type(sample)
 
                     # meta filters
@@ -58,21 +69,29 @@ class Pipeline:
                 if batch_buffer:
                     allowlist.add_batch(batch_buffer)
 
+                self.logger.info(f"completed scanning adapter: {adapter.name}")
+
     def build(self, allowlist_path: str, output_dir: str):
         """
         Iterates adapters (again), checks Allowlist, hydrates, and writes WebDatasets.
         """
         with AllowlistDB(allowlist_path) as allowlist:
             for adapter in self.adapters:
+                self.logger.info(f"building adapter: {adapter.name}")
+
                 shard_name = f"{adapter.name}_part"
 
-                with ShardWriter(output_dir, shard_name) as writer:
+                with ShardWriter(self.logger, output_dir, shard_name) as writer:
                     for sample in adapter.stream():
+                        self.logger.debug(f"building sample: {sample.meta.sample_id}")
+
                         if not allowlist.exists(adapter.name, sample.meta.sample_id):
                             continue
 
                         full_sample = adapter.hydrate(sample)
                         writer.write(full_sample)
+
+                self.logger.info(f"completed building adapter: {adapter.name}")
 
     def apply_filters(self, sample: RawSample, filters: List[BaseFilter]) -> bool:
         for f in filters:

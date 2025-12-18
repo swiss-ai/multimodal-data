@@ -32,7 +32,7 @@ class ImageTextSampleMetadata(SampleMetadata):
     image_format: ImageFormat
 
 
-class TextSample:
+class TextSample(msgspec.Struct):
     text: Optional[str]
     meta: TextSampleMetadata
 
@@ -42,7 +42,7 @@ class TextSample:
         return {}
 
 
-class ImageSample:
+class ImageSample(msgspec.Struct):
     image: Optional[bytes]
     meta: ImageSampleMetadata
 
@@ -53,7 +53,7 @@ class ImageSample:
         return {}
 
 
-class ImageTextSample:
+class ImageTextSample(msgspec.Struct):
     image: Optional[bytes]
     text: Optional[str]
     meta: ImageTextSampleMetadata

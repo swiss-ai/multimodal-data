@@ -1,4 +1,5 @@
 import io
+import logging
 import tarfile
 import time
 from pathlib import Path
@@ -17,7 +18,9 @@ class ShardWriter:
     Writes samples to a WebDataset tar archive.
     """
 
-    def __init__(self, output_dir: str, shard_name: str):
+    def __init__(self, logger: logging.Logger, output_dir: str, shard_name: str):
+        self.logger = logger
+
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -29,6 +32,8 @@ class ShardWriter:
     def write(self, sample: RawSample):
         safe_id = sample.meta.sample_id.replace("/", "_")
         key = f"{sample.meta.dataset_name}/{safe_id}"
+
+        self.logger.debug(f"writing sample: {key}")
 
         meta_bytes = self.json_encoder.encode(sample.meta)
         self.add_file(f"{key}.json", meta_bytes)
