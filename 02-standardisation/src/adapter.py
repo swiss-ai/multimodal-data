@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Iterator
 
-from src.schema.sample import RawSample
+from src.sample import RawSample
 
 
 class BaseAdapter(ABC):
@@ -20,14 +20,6 @@ class BaseAdapter(ABC):
     @abstractmethod
     def stream(self) -> Iterator[RawSample]:
         """
-        Yields lightweight samples (metadata) from the data source.
-        Fields like 'image' or 'text' can be None at this stage.
-        """
-        pass
-
-    @abstractmethod
-    def hydrate(self, sample: RawSample) -> RawSample:
-        """
-        Populates the heavy data (image bytes, full text) for a given sample.
+        Yields samples from the data source.
         """
         pass

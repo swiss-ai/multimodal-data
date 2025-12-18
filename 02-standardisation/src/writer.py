@@ -6,7 +6,7 @@ from pathlib import Path
 
 import msgspec
 
-from src.schema.sample import RawSample
+from src.sample import RawSample
 
 # TODO:
 # - split large shards
@@ -31,7 +31,7 @@ class ShardWriter:
 
     def write(self, sample: RawSample):
         safe_id = sample.meta.sample_id.replace("/", "_")
-        key = f"{sample.meta.dataset_name}/{safe_id}"
+        key = f"{sample.meta.dataset_id}/{safe_id}"
 
         self.logger.debug(f"writing sample: {key}")
 

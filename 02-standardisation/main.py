@@ -3,7 +3,7 @@ import os
 
 from adapter_medtrinity_demo import MedtrinityDemoAdapter
 from filter_resolution import ResolutionFilter
-from src.core.pipeline import Pipeline
+from src.pipeline import Pipeline
 
 logger = logging.getLogger("pipeline_logger")
 logger.setLevel(logging.INFO)
