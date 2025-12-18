@@ -1,12 +1,11 @@
-from collections import defaultdict
 from logging import Logger
 from typing import List
 
-from src.adapter.base import BaseAdapter
-from src.core.allowlist import AllowlistDB
-from src.core.writer import ShardWriter
-from src.filter.base import BaseFilter
-from src.schema.sample import RawSample, get_sample_type
+from src.adapter import BaseAdapter
+from src.allowlist import AllowlistDB
+from src.filter import BaseFilter
+from src.sample import RawSample
+from src.writer import ShardWriter
 
 # TODO: batch processing via multiprocessing
 
@@ -22,15 +21,6 @@ class Pipeline:
         self.adapters = adapters
         self.filters = filters
 
-        self.meta_filters = defaultdict(list)
-        self.content_filters = defaultdict(list)
-
-        for f in filters:
-            if f.requires_content:
-                self.content_filters[f.sample_type].append(f)
-            else:
-                self.meta_filters[f.sample_type].append(f)
-
     def scan(self, allowlist_path: str, batch_size: int):
         """
         Iterates adapters, applies filters, and populates the Allowlist.
@@ -44,22 +34,10 @@ class Pipeline:
                 for sample in adapter.stream():
                     self.logger.debug(f"scanning sample: {sample.meta.sample_id}")
 
-                    s_type = get_sample_type(sample)
+                    if not self.apply_filters(sample):
+                        continue
 
-                    # meta filters
-                    if self.meta_filters[s_type]:
-                        if not self.apply_filters(sample, self.meta_filters[s_type]):
-                            continue
-
-                    # content filters
-                    if self.content_filters[s_type]:
-                        sample = adapter.hydrate(sample)
-                        if not self.apply_filters(sample, self.content_filters[s_type]):
-                            continue
-
-                    batch_buffer.append(
-                        (sample.meta.dataset_name, sample.meta.sample_id)
-                    )
+                    batch_buffer.append((sample.meta.dataset_id, sample.meta.sample_id))
 
                     if len(batch_buffer) >= batch_size:
                         allowlist.add_batch(batch_buffer)
@@ -85,16 +63,13 @@ class Pipeline:
                     for sample in adapter.stream():
                         self.logger.debug(f"building sample: {sample.meta.sample_id}")
 
-                        if not allowlist.exists(adapter.name, sample.meta.sample_id):
-                            continue
-
-                        full_sample = adapter.hydrate(sample)
-                        writer.write(full_sample)
+                        if allowlist.exists(adapter.name, sample.meta.sample_id):
+                            writer.write(sample)
 
                 self.logger.info(f"completed building adapter: {adapter.name}")
 
-    def apply_filters(self, sample: RawSample, filters: List[BaseFilter]) -> bool:
-        for f in filters:
-            if not f(sample):
+    def apply_filters(self, sample: RawSample) -> bool:
+        for filter in self.filters:
+            if not filter(sample):
                 return False
         return True
