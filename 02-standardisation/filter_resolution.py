@@ -1,5 +1,5 @@
 from src.filter import BaseFilter
-from src.sample import ImageTextSample, RawSample, SampleType
+from src.schema import ImageTextSample, RawSample, SampleType
 
 
 class ResolutionFilter(BaseFilter):

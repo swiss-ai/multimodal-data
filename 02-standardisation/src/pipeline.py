@@ -4,7 +4,7 @@ from typing import List
 from src.adapter import BaseAdapter
 from src.allowlist import AllowlistDB
 from src.filter import BaseFilter
-from src.sample import RawSample
+from src.schema import RawSample
 from src.writer import ShardWriter
 
 # TODO: batch processing via multiprocessing

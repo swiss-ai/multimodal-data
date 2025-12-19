@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.sample import RawSample
+from src.schema import RawSample
 
 
 class BaseFilter(ABC):

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Iterator
 
-from src.sample import RawSample
+from src.schema import RawSample
 
 
 class BaseAdapter(ABC):
