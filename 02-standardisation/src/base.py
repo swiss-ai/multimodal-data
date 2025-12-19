@@ -13,12 +13,12 @@ class BaseDataset(ABC):
     @abstractmethod
     def id(self) -> str:
         """Unique id of the data source."""
-        raise NotImplementedError
+        pass
 
     @abstractmethod
     def __iter__(self) -> Iterator[RawSample]:
         """Yields samples from the data source."""
-        raise NotImplementedError
+        pass
 
 
 class BaseFilter(ABC):
@@ -29,4 +29,4 @@ class BaseFilter(ABC):
     @abstractmethod
     def __call__(self, sample: RawSample) -> bool:
         """Returns whether the sample passes the filter."""
-        raise NotImplementedError
+        pass

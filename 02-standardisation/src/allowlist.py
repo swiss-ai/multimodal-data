@@ -1,6 +1,5 @@
 import os
 import sqlite3
-from sqlite3 import Connection
 from typing import List, Tuple
 
 
@@ -11,18 +10,10 @@ class AllowlistDB:
 
     def __init__(self, db_path: str):
         self.db_path = db_path
-        self.conn: Connection
 
-    def __enter__(self):
         os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
         self.conn = sqlite3.connect(self.db_path)
         self._create_table()
-        return self
-
-    def __exit__(self, *_):
-        if self.conn:
-            self.conn.commit()
-            self.conn.close()
 
     def _create_table(self):
         self.conn.execute("""
