@@ -1,10 +1,10 @@
 from datasets import load_dataset
 
-from src.adapter import BaseAdapter
-from src.schema import ImageTextSample, SampleMetadata
+from src.base import BaseDataset
+from src.schema import ImageSample, SampleMetadata
 
 
-class MedtrinityDemoAdapter(BaseAdapter):
+class MedtrinityDemoAdapter(BaseDataset):
     def __init__(self):
         self.dataset = load_dataset(
             "UCSC-VLAA/MedTrinity-25M",
@@ -14,19 +14,18 @@ class MedtrinityDemoAdapter(BaseAdapter):
         )
 
     @property
-    def name(self):
+    def id(self):
         return "medtrinity_demo"
 
-    def stream(self):
+    def __iter__(self):
         for idx, row in enumerate(self.dataset):
             if idx == 3000:
                 break
 
-            yield ImageTextSample(
+            yield ImageSample(
                 image=row["image"],
-                text=row["caption"],
                 meta=SampleMetadata(
-                    dataset_id=self.name,
+                    dataset_id=self.id,
                     sample_id=str(idx),
                     data={
                         "license_type": "CC BY-NC-SA 4.0",

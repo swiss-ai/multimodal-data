@@ -7,9 +7,6 @@ from typing import List, Tuple
 class AllowlistDB:
     """
     Manages the SQLite list of approved samples.
-    Schema:
-        - dataset_name (TEXT)
-        - sample_id (TEXT)
     """
 
     def __init__(self, db_path: str):
@@ -19,7 +16,7 @@ class AllowlistDB:
     def __enter__(self):
         os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
         self.conn = sqlite3.connect(self.db_path)
-        self.create_table()
+        self._create_table()
         return self
 
     def __exit__(self, *_):
@@ -27,13 +24,12 @@ class AllowlistDB:
             self.conn.commit()
             self.conn.close()
 
-    def create_table(self):
-        # only store keys; if a key is here, it's approved
+    def _create_table(self):
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS allowlist (
-                dataset_name TEXT,
+                dataset_id TEXT,
                 sample_id TEXT,
-                PRIMARY KEY (dataset_name, sample_id)
+                PRIMARY KEY (dataset_id, sample_id)
             ) WITHOUT ROWID; 
         """)
 
@@ -41,41 +37,42 @@ class AllowlistDB:
         """
         Insert a batch of entries into the allowlist.
 
-        entries: list of (dataset_name, sample_id)
+        Arguments:
+            entries: list of (dataset_id, sample_id) pairs
         """
         with self.conn:
             self.conn.executemany(
-                "INSERT OR IGNORE INTO allowlist (dataset_name, sample_id) VALUES (?, ?)",
+                "INSERT OR IGNORE INTO allowlist (dataset_id, sample_id) VALUES (?, ?)",
                 entries,
             )
 
-    def add(self, dataset_name: str, sample_id: str):
+    def add(self, dataset_id: str, sample_id: str):
         """
         Insert a single entry into the allowlist.
         """
         with self.conn:
             self.conn.execute(
-                "INSERT OR IGNORE INTO allowlist (dataset_name, sample_id) VALUES (?, ?)",
-                (dataset_name, sample_id),
+                "INSERT OR IGNORE INTO allowlist (dataset_id, sample_id) VALUES (?, ?)",
+                (dataset_id, sample_id),
             )
 
-    def exists(self, dataset_name: str, sample_id: str) -> bool:
+    def exists(self, dataset_id: str, sample_id: str) -> bool:
         """
-        Check if (dataset_name, sample_id) is in the allowlist.
+        Check if sample (dataset_id, sample_id) is in the allowlist.
         """
         cur = self.conn.execute(
-            "SELECT 1 FROM allowlist WHERE dataset_name = ? AND sample_id = ?",
-            (dataset_name, sample_id),
+            "SELECT 1 FROM allowlist WHERE dataset_id = ? AND sample_id = ?",
+            (dataset_id, sample_id),
         )
         return cur.fetchone() is not None
 
-    def get_allowlist_for_dataset(self, dataset_name: str) -> List[str]:
+    def get_allowlist_for_dataset(self, dataset_id: str) -> List[str]:
         """
-        Load the entire allowed ID set for a dataset into memory.
+        Load the whitelisted IDs of the dataset into memory.
         Use with caution for large datasets.
         """
         cursor = self.conn.execute(
-            "SELECT sample_id FROM allowlist WHERE dataset_name = ?",
-            (dataset_name,),
+            "SELECT sample_id FROM allowlist WHERE dataset_id = ?",
+            (dataset_id,),
         )
         return [row[0] for row in cursor]

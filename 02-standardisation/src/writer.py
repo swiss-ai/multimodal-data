@@ -8,10 +8,6 @@ import msgspec
 
 from src.schema import RawSample
 
-# TODO:
-# - split large shards
-# - split by sample type
-
 
 class ShardWriter:
     """
@@ -31,18 +27,18 @@ class ShardWriter:
 
     def write(self, sample: RawSample):
         safe_id = sample.meta.sample_id.replace("/", "_")
-        key = f"{sample.meta.dataset_id}/{safe_id}"
+        wds_key = f"{sample.meta.dataset_id}/{safe_id}"
 
-        self.logger.debug(f"writing sample: {key}")
+        self.logger.debug(f"writing sample: {wds_key}")
 
         meta_bytes = self.json_encoder.encode(sample.meta)
-        self.add_file(f"{key}.json", meta_bytes)
+        self._add_file(f"{wds_key}.json", meta_bytes)
 
         files_map = sample.export_content()
         for extension, data in files_map.items():
-            self.add_file(f"{key}.{extension}", data)
+            self._add_file(f"{wds_key}.{extension}", data)
 
-    def add_file(self, name: str, data: bytes):
+    def _add_file(self, name: str, data: bytes):
         ti = tarfile.TarInfo(name)
         ti.size = len(data)
         ti.mtime = time.time()
