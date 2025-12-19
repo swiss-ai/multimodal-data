@@ -1,7 +1,7 @@
 from datasets import load_dataset
 
 from src.adapter import BaseAdapter
-from src.sample import ImageTextSample, SampleMetadata
+from src.schema import ImageTextSample, SampleMetadata
 
 
 class MedtrinityDemoAdapter(BaseAdapter):

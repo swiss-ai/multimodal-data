@@ -6,7 +6,7 @@ from pathlib import Path
 
 import msgspec
 
-from src.sample import RawSample
+from src.schema import RawSample
 
 # TODO:
 # - split large shards

@@ -1,40 +1,59 @@
 import io
 from enum import Enum, auto
-from typing import Any, Dict, Union
+from typing import Any, Dict
+from abc import ABC, abstractmethod
 
-import msgspec
 from PIL.Image import Image
 
 
-class SampleMetadata(msgspec.Struct):
+class RawSample(ABC):
+    """
+    A raw data sample with methods to export its content for storage.
+    """
+
+    @abstractmethod
+    def export_content(self) -> Dict[str, bytes]:
+        """Exports the sample's content to a file extension to byte data mapping."""
+        raise NotImplementedError
+
+
+class SampleMetadata:
     dataset_id: str
     sample_id: str
     data: Dict[str, Any]
 
 
-class TextSample(msgspec.Struct):
+class TextSample(RawSample):
+    """A sample containing text-only data."""
+
     text: str
     meta: SampleMetadata
 
     def export_content(self) -> Dict[str, bytes]:
+        content = {}
         if self.text:
-            return {"txt": self.text.encode("utf-8")}
-        return {}
+            content["txt"] = self.text.encode("utf-8")
+        return content
 
 
-class ImageSample(msgspec.Struct):
+class ImageSample(RawSample):
+    """A sample containing image-only data."""
+
     image: Image
     meta: SampleMetadata
 
     def export_content(self) -> Dict[str, bytes]:
-        if self.image and self.image.format:
+        content = {}
+        if self.image:
             img_byte_arr = io.BytesIO()
             self.image.save(img_byte_arr, format=self.image.format)
-            return {self.image.format: img_byte_arr.getvalue()}
-        return {}
+            content[self.image.format] = img_byte_arr.getvalue()
+        return content
 
 
-class ImageTextSample(msgspec.Struct):
+class ImageTextSample(RawSample):
+    """A sample containing both image and text data."""
+
     image: Image
     text: str
     meta: SampleMetadata
@@ -50,22 +69,7 @@ class ImageTextSample(msgspec.Struct):
         return content
 
 
-# class AudioSample(msgspec.Struct):
-#     audio: bytes
-#     duration_seconds: float
-#     format: str
-#     sample_rate: int
-#     meta: SampleMetadata
-
-
 class SampleType(Enum):
     TEXT = auto()
     IMAGE = auto()
     IMAGE_TEXT = auto()
-
-
-RawSample = Union[
-    TextSample,
-    ImageSample,
-    ImageTextSample,
-]
