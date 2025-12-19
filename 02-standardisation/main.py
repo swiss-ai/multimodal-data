@@ -1,11 +1,11 @@
 import logging
 import os
 
-from adapter_medtrinity_demo import MedtrinityDemoAdapter
-from filter_resolution import ResolutionFilter
+from adapters.medtrinity_demo import MedtrinityDemoAdapter
+from filters.resolution import ResolutionFilter
 from src.pipeline import Pipeline
 
-logger = logging.getLogger("pipeline_logger")
+logger = logging.getLogger("main")
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 logger.handlers[0].setFormatter(
@@ -14,7 +14,7 @@ logger.handlers[0].setFormatter(
 
 pipeline = Pipeline(
     logger=logger,
-    adapters=[MedtrinityDemoAdapter()],
+    datasets=[MedtrinityDemoAdapter()],
     filters=[ResolutionFilter(64, 64)],
 )
 

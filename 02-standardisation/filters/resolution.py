@@ -1,5 +1,5 @@
-from src.filter import BaseFilter
-from src.schema import ImageTextSample, RawSample, SampleType
+from src.base import BaseFilter
+from src.schema import ImageSample, RawSample
 
 
 class ResolutionFilter(BaseFilter):
@@ -7,12 +7,8 @@ class ResolutionFilter(BaseFilter):
         self.min_width = min_width
         self.min_height = min_height
 
-    @property
-    def sample_type(self):
-        return SampleType.IMAGE_TEXT
-
     def __call__(self, sample: RawSample):
-        if not isinstance(sample, ImageTextSample):
+        if not isinstance(sample, ImageSample):
             return True
 
         width, height = sample.image.size

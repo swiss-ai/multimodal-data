@@ -1,33 +1,38 @@
 import io
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
 from enum import Enum, auto
 from typing import Any, Dict
-from abc import ABC, abstractmethod
 
 from PIL.Image import Image
 
 
-class RawSample(ABC):
-    """
-    A raw data sample with methods to export its content for storage.
-    """
-
-    @abstractmethod
-    def export_content(self) -> Dict[str, bytes]:
-        """Exports the sample's content to a file extension to byte data mapping."""
-        raise NotImplementedError
-
-
+@dataclass
 class SampleMetadata:
     dataset_id: str
     sample_id: str
     data: Dict[str, Any]
 
 
+@dataclass
+class RawSample(ABC):
+    """
+    A raw data sample with methods to export its content for storage.
+    """
+
+    meta: SampleMetadata
+
+    @abstractmethod
+    def export_content(self) -> Dict[str, bytes]:
+        """Exports the sample's content as a mapping of file extensions to byte data."""
+        raise NotImplementedError
+
+
+@dataclass
 class TextSample(RawSample):
     """A sample containing text-only data."""
 
     text: str
-    meta: SampleMetadata
 
     def export_content(self) -> Dict[str, bytes]:
         content = {}
@@ -36,11 +41,11 @@ class TextSample(RawSample):
         return content
 
 
+@dataclass
 class ImageSample(RawSample):
     """A sample containing image-only data."""
 
     image: Image
-    meta: SampleMetadata
 
     def export_content(self) -> Dict[str, bytes]:
         content = {}
@@ -51,12 +56,12 @@ class ImageSample(RawSample):
         return content
 
 
+@dataclass
 class ImageTextSample(RawSample):
     """A sample containing both image and text data."""
 
     image: Image
     text: str
-    meta: SampleMetadata
 
     def export_content(self) -> Dict[str, bytes]:
         content = {}
