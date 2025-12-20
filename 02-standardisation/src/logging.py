@@ -3,8 +3,7 @@ import sys
 from pathlib import Path
 
 LOG_NAME = "pipeline"
-LOG_FORMAT = "%(asctime)s %(levelname)-8s [%(name)s] %(message)s"
-LOG_DATEFMT = "%Y-%m-%d %H:%M:%S"
+LOG_FORMAT = "%(asctime)s %(levelname)s %(filename)s:%(lineno)d -- %(message)s"
 
 
 def setup_logging(level: int, log_file: str | None) -> logging.Logger:
@@ -21,7 +20,7 @@ def setup_logging(level: int, log_file: str | None) -> logging.Logger:
     logger.handlers.clear()
     logger.propagate = False
 
-    formatter = logging.Formatter(LOG_FORMAT, LOG_DATEFMT)
+    formatter = logging.Formatter(LOG_FORMAT)
 
     # stdout handler
     stdout_handler = logging.StreamHandler(sys.stdout)

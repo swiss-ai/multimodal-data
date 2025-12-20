@@ -47,7 +47,7 @@ class Allowlist:
         return cur.fetchone() is not None
 
     def iter_dataset(self, dataset_id: str):
-        """Iterate over sample IDs for a dataset in the allowlist."""
+        """Yields dataset sample IDs in the allowlist."""
         logger.debug(f"Iterating allowlist for dataset_id={dataset_id}")
 
         cursor = self.conn.execute(
