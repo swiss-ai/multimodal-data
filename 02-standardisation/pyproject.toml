@@ -9,4 +9,5 @@ dependencies = [
     "imagehash>=4.3.2",
     "msgspec>=0.20.0",
     "pillow>=12.0.0",
+    "ray>=2.53.0",
 ]
