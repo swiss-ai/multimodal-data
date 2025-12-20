@@ -21,7 +21,6 @@ def setup_logging(level: int, log_file: str | None) -> logging.Logger:
     logger.handlers.clear()
     logger.propagate = False
 
-    # common formatter
     formatter = logging.Formatter(LOG_FORMAT, LOG_DATEFMT)
 
     # stdout handler
@@ -48,5 +47,4 @@ def setup_logging(level: int, log_file: str | None) -> logging.Logger:
 
 
 def get_logger(name: str) -> logging.Logger:
-    """Get a child logger for a module."""
     return logging.getLogger(f"{LOG_NAME}.{name}")
