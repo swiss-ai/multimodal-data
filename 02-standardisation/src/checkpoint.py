@@ -23,25 +23,16 @@ class Checkpoint:
         """)
 
     def get_resume_point(self, dataset_id: str) -> str | None:
-        """
-        Returns the last processed sample ID for the dataset,
-        None if completed, or not started.
-        """
-
-        logger.debug(f"Getting resume point for dataset_id={dataset_id}")
-
+        """Get last processed sample ID. Return None if not started or completed."""
         cur = self.conn.execute(
             "SELECT completed, last_sample_id FROM progress WHERE dataset_id = ?",
             (dataset_id,),
         )
-
         row = cur.fetchone()
         if row is None:
             return None  # not started
         if row[0]:
             return None  # completed
-
-        logger.info(f"Resuming from sample_id={row[0]} for dataset_id={dataset_id}")
         return row[1]
 
     def is_complete(self, dataset_id: str) -> bool:
@@ -64,7 +55,7 @@ class Checkpoint:
             )
 
     def mark_complete(self, dataset_id: str):
-        logger.info(f"Marking dataset_id={dataset_id} as complete")
+        logger.debug(f"Marking {dataset_id} as complete")
         with self.conn:
             self.conn.execute(
                 "UPDATE progress SET completed = 1 WHERE dataset_id = ?",

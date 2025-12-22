@@ -23,7 +23,7 @@ if FRESH_START:
 
 
 logger = setup_logging(
-    level=logging.INFO,
+    level=logging.DEBUG,
     log_file=f"{DATA_DIR}/pipeline.log",
 )
 
@@ -44,8 +44,6 @@ pipeline = Pipeline(
     batch_size=500,
 )
 
-logger.info("Starting manifest build")
 pipeline.scan()
-logger.info("Done")
 
 os._exit(0)

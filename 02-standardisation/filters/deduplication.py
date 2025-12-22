@@ -17,7 +17,7 @@ class HashStore:
         try:
             self.conn.execute("PRAGMA journal_mode=WAL;")
         except sqlite3.OperationalError:
-            pass
+            pass  # WAL already called or not supported
 
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS seen_hashes (

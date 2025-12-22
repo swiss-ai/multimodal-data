@@ -9,17 +9,13 @@ class Allowlist:
     """Manages the manifest of approved sample IDs."""
 
     def __init__(self, db_path: str):
-        self.db_path = db_path
+        logger.debug(f"Initializing allowlist at {db_path}")
 
-        logger.info(f"Initializing allowlist database at {db_path}")
+        self.db_path = db_path
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
+
         self.conn = sqlite3.connect(db_path, timeout=10.0)
         self.conn.execute("PRAGMA journal_mode=WAL;")
-        self._create_table()
-
-    def _create_table(self):
-        logger.debug("Creating allowlist table if not exists")
-
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS allowlist (
                 dataset_id TEXT,
@@ -48,7 +44,7 @@ class Allowlist:
 
     def iter_dataset(self, dataset_id: str):
         """Yields dataset sample IDs in the allowlist."""
-        logger.debug(f"Iterating allowlist for dataset_id={dataset_id}")
+        logger.debug(f"Iterating allowlist for dataset_id {dataset_id}")
 
         cursor = self.conn.execute(
             "SELECT sample_id FROM allowlist WHERE dataset_id = ?",

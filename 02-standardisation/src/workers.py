@@ -1,7 +1,7 @@
 import logging
 import multiprocessing as mp
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass
-from typing import Callable
 
 # import ray.util.multiprocessing as mp
 from src.base import BaseFilter
@@ -33,8 +33,9 @@ def _process_sample(data: bytes) -> FilterResult:
         assert _worker_filters is not None, "Filters not initialized"
         passed = all(f(sample) for f in _worker_filters)
 
-    except Exception as e:
-        logger.exception(f"Error processing sample: {e}")
+    except Exception:
+        did, sid = sample.meta.dataset_id, sample.meta.sample_id
+        logger.exception(f"Error processing sample {did}/{sid}, marking as failed")
         return FilterResult(
             dataset_id=sample.meta.dataset_id,
             sample_id=sample.meta.sample_id,
@@ -51,25 +52,27 @@ def _process_sample(data: bytes) -> FilterResult:
 class WorkerPool:
     def __init__(
         self,
-        filter_factories: list[Callable[[], BaseFilter]],
+        filter_factories: Sequence[Callable[[], BaseFilter]],
         num_workers: int,
     ):
-        logger.info(f"Starting worker pool with {num_workers} workers")
         self.num_workers = num_workers
+        logger.info(f"Starting {num_workers} workers")
         self.pool = mp.Pool(
-            processes=self.num_workers,
+            processes=num_workers,
             initializer=_init_worker,
             initargs=(filter_factories,),
         )
+        logger.debug("Worker pool ready")
 
     def process_batch(self, samples: list[Sample]) -> list[FilterResult]:
         serialized = [s.serialize() for s in samples]
         return list(self.pool.map(_process_sample, serialized))
 
     def close(self):
-        logger.info("Shutting down worker pool")
+        logger.debug("Shutting down workers")
         self.pool.close()
         self.pool.join()
+        logger.info("Workers stopped")
 
     def __enter__(self) -> "WorkerPool":
         return self

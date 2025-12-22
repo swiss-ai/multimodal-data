@@ -1,5 +1,5 @@
 import logging
-from typing import Callable
+from collections.abc import Callable, Sequence
 
 from src.allowlist import Allowlist
 from src.base import BaseDataset, BaseFilter
@@ -15,8 +15,8 @@ class Pipeline:
 
     def __init__(
         self,
-        dataset_factories: list[Callable[[], BaseDataset]],
-        filter_factories: list[Callable[[], BaseFilter]],
+        dataset_factories: Sequence[Callable[[], BaseDataset]],
+        filter_factories: Sequence[Callable[[], BaseFilter]],
         data_dir: str,
         num_workers: int,
         batch_size: int,
@@ -31,26 +31,24 @@ class Pipeline:
         self.checkpoint = Checkpoint(f"{data_dir}/checkpoint.db")
 
     def scan(self):
-        logger.info("Starting scan")
-
+        logger.info(f"Starting scan of {len(self.dataset_factories)} dataset(s)")
         with WorkerPool(self.filter_factories, self.num_workers) as pool:
-            for dataset in self.dataset_factories:
-                self._scan_dataset(dataset(), pool)
-
+            for factory in self.dataset_factories:
+                self._scan_dataset(factory(), pool)
         logger.info("Scan complete")
 
     def _scan_dataset(self, dataset: BaseDataset, pool: WorkerPool):
         dataset_id = dataset.id
 
         if self.checkpoint.is_complete(dataset_id):
-            logger.info(f"Skipping completed: {dataset_id}")
+            logger.info(f"[{dataset_id}] Skipping (already complete)")
             return
 
         from_id = self.checkpoint.get_resume_point(dataset_id)
         if from_id:
-            logger.info(f"Resuming {dataset_id} from {from_id}")
-
-        logger.info(f"Scanning: {dataset_id}")
+            logger.info(f"[{dataset_id}] Resuming from sample {from_id}")
+        else:
+            logger.info(f"[{dataset_id}] Starting")
 
         batch: list[Sample] = []
         processed, passed = 0, 0
@@ -63,7 +61,7 @@ class Pipeline:
                 processed += len(batch)
                 passed += p
                 self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
-                logger.info(f"[{dataset_id}] {processed} processed, {passed} passed")
+                logger.debug(f"[{dataset_id}] {processed} processed, {passed} passed")
                 batch = []
 
         # remaining samples
@@ -72,10 +70,9 @@ class Pipeline:
             processed += len(batch)
             passed += p
             self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
-            logger.info(f"[{dataset_id}] {processed} processed, {passed} passed")
 
         self.checkpoint.mark_complete(dataset_id)
-        logger.info(f"Completed {dataset_id}: {processed} processed, {passed} passed")
+        logger.info(f"[{dataset_id}] Complete: {processed} processed, {passed} passed")
 
     def _process_batch(self, batch: list[Sample], pool: WorkerPool) -> int:
         """Process batch, update allowlist, return count passed."""
