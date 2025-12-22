@@ -2,7 +2,7 @@ import logging
 import os
 import sqlite3
 
-logger = logging.getLogger()
+logger = logging.getLogger("pipeline.allowlist")
 
 
 class Allowlist:

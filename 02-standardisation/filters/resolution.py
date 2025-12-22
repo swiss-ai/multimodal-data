@@ -1,18 +1,15 @@
 from src.base import BaseFilter
-from src.schema import ImageSample, RawSample
+from src.schema import ImageSample, ImageTextSample, Sample
 
 
 class ResolutionFilter(BaseFilter):
-    def __init__(self, min_width: int = 64, min_height: int = 64):
+    def __init__(self, min_width: int, min_height: int):
         self.min_width = min_width
         self.min_height = min_height
 
-    def __call__(self, sample: RawSample):
-        if not isinstance(sample, ImageSample):
+    def __call__(self, sample: Sample) -> bool:
+        if not isinstance(sample, (ImageSample, ImageTextSample)):
             return True
 
-        width, height = sample.image.size
-        if width < self.min_width or height < self.min_height:
-            return False
-
-        return True
+        w, h = sample.image.size
+        return w >= self.min_width and h >= self.min_height
