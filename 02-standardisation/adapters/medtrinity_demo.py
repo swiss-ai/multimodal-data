@@ -17,18 +17,24 @@ class MedtrinityDemoAdapter(BaseDataset):
     def id(self):
         return "medtrinity_demo"
 
-    def __iter__(self):
+    def stream(self, from_id=None):
         for idx, row in enumerate(self.dataset):
             if idx == 3000:
-                break
+                break  # TODO: remove limit
+
+            sample_id = str(idx)
+
+            if from_id and sample_id <= from_id:
+                from_id = None
+                continue
 
             yield ImageSample(
                 image=row["image"],
                 meta=SampleMetadata(
                     dataset_id=self.id,
-                    sample_id=str(idx),
+                    sample_id=sample_id,
                     data={
-                        "license_type": "CC BY-NC-SA 4.0",
+                        "license": "CC BY-NC-SA 4.0",
                         "language": "en",
                     },
                 ),

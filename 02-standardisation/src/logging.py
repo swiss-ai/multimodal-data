@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 LOG_NAME = "pipeline"
-LOG_FORMAT = "%(asctime)s %(levelname)s %(filename)s:%(lineno)d -- %(message)s"
+LOG_FORMAT = "%(asctime)s %(levelname)s %(name)s -- %(message)s"
 
 
 def setup_logging(level: int, log_file: str | None) -> logging.Logger:
