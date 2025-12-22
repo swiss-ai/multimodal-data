@@ -7,12 +7,9 @@ LOG_FORMAT = "%(asctime)s %(levelname)s %(filename)s:%(lineno)d -- %(message)s"
 
 
 def setup_logging(level: int, log_file: str | None) -> logging.Logger:
-    """
-    Configure logging for the data pipeline.
-
-    Args:
-        level:    log level (e.g., logging.INFO)
-        log_file: path to log file (if None, no file logging)
+    """Configure logging for the data pipeline.
+    level:    log level (e.g., logging.INFO)
+    log_file: path to log file (if None, no file logging)
     """
 
     logger = logging.getLogger(LOG_NAME)

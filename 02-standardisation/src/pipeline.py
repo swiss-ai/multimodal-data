@@ -1,78 +1,94 @@
-from logging import Logger
-from typing import List
+import logging
+from typing import Callable
 
-from src.allowlist import AllowlistDB
+from src.allowlist import Allowlist
 from src.base import BaseDataset, BaseFilter
-from src.schema import RawSample
-from src.writer import ShardWriter
+from src.checkpoint import Checkpoint
+from src.schema import Sample
+from src.workers import WorkerPool
+
+logger = logging.getLogger()
 
 
 class Pipeline:
+    """Scans datasets and applies filters to build the manifest of approved samples."""
+
     def __init__(
         self,
-        logger: Logger,
-        datasets: List[BaseDataset],
-        filters: List[BaseFilter],
-        allowlist_path: str,
+        datasets: list[BaseDataset],
+        filter_factories: list[Callable[[], BaseFilter]],
+        data_dir: str,
+        num_workers: int,
         batch_size: int,
-        output_dir: str,
     ):
-        self.logger = logger
         self.datasets = datasets
-        self.filters = filters
+        self.filter_factories = filter_factories
 
-        self.allowlist = AllowlistDB(allowlist_path)
+        self.data_dir = data_dir
+        self.allowlist = Allowlist(f"{self.data_dir}/manifest.db")
+        self.checkpoint = Checkpoint(f"{self.data_dir}/checkpoint.db")
+
+        self.num_workers = num_workers
         self.batch_size = batch_size
 
-        self.output_dir = output_dir
-
     def scan(self):
-        """
-        Iterates datasets, applies filters, and populates the Allowlist.
-        """
-        batch_buffer = []
+        logger.info("Starting scan")
 
-        for dataset in self.datasets:
-            self.logger.info(f"scanning dataset adapter: {dataset.id}")
+        with WorkerPool(self.filter_factories, self.num_workers) as pool:
+            for dataset in self.datasets:
+                self._scan_dataset(dataset, pool)
 
-            for sample in dataset:
-                self.logger.debug(f"scanning: {dataset.id}/{sample.meta.sample_id}")
+        logger.info("Scan complete")
 
-                if not self._apply_filters(sample):
-                    continue
+    def _scan_dataset(self, dataset: BaseDataset, pool: WorkerPool):
+        dataset_id = dataset.id
 
-                batch_buffer.append((sample.meta.dataset_id, sample.meta.sample_id))
+        last_sample = self.checkpoint.get_resume_point(dataset_id)
+        if last_sample is True:
+            logger.info(f"Skipping completed: {dataset_id}")
+            return
+        elif last_sample is False:
+            resume_from = None
+        else:
+            resume_from = last_sample
+            logger.info(f"Resuming {dataset_id} from {resume_from}")
 
-                if len(batch_buffer) == self.batch_size:
-                    self.allowlist.add_batch(batch_buffer)
-                    batch_buffer = []
+        logger.info(f"Scanning: {dataset_id}")
 
-            self.logger.info(f"completed scanning dataset: {dataset.id}")
+        batch: list[Sample] = []
+        processed, passed = 0, 0
+        skipping = resume_from is not None
 
-        # flush remaining
-        if batch_buffer:
-            self.allowlist.add_batch(batch_buffer)
+        for sample in dataset:
+            if skipping:
+                if sample.meta.sample_id == resume_from:
+                    skipping = False
+                continue
 
-    def build(self):
-        """
-        Iterates datasets for samples in the allowlist, and writes WebDatasets.
-        """
-        for dataset in self.datasets:
-            self.logger.info(f"building dataset: {dataset.id}")
+            batch.append(sample)
 
-            shard_id = f"shard_{dataset.id}"
+            if len(batch) >= self.batch_size:
+                p = self._process_batch(batch, pool)
+                processed += len(batch)
+                passed += p
+                self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
+                logger.info(f"[{dataset_id}] {processed} processed, {passed} passed")
+                batch = []
 
-            with ShardWriter(self.logger, self.output_dir, shard_id) as writer:
-                for sample in dataset:
-                    self.logger.debug(f"building sample: {sample.meta.sample_id}")
+        if batch:
+            p = self._process_batch(batch, pool)
+            processed += len(batch)
+            passed += p
+            self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
+            logger.info(f"[{dataset_id}] {processed} processed, {passed} passed")
 
-                    if self.allowlist.exists(dataset.id, sample.meta.sample_id):
-                        writer.write(sample)
+        self.checkpoint.mark_complete(dataset_id)
+        logger.info(f"Completed {dataset_id}: {processed} processed, {passed} passed")
 
-            self.logger.info(f"completed building datasets: {dataset.id}")
-
-    def _apply_filters(self, sample: RawSample) -> bool:
-        for filter in self.filters:
-            if not filter(sample):
-                return False
-        return True
+    def _process_batch(self, batch: list[Sample], pool: WorkerPool) -> int:
+        """Filter batch and update allowlist. Returns count passed."""
+        results = pool.process_batch(batch)
+        passed_entries = [(r.dataset_id, r.sample_id) for r in results if r.passed]
+        if passed_entries:
+            self.allowlist.add_batch(passed_entries)
+        return len(passed_entries)

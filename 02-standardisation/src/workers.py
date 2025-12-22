@@ -7,7 +7,7 @@ import ray.util.multiprocessing as mp
 from src.base import BaseFilter
 from src.schema import Sample
 
-logger = logging.getLogger("pipeline.workers")
+logger = logging.getLogger()
 
 
 @dataclass
@@ -58,8 +58,6 @@ def _process_sample(data: bytes) -> FilterResult:
 
 
 class WorkerPool:
-    """Multiprocessing worker pool for filter processing."""
-
     def __init__(
         self,
         filter_factories: list[Callable[[], BaseFilter]],
