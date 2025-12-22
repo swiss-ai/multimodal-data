@@ -9,8 +9,6 @@ from PIL import Image
 
 @dataclass
 class SampleMetadata:
-    """Common metadata for all samples."""
-
     dataset_id: str
     sample_id: str
     data: dict[str, Any] = field(default_factory=dict)

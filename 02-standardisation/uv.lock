@@ -164,14 +164,14 @@ wheels = [
 
 [[package]]
 name = "click"
-version = "8.3.1"
+version = "8.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz", hash = "sha256:12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a", size = 295065, upload-time = "2025-11-15T20:45:42.706Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz", hash = "sha256:27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202", size = 286342, upload-time = "2025-05-20T23:19:49.832Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/98/78/01c019cdb5d6498122777c1a43056ebb3ebfeef2076d9d026bfe15583b2b/click-8.3.1-py3-none-any.whl", hash = "sha256:981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6", size = 108274, upload-time = "2025-11-15T20:45:41.139Z" },
+    { url = "https://files.pythonhosted.org/packages/85/32/10bb5764d90a8eee674e9dc6f4db6a0ab47c8c4d0d83c27f7c39ac415a4d/click-8.2.1-py3-none-any.whl", hash = "sha256:61a3265b914e850b85317d0b3109c7f8cd35a670f963866005d6ef1d5175a12b", size = 102215, upload-time = "2025-05-20T23:19:47.796Z" },
 ]
 
 [[package]]
@@ -997,7 +997,7 @@ wheels = [
 
 [[package]]
 name = "ray"
-version = "2.53.0"
+version = "2.50.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -1010,9 +1010,9 @@ dependencies = [
     { name = "requests" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3d/38/450cf9cf3c490fa4cc6d470597f819444da60f85579d2b34b95ee79fcb6f/ray-2.53.0-cp313-cp313-macosx_12_0_arm64.whl", hash = "sha256:85b472ab6fb8f1189f8cef81913fd91b24dd69b3fa7dcca7e144827bd924f6c0", size = 69409819, upload-time = "2025-12-20T16:06:50.668Z" },
-    { url = "https://files.pythonhosted.org/packages/71/5e/d452970b07174d5e4f8688abae889d01321b51ced827db1f1d1cb7d56d44/ray-2.53.0-cp313-cp313-manylinux2014_aarch64.whl", hash = "sha256:7196e5358dfcc8211be864f45e6dfe4827202df294af3c7a76ff8fbc080e0522", size = 71409529, upload-time = "2025-12-20T16:06:56.2Z" },
-    { url = "https://files.pythonhosted.org/packages/cb/84/50b317a125617a638a64694c12f56183edd5df01828a35fa4c55c7b13c66/ray-2.53.0-cp313-cp313-manylinux2014_x86_64.whl", hash = "sha256:73dbbaa7962a7f5e38aa8cf9483e0e9817205e989aa3dc859c738c2af1ae01df", size = 72283961, upload-time = "2025-12-20T16:07:05.831Z" },
+    { url = "https://files.pythonhosted.org/packages/91/3b/3f8aae31166256fb01a88db461558289714255b641a4e38b5b87f4e11494/ray-2.50.0-cp313-cp313-macosx_12_0_arm64.whl", hash = "sha256:c3da96695e3f63bd0eecad6d30ec7cf6d0309a8738e31ac270957812bcc1cd8b", size = 67555250, upload-time = "2025-10-10T21:56:36.605Z" },
+    { url = "https://files.pythonhosted.org/packages/e2/16/3845f71116108cd1ee9aa2cf3e62502bdff544409de06b397b6d9f61d58f/ray-2.50.0-cp313-cp313-manylinux2014_aarch64.whl", hash = "sha256:135c70c92bd3c3050441c905576e871b879dca486649218c45241a3ec4572399", size = 70195757, upload-time = "2025-10-10T21:56:41.935Z" },
+    { url = "https://files.pythonhosted.org/packages/e1/ee/3a6658967bb7d6878f27458247f1f94b67a573afe74b95f3b97c8a71cf29/ray-2.50.0-cp313-cp313-manylinux2014_x86_64.whl", hash = "sha256:838d2ca6065c1255b6c70f1d2041ca0b6ab3abab9083303b65d7b3138c022de2", size = 71038372, upload-time = "2025-10-10T21:56:47.044Z" },
 ]
 
 [[package]]
@@ -1196,7 +1196,7 @@ requires-dist = [
     { name = "imagehash", specifier = ">=4.3.2" },
     { name = "msgspec", specifier = ">=0.20.0" },
     { name = "pillow", specifier = ">=12.0.0" },
-    { name = "ray", specifier = ">=2.53.0" },
+    { name = "ray", specifier = ">=2.50.0" },
 ]
 
 [[package]]
