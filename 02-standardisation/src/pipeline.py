@@ -1,8 +1,8 @@
 import logging
-from collections.abc import Callable, Sequence
+from collections.abc import Sequence
 
 from src.allowlist import Allowlist
-from src.base import BaseDataset, BaseFilter
+from src.base import BaseDataset, BaseFilter, BaseSink
 from src.checkpoint import Checkpoint
 from src.schema import Sample
 from src.workers import WorkerPool
@@ -15,14 +15,16 @@ class Pipeline:
 
     def __init__(
         self,
-        dataset_factories: Sequence[Callable[[], BaseDataset]],
-        filter_factories: Sequence[Callable[[], BaseFilter]],
+        datasets: Sequence[BaseDataset],
+        filters: Sequence[BaseFilter],
+        sinks: BaseSink | None,
         data_dir: str,
         num_workers: int,
         batch_size: int,
     ):
-        self.dataset_factories = dataset_factories
-        self.filter_factories = filter_factories
+        self.datasets = datasets
+        self.filters = filters
+        self.sink = sinks
         self.data_dir = data_dir
         self.num_workers = num_workers
         self.batch_size = batch_size
@@ -31,10 +33,19 @@ class Pipeline:
         self.checkpoint = Checkpoint(f"{data_dir}/checkpoint.db")
 
     def scan(self):
-        logger.info(f"Starting scan of {len(self.dataset_factories)} dataset(s)")
-        with WorkerPool(self.filter_factories, self.num_workers) as pool:
-            for factory in self.dataset_factories:
-                self._scan_dataset(factory(), pool)
+        logger.info(f"Starting scan of {len(self.datasets)} dataset(s)")
+
+        if self.sink:
+            self.sink.open()
+
+        try:
+            with WorkerPool(self.filters, self.num_workers) as pool:
+                for dataset in self.datasets:
+                    self._scan_dataset(dataset, pool)
+        finally:
+            if self.sink:
+                self.sink.close()
+
         logger.info("Scan complete")
 
     def _scan_dataset(self, dataset: BaseDataset, pool: WorkerPool):
@@ -44,16 +55,21 @@ class Pipeline:
             logger.info(f"[{dataset_id}] Skipping (already complete)")
             return
 
-        from_id = self.checkpoint.get_resume_point(dataset_id)
-        if from_id:
-            logger.info(f"[{dataset_id}] Resuming from sample {from_id}")
+        last_id = self.checkpoint.get_last_sample_id(dataset_id)
+        if last_id is not None:
+            skip = last_id + 1
+            processed = skip
+            passed = self.allowlist.count(dataset_id)
+            logger.info(f"[{dataset_id}] Resuming from {skip} ({passed} passed)")
         else:
+            skip = None
+            processed = 0
+            passed = 0
             logger.info(f"[{dataset_id}] Starting")
 
         batch: list[Sample] = []
-        processed, passed = 0, 0
 
-        for sample in dataset.stream(from_id):
+        for sample in dataset.stream(skip):
             batch.append(sample)
 
             if len(batch) >= self.batch_size:
@@ -75,9 +91,15 @@ class Pipeline:
         logger.info(f"[{dataset_id}] Complete: {processed} processed, {passed} passed")
 
     def _process_batch(self, batch: list[Sample], pool: WorkerPool) -> int:
-        """Process batch, update allowlist, return count passed."""
+        """Process batch, update allowlist and sinks, return count passed."""
         results = pool.process_batch(batch)
+
         passed_entries = [(r.dataset_id, r.sample_id) for r in results if r.passed]
         if passed_entries:
             self.allowlist.add_batch(passed_entries)
+
+            if self.sink:
+                passed_samples = [s for s, r in zip(batch, results) if r.passed]
+                self.sink.write_batch(passed_samples)
+
         return len(passed_entries)

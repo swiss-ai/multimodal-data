@@ -12,14 +12,13 @@ class BaseDataset(ABC):
     def id(self) -> str: ...
 
     @abstractmethod
-    def stream(self, from_id: str | None = None) -> Iterator[Sample]:
+    def stream(self, skip: int | None = None) -> Iterator[Sample]:
         """
-        Yield samples. If from_id is provided, skip until that ID
-        is found, then yield starting from the next sample.
+        Yield samples. If 'skip' is provided, skip the first 'skip' samples.
 
         Example:
             dataset = ["a", "b", "c", "d"]
-            stream(from_id="b") yields "c", "d"
+            stream(skip=2) yields "c", "d"
         """
         ...
 
@@ -38,3 +37,27 @@ class BaseFilter(ABC):
         Exceptions are logged and treated as filter failures (i.e., return False).
         """
         ...
+
+
+class BaseSink(ABC):
+    """Base class for pipeline output sinks."""
+
+    def open(self) -> None:
+        """Called before processing starts."""
+        pass
+
+    @abstractmethod
+    def write_batch(self, samples: list[Sample]) -> None:
+        """Write a batch of accepted samples."""
+        ...
+
+    def close(self) -> None:
+        """Called after processing completes."""
+        pass
+
+    def __enter__(self):
+        self.open()
+        return self
+
+    def __exit__(self, *_):
+        self.close()

@@ -23,11 +23,11 @@ class HashStore:
             CREATE TABLE IF NOT EXISTS seen_hashes (
                 img_hash TEXT PRIMARY KEY,
                 dataset_id TEXT,
-                sample_id TEXT
+                sample_id INTEGER
             ) WITHOUT ROWID
         """)
 
-    def check_and_insert(self, img_hash: str, dataset_id: str, sample_id: str) -> bool:
+    def check_and_insert(self, img_hash: str, dataset_id: str, sample_id: int) -> bool:
         """Insert hash if new. Returns True if unique, False if duplicate."""
         with self.conn:
             cursor = self.conn.execute(

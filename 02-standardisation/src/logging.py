@@ -13,7 +13,7 @@ def setup_logging(level: int, log_file: str | None) -> logging.Logger:
     """
 
     logger = logging.getLogger(LOG_NAME)
-    logger.setLevel(level)
+    logger.setLevel(logging.DEBUG)
     logger.handlers.clear()
     logger.propagate = False
 
@@ -31,7 +31,7 @@ def setup_logging(level: int, log_file: str | None) -> logging.Logger:
         path.parent.mkdir(parents=True, exist_ok=True)
 
         file_handler = logging.FileHandler(path, encoding="utf-8")
-        file_handler.setLevel(level)
+        file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
 

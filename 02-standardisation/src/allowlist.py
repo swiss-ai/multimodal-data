@@ -19,12 +19,12 @@ class Allowlist:
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS allowlist (
                 dataset_id TEXT,
-                sample_id TEXT,
+                sample_id INTEGER,
                 PRIMARY KEY (dataset_id, sample_id)
             ) WITHOUT ROWID
         """)
 
-    def add_batch(self, entries: list[tuple[str, str]]):
+    def add_batch(self, entries: list[tuple[str, int]]):
         """Insert batch of (dataset_id, sample_id) pairs."""
         logger.debug(f"Inserting {len(entries)} entries into allowlist")
 
@@ -34,13 +34,20 @@ class Allowlist:
                 entries,
             )
 
-    def exists(self, dataset_id: str, sample_id: str) -> bool:
+    def exists(self, dataset_id: str, sample_id: int) -> bool:
         """Check if sample is in allowlist."""
         cur = self.conn.execute(
             "SELECT 1 FROM allowlist WHERE dataset_id = ? AND sample_id = ?",
             (dataset_id, sample_id),
         )
         return cur.fetchone() is not None
+
+    def count(self, dataset_id: str) -> int:
+        cur = self.conn.execute(
+            "SELECT COUNT(*) FROM allowlist WHERE dataset_id = ?",
+            (dataset_id,),
+        )
+        return cur.fetchone()[0]
 
     def iter_dataset(self, dataset_id: str):
         """Yields dataset sample IDs in the allowlist."""

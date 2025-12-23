@@ -10,7 +10,7 @@ from PIL import Image
 @dataclass
 class SampleMetadata:
     dataset_id: str
-    sample_id: str
+    sample_id: int
     data: dict[str, Any] = field(default_factory=dict)
 
 
@@ -115,7 +115,7 @@ class SerializedSample(msgspec.Struct):
 
     sample_type: str
     dataset_id: str
-    sample_id: str
+    sample_id: int
     meta_data: dict[str, Any]
 
     # sample-type-specific fields
