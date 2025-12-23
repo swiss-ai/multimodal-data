@@ -1,0 +1,32 @@
+{
+  "adapters": [
+    {
+      "type": "MedtrinityDemo",
+      "limit": 3000
+    }
+  ],
+  "filters": [
+    {
+      "type": "MinResolution",
+      "min_width": 64,
+      "min_height": 64
+    },
+    {
+      "type": "ImageDeduplication",
+      "db_path": "./data/dedup.db",
+      "algorithm": "phash"
+    }
+  ],
+  "webdataset": {
+    "output_dir": "./data/webdataset",
+    "samples_per_shard": 100,
+    "target_shard_bytes": 500000000,
+    "image_format": "jpeg"
+  },
+  "pipeline": {
+    "log_file": "./data/pipeline.log",
+    "data_dir": "./data",
+    "num_workers": 8,
+    "batch_size": 500
+  }
+}

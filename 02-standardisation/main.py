@@ -1,43 +1,49 @@
+import json
 import logging
 import os
+import sys
 
-# adapters
-from adapters.medtrinity_demo import MedtrinityDemoAdapter
-
-# filters
-from filters.deduplication import ImageDeduplication
-from filters.resolution import ResolutionFilter
-
-# core pipeline
+from adapters import ADAPTER_REGISTRY
+from filters import FILTER_REGISTRY
 from pipeline import Pipeline, WebDatasetSink, setup_logging
 
-DATA_DIR = "./data"
-setup_logging(level=logging.DEBUG, log_file=f"{DATA_DIR}/pipeline.log")
 
-adapters = [
-    MedtrinityDemoAdapter(),
-]
+def build_from_registry(config: list[dict], registry: dict[str, type]) -> list:
+    instances = []
+    for cfg in config:
+        factory = registry[cfg.pop("type")]
+        instances.append(factory(**cfg))
+    return instances
 
-filters = [
-    ResolutionFilter(64, 64),
-    ImageDeduplication(f"{DATA_DIR}/dedup.db", "phash"),
-]
 
-sink = WebDatasetSink(
-    output_dir=f"{DATA_DIR}/webdataset",
-    samples_per_shard=100,  # TODO: increase for prod
-    target_shard_bytes=500_000_000,
-)
+def main(config_path: str):
+    with open(config_path) as f:
+        config = json.load(f)
 
-pipeline = Pipeline(
-    datasets=adapters,
-    filters=filters,
-    sinks=sink,
-    data_dir=DATA_DIR,
-    num_workers=8,
-    batch_size=500,
-)
+    setup_logging(level=logging.INFO, log_file=config["pipeline"]["log_file"])
+    logger = logging.getLogger("pipeline")
+    logger.debug("Starting pipeline with config: %s", config)
 
-pipeline.scan()
+    adapters = build_from_registry(config["adapters"], ADAPTER_REGISTRY)
+    filters = build_from_registry(config["filters"], FILTER_REGISTRY)
+    sink = WebDatasetSink(**config["webdataset"])
 
-os._exit(0)
+    pipeline = Pipeline(
+        datasets=adapters,
+        filters=filters,
+        sinks=sink,
+        data_dir=config["pipeline"]["data_dir"],
+        num_workers=config["pipeline"]["num_workers"],
+        batch_size=config["pipeline"]["batch_size"],
+    )
+
+    pipeline.scan()
+    os._exit(0)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print(f"Usage: {sys.argv[0]} <config.json>", file=sys.stderr)
+        sys.exit(1)
+
+    main(sys.argv[1])
