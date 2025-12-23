@@ -3,8 +3,7 @@ import sqlite3
 
 import imagehash
 
-from src.base import BaseFilter
-from src.schema import ImageSample, ImageTextSample, Sample
+from pipeline import BaseFilter, ImageSample, ImageTextSample, Sample
 
 
 class HashStore:
@@ -34,7 +33,21 @@ class HashStore:
                 "INSERT OR IGNORE INTO seen_hashes (img_hash, dataset_id, sample_id) VALUES (?, ?, ?)",
                 (img_hash, dataset_id, sample_id),
             )
-            return cursor.rowcount > 0
+            if cursor.rowcount > 0:
+                return True  # unique hash
+
+            # check if existing hash matches the same dataset_id/sample_id
+            cursor = self.conn.execute(
+                "SELECT dataset_id, sample_id FROM seen_hashes WHERE img_hash = ?",
+                (img_hash,),
+            )
+            result = cursor.fetchone()
+            is_original_sample = (
+                (result is not None)
+                and (result[0] == dataset_id)
+                and (result[1] == sample_id)
+            )
+            return is_original_sample
 
 
 class ImageDeduplication(BaseFilter):

@@ -4,8 +4,8 @@ from collections.abc import Sequence
 from dataclasses import dataclass
 
 # import ray.util.multiprocessing as mp
-from src.base import BaseFilter
-from src.schema import Sample
+from pipeline.base import BaseFilter
+from pipeline.schema import Sample
 
 logger = logging.getLogger("pipeline.workers")
 

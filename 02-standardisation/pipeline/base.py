@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Iterator
 
-from src.schema import Sample
+from pipeline.schema import Sample
 
 
 class BaseDataset(ABC):
