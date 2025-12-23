@@ -9,10 +9,12 @@ from pipeline.schema import (
     TextSample,
 )
 from pipeline.webdataset import WebDatasetSink
+from pipeline.workers import FilterFactory
 
 __all__ = [
     "BaseDataset",
     "BaseFilter",
+    "FilterFactory",
     "SampleMetadata",
     "Sample",
     "ImageSample",

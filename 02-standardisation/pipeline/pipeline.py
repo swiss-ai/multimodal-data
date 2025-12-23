@@ -2,10 +2,10 @@ import logging
 from collections.abc import Sequence
 
 from pipeline.allowlist import Allowlist
-from pipeline.base import BaseDataset, BaseFilter, BaseSink
+from pipeline.base import BaseDataset, BaseSink
 from pipeline.checkpoint import Checkpoint
 from pipeline.schema import Sample
-from pipeline.workers import WorkerPool
+from pipeline.workers import FilterFactory, WorkerPool
 
 logger = logging.getLogger("pipeline")
 
@@ -16,14 +16,14 @@ class Pipeline:
     def __init__(
         self,
         datasets: Sequence[BaseDataset],
-        filters: Sequence[BaseFilter],
+        filter_factories: Sequence[FilterFactory],
         sinks: BaseSink | None,
         data_dir: str,
         num_workers: int,
         batch_size: int,
     ):
         self.datasets = datasets
-        self.filters = filters
+        self.filter_factories = filter_factories
         self.sink = sinks
         self.data_dir = data_dir
         self.num_workers = num_workers
@@ -39,7 +39,7 @@ class Pipeline:
             self.sink.open()
 
         try:
-            with WorkerPool(self.filters, self.num_workers) as pool:
+            with WorkerPool(self.filter_factories, self.num_workers) as pool:
                 for dataset in self.datasets:
                     self._scan_dataset(dataset, pool)
         finally:
