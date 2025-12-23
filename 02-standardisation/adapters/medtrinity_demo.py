@@ -4,7 +4,8 @@ from pipeline import BaseDataset, ImageSample, SampleMetadata
 
 
 class MedtrinityDemoAdapter(BaseDataset):
-    def __init__(self):
+    def __init__(self, limit: int):
+        self.limit = limit
         self.dataset = load_dataset(
             "UCSC-VLAA/MedTrinity-25M",
             "25M_demo",
@@ -24,8 +25,8 @@ class MedtrinityDemoAdapter(BaseDataset):
             dataset = dataset.skip(skip)  # type: ignore
 
         for idx, row in enumerate(dataset, start=start_idx):
-            if idx == 3000:
-                break  # TODO: remove limit
+            if idx >= self.limit:
+                break
 
             yield ImageSample(
                 image=row["image"],
