@@ -1,11 +1,11 @@
 import logging
 from collections.abc import Sequence
 
-from src.allowlist import Allowlist
-from src.base import BaseDataset, BaseFilter, BaseSink
-from src.checkpoint import Checkpoint
-from src.schema import Sample
-from src.workers import WorkerPool
+from pipeline.allowlist import Allowlist
+from pipeline.base import BaseDataset, BaseFilter, BaseSink
+from pipeline.checkpoint import Checkpoint
+from pipeline.schema import Sample
+from pipeline.workers import WorkerPool
 
 logger = logging.getLogger("pipeline")
 

@@ -1,5 +1,4 @@
-from src.base import BaseFilter
-from src.schema import ImageSample, ImageTextSample, Sample
+from pipeline import BaseFilter, ImageSample, ImageTextSample, Sample
 
 
 class ResolutionFilter(BaseFilter):

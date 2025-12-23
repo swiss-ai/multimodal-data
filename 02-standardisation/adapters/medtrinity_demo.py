@@ -1,7 +1,6 @@
 from datasets import load_dataset
 
-from src.base import BaseDataset
-from src.schema import ImageSample, SampleMetadata
+from pipeline import BaseDataset, ImageSample, SampleMetadata
 
 
 class MedtrinityDemoAdapter(BaseDataset):

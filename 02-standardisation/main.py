@@ -1,32 +1,18 @@
 import logging
 import os
-import shutil
-import warnings
 
-import datasets
-
+# adapters
 from adapters.medtrinity_demo import MedtrinityDemoAdapter
+
+# filters
 from filters.deduplication import ImageDeduplication
 from filters.resolution import ResolutionFilter
-from src.logging import setup_logging
-from src.pipeline import Pipeline
 
-datasets.disable_progress_bar()
-warnings.simplefilter(action="ignore", category=FutureWarning)
-
+# core pipeline
+from pipeline import Pipeline, WebDatasetSink, setup_logging
 
 DATA_DIR = "./data"
-FRESH_START = False
-
-
-logger = setup_logging(
-    level=logging.DEBUG,
-    log_file=f"{DATA_DIR}/pipeline.log",
-)
-
-if FRESH_START:
-    logger.warning("Performing fresh start, deleting existing data directory")
-    shutil.rmtree(DATA_DIR, ignore_errors=True)
+setup_logging(level=logging.DEBUG, log_file=f"{DATA_DIR}/pipeline.log")
 
 adapters = [
     MedtrinityDemoAdapter(),
@@ -37,10 +23,16 @@ filters = [
     ImageDeduplication(f"{DATA_DIR}/dedup.db", "phash"),
 ]
 
+sink = WebDatasetSink(
+    output_dir=f"{DATA_DIR}/webdataset",
+    samples_per_shard=100,  # TODO: increase for prod
+    target_shard_bytes=500_000_000,
+)
+
 pipeline = Pipeline(
     datasets=adapters,
     filters=filters,
-    sinks=None,
+    sinks=sink,
     data_dir=DATA_DIR,
     num_workers=8,
     batch_size=500,
