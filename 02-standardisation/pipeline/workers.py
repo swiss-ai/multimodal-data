@@ -1,6 +1,6 @@
 import logging
 import multiprocessing as mp
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 
 # import ray.util.multiprocessing as mp
@@ -8,6 +8,8 @@ from pipeline.base import BaseFilter
 from pipeline.schema import Sample
 
 logger = logging.getLogger("pipeline.workers")
+
+FilterFactory = Callable[[], BaseFilter]
 
 
 @dataclass
@@ -20,9 +22,9 @@ class FilterResult:
 _worker_filters: list[BaseFilter] | None = None
 
 
-def _init_worker(filters: list[BaseFilter]):
+def _init_worker(filter_factories: Sequence[FilterFactory]):
     global _worker_filters
-    _worker_filters = filters
+    _worker_filters = [f() for f in filter_factories]
 
 
 def _process_sample(data: bytes) -> FilterResult:
@@ -52,7 +54,7 @@ def _process_sample(data: bytes) -> FilterResult:
 class WorkerPool:
     def __init__(
         self,
-        filters: Sequence[BaseFilter],
+        filter_factories: Sequence[FilterFactory],
         num_workers: int,
     ):
         self.num_workers = num_workers
@@ -60,7 +62,7 @@ class WorkerPool:
         self.pool = mp.Pool(
             processes=num_workers,
             initializer=_init_worker,
-            initargs=(filters,),
+            initargs=(filter_factories,),
         )
         logger.debug("Worker pool ready")
 

@@ -2,18 +2,20 @@ import json
 import logging
 import os
 import sys
+from functools import partial
 
 from adapters import ADAPTER_REGISTRY
 from filters import FILTER_REGISTRY
 from pipeline import Pipeline, WebDatasetSink, setup_logging
 
 
-def build_from_registry(config: list[dict], registry: dict[str, type]) -> list:
-    instances = []
+def build_factories(config: list[dict], registry: dict[str, type]) -> list:
+    factories = []
     for cfg in config:
+        cfg = cfg.copy()
         factory = registry[cfg.pop("type")]
-        instances.append(factory(**cfg))
-    return instances
+        factories.append(partial(factory, **cfg))
+    return factories
 
 
 def main(config_path: str):
@@ -24,13 +26,13 @@ def main(config_path: str):
     logger = logging.getLogger("pipeline")
     logger.debug("Starting pipeline with config: %s", config)
 
-    adapters = build_from_registry(config["adapters"], ADAPTER_REGISTRY)
-    filters = build_from_registry(config["filters"], FILTER_REGISTRY)
+    adapter_factories = build_factories(config["adapters"], ADAPTER_REGISTRY)
+    filter_factories = build_factories(config["filters"], FILTER_REGISTRY)
     sink = WebDatasetSink(**config["webdataset"])
 
     pipeline = Pipeline(
-        datasets=adapters,
-        filters=filters,
+        datasets=[f() for f in adapter_factories],
+        filter_factories=filter_factories,
         sinks=sink,
         data_dir=config["pipeline"]["data_dir"],
         num_workers=config["pipeline"]["num_workers"],
