@@ -17,12 +17,12 @@ class Checkpoint:
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS progress (
                 dataset_id TEXT PRIMARY KEY,
-                last_sample_id TEXT,
+                last_sample_id INTEGER,
                 completed INTEGER DEFAULT 0
             )
         """)
 
-    def get_resume_point(self, dataset_id: str) -> str | None:
+    def get_last_sample_id(self, dataset_id: str) -> int | None:
         """Get last processed sample ID. Return None if not started or completed."""
         cur = self.conn.execute(
             "SELECT completed, last_sample_id FROM progress WHERE dataset_id = ?",
@@ -43,7 +43,7 @@ class Checkpoint:
         row = cur.fetchone()
         return row is not None and row[0] == 1
 
-    def update(self, dataset_id: str, last_sample_id: str):
+    def update(self, dataset_id: str, last_sample_id: int):
         with self.conn:
             self.conn.execute(
                 """

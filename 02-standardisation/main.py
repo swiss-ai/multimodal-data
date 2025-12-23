@@ -16,10 +16,7 @@ warnings.simplefilter(action="ignore", category=FutureWarning)
 
 
 DATA_DIR = "./data"
-FRESH_START = True
-
-if FRESH_START:
-    shutil.rmtree(DATA_DIR, ignore_errors=True)
+FRESH_START = False
 
 
 logger = setup_logging(
@@ -27,18 +24,23 @@ logger = setup_logging(
     log_file=f"{DATA_DIR}/pipeline.log",
 )
 
-dataset_factories = [
-    lambda: MedtrinityDemoAdapter(),
+if FRESH_START:
+    logger.warning("Performing fresh start, deleting existing data directory")
+    shutil.rmtree(DATA_DIR, ignore_errors=True)
+
+adapters = [
+    MedtrinityDemoAdapter(),
 ]
 
-filter_factories = [
-    lambda: ResolutionFilter(64, 64),
-    lambda: ImageDeduplication(f"{DATA_DIR}/dedup.db", "phash"),
+filters = [
+    ResolutionFilter(64, 64),
+    ImageDeduplication(f"{DATA_DIR}/dedup.db", "phash"),
 ]
 
 pipeline = Pipeline(
-    dataset_factories=dataset_factories,
-    filter_factories=filter_factories,
+    datasets=adapters,
+    filters=filters,
+    sinks=None,
     data_dir=DATA_DIR,
     num_workers=8,
     batch_size=500,
