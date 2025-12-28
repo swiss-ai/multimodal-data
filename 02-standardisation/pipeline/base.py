@@ -27,14 +27,10 @@ class BaseFilter(ABC):
     """Base class for sample filters."""
 
     @abstractmethod
-    def __call__(self, sample: Sample) -> bool:
+    def process_batch(self, samples: list[Sample]) -> list[bool]:
         """
-        Return True to keep sample, False to discard.
-
-        This method can be stateful but must be thread-safe, i.e., it should work
-        correctly even when called from multiple threads simultaneously.
-
-        Exceptions are logged and treated as filter failures (i.e., return False).
+        Process a batch of samples. Return list of bools (True=keep, False=discard).
+        Can be stateful, but must be thread-safe.
         """
         ...
 

@@ -1,4 +1,4 @@
-from pipeline import BaseFilter, ImageSample, ImageTextSample, Sample
+from pipeline import BaseFilter, ImageSample, Sample
 
 
 class ResolutionFilter(BaseFilter):
@@ -6,9 +6,12 @@ class ResolutionFilter(BaseFilter):
         self.min_width = min_width
         self.min_height = min_height
 
-    def __call__(self, sample: Sample) -> bool:
-        if not isinstance(sample, (ImageSample, ImageTextSample)):
-            return True
-
-        w, h = sample.image.size
-        return w >= self.min_width and h >= self.min_height
+    def process_batch(self, samples: list[Sample]) -> list[bool]:
+        results = []
+        for sample in samples:
+            if not isinstance(sample, (ImageSample)):
+                results.append(True)
+            else:
+                w, h = sample.image.size
+                results.append(w >= self.min_width and h >= self.min_height)
+        return results

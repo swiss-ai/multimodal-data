@@ -27,28 +27,34 @@ def _init_worker(filter_factories: Sequence[FilterFactory]):
     _worker_filters = [f() for f in filter_factories]
 
 
-def _process_sample(data: bytes) -> FilterResult:
+def _process_batch(batch_data: list[bytes]) -> list[FilterResult]:
     global _worker_filters
-    sample = Sample.deserialize(data)
+    assert _worker_filters is not None, "Filters not initialized"
 
-    try:
-        assert _worker_filters is not None, "Filters not initialized"
-        passed = all(f(sample) for f in _worker_filters)
+    samples = [Sample.deserialize(data) for data in batch_data]
+    results = []
 
-    except Exception:
-        did, sid = sample.meta.dataset_id, sample.meta.sample_id
-        logger.exception(f"Error processing sample {did}/{sid}, marking as failed")
-        return FilterResult(
-            dataset_id=sample.meta.dataset_id,
-            sample_id=sample.meta.sample_id,
-            passed=False,
+    passed = [True] * len(samples)
+    for f in _worker_filters:
+        try:
+            filter_results = f.process_batch(samples)
+            passed = [p and r for p, r in zip(passed, filter_results)]
+        except Exception:
+            did, sid = samples[0].meta.dataset_id, samples[0].meta.sample_id
+            logger.exception(f"Error filtering batch of {did}/{sid}, marking as failed")
+            passed = [False] * len(samples)
+            break
+
+    for sample, p in zip(samples, passed):
+        results.append(
+            FilterResult(
+                dataset_id=sample.meta.dataset_id,
+                sample_id=sample.meta.sample_id,
+                passed=p,
+            )
         )
 
-    return FilterResult(
-        dataset_id=sample.meta.dataset_id,
-        sample_id=sample.meta.sample_id,
-        passed=passed,
-    )
+    return results
 
 
 class WorkerPool:
@@ -68,7 +74,15 @@ class WorkerPool:
 
     def process_batch(self, samples: list[Sample]) -> list[FilterResult]:
         serialized = [s.serialize() for s in samples]
-        return list(self.pool.map(_process_sample, serialized))
+
+        sub_batch_size = max(1, len(serialized) // self.num_workers)
+        sub_batches = [
+            serialized[i : i + sub_batch_size]
+            for i in range(0, len(serialized), sub_batch_size)
+        ]
+
+        nested_results = self.pool.map(_process_batch, sub_batches)
+        return [r for batch in nested_results for r in batch]
 
     def close(self):
         logger.debug("Shutting down workers")
