@@ -68,11 +68,13 @@ class Pipeline:
             logger.info(f"[{dataset_id}] Starting")
 
         batch: list[Sample] = []
+        stream_logger = logging.getLogger(f"pipeline.{dataset_id}")
 
-        for sample in dataset.stream(skip):
+        for sample in dataset.stream(stream_logger, skip):
             batch.append(sample)
 
             if len(batch) >= self.batch_size:
+                logger.debug(f"[{dataset_id}] Processing batch of {len(batch)} samples")
                 p = self._process_batch(batch, pool)
                 processed += len(batch)
                 passed += p

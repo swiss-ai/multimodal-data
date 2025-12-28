@@ -1,5 +1,4 @@
 import glob
-import logging
 import os
 import subprocess
 import tarfile
@@ -7,8 +6,6 @@ import tarfile
 from PIL import Image
 
 from pipeline import BaseDataset, ImageSample, SampleMetadata
-
-logger = logging.getLogger("medmax_adapter")
 
 
 class MedMaxRawImageAdapter(BaseDataset):
@@ -19,14 +16,14 @@ class MedMaxRawImageAdapter(BaseDataset):
         if not self.chunk_files:
             raise FileNotFoundError(f"No tar chunks found in {data_dir}.'")
 
-        for file in self.chunk_files:
-            logger.info(f"Found chunk file: {file}")
-
     @property
     def id(self):
         return "medmax_raw_images"
 
-    def stream(self, skip: int | None = None):
+    def stream(self, logger, skip: int | None = None):
+        for file in self.chunk_files:
+            logger.info(f"Found chunk file: {file}")
+
         process = subprocess.Popen(
             ["cat"] + self.chunk_files,
             stdout=subprocess.PIPE,
@@ -63,7 +60,11 @@ class MedMaxRawImageAdapter(BaseDataset):
                             data={"path": member.name},
                         )
                         yield ImageSample(image=pil_image, meta=meta)
+
                         counter += 1
+                        if counter % 2000 == 0:
+                            logger.debug(f"Streamed {counter} images so far.")
+
                     except Exception as e:
                         logger.warning(f"Skipping corrupt file {member.name}: {e}")
 

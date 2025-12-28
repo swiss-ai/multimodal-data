@@ -27,11 +27,12 @@ def _init_worker(filter_factories: Sequence[FilterFactory]):
     _worker_filters = [f() for f in filter_factories]
 
 
-def _process_batch(batch_data: list[bytes]) -> list[FilterResult]:
+def _process_batch(batch_data: list[Sample]) -> list[FilterResult]:
     global _worker_filters
     assert _worker_filters is not None, "Filters not initialized"
 
-    samples = [Sample.deserialize(data) for data in batch_data]
+    # samples = [Sample.deserialize(data) for data in batch_data]
+    samples = batch_data
     results = []
 
     passed = [True] * len(samples)
@@ -73,13 +74,19 @@ class WorkerPool:
         logger.debug("Worker pool ready")
 
     def process_batch(self, samples: list[Sample]) -> list[FilterResult]:
-        serialized = [s.serialize() for s in samples]
+        # serialized = [s.serialize() for s in samples]
+        serialized = samples
 
         sub_batch_size = max(1, len(serialized) // self.num_workers)
         sub_batches = [
             serialized[i : i + sub_batch_size]
             for i in range(0, len(serialized), sub_batch_size)
         ]
+
+        logger.debug(
+            f"Processing batch of {len(samples)} samples in "
+            f"{len(sub_batches)} sub-batches"
+        )
 
         nested_results = self.pool.map(_process_batch, sub_batches)
         return [r for batch in nested_results for r in batch]

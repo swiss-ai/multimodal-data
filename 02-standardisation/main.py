@@ -23,7 +23,7 @@ def main(config_path: str):
     with open(config_path) as f:
         config = json.load(f)
 
-    setup_logging(level=logging.INFO, log_file=config["pipeline"]["log_file"])
+    setup_logging(level=logging.DEBUG, log_file=config["pipeline"]["log_file"])
     logger = logging.getLogger("pipeline")
     logger.debug("Starting pipeline with config: %s", config)
 
