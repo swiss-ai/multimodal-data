@@ -12,7 +12,7 @@ class BaseDataset(ABC):
     def id(self) -> str: ...
 
     @abstractmethod
-    def stream(self, skip: int | None = None) -> Iterator[Sample]:
+    def stream(self, logger, skip: int | None = None) -> Iterator[Sample]:
         """
         Yield samples. If 'skip' is provided, skip the first 'skip' samples.
 

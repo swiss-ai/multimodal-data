@@ -4,8 +4,7 @@ from pipeline import BaseDataset, ImageSample, SampleMetadata
 
 
 class MedtrinityDemoAdapter(BaseDataset):
-    def __init__(self, limit: int):
-        self.limit = limit
+    def __init__(self):
         self.dataset = load_dataset(
             "UCSC-VLAA/MedTrinity-25M",
             "25M_demo",
@@ -17,17 +16,15 @@ class MedtrinityDemoAdapter(BaseDataset):
     def id(self):
         return "medtrinity_demo"
 
-    def stream(self, skip: int | None = None):
+    def stream(self, logger, skip: int | None = None):
         dataset = self.dataset
         start_idx = skip or 0
 
         if skip:
+            logger.info(f"Skipping first {skip} samples.")
             dataset = dataset.skip(skip)  # type: ignore
 
         for idx, row in enumerate(dataset, start=start_idx):
-            if idx >= self.limit:
-                break
-
             yield ImageSample(
                 image=row["image"],
                 meta=SampleMetadata(
@@ -39,3 +36,5 @@ class MedtrinityDemoAdapter(BaseDataset):
                     },
                 ),
             )
+            if idx % 2000 == 0:
+                logger.info(f"Streamed {idx} samples so far...")
