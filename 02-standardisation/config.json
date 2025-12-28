@@ -2,7 +2,7 @@
   "adapters": [
     {
       "type": "MedtrinityDemo",
-      "limit": 3000
+      "limit": 10000
     }
   ],
   "filters": [
@@ -19,14 +19,14 @@
   ],
   "webdataset": {
     "output_dir": "./data/webdataset",
-    "samples_per_shard": 100,
+    "samples_per_shard": 10000,
     "target_shard_bytes": 500000000,
     "image_format": "jpeg"
   },
   "pipeline": {
     "log_file": "./data/pipeline.log",
     "data_dir": "./data",
-    "num_workers": 8,
+    "num_workers": 280,
     "batch_size": 500
   }
 }

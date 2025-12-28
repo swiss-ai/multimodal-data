@@ -1,53 +1,29 @@
 import os
-import sqlite3
 
 import imagehash
+import lmdb
 
 from pipeline import BaseFilter, ImageSample, ImageTextSample, Sample
 
 
 class HashStore:
-    """SQLite store for image hashes."""
+    """LMDB store for image hashes."""
 
-    def __init__(self, db_path: str):
+    def __init__(self, db_path: str, map_size: int = 1_000_000_000):
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
-        self.conn = sqlite3.connect(db_path, timeout=30.0, check_same_thread=False)
-
-        try:
-            self.conn.execute("PRAGMA journal_mode=WAL;")
-        except sqlite3.OperationalError:
-            pass  # WAL already called or not supported
-
-        self.conn.execute("""
-            CREATE TABLE IF NOT EXISTS seen_hashes (
-                img_hash TEXT PRIMARY KEY,
-                dataset_id TEXT,
-                sample_id INTEGER
-            ) WITHOUT ROWID
-        """)
+        self.env = lmdb.open(db_path, map_size=map_size)
 
     def check_and_insert(self, img_hash: str, dataset_id: str, sample_id: int) -> bool:
         """Insert hash if new. Returns True if unique, False if duplicate."""
-        with self.conn:
-            cursor = self.conn.execute(
-                "INSERT OR IGNORE INTO seen_hashes (img_hash, dataset_id, sample_id) VALUES (?, ?, ?)",
-                (img_hash, dataset_id, sample_id),
-            )
-            if cursor.rowcount > 0:
-                return True  # unique hash
+        key = img_hash.encode()
+        value = f"{dataset_id}:{sample_id}".encode()
 
-            # check if existing hash matches the same dataset_id/sample_id
-            cursor = self.conn.execute(
-                "SELECT dataset_id, sample_id FROM seen_hashes WHERE img_hash = ?",
-                (img_hash,),
-            )
-            result = cursor.fetchone()
-            is_original_sample = (
-                (result is not None)
-                and (result[0] == dataset_id)
-                and (result[1] == sample_id)
-            )
-            return is_original_sample
+        with self.env.begin(write=True) as tx:
+            existing = tx.get(key)
+            if existing is None:
+                tx.put(key, value)
+                return True  # unique hash
+            return existing == value
 
 
 class ImageDeduplication(BaseFilter):
