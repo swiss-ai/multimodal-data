@@ -13,20 +13,20 @@
     },
     {
       "type": "ImageDeduplication",
-      "db_path": "./data/dedup.db",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/02-processing/deduplication",
       "algorithm": "phash"
     }
   ],
   "webdataset": {
-    "output_dir": "./data/webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/medical/processed/wds_sink",
     "samples_per_shard": 100000,
     "target_shard_bytes": 1000000000,
     "image_format": "jpeg"
   },
   "pipeline": {
-    "log_file": "./data/pipeline.log",
-    "data_dir": "./data",
-    "num_workers": 280,
-    "batch_size": 14000
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/02-processing/pipeline.log",
+    "data_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/02-processing/data",
+    "num_workers": 100,
+    "batch_size": 16000
   }
 }
