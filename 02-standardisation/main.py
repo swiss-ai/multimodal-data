@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import sys
+import time
 from functools import partial
 
 from adapters import ADAPTER_REGISTRY
@@ -48,4 +49,5 @@ if __name__ == "__main__":
         print(f"Usage: {sys.argv[0]} <config.json>", file=sys.stderr)
         sys.exit(1)
 
+    time.sleep(10)
     main(sys.argv[1])

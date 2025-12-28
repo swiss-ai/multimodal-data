@@ -33,6 +33,13 @@ class WebDatasetSink(BaseSink):
 
     def open(self) -> None:
         os.makedirs(self.output_dir, exist_ok=True)
+
+        existing = [f for f in os.listdir(self.output_dir) if f.endswith(".tar")]
+        if existing:
+            last_shard = max(int(f.split(".")[0]) for f in existing)
+            self._shard_idx = last_shard + 1
+            logger.info(f"Resuming from shard {self._shard_idx}")
+
         logger.info(f"Writing to {self.output_dir}")
 
     def write_batch(self, samples: list[Sample]) -> None:
