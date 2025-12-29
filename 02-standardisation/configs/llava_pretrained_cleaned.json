@@ -2,8 +2,8 @@
   "adapters": [
     {
       "type": "Meditron",
-      "dataset_id": "llava_pretrained_cleaned",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/llava_pretrained_cleaned"
+      "dataset_id": "llava_pretrain_cleaned",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/llava_pretrain_cleaned"
     }
   ],
   "filters": [
@@ -14,18 +14,18 @@
     },
     {
       "type": "ImageDeduplication",
-      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/deduplication",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/deduplication3",
       "algorithm": "phash"
     }
   ],
   "webdataset": {
     "output_dir": "/capstor/store/cscs/swissai/infra01/medical/processed/llava_pretrained_cleaned",
     "samples_per_shard": 100000,
-    "target_shard_bytes": 10000000000,
+    "target_shard_bytes": 15000000000,
     "image_format": "jpeg"
   },
   "pipeline": {
-    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline.log",
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline3.log",
     "data_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/data",
     "num_workers": 280,
     "batch_size": 16800

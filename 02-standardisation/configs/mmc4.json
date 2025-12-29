@@ -12,7 +12,9 @@
     {
       "type": "MinResolution",
       "min_width": 64,
-      "min_height": 64
+      "min_height": 64,
+      "max_width": 2048,
+      "max_height": 2048
     },
     {
       "type": "ImageDeduplication",
@@ -27,7 +29,7 @@
     "image_format": "jpeg"
   },
   "pipeline": {
-    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline.log",
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline4.log",
     "data_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/data",
     "num_workers": 280,
     "batch_size": 2800
