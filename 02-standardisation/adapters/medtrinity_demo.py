@@ -30,10 +30,7 @@ class MedtrinityDemoAdapter(BaseDataset):
                 meta=SampleMetadata(
                     dataset_id=self.id,
                     sample_id=idx,
-                    data={
-                        "license": "CC BY-NC-SA 4.0",
-                        "language": "en",
-                    },
+                    data={"language": "en"},
                 ),
             )
             if idx % 2000 == 0:

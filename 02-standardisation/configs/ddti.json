@@ -27,7 +27,7 @@
   "pipeline": {
     "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline.log",
     "data_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/data",
-    "num_workers": 280,
+    "num_workers": 64,
     "batch_size": 16800
   }
 }
