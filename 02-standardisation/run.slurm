@@ -26,6 +26,10 @@ config_files=(
   "configs/busi.json"
   "configs/pixmo_cap.json"
   "configs/pixmo_anything.json"
+  "configs/covid_us.json"
+  "configs/mammoth.json"
+  "configs/llava_instruct.json"
+  "configs/llava_pretrained_cleaned.json"
 )
 
 for config_file in "${config_files[@]}"; do
