@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=288
-#SBATCH --time=24:00:00
+#SBATCH --time=12:00:00
 #SBATCH --partition=normal
 
 set -euo pipefail
@@ -19,9 +19,13 @@ echo "Start: $(date)"
 source ".venv/bin/activate"
 
 config_files=(
-  "configs/medtrinity_demo.json"
-  "configs/medmax.json"
-  "configs/mmc4.json"
+  # "configs/medtrinity_demo.json"
+  # "configs/medmax.json"
+  # "configs/mmc4.json"
+  "configs/ddti.json"
+  "configs/busi.json"
+  "configs/pixmo_cap.json"
+  "configs/pixmo_anything.json"
 )
 
 for config_file in "${config_files[@]}"; do
