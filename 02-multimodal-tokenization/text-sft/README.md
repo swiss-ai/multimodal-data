@@ -2,6 +2,17 @@
 
 Tokenization pipeline for supervised fine-tuning with per-turn loss masking and sequence packing.
 
+## File Structure
+
+```
+text-sft/
+├── chat_preprocess.py    # Core: mask builders, SFTChatDataset, packing
+├── tokenize_sft.py       # CLI entry point
+├── tests/
+│   ├── conftest.py       # Pytest fixtures (tokenizers)
+│   └── test_chat_preprocess.py
+└── README.md
+```
 
 ## Design
 
@@ -14,6 +25,8 @@ Uses Numba JIT-compiled functions to scan tokenized sequences and identify assis
 |-------|-------------|-----------|-------|
 | `llama3` | `<\|start_header_id\|>assistant<\|end_header_id\|>` | `<\|eot_id\|>` | Shared EOT for all roles |
 | `apertus` | `<\|assistant_start\|>` | `<\|assistant_end\|>` | Distinct end token per role |
+
+> **Note on special tokens:** Chat templates often hardcode `{{ bos_token }}` in Jinja, ignoring `add_special_tokens`. Similarly, templates end with EOT (e.g., `<|eot_id|>`), not EOS. Our `_ensure_special_tokens` handles both: BOS is excluded from training (correct for SFT), and EOS is appended when needed.
 
 </details>
 
