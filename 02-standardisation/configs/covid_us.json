@@ -3,7 +3,7 @@
     {
       "type": "Meditron",
       "dataset_id": "covid_us",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/covid_us"
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/COVID_US"
     }
   ],
   "filters": [
@@ -25,7 +25,7 @@
     "image_format": "jpeg"
   },
   "pipeline": {
-    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline.log",
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline2.log",
     "data_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/data",
     "num_workers": 280,
     "batch_size": 16800

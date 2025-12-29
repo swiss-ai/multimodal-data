@@ -21,15 +21,15 @@ source ".venv/bin/activate"
 config_files=(
   # "configs/medtrinity_demo.json"
   # "configs/medmax.json"
-  # "configs/mmc4.json"
-  "configs/ddti.json"
-  "configs/busi.json"
-  "configs/pixmo_cap.json"
-  "configs/pixmo_anything.json"
-  "configs/covid_us.json"
+  # "configs/ddti.json"
+  # "configs/busi.json"
+  # "configs/covid_us.json"
+  # "configs/llava_instruct.json"
+  # "configs/llava_pretrained_cleaned.json"
+  # "configs/pixmo_cap.json"
+  # "configs/pixmo_anything.json"
+  "configs/mmc4.json"
   "configs/mammoth.json"
-  "configs/llava_instruct.json"
-  "configs/llava_pretrained_cleaned.json"
 )
 
 for config_file in "${config_files[@]}"; do

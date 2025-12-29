@@ -20,7 +20,7 @@ class MedMaxRawImageAdapter(BaseDataset):
     def id(self):
         return "medmax_raw_images"
 
-    def stream(self, logger, skip: int | None = None):
+    def stream(self, logger, skip: int | None = None, batch_size: int = 1):
         for file in self.chunk_files:
             logger.info(f"Found chunk file: {file}")
 
@@ -38,6 +38,7 @@ class MedMaxRawImageAdapter(BaseDataset):
         try:
             with tarfile.open(fileobj=process.stdout, mode="r|gz") as tar:
                 counter = 0
+                batch = []
 
                 for member in tar:
                     if not member.isfile():
@@ -49,7 +50,6 @@ class MedMaxRawImageAdapter(BaseDataset):
                         continue
 
                     try:
-                        # load image from tar member to PIL Image
                         f_obj = tar.extractfile(member)
                         if not f_obj:
                             continue
@@ -59,7 +59,11 @@ class MedMaxRawImageAdapter(BaseDataset):
                             sample_id=counter,
                             data={"path": member.name},
                         )
-                        yield ImageSample(image=pil_image, meta=meta)
+                        batch.append(ImageSample(image=pil_image, meta=meta))
+
+                        if len(batch) >= batch_size:
+                            yield batch
+                            batch = []
 
                         counter += 1
                         if counter % 2000 == 0:
@@ -68,8 +72,10 @@ class MedMaxRawImageAdapter(BaseDataset):
                     except Exception as e:
                         logger.warning(f"Skipping corrupt file {member.name}: {e}")
 
+                if batch:
+                    yield batch
+
         finally:
-            # kill cat if the loop breaks early
             if process.poll() is None:
                 process.kill()
             logger.info("Finished streaming images.")

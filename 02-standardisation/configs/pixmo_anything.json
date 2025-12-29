@@ -3,7 +3,8 @@
     {
       "type": "Meditron",
       "dataset_id": "pixmo_anything",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/pixmo_anything"
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/pixmo_anything",
+      "decode_workers": 32
     }
   ],
   "filters": [
@@ -21,13 +22,13 @@
   "webdataset": {
     "output_dir": "/capstor/store/cscs/swissai/infra01/medical/processed/pixmo_anything",
     "samples_per_shard": 100000,
-    "target_shard_bytes": 5000000000,
+    "target_shard_bytes": 15000000000,
     "image_format": "jpeg"
   },
   "pipeline": {
     "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline.log",
     "data_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/data",
-    "num_workers": 280,
-    "batch_size": 16800
+    "num_workers": 100,
+    "batch_size": 10000
   }
 }

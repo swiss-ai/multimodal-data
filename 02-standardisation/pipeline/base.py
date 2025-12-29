@@ -12,13 +12,16 @@ class BaseDataset(ABC):
     def id(self) -> str: ...
 
     @abstractmethod
-    def stream(self, logger, skip: int | None = None) -> Iterator[Sample]:
+    def stream(
+        self, logger, skip: int | None = None, batch_size: int = 1
+    ) -> Iterator[list[Sample]]:
         """
-        Yield samples. If 'skip' is provided, skip the first 'skip' samples.
+        Yield batches of samples. If 'skip' is provided, skip the first 'skip' samples.
 
         Example:
             dataset = ["a", "b", "c", "d"]
-            stream(skip=2) yields "c", "d"
+            stream(skip=2) yields ["c"], ["d"]
+            stream(skip=2, batch_size=2) yields ["c", "d"]
         """
         ...
 

@@ -103,8 +103,9 @@ class MMC4Adapter(BaseDataset):
             pass
         return None
 
-    def stream(self, logger, skip=None):
-        _ = skip  # no-op skipping, url availability makes this unpredictable
+    def stream(self, logger, skip: int | None = None, batch_size: int = 1):
+        skip = skip or 0
+        logger.info(f"Starting stream with skip={skip}, batch_size={batch_size}")
 
         def ignore_dns_error(loop, context):
             exception = context.get("exception")
@@ -120,7 +121,7 @@ class MMC4Adapter(BaseDataset):
 
         for file in self.outer_zips:
             logger.info(f"Found outer zip file: {file}")
-        logger.info(f"Starting stream. Batch size: {self.batch_size}")
+        logger.info(f"Starting stream. Fetch batch size: {self.batch_size}")
 
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
@@ -138,6 +139,7 @@ class MMC4Adapter(BaseDataset):
 
         session = loop.run_until_complete(create_session())
         pending_tasks = set()
+        batch = []
 
         try:
             doc_stream = self.iter_documents(logger)
@@ -151,6 +153,9 @@ class MMC4Adapter(BaseDataset):
                         doc = next(doc_iterator)
                         doc_urls = self.get_raw_image_url(doc)
                         for url in doc_urls:
+                            skip -= 1
+                            if skip > 0:
+                                continue
                             task = loop.create_task(self.fetch(session, url, counter))
                             pending_tasks.add(task)
                             counter += 1
@@ -179,16 +184,24 @@ class MMC4Adapter(BaseDataset):
                         if result:
                             img, valid_url, valid_id = result
                             yield_count += 1
-                            yield ImageSample(
-                                image=img,
-                                meta=SampleMetadata(
-                                    dataset_id=self.id,
-                                    sample_id=valid_id,
-                                    data={"url": valid_url},
-                                ),
+                            batch.append(
+                                ImageSample(
+                                    image=img,
+                                    meta=SampleMetadata(
+                                        dataset_id=self.id,
+                                        sample_id=valid_id,
+                                        data={"url": valid_url},
+                                    ),
+                                )
                             )
+                            if len(batch) >= batch_size:
+                                yield batch
+                                batch = []
                     except Exception:
                         pass
+
+            if batch:
+                yield batch
 
         finally:
             if not session.closed:
@@ -212,7 +225,8 @@ if __name__ == "__main__":
     logger.addHandler(logging.StreamHandler())
 
     counter = 0
-    for sample in adapter.stream(logger, skip=0):
-        counter += 1
-        if counter % 1000 == 0:
-            logger.info(f"Sample {counter}: {sample.meta.data['url']}")
+    for batch in adapter.stream(logger, skip=0):
+        for sample in batch:
+            counter += 1
+            if counter % 1000 == 0:
+                logger.info(f"Sample {counter}: {sample.meta.data['url']}")
