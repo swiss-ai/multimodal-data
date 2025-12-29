@@ -1,11 +1,9 @@
 {
   "adapters": [
     {
-      "type": "MMC4",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/MMC4",
-      "batch_size": 1000,
-      "download_timeout": 2,
-      "workers": 150
+      "type": "Meditron",
+      "dataset_id": "ddti",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/DDTI"
     }
   ],
   "filters": [
@@ -21,7 +19,7 @@
     }
   ],
   "webdataset": {
-    "output_dir": "/capstor/store/cscs/swissai/infra01/medical/processed/mmc4",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/medical/processed/ddti",
     "samples_per_shard": 100000,
     "target_shard_bytes": 5000000000,
     "image_format": "jpeg"
@@ -30,6 +28,6 @@
     "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline.log",
     "data_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/data",
     "num_workers": 280,
-    "batch_size": 8400
+    "batch_size": 16800
   }
 }
