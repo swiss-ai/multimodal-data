@@ -2,7 +2,6 @@ import logging
 import sys
 from pathlib import Path
 
-LOG_NAME = "pipeline"
 LOG_FORMAT = "%(asctime)s %(levelname)s [%(name)s] %(message)s"
 
 
@@ -12,7 +11,7 @@ def setup_logging(level: int, log_file: str | None) -> logging.Logger:
     log_file: path to log file (if None, no file logging)
     """
 
-    logger = logging.getLogger(LOG_NAME)
+    logger = logging.getLogger("pipeline")
     logger.setLevel(logging.DEBUG)
     logger.handlers.clear()
     logger.propagate = False
@@ -43,4 +42,4 @@ def setup_logging(level: int, log_file: str | None) -> logging.Logger:
 
 
 def get_logger(name: str) -> logging.Logger:
-    return logging.getLogger(f"{LOG_NAME}.{name}")
+    return logging.getLogger(f"pipeline.{name}")

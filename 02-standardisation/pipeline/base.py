@@ -20,8 +20,8 @@ class BaseDataset(ABC):
 
         Example:
             dataset = ["a", "b", "c", "d"]
-            stream(skip=2) yields ["c"], ["d"]
-            stream(skip=2, batch_size=2) yields ["c", "d"]
+            stream(skip=2)               yields ["c"], ["d"]
+            stream(skip=2, batch_size=2) yields ["c" ,  "d"]
         """
         ...
 
@@ -41,18 +41,20 @@ class BaseFilter(ABC):
 class BaseSink(ABC):
     """Base class for pipeline output sinks."""
 
+    @abstractmethod
     def open(self) -> None:
         """Called before processing starts."""
-        pass
+        ...
 
     @abstractmethod
     def write_batch(self, samples: list[Sample]) -> None:
         """Write a batch of accepted samples."""
         ...
 
+    @abstractmethod
     def close(self) -> None:
         """Called after processing completes."""
-        pass
+        ...
 
     def __enter__(self):
         self.open()

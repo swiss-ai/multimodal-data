@@ -18,19 +18,19 @@ class Pipeline:
         datasets: Sequence[BaseDataset],
         filter_factories: Sequence[FilterFactory],
         sinks: BaseSink | None,
-        data_dir: str,
+        manifest_db_path: str,
+        checkpoint_db_path: str,
         num_workers: int,
         batch_size: int,
     ):
         self.datasets = datasets
         self.filter_factories = filter_factories
         self.sink = sinks
-        self.data_dir = data_dir
         self.num_workers = num_workers
         self.batch_size = batch_size
 
-        self.allowlist = Allowlist(f"{data_dir}/manifest.db")
-        self.checkpoint = Checkpoint(f"{data_dir}/checkpoint.db")
+        self.allowlist = Allowlist(manifest_db_path)
+        self.checkpoint = Checkpoint(checkpoint_db_path)
 
     def scan(self):
         logger.info(f"Starting scan of {len(self.datasets)} dataset(s)")
@@ -65,29 +65,18 @@ class Pipeline:
             skip = None
             processed = 0
             passed = 0
-            logger.info(f"[{dataset_id}] Starting")
+            logger.info(f"[{dataset_id}] Starting from beginning")
 
         batch: list[Sample] = []
         stream_logger = logging.getLogger(f"pipeline.{dataset_id}")
 
-        for samples in dataset.stream(stream_logger, skip, batch_size=self.batch_size):
-            batch.extend(samples)
-
-            if len(batch) >= self.batch_size:
-                logger.debug(f"[{dataset_id}] Processing batch of {len(batch)} samples")
-                p = self._process_batch(batch, pool)
-                processed += len(batch)
-                passed += p
-                self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
-                logger.debug(f"[{dataset_id}] {processed} processed, {passed} passed")
-                batch = []
-
-        # remaining samples
-        if batch:
-            p = self._process_batch(batch, pool)
+        for batch in dataset.stream(stream_logger, skip, batch_size=self.batch_size):
+            logger.debug(f"[{dataset_id}] Processing batch of {len(batch)} samples")
+            passed += self._process_batch(batch, pool)
             processed += len(batch)
-            passed += p
+            logger.debug(f"[{dataset_id}] {processed} processed, {passed} passed")
             self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
+            batch = []
 
         self.checkpoint.mark_complete(dataset_id)
         logger.info(f"[{dataset_id}] Complete: {processed} processed, {passed} passed")

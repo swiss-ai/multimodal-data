@@ -9,8 +9,6 @@ from pipeline.schema import Sample
 
 logger = logging.getLogger("pipeline.workers")
 
-FilterFactory = Callable[[], BaseFilter]
-
 
 @dataclass
 class FilterResult:
@@ -18,6 +16,8 @@ class FilterResult:
     sample_id: int
     passed: bool
 
+
+FilterFactory = Callable[[], BaseFilter]
 
 _worker_filters: list[BaseFilter] | None = None
 
@@ -31,7 +31,7 @@ def _process_batch(batch_data: list[Sample]) -> list[FilterResult]:
     global _worker_filters
     assert _worker_filters is not None, "Filters not initialized"
 
-    # samples = [Sample.deserialize(data) for data in batch_data]
+    # samples = [Sample.deserialize(data) for data in batch_data]  # ray version
     samples = batch_data
     results = []
 
@@ -77,11 +77,12 @@ class WorkerPool:
         # serialized = [s.serialize() for s in samples]
         serialized = samples
 
-        sub_batch_size = max(1, len(serialized) // self.num_workers)
+        sub_batch_size = len(serialized) // self.num_workers
         sub_batches = [
-            serialized[i : i + sub_batch_size]
-            for i in range(0, len(serialized), sub_batch_size)
+            serialized[i * sub_batch_size : (i + 1) * sub_batch_size]
+            for i in range(self.num_workers - 1)
         ]
+        sub_batches.append(serialized[(self.num_workers - 1) * sub_batch_size :])
 
         logger.debug(
             f"Processing batch of {len(samples)} samples in "
@@ -89,7 +90,7 @@ class WorkerPool:
         )
 
         nested_results = self.pool.map(_process_batch, sub_batches)
-        return [r for batch in nested_results for r in batch]
+        return [r for results in nested_results for r in results]
 
     def close(self):
         logger.debug("Shutting down workers")
