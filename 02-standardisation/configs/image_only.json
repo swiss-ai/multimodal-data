@@ -93,6 +93,6 @@
     "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/manifest.db",
     "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/checkpoint.db",
     "num_workers": 100,
-    "batch_size": 1000
+    "batch_size": 400
   }
 }

@@ -51,6 +51,8 @@ class MedTrinityDemoAdapter(BaseDataset):
             yield batch
 
 
+# === FOR MANUAL TESTING CODE ===
+
 if __name__ == "__main__":
     logger = logging.getLogger("medtrinity_full")
     logger.setLevel(logging.DEBUG)
