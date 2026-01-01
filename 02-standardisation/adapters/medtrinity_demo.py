@@ -1,4 +1,11 @@
+import logging
+import os
+import sys
+
 from datasets import load_dataset
+
+if __name__ == "__main__":
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pipeline import BaseDataset, ImageSample, SampleMetadata
 
@@ -11,6 +18,7 @@ class MedtrinityDemoAdapter(BaseDataset):
             split="train",
             streaming=True,
         )
+        self.dataset = self.dataset.take(3000)  # type: ignore
 
     @property
     def id(self):
@@ -20,7 +28,7 @@ class MedtrinityDemoAdapter(BaseDataset):
         skip = skip or 0
         if skip:
             logger.info(f"Skipping first {skip} samples.")
-            self.dataset = self.dataset.skip(skip)  # type: ignore
+            _ = self.dataset = self.dataset.skip(skip)  # type: ignore
 
         batch = []
         for idx, row in enumerate(self.dataset, start=skip):
@@ -41,3 +49,23 @@ class MedtrinityDemoAdapter(BaseDataset):
 
         if batch:
             yield batch
+
+
+if __name__ == "__main__":
+    logger = logging.getLogger("medtrinity_full")
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(logging.StreamHandler(sys.stdout))
+
+    logger.info("initializing adapter...")
+
+    a = MedtrinityDemoAdapter()
+
+    logger.info("starting test stream...")
+    for batch in a.stream(logger=logger, skip=0, batch_size=1000):
+        for b in batch:
+            print(
+                "obtained sample:",
+                b.meta.sample_id,
+                b.image.size,  # type: ignore
+                b.meta.data["dataset_id"],
+            )

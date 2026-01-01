@@ -188,5 +188,6 @@ if __name__ == "__main__":
                 "obtained sample:",
                 b.meta.sample_id,
                 b.image.size,  # type: ignore
+                b.text[:20] if isinstance(b, ImageTextSample) else "",
                 b.meta.data["file_path"],
             )

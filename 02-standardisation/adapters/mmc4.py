@@ -23,6 +23,7 @@ class MMC4Adapter(BaseDataset):
         self.outer_zips = sorted(glob.glob(os.path.join(data_dir, "mmc4_*.zip")))
         if not self.outer_zips:
             raise FileNotFoundError(f"No outer zip files found in {data_dir}")
+        raise NotImplementedError("disabled for now")
 
     @property
     def id(self):
@@ -31,7 +32,6 @@ class MMC4Adapter(BaseDataset):
     def iter_documents(self, logger):
         """
         Generator for the JSONL-in-DIR-in-ZIP-in-DIR-in-ZIP logic
-        :(
         """
         for outer_zip_path in self.outer_zips:
             logger.info(f"Processing outer zip: {outer_zip_path}")

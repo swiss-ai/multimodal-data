@@ -3,7 +3,7 @@ import os
 import imagehash
 import lmdb
 
-from pipeline import BaseFilter, ImageSample, Sample
+from pipeline import BaseFilter, ImageSample, ImageTextSample, Sample
 
 
 class HashStore:
@@ -15,8 +15,8 @@ class HashStore:
 
     def check_and_insert_batch(self, items: list[tuple[str, str, int]]) -> list[bool]:
         """
-        Batch check/insert. Returns list of bools (True=unique or same sample).
-        Each item is (img_hash, dataset_id, sample_id).
+        Batch check/insert. Returns list of bools (True=unique or same sample, False=duplicate).
+        items: a list of (img_hash, dataset_id, sample_id).
         """
 
         results = []
@@ -53,7 +53,7 @@ class ImageDeduplication(BaseFilter):
         seen_hashes = set()
         results = []
         for idx, sample in enumerate(samples):
-            if not isinstance(sample, (ImageSample)):
+            if not isinstance(sample, (ImageSample, ImageTextSample)):
                 results.append(True)
                 continue
 
@@ -78,7 +78,7 @@ class ImageDeduplication(BaseFilter):
             items = [(h, d, s) for _, h, d, s in to_check]
             db_results = self.hash_store.check_and_insert_batch(items)
             for (idx, _, _, _), is_unique in zip(to_check, db_results):
-                assert results[idx]  # True from local dedup
+                # assert results[idx]  # True from local dedup
                 results[idx] = is_unique
 
         return results

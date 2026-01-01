@@ -1,11 +1,11 @@
-from pipeline import BaseFilter, ImageSample, Sample
+from pipeline import BaseFilter, ImageSample, ImageTextSample, Sample
 
 
 class ResolutionFilter(BaseFilter):
     def __init__(
         self,
-        min_width: int,
-        min_height: int,
+        min_width: int | None = None,
+        min_height: int | None = None,
         max_width: int | None = None,
         max_height: int | None = None,
     ):
@@ -17,11 +17,22 @@ class ResolutionFilter(BaseFilter):
     def process_batch(self, samples: list[Sample]) -> list[bool]:
         results = []
         for sample in samples:
-            if not isinstance(sample, (ImageSample)):
+            if not isinstance(sample, (ImageSample, ImageTextSample)):
                 results.append(True)
+                continue
+            if not hasattr(sample, "image"):
+                results.append(True)
+                continue
+
+            width, height = sample.image.size
+            if (
+                (self.min_width is not None and width < self.min_width)
+                or (self.min_height is not None and height < self.min_height)
+                or (self.max_width is not None and width > self.max_width)
+                or (self.max_height is not None and height > self.max_height)
+            ):
+                results.append(False)
             else:
-                w, h = sample.image.size
-                results.append(w >= self.min_width and h >= self.min_height)
-                if results[-1] and self.max_width and self.max_height:
-                    results[-1] = w <= self.max_width and h <= self.max_height
+                results.append(True)
+
         return results
