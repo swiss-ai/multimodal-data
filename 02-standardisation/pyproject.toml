@@ -10,5 +10,7 @@ dependencies = [
     "imagehash>=4.3.2",
     "lmdb>=1.7.5",
     "msgspec>=0.20.0",
+    "pandas>=2.3.3",
     "pillow>=12.0.0",
+    "zstandard>=0.25.0",
 ]
