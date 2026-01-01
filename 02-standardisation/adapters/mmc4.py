@@ -210,6 +210,8 @@ class MMC4Adapter(BaseDataset):
             logger.info("Finished streaming.")
 
 
+# === FOR MANUAL TESTING CODE ===
+
 if __name__ == "__main__":
     data_dir = "/capstor/store/cscs/swissai/infra01/medical/raw/MMC4"
     adapter = MMC4Adapter(

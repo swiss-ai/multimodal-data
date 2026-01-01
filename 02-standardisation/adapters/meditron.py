@@ -110,6 +110,8 @@ class MeditronAdapter(BaseDataset):
         return batch
 
 
+# === FOR MANUAL TESTING CODE ===
+
 if __name__ == "__main__":
     logger = logging.getLogger("meditron_full")
     logger.setLevel(logging.DEBUG)
