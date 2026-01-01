@@ -23,7 +23,7 @@ def _decode_image(image_bytes: bytes):
         return None
 
 
-class MeditronImageAdapter(BaseDataset):
+class MeditronAdapter(BaseDataset):
     def __init__(
         self,
         dataset_id: str,
@@ -152,7 +152,7 @@ if __name__ == "__main__":
     for ds in datasets:
         print(f"Testing dataset: {ds['dataset_id']}")
 
-        a = MeditronImageAdapter(
+        a = MeditronAdapter(
             dataset_id=ds["dataset_id"],
             data_dir=ds["data_dir"],
             image_only=True,

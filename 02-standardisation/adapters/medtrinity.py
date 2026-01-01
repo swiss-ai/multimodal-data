@@ -63,21 +63,22 @@ def _decode_image(image_bytes: bytes):
 class MedTrinityFullAdapter(BaseDataset):
     def __init__(
         self,
-        parquet_dir: str,
-        tar_dir: str,
+        data_dir: str,
         image_only: bool,
         cache_file: str,
         decode_workers: int,
     ):
-        self.parquet_dir = parquet_dir
-        self.tar_dir = tar_dir
+        self.data_dir = data_dir
         self.decode_workers = decode_workers
         self.allowed_sources = set(allowed_sources)
         self.img_only = image_only
 
-        parquet_files = sorted(glob.glob(os.path.join(parquet_dir, "*.parquet")))
+        self.parquet_dir = os.path.join(data_dir, "25M_full")
+        self.tar_dir = os.path.join(data_dir, "25M_accessible")
+
+        parquet_files = sorted(glob.glob(os.path.join(self.parquet_dir, "*.parquet")))
         if not parquet_files:
-            raise FileNotFoundError(f"no parquet files in {parquet_dir}")
+            raise FileNotFoundError(f"no parquet files in {self.parquet_dir}")
 
         if os.path.exists(cache_file):
             with open(cache_file, "rb") as f:
@@ -222,8 +223,7 @@ if __name__ == "__main__":
     logger.info("Initializing MedTrinityFullAdapter...")
 
     a = MedTrinityFullAdapter(
-        parquet_dir="/capstor/store/cscs/swissai/infra01/medical/raw/medtrinity_25m/repo/25M_full",
-        tar_dir="/capstor/store/cscs/swissai/infra01/medical/raw/medtrinity_25m/repo/25M_accessible",
+        data_dir="/capstor/store/cscs/swissai/infra01/medical/raw/medtrinity_25m",
         cache_file="/iopsstor/scratch/cscs/tchu/.cache/medtrinity/metadata_legal.pkl",
         image_only=True,
         decode_workers=100,

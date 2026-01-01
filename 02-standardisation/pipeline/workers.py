@@ -74,15 +74,17 @@ class WorkerPool:
         logger.debug("Worker pool ready")
 
     def process_batch(self, samples: list[Sample]) -> list[FilterResult]:
+        if not samples:
+            return []
+
         # serialized = [s.serialize() for s in samples]
         serialized = samples
 
-        sub_batch_size = len(serialized) // self.num_workers
+        sub_batch_size = max(1, len(serialized) // self.num_workers)
         sub_batches = [
-            serialized[i * sub_batch_size : (i + 1) * sub_batch_size]
-            for i in range(self.num_workers - 1)
+            serialized[i : i + sub_batch_size]
+            for i in range(0, len(serialized), sub_batch_size)
         ]
-        sub_batches.append(serialized[(self.num_workers - 1) * sub_batch_size :])
 
         logger.debug(
             f"Processing batch of {len(samples)} samples in "

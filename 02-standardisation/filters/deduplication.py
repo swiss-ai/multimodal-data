@@ -33,7 +33,7 @@ class HashStore:
         return results
 
 
-class ImageDeduplication(BaseFilter):
+class ImageDeduplicationFilter(BaseFilter):
     ALGORITHMS = {
         "phash": imagehash.phash,
         "dhash": imagehash.dhash,

@@ -2,7 +2,7 @@ import logging
 from collections.abc import Sequence
 
 from pipeline.allowlist import Allowlist
-from pipeline.base import BaseDataset, BaseSink
+from pipeline.base import BaseDataset, BaseWriter
 from pipeline.checkpoint import Checkpoint
 from pipeline.schema import Sample
 from pipeline.workers import FilterFactory, WorkerPool
@@ -17,7 +17,7 @@ class Pipeline:
         self,
         datasets: Sequence[BaseDataset],
         filter_factories: Sequence[FilterFactory],
-        sinks: BaseSink | None,
+        writer: BaseWriter | None,
         manifest_db_path: str,
         checkpoint_db_path: str,
         num_workers: int,
@@ -25,7 +25,7 @@ class Pipeline:
     ):
         self.datasets = datasets
         self.filter_factories = filter_factories
-        self.sink = sinks
+        self.writer = writer
         self.num_workers = num_workers
         self.batch_size = batch_size
 
@@ -35,16 +35,16 @@ class Pipeline:
     def scan(self):
         logger.info(f"Starting scan of {len(self.datasets)} dataset(s)")
 
-        if self.sink:
-            self.sink.open()
+        if self.writer:
+            self.writer.open()
 
         try:
             with WorkerPool(self.filter_factories, self.num_workers) as pool:
                 for dataset in self.datasets:
                     self._scan_dataset(dataset, pool)
         finally:
-            if self.sink:
-                self.sink.close()
+            if self.writer:
+                self.writer.close()
 
         logger.info("Scan complete")
 
@@ -82,15 +82,15 @@ class Pipeline:
         logger.info(f"[{dataset_id}] Complete: {processed} processed, {passed} passed")
 
     def _process_batch(self, batch: list[Sample], pool: WorkerPool) -> int:
-        """Process batch, update allowlist and sinks, return count passed."""
+        """Process batch, update allowlist and writer, return count passed."""
         results = pool.process_batch(batch)
 
         passed_entries = [(r.dataset_id, r.sample_id) for r in results if r.passed]
         if passed_entries:
             self.allowlist.add_batch(passed_entries)
 
-            if self.sink:
+            if self.writer:
                 passed_samples = [s for s, r in zip(batch, results) if r.passed]
-                self.sink.write_batch(passed_samples)
+                self.writer.write_batch(passed_samples)
 
         return len(passed_entries)

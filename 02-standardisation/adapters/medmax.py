@@ -26,7 +26,7 @@ def _decode_image(image_bytes: bytes):
         return None
 
 
-class MedMaxImageAdapter(BaseDataset):
+class MedMaxAdapter(BaseDataset):
     def __init__(
         self,
         data_dir: str,
@@ -172,7 +172,7 @@ if __name__ == "__main__":
 
     logger.info("Initializing medmax...")
 
-    a = MedMaxImageAdapter(
+    a = MedMaxAdapter(
         data_dir="/capstor/store/cscs/swissai/infra01/medical/raw/medmax_data",
         cache_file="/iopsstor/scratch/cscs/tchu/.cache/medmax/metadata.pkl",
         image_only=True,

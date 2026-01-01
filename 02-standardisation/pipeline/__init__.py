@@ -1,4 +1,4 @@
-from pipeline.base import BaseDataset, BaseFilter
+from pipeline.base import BaseDataset, BaseFilter, BaseWriter
 from pipeline.logging import setup_logging
 from pipeline.pipeline import Pipeline
 from pipeline.schema import (
@@ -8,19 +8,18 @@ from pipeline.schema import (
     SampleMetadata,
     TextSample,
 )
-from pipeline.webdataset import WebDatasetSink
 from pipeline.workers import FilterFactory
 
 __all__ = [
     "BaseDataset",
     "BaseFilter",
+    "BaseWriter",
     "FilterFactory",
     "SampleMetadata",
     "Sample",
     "ImageSample",
     "TextSample",
     "ImageTextSample",
-    "WebDatasetSink",
     "Pipeline",
     "setup_logging",
 ]

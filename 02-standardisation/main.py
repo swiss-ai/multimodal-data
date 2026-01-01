@@ -8,13 +8,18 @@ from functools import partial
 from adapters import ADAPTER_REGISTRY
 from filters import FILTER_REGISTRY
 from pipeline import Pipeline, setup_logging
+from writers import HuggingFaceDatasetWriter
 
 
 def build_factories(config: list[dict], registry: dict[str, type]) -> list:
     factories = []
     for cfg in config:
         cfg = cfg.copy()
-        factory = registry[cfg.pop("id")]
+        adapter_id = cfg.pop("id")
+        if adapter_id not in registry:
+            print("legal adapters:", registry.keys())
+            raise ValueError(f"Unknown adapter/filter id: {adapter_id}")
+        factory = registry[adapter_id]
         factories.append(partial(factory, **cfg))
     return factories
 
@@ -23,21 +28,32 @@ def main(config_path: str):
     with open(config_path) as f:
         config = json.load(f)
 
-    setup_logging(level=logging.DEBUG, log_file=config["pipeline"]["log_file"])
+    adapters_config = config["adapters"]
+    filters_config = config["filters"]
+    writer_config = config["writer"]
+
+    log_file = config["pipeline"]["log_file"]
+    manifest_db = config["pipeline"]["manifest_db"]
+    checkpoint_db = config["pipeline"]["checkpoint_db"]
+    num_workers = config["pipeline"]["num_workers"]
+    batch_size = config["pipeline"]["batch_size"]
+
+    setup_logging(level=logging.DEBUG, log_file=log_file)
     logger = logging.getLogger("pipeline")
     logger.debug("Starting pipeline with config: %s", config)
 
-    adapter_factories = build_factories(config["adapters"], ADAPTER_REGISTRY)
-    filter_factories = build_factories(config["filters"], FILTER_REGISTRY)
+    adapter_factories = build_factories(adapters_config, ADAPTER_REGISTRY)
+    filter_factories = build_factories(filters_config, FILTER_REGISTRY)
+    writer = HuggingFaceDatasetWriter(**writer_config)
 
     pipeline = Pipeline(
         datasets=[f() for f in adapter_factories],
         filter_factories=filter_factories,
-        sinks=None,
-        manifest_db_path=config["pipeline"]["manifest_db"],
-        checkpoint_db_path=config["pipeline"]["checkpoint_db"],
-        num_workers=config["pipeline"]["num_workers"],
-        batch_size=config["pipeline"]["batch_size"],
+        writer=writer,
+        manifest_db_path=manifest_db,
+        checkpoint_db_path=checkpoint_db,
+        num_workers=num_workers,
+        batch_size=batch_size,
     )
 
     pipeline.scan()
