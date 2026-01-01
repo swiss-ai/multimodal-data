@@ -2,6 +2,7 @@ import io
 import json
 import logging
 import os
+from concurrent.futures import ThreadPoolExecutor
 
 import pyarrow as pa
 import pyarrow.parquet as pq
@@ -27,18 +28,47 @@ ARROW_SCHEMA = pa.schema(
     ]
 )
 
+HF_METADATA = {
+    "info": {
+        "features": {
+            "dataset_id": {"dtype": "string", "_type": "Value"},
+            "sample_id": {"dtype": "int64", "_type": "Value"},
+            "image": {"_type": "Image"},
+        }
+    }
+}
+
+
+def _serialize_sample(sample: ImageSample | ImageTextSample) -> tuple[str, int, bytes]:
+    image = sample.image
+    buf = io.BytesIO()
+    fmt = image.format or "PNG"
+
+    if fmt.upper() in ("JPEG", "JPG") and image.mode == "RGBA":
+        image = image.convert("RGB")
+
+    image.save(buf, format=fmt)
+    return sample.meta.dataset_id, sample.meta.sample_id, buf.getvalue()
+
 
 class HuggingFaceDatasetWriter(BaseWriter):
     def __init__(
         self,
         output_dir: str,
         target_shard_bytes: int,
+        num_workers: int,
     ):
         self.output_dir = output_dir
         self.data_dir = os.path.join(output_dir, "data")
         self.target_shard_bytes = target_shard_bytes
+        self.num_workers = num_workers
+
+        metadata = ARROW_SCHEMA.metadata or {}
+        metadata[b"huggingface"] = json.dumps(HF_METADATA).encode("utf-8")
+        self.schema = ARROW_SCHEMA.with_metadata(metadata)
 
         self._writer: pq.ParquetWriter | None = None
+        self._executor: ThreadPoolExecutor | None = None
         self._shard_idx = 0
         self._shard_bytes = 0
         self._shard_samples = 0
@@ -47,6 +77,7 @@ class HuggingFaceDatasetWriter(BaseWriter):
 
     def open(self):
         os.makedirs(self.data_dir, exist_ok=True)
+        self._executor = ThreadPoolExecutor(max_workers=self.num_workers)
 
         state_path = os.path.join(self.output_dir, "state.json")
         if os.path.exists(state_path):
@@ -66,25 +97,56 @@ class HuggingFaceDatasetWriter(BaseWriter):
         if not samples:
             return
 
-        for sample in samples:
-            if not isinstance(sample, (ImageSample, ImageTextSample)):
-                logger.warning(f"Skipping non-image sample: {type(sample)}")
-                continue
+        image_samples = [
+            s for s in samples if isinstance(s, (ImageSample, ImageTextSample))
+        ]
+        if not image_samples:
+            return
 
-            self._ensure_writer_open()
-            row_bytes = self._write_sample(sample)
-            self._shard_samples += 1
-            self._shard_bytes += row_bytes
-            self._total_samples += 1
-            self._total_bytes += row_bytes
+        # serialize images
+        assert self._executor is not None
+        results = list(self._executor.map(_serialize_sample, image_samples))
 
-            if self._shard_bytes >= self.target_shard_bytes:
-                self._close_shard()
+        dataset_ids = []
+        sample_ids = []
+        images = []
+        batch_bytes = 0
+
+        for dataset_id, sample_id, img_bytes in results:
+            dataset_ids.append(dataset_id)
+            sample_ids.append(sample_id)
+            images.append({"bytes": img_bytes, "path": None})
+            batch_bytes += len(img_bytes)
+
+        self._ensure_writer_open()
+        table = pa.table(
+            {
+                "dataset_id": dataset_ids,
+                "sample_id": sample_ids,
+                "image": images,
+            },
+            schema=self.schema,
+        )
+        assert self._writer is not None
+        self._writer.write_table(table)
+
+        # update counters
+        self._shard_samples += len(results)
+        self._shard_bytes += batch_bytes
+        self._total_samples += len(results)
+        self._total_bytes += batch_bytes
+
+        # rotate shard (if needed)
+        if self._shard_bytes >= self.target_shard_bytes:
+            self._close_shard()
 
         self._save_state()
 
     def close(self):
         self._close_shard()
+        if self._executor:
+            self._executor.shutdown(wait=True)
+            self._executor = None
         self._write_dataset_info()
         self._rename_shards()
         self._save_state(final=True)
@@ -95,7 +157,7 @@ class HuggingFaceDatasetWriter(BaseWriter):
             shard_path = os.path.join(
                 self.data_dir, f"train-{self._shard_idx:05d}.parquet"
             )
-            self._writer = pq.ParquetWriter(shard_path, ARROW_SCHEMA)
+            self._writer = pq.ParquetWriter(shard_path, self.schema)
             logger.debug(f"Opened shard {shard_path}")
 
     def _close_shard(self):
@@ -109,35 +171,6 @@ class HuggingFaceDatasetWriter(BaseWriter):
             self._shard_idx += 1
             self._shard_bytes = 0
             self._shard_samples = 0
-
-    def _write_sample(self, sample: ImageSample | ImageTextSample) -> int:
-        """Write a single sample, return bytes written."""
-        assert self._writer is not None
-
-        image_bytes = self._image_to_bytes(sample.image)
-
-        table = pa.table(
-            {
-                "dataset_id": [sample.meta.dataset_id],
-                "sample_id": [sample.meta.sample_id],
-                "image": [{"bytes": image_bytes, "path": None}],
-            },
-            schema=ARROW_SCHEMA,
-        )
-        self._writer.write_table(table)
-
-        return len(image_bytes)
-
-    def _image_to_bytes(self, image) -> bytes:
-        """Convert PIL image to bytes (preserve original format)."""
-        buf = io.BytesIO()
-        fmt = image.format or "PNG"
-
-        if fmt.upper() in ("JPEG", "JPG") and image.mode == "RGBA":
-            image = image.convert("RGB")
-
-        image.save(buf, format=fmt)
-        return buf.getvalue()
 
     def _save_state(self, final: bool = False):
         state = {
@@ -154,11 +187,7 @@ class HuggingFaceDatasetWriter(BaseWriter):
         info = {
             "builder_name": "parquet",
             "dataset_name": os.path.basename(self.output_dir),
-            "features": {
-                "dataset_id": {"dtype": "string", "_type": "Value"},
-                "sample_id": {"dtype": "int64", "_type": "Value"},
-                "image": {"_type": "Image"},
-            },
+            "features": HF_METADATA["info"]["features"],
             "splits": {
                 "train": {
                     "name": "train",

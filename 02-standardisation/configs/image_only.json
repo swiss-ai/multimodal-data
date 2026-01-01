@@ -59,19 +59,16 @@
     {
       "id": "MedMax",
       "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/medmax_data",
-      "cache_file": "/iopsstor/scratch/cscs/tchu/.cache/medmax/metadata.pkl",
+      "cache_file": "/capstor/scratch/cscs/tchu/.cache/medmax/metadata.pkl",
       "image_only": true,
       "decode_workers": 100
     },
     {
       "id": "MedTrinityFull",
       "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/medtrinity_25m",
-      "cache_file": "/iopsstor/scratch/cscs/tchu/.cache/medtrinity/metadata_legal.pkl",
+      "cache_file": "/capstor/scratch/cscs/tchu/.cache/medtrinity/metadata_legal.pkl",
       "image_only": true,
       "decode_workers": 100
-    },
-    {
-      "id": "MedTrinityDemo"
     }
   ],
   "filters": [
@@ -82,18 +79,19 @@
     },
     {
       "id": "ImageDeduplication",
-      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/cache/deduplication",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/deduplication",
       "algorithm": "phash"
     }
   ],
   "writer": {
     "output_dir": "/capstor/store/cscs/swissai/infra01/medical/apertus_image_only_v1",
-    "target_shard_bytes": 500000000
+    "target_shard_bytes": 500000000,
+    "num_workers": 100
   },
   "pipeline": {
-    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/cache/pipeline.log",
-    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/cache/manifest.db",
-    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/cache/checkpoint.db",
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared/checkpoint.db",
     "num_workers": 100,
     "batch_size": 1000
   }

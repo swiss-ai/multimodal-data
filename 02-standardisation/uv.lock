@@ -996,7 +996,7 @@ wheels = [
 ]
 
 [[package]]
-name = "standardisation"
+name = "mmpipeline"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
