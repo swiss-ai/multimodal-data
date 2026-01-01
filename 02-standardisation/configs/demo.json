@@ -1,0 +1,31 @@
+{
+  "adapters": [
+    {
+      "id": "MedTrinityDemo"
+    }
+  ],
+  "filters": [
+    {
+      "id": "ImageResolution",
+      "min_width": 64,
+      "min_height": 64
+    },
+    {
+      "id": "ImageDeduplication",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/deduplication",
+      "algorithm": "phash"
+    }
+  ],
+  "writer": {
+    "output_dir": "/capstor/store/cscs/swissai/infra01/medical/demo",
+    "target_shard_bytes": 500000000,
+    "num_workers": 100
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 1000
+  }
+}

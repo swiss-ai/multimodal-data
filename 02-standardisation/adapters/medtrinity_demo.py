@@ -61,7 +61,7 @@ if __name__ == "__main__":
     a = MedTrinityDemoAdapter()
 
     logger.info("starting test stream...")
-    for batch in a.stream(logger=logger, skip=0, batch_size=1000):
+    for batch in a.stream(logger=logger, batch_size=1000):
         for b in batch:
             print(
                 "obtained sample:",
