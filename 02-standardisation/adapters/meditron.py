@@ -10,7 +10,7 @@ from PIL import Image
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageSample, Sample, SampleMetadata
+from pipeline import BaseDataset, ImageSample, ImageTextSample, Sample, SampleMetadata
 
 
 def _decode_image(image_bytes: bytes):
@@ -105,8 +105,8 @@ class MeditronImageAdapter(BaseDataset):
             if self.image_only:
                 batch.append(ImageSample(image=img, meta=m))
             else:
-                _ = texts
-                raise NotImplementedError("Not implemented image-text yet.")
+                text = "\n".join([f"{t['role']}: {t['content']}" for t in texts])
+                batch.append(ImageTextSample(image=img, text=text, meta=m))
         return batch
 
 
@@ -173,4 +173,5 @@ if __name__ == "__main__":
                     "obtained sample:",
                     b.meta.sample_id,
                     b.image.size,  # type: ignore
+                    b.text[:50] if isinstance(b, ImageTextSample) else None,
                 )
