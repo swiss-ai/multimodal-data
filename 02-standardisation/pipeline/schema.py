@@ -21,13 +21,10 @@ class Sample(ABC):
     meta: SampleMetadata
 
     @abstractmethod
-    def serialize(self) -> bytes:
-        """Serialize to bytes."""
-        ...
+    def serialize(self) -> bytes: ...
 
     @staticmethod
     def deserialize(data: bytes) -> "Sample":
-        """Deserialize from bytes."""
         msg = msgspec.msgpack.decode(data, type=SerializedSample)
         return msg.to_sample()
 

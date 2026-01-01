@@ -15,7 +15,7 @@ class Allowlist:
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
 
         self.conn = sqlite3.connect(db_path, timeout=10.0)
-        self.conn.execute("PRAGMA journal_mode=WAL;")
+        # self.conn.execute("PRAGMA journal_mode=WAL;")
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS allowlist (
                 dataset_id TEXT,

@@ -7,14 +7,14 @@ from functools import partial
 
 from adapters import ADAPTER_REGISTRY
 from filters import FILTER_REGISTRY
-from pipeline import Pipeline, WebDatasetSink, setup_logging
+from pipeline import Pipeline, setup_logging
 
 
 def build_factories(config: list[dict], registry: dict[str, type]) -> list:
     factories = []
     for cfg in config:
         cfg = cfg.copy()
-        factory = registry[cfg.pop("type")]
+        factory = registry[cfg.pop("id")]
         factories.append(partial(factory, **cfg))
     return factories
 
@@ -29,18 +29,20 @@ def main(config_path: str):
 
     adapter_factories = build_factories(config["adapters"], ADAPTER_REGISTRY)
     filter_factories = build_factories(config["filters"], FILTER_REGISTRY)
-    sink = WebDatasetSink(**config["webdataset"])
 
     pipeline = Pipeline(
         datasets=[f() for f in adapter_factories],
         filter_factories=filter_factories,
-        sinks=sink,
-        data_dir=config["pipeline"]["data_dir"],
+        sinks=None,
+        manifest_db_path=config["pipeline"]["manifest_db"],
+        checkpoint_db_path=config["pipeline"]["checkpoint_db"],
         num_workers=config["pipeline"]["num_workers"],
         batch_size=config["pipeline"]["batch_size"],
     )
 
     pipeline.scan()
+
+    time.sleep(10)
     os._exit(0)
 
 
@@ -49,5 +51,4 @@ if __name__ == "__main__":
         print(f"Usage: {sys.argv[0]} <config.json>", file=sys.stderr)
         sys.exit(1)
 
-    time.sleep(10)
     main(sys.argv[1])
