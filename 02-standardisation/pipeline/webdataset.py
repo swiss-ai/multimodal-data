@@ -23,7 +23,7 @@ class WebDatasetSink(BaseSink):
         self.output_dir = output_dir
         self.samples_per_shard = samples_per_shard
         self.target_shard_bytes = target_shard_bytes
-        self.image_format = image_format.lower()
+        self.default_image_format = image_format.lower()
 
         self._tar: tarfile.TarFile | None = None
         self._shard_idx = 0
@@ -90,21 +90,28 @@ class WebDatasetSink(BaseSink):
             self._add_bytes(f"{key}.txt", sample.text.encode("utf-8"))
 
         elif isinstance(sample, ImageSample):
-            img_bytes = self._image_to_bytes(sample.image)
-            self._add_bytes(f"{key}.{self.image_format}", img_bytes)
+            img_bytes, ext = self._image_to_bytes(sample.image)
+            self._add_bytes(f"{key}.{ext}", img_bytes)
 
         elif isinstance(sample, ImageTextSample):
-            img_bytes = self._image_to_bytes(sample.image)
-            self._add_bytes(f"{key}.{self.image_format}", img_bytes)
+            img_bytes, ext = self._image_to_bytes(sample.image)
+            self._add_bytes(f"{key}.{ext}", img_bytes)
             self._add_bytes(f"{key}.txt", sample.text.encode("utf-8"))
 
-    def _image_to_bytes(self, image) -> bytes:
+    def _image_to_bytes(self, image) -> tuple[bytes, str]:
         buf = io.BytesIO()
-        fmt = self.image_format.upper()
-        if fmt == "JPEG" and image.mode == "RGBA":
-            image = image.convert("RGB")
-        image.save(buf, format=fmt)
-        return buf.getvalue()
+        fmt = image.format if image.format else self.default_image_format
+        fmt = fmt.upper()
+        ext = fmt.lower()
+        if ext == "jpeg":
+            ext = "jpg"
+        save_kwargs = {}
+        if fmt == "JPEG":
+            if image.mode == "RGBA":
+                image = image.convert("RGB")
+            save_kwargs = {"quality": 100, "subsampling": 0}
+        image.save(buf, format=fmt, **save_kwargs)
+        return buf.getvalue(), ext
 
     def _add_bytes(self, name: str, data: bytes) -> None:
         assert self._tar is not None

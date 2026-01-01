@@ -57,7 +57,10 @@ class MedMaxRawImageAdapter(BaseDataset):
                         meta = SampleMetadata(
                             dataset_id=self.id,
                             sample_id=counter,
-                            data={"path": member.name},
+                            data={
+                                "dataset_id": self.id,
+                                "path": member.name,
+                            },
                         )
                         batch.append(ImageSample(image=pil_image, meta=meta))
 
