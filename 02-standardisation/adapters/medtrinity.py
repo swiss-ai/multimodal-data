@@ -14,7 +14,7 @@ from PIL import Image
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageTextSample, ImageSample, Sample, SampleMetadata
+from pipeline import BaseDataset, ImageSample, ImageTextSample, Sample, SampleMetadata
 
 allowed_sources = [
     "deeplesion",
@@ -49,8 +49,6 @@ allowed_sources = [
     # "flare23",
 ]
 
-META_CACHE_FILE = "medtrinity_full_meta_cache.pkl"
-
 
 def _decode_image(image_bytes: bytes):
     try:
@@ -68,7 +66,8 @@ class MedTrinityFullAdapter(BaseDataset):
         parquet_dir: str,
         tar_dir: str,
         image_only: bool,
-        decode_workers: int = 64,
+        cache_file: str,
+        decode_workers: int,
     ):
         self.parquet_dir = parquet_dir
         self.tar_dir = tar_dir
@@ -80,8 +79,8 @@ class MedTrinityFullAdapter(BaseDataset):
         if not parquet_files:
             raise FileNotFoundError(f"no parquet files in {parquet_dir}")
 
-        if os.path.exists(META_CACHE_FILE):
-            with open(META_CACHE_FILE, "rb") as f:
+        if os.path.exists(cache_file):
+            with open(cache_file, "rb") as f:
                 self.meta_lookup = pickle.load(f)
         else:
             dfs = []
@@ -101,7 +100,8 @@ class MedTrinityFullAdapter(BaseDataset):
                     "source": row["source"],
                 }
 
-            with open(META_CACHE_FILE, "wb") as f:
+            os.makedirs(os.path.dirname(cache_file), exist_ok=True)
+            with open(cache_file, "wb") as f:
                 pickle.dump(self.meta_lookup, f)
 
     @property
@@ -159,10 +159,9 @@ class MedTrinityFullAdapter(BaseDataset):
                         img_bytes = f_obj.read()
                         caption = meta["caption"]
                         meta_data = {
-                            "dataset": self.id,
+                            "dataset_id": self.id,
                             "source": source,
                             "file_name": file_name,
-                            "size": member.size,
                         }
 
                         pending.append((counter, img_bytes, caption, meta_data))
@@ -225,8 +224,9 @@ if __name__ == "__main__":
     a = MedTrinityFullAdapter(
         parquet_dir="/capstor/store/cscs/swissai/infra01/medical/raw/medtrinity_25m/repo/25M_full",
         tar_dir="/capstor/store/cscs/swissai/infra01/medical/raw/medtrinity_25m/repo/25M_accessible",
+        cache_file="/iopsstor/scratch/cscs/tchu/.cache/medtrinity/metadata_legal.pkl",
         image_only=True,
-        decode_workers=200,
+        decode_workers=100,
     )
 
     logger.info("Starting MedTrinityFullAdapter test stream...")
@@ -239,6 +239,6 @@ if __name__ == "__main__":
             print(
                 "obtained sample:",
                 b.meta.sample_id,
-                b.meta.data["size"],  # type: ignore
+                b.image.size,  # type: ignore
                 b.meta.data["file_name"],
             )
