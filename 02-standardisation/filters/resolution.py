@@ -1,7 +1,7 @@
 from pipeline import BaseFilter, ImageSample, ImageTextSample, Sample
 
 
-class ResolutionFilter(BaseFilter):
+class ImageResolutionFilter(BaseFilter):
     def __init__(
         self,
         min_width: int | None = None,

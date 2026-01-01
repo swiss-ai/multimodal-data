@@ -38,21 +38,21 @@ class BaseFilter(ABC):
         ...
 
 
-class BaseSink(ABC):
-    """Base class for pipeline output sinks."""
+class BaseWriter(ABC):
+    """Base class for pipeline output writers."""
 
     @abstractmethod
-    def open(self) -> None:
+    def open(self):
         """Called before processing starts."""
         ...
 
     @abstractmethod
-    def write_batch(self, samples: list[Sample]) -> None:
+    def write_batch(self, samples: list[Sample]):
         """Write a batch of accepted samples."""
         ...
 
     @abstractmethod
-    def close(self) -> None:
+    def close(self):
         """Called after processing completes."""
         ...
 

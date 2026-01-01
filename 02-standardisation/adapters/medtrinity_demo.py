@@ -10,7 +10,7 @@ if __name__ == "__main__":
 from pipeline import BaseDataset, ImageSample, SampleMetadata
 
 
-class MedtrinityDemoAdapter(BaseDataset):
+class MedTrinityDemoAdapter(BaseDataset):
     def __init__(self):
         self.dataset = load_dataset(
             "UCSC-VLAA/MedTrinity-25M",
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
     logger.info("initializing adapter...")
 
-    a = MedtrinityDemoAdapter()
+    a = MedTrinityDemoAdapter()
 
     logger.info("starting test stream...")
     for batch in a.stream(logger=logger, skip=0, batch_size=1000):

@@ -1,7 +1,11 @@
-from filters.deduplication import ImageDeduplication
-from filters.resolution import ResolutionFilter
+from filters.deduplication import ImageDeduplicationFilter
+from filters.resolution import ImageResolutionFilter
+
+filters = [
+    ImageResolutionFilter,
+    ImageDeduplicationFilter,
+]
 
 FILTER_REGISTRY: dict[str, type] = {
-    "MinResolution": ResolutionFilter,
-    "ImageDeduplication": ImageDeduplication,
+    filter.__name__.removesuffix("Filter"): filter for filter in filters
 }
