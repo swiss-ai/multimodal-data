@@ -44,8 +44,12 @@ def _serialize_sample(sample: ImageSample | ImageTextSample) -> tuple[str, int, 
     buf = io.BytesIO()
     fmt = image.format or "PNG"
 
-    if fmt.upper() in ("JPEG", "JPG") and image.mode == "RGBA":
+    if image.mode == "P" and "transparency" in image.info:
+        image = image.convert("RGBA")
+    if fmt.upper() in ("JPEG", "JPG") and image.mode in ("RGBA", "P", "LA"):
         image = image.convert("RGB")
+    if "transparency" in image.info:
+        del image.info["transparency"]
 
     image.save(buf, format=fmt)
     return sample.meta.dataset_id, sample.meta.sample_id, buf.getvalue()
