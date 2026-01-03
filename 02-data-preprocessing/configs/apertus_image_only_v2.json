@@ -84,7 +84,7 @@
     }
   ],
   "writer": {
-    "output_dir": "/capstor/store/cscs/swissai/infra01/medical/apertus_image_only_v1",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/medical/apertus_image_only_v2",
     "target_shard_bytes": 900000000,
     "num_workers": 100
   },
@@ -93,6 +93,6 @@
     "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/manifest.db",
     "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/checkpoint.db",
     "num_workers": 100,
-    "batch_size": 500
+    "batch_size": 400
   }
 }

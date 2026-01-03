@@ -42,8 +42,8 @@ class BaseWriter(ABC):
     """Base class for pipeline output writers."""
 
     @abstractmethod
-    def open(self):
-        """Called before processing starts."""
+    def open(self, dataset_id: str):
+        """Called before processing a dataset."""
         ...
 
     @abstractmethod
@@ -55,10 +55,3 @@ class BaseWriter(ABC):
     def close(self):
         """Called after processing completes."""
         ...
-
-    def __enter__(self):
-        self.open()
-        return self
-
-    def __exit__(self, *_):
-        self.close()

@@ -165,8 +165,6 @@ class MedMaxAdapter(BaseDataset):
         return batch
 
 
-# === FOR MANUAL TESTING CODE ===
-
 if __name__ == "__main__":
     logger = logging.getLogger("medmax")
     logger.setLevel(logging.DEBUG)

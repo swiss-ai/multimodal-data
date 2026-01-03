@@ -35,16 +35,9 @@ class Pipeline:
     def scan(self):
         logger.info(f"Starting scan of {len(self.datasets)} dataset(s)")
 
-        if self.writer:
-            self.writer.open()
-
-        try:
-            with WorkerPool(self.filter_factories, self.num_workers) as pool:
-                for dataset in self.datasets:
-                    self._scan_dataset(dataset, pool)
-        finally:
-            if self.writer:
-                self.writer.close()
+        with WorkerPool(self.filter_factories, self.num_workers) as pool:
+            for dataset in self.datasets:
+                self._scan_dataset(dataset, pool)
 
         logger.info("Scan complete")
 
@@ -67,16 +60,23 @@ class Pipeline:
             passed = 0
             logger.info(f"[{dataset_id}] Starting from beginning")
 
-        batch: list[Sample] = []
-        stream_logger = logging.getLogger(f"pipeline.{dataset_id}")
+        if self.writer:
+            self.writer.open(dataset_id)
 
-        for batch in dataset.stream(stream_logger, skip, batch_size=self.batch_size):
-            logger.debug(f"[{dataset_id}] Processing batch of {len(batch)} samples")
-            passed += self._process_batch(batch, pool)
-            processed += len(batch)
-            logger.debug(f"[{dataset_id}] {processed} processed, {passed} passed")
-            self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
-            batch = []
+        try:
+            stream_logger = logging.getLogger(f"pipeline.{dataset_id}")
+
+            for batch in dataset.stream(
+                stream_logger, skip, batch_size=self.batch_size
+            ):
+                logger.debug(f"[{dataset_id}] Processing batch of {len(batch)} samples")
+                passed += self._process_batch(batch, pool)
+                processed += len(batch)
+                logger.debug(f"[{dataset_id}] {processed} processed, {passed} passed")
+                self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
+        finally:
+            if self.writer:
+                self.writer.close()
 
         self.checkpoint.mark_complete(dataset_id)
         logger.info(f"[{dataset_id}] Complete: {processed} processed, {passed} passed")
