@@ -1,0 +1,98 @@
+{
+  "adapters": [
+    {
+      "id": "Meditron",
+      "dataset_id": "busi",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/BUSI",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "covid_us",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/COVID_US",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "ddti",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/DDTI",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "llava_instruct",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/llava_instruct",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "llava_pretrain_cleaned",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/llava_pretrain_cleaned",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "mammoth",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/image_mammoth",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "pixmo_anything",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/pixmo_anything",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "pixmo_cap",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/pixmo_cap",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "MedMax",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/medmax_data",
+      "cache_file": "/capstor/scratch/cscs/tchu/.cache/medmax/metadata.pkl",
+      "image_only": true,
+      "decode_workers": 100
+    },
+    {
+      "id": "MedTrinityFull",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/medtrinity_25m",
+      "cache_file": "/capstor/scratch/cscs/tchu/.cache/medtrinity/metadata_legal.pkl",
+      "image_only": true,
+      "decode_workers": 100
+    }
+  ],
+  "filters": [
+    {
+      "id": "ImageResolution",
+      "min_width": 64,
+      "min_height": 64
+    },
+    {
+      "id": "ImageDeduplication",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/deduplication",
+      "algorithm": "phash"
+    }
+  ],
+  "writer": {
+    "output_dir": "/capstor/store/cscs/swissai/infra01/medical/apertus_image_only_v1",
+    "target_shard_bytes": 900000000,
+    "num_workers": 100
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 500
+  }
+}

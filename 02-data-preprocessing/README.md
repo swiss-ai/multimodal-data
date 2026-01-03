@@ -25,6 +25,16 @@ output_dir/
 ```
 
 **Loading**
+
+Set HF cache directories:
+
+```bash
+export HF_DATASETS_CACHE="/capstor/store/cscs/swissai/infra01/vision-datasets/hf_datasets_cache"
+export HF_HUB_CACHE="/capstor/store/cscs/swissai/infra01/vision-datasets/hf_hub_cache"
+```
+
+Load dataset with `datasets` library with the `parquet` loader:
+
 ```python
 from datasets import load_dataset
 
