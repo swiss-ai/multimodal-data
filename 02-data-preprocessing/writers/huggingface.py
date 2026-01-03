@@ -12,6 +12,7 @@ from pipeline.schema import ImageSample, ImageTextSample, Sample
 
 logger = logging.getLogger("pipeline.writers.huggingface")
 
+ARROW_MAX_BYTES = 1_000_000_000
 ARROW_SCHEMA = pa.schema(
     [
         ("dataset_id", pa.string()),
@@ -111,6 +112,25 @@ class HuggingFaceDatasetWriter(BaseWriter):
         assert self._executor is not None
         results = list(self._executor.map(_serialize_sample, image_samples))
 
+        batch_bytes = sum(len(img_bytes) for _, _, img_bytes in results)
+        if batch_bytes < ARROW_MAX_BYTES:
+            self._write_results(results)
+            return
+
+        # batch too large, split into chunks
+        chunk, chunk_bytes = [], 0
+        for r in results:
+            bytes = len(r[2])
+            if chunk_bytes + bytes > ARROW_MAX_BYTES and chunk:
+                self._write_results(chunk)
+                chunk = []
+                chunk_bytes = 0
+            chunk.append(r)
+            chunk_bytes += bytes
+        if chunk:
+            self._write_results(chunk)
+
+    def _write_results(self, results: list[tuple[str, int, bytes]]):
         dataset_ids = []
         sample_ids = []
         images = []
