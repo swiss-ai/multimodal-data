@@ -2,6 +2,13 @@
   "adapters": [
     {
       "id": "MedTrinityDemo"
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "busi",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/BUSI",
+      "image_only": true,
+      "decode_workers": 100
     }
   ],
   "filters": [
