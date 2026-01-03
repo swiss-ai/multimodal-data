@@ -26,20 +26,21 @@ output_dir/
 
 **Loading**
 
-Set HF cache directories:
-
-```bash
-export HF_DATASETS_CACHE="/capstor/store/cscs/swissai/infra01/vision-datasets/hf_datasets_cache"
-export HF_HUB_CACHE="/capstor/store/cscs/swissai/infra01/vision-datasets/hf_hub_cache"
-```
-
-Load dataset with `datasets` library with the `parquet` loader:
-
 ```python
+import os
+
+os.environ["HF_DATASETS_CACHE"] = "/capstor/store/cscs/swissai/infra01/vision-datasets/hf_datasets_cache"
+
 from datasets import load_dataset
 
 data_dir = "/capstor/store/cscs/swissai/infra01/medical/apertus_image_only_v1"
 dataset = load_dataset("parquet", data_dir=data_dir, split="train")
+
+print(dataset)
+# Dataset({
+#     features: ['dataset_id', 'sample_id', 'image'],
+#     num_rows: 8022449
+# })
 ```
 
 ## Architecture

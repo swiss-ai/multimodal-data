@@ -12,20 +12,20 @@
     },
     {
       "id": "ImageDeduplication",
-      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/deduplication",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/cache/deduplication",
       "algorithm": "phash"
     }
   ],
   "writer": {
-    "output_dir": "/capstor/store/cscs/swissai/infra01/medical/demo",
-    "target_shard_bytes": 500000000,
+    "output_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/target",
+    "target_shard_bytes": 10000000,
     "num_workers": 100
   },
   "pipeline": {
-    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/pipeline.log",
-    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/manifest.db",
-    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/checkpoint.db",
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/cache/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/cache/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/cache/checkpoint.db",
     "num_workers": 100,
-    "batch_size": 1000
+    "batch_size": 400
   }
 }

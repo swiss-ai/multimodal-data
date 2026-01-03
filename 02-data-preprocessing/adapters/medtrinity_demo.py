@@ -18,7 +18,7 @@ class MedTrinityDemoAdapter(BaseDataset):
             split="train",
             streaming=True,
         )
-        self.dataset = self.dataset.take(3000)  # type: ignore
+        self.dataset = self.dataset.take(10000)  # type: ignore
 
     @property
     def id(self):
@@ -51,7 +51,7 @@ class MedTrinityDemoAdapter(BaseDataset):
             yield batch
 
 
-# === FOR MANUAL TESTING CODE ===
+# === FOR MANUAL TESTING ===
 
 if __name__ == "__main__":
     logger = logging.getLogger("medtrinity_full")
