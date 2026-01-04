@@ -27,20 +27,31 @@ output_dir/
 **Loading**
 
 ```python
-import os
+from datasets import load_from_disk
 
-os.environ["HF_DATASETS_CACHE"] = "/capstor/store/cscs/swissai/infra01/vision-datasets/hf_datasets_cache"
-
-from datasets import load_dataset
-
-data_dir = "/capstor/store/cscs/swissai/infra01/medical/apertus_image_only_v1"
-dataset = load_dataset("parquet", data_dir=data_dir, split="train")
+ds = load_from_disk("/capstor/store/cscs/swissai/infra01/medical/apertus_image_only_v1_arrow/combined")
 
 print(dataset)
 # Dataset({
 #     features: ['dataset_id', 'sample_id', 'image'],
 #     num_rows: 8022449
 # })
+
+# random access
+print(dataset[1234567])
+# {
+#   'dataset_id': 'mammoth',
+#   'sample_id': 719085,
+#   'image': <PIL...image...>
+# }
+
+# slicing
+print(ds[10:20])
+# {
+#   'dataset_id': ['busi', 'busi', ..., 'busi'],
+#   'sample_id': [10, 11, 12, ..., 19],
+#   'image': [<PIL..>, <PIL..>, ..., <PIL..>]
+# }
 ```
 
 ## Architecture
