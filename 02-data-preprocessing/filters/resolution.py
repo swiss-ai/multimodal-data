@@ -14,14 +14,14 @@ class ImageResolutionFilter(BaseFilter):
         self.max_width = max_width
         self.max_height = max_height
 
-    def process_batch(self, samples: list[Sample]) -> list[bool]:
+    def process_batch(self, samples: list[Sample]) -> list[Sample]:
         results = []
         for sample in samples:
             if not isinstance(sample, (ImageSample, ImageTextSample)):
-                results.append(True)
+                results.append(sample)
                 continue
             if not hasattr(sample, "image"):
-                results.append(True)
+                results.append(sample)
                 continue
 
             width, height = sample.image.size
@@ -31,8 +31,7 @@ class ImageResolutionFilter(BaseFilter):
                 or (self.max_width is not None and width > self.max_width)
                 or (self.max_height is not None and height > self.max_height)
             ):
-                results.append(False)
-            else:
-                results.append(True)
+                continue
+            results.append(sample)
 
         return results

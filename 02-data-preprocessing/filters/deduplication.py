@@ -44,41 +44,35 @@ class ImageDeduplicationFilter(BaseFilter):
         self.hash_store = HashStore(db_path)
         self.hash_func = self.ALGORITHMS[algorithm]
 
-    def process_batch(self, samples: list[Sample]) -> list[bool]:
+    def process_batch(self, samples: list[Sample]) -> list[Sample]:
         """Batch dedup: local dedup first, then single LMDB transaction."""
 
-        to_check = []  # (idx, hash, dataset_id, sample_id)
-
-        # hash and local dedup
+        non_image_samples = []
+        candidates = []  # (sample, hash)
         seen_hashes = set()
-        results = []
-        for idx, sample in enumerate(samples):
+
+        for sample in samples:
             if not isinstance(sample, (ImageSample, ImageTextSample)):
-                results.append(True)
+                non_image_samples.append(sample)
                 continue
 
             img_hash = str(self.hash_func(sample.image))
             if img_hash in seen_hashes:
-                results.append(False)
-                continue
+                continue  # local duplicate
 
             seen_hashes.add(img_hash)
-            results.append(True)
-            to_check.append(
-                (
-                    idx,
-                    img_hash,
-                    sample.meta.dataset_id,
-                    sample.meta.sample_id,
-                )
-            )
+            candidates.append((sample, img_hash))
 
         # check against LMDB
-        if to_check:
-            items = [(h, d, s) for _, h, d, s in to_check]
+        if candidates:
+            items = [(h, s.meta.dataset_id, s.meta.sample_id) for s, h in candidates]
             db_results = self.hash_store.check_and_insert_batch(items)
-            for (idx, _, _, _), is_unique in zip(to_check, db_results):
-                # assert results[idx]  # True from local dedup
-                results[idx] = is_unique
+            passed_images = [
+                sample
+                for (sample, _), is_unique in zip(candidates, db_results)
+                if is_unique
+            ]
+        else:
+            passed_images = []
 
-        return results
+        return non_image_samples + passed_images
