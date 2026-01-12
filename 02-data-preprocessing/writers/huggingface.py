@@ -5,7 +5,7 @@ import os
 from concurrent.futures import ThreadPoolExecutor
 
 import pyarrow as pa
-import pyarrow.parquet as pq
+from datasets import Features, Image, Value
 
 from pipeline.base import BaseWriter
 from pipeline.schema import ImageSample, ImageTextSample, Sample
@@ -13,33 +13,14 @@ from pipeline.schema import ImageSample, ImageTextSample, Sample
 logger = logging.getLogger("pipeline.writers.huggingface")
 
 ARROW_MAX_BYTES = 1_500_000_000
-ARROW_SCHEMA = pa.schema(
-    [
-        ("dataset_id", pa.string()),
-        ("sample_id", pa.int64()),
-        (
-            "image",
-            pa.struct(
-                [
-                    ("bytes", pa.binary()),
-                    ("path", pa.string()),
-                ]
-            ),
-        ),
-    ]
-)
-HF_METADATA = {
-    "info": {
-        "features": {
-            "dataset_id": {"dtype": "string", "_type": "Value"},
-            "sample_id": {"dtype": "int64", "_type": "Value"},
-            "image": {"_type": "Image"},
-        }
+HF_FEATURES = Features(
+    {
+        "dataset_id": Value("string"),
+        "sample_id": Value("int64"),
+        "image": Image(),
     }
-}
-SCHEMA = ARROW_SCHEMA.with_metadata(
-    {b"huggingface": json.dumps(HF_METADATA).encode("utf-8")}
 )
+SCHEMA = HF_FEATURES.arrow_schema
 
 
 def _serialize_sample(sample: ImageSample | ImageTextSample) -> tuple[str, int, bytes]:
@@ -70,21 +51,38 @@ class HuggingFaceDatasetWriter(BaseWriter):
         self.num_workers = num_workers
 
         self._data_dir: str | None = None
-        self._writer: pq.ParquetWriter | None = None
+        self._sink: pa.OSFile | None = None
+        self._writer: pa.RecordBatchStreamWriter | None = None
         self._executor: ThreadPoolExecutor | None = None
         self._shard_idx = 0
         self._shard_bytes = 0
         self._shard_samples = 0
+        self._total_bytes = 0
+        self._total_samples = 0
 
     def open(self, dataset_id: str):
         self._data_dir = os.path.join(self.output_dir, dataset_id)
         os.makedirs(self._data_dir, exist_ok=True)
         self._executor = ThreadPoolExecutor(max_workers=self.num_workers)
 
-        existing = [f for f in os.listdir(self._data_dir) if f.endswith(".parquet")]
+        existing = sorted(f for f in os.listdir(self._data_dir) if f.endswith(".arrow"))
         self._shard_idx = len(existing)
+
+        stats_path = os.path.join(self._data_dir, ".stats.json")
+        if os.path.exists(stats_path):
+            with open(stats_path) as f:
+                stats = json.load(f)
+                self._total_bytes = stats.get("total_bytes", 0)
+                self._total_samples = stats.get("total_samples", 0)
+        else:
+            self._total_bytes = 0
+            self._total_samples = 0
+
         if self._shard_idx > 0:
-            logger.info(f"[{dataset_id}] Resuming from shard {self._shard_idx}")
+            logger.info(
+                f"[{dataset_id}] Resuming from shard {self._shard_idx} "
+                f"({self._total_samples:,} samples, {self._total_bytes:,} bytes)"
+            )
         else:
             logger.info(f"[{dataset_id}] Starting fresh write")
 
@@ -106,7 +104,6 @@ class HuggingFaceDatasetWriter(BaseWriter):
             self._write_results(results)
             return
 
-        # batch too large, split into chunks
         chunk, chunk_bytes = [], 0
         for r in results:
             nbytes = len(r[2])
@@ -145,48 +142,77 @@ class HuggingFaceDatasetWriter(BaseWriter):
 
         self._shard_samples += len(results)
         self._shard_bytes += batch_bytes
+        self._total_samples += len(results)
+        self._total_bytes += batch_bytes
         if self._shard_bytes >= self.target_shard_bytes:
             self._close_shard()
+
+    def _ensure_writer_open(self):
+        if self._writer is None:
+            assert self._data_dir is not None
+            shard_path = os.path.join(
+                self._data_dir, f"data-{self._shard_idx:05d}.arrow"
+            )
+            self._sink = pa.OSFile(shard_path, "wb")
+            self._writer = pa.ipc.new_stream(self._sink, SCHEMA)
+
+    def _close_shard(self):
+        if self._writer is not None:
+            self._writer.close()
+            self._writer = None
+        if self._sink is not None:
+            self._sink.close()
+            self._sink = None
+            self._shard_idx += 1
+            self._shard_bytes = 0
+            self._shard_samples = 0
 
     def close(self):
         self._close_shard()
         if self._executor:
             self._executor.shutdown(wait=True)
             self._executor = None
-        self._rename_shards()
-        logger.info(f"Wrote {self._shard_idx} shards")
+        self._finalize_hf_metadata()
+        logger.info(
+            f"Wrote {self._shard_idx} shards, "
+            f"{self._total_samples:,} samples, {self._total_bytes:,} bytes"
+        )
 
-    def _ensure_writer_open(self):
-        if self._writer is None:
-            assert self._data_dir is not None
-            shard_path = os.path.join(
-                self._data_dir, f"train-{self._shard_idx:05d}.parquet"
-            )
-            self._writer = pq.ParquetWriter(shard_path, SCHEMA)
-            logger.debug(f"Opened {shard_path}")
-
-    def _close_shard(self):
-        if self._writer is not None:
-            self._writer.close()
-            self._writer = None
-            logger.debug(
-                f"Closed shard {self._shard_idx} "
-                f"({self._shard_samples} samples, {self._shard_bytes / 1e9:.2f}GB)"
-            )
-            self._shard_idx += 1
-            self._shard_bytes = 0
-            self._shard_samples = 0
-
-    def _rename_shards(self):
-        total_shards = self._shard_idx
-        if total_shards == 0:
-            return
-
+    def _finalize_hf_metadata(self):
         assert self._data_dir is not None
-        for i in range(total_shards):
-            old_name = os.path.join(self._data_dir, f"train-{i:05d}.parquet")
-            new_name = os.path.join(
-                self._data_dir, f"train-{i:05d}-of-{total_shards:05d}.parquet"
-            )
-            if os.path.exists(old_name):
-                os.rename(old_name, new_name)
+
+        # .stats.json - for fast resume
+        stats = {
+            "total_bytes": self._total_bytes,
+            "total_samples": self._total_samples,
+        }
+        with open(os.path.join(self._data_dir, ".stats.json"), "w") as f:
+            json.dump(stats, f)
+
+        # state.json - for load_from_disk
+        files = sorted(f for f in os.listdir(self._data_dir) if f.endswith(".arrow"))
+        state = {
+            "_data_files": [{"filename": f} for f in files],
+            "_fingerprint": "pipeline_build",
+            "_format_columns": None,
+            "_format_kwargs": {},
+            "_format_type": None,
+            "_output_all_columns": False,
+            "_split": "train",
+        }
+        with open(os.path.join(self._data_dir, "state.json"), "w") as f:
+            json.dump(state, f, indent=2)
+
+        # dataset_info.json
+        info_dict = {
+            "features": HF_FEATURES.to_dict(),
+            "splits": {
+                "train": {
+                    "name": "train",
+                    "num_bytes": self._total_bytes,
+                    "num_examples": self._total_samples,
+                }
+            },
+        }
+        with open(os.path.join(self._data_dir, "dataset_info.json"), "w") as f:
+            json.dump(info_dict, f, indent=2)
