@@ -83,14 +83,13 @@ class Pipeline:
 
     def _process_batch(self, batch: list[Sample], pool: WorkerPool) -> int:
         """Process batch, update allowlist and writer, return count passed."""
-        results = pool.process_batch(batch)
+        passed_samples = pool.process_batch(batch)
 
-        passed_entries = [(r.dataset_id, r.sample_id) for r in results if r.passed]
-        if passed_entries:
-            self.allowlist.add_batch(passed_entries)
+        if passed_samples:
+            entries = [(s.meta.dataset_id, s.meta.sample_id) for s in passed_samples]
+            self.allowlist.add_batch(entries)
 
             if self.writer:
-                passed_samples = [s for s, r in zip(batch, results) if r.passed]
                 self.writer.write_batch(passed_samples)
 
-        return len(passed_entries)
+        return len(passed_samples)

@@ -30,9 +30,10 @@ class BaseFilter(ABC):
     """Base class for sample filters."""
 
     @abstractmethod
-    def process_batch(self, samples: list[Sample]) -> list[bool]:
+    def process_batch(self, samples: list[Sample]) -> list[Sample]:
         """
-        Process a batch of samples. Return list of bools (True=keep, False=discard).
+        Process a batch of samples. Return only the samples that pass the filter.
+        Filters can modify samples (e.g., downsample images) before returning them.
         Can be stateful, but must be thread-safe.
         """
         ...
