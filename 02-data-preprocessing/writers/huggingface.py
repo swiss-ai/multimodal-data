@@ -156,6 +156,15 @@ class HuggingFaceDatasetWriter(BaseWriter):
             self._sink = pa.OSFile(shard_path, "wb")
             self._writer = pa.ipc.new_stream(self._sink, SCHEMA)
 
+    def _write_stats(self):
+        stats = {
+            "total_bytes": self._total_bytes,
+            "total_samples": self._total_samples,
+        }
+        assert self._data_dir is not None
+        with open(os.path.join(self._data_dir, ".stats.json"), "w") as f:
+            json.dump(stats, f, indent=2)
+
     def _close_shard(self):
         if self._writer is not None:
             self._writer.close()
@@ -163,6 +172,7 @@ class HuggingFaceDatasetWriter(BaseWriter):
         if self._sink is not None:
             self._sink.close()
             self._sink = None
+            self._write_stats()
             self._shard_idx += 1
             self._shard_bytes = 0
             self._shard_samples = 0
@@ -180,15 +190,6 @@ class HuggingFaceDatasetWriter(BaseWriter):
 
     def _finalize_hf_metadata(self):
         assert self._data_dir is not None
-
-        # .stats.json - for fast resume
-        stats = {
-            "total_bytes": self._total_bytes,
-            "total_samples": self._total_samples,
-        }
-        with open(os.path.join(self._data_dir, ".stats.json"), "w") as f:
-            json.dump(stats, f)
-
         # state.json - for load_from_disk
         files = sorted(f for f in os.listdir(self._data_dir) if f.endswith(".arrow"))
         state = {

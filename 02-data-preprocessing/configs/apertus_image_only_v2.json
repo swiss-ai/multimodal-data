@@ -69,9 +69,26 @@
       "cache_file": "/capstor/scratch/cscs/tchu/.cache/medtrinity/metadata_legal.pkl",
       "image_only": true,
       "decode_workers": 100
+    },
+    {
+      "id": "PMCOA",
+      "data_dir":"/capstor/store/cscs/swissai/infra01/medical/raw/pmc_oa",
+      "decode_workers" :64
     }
   ],
   "filters": [
+    {
+      "id": "ImageResolution",
+      "min_width": 64,
+      "min_height": 64,
+      "max_width": 8192,
+      "max_height": 8192
+    },
+    {
+      "id": "ImageDownsample",
+      "max_pixels": 4194304,
+      "pil_resample": 1
+    },
     {
       "id": "ImageResolution",
       "min_width": 64,
@@ -79,7 +96,7 @@
     },
     {
       "id": "ImageDeduplication",
-      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/deduplication",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/v2/deduplication",
       "algorithm": "phash"
     }
   ],
@@ -89,9 +106,9 @@
     "num_workers": 100
   },
   "pipeline": {
-    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/pipeline.log",
-    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/manifest.db",
-    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/shared2/checkpoint.db",
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/v2/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/v2/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/v2/checkpoint.db",
     "num_workers": 100,
     "batch_size": 400
   }
