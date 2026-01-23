@@ -15,30 +15,36 @@
     {
       "id": "ImageResolution",
       "min_width": 64,
-      "min_height": 64
+      "min_height": 64,
       "max_width": 8192,
       "max_height": 8192
     },
     {
       "id": "ImageDownsample",
-      "max_pixels": 4194304
+      "max_pixels": 4194304,
+      "pil_resample": 1
+    },
+    {
+      "id": "ImageResolution",
+      "min_width": 64,
+      "min_height": 64
     },
     {
       "id": "ImageDeduplication",
-      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/cache/deduplication",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/deduplication",
       "algorithm": "phash"
     }
   ],
   "writer": {
     "output_dir": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/target",
-    "target_shard_bytes": 10000000,
-    "num_workers": 100
+    "target_shard_bytes": 20000000,
+    "num_workers": 40
   },
   "pipeline": {
-    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/cache/pipeline.log",
-    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/cache/manifest.db",
-    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/cache/checkpoint.db",
-    "num_workers": 100,
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/demo/checkpoint.db",
+    "num_workers": 40,
     "batch_size": 400
   }
 }

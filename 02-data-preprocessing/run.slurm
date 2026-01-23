@@ -7,6 +7,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=280
 #SBATCH --time=12:00:00
+#SBATCH --signal=B:SIGTERM@300
 #SBATCH --partition=normal
 
 set -euo pipefail
