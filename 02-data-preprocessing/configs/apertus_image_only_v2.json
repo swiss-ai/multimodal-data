@@ -72,8 +72,13 @@
     },
     {
       "id": "PMCOA",
-      "data_dir":"/capstor/store/cscs/swissai/infra01/medical/raw/pmc_oa",
-      "decode_workers" :64
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/pmc_oa",
+      "decode_workers": 64
+    },
+    {
+      "id": "OpenPMC18m",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/open-pmc-18m",
+      "decode_workers": 64
     }
   ],
   "filters": [
