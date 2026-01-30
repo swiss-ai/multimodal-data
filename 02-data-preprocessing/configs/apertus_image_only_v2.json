@@ -82,6 +82,10 @@
     {
       "id": "MedMNIST",
       "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/medmnist"
+    },
+    {
+      "id": "SCIN",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/scin"
     }
   ],
   "filters": [

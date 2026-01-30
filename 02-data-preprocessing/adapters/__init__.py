@@ -6,6 +6,7 @@ from adapters.medtrinity_demo import MedTrinityDemoAdapter
 from adapters.mmc4 import MMC4Adapter
 from adapters.open_pmc_18m import OpenPMC18mAdapter
 from adapters.pmc_oa import PMCOAAdapter
+from adapters.scin import SCINAdapter
 
 adapters = [
     MeditronAdapter,
@@ -16,6 +17,7 @@ adapters = [
     PMCOAAdapter,
     OpenPMC18mAdapter,
     MedMNISTAdapter,
+    SCINAdapter,
 ]
 
 ADAPTER_REGISTRY: dict[str, type] = {
