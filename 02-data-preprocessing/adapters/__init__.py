@@ -1,5 +1,6 @@
 from adapters.meditron import MeditronAdapter
 from adapters.medmax import MedMaxAdapter
+from adapters.medmnist import MedMNISTAdapter
 from adapters.medtrinity import MedTrinityFullAdapter
 from adapters.medtrinity_demo import MedTrinityDemoAdapter
 from adapters.mmc4 import MMC4Adapter
@@ -14,6 +15,7 @@ adapters = [
     MMC4Adapter,
     PMCOAAdapter,
     OpenPMC18mAdapter,
+    MedMNISTAdapter,
 ]
 
 ADAPTER_REGISTRY: dict[str, type] = {

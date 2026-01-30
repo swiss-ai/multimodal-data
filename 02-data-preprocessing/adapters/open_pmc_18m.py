@@ -19,7 +19,7 @@ class OpenPMC18mAdapter(BaseDataset):
     def __init__(
         self,
         data_dir: str,
-        decode_workers: int,
+        decode_workers: int = 0,
         image_only: bool = True,
     ):
         self.data_dir = data_dir
@@ -95,7 +95,6 @@ if __name__ == "__main__":
 
     a = OpenPMC18mAdapter(
         data_dir="/capstor/store/cscs/swissai/infra01/medical/raw/open-pmc-18m",
-        decode_workers=100,
     )
 
     for batch in a.stream(logger=logger, skip=5, batch_size=1000):
