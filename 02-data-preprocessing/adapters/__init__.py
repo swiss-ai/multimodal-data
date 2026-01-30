@@ -7,6 +7,7 @@ from adapters.mmc4 import MMC4Adapter
 from adapters.open_pmc_18m import OpenPMC18mAdapter
 from adapters.pmc_oa import PMCOAAdapter
 from adapters.scin import SCINAdapter
+from adapters.slide import SLIDEAdapter
 
 adapters = [
     MeditronAdapter,
@@ -18,6 +19,7 @@ adapters = [
     OpenPMC18mAdapter,
     MedMNISTAdapter,
     SCINAdapter,
+    SLIDEAdapter,
 ]
 
 ADAPTER_REGISTRY: dict[str, type] = {

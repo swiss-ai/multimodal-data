@@ -86,6 +86,11 @@
     {
       "id": "SCIN",
       "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/scin"
+    },
+    {
+      "id": "SLIDE",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/slide",
+      "decode_workers": 3
     }
   ],
   "filters": [
