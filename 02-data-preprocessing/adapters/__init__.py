@@ -8,6 +8,7 @@ from adapters.open_pmc_18m import OpenPMC18mAdapter
 from adapters.pmc_oa import PMCOAAdapter
 from adapters.scin import SCINAdapter
 from adapters.slide import SLIDEAdapter
+from adapters.uwf import UWFAdapter
 
 adapters = [
     MeditronAdapter,
@@ -20,6 +21,7 @@ adapters = [
     MedMNISTAdapter,
     SCINAdapter,
     SLIDEAdapter,
+    UWFAdapter,
 ]
 
 ADAPTER_REGISTRY: dict[str, type] = {
