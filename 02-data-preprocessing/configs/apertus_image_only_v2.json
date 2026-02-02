@@ -95,6 +95,10 @@
     {
       "id": "UWF",
       "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/uwf"
+    },
+    {
+      "id": "RFMiD2",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/rfmid2"
     }
   ],
   "filters": [

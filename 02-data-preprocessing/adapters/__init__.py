@@ -6,6 +6,7 @@ from adapters.medtrinity_demo import MedTrinityDemoAdapter
 from adapters.mmc4 import MMC4Adapter
 from adapters.open_pmc_18m import OpenPMC18mAdapter
 from adapters.pmc_oa import PMCOAAdapter
+from adapters.rfmid2 import RFMiD2Adapter
 from adapters.scin import SCINAdapter
 from adapters.slide import SLIDEAdapter
 from adapters.uwf import UWFAdapter
@@ -22,6 +23,7 @@ adapters = [
     SCINAdapter,
     SLIDEAdapter,
     UWFAdapter,
+    RFMiD2Adapter,
 ]
 
 ADAPTER_REGISTRY: dict[str, type] = {
