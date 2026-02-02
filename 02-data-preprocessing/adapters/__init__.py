@@ -1,3 +1,4 @@
+from adapters.isic import ISICAdapter
 from adapters.meditron import MeditronAdapter
 from adapters.medmax import MedMaxAdapter
 from adapters.medmnist import MedMNISTAdapter
@@ -24,6 +25,7 @@ adapters = [
     SLIDEAdapter,
     UWFAdapter,
     RFMiD2Adapter,
+    ISICAdapter,
 ]
 
 ADAPTER_REGISTRY: dict[str, type] = {

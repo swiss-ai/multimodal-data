@@ -99,6 +99,10 @@
     {
       "id": "RFMiD2",
       "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/rfmid2"
+    },
+    {
+      "id": "ISIC",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/medical/raw/isic"
     }
   ],
   "filters": [
