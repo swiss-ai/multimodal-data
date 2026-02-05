@@ -6,6 +6,13 @@ parsing with soundfile fallback), assigns each sample to a length bucket, and
 writes per-sample metadata including the global HF dataset row index for fast
 downstream selection via ds.select().
 
+NOTE: This script does NOT resample the audio. It reads each file's native
+sample rate (AudioSet is ~83% 48kHz, ~17% 44.1kHz) and computes what the length
+WOULD be after resampling to --target-sr. For example, a 10-second clip:
+  - From 48kHz file: 480,000 native samples -> 240,000 at 24kHz
+  - From 44.1kHz file: 441,000 native samples -> 240,000 at 24kHz
+The output "length" is in target_sr samples (default 24kHz), not native samples.
+
 Usage:
     # Full dataset with 128 workers (default output: ./length_buckets/)
     python build_length_buckets.py --num-workers 128
