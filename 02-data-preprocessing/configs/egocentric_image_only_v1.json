@@ -1,0 +1,24 @@
+{
+  "adapters": [
+    {
+      "id": "HoloAssist",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/holoassist/video_compress.tar",
+      "min_laplacian_threshold": 10,
+      "avg_laplacian_threshold": 1000,
+      "imagehash_tolerance": 8
+    }
+  ],
+  "filters": [],
+  "writer": {
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/holoassist/processed",
+    "target_shard_bytes": 900000000,
+    "num_workers": 50
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/ego/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/ego/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/ego/checkpoint.db",
+    "num_workers": 50,
+    "batch_size": 400
+  }
+}
