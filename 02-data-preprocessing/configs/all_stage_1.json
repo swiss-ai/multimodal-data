@@ -1,0 +1,29 @@
+
+{
+  "adapters": [
+    {
+      "id": "LAIONAesthetics",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/LAION-Aesthetics",
+      "decode_workers": 8
+    }
+  ],
+  "filters": [
+    {
+      "id": "ImageDeduplication",
+      "db_path": "/iopsstor/scratch/cscs/tchu/multimodal-data/stage1/deduplication",
+      "algorithm": "phash"
+    }
+  ],
+  "writer": {
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/LAION-Aesthetics_clean",
+    "target_shard_bytes": 900000000,
+    "num_workers": 100
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/stage1/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/stage1/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/stage1/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 10000
+  }
+}
