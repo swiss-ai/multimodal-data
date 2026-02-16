@@ -69,7 +69,7 @@ def read_jobs_from_csv(csv_path):
 
 if __name__ == "__main__":
 
-    jobs = read_jobs_from_csv(CSV_PATH)[10000:10003]
+    jobs = read_jobs_from_csv(CSV_PATH)
     jobs = list(jobs)
     
     for i in range(len(jobs)):
