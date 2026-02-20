@@ -147,13 +147,18 @@ def main():
         logger.info(f"Split '{split}': {len(clips):,} clips in TSV")
         compress_split(args.lang_dir, split, clips, dry_run=args.dry_run)
 
-    # Clean up clips directory
-    remaining = sum(1 for _ in clips_dir.iterdir())
-    if remaining == 0 and not args.dry_run:
+    # Delete any remaining clips not covered by the splits above
+    remaining = list(clips_dir.iterdir())
+    if remaining:
+        logger.info(f"Deleting {len(remaining):,} remaining clips not in any handled split")
+        if not args.dry_run:
+            for p in remaining:
+                p.unlink()
+            logger.info(f"Deleted {len(remaining):,} remaining clips")
+
+    if clips_dir.is_dir() and not any(clips_dir.iterdir()) and not args.dry_run:
         clips_dir.rmdir()
         logger.info(f"Removed empty clips directory: {clips_dir}")
-    else:
-        logger.info(f"Remaining clips in {clips_dir}: {remaining:,}")
 
 
 if __name__ == "__main__":
