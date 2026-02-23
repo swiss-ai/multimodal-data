@@ -7,6 +7,7 @@ from adapters.medmnist import MedMNISTAdapter
 from adapters.medtrinity import MedTrinityFullAdapter
 from adapters.medtrinity_demo import MedTrinityDemoAdapter
 from adapters.mmc4 import MMC4Adapter
+from adapters.multicare import MultiCaReAdapter
 from adapters.open_pmc_18m import OpenPMC18mAdapter
 from adapters.pmc_oa import PMCOAAdapter
 from adapters.rfmid2 import RFMiD2Adapter
@@ -20,6 +21,7 @@ adapters = [
     MedTrinityDemoAdapter,
     MedTrinityFullAdapter,
     MMC4Adapter,
+    MultiCaReAdapter,
     PMCOAAdapter,
     OpenPMC18mAdapter,
     MedMNISTAdapter,

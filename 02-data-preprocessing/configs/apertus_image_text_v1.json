@@ -1,0 +1,106 @@
+{
+  "adapters": [
+    {
+      "id": "Meditron",
+      "dataset_id": "busi",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/BUSI",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "covid_us",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/COVID_US",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "ddti",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/DDTI",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "iu_xray",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/iu_xray",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "ct2",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/ct2",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "pmc_vqa",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/PMC_VQA_meditron",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "medtrinity_conv_1",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/medtrinity_conversations_1_formatted",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "medtrinity_conv_2",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/medtrinity_conversations_2_formatted",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "MedMax",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/medmax_data",
+      "cache_file": "/capstor/scratch/cscs/tchu/.cache/medmax/metadata.pkl",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "MedTrinityFull",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/medtrinity_25m",
+      "cache_file": "/capstor/scratch/cscs/tchu/.cache/medtrinity/metadata_legal.pkl",
+      "image_only": false,
+      "decode_workers": 100
+    },
+    {
+      "id": "PMCOA",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/pmc_oa",
+      "decode_workers": 64
+    },
+    {
+      "id": "OpenPMC18m",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/open-pmc-18m",
+      "image_only": false
+    },
+    {
+      "id": "MultiCaRe",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/multicare-case-images/data",
+      "dataset_id": "multicare_case_images"
+    },
+    {
+      "id": "MultiCaRe",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/multicare-images/data",
+      "dataset_id": "multicare_images"
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}

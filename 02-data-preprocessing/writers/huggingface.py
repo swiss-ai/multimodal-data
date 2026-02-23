@@ -13,18 +13,25 @@ from pipeline.schema import ImageSample, ImageTextSample, Sample
 logger = logging.getLogger("pipeline.writers.huggingface")
 
 ARROW_MAX_BYTES = 1_500_000_000
-HF_FEATURES = Features(
+HF_FEATURES_IMAGE_ONLY = Features(
     {
         "dataset_id": Value("string"),
         "sample_id": Value("int64"),
         "image": Image(),
     }
 )
-SCHEMA = HF_FEATURES.arrow_schema
+
+HF_FEATURES_IMAGE_TEXT = Features(
+    {
+        "dataset_id": Value("string"),
+        "sample_id": Value("int64"),
+        "image": Image(),
+        "caption": Value("string"),
+    }
+)
 
 
-def _serialize_sample(sample: ImageSample | ImageTextSample) -> tuple[str, int, bytes]:
-    image = sample.image
+def _serialize_image(image):
     buf = io.BytesIO()
     fmt = image.format or "PNG"
 
@@ -36,7 +43,15 @@ def _serialize_sample(sample: ImageSample | ImageTextSample) -> tuple[str, int, 
         del image.info["transparency"]
 
     image.save(buf, format=fmt)
-    return sample.meta.dataset_id, sample.meta.sample_id, buf.getvalue()
+    return buf.getvalue()
+
+
+def _serialize_sample(
+    sample: ImageSample | ImageTextSample,
+) -> tuple[str, int, bytes, str | None]:
+    img_bytes = _serialize_image(sample.image)
+    caption = sample.text if isinstance(sample, ImageTextSample) else None
+    return sample.meta.dataset_id, sample.meta.sample_id, img_bytes, caption
 
 
 class HuggingFaceDatasetWriter(BaseWriter):
@@ -45,10 +60,18 @@ class HuggingFaceDatasetWriter(BaseWriter):
         output_dir: str,
         target_shard_bytes: int,
         num_workers: int,
+        include_caption: bool = False,
     ):
         self.output_dir = output_dir
         self.target_shard_bytes = target_shard_bytes
         self.num_workers = num_workers
+        self.include_caption = include_caption
+
+        if include_caption:
+            self._hf_features = HF_FEATURES_IMAGE_TEXT
+        else:
+            self._hf_features = HF_FEATURES_IMAGE_ONLY
+        self._schema = self._hf_features.arrow_schema
 
         self._data_dir: str | None = None
         self._sink: pa.OSFile | None = None
@@ -99,7 +122,7 @@ class HuggingFaceDatasetWriter(BaseWriter):
         assert self._executor is not None
         results = list(self._executor.map(_serialize_sample, image_samples))
 
-        batch_bytes = sum(len(img_bytes) for _, _, img_bytes in results)
+        batch_bytes = sum(len(img_bytes) for _, _, img_bytes, _ in results)
         if batch_bytes < ARROW_MAX_BYTES:
             self._write_results(results)
             return
@@ -116,27 +139,29 @@ class HuggingFaceDatasetWriter(BaseWriter):
         if chunk:
             self._write_results(chunk)
 
-    def _write_results(self, results: list[tuple[str, int, bytes]]):
+    def _write_results(self, results: list[tuple[str, int, bytes, str | None]]):
         dataset_ids = []
         sample_ids = []
         images = []
+        captions = []
         batch_bytes = 0
 
-        for dataset_id, sample_id, img_bytes in results:
+        for dataset_id, sample_id, img_bytes, caption in results:
             dataset_ids.append(dataset_id)
             sample_ids.append(sample_id)
             images.append({"bytes": img_bytes, "path": None})
+            captions.append(caption or "")
             batch_bytes += len(img_bytes)
 
         self._ensure_writer_open()
-        table = pa.table(
-            {
-                "dataset_id": dataset_ids,
-                "sample_id": sample_ids,
-                "image": images,
-            },
-            schema=SCHEMA,
-        )
+        data = {
+            "dataset_id": dataset_ids,
+            "sample_id": sample_ids,
+            "image": images,
+        }
+        if self.include_caption:
+            data["caption"] = captions
+        table = pa.table(data, schema=self._schema)
         assert self._writer is not None
         self._writer.write_table(table)
 
@@ -154,7 +179,7 @@ class HuggingFaceDatasetWriter(BaseWriter):
                 self._data_dir, f"data-{self._shard_idx:05d}.arrow"
             )
             self._sink = pa.OSFile(shard_path, "wb")
-            self._writer = pa.ipc.new_stream(self._sink, SCHEMA)
+            self._writer = pa.ipc.new_stream(self._sink, self._schema)
 
     def _write_stats(self):
         stats = {
@@ -206,7 +231,7 @@ class HuggingFaceDatasetWriter(BaseWriter):
 
         # dataset_info.json
         info_dict = {
-            "features": HF_FEATURES.to_dict(),
+            "features": self._hf_features.to_dict(),
             "splits": {
                 "train": {
                     "name": "train",

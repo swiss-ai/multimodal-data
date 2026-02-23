@@ -8,7 +8,12 @@ from functools import partial
 from adapters import ADAPTER_REGISTRY
 from filters import FILTER_REGISTRY
 from pipeline import Pipeline, setup_logging
-from writers import HuggingFaceDatasetWriter
+from writers import HuggingFaceDatasetWriter, WebDatasetWriter
+
+WRITER_REGISTRY = {
+    "huggingface": HuggingFaceDatasetWriter,
+    "webdataset": WebDatasetWriter,
+}
 
 
 def build_factories(config: list[dict], registry: dict[str, type]) -> list:
@@ -29,7 +34,7 @@ def main(config_path: str):
         config = json.load(f)
 
     adapters_config = config["adapters"]
-    filters_config = config["filters"]
+    filters_config = config.get("filters", [])
     writer_config = config["writer"]
 
     log_file = config["pipeline"]["log_file"]
@@ -44,7 +49,13 @@ def main(config_path: str):
 
     adapter_factories = build_factories(adapters_config, ADAPTER_REGISTRY)
     filter_factories = build_factories(filters_config, FILTER_REGISTRY)
-    writer = HuggingFaceDatasetWriter(**writer_config)
+    writer_config = writer_config.copy()
+    writer_type = writer_config.pop("type", "huggingface")
+    if writer_type not in WRITER_REGISTRY:
+        raise ValueError(
+            f"Unknown writer type: {writer_type}. Options: {list(WRITER_REGISTRY.keys())}"
+        )
+    writer = WRITER_REGISTRY[writer_type](**writer_config)
 
     pipeline = Pipeline(
         datasets=[f() for f in adapter_factories],
