@@ -11,6 +11,16 @@ from pipeline.schema import ImageSample, ImageTextSample, MultiImageTextSample, 
 logger = logging.getLogger("pipeline.writers.webdataset")
 
 
+def _ensure_img_tokens(text: str, n_images: int) -> str:
+    """Prepend any missing <|imgN|> tokens to the text."""
+    missing = [
+        f"<|img{i}|>" for i in range(1, n_images + 1) if f"<|img{i}|>" not in text
+    ]
+    if missing:
+        text = "".join(missing) + "\n" + text
+    return text
+
+
 def _serialize_image(image) -> tuple[bytes, str]:
     """Serialize a PIL image to bytes, returning (bytes, extension)."""
     buf = io.BytesIO()
@@ -95,7 +105,9 @@ class WebDatasetWriter(BaseWriter):
                 for i, image in enumerate(sample.images, start=1):
                     img_bytes, ext = _serialize_image(image)
                     record[f"img{i}.{ext}"] = img_bytes
-                record["txt"] = sample.text.encode("utf-8")
+                record["txt"] = _ensure_img_tokens(
+                    sample.text, len(sample.images)
+                ).encode("utf-8")
                 self._sink.write(record)
 
             elif isinstance(sample, ImageTextSample):

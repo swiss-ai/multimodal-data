@@ -75,7 +75,9 @@ class OpenPMC18mAdapter(BaseDataset):
                     output_batch.append(ImageSample(image=img, meta=m))
                 else:
                     text = item["json"]["caption"]
-                    output_batch.append(MultiImageTextSample(images=[img], text=text, meta=m))
+                    output_batch.append(
+                        MultiImageTextSample(images=[img], text=text, meta=m)
+                    )
 
                 current_id += 1
 

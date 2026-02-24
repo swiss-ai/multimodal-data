@@ -20,7 +20,9 @@ from pipeline import (
 DATASET_ID = "medpix"
 
 
-def _load_zip_data(zip_path: str) -> tuple[list[dict], dict[str, dict], dict[str, bytes]]:
+def _load_zip_data(
+    zip_path: str,
+) -> tuple[list[dict], dict[str, dict], dict[str, bytes]]:
     """Load all MedPix data from the outer zip.
 
     Returns:
@@ -60,7 +62,9 @@ def _decode_image(raw: bytes) -> Image.Image | None:
         return None
 
 
-def _build_text(case: dict, image_ids: list[str], desc_by_image: dict[str, dict]) -> str:
+def _build_text(
+    case: dict, image_ids: list[str], desc_by_image: dict[str, dict]
+) -> str:
     """Build the caption text for a case, with image tokens prepended."""
     c = case.get("Case", {})
     topic = case.get("Topic", {})
@@ -141,11 +145,15 @@ class MedPixAdapter(BaseDataset):
             for img_id in image_ids:
                 raw = image_bytes.get(img_id)
                 if raw is None:
-                    logger.warning(f"[{self.id}] Case {u_id}: missing bytes for {img_id}")
+                    logger.warning(
+                        f"[{self.id}] Case {u_id}: missing bytes for {img_id}"
+                    )
                     continue
                 img = _decode_image(raw)
                 if img is None:
-                    logger.warning(f"[{self.id}] Case {u_id}: failed to decode {img_id}")
+                    logger.warning(
+                        f"[{self.id}] Case {u_id}: failed to decode {img_id}"
+                    )
                     continue
                 pil_images.append(img)
                 valid_ids.append(img_id)

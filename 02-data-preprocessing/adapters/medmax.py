@@ -13,7 +13,13 @@ from PIL import Image
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageSample, MultiImageTextSample, Sample, SampleMetadata
+from pipeline import (
+    BaseDataset,
+    ImageSample,
+    MultiImageTextSample,
+    Sample,
+    SampleMetadata,
+)
 
 
 def _decode_image(image_bytes: bytes):

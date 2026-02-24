@@ -41,6 +41,7 @@ def _replace_image_tokens(conversations: list[dict], n_images: int) -> str:
     img_tokens = _make_img_tokens(n_images)
 
     token_iter = iter(img_tokens)
+
     def _replacer(_match):
         try:
             return next(token_iter)
