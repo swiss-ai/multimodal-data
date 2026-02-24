@@ -23,8 +23,8 @@ echo "Config file contents:"
 cat "$config_file"
 echo "========================================="
 
-source ".venv/bin/activate"
-.venv/bin/python3 main.py "$config_file"
+source /users/tchu/toolbox/.venv/bin/activate
+python3 main.py "$config_file"
 
 echo "========================================="
 echo "Completed run with config file: $config_file"
