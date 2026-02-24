@@ -1,6 +1,7 @@
 from adapters.holoassist import HoloAssistAdapter
 from adapters.isic import ISICAdapter
 from adapters.laion import LAIONAestheticsAdapter
+from adapters.medpix import MedPixAdapter
 from adapters.meditron import MeditronAdapter
 from adapters.medmax import MedMaxAdapter
 from adapters.medmnist import MedMNISTAdapter
@@ -18,6 +19,7 @@ from adapters.uwf import UWFAdapter
 adapters = [
     MeditronAdapter,
     MedMaxAdapter,
+    MedPixAdapter,
     MedTrinityDemoAdapter,
     MedTrinityFullAdapter,
     MMC4Adapter,

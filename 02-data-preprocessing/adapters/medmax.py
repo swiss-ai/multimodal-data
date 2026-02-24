@@ -13,7 +13,7 @@ from PIL import Image
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageSample, ImageTextSample, Sample, SampleMetadata
+from pipeline import BaseDataset, ImageSample, MultiImageTextSample, Sample, SampleMetadata
 
 
 def _decode_image(image_bytes: bytes):
@@ -161,7 +161,7 @@ class MedMaxAdapter(BaseDataset):
             if self.image_only:
                 batch.append(ImageSample(image=img, meta=meta))
             else:
-                batch.append(ImageTextSample(image=img, text=text, meta=meta))
+                batch.append(MultiImageTextSample(images=[img], text=text, meta=meta))
         return batch
 
 
@@ -188,6 +188,6 @@ if __name__ == "__main__":
                 "obtained sample:",
                 b.meta.sample_id,
                 b.image.size,  # type: ignore
-                b.text[:20] if isinstance(b, ImageTextSample) else "",
+                b.text[:20] if isinstance(b, MultiImageTextSample) else "",
                 b.meta.data["file_path"],
             )

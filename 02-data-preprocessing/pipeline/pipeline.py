@@ -1,4 +1,5 @@
 import logging
+import os
 from collections.abc import Sequence
 
 from pipeline.allowlist import Allowlist
@@ -74,6 +75,11 @@ class Pipeline:
                 processed += len(batch)
                 logger.debug(f"[{dataset_id}] {processed} processed, {passed} passed")
                 self.checkpoint.update(dataset_id, batch[-1].meta.sample_id)
+                if os.environ.get("PIPELINE_DEBUG") == "1":
+                    logger.info(
+                        f"[{dataset_id}] DEBUG mode: stopping after first batch"
+                    )
+                    break
         finally:
             if self.writer:
                 self.writer.close()

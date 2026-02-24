@@ -4,6 +4,7 @@ from pipeline.pipeline import Pipeline
 from pipeline.schema import (
     ImageSample,
     ImageTextSample,
+    MultiImageTextSample,
     Sample,
     SampleMetadata,
     TextSample,
@@ -20,6 +21,7 @@ __all__ = [
     "ImageSample",
     "TextSample",
     "ImageTextSample",
+    "MultiImageTextSample",
     "Pipeline",
     "setup_logging",
 ]

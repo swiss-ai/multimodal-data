@@ -6,7 +6,7 @@ import os
 import webdataset as wds
 
 from pipeline.base import BaseWriter
-from pipeline.schema import ImageSample, ImageTextSample, Sample
+from pipeline.schema import ImageSample, ImageTextSample, MultiImageTextSample, Sample
 
 logger = logging.getLogger("pipeline.writers.webdataset")
 
@@ -88,18 +88,38 @@ class WebDatasetWriter(BaseWriter):
             return
 
         for sample in samples:
-            if not isinstance(sample, (ImageSample, ImageTextSample)):
-                continue
-
-            img_bytes, ext = _serialize_image(sample.image)
-            caption = sample.text if isinstance(sample, ImageTextSample) else ""
             key = f"{sample.meta.dataset_id}__{sample.meta.sample_id:08d}"
 
-            self._sink.write({
-                "__key__": key,
-                ext: img_bytes,
-                "txt": caption.encode("utf-8"),
-            })
+            if isinstance(sample, MultiImageTextSample):
+                record: dict = {"__key__": key}
+                for i, image in enumerate(sample.images, start=1):
+                    img_bytes, ext = _serialize_image(image)
+                    record[f"img{i}.{ext}"] = img_bytes
+                record["txt"] = sample.text.encode("utf-8")
+                self._sink.write(record)
+
+            elif isinstance(sample, ImageTextSample):
+                img_bytes, ext = _serialize_image(sample.image)
+                self._sink.write(
+                    {
+                        "__key__": key,
+                        ext: img_bytes,
+                        "txt": sample.text.encode("utf-8"),
+                    }
+                )
+
+            elif isinstance(sample, ImageSample):
+                img_bytes, ext = _serialize_image(sample.image)
+                self._sink.write(
+                    {
+                        "__key__": key,
+                        ext: img_bytes,
+                        "txt": b"",
+                    }
+                )
+
+            else:
+                continue
 
             self._total_samples += 1
             self._dataset_samples += 1

@@ -11,7 +11,7 @@ from PIL import Image
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageTextSample, Sample, SampleMetadata
+from pipeline import BaseDataset, MultiImageTextSample, Sample, SampleMetadata
 
 
 def _decode_image(image_bytes: bytes):
@@ -124,7 +124,7 @@ class PMCOAAdapter(BaseDataset):
                 sample_id=sample_id,
                 data=meta_data,
             )
-            batch.append(ImageTextSample(image=img, text=text, meta=m))
+            batch.append(MultiImageTextSample(images=[img], text=text, meta=m))
         return batch
 
 

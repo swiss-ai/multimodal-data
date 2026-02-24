@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageSample, ImageTextSample, SampleMetadata
+from pipeline import BaseDataset, ImageSample, MultiImageTextSample, SampleMetadata
 
 
 def collate_fn(batch):
@@ -75,7 +75,7 @@ class OpenPMC18mAdapter(BaseDataset):
                     output_batch.append(ImageSample(image=img, meta=m))
                 else:
                     text = item["json"]["caption"]
-                    output_batch.append(ImageTextSample(image=img, text=text, meta=m))
+                    output_batch.append(MultiImageTextSample(images=[img], text=text, meta=m))
 
                 current_id += 1
 

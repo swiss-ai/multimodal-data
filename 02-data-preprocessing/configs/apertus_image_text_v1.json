@@ -3,92 +3,97 @@
     {
       "id": "Meditron",
       "dataset_id": "busi",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/BUSI",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/BUSI",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "Meditron",
       "dataset_id": "covid_us",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/COVID_US",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/COVID_US",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "Meditron",
       "dataset_id": "ddti",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/DDTI",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/DDTI",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "Meditron",
       "dataset_id": "iu_xray",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/iu_xray",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/iu_xray",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "Meditron",
       "dataset_id": "ct2",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/ct2",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/ct2",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "Meditron",
       "dataset_id": "pmc_vqa",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/PMC_VQA_meditron",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/PMC_VQA_meditron",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "Meditron",
       "dataset_id": "medtrinity_conv_1",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/medtrinity_conversations_1_formatted",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/medtrinity_conversations_1_formatted",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "Meditron",
       "dataset_id": "medtrinity_conv_2",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/medtrinity_conversations_2_formatted",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/medtrinity_conversations_2_formatted",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "MedMax",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/medmax_data",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/medmax_data",
       "cache_file": "/capstor/scratch/cscs/tchu/.cache/medmax/metadata.pkl",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "MedTrinityFull",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/medtrinity_25m",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/medtrinity_25m",
       "cache_file": "/capstor/scratch/cscs/tchu/.cache/medtrinity/metadata_legal.pkl",
       "image_only": false,
       "decode_workers": 100
     },
     {
       "id": "PMCOA",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/pmc_oa",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/pmc_oa",
       "decode_workers": 64
     },
     {
       "id": "OpenPMC18m",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/open-pmc-18m",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/open-pmc-18m",
       "image_only": false
     },
     {
       "id": "MultiCaRe",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/multicare-case-images/data",
-      "dataset_id": "multicare_case_images"
+      "dataset_id": "multicare_case_images",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/multicare-case-images/data"
     },
     {
       "id": "MultiCaRe",
-      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/multicare-images/data",
-      "dataset_id": "multicare_images"
+      "dataset_id": "multicare_images",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/multicare-images/data"
+    },
+    {
+      "id": "MedPix",
+      "dataset_id": "medpix",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/MedPix-2_0.zip"
     }
   ],
   "writer": {

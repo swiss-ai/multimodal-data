@@ -1,6 +1,7 @@
 import io
 import logging
 import os
+import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
@@ -10,7 +11,50 @@ from PIL import Image
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageSample, ImageTextSample, Sample, SampleMetadata
+from pipeline import (
+    BaseDataset,
+    ImageSample,
+    MultiImageTextSample,
+    Sample,
+    SampleMetadata,
+)
+
+# Placeholder token used in the source datasets
+SRC_IMAGE_TOKEN = "<|reserved_special_token_0|>"
+# Output token pattern: <|img1|>, <|img2|>, ...
+IMG_TOKEN = "<|img{n}|>"
+
+
+def _make_img_tokens(n: int) -> list[str]:
+    return [IMG_TOKEN.format(n=i + 1) for i in range(n)]
+
+
+def _replace_image_tokens(conversations: list[dict], n_images: int) -> str:
+    """
+    Join conversation turns and replace each occurrence of the source image
+    placeholder with <|img1|>, <|img2|>, ... in order.
+
+    If the text has fewer placeholders than images, the missing tokens are
+    prepended. If it has more, the extras are left as-is (shouldn't happen).
+    """
+    text = "\n".join(f"{t['role']}: {t['content']}" for t in conversations)
+    img_tokens = _make_img_tokens(n_images)
+
+    token_iter = iter(img_tokens)
+    def _replacer(_match):
+        try:
+            return next(token_iter)
+        except StopIteration:
+            return _match.group(0)  # leave extra tokens untouched
+
+    text = re.sub(re.escape(SRC_IMAGE_TOKEN), _replacer, text)
+
+    # Prepend any tokens that weren't placed in the text
+    remaining = list(token_iter)
+    if remaining:
+        text = "".join(remaining) + "\n" + text
+
+    return text
 
 
 def _decode_image(image_bytes: bytes):
@@ -21,6 +65,10 @@ def _decode_image(image_bytes: bytes):
         return img.convert("RGB")
     except Exception:
         return None
+
+
+def _decode_images(images_bytes: list[bytes]) -> list[Image.Image | None]:
+    return [_decode_image(b) for b in images_bytes]
 
 
 class MeditronAdapter(BaseDataset):
@@ -43,36 +91,42 @@ class MeditronAdapter(BaseDataset):
 
     def stream(self, logger, skip: int | None = None, batch_size: int = 1):
         skip = skip or 0
-        counter = 0
+        counter = 0  # counts dataset samples (groups of images), not individual images
 
         logger.info(f"Starting stream for {self.id} from {self.data_dir}")
         if skip > 0:
-            logger.info(f"Skipping first {skip} images.")
+            logger.info(f"Skipping first {skip} samples.")
 
-        pending = []  # (sample_id, texts, image_bytes)
+        # pending: list of (sample_id, images_bytes_list, conversations)
+        pending = []
 
         self.dataset: list[dict]
         with ThreadPoolExecutor(max_workers=self.decode_workers) as executor:
             for sample in self.dataset:
-                texts = sample["conversations"]
-                for item in sample["modalities"]:
-                    if item["type"] != "image":
-                        continue
-
-                    if counter < skip:
-                        counter += 1
-                        continue
-
-                    image_bytes = item["value"]["bytes"]
-                    pending.append((counter, image_bytes, texts))
+                if counter < skip:
                     counter += 1
+                    continue
 
-                    if len(pending) >= batch_size:
-                        yield self._decode_batch(executor, pending, logger)
-                        pending = []
+                conversations = sample["conversations"]
+                images_bytes = [
+                    item["value"]["bytes"]
+                    for item in sample["modalities"]
+                    if item["type"] == "image"
+                ]
 
-                    if counter % 10000 == 0:
-                        logger.info(f"Streamed {counter} samples so far...")
+                if not images_bytes:
+                    counter += 1
+                    continue
+
+                pending.append((counter, images_bytes, conversations))
+                counter += 1
+
+                if len(pending) >= batch_size:
+                    yield self._decode_batch(executor, pending, logger)
+                    pending = []
+
+                if counter % 10000 == 0:
+                    logger.info(f"Streamed {counter} samples so far...")
 
             if pending:
                 yield self._decode_batch(executor, pending, logger)
@@ -82,31 +136,45 @@ class MeditronAdapter(BaseDataset):
     def _decode_batch(
         self,
         executor: ThreadPoolExecutor,
-        pending: list[tuple[int, bytes, list[dict]]],
+        pending: list[tuple[int, list[bytes], list[dict]]],
         logger,
     ) -> list[Sample]:
-        """Decode a batch of images in parallel."""
-        sample_ids = [p[0] for p in pending]
-        image_bytes_list = [p[1] for p in pending]
-        texts_list = [p[2] for p in pending]
-
-        pil_images = list(executor.map(_decode_image, image_bytes_list))
-
+        """Decode a batch of samples (each may have multiple images)."""
         batch = []
-        for sample_id, img, texts in zip(sample_ids, pil_images, texts_list):
-            if img is None:
-                logger.warning(f"Failed to decode image for sample {sample_id}")
+        futures = [
+            executor.submit(_decode_images, images_bytes)
+            for _, images_bytes, _ in pending
+        ]
+        for (sample_id, _, conversations), future in zip(pending, futures):
+            pil_images = future.result()
+
+            # Drop any images that failed to decode
+            valid = [img for img in pil_images if img is not None]
+            n_failed = len(pil_images) - len(valid)
+            if n_failed:
+                logger.warning(
+                    f"Sample {sample_id}: {n_failed}/{len(pil_images)} images failed to decode"
+                )
+            if not valid:
                 continue
+
             m = SampleMetadata(
                 dataset_id=self.id,
                 sample_id=sample_id,
                 data={"dataset_id": self.id},
             )
+
             if self.image_only:
-                batch.append(ImageSample(image=img, meta=m))
+                if len(valid) == 1:
+                    batch.append(ImageSample(image=valid[0], meta=m))
+                else:
+                    # For image-only multi-image, emit one ImageSample per image
+                    for img in valid:
+                        batch.append(ImageSample(image=img, meta=m))
             else:
-                text = "\n".join([f"{t['role']}: {t['content']}" for t in texts])
-                batch.append(ImageTextSample(image=img, text=text, meta=m))
+                text = _replace_image_tokens(conversations, len(valid))
+                batch.append(MultiImageTextSample(images=valid, text=text, meta=m))
+
         return batch
 
 
@@ -115,63 +183,23 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
+    BASE = "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron"
     datasets = [
-        {
-            "dataset_id": "busi",
-            "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/BUSI",
-        },
-        {
-            "dataset_id": "covid_us",
-            "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/COVID_US",
-        },
-        {
-            "dataset_id": "ddti",
-            "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/DDTI",
-        },
-        {
-            "dataset_id": "llava_instruct",
-            "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/llava_instruct",
-        },
-        {
-            "dataset_id": "llava_pretrain_cleaned",
-            "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/llava_pretrain_cleaned",
-        },
-        {
-            "dataset_id": "mammoth",
-            "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/image_mammoth",
-        },
-        {
-            "dataset_id": "pixmo_anything",
-            "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/pixmo_anything",
-        },
-        {
-            "dataset_id": "pixmo_cap",
-            "data_dir": "/capstor/store/cscs/swissai/infra01/medical/meditron/pixmo_cap",
-        },
+        {"dataset_id": "busi", "data_dir": f"{BASE}/BUSI"},
+        {"dataset_id": "iu_xray", "data_dir": f"{BASE}/iu_xray"},
     ]
     for ds in datasets:
-        print(f"Testing dataset: {ds['dataset_id']}")
-
+        print(f"\n=== Testing dataset: {ds['dataset_id']} ===")
         a = MeditronAdapter(
             dataset_id=ds["dataset_id"],
             data_dir=ds["data_dir"],
-            image_only=True,
-            decode_workers=100,
+            image_only=False,
+            decode_workers=4,
         )
-
-        # print(a.dataset)
-        # sample = a.dataset[0]
-        # mods = sample["modalities"]
-        # texts = sample["conversations"]
-        # for mod in mods:
-        #     if mod["type"] != "image":
-        #         continue
-        #     img_bytes = mod["value"]["bytes"]
-        for batch in a.stream(logger=logger, skip=0, batch_size=1000):
+        for batch in a.stream(logger=logger, skip=0, batch_size=4):
             for b in batch:
-                print(
-                    "obtained sample:",
-                    b.meta.sample_id,
-                    b.image.size,  # type: ignore
-                    b.text[:50] if isinstance(b, ImageTextSample) else None,
-                )
+                if isinstance(b, MultiImageTextSample):
+                    print(f"  MultiImage ({len(b.images)} imgs): {b.text[:100]}")
+                elif isinstance(b, ImageTextSample):
+                    print(f"  Single: {b.text[:100]}")
+            break

@@ -14,7 +14,7 @@ from PIL import Image
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageSample, ImageTextSample, Sample, SampleMetadata
+from pipeline import BaseDataset, ImageSample, MultiImageTextSample, Sample, SampleMetadata
 
 allowed_sources = [
     "deeplesion",
@@ -211,7 +211,7 @@ class MedTrinityFullAdapter(BaseDataset):
             if self.img_only:
                 batch.append(ImageSample(image=img, meta=m))
             else:
-                batch.append(ImageTextSample(image=img, text=text, meta=m))
+                batch.append(MultiImageTextSample(images=[img], text=text, meta=m))
         return batch
 
 
@@ -235,11 +235,11 @@ if __name__ == "__main__":
             if a.img_only:
                 assert isinstance(b, ImageSample)
             else:
-                assert isinstance(b, ImageTextSample)
+                assert isinstance(b, MultiImageTextSample)
             print(
                 "obtained sample:",
                 b.meta.sample_id,
-                b.image.size,  # type: ignore
-                b.text[:20] if isinstance(b, ImageTextSample) else "",
+                b.images[0].size,  # type: ignore
+                b.text[:20] if isinstance(b, MultiImageTextSample) else "",
                 b.meta.data["file_name"],
             )

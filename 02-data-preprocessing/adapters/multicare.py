@@ -7,7 +7,7 @@ from datasets import load_dataset
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipeline import BaseDataset, ImageTextSample, SampleMetadata
+from pipeline import BaseDataset, MultiImageTextSample, SampleMetadata
 
 
 class MultiCaReAdapter(BaseDataset):
@@ -60,7 +60,7 @@ class MultiCaReAdapter(BaseDataset):
                 data={"dataset_id": self.id},
             )
 
-            pending.append(ImageTextSample(image=img, text=caption, meta=m))
+            pending.append(MultiImageTextSample(images=[img], text=caption, meta=m))
             current_id += 1
 
             if len(pending) >= batch_size:

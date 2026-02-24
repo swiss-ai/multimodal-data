@@ -107,6 +107,39 @@ class ImageTextSample(Sample):
         )
 
 
+@dataclass
+class MultiImageTextSample(Sample):
+    """Multiple images + text sample."""
+
+    images: list[Image.Image]
+    text: str
+
+    def serialize(self) -> bytes:
+        images_bytes = []
+        images_formats = []
+        for image in self.images:
+            buf = io.BytesIO()
+            fmt = image.format or "PNG"
+            if fmt.upper() in ("JPEG", "JPG") and image.mode == "RGBA":
+                image.convert("RGB").save(buf, format=fmt)
+            else:
+                image.save(buf, format=fmt)
+            images_bytes.append(buf.getvalue())
+            images_formats.append(fmt)
+
+        return msgspec.msgpack.encode(
+            SerializedSample(
+                sample_type="multi_image_text",
+                dataset_id=self.meta.dataset_id,
+                sample_id=self.meta.sample_id,
+                meta_data=self.meta.data,
+                text=self.text,
+                images_bytes=images_bytes,
+                images_formats=images_formats,
+            )
+        )
+
+
 class SerializedSample(msgspec.Struct):
     """Msgspec struct for serialization."""
 
@@ -119,6 +152,9 @@ class SerializedSample(msgspec.Struct):
     text: str | None = None
     image_bytes: bytes | None = None
     image_format: str | None = None
+    # multi-image fields
+    images_bytes: list[bytes] | None = None
+    images_formats: list[str] | None = None
 
     def to_sample(self) -> Sample:
         meta = SampleMetadata(
@@ -145,5 +181,17 @@ class SerializedSample(msgspec.Struct):
             image.load()
             image.format = self.image_format
             return ImageTextSample(meta=meta, image=image, text=self.text)
+
+        elif self.sample_type == "multi_image_text":
+            assert self.images_bytes is not None
+            assert self.images_formats is not None
+            assert self.text is not None
+            images = []
+            for img_bytes, img_fmt in zip(self.images_bytes, self.images_formats):
+                image = Image.open(io.BytesIO(img_bytes))
+                image.load()
+                image.format = img_fmt
+                images.append(image)
+            return MultiImageTextSample(meta=meta, images=images, text=self.text)
 
         raise ValueError(f"Unknown sample type: {self.sample_type}")
