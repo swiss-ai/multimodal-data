@@ -1,0 +1,22 @@
+{
+  "adapters": [
+    {
+      "id": "CovidRadiography",
+      "dataset_id": "covid_radiography",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/covid19-radiography-database.zip",
+      "decode_workers": 64
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/covid_radiography/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/covid_radiography/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/covid_radiography/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}

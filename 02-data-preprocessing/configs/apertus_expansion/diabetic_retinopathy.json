@@ -1,0 +1,22 @@
+{
+  "adapters": [
+    {
+      "id": "DiabeticRetinopathy",
+      "dataset_id": "diabetic_retinopathy",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/diabetic-retinopathy-2015-data-colored-resized.zip",
+      "decode_workers": 64
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/diabetic_retinopathy/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/diabetic_retinopathy/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/diabetic_retinopathy/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}
