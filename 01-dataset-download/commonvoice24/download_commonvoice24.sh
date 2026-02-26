@@ -43,6 +43,7 @@ declare -A DATASETS=(
   [is]="cmj8u3p9l00cdnxxbuuascykx"        # Icelandic
   [ga-IE]="cmj8u3p4j008xnxxbub9hvwrd"     # Irish
   [it]="cmj8u3p9q00chnxxb5fj12aw8"        # Italian
+  [ja]="cmj8u3p9x00clnxxbsv97o45e"        # Japanese
   [lv]="cmj8u3pec00flnxxbntvfb4as"        # Latvian
   [lt]="cmj8u3pdo00f5nxxb9uuewruj"        # Lithuanian
   [mk]="cmj8u3pg800gxnxxb36xwpf1l"        # Macedonian

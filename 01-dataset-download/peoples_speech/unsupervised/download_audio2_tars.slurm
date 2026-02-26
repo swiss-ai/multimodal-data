@@ -4,8 +4,8 @@
 #SBATCH --environment=nemo
 #SBATCH --reservation=PA-2338-RL
 #SBATCH --job-name=dwnldHFdset
-#SBATCH --output=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/hf-%x-%A.out
-#SBATCH --error=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/hf-%x-%A.err
+#SBATCH --output=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/hf-%x-%A.out
+#SBATCH --error=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/hf-%x-%A.err
 #SBATCH --partition=normal
 #SBATCH --time=12:00:00
 #SBATCH --nodes=1

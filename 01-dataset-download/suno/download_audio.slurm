@@ -28,20 +28,44 @@ fi
 
 mkdir -p "${CLIPS_DIR}"
 
+# Build a filtered URL list: skip already-downloaded clips
+REMAINING_FILE="${DEST_DIR}/urls_remaining.txt"
+echo "[$(date '+%F %T')] Filtering already-downloaded clips..."
+python3 -c "
+import os
+clips = set(os.listdir('${CLIPS_DIR}'))
+seen = set()
+written = skipped = 0
+with open('${URLS_FILE}') as fin, open('${REMAINING_FILE}', 'w') as fout:
+    for line in fin:
+        if line.startswith('  out='):
+            fname = line.strip().split('=', 1)[1]
+            if fname in clips or fname in seen:
+                skipped += 1
+                continue
+            seen.add(fname)
+            fout.write(url_line)
+            fout.write(line)
+            written += 1
+        else:
+            url_line = line
+print(f'Remaining: {written:,} (skipped {skipped:,} downloaded/duplicate)')
+"
+
 echo "========================================"
 echo "Suno Audio Download"
-echo "URLs file: ${URLS_FILE}"
+echo "URLs file: ${REMAINING_FILE}"
 echo "Dest: ${CLIPS_DIR}"
-echo "Total URLs: $(grep -c '^http' "${URLS_FILE}")"
+echo "Remaining: $(grep -c '^http' "${REMAINING_FILE}")"
 echo "========================================"
 
 echo "[$(date '+%F %T')] Starting aria2c download..."
 aria2c \
-    -i "${URLS_FILE}" \
+    -i "${REMAINING_FILE}" \
     -d "${CLIPS_DIR}" \
-    -j 16 \
-    -x 2 \
-    --max-overall-download-limit=100M \
+    -j 64 \
+    -x 4 \
+    --max-overall-download-limit=500M \
     --auto-file-renaming=false \
     --continue=true \
     --max-tries=5 \

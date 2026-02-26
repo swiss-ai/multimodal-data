@@ -46,6 +46,7 @@ print(f'Found {len(files)} parquet files')
 
 written = 0
 skipped = 0
+seen = set()
 with open('${URLS_FILE}', 'w') as f:
     for pf in files:
         df = pd.read_parquet(pf, columns=['id', 'audio_url'])
@@ -54,11 +55,15 @@ with open('${URLS_FILE}', 'w') as f:
             if not url or not sid or pd.isna(url) or pd.isna(sid):
                 skipped += 1
                 continue
+            if sid in seen:
+                skipped += 1
+                continue
+            seen.add(sid)
             f.write(f'{url}\n')
             f.write(f'  out={sid}.mp3\n')
             written += 1
 
-print(f'Wrote {written:,} URLs (skipped {skipped:,})')
+print(f'Wrote {written:,} unique URLs (skipped {skipped:,} null/duplicate)')
 "
 
 echo "[$(date '+%F %T')] URLs written to ${URLS_FILE}"
