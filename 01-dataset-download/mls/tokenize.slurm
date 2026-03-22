@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --account=infra01
-#SBATCH --job-name=tok-cv
+#SBATCH --job-name=tok-mls
 #SBATCH --reservation=PA-2338-RL
 #SBATCH --environment=nemo
-#SBATCH --output=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer/logs/tok_cv_%j.out
-#SBATCH --error=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer/logs/tok_cv_%j.err
-#SBATCH --time=02:00:00
-#SBATCH --nodes=1
+#SBATCH --output=/iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download/mls/logs/tok_mls_%j.out
+#SBATCH --error=/iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download/mls/logs/tok_mls_%j.err
+#SBATCH --time=05:00:00
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=4
 #SBATCH --gpus-per-node=4
 #SBATCH --cpus-per-task=72
@@ -19,15 +19,18 @@ set -euo pipefail
 #   sbatch tokenize.slurm          # fresh run
 #   sbatch tokenize.slurm resume   # resume from checkpoints
 RESUME=${1:-false}
+if [ "${RESUME}" = "resume" ]; then
+    RESUME=true
+fi
 
 REPO_DIR=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer
-LOG_DIR="${REPO_DIR}/logs"
+LOG_DIR=/iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download/mls/logs
 mkdir -p "${LOG_DIR}"
 
 TOTAL_GPUS=$((SLURM_JOB_NUM_NODES * 4))
 
 echo "=========================================="
-echo "CommonVoice Tokenization (Lhotse DDP)"
+echo "MLS 8-lang Direct Tokenization"
 echo "=========================================="
 echo "Job ID: ${SLURM_JOB_ID}"
 echo "Nodes: ${SLURM_JOB_NUM_NODES}"
@@ -52,16 +55,17 @@ srun --kill-on-bad-exit=0 -u bash -c '
 
     cd '"${REPO_DIR}"'
 
+    # Uses the existing 8-lang SHAR list config; tokenization mode is forced to direct.
     python -m audio_tokenization.tokenize \
-        dataset=audio_text/commonvoice_48lang_S2 \
+        dataset=audio_text/mls_8lang_interleaved \
         mode=audio_text \
         audio_text_format=direct \
         num_gpus='"${TOTAL_GPUS}"' \
         resume='"${RESUME}"' \
-        wandb.name="cv_48lang_S2_tok_'"${SLURM_JOB_NUM_NODES}"'nodes" \
-        wandb.tags="[tokenization,commonvoice,48lang,S2,'"${SLURM_JOB_NUM_NODES}"'nodes]"
+        wandb.name="mls_8lang_direct_tok_'"${SLURM_JOB_NUM_NODES}"'nodes" \
+        wandb.tags="[tokenization,mls,8lang,direct,'"${SLURM_JOB_NUM_NODES}"'nodes]"
 '
 
 echo "=========================================="
-echo "CommonVoice tokenization finished"
+echo "MLS 8-lang direct tokenization finished"
 echo "=========================================="

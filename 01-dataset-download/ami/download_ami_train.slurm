@@ -1,12 +1,12 @@
 #!/bin/bash
-# Download laubonghaudoi/legco-speech from Hugging Face into raw storage.
+# Download edinburghcstr/ami train split only (ihm + sdm parquet shards).
 # Uses a temporary HF cache under DEST_DIR and deletes it after success
 # to avoid duplicate storage.
 #SBATCH --account=infra01
-#SBATCH --job-name=dwnld-legco-speech
+#SBATCH --job-name=dwnld-ami-train
 #SBATCH --environment=nemo
-#SBATCH --output=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/legco-speech-%x-%A.out
-#SBATCH --error=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/legco-speech-%x-%A.err
+#SBATCH --output=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/ami-%x-%A.out
+#SBATCH --error=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/ami-%x-%A.err
 #SBATCH --partition=normal
 #SBATCH --time=12:00:00
 #SBATCH --nodes=1
@@ -15,9 +15,10 @@
 
 set -euo pipefail
 
-DATASET_REPO="${DATASET_REPO:-laubonghaudoi/legco-speech}"
-REVISION="${REVISION:-d7b41c4be0bea9d58b9fc98e7ad3e14dce3771eb}"  # main as of 2026-02-26
-DEST_DIR="${DEST_DIR:-/capstor/store/cscs/swissai/infra01/audio-datasets/raw/legco-speech}"
+DATASET_REPO="${DATASET_REPO:-edinburghcstr/ami}"
+REVISION="${REVISION:-46f28f2}"  # main as of 2026-03-03 (parquet layout)
+DEST_DIR="${DEST_DIR:-/capstor/store/cscs/swissai/infra01/audio-datasets/raw/ami}"
+
 mkdir -p "${DEST_DIR}"
 uv pip install --python /opt/venv/bin/python hf_transfer
 export HF_HUB_CACHE="${DEST_DIR}/.hf_cache"
@@ -29,7 +30,7 @@ if [[ -z "${HF_TOKEN:-}" && -f "${HOME}/.hf-token" ]]; then
 fi
 
 echo "========================================"
-echo "LegCo-Speech Download"
+echo "AMI train-only download"
 echo "Repo:     ${DATASET_REPO}"
 echo "Revision: ${REVISION}"
 echo "Dest:     ${DEST_DIR}"
@@ -38,7 +39,7 @@ echo "========================================"
 huggingface-cli download "${DATASET_REPO}" \
   --repo-type dataset \
   --revision "${REVISION}" \
-  --include "segmented/*" "transcriptions/*" "scripts/*" "*.md" \
+  --include "ihm/train-*.parquet" "sdm/train-*.parquet" "README.md" ".gitattributes" \
   --local-dir "${DEST_DIR}"
 
 echo "[$(date '+%F %T')] Download finished"

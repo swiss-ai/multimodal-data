@@ -111,7 +111,7 @@ echo ""
 echo "[$(date '+%F %T')] Step 2: Extracting..."
 
 find "${TARBALL_DIR}" -name '*.tar' | \
-    xargs -P "${EXTRACT_JOBS}" -I {} bash -c 'echo "  Extracting $(basename {})..." && tar xf {} -C "'"${DEST_DIR}"'" && rm {}'
+    xargs -P "${EXTRACT_JOBS}" -I {} bash -c 'echo "  Extracting $(basename {})..." && tar --no-same-owner --no-same-permissions -xf {} -C "'"${DEST_DIR}"'" && rm {}'
 
 echo "[$(date '+%F %T')] Step 2 done"
 

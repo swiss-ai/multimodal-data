@@ -1,13 +1,12 @@
 #!/bin/bash
 #SBATCH --account=infra01
-#SBATCH --job-name=ps-to-shar
+#SBATCH --job-name=ps-dirty-to-shar
 #SBATCH --reservation=PA-2338-RL
 #SBATCH --environment=nemo
-#SBATCH --output=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer/outputs/ps_to_shar_%A_%a.out
-#SBATCH --error=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer/outputs/ps_to_shar_%A_%a.err
-#SBATCH --time=04:00:00
-#SBATCH --array=0-3
-#SBATCH --nodes=1
+#SBATCH --output=/iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download/peoples_speech/logs/ps_dirty_to_shar_%A_%a.out
+#SBATCH --error=/iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download/peoples_speech/logs/ps_dirty_to_shar_%A_%a.err
+#SBATCH --time=12:00:00
+#SBATCH --array=0-1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=288
 #SBATCH --partition=normal
@@ -18,19 +17,23 @@ set -euo pipefail
 unset LD_PRELOAD
 export MALLOC_CHECK_=0
 
-REPO_DIR=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer
+PYTHON_BIN=${PYTHON_BIN:-/opt/venv/bin/python}
+REPO_DIR=${REPO_DIR:-/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer}
 export PYTHONPATH="${REPO_DIR}:${PYTHONPATH:-}"
 
-ARROW_DIR=/capstor/store/cscs/swissai/infra01/audio-datasets/peoples_speech_cache/MLCommons___peoples_speech/clean/0.0.0/f10597c5d3d3a63f8b6827701297c3afdf178272
-SHAR_ROOT=/capstor/store/cscs/swissai/infra01/audio-datasets/SHAR/stage_2/peoples_speech_train_shar
-TEXT_TOKENIZER=/capstor/store/cscs/swissai/infra01/MLLM/tokenizer/apertus_emu3.5_wavtok/tokenizer.json
+ARROW_DIR=${ARROW_DIR:-/capstor/store/cscs/swissai/infra01/audio-datasets/raw/people_speech_dirty_recap}
+ARROW_GLOB=${ARROW_GLOB:-data-*.arrow}
+SHAR_ROOT=${SHAR_ROOT:-/capstor/store/cscs/swissai/infra01/audio-datasets/SHAR/stage_2/peoples_speech_dirty_train}
+TEXT_TOKENIZER=${TEXT_TOKENIZER:-/capstor/store/cscs/swissai/infra01/MLLM/tokenizer/apertus_emu3.5_wavtok/tokenizer.json}
 
-NUM_WORKERS_PER_NODE=256
-SHARD_SIZE=2000
-TARGET_SR=24000
+NUM_WORKERS_PER_NODE=${NUM_WORKERS_PER_NODE:-288}
+SHARD_SIZE=${SHARD_SIZE:-5000}
+TARGET_SR=${TARGET_SR:-24000}
+SHAR_FORMAT=${SHAR_FORMAT:-flac}
+RESAMPLING_BACKEND=${RESAMPLING_BACKEND:-sox}
 
-RANK="${SLURM_ARRAY_TASK_ID}"
-WORLD=4
+RANK="${SLURM_ARRAY_TASK_ID:-0}"
+WORLD="${WORLD:-${SLURM_ARRAY_TASK_COUNT:-1}}"
 HOST="$(hostname -s)"
 
 echo "=========================================="
@@ -40,13 +43,14 @@ echo "Array Job ID: ${SLURM_ARRAY_JOB_ID}, Task: ${RANK}/${WORLD}"
 echo "Host: ${HOST}"
 echo "CPUs: ${SLURM_CPUS_PER_TASK}"
 echo "Arrow dir: ${ARROW_DIR}"
+echo "Arrow glob: ${ARROW_GLOB}"
 echo "Output root: ${SHAR_ROOT}"
 echo "Workers/node: ${NUM_WORKERS_PER_NODE}"
 echo "=========================================="
 
 # Discover all train arrow files
 mapfile -t ALL_ARROWS < <(
-  ls "${ARROW_DIR}"/peoples_speech-train-*.arrow | sort
+  find "${ARROW_DIR}" -maxdepth 1 -type f -name "${ARROW_GLOB}" | sort
 )
 TOTAL="${#ALL_ARROWS[@]}"
 
@@ -73,8 +77,12 @@ fi
 
 ASSIGNED_ARROWS=("${ALL_ARROWS[@]:$START:$COUNT}")
 
-NODE_TAG="$(printf "%02d" "${RANK}")"
-NODE_SHAR_DIR="${SHAR_ROOT}/node_${NODE_TAG}"
+if [ "${WORLD}" -eq 1 ]; then
+  NODE_SHAR_DIR="${SHAR_ROOT}"
+else
+  NODE_TAG="$(printf "%02d" "${RANK}")"
+  NODE_SHAR_DIR="${SHAR_ROOT}/node_${NODE_TAG}"
+fi
 mkdir -p "${NODE_SHAR_DIR}"
 
 echo "[rank ${RANK}] host=${HOST} assigned=${COUNT} arrow files"
@@ -82,7 +90,7 @@ echo "[rank ${RANK}] output=${NODE_SHAR_DIR}"
 
 cd "${REPO_DIR}"
 
-python -m audio_tokenization.utils.prepare_data.prepare_hf_to_shar \
+"${PYTHON_BIN}" -m audio_tokenization.utils.prepare_data.prepare_hf_to_shar \
   --arrow-files "${ASSIGNED_ARROWS[@]}" \
   --shar-dir "${NODE_SHAR_DIR}" \
   --audio-column audio \
@@ -90,9 +98,9 @@ python -m audio_tokenization.utils.prepare_data.prepare_hf_to_shar \
   --id-column id \
   --target-sr "${TARGET_SR}" \
   --shard-size "${SHARD_SIZE}" \
-  --shar-format flac \
+  --shar-format "${SHAR_FORMAT}" \
   --text-tokenizer "${TEXT_TOKENIZER}" \
   --num-workers "${NUM_WORKERS_PER_NODE}" \
-  --resampling-backend sox
+  --resampling-backend "${RESAMPLING_BACKEND}"
 
 echo "[rank ${RANK}] finished"

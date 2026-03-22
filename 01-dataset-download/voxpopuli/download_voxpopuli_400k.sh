@@ -97,7 +97,7 @@ echo ""
 echo "[$(date '+%F %T')] Step 2: Extracting tarballs (${EXTRACT_JOBS} parallel jobs)..."
 
 find "${TARBALL_DIR}" -name '*.tar' | \
-    xargs -P "${EXTRACT_JOBS}" -I {} bash -c 'tar xf {} -C "'"${DEST_DIR}"'" && rm {}'
+    xargs -P "${EXTRACT_JOBS}" -I {} bash -c 'tar --no-same-owner --no-same-permissions -xf {} -C "'"${DEST_DIR}"'" && rm {}'
 
 echo "[$(date '+%F %T')] Step 2 done"
 

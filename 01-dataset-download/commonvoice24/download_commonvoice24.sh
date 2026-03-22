@@ -11,6 +11,13 @@
 #   # Custom destination
 #   DEST_DIR=/my/path ./download_commonvoice24.sh it
 
+# This script requires Bash (arrays, associative arrays).
+if [ -z "${BASH_VERSION:-}" ]; then
+  echo "ERROR: This script must be run with bash." >&2
+  echo "Use: bash $0 <lang_code...> | all" >&2
+  exit 1
+fi
+
 set -euo pipefail
 
 # Activate conda env with aria2c
@@ -21,6 +28,7 @@ CONNECTIONS=${CONNECTIONS:-16}
 API_BASE="https://datacollective.mozillafoundation.org/api"
 
 declare -A DATASETS=(
+  [ar]="cmj8u3os6000tnxxb169x1zdc"        # Arabic
   [sq]="cmj8u3ptn00ppnxxbr4rq2gpq"       # Albanian
   [hy-AM]="cmj8u3p8l00bpnxxbsku96l4i"     # Armenian
   [eu]="cmj8u3p2v007tnxxbk5ng5qvh"        # Basque
@@ -44,6 +52,7 @@ declare -A DATASETS=(
   [ga-IE]="cmj8u3p4j008xnxxbub9hvwrd"     # Irish
   [it]="cmj8u3p9q00chnxxb5fj12aw8"        # Italian
   [ja]="cmj8u3p9x00clnxxbsv97o45e"        # Japanese
+  [ko]="cmj8u3pbv00dxnxxbbsd2udth"        # Korean
   [lv]="cmj8u3pec00flnxxbntvfb4as"        # Latvian
   [lt]="cmj8u3pdo00f5nxxb9uuewruj"        # Lithuanian
   [mk]="cmj8u3pg800gxnxxb36xwpf1l"        # Macedonian
@@ -63,6 +72,14 @@ declare -A DATASETS=(
   [uk]="cmj8u3pys00t5nxxb56wugqgq"        # Ukrainian
   [cy]="cmj8u3oz9005dnxxbiuyru29h"        # Welsh
   [zh-CN]="cmj8u3q2n00vhnxxbzrjcugwc"     # Chinese (China)
+  [zh-HK]="cmj8u3q2s00vlnxxb1jrujrxf"     # Chinese (Hong Kong)
+  [zh-TW]="cmj8u3q2y00vpnxxbv6pv55hn"     # Chinese (Taiwan)
+  [rm-sursilv]="cmj8u3pqw00ntnxxbe7mpj5ud" # Romansh Sursilvan
+  [th]="cmj8u3pvx00r9nxxb1yo5z53z"        # Thai
+  [vi]="cmj8u3q0300ttnxxbzedg83wq"        # Vietnamese
+  [yue]="cmj8u3q2b00v9nxxborfkm824"       # Cantonese
+  [id]="cmj8u3p9500c1nxxbpsdts8eq"        # Indonesian
+  [fa]="cmj8u3p390081nxxb0qo37avq"        # Persian
 )
 
 if [ ! -f "$TOKEN_FILE" ]; then
@@ -117,7 +134,7 @@ download_and_extract() {
 
   # Extract
   echo "[${locale}] Extracting..."
-  tar -xzf "$tarfile" -C "$DEST_DIR/"
+  tar --no-same-owner --no-same-permissions -xzf "$tarfile" -C "$DEST_DIR/"
 
   # Common Voice extracts to cv-corpus-24.0-2025-12-05/{locale}/
   # Move to flat structure: {DEST_DIR}/{locale}/
@@ -157,10 +174,10 @@ for locale in "${LANGS[@]}"; do
   if [ -z "${DATASETS[$locale]+x}" ]; then
     echo "[${locale}] Unknown language code, skipping"
     FAILED+=("$locale")
-    continue
-  fi
-  if ! download_and_extract "$locale"; then
-    FAILED+=("$locale")
+  else
+    if ! download_and_extract "$locale"; then
+      FAILED+=("$locale")
+    fi
   fi
   echo ""
 done
