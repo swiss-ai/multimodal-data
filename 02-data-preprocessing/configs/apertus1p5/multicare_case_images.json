@@ -1,0 +1,21 @@
+{
+  "adapters": [
+    {
+      "id": "MultiCaRe",
+      "dataset_id": "multicare_case_images",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/multicare-case-images/data"
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/multicare_case_images/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/multicare_case_images/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/multicare_case_images/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}

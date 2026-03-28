@@ -1,0 +1,21 @@
+{
+  "adapters": [
+    {
+      "id": "MedPix",
+      "dataset_id": "medpix",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/MedPix-2_0.zip"
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/medpix/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/medpix/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/medpix/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}

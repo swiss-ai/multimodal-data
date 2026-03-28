@@ -1,0 +1,66 @@
+{
+  "adapters": [
+    {
+      "id": "MediCaT",
+      "dataset_id": "medicat",
+      "tar_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/medicat.tar.gz",
+      "cache_file": "/capstor/scratch/cscs/tchu/.cache/medicat_metadata.pkl",
+      "decode_workers": 64
+    },
+    {
+      "id": "NihChestXray",
+      "dataset_id": "nih_chest_xray",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/nih-chest-xrays.zip",
+      "decode_workers": 64
+    },
+    {
+      "id": "CovidRadiography",
+      "dataset_id": "covid_radiography",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/covid19-radiography-database.zip",
+      "decode_workers": 64
+    },
+    {
+      "id": "DiabeticRetinopathy",
+      "dataset_id": "diabetic_retinopathy",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/diabetic-retinopathy-2015-data-colored-resized.zip",
+      "decode_workers": 64
+    },
+    {
+      "id": "BrainTumorMRI",
+      "dataset_id": "brain_tumor_mri",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/brain-tumor-mri-dataset.zip",
+      "decode_workers": 64
+    },
+    {
+      "id": "EBHISeg",
+      "dataset_id": "ebhi_seg",
+      "tar_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/EBHI-Seg.tar",
+      "decode_workers": 32
+    },
+    {
+      "id": "LiverUltrasound",
+      "dataset_id": "liver_ultrasound",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/annotated-ultrasound-liver-images-dataset.zip",
+      "decode_workers": 16
+    },
+    {
+      "id": "NctCrcHe",
+      "dataset_id": "nct_crc_he",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/NCT-CRC-HE-100K.zip",
+      "extract_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/NCT-CRC-HE-100K_uncompressed",
+      "decode_workers": 64
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}

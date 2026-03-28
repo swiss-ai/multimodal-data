@@ -1,0 +1,22 @@
+{
+  "adapters": [
+    {
+      "id": "LiverUltrasound",
+      "dataset_id": "liver_ultrasound",
+      "zip_path": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/apertus/annotated-ultrasound-liver-images-dataset.zip",
+      "decode_workers": 16
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/liver_ultrasound/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/liver_ultrasound/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/liver_ultrasound/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}

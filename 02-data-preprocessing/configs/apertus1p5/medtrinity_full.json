@@ -1,0 +1,23 @@
+{
+  "adapters": [
+    {
+      "id": "MedTrinityFull",
+      "data_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/raw/meditron/medtrinity_25m",
+      "cache_file": "/capstor/scratch/cscs/tchu/.cache/medtrinity_metadata_legal.pkl",
+      "image_only": false,
+      "decode_workers": 100
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/capstor/store/cscs/swissai/infra01/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/medtrinity_full/pipeline.log",
+    "manifest_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/medtrinity_full/manifest.db",
+    "checkpoint_db": "/iopsstor/scratch/cscs/tchu/multimodal-data/image-text-v1/medtrinity_full/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}
