@@ -56,8 +56,8 @@ for subset in MRSLife MRSMusic MRSSing MRSSpeech; do
 done
 
 # Copy metadata files
-cp -n "${CLONE_DIR}/train.csv" "${DEST_DIR}/" 2>/dev/null || true
-cp -n "${CLONE_DIR}/README.md" "${DEST_DIR}/" 2>/dev/null || true
+cp -n "${CLONE_DIR}/train.csv" "${DEST_DIR}/" 2>/dev/null
+cp -n "${CLONE_DIR}/README.md" "${DEST_DIR}/" 2>/dev/null
 
 echo "[$(date '+%F %T')] Done"
 echo "Final size:"

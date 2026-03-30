@@ -12,8 +12,8 @@
 #SBATCH --reservation=PA-2338-RL
 set -euo pipefail
 DATASET_REPO="laion/freesound-commercially-permissive-subset-with-captions"
-REVISION=""
-DEST_DIR="/capstor/store/cscs/swissai/infra01/audio-datasets/raw/hf___laion_freesound-commercially-permissive-subset-with-captions"
+REVISION="ea0362ae514d5060ae8314833f5d8b5146cee14d"
+DEST_DIR="/capstor/store/cscs/swissai/infra01/audio-datasets/raw/hf___laion___freesound-commercially-permissive-subset-with-captions"
 export PYTHONPATH="/capstor/store/cscs/swissai/infra01/MLLM/pip-packages:${PYTHONPATH:-}"
 export PATH="/capstor/store/cscs/swissai/infra01/MLLM/pip-packages/bin:${PATH}"
 export HF_HUB_ENABLE_HF_TRANSFER=1
@@ -33,8 +33,10 @@ echo "freesound Download (attempt $((RESUBMIT_COUNT + 1)))"
 echo "Repo: ${DATASET_REPO}, Dest: ${DEST_DIR}"
 echo "========================================"
 mkdir -p "${DEST_DIR}"
+set +e
 huggingface-cli download "${DATASET_REPO}" --repo-type dataset --revision "${REVISION}" --local-dir "${DEST_DIR}" --max-workers 64
 DOWNLOAD_EXIT=$?
+set -e
 if [ "$DOWNLOAD_EXIT" -eq 0 ]; then
     echo "[$(date '+%F %T')] Download finished"
     [ -n "${NEXT_ID:-}" ] && scancel "$NEXT_ID" 2>/dev/null && echo "Cancelled follow-up ${NEXT_ID}"

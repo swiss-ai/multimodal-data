@@ -28,7 +28,7 @@ RAW_DIR=/capstor/store/cscs/swissai/infra01/audio-datasets/raw/hf___nyu-dice-lab
 PARQUET_DIR=/capstor/store/cscs/swissai/infra01/audio-datasets/raw/hf___nyu-dice-lab___wavepulse-radio-raw-transcripts/segmented_parquets
 SHAR_DIR=/capstor/store/cscs/swissai/infra01/audio-datasets/SHAR/stage_2/wavepulse_radio_train
 TOKENIZER=/capstor/store/cscs/swissai/infra01/MLLM/tokenizer/apertus_emu3.5_wavtok/tokenizer.json
-SCRIPT_DIR=/iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download/wavepulse-radio
+SCRIPT_DIR=/iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download/audio/wavepulse-radio
 
 echo "=========================================="
 echo "Step 1: Segment MP3s → Parquet"

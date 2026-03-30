@@ -13,7 +13,7 @@
 set -euo pipefail
 DATASET_REPO="benjamin-paine/free-music-archive-full"
 REVISION="cafdf1a0edeed1f529a24fed736f816272489a85"
-DEST_DIR="/capstor/store/cscs/swissai/infra01/audio-datasets/raw/hf___benjamin-paine_free-music-archive-full"
+DEST_DIR="/capstor/store/cscs/swissai/infra01/audio-datasets/raw/hf___benjamin-paine___free-music-archive-full"
 export PYTHONPATH="/capstor/store/cscs/swissai/infra01/MLLM/pip-packages:${PYTHONPATH:-}"
 export PATH="/capstor/store/cscs/swissai/infra01/MLLM/pip-packages/bin:${PATH}"
 export HF_HUB_ENABLE_HF_TRANSFER=1
@@ -33,8 +33,10 @@ echo "fma Download (attempt $((RESUBMIT_COUNT + 1)))"
 echo "Repo: ${DATASET_REPO}, Dest: ${DEST_DIR}"
 echo "========================================"
 mkdir -p "${DEST_DIR}"
+set +e
 huggingface-cli download "${DATASET_REPO}" --repo-type dataset --revision "${REVISION}" --local-dir "${DEST_DIR}" --max-workers 64
 DOWNLOAD_EXIT=$?
+set -e
 if [ "$DOWNLOAD_EXIT" -eq 0 ]; then
     echo "[$(date '+%F %T')] Download finished"
     [ -n "${NEXT_ID:-}" ] && scancel "$NEXT_ID" 2>/dev/null && echo "Cancelled follow-up ${NEXT_ID}"

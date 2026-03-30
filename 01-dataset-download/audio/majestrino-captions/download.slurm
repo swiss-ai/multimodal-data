@@ -33,8 +33,10 @@ echo "majestrino Download (attempt $((RESUBMIT_COUNT + 1)))"
 echo "Repo: ${DATASET_REPO}, Dest: ${DEST_DIR}"
 echo "========================================"
 mkdir -p "${DEST_DIR}"
+set +e
 huggingface-cli download "${DATASET_REPO}" --repo-type dataset --revision "${REVISION}" --local-dir "${DEST_DIR}" --max-workers 64
 DOWNLOAD_EXIT=$?
+set -e
 if [ "$DOWNLOAD_EXIT" -eq 0 ]; then
     echo "[$(date '+%F %T')] Download finished"
     [ -n "${NEXT_ID:-}" ] && scancel "$NEXT_ID" 2>/dev/null && echo "Cancelled follow-up ${NEXT_ID}"

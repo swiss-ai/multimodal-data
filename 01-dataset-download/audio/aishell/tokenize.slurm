@@ -51,9 +51,9 @@ srun --kill-on-bad-exit=0 -u bash -c '
     cd '"${REPO_DIR}"'
 
     python -m audio_tokenization.tokenize \
-            dataset=audio_text/aishell_1_3_direct \
-                    mode=audio_text \
-                            audio_text_format=direct \
+        dataset=audio_text/aishell_1_3_direct \
+        mode=audio_text \
+        audio_text_format=direct \
         num_gpus='"${TOTAL_GPUS}"' \
         resume='"${RESUME}"' \
         wandb.name="aishell_1_3_direct_tok_'"${SLURM_JOB_NUM_NODES}"'nodes" \

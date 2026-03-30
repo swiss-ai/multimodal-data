@@ -14,7 +14,7 @@
 set -euo pipefail
 
 DATASET_REPO="MikCil/f1-team-radio"
-REVISION="$(curl -s https://huggingface.co/api/datasets/MikCil/f1-team-radio | python3 -c 'import sys,json; print(json.load(sys.stdin)["sha"])')"
+REVISION="a0b99e1a325d92d63b574541a24902a660a352ea"  # main as of 2026-03-30
 DEST_DIR="/capstor/store/cscs/swissai/infra01/audio-datasets/raw/hf___MikCil___f1-team-radio"
 
 export PYTHONPATH="/capstor/store/cscs/swissai/infra01/MLLM/pip-packages:${PYTHONPATH:-}"

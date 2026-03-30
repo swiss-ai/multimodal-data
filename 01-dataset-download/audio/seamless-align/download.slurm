@@ -41,9 +41,11 @@ echo "========================================"
 
 mkdir -p "${DEST_DIR}"
 
+set +e
 huggingface-cli download "${DATASET_REPO}" --repo-type dataset --revision "${REVISION}" --local-dir "${DEST_DIR}" --max-workers 64
 
 DOWNLOAD_EXIT=$?
+set -e
 
 if [ "$DOWNLOAD_EXIT" -eq 0 ]; then
     echo "[$(date '+%F %T')] Download finished"

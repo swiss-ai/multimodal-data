@@ -34,8 +34,10 @@ echo "Repo: ${DATASET_REPO}, Dest: ${DEST_DIR}"
 echo "========================================"
 mkdir -p "${DEST_DIR}"
 # Only download default/large split (~1.34TB, 50Kh)
+set +e
 huggingface-cli download "${DATASET_REPO}" --repo-type dataset --revision "${REVISION}" --local-dir "${DEST_DIR}" --include "default/large/*" "README.md" --max-workers 64
 DOWNLOAD_EXIT=$?
+set -e
 if [ "$DOWNLOAD_EXIT" -eq 0 ]; then
     echo "[$(date '+%F %T')] Download finished"
     [ -n "${NEXT_ID:-}" ] && scancel "$NEXT_ID" 2>/dev/null && echo "Cancelled follow-up ${NEXT_ID}"

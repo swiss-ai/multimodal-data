@@ -65,4 +65,3 @@ srun --kill-on-bad-exit=0 -u bash -c '
 echo "=========================================="
 echo "EuroSpeech permissive direct tokenization finished"
 echo "=========================================="
-is mi
