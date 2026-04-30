@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-population-in-extreme-poverty-vs-electoral-democracy-index",
+  "title": "Share of the population in poverty vs. Electoral Democracy Index",
+  "subtitle": "Poverty is defined as living on less than $10 a day. This data is adjusted for inflation and differences in living costs between countries. The electoral democracy index is by [V-Dem](#dod:v-dem), based on expert estimates, and ranges from 0 to 1 (most democratic).",
+  "caption": "Across countries in 2025, the share of the population living in poverty versus the Electoral Democracy Index shows a negative relationship, where higher democracy scores generally coincide with lower poverty rates. The chart plots individual nations as points, with the vertical axis measuring the percentage of people living on less than $10 a day and the horizontal axis measuring the democracy index from 0 to 1. Countries with the lowest democracy scores, such as Laos, Tajikistan, and Egypt, cluster in the upper-left quadrant with poverty shares ranging from roughly 50% to 80%. Conversely, nations with the highest democracy scores, including Australia, Costa Rica, and Chile, appear in the bottom-right corner with poverty shares below 20%. Several outliers deviate from the general trend; for instance, India and Kenya maintain high poverty rates despite moderate democracy scores, while Belarus and Turkey show low poverty rates despite lower democracy scores. The data points for African nations, colored purple, are predominantly located in the upper half of the chart, indicating higher poverty levels across the continent regardless of the specific democracy index value.",
+  "word_count": 179,
+  "latency_s": 9.502026319503784,
+  "prompt_tag": "v4_100"
+}

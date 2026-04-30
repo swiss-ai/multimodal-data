@@ -1,0 +1,9 @@
+{
+  "slug": "electoral-pluralism-index-eiu",
+  "title": "Electoral Pluralism Index",
+  "subtitle": "Data by the [Economist Intelligence Unit](#dod:economist-intelligence-unit). Expert estimates of the extent to which all citizens can choose their political leaders in free and fair elections. Higher values indicate more pluralism.",
+  "caption": "Electoral Pluralism Index, 2024\nData by the Economist Intelligence Unit. Expert estimates of the extent to which all citizens can choose their political leaders in free and fair elections. Higher values indicate more pluralism.\n\nThe choropleth map displays the Electoral Pluralism Index for 2024, using a continuous color scale from dark red (low pluralism) to dark blue (high pluralism) to represent expert estimates of the extent to which citizens can choose political leaders in free and fair elections. The scale ranges from 1 to 10, with higher values indicating greater pluralism. The highest values, falling in the 8-10 range, are visible across North America (United States, Canada), Western and Northern Europe (including the United Kingdom, France, Germany, and the Nordic countries), Australia, New Zealand, and several South American nations such as Brazil, Argentina, and Chile. In contrast, the lowest values, in the 1-3 range, appear across much of the Middle East and North Africa (including Saudi Arabia, Iran, and Egypt), Central Asia, and parts of sub-Saharan Africa. Intermediate values, in the 4-7 range, are visible in countries such as India, Mexico, South Africa, and Indonesia. Greenland and a few other territories are marked as having no data. The geographic distribution shows a clear concentration of high pluralism scores in the Americas, Western Europe, and Oceania, while low scores cluster in the Middle East, Central Asia, and parts of Africa.",
+  "word_count": 229,
+  "latency_s": 9.67818570137024,
+  "prompt_tag": "v6_100"
+}

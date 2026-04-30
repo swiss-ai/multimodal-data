@@ -1,0 +1,9 @@
+{
+  "slug": "rotavirus-vaccine-immunization-schedule",
+  "title": "Which countries include rotavirus vaccines in their national vaccination programs?",
+  "subtitle": "This shows which countries provide and recommend rotavirus vaccines through routine services. People may still be able to receive the vaccine if it's not in the routine schedule – it might be optional or available commercially.",
+  "caption": "In 2024, the inclusion of rotavirus vaccines in national vaccination programs varies significantly across the globe. The map illustrates that many countries, particularly in North America, Europe, and parts of South America, have integrated these vaccines into their routine services for the entire population. Conversely, large regions in Africa, Asia, and parts of South America do not routinely administer the vaccine. Some countries, such as Russia and China, have implemented the vaccine in specific regions rather than nationwide. A few nations, including India and Brazil, offer the vaccine to specific risk groups. Notably, there are areas with no available data, primarily in central Africa and parts of the Middle East. The most prominent pattern is the widespread adoption of rotavirus vaccines in high-income countries, while lower-income regions lag behind in routine administration.",
+  "word_count": 132,
+  "latency_s": 2.8844399452209473,
+  "prompt_tag": "v1"
+}

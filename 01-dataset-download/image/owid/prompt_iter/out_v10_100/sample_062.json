@@ -1,0 +1,9 @@
+{
+  "slug": "chile-covid-19-mortality-rate-by-vaccination-status",
+  "title": "Chile: COVID-19 weekly death rate by vaccination status",
+  "subtitle": "Death rates are calculated as the number of deaths in each group, divided by the total number of people in this group. This is given per 100,000 people.",
+  "caption": "Chile: COVID-19 weekly death rate by vaccination status\n\nDeath rates are calculated as the number of deaths in each group, divided by the total number of people in this group. This is given per 100,000 people.\n\nThe chart displays weekly COVID-19 death rates in Chile from October 2021 to March 2023, categorized by vaccination status. The vertical axis measures deaths per 100,000 people, ranging from 0 to 12. Four distinct lines represent different vaccination groups: 0 or 1 dose (red), 2 doses (brown), 3 doses (green), and 4 doses (blue). The red and brown lines, representing individuals with 0 or 1 dose and 2 doses respectively, show the highest mortality rates, peaking sharply around March 2022 at approximately 11 to 12 deaths per 100,000. These two lines follow a similar trajectory, with a significant spike followed by a gradual decline. The green line, indicating those with 3 doses, remains below the red and brown lines, peaking at around 4 deaths per 100,000 during the same period. The blue line, representing individuals with 4 doses, stays consistently low, rarely exceeding 1 death per 100,000. Throughout the observed period, the death rates for all groups exhibit fluctuations, with noticeable peaks and troughs. The mortality rate for the 'All ages' group is age-standardized to account for the different vaccination rates of older and younger people. By March 2023, all lines converge near the lower end of the scale, indicating a general decrease in death rates across all vaccination statuses.",
+  "word_count": 246,
+  "latency_s": 16.828877687454224,
+  "prompt_tag": "v10_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "net-oda-to-medical-research",
+  "title": "Net official development assistance to medical research and basic health sectors",
+  "subtitle": "Net [official development assistance](#dod:oda) to medical research and basic health sectors. This data is expressed in US dollars. It is adjusted for inflation but does not account for differences in living costs between countries.",
+  "caption": "In 2023, net official development assistance to medical research and basic health sectors varies significantly across countries, with the highest flows concentrated in parts of Africa and South Asia. The map uses a color scale from light yellow to dark blue to represent values ranging from $0 to over $300 million in constant 2022 US dollars. Countries in the darkest blue band, indicating assistance exceeding $300 million, include Nigeria, Ethiopia, and India. A second tier of high assistance, falling between $100 million and $300 million, covers nations such as Kenya, Tanzania, and Pakistan. Moderate levels of funding, represented by mid-range teal and green shades, appear across much of Latin America, Southeast Asia, and North Africa. The lowest values, shown in pale yellow and light green, are visible in countries like Mexico, Brazil, and Kazakhstan. Large areas, including North America, Western Europe, Australia, and Russia, are shaded with diagonal lines to indicate no data. The geographic distribution shows the highest assistance values clustered in sub-Saharan Africa and South Asia, while lower values and missing data characterize the Americas, Europe, and Oceania.",
+  "word_count": 180,
+  "latency_s": 11.740197896957397,
+  "prompt_tag": "v3_100"
+}

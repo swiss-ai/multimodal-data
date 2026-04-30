@@ -1,0 +1,9 @@
+{
+  "slug": "monthly-average-surface-temperatures-by-decade",
+  "title": "Monthly average surface temperatures by decade",
+  "subtitle": "The temperature of the air measured 2 meters above the ground, encompassing land, sea, and in-land water surfaces.",
+  "caption": "Monthly average surface temperatures by decade, World\nThe temperature of the air measured 2 meters above the ground, encompassing land, sea, and in-land water surfaces.\n\nThis line chart plots the global average monthly air temperature across eight distinct decades, ranging from the 1940s to the 2020s. The vertical axis measures temperature in degrees Celsius, spanning from 12°C to 17°C, while the horizontal axis tracks the progression of the year from January (1) to December (12). Each line represents a specific decade, color-coded from dark grey for the earliest period to deep red for the most recent. The data shows a consistent seasonal cycle for every decade, with temperatures rising from the start of the year to a peak in the middle months before declining toward the end. The lines are vertically stacked, showing a clear upward shift in temperature values as time progresses. The lowest line, representing the 1940s, begins near 11.8°C in January and reaches a maximum of roughly 15.7°C in July. In contrast, the highest line, representing the 2020s, starts near 13.0°C and peaks above 16.5°C in July. Intermediate decades like the 1980s and 2000s occupy the space between these extremes, maintaining the same bell-shaped curve but at progressively higher temperature levels. The gap between the 1940s line and the 2020s line remains visible across all twelve months, indicating a uniform increase in average temperatures throughout the entire annual cycle. The most recent decade sits distinctly above all previous periods, marking the highest recorded monthly averages for every point in the year.",
+  "word_count": 254,
+  "latency_s": 14.034492015838623,
+  "prompt_tag": "v6_100"
+}

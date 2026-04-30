@@ -1,0 +1,9 @@
+{
+  "slug": "cumulative-number-of-objects-launched-into-outer-space",
+  "title": "Cumulative number of objects launched into space",
+  "subtitle": "This includes satellites, probes, landers, crewed spacecrafts, and space station flight elements launched into Earth orbit or beyond.",
+  "caption": "Cumulative number of objects launched into space\nThis includes satellites, probes, landers, crewed spacecrafts, and space station flight elements launched into Earth orbit or beyond.\n\nThe line chart tracks the total accumulation of objects launched into space from 1957 through 2025, with the vertical axis measuring the count of objects from zero to 25,000. The data encompasses satellites, probes, landers, crewed spacecrafts, and space station flight elements launched into Earth orbit or beyond, attributing objects to the country on whose behalf they are launched. The World line, representing the global total, begins at zero in 1957 and rises steadily to roughly 5,000 by the year 2000, then accelerates significantly after 2010 to reach 25,000 by 2025. The United States line follows a similar trajectory but at a lower magnitude, reaching approximately 15,000 by the end of the period. Russia maintains a position as the third-highest launcher, with its cumulative total plateauing around 4,000 objects after 2000. China shows a distinct upward curve starting near zero and rising to just under 2,000 by 2025. Japan, the United Kingdom, France, India, Germany, and the European Space Agency occupy the lowest bands of the chart, with all individual lines remaining below the 1,000 mark throughout the timeline. The visual pattern displays a long period of gradual accumulation followed by a steep vertical ascent in the most recent decade, with the gap between the global total and the United States total widening considerably in the final years.",
+  "word_count": 243,
+  "latency_s": 14.037156105041504,
+  "prompt_tag": "v7_100"
+}

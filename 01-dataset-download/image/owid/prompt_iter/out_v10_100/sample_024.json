@@ -1,0 +1,9 @@
+{
+  "slug": "legal-frameworks-regarding-violence-against-women",
+  "title": "Legal frameworks addressing violence against women",
+  "subtitle": "A higher percentage indicates stronger legislation.",
+  "caption": "Legal frameworks addressing violence against women\n\nA higher percentage indicates stronger legislation.\n\nThe 2024 world map displays the strength of legal frameworks addressing violence against women using a color scale ranging from 0% to 100%, where darker blue shades represent higher percentages and stronger legislation. North America, including the United States and Canada, along with Australia, New Zealand, and the majority of Western and Northern European nations, are shaded in the darkest blue, indicating scores in the 80% to 100% range. Similarly, much of South America, including Brazil and Argentina, as well as countries like South Africa and Russia, fall within the 60% to 80% band. In contrast, large portions of the African continent, particularly in the central and northern regions, appear in white or very light green, signifying either no available data or legislation strength between 0% and 30%. Specific nations such as Mali, Niger, and Chad are among those showing the lowest values or missing data entirely. Parts of the Middle East and Central Asia display a mix of light to medium blue tones, generally clustering between 30% and 60%. The visual distribution highlights a distinct geographic pattern where the Americas, Europe, and Oceania predominantly occupy the upper end of the legislative strength spectrum, while significant gaps in data or lower legislative scores characterize much of Africa and parts of Asia.",
+  "word_count": 223,
+  "latency_s": 13.865626811981201,
+  "prompt_tag": "v10_100"
+}

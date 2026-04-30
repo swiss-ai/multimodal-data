@@ -1,0 +1,9 @@
+{
+  "slug": "mumps-vaccine-immunization-schedule",
+  "title": "Which countries include mumps vaccines in their national vaccination programs?",
+  "subtitle": "This shows which countries provide and recommend mumps vaccines through routine services. People may still be able to receive the vaccine if it's not in the routine schedule – it might be optional or available commercially.",
+  "caption": "The map displays the status of mumps vaccine inclusion in national immunization programs across countries in 2024. Countries shaded in blue indicate that the mumps vaccine is administered routinely across the entire country, covering North America, South America, Europe, Russia, China, Australia, and parts of the Middle East. In contrast, countries shaded in red show that the vaccine is not routinely administered, a status visible across the majority of the African continent, as well as India, Indonesia, and parts of Southeast Asia. Greenland appears with diagonal hatching to denote no available data. The geographic distribution shows a clear divide where routine administration is standard in the Americas and Europe, while large contiguous regions in Africa and South Asia do not include the vaccine in their routine schedules.",
+  "word_count": 127,
+  "latency_s": 3.991736888885498,
+  "prompt_tag": "v4_100"
+}

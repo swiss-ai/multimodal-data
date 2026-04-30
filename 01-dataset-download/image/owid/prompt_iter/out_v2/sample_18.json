@@ -1,0 +1,9 @@
+{
+  "slug": "conversion-therapy-equaldex",
+  "title": "Conversion therapies",
+  "subtitle": "Therapies attempting to change a person’s sexual orientation or gender identity included. They can entail counseling, drugging, electric shocks, castrations, or brain surgery.",
+  "caption": "The 2025 world map displays the legal status of conversion therapies, defined as practices attempting to change a person's sexual orientation or gender identity. The visualization uses a five-color scale to categorize national laws into \"Banned,\" \"Varies by region,\" \"Sexual orientation only,\" \"Ambiguous,\" and \"Not banned.\" The red color, indicating that conversion therapies are not banned, covers the largest geographic area, dominating the African continent, the Middle East, Russia, and most of Asia. In contrast, the blue \"Banned\" category appears in scattered clusters, including most of South America, Canada, western Europe, and New Zealand. A light green shade signifies that laws vary by region within countries like the United States, Australia, and India. The map shows a distinct concentration of bans in the Americas and Western Europe, while the majority of the Eastern Hemisphere remains categorized as not banned.",
+  "word_count": 139,
+  "latency_s": 3.1308655738830566,
+  "prompt_tag": "v2"
+}

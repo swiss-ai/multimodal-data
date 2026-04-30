@@ -1,0 +1,9 @@
+{
+  "slug": "global-land-use-since-10000bc",
+  "title": "Global land use since 10,000 BCE",
+  "subtitle": "",
+  "caption": "From 10,000 BCE to 2017, the global distribution of land use shifted from a dominance of wild and seminatural areas to a significant expansion of human-managed landscapes. For the majority of this timeline, seminatural lands occupied the largest share, consistently covering over 70% of the Earth's surface, while wild woodlands and wild barren lands maintained steady, smaller proportions. A visible transformation begins around the year 0 and accelerates sharply after 1800, where the area designated as seminatural land contracts rapidly to make room for croplands and rangelands. By 2017, croplands and rangelands together occupy a substantial vertical band that was previously absent, pushing the seminatural category down to roughly 50% of the total. Urban areas and villages appear as thin layers at the top of the stack in the modern era, representing a small but distinct fraction of global land use. The chart displays a long period of stability in land cover followed by a rapid diversification of agricultural and settlement zones in the most recent centuries.",
+  "word_count": 167,
+  "latency_s": 3.583958148956299,
+  "prompt_tag": "v2"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "annual-deaths-by-age",
+  "title": "Number of deaths by age",
+  "subtitle": "The estimated number of deaths in each age group. Estimates may be uncertain for countries with poor [vital registration systems](#dod:crvs).",
+  "caption": "Global mortality in 2023 follows a distinct U-shaped distribution across age groups, with the highest death counts concentrated in early childhood and late adulthood. The 0-4 age group records the largest number of deaths among the youngest cohorts at 4.825 million, followed by a steady decline through the school-age years to a low of 673,000 in the 15-19 bracket. From age 20 onward, the bars lengthen progressively, crossing the one-million mark in the 30-34 group and rising to a peak of 6.807 million in the 80-84 age range. The 75-79 and 70-74 groups follow closely with 6.578 million and 6.591 million deaths respectively, while the 85-89 group drops to 5.958 million. Mortality figures continue to decrease in the oldest brackets, falling to 3.644 million for ages 90-94 and 243,400 for those aged 100 and above. The data shows a clear concentration of deaths in the 70-84 age window, with the 80-84 group representing the single highest value on the chart.",
+  "word_count": 160,
+  "latency_s": 13.223953008651733,
+  "prompt_tag": "v4_100"
+}

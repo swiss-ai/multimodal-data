@@ -1,0 +1,9 @@
+{
+  "slug": "measles-number-unvaccinated",
+  "title": "Number of one-year-olds who are not vaccinated against measles",
+  "subtitle": "",
+  "caption": "Number of one-year-olds who are not vaccinated against measles\n\nMeasles is a highly contagious viral disease, most common in young children. Its effects include blindness, inflammation of the brain, severe diarrhea, and severe respiratory infections such as pneumonia.\n\nThe 2023 choropleth map displays the absolute number of unvaccinated one-year-olds across global territories using a color scale ranging from zero to one million. The highest concentration of unvaccinated children, represented by the darkest red band indicating values above 300,000 and reaching up to 1 million, is visible in specific nations including India, Nigeria, the Democratic Republic of the Congo, Ethiopia, and Pakistan. These countries stand out as distinct focal points of high volume compared to their neighbors. Surrounding these areas, particularly across much of Sub-Saharan Africa and parts of South Asia such as Indonesia and the Philippines, countries generally fall within the intermediate bands of 30,000 to 300,000. In the Americas, Brazil and Mexico appear in the darker orange shades, suggesting figures between 100,000 and 300,000, while the United States and Canada sit in lighter bands between 10,000 and 30,000. Most of Europe, Australia, and the southern cone of South America are colored in the lightest shades, corresponding to the lowest bands between zero and 10,000. Greenland is marked with a hatched pattern, denoting no available data for that region. The visual distribution shows a gradient where the highest absolute numbers are clustered in specific populous nations in Africa and Asia, while vast geographic areas in Europe and Oceania remain in the lowest value ranges.",
+  "word_count": 254,
+  "latency_s": 15.58008885383606,
+  "prompt_tag": "v11_100"
+}

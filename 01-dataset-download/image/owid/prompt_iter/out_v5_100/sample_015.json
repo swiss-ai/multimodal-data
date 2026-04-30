@@ -1,0 +1,9 @@
+{
+  "slug": "foreign-aid-given-per-capita-vs-gdp-per-capita",
+  "title": "Foreign aid given per capita vs. GDP per capita",
+  "subtitle": "[Net](#dod:net-oda) [official development assistance (ODA)](#dod:oda), expressed in US dollars and adjusted for inflation.",
+  "caption": "Across countries in 2024, the relationship between economic output and foreign aid contribution shows a general positive trend, where nations with higher GDP per capita tend to provide more net official development assistance per person. The scatter plot maps GDP per capita in 2021 international dollars on the horizontal axis against net ODA given per capita in constant 2023 US dollars on the vertical axis, with circle sizes representing population. European countries dominate the upper portion of the distribution, with Norway reaching the highest visible aid level above $800 per capita, followed by Luxembourg, Switzerland, and Ireland, all exceeding $400 per capita despite varying population sizes. Sweden, Germany, and the United Kingdom cluster in the middle-high range between $200 and $500 per capita. The United States appears as a large circle near $200 per capita at a GDP level around $75,000, while Qatar sits at the far right with GDP exceeding $110,000 but aid provision around $250 per capita. Asian economies show lower aid levels relative to their income: Japan and South Korea fall between $100 and $200 per capita, Turkey and Thailand remain below $100, and Kazakhstan sits near the bottom left with both low GDP and minimal aid. The data shows that while wealthier nations generally contribute more aid per person, the relationship is not uniform, with significant variation in aid generosity among countries at similar income levels.",
+  "word_count": 230,
+  "latency_s": 12.278122901916504,
+  "prompt_tag": "v5_100"
+}

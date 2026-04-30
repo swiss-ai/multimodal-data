@@ -1,0 +1,9 @@
+{
+  "slug": "electricity-renewables",
+  "title": "Electricity generation from renewables",
+  "subtitle": "Measured in [terawatt-hours](#dod:watt-hours). Renewable sources include solar, wind, hydropower, bioenergy, geothermal, wave, and tidal.",
+  "caption": "Electricity generation from renewables, 2025\nMeasured in terawatt-hours. Renewable sources include solar, wind, hydropower, bioenergy, geothermal, wave, and tidal.\n\nThis choropleth map displays the total electricity generated from renewable sources across the world in 2025, measured in terawatt-hours. The color scale ranges from light green for the lowest generation levels to dark blue for the highest, with specific bands marking 0, 10, 20, 50, 100, 200, 500, 1,000, and 2,000 TWh. The highest values appear in the darkest blue band, exceeding 1,000 TWh, visible in China and the United States. Brazil and Canada fall into the next tier, shown in medium blue, indicating generation between 500 and 1,000 TWh. India and Russia occupy the 200 to 500 TWh range, colored in a lighter blue. In Europe, countries such as Germany, France, and Spain sit in the 100 to 200 TWh band, while the United Kingdom and Italy appear in the 50 to 100 TWh range. Australia and Mexico are visible in the 20 to 50 TWh band, shaded in light green. Most of Africa and parts of the Middle East fall into the lowest categories, below 20 TWh, shown in very pale green or white. Greenland, Western Sahara, and several small island nations are marked with diagonal hatching to indicate no data. The distribution shows a concentration of high renewable generation in a few large economies, with the majority of countries producing under 100 TWh. The map uses a continuous color scale where darker shades correspond to higher generation volumes.",
+  "word_count": 250,
+  "latency_s": 15.868295192718506,
+  "prompt_tag": "v7_100"
+}

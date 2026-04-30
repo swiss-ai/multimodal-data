@@ -49,7 +49,7 @@ echo "=========================================="
 
 cd /iopsstor/scratch/cscs/${USER}/apertus/benchmark-audio-tokenizer
 
-python -m audio_tokenization.utils.prepare_data.run_vad \
+python -m audio_tokenization.prepare.preprocess.run_vad \
     --audio_dir "${AUDIO_DIR}" \
     --output_dir "${OUTPUT_DIR}" \
     --dataset "${DATASET}" \

@@ -1,0 +1,9 @@
+{
+  "slug": "elections-for-the-governments-chief-executive",
+  "title": "Elections for the government's chief executive",
+  "subtitle": "Data by the Lexical Index of Electoral Democracy.",
+  "caption": "The 2025 map of elections for the government's chief executive uses a two-color scheme to show whether countries hold such elections. Blue indicates \"Yes\" and orange indicates \"No,\" with gray hatching for \"No data.\" Most of the Americas, Europe, sub-Saharan Africa, and Australia are blue. Large parts of the Middle East and North Africa are orange, including Morocco, Algeria, Libya, Egypt, Saudi Arabia, and the Gulf states. China and Myanmar are orange in East and Southeast Asia. Madagascar is orange in the Indian Ocean. Greenland is hatched for no data. The visible pattern shows a broad blue band across the Western Hemisphere and much of Europe and Africa, with a contiguous orange region spanning North Africa and the Arabian Peninsula and isolated orange areas in Asia.",
+  "word_count": 126,
+  "latency_s": 6.956002712249756,
+  "prompt_tag": "v3_100"
+}

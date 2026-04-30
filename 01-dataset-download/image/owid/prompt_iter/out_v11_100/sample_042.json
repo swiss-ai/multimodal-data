@@ -1,0 +1,9 @@
+{
+  "slug": "plastic-waste-generation-total",
+  "title": "Plastic waste generation",
+  "subtitle": "This measures total plastic waste generation prior to management and therefore does not represent the quantity of plastic at risk of polluting waterways, rivers and the ocean environment.",
+  "caption": "Plastic waste generation\n\nThis measures total plastic waste generation prior to management and therefore does not represent the quantity of plastic at risk of polluting waterways, rivers and the ocean environment.\n\nThe 2010 world map displays plastic waste generation using a color scale ranging from light beige for 0 tonnes to dark red for 10 million tonnes, with hatched areas indicating no data. The United States, China, and Brazil are shaded in the darkest red band, placing their generation figures at or near the 10 million tonne maximum of the legend. Russia, India, and several Western European nations including Germany, the United Kingdom, and France appear in the mid-to-dark orange bands, corresponding to values roughly between 2.5 million and 7.5 million tonnes. Canada, Mexico, Australia, and most of South America outside Brazil sit in the lighter orange shades, generally falling within the 1 million to 2.5 million tonne range. Much of Africa and Central Asia is colored in the lightest beige, indicating values close to 0 tonnes or just above the baseline. Greenland, Western Sahara, and several countries in Central Africa and the Middle East are marked with diagonal hatching, signifying that no data is available for these regions. The distribution shows a concentration of the highest values in North America, East Asia, and parts of South America, while the lowest non-zero values are widespread across the African continent and parts of Asia.",
+  "word_count": 233,
+  "latency_s": 10.455596208572388,
+  "prompt_tag": "v11_100"
+}

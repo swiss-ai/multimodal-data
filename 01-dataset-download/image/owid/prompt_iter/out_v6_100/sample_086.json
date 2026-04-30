@@ -1,0 +1,9 @@
+{
+  "slug": "freedom-score-fh",
+  "title": "Freedom Score",
+  "subtitle": "Data by [Freedom House](#dod:freedom-house). The score captures the extent of free and fair elections, political pluralism and participation, a functioning government, freedom of expression and association, the rule of law, and personal autonomy. Higher scores indicate more freedom.",
+  "caption": "Freedom Score, 2025\nData by Freedom House. The score captures the extent of free and fair elections, political pluralism and participation, a functioning government, freedom of expression and association, the rule of law, and personal autonomy. Higher scores indicate more freedom.\n\nThe map displays Freedom Scores for 2025 using a continuous color scale ranging from pale yellow for the lowest values to deep navy blue for the highest, with a maximum score of 101. The highest scores, represented by the darkest blue band, appear across North America, including the United States and Canada, as well as in Western Europe, covering nations such as France, Germany, and the United Kingdom. Australia and New Zealand also fall within this top tier. Moving down the scale, countries in South America like Brazil and Argentina, along with India and South Africa, occupy the middle bands, showing scores generally between 40 and 80. Large portions of Africa and Asia display lighter shades, indicating lower scores; for instance, much of the Sahel region and parts of the Middle East fall into the 20 to 40 range. The lowest scores, shown in pale yellow, are visible in countries such as China, Russia, and several nations in Central Asia and the Middle East. Greenland and a few other territories are marked as having no data. The geographic distribution shows a concentration of high scores in the Americas and Western Europe, while lower scores dominate across large areas of Africa, Asia, and the Middle East.",
+  "word_count": 246,
+  "latency_s": 11.74289870262146,
+  "prompt_tag": "v6_100"
+}

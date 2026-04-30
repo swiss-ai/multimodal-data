@@ -1,0 +1,9 @@
+{
+  "slug": "percentage-of-americans-who-live-alone-by-age",
+  "title": "Percentage of Americans who live alone, by age",
+  "subtitle": "An individual is defined as living alone when there is one person in the household and does not live in group quarters.",
+  "caption": "Percentage of Americans who live alone, by age\nAn individual is defined as living alone when there is one person in the household and does not live in group quarters.\n\nThis line chart tracks the share of Americans living alone across seven specific age groups from 1900 to 2018, with the vertical axis measuring percentage from 0% to 45%. The data shows a clear divergence in living arrangements over the 118-year period, with older age groups experiencing significant increases in solitary living while younger groups remain low. The line for age 89 rises from roughly 3% in 1900 to become the highest value on the chart, reaching approximately 42% by 2018. The age 75 group follows a different trajectory, climbing steadily to a peak of about 32% around 1980 before declining to roughly 25% in 2018. The age 60 line shows consistent growth throughout the entire period, moving from under 5% to approximately 18%. Middle-aged groups display more modest changes; the age 45 and age 30 lines both rise from near 2% to hover around 10% by the end of the timeline. The youngest groups, age 21 and age 18, remain at the bottom of the chart with values consistently below 5%, showing only minor fluctuations. The age 18 line stays particularly flat, remaining close to 1% across all years. The chart illustrates that the likelihood of living alone increases substantially with age, particularly after age 60, while remaining relatively uncommon for adults under 30.",
+  "word_count": 245,
+  "latency_s": 13.089541673660278,
+  "prompt_tag": "v7_100"
+}

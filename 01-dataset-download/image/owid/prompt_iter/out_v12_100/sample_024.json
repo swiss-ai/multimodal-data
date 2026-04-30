@@ -1,0 +1,9 @@
+{
+  "slug": "legal-frameworks-regarding-violence-against-women",
+  "title": "Legal frameworks addressing violence against women",
+  "subtitle": "A higher percentage indicates stronger legislation.",
+  "caption": "Legal frameworks addressing violence against women\nA higher percentage indicates stronger legislation.\n\nThis choropleth world map displays 2024 data on legal frameworks addressing violence against women, where a higher percentage indicates stronger legislation. The legend ranges from 0% to 100%, with color bands shifting from pale green at the lower end to dark blue at the upper end. Distinct diagonal hatching marks regions with no data, covering most of the Middle East, Central Asia, and large portions of Africa including Sudan and Libya. The darkest blue shades, representing values near or at 100%, are visible across North America, Western Europe, Australia, and parts of South America such as Brazil and Argentina. Eastern Europe and Russia appear in medium-to-dark blue tones, generally falling within the 60% to 80% range. In Asia, China and India sit in mid-range blue bands, while Japan and South Korea appear in darker shades closer to the top of the scale. Across Africa, South Africa is colored in a dark blue band, whereas countries like Nigeria and Ethiopia appear in lighter green or pale blue shades, indicating lower percentages. Several nations in West and Central Africa, along with Yemen and Papua New Guinea, are marked with the no-data pattern. The visual distribution shows the highest percentages concentrated in the Americas, Europe, and Oceania, with more varied and often lower percentages across Africa and parts of Asia, alongside significant gaps in data coverage for many countries.",
+  "word_count": 238,
+  "latency_s": 11.843292951583862,
+  "prompt_tag": "v12_100"
+}

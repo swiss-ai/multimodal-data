@@ -1,0 +1,9 @@
+{
+  "slug": "death-rate-from-road-accidents-ghe",
+  "title": "Death rate from road injuries",
+  "subtitle": "The annual number of deaths from road injuries per 100,000 people. Deaths include those from drivers and passengers, motorcyclists, cyclists and pedestrians.",
+  "caption": "In 2021, the annual number of deaths from road injuries per 100,000 people varies widely across the globe, with the highest concentrations visible in parts of Africa and the Middle East. The map uses a color scale ranging from light beige for the lowest rates to dark red for the highest, covering a span from 0 to over 70 deaths per 100,000. The highest values appear in the 60-70 band, visible in countries such as the Democratic Republic of the Congo and Algeria. Several nations in West and Central Africa, including Mali and Niger, along with countries in the Middle East like Iraq and Yemen, fall into the 40-50 or 50-60 bands. In contrast, the lowest rates, falling in the 0-10 band, are visible across most of Western Europe, including the United Kingdom, France, and Germany, as well as in Australia, Canada, and Japan. Intermediate values, roughly between 10 and 30, cover large portions of the Americas, including the United States and Brazil, as well as China and India. The map shows a clear geographic pattern where the highest death rates cluster in specific regions of Africa and the Middle East, while the lowest rates are concentrated in high-income regions of Europe, North America, and Oceania.",
+  "word_count": 206,
+  "latency_s": 11.312114000320435,
+  "prompt_tag": "v5_100"
+}

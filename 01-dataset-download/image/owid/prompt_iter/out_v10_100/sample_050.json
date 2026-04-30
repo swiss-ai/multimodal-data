@@ -1,0 +1,9 @@
+{
+  "slug": "share-who-are-worried-about-vs-share-of-deaths-from-terrorism",
+  "title": "Share who are worried about vs. share of deaths from terrorism",
+  "subtitle": "Respondents who said they worried \"very much\" or \"a great deal\". Confirmed deaths, including all victims and attackers who died because of a [terrorist attack](#dod:terrorism).",
+  "caption": "Share who are worried about vs. share of deaths from terrorism\n\nRespondents who said they worried \"very much\" or \"a great deal\". Confirmed deaths, including all victims and attackers who died because of a terrorist attack.\n\nThis scatter plot maps countries based on the share of people worried about terrorism on the vertical axis against the share of deaths from terrorism on a logarithmic horizontal axis. The vertical scale ranges from 30% to over 90%, while the horizontal axis spans from 0.0001% to 1%. A large cluster of nations, including China, Germany, the United Kingdom, Brazil, and Argentina, occupies the left side of the chart with death shares below 0.001%, yet their worry levels vary widely from roughly 40% to 65%. In contrast, Iraq and the Maldives appear on the far right with death shares approaching or exceeding 0.1%; Iraq shows a worry level near 85%, while the Maldives is higher at approximately 82%. Nigeria stands out with a worry share near 90% and a death share around 0.2%. Several countries in the middle range, such as Turkey, Egypt, and Colombia, display death shares between 0.01% and 0.1% with worry levels clustering between 65% and 85%. Circle sizes indicate the number of attacks, with larger circles visible for India, Nigeria, and Iraq. The legend categorizes regions by color, showing points for North America, South America, Africa, Europe, Asia, and Oceania distributed across the plotting area without a single linear correlation between the two variables.",
+  "word_count": 244,
+  "latency_s": 15.655049800872803,
+  "prompt_tag": "v10_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "fish-seafood-production",
+  "title": "Fish and seafood production",
+  "subtitle": "Fish and seafood production is measured as the sum of seafood from wild catch and fish farming (aquaculture).",
+  "caption": "In 2023, global fish and seafood production from wild catch and aquaculture varies significantly across nations, with the highest volumes concentrated in East and Southeast Asia. China records the largest output, falling into the darkest blue band representing over 30 million tonnes, while Indonesia, India, and Russia also appear in the upper tiers of production between 3 million and 10 million tonnes. The United States and several South American nations, including Chile and Peru, occupy the mid-range bands of 1 million to 3 million tonnes. Conversely, vast areas of central Africa and the Middle East display the lightest shades, indicating production levels below 100,000 tonnes or no available data. The geographic distribution shows a clear clustering of high-volume producers along the Pacific Rim, while lower production figures dominate the interior of the African and Eurasian continents.",
+  "word_count": 136,
+  "latency_s": 8.46650743484497,
+  "prompt_tag": "v3_100"
+}

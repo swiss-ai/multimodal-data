@@ -1,0 +1,9 @@
+{
+  "slug": "excess-nitrogen",
+  "title": "Excess nitrogen from croplands",
+  "subtitle": "\"Excess nitrogen\" is the difference between nutrient inputs (from fertilizers, manure, and fixation from legumes) and the amount harvested in crop material. This represents nitrogen that are lost to the environment and can create ecological imbalances on ecosystems and in water bodies.",
+  "caption": "In 2009, the global map of excess nitrogen from croplands displays a wide range of nutrient surpluses, measured in tonnes, with the highest concentrations appearing across major agricultural regions in Asia and North America. The darkest brown shading, representing values exceeding 10 million tonnes, covers China and India, indicating the largest volumes of nitrogen lost to the environment. A second tier of high values, falling in the 1 million to 10 million tonne range, includes the United States, Brazil, Pakistan, and parts of Western Europe such as France and Germany. Lighter orange and yellow shades denote lower surpluses between 100,000 and 1 million tonnes across much of South America, Australia, and Eastern Europe. Large areas of the map, including Canada, Russia, and most of Africa, appear in blue, corresponding to the lowest band of nitrogen mining or minimal excess. The distribution shows a concentration of high nitrogen surpluses in densely populated regions with intensive crop production.",
+  "word_count": 156,
+  "latency_s": 10.685863971710205,
+  "prompt_tag": "v3_100"
+}

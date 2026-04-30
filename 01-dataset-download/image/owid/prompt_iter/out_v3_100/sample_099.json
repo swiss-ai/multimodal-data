@@ -1,0 +1,9 @@
+{
+  "slug": "human-development-index-groups",
+  "title": "Human Development Index groups",
+  "subtitle": "The Human Development Index (HDI) is a summary measure of key dimensions of human development: a long and healthy life, a good education, and a decent standard of living. The groups below define different levels of human development depending on the HDI values.",
+  "caption": "Across the globe in 2023, countries fall into four distinct Human Development Index groups based on health, education, and living standards. The map displays these groupings using a color scale where dark blue marks the \"Very high\" category, light blue indicates \"High,\" yellow represents \"Medium,\" and red denotes \"Low\" development. The \"Very high\" group covers most of North America, Europe, Australia, and parts of East Asia, including Japan and South Korea. The \"High\" group includes much of Latin America, such as Brazil and Argentina, along with Russia and China. The \"Medium\" group spans a band across North Africa, the Middle East, and South Asia, including India and Indonesia. The \"Low\" group is concentrated in sub-Saharan Africa, covering nations like Niger, Chad, and the Central African Republic. Greenland and a few other territories are shaded with diagonal lines to show no data is available. The geographic distribution shows a clear concentration of the lowest development scores in central and western Africa, while the highest scores cluster in the northern hemisphere's wealthier regions.",
+  "word_count": 171,
+  "latency_s": 5.1814446449279785,
+  "prompt_tag": "v3_100"
+}

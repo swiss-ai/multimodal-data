@@ -1,0 +1,9 @@
+{
+  "slug": "global-land-use-since-10000bc",
+  "title": "Global land use since 10,000 BCE",
+  "subtitle": "",
+  "caption": "From 10,000 BCE to 2017, the share of global land used for human activities expanded from a negligible fraction to roughly half of the Earth's surface. For the majority of this timeline, seminatural lands occupied the vast majority of the chart area, consistently accounting for approximately 70% of the total. Wild woodlands and wild barren lands maintained stable shares, hovering near 10% and 15% respectively, until the modern era. A visible shift occurs in the final segment of the timeline, where the area dedicated to seminatural lands contracts rapidly. This reduction corresponds with the expansion of croplands, rangelands, villages, and urban areas, which emerge as distinct bands near the top of the stack. By 2017, the combined area of croplands and rangelands occupies a significant portion of the vertical axis, displacing the previously dominant seminatural category. The chart shows a transition from a world dominated by wild and seminatural landscapes to one where agricultural and settled land uses comprise a substantial share of the total area.",
+  "word_count": 166,
+  "latency_s": 3.7441036701202393,
+  "prompt_tag": "v3"
+}

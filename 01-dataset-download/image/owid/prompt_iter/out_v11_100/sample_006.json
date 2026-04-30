@@ -1,0 +1,9 @@
+{
+  "slug": "rapeseed-yields",
+  "title": "Rapeseed yields",
+  "subtitle": "Yields are measured in tonnes per hectare.",
+  "caption": "Rapeseed yields, 2024\n\nYields are measured in tonnes per hectare.\n\nThe choropleth map displays global rapeseed yields for 2024, with countries shaded according to a color scale ranging from pale yellow (0 tonnes per hectare) to dark green (3.5 tonnes per hectare). The highest yields, falling within the 3 to 3.5 tonnes per hectare band, are visible in Chile, the United Kingdom, Ireland, Norway, and Turkey. A broad cluster of nations in Western and Central Europe, including France, Germany, and Poland, along with Canada and parts of China, sit in the 2 to 3 tonnes per hectare range. Moving to lighter shades, the United States, Russia, Australia, and Argentina generally occupy the 1 to 2 tonnes per hectare bands. Lower yields, represented by pale yellow and light green hues corresponding to values between 0 and 1 tonne per hectare, appear in Mexico, Brazil, India, and scattered nations across North Africa. Large portions of the map, particularly across Central Africa, the Middle East, and Southeast Asia, are marked with diagonal hatching, indicating no data is available for these regions. The distribution shows distinct regional concentrations of higher productivity in temperate zones of the Northern Hemisphere and the southern tip of South America, while tropical and arid regions with available data tend to show lower yields or lack reporting entirely.",
+  "word_count": 218,
+  "latency_s": 11.116591691970825,
+  "prompt_tag": "v11_100"
+}

@@ -1,0 +1,8 @@
+{
+  "slug": "per-capita-energy-use",
+  "title": "Energy use per person",
+  "subtitle": "Measured in [kilowatt-hours](#dod:watt-hours) per person. Here, energy refers to [primary energy](#dod:primaryenergy) using the [substitution method](#dod:substitutionmethod).",
+  "note": "",
+  "caption": "Energy use per person\n\nMeasured in kilowatt-hours per person. Here, energy refers to primary energy using the substitution method.\n\nThis choropleth world map displays 2024 energy use per person, measured in kilowatt-hours. The legend spans from 0 kWh to 100,000 kWh, with specific tick points at 1,000, 3,000, 10,000, and 30,000 kWh. The darkest red shades, indicating values above 30,000 kWh, are visible in North America (United States and Canada), Australia, and several countries in the Middle East including Saudi Arabia. Russia and China also appear in dark red bands. Western Europe, including the United Kingdom, France, and Germany, sits in the mid-to-dark orange range, generally between 10,000 and 30,000 kWh. South American nations like Brazil and Argentina appear in lighter orange shades, falling roughly between 3,000 and 10,000 kWh. Across the African continent, most countries sit in the lightest beige shades, indicating values below 3,000 kWh, with some nations in North Africa appearing slightly darker. India and Southeast Asian countries like Indonesia and Vietnam occupy the lower-mid range of the legend. Greenland is marked with diagonal hatching to indicate no data. The visual pattern shows the highest energy use per person concentrated in North America, parts of the Middle East, and Australia, while the lowest usage is distributed across much of Sub-Saharan Africa and parts of South Asia.",
+  "word_count": 219
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "chile-covid-19-mortality-rate-by-vaccination-status",
+  "title": "Chile: COVID-19 weekly death rate by vaccination status",
+  "subtitle": "Death rates are calculated as the number of deaths in each group, divided by the total number of people in this group. This is given per 100,000 people.",
+  "caption": "Weekly COVID-19 death rates in Chile from October 2021 to March 2023 show distinct mortality patterns across vaccination groups, measured as deaths per 100,000 people. The lines for individuals with zero or one dose and those with two doses track closely together, rising sharply to a peak near 12 deaths per 100,000 in early 2022 before falling rapidly. The line representing three doses follows a similar trajectory but reaches a lower maximum of approximately 4 deaths per 100,000 during the same period. The line for four doses remains consistently lower than the other groups, staying below 1 death per 100,000 for most of the timeline. All four lines show a secondary rise in mid-2022, reaching between 1 and 3 deaths per 100,000, followed by a general decline toward the end of the period. The gap between the highest and lowest vaccination groups is most visible during the early 2022 peak.",
+  "word_count": 150,
+  "latency_s": 11.252500057220459,
+  "prompt_tag": "v3_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "median-daily-per-capita-expenditure-vs-gdp-per-capita",
+  "title": "Median income or consumption per day vs. GDP per capita",
+  "subtitle": "This data is adjusted for inflation and differences in living costs between countries.",
+  "caption": "Median income or consumption per day vs. GDP per capita\n\nThis data is adjusted for inflation and differences in living costs between countries.\n\nThe scatter plot displays the relationship between GDP per capita on the horizontal axis and median income or consumption per day on the vertical axis, with both axes plotted on a logarithmic scale. Data points are color-coded by region, including North America, South America, Africa, Europe, Asia, and Oceania, while circle size corresponds to population. The United States is positioned at the top right, indicating the highest values on both axes, exceeding $50 per day in median income and $50,000 in GDP per capita. A cluster of European and Asian nations, including Japan, Turkey, and Russia, occupies the upper-middle section, with median daily values generally ranging between $20 and $50 and GDP per capita between $20,000 and $50,000. China and Iran appear in the middle of the distribution, with median daily figures around $15 to $20 and GDP per capita near $20,000. A large group of countries, including India, Indonesia, Vietnam, and Pakistan, clusters in the lower-middle range, showing median daily values between $5 and $15 and GDP per capita between $5,000 and $15,000. At the lower end of the chart, nations such as Burundi, DR Congo, Madagascar, and Uganda show median daily values below $5 and GDP per capita under $5,000. The data is expressed in international-$ at 2021 prices, and depending on the country and year, the median data relates to income measured after taxes and benefits or to consumption per capita.",
+  "word_count": 257,
+  "latency_s": 16.485740184783936,
+  "prompt_tag": "v10_100"
+}

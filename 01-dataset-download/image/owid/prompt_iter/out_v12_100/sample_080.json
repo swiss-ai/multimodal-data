@@ -1,0 +1,9 @@
+{
+  "slug": "deaths-from-preterm-birth-complications",
+  "title": "Death rate from neonatal preterm birth complications",
+  "subtitle": "The estimated death rate from [neonatal](#dod:neonatal) [preterm birth complications](#dod:preterm-birth-complications) in children under five years old, per 100,000.",
+  "caption": "Death rate from neonatal preterm birth complications\n\nThe estimated death rate from neonatal preterm birth complications in children under five years old, per 100,000.\n\nThis choropleth world map displays 2023 data on the estimated death rate from neonatal preterm birth complications in children under five years old, per 100,000. The legend uses a color scale ranging from pale yellow for rates near zero to dark blue for rates reaching 1,000, with intermediate bands at 10, 20, 50, 100, 200, and 500. The darkest blue shades, indicating rates between 500 and 1,000, are concentrated in specific regions of Sub-Saharan Africa, including Mali, Niger, Chad, and Somalia. Surrounding countries in West and Central Africa generally appear in medium-to-dark blue bands, falling within the 100 to 500 range. In South Asia, India and Pakistan sit in mid-range blue shades that correspond to the 50 to 200 interval. Much of Latin America, including Brazil and Mexico, along with parts of Southeast Asia, display lighter teal shades that align with the 20 to 50 band. North America, Western Europe, Australia, and Russia are predominantly colored in the lightest shades of yellow and pale green, representing rates below 20. Greenland and a few small island territories appear in white or very pale tones, suggesting either very low rates or no available data. The visual distribution shows the highest rates clustered across the African continent and parts of South Asia, while the lowest rates are observed across most of Europe, North America, and Oceania.",
+  "word_count": 247,
+  "latency_s": 15.801377773284912,
+  "prompt_tag": "v12_100"
+}

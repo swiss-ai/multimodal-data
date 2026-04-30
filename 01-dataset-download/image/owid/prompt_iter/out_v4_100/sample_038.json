@@ -1,0 +1,9 @@
+{
+  "slug": "life-expectancy-at-birth-including-the-un-projections",
+  "title": "Life expectancy, including UN projections",
+  "subtitle": "The [period life expectancy](#dod:period-life-expectancy) at birth. This includes the observed life expectancy since 1950, and the medium-variant projections for the future, based on estimates by the UN Population Division.",
+  "caption": "Period life expectancy at birth rises across all tracked populations from 1950 through 2100, with solid lines marking observed data until 2020 and dotted lines representing UN medium-variant projections for the future. Japan and Sweden occupy the highest positions throughout the timeline, starting above 65 years in 1950 and reaching approximately 85 years by 2020 before projecting toward 95 years by the end of the century. India begins at the lowest level, near 40 years in 1950, and climbs steadily to roughly 70 years in 2020, with projections placing it near 85 years by 2100. Brazil and the World average follow intermediate paths, both starting near 50 years in 1950 and converging around 70 to 75 years by 2020. A visible dip occurs in the India line around 2020, dropping briefly below 70 years before resuming its upward trajectory. The gap between the highest and lowest values narrows over time as the lower lines rise at a faster rate than the upper lines.",
+  "word_count": 163,
+  "latency_s": 11.604495763778687,
+  "prompt_tag": "v4_100"
+}

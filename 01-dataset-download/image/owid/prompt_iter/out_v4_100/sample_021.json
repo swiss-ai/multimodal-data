@@ -1,0 +1,9 @@
+{
+  "slug": "augmented-human-development-index",
+  "title": "Augmented Human Development Index",
+  "subtitle": "The Augmented Human Development Index (AHDI) is a summary measure of achievement in four key dimensions of human development: a long and healthy life, being knowledgeable, being free and having a decent standard of living.",
+  "caption": "The 2020 Augmented Human Development Index map displays global variations in a summary measure covering health, knowledge, freedom, and living standards using a continuous color scale from 0 to 0.8. The highest values, represented by the darkest blue shades in the 0.7 to 0.8 range, appear across western and central Europe, including Norway, Switzerland, and Germany, as well as in Canada, the United States, Australia, and New Zealand. Japan and South Korea also fall within this upper band. Mid-range scores, falling between 0.4 and 0.6, cover much of Latin America, such as Brazil and Argentina, alongside Russia and China. The lowest values, shown in the lightest shades between 0 and 0.3, are visible across most of sub-Saharan Africa and parts of South Asia. Greenland is marked with diagonal hatching to indicate no available data. The geographic distribution shows a concentration of higher index scores in the Global North and Oceania, while lower scores cluster in the Global South.",
+  "word_count": 158,
+  "latency_s": 10.68056607246399,
+  "prompt_tag": "v4_100"
+}

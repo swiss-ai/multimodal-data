@@ -1,0 +1,9 @@
+{
+  "slug": "share-deaths-suicide",
+  "title": "Share of deaths from suicide",
+  "subtitle": "Estimated share of deaths from suicide. Suicides are underreported in many countries due to social stigma and cultural or legal concerns. This data is based on modeling of global suicide patterns, and includes adjustments and extrapolations that aim to account for missing data and underreporting.",
+  "caption": "Across seven countries from 1980 to 2023, the estimated share of deaths from suicide follows distinct trajectories, with South Korea showing the most pronounced movement. The line for South Korea begins near 2.3% in 1980, rises steadily to a peak above 6% around 2010, then declines to approximately 4% by 2023. Japan’s line starts higher, near 3.1%, peaks around 3.6% in the mid-1980s, dips below 2.5% by 2000, and ends near 1.7%. The United States line remains relatively flat between 1.5% and 1.8% for most of the period, ending slightly above 1.7%. Germany’s line hovers between 1.4% and 1.7% until 2010, then falls to about 1.2%. The United Kingdom’s line stays between 0.9% and 1.1% throughout, ending near 1.0%. Peru’s line begins below 0.3%, rises gradually to 0.7% by 2000, then climbs more steeply to nearly 0.8% by 2023. Greece’s line remains low, fluctuating between 0.3% and 0.5%, ending near 0.4%. The visible pattern shows South Korea’s share rising sharply over three decades before falling, while other countries show smaller fluctuations or gradual changes within narrower bands.",
+  "word_count": 177,
+  "latency_s": 17.518556356430054,
+  "prompt_tag": "v3_100"
+}

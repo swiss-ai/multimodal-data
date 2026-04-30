@@ -1,0 +1,9 @@
+{
+  "slug": "adult-obesity-vs-protein",
+  "title": "Share of adults who are obese vs. daily protein supply",
+  "subtitle": "Obesity is defined as having a body-mass index (BMI) equal to, or greater than, 30. BMI is a person's weight (in kilograms) divided by their height (in meters) squared.",
+  "caption": "In 2022, the relationship between daily protein supply and adult obesity rates varies significantly across countries, with data points color-coded by region. The scatter plot places daily protein supply in grams per day per capita on the horizontal axis and the percentage of adults with obesity on the vertical axis. A general positive trend is visible, where nations with higher protein availability often show higher obesity rates, though the correlation is not uniform. Countries in Oceania, such as Nauru, Tonga, and Samoa, occupy the upper range of the chart, displaying obesity rates between 60% and 70% alongside protein supplies exceeding 100 grams. The United States and several Caribbean nations like the Bahamas and Barbados also appear in the upper-right quadrant with obesity rates near or above 40%. Conversely, many African nations, including Burundi, Somalia, and Rwanda, cluster in the lower-left area, showing obesity rates below 15% and protein supplies under 60 grams. European countries like Iceland, Ireland, and Norway sit at the far right with protein supplies reaching 140 grams but maintain obesity rates between 20% and 30%. The distribution shows that while low protein supply consistently aligns with lower obesity figures, high protein supply corresponds to a wide range of obesity outcomes.",
+  "word_count": 203,
+  "latency_s": 12.814135789871216,
+  "prompt_tag": "v3_100"
+}

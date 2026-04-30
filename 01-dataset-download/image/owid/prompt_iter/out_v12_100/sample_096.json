@@ -1,0 +1,9 @@
+{
+  "slug": "life-expectancy-at-birth-oecd",
+  "title": "Life expectancy",
+  "subtitle": "The [period life expectancy](#dod:period-life-expectancy) at birth, in a given year.",
+  "caption": "Life expectancy\n\nThe period life expectancy at birth, in a given year.\n\nThis choropleth world map displays period life expectancy at birth for the year 2022. The legend ranges from 40 years to 85 years, using a color scale that transitions from pale yellow for the lowest values to dark blue for the highest. A distinct hatched pattern indicates regions with no available data, which covers the majority of the African continent as well as parts of the Middle East and Central Asia. Among the countries with data, the darkest blue shades, representing life expectancies of 80 years or higher, are visible in Australia, New Zealand, Japan, South Korea, and most of Western Europe. Canada and the United States also appear in dark blue bands, falling within the 75 to 80 year range. Russia and China are depicted in medium-to-dark blue shades, generally sitting between the 70 and 75 year marks. In South America, countries like Brazil and Argentina show mid-range blue tones, while India appears in a lighter blue shade corresponding to the 65 to 70 year interval. South Africa is visible in a teal color, placing it in the 60 to 65 year band. The visual distribution highlights a concentration of higher life expectancy values across the Americas, Europe, and Oceania, contrasted with the extensive lack of data coverage across Africa.",
+  "word_count": 223,
+  "latency_s": 8.156886339187622,
+  "prompt_tag": "v12_100"
+}

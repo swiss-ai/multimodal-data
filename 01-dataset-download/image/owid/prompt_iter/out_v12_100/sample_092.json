@@ -1,0 +1,9 @@
+{
+  "slug": "elections-for-the-governments-chief-executive",
+  "title": "Elections for the government's chief executive",
+  "subtitle": "Data by the Lexical Index of Electoral Democracy.",
+  "caption": "Elections for the government's chief executive\n\nData by the Lexical Index of Electoral Democracy.\n\nThis choropleth world map displays the status of elections for the government's chief executive in 2025, categorized into three distinct groups: \"Yes,\" \"No,\" and \"No data.\" The legend indicates that countries holding such elections are shaded in blue, while those that do not are shaded in orange. Territories with no available data are marked with a diagonal hatching pattern. The blue \"Yes\" category covers the majority of the global landmass, including the entirety of North and South America, most of Europe, Russia, Australia, and the southern portion of the African continent. In contrast, the orange \"No\" category forms a contiguous band stretching across North Africa and the Middle East, encompassing nations such as Morocco, Algeria, Libya, Egypt, Saudi Arabia, and Iran. This orange shading also appears in parts of Central Asia and East Asia, specifically covering China and Myanmar. Madagascar is the only large island nation in the Indian Ocean shaded orange. Greenland is the most prominent territory displaying the diagonal hatching that signifies \"No data.\" The visual distribution shows a clear geographic divide, with the absence of chief executive elections concentrated in a specific region spanning from Northwest Africa through the Middle East to parts of Asia, while the rest of the world predominantly falls into the category where these elections take place.",
+  "word_count": 228,
+  "latency_s": 10.43239450454712,
+  "prompt_tag": "v12_100"
+}

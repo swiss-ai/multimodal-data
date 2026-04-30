@@ -1,0 +1,9 @@
+{
+  "slug": "stunting-vs-level-of-prosperity-over-time",
+  "title": "Stunting vs. GDP per capita",
+  "subtitle": "[Stunting](#dod:stunting) measures the share of children younger than 5 years that are too short for their age. GDP per capita is adjusted for inflation and differences in living costs between countries.",
+  "caption": "In 2024, the share of children under five who are stunted varies widely across countries, plotted here against GDP per capita on a logarithmic scale. The scatter plot shows a clear negative relationship: as GDP per capita rises, the percentage of stunted children generally falls. At the lower end of the income scale, Burundi, Niger, and the Democratic Republic of Congo cluster in the upper-left, with stunting rates above 45% and GDP per capita below $2,000. Moving rightward along the x-axis, countries like India, Pakistan, and Guatemala show stunting rates between 30% and 45% at GDP levels from $5,000 to $10,000. Further right, nations including Egypt, Algeria, and Argentina fall in the 10% to 20% stunting range with GDP per capita between $10,000 and $30,000. At the highest income levels — above $50,000 — countries such as Estonia, Bulgaria, Brunei, and Australia report stunting rates below 5%. A few outliers break the general trend: East Timor and Angola have high stunting rates despite GDP per capita near $5,000 and $10,000 respectively; Malaysia sits at around 25% stunting with GDP near $30,000. The densest concentration of points lies in the bottom-right quadrant, where higher GDP correlates with lower stunting prevalence.",
+  "word_count": 199,
+  "latency_s": 16.334505558013916,
+  "prompt_tag": "v3_100"
+}

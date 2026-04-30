@@ -1,0 +1,9 @@
+{
+  "slug": "major-causes-of-child-deaths",
+  "title": "Major causes of child deaths",
+  "subtitle": "Estimated annual deaths from major causes in children aged under five, per 100,000 population.",
+  "caption": "Between 1980 and 2023, the global rate of estimated annual deaths from major causes in children under five per 100,000 population shows a consistent downward trend across nearly all categories. Preterm birth and lower respiratory infections, which began as the leading causes with rates exceeding 400 per 100,000 in 1980, fell to below 100 by 2023. Birth asphyxia and malaria followed similar trajectories, dropping from roughly 300 and 220 respectively to under 100. Diarrheal diseases declined from near 300 to approximately 60. Congenital heart anomalies remained relatively flat around 100 throughout the period. Neonatal infections, other neonatal disorders, measles, protein-energy malnutrition, and meningitis all stayed below 100 for the entire span, with most showing gradual declines. Measles and protein-energy malnutrition dropped to near zero by 2023. The most visible pattern is the steep reduction in mortality from infectious and preventable causes over four decades, while congenital conditions show little change.",
+  "word_count": 150,
+  "latency_s": 4.074676275253296,
+  "prompt_tag": "v3"
+}

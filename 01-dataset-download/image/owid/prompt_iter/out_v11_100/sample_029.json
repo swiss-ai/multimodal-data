@@ -1,0 +1,9 @@
+{
+  "slug": "land-natural-share",
+  "title": "Share of land defined as natural habitat",
+  "subtitle": "Natural ecosystems include forest, grassland, savanna, and shrublands, and other classes such as peatlands and marshes. It is total land minus land that is used by humans for agriculture – either croplands or pasture – or for infrastructure and urban environments.",
+  "caption": "Share of land defined as natural habitat\n\nNatural ecosystems include forest, grassland, savanna, and shrublands, and other classes such as peatlands and marshes. It is total land minus land that is used by humans for agriculture – either croplands or pasture – or for infrastructure and urban environments.\n\nThe chart tracks the percentage of land defined as natural habitat from 1780 to 2010 for the World, Germany, France, and the United Kingdom. The global trend line begins at approximately 75% in 1780 and follows a consistent downward trajectory, reaching roughly 65% by 1900 and declining further to just under 50% by 2010. In contrast, the national lines for Germany, France, and the United Kingdom start in a lower range, clustered between 45% and 65% in the late 18th century. All three nations experience a decline over the 19th century, with the United Kingdom dropping to a low point near 30% around 1950, while Germany and France bottom out between 40% and 45% in the early 20th century. Following these mid-century lows, the trajectories for Germany, France, and the United Kingdom reverse, showing a sharp increase. By 2010, Germany reaches approximately 65%, France sits near 62%, and the United Kingdom recovers to roughly 48%. Throughout the period, the World line remains distinct from the national lines, starting significantly higher but converging toward the upper range of the national values by the end of the timeline.",
+  "word_count": 234,
+  "latency_s": 14.076866626739502,
+  "prompt_tag": "v11_100"
+}

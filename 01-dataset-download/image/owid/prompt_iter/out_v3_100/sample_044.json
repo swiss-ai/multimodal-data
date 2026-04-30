@@ -1,0 +1,9 @@
+{
+  "slug": "primary-secondary-enrollment-completion-rates",
+  "title": "Primary, secondary and tertiary education enrollment and completion rates",
+  "subtitle": "This is given as the gross rate, which includes children of any age entering the level of education; this can result in percentages greater than 100 because children may enter education late or repeat a year.",
+  "caption": "Global education metrics from 1970 to 2024 show distinct trajectories for enrollment and completion across primary, secondary, and tertiary levels. Primary enrollment remains the highest throughout the period, starting near 90% and rising to exceed 100% by the mid-2000s, where it fluctuates slightly above that mark through 2024. Primary completion begins around 78% in 2000 and climbs steadily to approximately 88% by the end of the series. Secondary enrollment and lower secondary completion both start near 40% in 1970, rise gradually until the late 1990s, then accelerate sharply after 2000, converging near 78% by 2024. Tertiary enrollment begins below 10% in 1970, remains flat until the mid-1990s, then rises consistently to reach just over 40% by 2024. The lines show sustained growth across all levels since 2000, with tertiary enrollment exhibiting the steepest relative increase over the full period.",
+  "word_count": 139,
+  "latency_s": 11.30782961845398,
+  "prompt_tag": "v3_100"
+}

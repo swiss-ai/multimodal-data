@@ -1,0 +1,9 @@
+{
+  "slug": "deaths-averted-due-to-rotavirus-vaccine",
+  "title": "Rotavirus deaths prevented by vaccination",
+  "subtitle": "The number of [rotavirus](#dod:rotavirus) deaths of children under five years old that were prevented in 2016 due to the rotavirus vaccine.",
+  "caption": "Across the world in 2016, the number of rotavirus deaths prevented by vaccination among children under five years old varies widely, ranging from zero to over 3,000 per country. The map uses a continuous color scale where pale yellow represents the lowest band (0 to 10 deaths prevented) and deep blue represents the highest band (1,000 to 3,000+ deaths prevented). The highest values appear across sub-Saharan Africa and parts of South Asia: Nigeria, Ethiopia, the Democratic Republic of the Congo, Tanzania, and India all fall in the darkest blue band, indicating more than 1,000 deaths prevented in each. China and Brazil sit in the next band down, with between 300 and 1,000 deaths prevented. Intermediate values — between 30 and 300 — are visible in countries including Mexico, South Africa, Indonesia, and Pakistan. The lowest non-zero band (0 to 10) covers much of Europe, North America, Australia, and parts of Latin America and Southeast Asia — including the United States, Canada, Germany, Japan, and Argentina. Large areas show no data, including Greenland, Western Sahara, and several small island nations. The geographic distribution shows that the largest numbers of prevented deaths cluster in populous countries with high baseline rotavirus mortality and active vaccination programs, while low-income regions with limited vaccine access or reporting show either low counts or no data. The pattern visible on the map is one of concentrated impact in specific high-burden countries, with most of the world’s prevented deaths occurring in a relatively small set of nations.",
+  "word_count": 249,
+  "latency_s": 14.008963108062744,
+  "prompt_tag": "v5_100"
+}

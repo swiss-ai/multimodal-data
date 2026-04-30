@@ -1,0 +1,9 @@
+{
+  "slug": "biweekly-growth-covid-cases",
+  "title": "Biweekly change in confirmed COVID-19 cases",
+  "subtitle": "The biweekly change on any given date measures the percentage change in the number of new confirmed cases over the last 14 days, relative to the number in the previous 14 days. Due to limited testing, the number of confirmed cases is lower than the true number of infections.",
+  "caption": "Biweekly change in confirmed COVID-19 cases\n\nThe biweekly change on any given date measures the percentage change in the number of new confirmed cases over the last 14 days, relative to the number in the previous 14 days. Due to limited testing, the number of confirmed cases is lower than the true number of infections.\n\nThe world map displays the biweekly change in confirmed COVID-19 cases as of February 22, 2026, using a color scale ranging from dark blue (-100%) to dark red (+100%), with hatched patterns indicating no data. Most of the globe, including North America, Africa, Asia, and Australia, is covered in hatching, signifying an absence of reported data for this metric. In the Americas, Peru and several Central American nations are shaded in dark blue, corresponding to a decrease of 75% to 100% in cases. Argentina and Uruguay appear in lighter blue tones, representing declines between 25% and 75%. Conversely, Brazil and parts of northern South America are colored in light orange, indicating an increase in cases between 0% and 25%. In Europe, a cluster of countries including Italy, Greece, and nations in the Balkans are shaded in varying tones of blue, showing decreases ranging from 25% to over 75%. Sweden and Norway are depicted in light orange, suggesting a slight rise in cases within the 0% to 25% range. The visual distribution highlights specific regional variations in case trends while large portions of the map remain without data coverage.",
+  "word_count": 243,
+  "latency_s": 16.740062713623047,
+  "prompt_tag": "v10_100"
+}

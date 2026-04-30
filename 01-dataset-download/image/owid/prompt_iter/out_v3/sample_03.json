@@ -1,0 +1,9 @@
+{
+  "slug": "flu-vaccines-older-people-recommendation",
+  "title": "National policy on flu vaccination for older people",
+  "subtitle": "This shows which countries have a national policy to recommend flu vaccines to older people.",
+  "caption": "The 2020 world map displays national policies regarding flu vaccination recommendations for older people, categorized by whether a recommendation exists, does not exist, or if data is unavailable. The blue shading, indicating that vaccination is recommended, covers the majority of the Americas, including the United States, Canada, and Brazil, as well as most of Europe and Australia. In contrast, the red shading, which denotes no recommendation, appears in scattered locations across Africa, such as Morocco, Algeria, and Nigeria, and in parts of Asia including India and Indonesia. Large areas of central Africa and the Middle East are marked with diagonal hatching to show that no data is available. The visual distribution shows a high concentration of recommendation policies in the Western Hemisphere and Europe, while the absence of recommendations and missing data are more prevalent across the African and Asian continents.",
+  "word_count": 141,
+  "latency_s": 2.840196132659912,
+  "prompt_tag": "v3"
+}

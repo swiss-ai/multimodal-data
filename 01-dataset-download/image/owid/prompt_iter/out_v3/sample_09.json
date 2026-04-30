@@ -1,0 +1,9 @@
+{
+  "slug": "injuries-from-terrorist-attacks",
+  "title": "Injuries from terrorist attacks",
+  "subtitle": "Confirmed non-fatal injuries, including all victims and attackers who were hurt because of a [terrorist attack](#dod:terrorism).",
+  "caption": "The world map displays the number of confirmed non-fatal injuries from terrorist attacks in 2021, using a color scale that ranges from pale yellow for zero injuries to dark red for over 1,000. The highest concentrations of injuries appear across parts of the Middle East and South Asia, with Afghanistan and Iraq shaded in the darkest red band, indicating more than 1,000 injuries each. India, Pakistan, and several countries in the Sahel region of Africa — including Burkina Faso, Mali, and Nigeria — fall into the orange-to-red bands, representing between 100 and 1,000 injuries. In contrast, most of Europe, Australia, Canada, and much of South America are colored in pale yellow or light beige, corresponding to fewer than 10 injuries. The United States is shaded in medium orange, placing it in the 30–100 injury range. Large areas of central Asia, Greenland, and some island nations are marked with diagonal hatching to indicate no available data. The geographic distribution shows a clear clustering of higher injury counts in specific conflict-affected regions, while vast portions of the globe report minimal or no recorded non-fatal injuries from terrorist incidents in that year.",
+  "word_count": 189,
+  "latency_s": 4.200772047042847,
+  "prompt_tag": "v3"
+}

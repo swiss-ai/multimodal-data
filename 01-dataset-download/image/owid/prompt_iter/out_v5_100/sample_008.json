@@ -1,0 +1,9 @@
+{
+  "slug": "openness-of-executive-recruitment-score",
+  "title": "Openness of Executive Recruitment Score",
+  "subtitle": "Data by [Polity 5](#dod:polity).",
+  "caption": "Across the world in 2020, the openness of executive recruitment varies by regime type, ranging from open competition to power seized by force. The map uses a continuous color scale to display scores, with deep blue representing open recruitment and deep red indicating power seized, while intermediate shades of orange and purple denote hereditary succession or dual systems where a chief minister is designated or elected. The highest openness scores appear across the Americas, including the United States, Brazil, and Mexico, as well as throughout Western Europe, Australia, and Japan. In contrast, the lowest scores cluster in North Africa and the Middle East, where countries like Libya, Sudan, and Yemen fall into the red band for power seized. Hereditary succession is visible in Saudi Arabia and Oman, shown in orange, while dual systems with a designated chief minister appear in parts of Central Asia and the Caucasus. Large portions of sub-Saharan Africa show mixed patterns, with some countries in the open category and others in the seized or hereditary bands. The most concentrated area of low openness spans from Mauritania across the Sahel to the Horn of Africa. Open recruitment dominates in Latin America, Northern Europe, and East Asia, while closed or semi-closed systems prevail in the Middle East and parts of Central Asia. The geographic distribution shows a clear divide between regions with institutionalized executive selection and those where leadership changes through non-competitive means.",
+  "word_count": 235,
+  "latency_s": 11.006072759628296,
+  "prompt_tag": "v5_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "crude-death-rate-the-share-of-the-population-that-dies-each-year-who",
+  "title": "Crude death rate: the share of the population that dies each year",
+  "subtitle": "",
+  "caption": "In 2021, the crude death rate—the share of the population dying each year—varies across countries, with the highest values concentrated in Eastern Europe and parts of Southern Africa. Russia, Ukraine, and Bulgaria appear in the darkest red band, indicating rates above 1.5% of the population, while South Africa and Lesotho also fall within this upper range. Across Western Europe, the United States, and Australia, the color falls in the middle bands, corresponding to rates between 0.9% and 1.2%. Much of sub-Saharan Africa, the Middle East, and South Asia displays lighter shades, placing these regions in the 0.3% to 0.6% range. Greenland and a few small island nations show no data. The map shows a geographic distribution where the highest mortality shares cluster in specific regions rather than following a simple continental pattern.",
+  "word_count": 132,
+  "latency_s": 3.078960657119751,
+  "prompt_tag": "v3"
+}

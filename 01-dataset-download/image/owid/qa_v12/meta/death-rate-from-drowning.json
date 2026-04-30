@@ -1,0 +1,8 @@
+{
+  "slug": "death-rate-from-drowning",
+  "title": "Death rate from drowning",
+  "subtitle": "Estimated annual number of deaths from drowning per 100,000 people.",
+  "note": "",
+  "caption": "Death rate from drowning\n\nEstimated annual number of deaths from drowning per 100,000 people.\n\nThis choropleth world map displays the estimated annual number of deaths from drowning per 100,000 people for the year 2023. The legend uses a color scale ranging from pale yellow for rates near zero to dark blue for rates of 15 or higher, with intermediate bands at 3, 6, 9, and 12. The highest visible rates, represented by the darkest blue shades corresponding to values of 15 or more, are concentrated in specific regions: Mali in West Africa, South Sudan in East Africa, and Papua New Guinea in Oceania. Surrounding these areas, countries in Central and Southern Africa, as well as parts of Southeast Asia including Thailand and Cambodia, appear in mid-range teal and blue-green shades that fall between the 6 and 12 thresholds. In contrast, vast portions of the globe, including North America, South America, Europe, Russia, China, and Australia, are colored in the lightest pale yellow shades, indicating rates near the bottom of the scale or close to zero. Greenland is marked with a hatched pattern, signifying that no data is available for that territory. The visual distribution highlights a distinct geographic pattern where the highest drowning death rates are localized to specific nations in Africa and the Pacific, while the majority of the world’s landmass exhibits significantly lower rates according to this dataset.",
+  "word_count": 230
+}

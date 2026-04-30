@@ -1,0 +1,9 @@
+{
+  "slug": "death-rates-from-mental-and-substance-disorders-by-age-who",
+  "title": "Mental health and substance use disorders death rate by age group",
+  "subtitle": "Estimated annual number of deaths by age group from mental health and substance use disorders per 100,000 people in the same age group. These include alcohol use, drug use, and eating disorders. Figures do not include deaths resulting from suicide, which are related to these disorders.",
+  "caption": "Mental health and substance use disorders death rate by age group\n\nEstimated annual number of deaths by age group from mental health and substance use disorders per 100,000 people in the same age group. These include alcohol use, drug use, and eating disorders. Figures do not include deaths resulting from suicide, which are related to these disorders.\n\nThe horizontal bar chart displays the estimated annual death rate per 100,000 people for mental health and substance use disorders across six distinct age groups for the year 2021. The data reveals a clear trend where mortality rates increase with age, peaking in older adulthood before declining slightly in the oldest demographic. The 50-69 years age group records the highest death rate at 9.2 per 100,000 people, represented by the longest bar in the visualization. The 70+ years category follows with the second-highest rate of 6.9. In the middle of the distribution, the 15-49 years group shows a rate of 4.5, which is nearly identical to the aggregate rate for \"All ages,\" recorded at 4.4. The lowest mortality figures are observed in the younger populations; the 5-14 years group has a rate of less than 0.1, while the 0-4 years group registers a value of 0. The chart explicitly notes that these figures encompass deaths related to alcohol use, drug use, and eating disorders, but exclude deaths resulting from suicide.",
+  "word_count": 227,
+  "latency_s": 13.815873146057129,
+  "prompt_tag": "v10_100"
+}

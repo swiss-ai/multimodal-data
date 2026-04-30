@@ -1,0 +1,9 @@
+{
+  "slug": "monthly-average-surface-temperatures-by-decade",
+  "title": "Monthly average surface temperatures by decade",
+  "subtitle": "The temperature of the air measured 2 meters above the ground, encompassing land, sea, and in-land water surfaces.",
+  "caption": "Monthly average surface temperatures by decade\n\nThe temperature of the air measured 2 meters above the ground, encompassing land, sea, and in-land water surfaces.\n\nThe chart displays monthly average surface temperatures across eight decades, ranging from the 1940s to the 2020s, plotted against the months of the year from January (1) to December (12). Each decade is represented by a distinct line, with the 2020s shown in dark red at the top, followed by the 2010s in pink, 2000s in light pink, 1990s in pale pink, 1980s in light gray, 1970s in medium gray, 1960s in darker gray, and 1940s in black at the bottom. All lines follow a similar seasonal pattern: temperatures rise from January through June or July, peak around month 7 (July), then decline through December. The 2020s line consistently sits above all others, reaching approximately 16.8°C in July, while the 1940s line remains lowest, peaking near 15.7°C. The gap between decades widens slightly during the warmer months, particularly from May to September, where the 2020s exceed 16°C and the 1940s remain below 15.8°C. In contrast, during winter months (January and December), all decades cluster more tightly, ranging from about 11.8°C to 13.2°C. The note indicates that the 2020s average includes fewer than ten years of data, which may affect its precision relative to other decades. Across the full annual cycle, each decade’s curve maintains its vertical position relative to others, with no crossing or inversion observed.",
+  "word_count": 240,
+  "latency_s": 15.271196126937866,
+  "prompt_tag": "v11_100"
+}

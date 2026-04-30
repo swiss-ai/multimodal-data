@@ -1,0 +1,9 @@
+{
+  "slug": "number-of-deaths-from-road-injuries",
+  "title": "Deaths from road injuries",
+  "subtitle": "Annual number of deaths from road injuries. Road injuries include deaths of drivers, passengers, pedestrians and cyclists.",
+  "caption": "Deaths from road injuries\n\nAnnual number of deaths from road injuries. Road injuries include deaths of drivers, passengers, pedestrians and cyclists.\n\nThe choropleth map displays the annual number of deaths from road injuries for 2023, utilizing a color scale that ranges from light beige for zero deaths to dark red for 100,000 deaths. The highest values, represented by the darkest red band indicating 100,000 deaths, are visible in China and India. Several large nations, including the United States, Brazil, and Russia, fall into the second-highest category, shaded in a medium-dark red corresponding to the 30,000 to 100,000 range. A broad group of countries across Europe, North Africa, and parts of South America, such as Mexico and Argentina, are colored in lighter orange shades, placing them within the 3,000 to 30,000 band. Many nations in Central Africa and smaller island states appear in the lightest beige tones, signifying values between 0 and 1,000. Greenland is marked with a hatched pattern, denoting that no data is available for that region. The distribution shows a concentration of the highest absolute numbers in Asia, while North America and South America contain countries in the upper-middle ranges. Australia and most of Western Europe sit in the lower-middle bands, generally between 1,000 and 10,000 deaths. The visual gradient highlights significant variation in the total count of fatalities, with the darkest regions representing counts two orders of magnitude higher than the lightest populated regions.",
+  "word_count": 237,
+  "latency_s": 13.702506065368652,
+  "prompt_tag": "v11_100"
+}

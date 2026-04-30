@@ -1,0 +1,9 @@
+{
+  "slug": "government-expenditure-per-primary-student-vs-gdp-per-capita",
+  "title": "Share of GDP per capita spent by the government on each primary school student vs. GDP per capita",
+  "subtitle": "GDP per capita data is adjusted for inflation and differences in living costs between countries.",
+  "caption": "In 2008, government expenditure per primary school student as a share of GDP per capita is plotted against GDP per capita for countries worldwide. The horizontal axis uses a logarithmic scale to display GDP per capita ranging from under $2,000 to over $100,000, while the vertical axis shows the spending share from 0% to 40%. Points are colored by region, distinguishing North America, South America, Africa, Europe, Asia, and Oceania. Serbia sits at the top of the vertical axis with a share exceeding 40%, while Kazakhstan is positioned at the bottom near 0%. Djibouti, Albania, and Ukraine also appear in the upper section with shares above 30%. On the far right of the horizontal axis, countries like Australia, Austria, and Hong Kong show GDP per capita figures between $50,000 and $100,000, with spending shares generally falling between 15% and 25%. Conversely, countries such as Burundi, Niger, and DR Congo cluster on the far left with GDP per capita below $2,000 and spending shares mostly between 5% and 15%. The distribution of points shows no clear linear relationship between national wealth and the relative share of that wealth spent on each student.",
+  "word_count": 191,
+  "latency_s": 13.132090091705322,
+  "prompt_tag": "v3_100"
+}

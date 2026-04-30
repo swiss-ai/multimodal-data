@@ -1,0 +1,9 @@
+{
+  "slug": "people-living-in-democracies-nondemocracies-fh",
+  "title": "People living in democracies and non-democracies",
+  "subtitle": "[Data](#dod:democracy-fh) by [Freedom House](#dod:freedom-house).",
+  "caption": "Between 2005 and 2025, the global population living in non-democracies has expanded to encompass the majority of humanity, while the number of people in electoral democracies has remained relatively static. The stacked area chart shows the total world population rising from roughly 6.6 billion to over 8 billion during this period. The blue section at the bottom, representing people living in electoral democracies, fluctuates between 3.5 billion and 3.9 billion, showing no sustained growth over the two decades. In contrast, the orange section above it, representing people living in non-democracies, widens significantly as the total population increases. By 2025, the orange area occupies the space between approximately 3.6 billion and 8.2 billion on the vertical axis, indicating that more than half of the global population resides in non-democratic regimes. The visual gap between the flat trajectory of the democratic population and the rising total population results in a chart where the non-democratic share dominates the upper portion of the graph.",
+  "word_count": 160,
+  "latency_s": 3.5984909534454346,
+  "prompt_tag": "v2"
+}

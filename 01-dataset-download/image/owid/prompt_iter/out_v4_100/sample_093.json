@@ -1,0 +1,9 @@
+{
+  "slug": "labor-force-participation-rate-by-age",
+  "title": "Labor force participation rate by age",
+  "subtitle": "Share of the working-age population (ages 15 and over) who are economically active (employed or unemployed).",
+  "caption": "Global labor force participation rates from 1990 to 2024 show distinct trajectories across four age groups. The line for adults aged 25-54 remains the highest throughout the period, starting just above 80% and ending near 79%, with a visible dip around 2020 followed by a recovery. Participation for the 55-64 age group shows a steady increase, rising from roughly 53% in 1990 to over 60% by 2024. Conversely, the rate for the 15-24 age group displays a consistent downward trend, falling from nearly 60% at the start of the period to approximately 42% by 2024. The 65+ age group maintains the lowest participation, hovering between 19% and 21% with minimal fluctuation. The most prominent pattern is the divergence between the rising participation of older workers and the declining participation of the youngest workers.",
+  "word_count": 133,
+  "latency_s": 7.183816909790039,
+  "prompt_tag": "v4_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "above-or-below-extreme-poverty-line-world-bank",
+  "title": "Number of people living in extreme poverty",
+  "subtitle": "Extreme poverty is defined as living below the [International Poverty Line](#dod:international-poverty-line) of $3 per day. This data is adjusted for inflation and differences in living costs between countries.",
+  "caption": "Number of people living in extreme poverty\n\nExtreme poverty is defined as living below the International Poverty Line of $3 per day. This data is adjusted for inflation and differences in living costs between countries.\n\nThe chart displays global population trends from 1990 to 2026, divided into two stacked areas representing those living in extreme poverty and those not in extreme poverty. The vertical axis measures population in billions, ranging from 0 to 9 billion. The lower section, colored in dark pink, represents the number of people living in extreme poverty. In 1990, this group stands at approximately 2.3 billion. The value remains relatively stable through the mid-1990s before beginning a steady decline around 2000. By 2010, the figure drops to roughly 1.5 billion, and by 2020, it falls below 1 billion. The projection for 2026 shows this segment stabilizing near 0.8 billion. The upper section, colored in light orange, represents the population not in extreme poverty. This area expands continuously throughout the period, starting at roughly 3 billion in 1990 and rising to over 7 billion by 2026. The total height of the stacked areas increases from just over 5 billion in 1990 to approximately 8.3 billion in 2026, reflecting overall population growth. The data is expressed in international dollars at 2021 prices and relates to income or consumption per capita depending on the country and year.",
+  "word_count": 228,
+  "latency_s": 13.945995807647705,
+  "prompt_tag": "v10_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "fish-seafood-production",
+  "title": "Fish and seafood production",
+  "subtitle": "Fish and seafood production is measured as the sum of seafood from wild catch and fish farming (aquaculture).",
+  "caption": "Fish and seafood production\n\nFish and seafood production is measured as the sum of seafood from wild catch and fish farming (aquaculture).\n\nThis choropleth map displays global fish and seafood production volumes for the year 2023, utilizing a continuous color scale to represent tonnage ranging from zero to over 30 million tonnes. The visualization reveals a highly concentrated distribution of output, with the darkest blue shade indicating the highest production tier of 30 million tonnes or more appearing exclusively in China. Surrounding this peak, a secondary tier of significant production between 3 million and 10 million tonnes encompasses India, Indonesia, Russia, the United States, and Peru. A broad middle band, representing output between 300,000 and 3 million tonnes, covers major coastal economies including Chile, Norway, Japan, Canada, and Mexico, alongside nations in Southeast Asia and parts of Europe. Lighter shades of green and yellow denote lower production volumes, generally falling between 0 and 300,000 tonnes, which characterizes the output of most countries across the African continent, the Middle East, and Central Asia. Several landlocked nations in central Africa and the Middle East appear with hatched patterns, signifying that no data is available for these regions. The geographic pattern shows that the highest volumes cluster in East and Southeast Asia as well as specific coastal nations in the Americas and Europe, while the lowest recorded volumes and data gaps predominate across the interior of Africa and parts of the Middle East.",
+  "word_count": 240,
+  "latency_s": 13.002955675125122,
+  "prompt_tag": "v9_100"
+}

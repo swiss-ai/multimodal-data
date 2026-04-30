@@ -1,0 +1,9 @@
+{
+  "slug": "cumulative-deaths-in-armed-conflicts",
+  "title": "Deaths in armed conflicts based on where they occurred, 1989-2024",
+  "subtitle": "Included are deaths of combatants and civilians due to fighting in [armed conflicts](#dod:armed-conflict-ucdp) that were ongoing over that time.",
+  "caption": "Between 1989 and 2024, the global total of deaths in armed conflicts reached 3.9 million, with the distribution across continents showing significant variation. Africa accounts for the second-highest total at 2.0 million deaths, representing more than half of the global figure. The Middle East follows with 720,000 deaths, while Asia and Oceania record 580,000. Europe shows a total of 370,000 deaths, and the Americas record the lowest regional total at 230,000. The horizontal bars illustrate a steep decline in mortality figures moving from the global aggregate to Africa, and then a further drop to the remaining regions, where values fall below one million.",
+  "word_count": 103,
+  "latency_s": 6.615620136260986,
+  "prompt_tag": "v3_100"
+}

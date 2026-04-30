@@ -1,0 +1,9 @@
+{
+  "slug": "number-oil-spills",
+  "title": "Global number of oil spills from tankers",
+  "subtitle": "Tanker accidents are broken down by magnitude based on the amount of oil spilled.",
+  "caption": "Global number of oil spills from tankers\n\nTanker accidents are broken down by magnitude based on the amount of oil spilled.\n\nThe stacked bar chart displays the annual count of oil spills from tankers between 1970 and 2024, categorized into medium spills (7–700 tonnes) shown in blue and large spills (>700 tonnes) shown in maroon. The total number of incidents fluctuates significantly over the period, reaching a peak in the mid-1970s where the combined height of the bars approaches 120. During this peak around 1974 and 1975, medium spills constitute the majority of the volume, occupying the range from the baseline up to approximately 90 to 95, with large spills adding the remaining portion to reach the total. Following this high point, the aggregate number of spills generally trends downward, though with notable year-to-year variability. Through the 1980s and 1990s, total annual counts frequently oscillate between 20 and 60. By the 2000s and extending into the 2010s, the bars are consistently shorter, with most years showing totals below 30 and several years dipping below 10. In the most recent years shown, from roughly 2020 to 2024, the total counts remain low, generally staying within the 5 to 15 range. Throughout the entire timeline, the blue segment representing medium spills forms the larger proportion of the stack in almost every year compared to the maroon segment for large spills.",
+  "word_count": 228,
+  "latency_s": 13.66231918334961,
+  "prompt_tag": "v11_100"
+}

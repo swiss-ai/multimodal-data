@@ -1,0 +1,8 @@
+{
+  "slug": "death-rate-from-malnutrition",
+  "title": "Death rate from malnutrition",
+  "subtitle": "Annual number of deaths from protein-energy malnutrition per 100,000 people.",
+  "note": "",
+  "caption": "Death rate from malnutrition\n\nAnnual number of deaths from protein-energy malnutrition per 100,000 people.\n\nThis choropleth world map displays 2023 death rates from protein-energy malnutrition per 100,000 people. The legend spans from 0 to over 300, with specific tick points at 0, 1, 3, 10, 30, 100, and 300. The darkest shades are concentrated in parts of West and Central Africa: Mali, Burkina Faso, and Niger fall into the highest visible bands, with values above 100 and extending toward the 300 range. Surrounding countries in the Sahel region appear in darker orange shades that sit in the 30 to 100 range. In South Asia, India and Pakistan sit in mid-range orange shades that fall between the 10 and 30 thresholds. Latin America shows a mix of lighter and mid-range shades, with Brazil and Mexico appearing in the 3 to 10 range. North America, most of Europe, and Australia sit predominantly in the lightest shades of the legend, with values near or below 1. Greenland and a few small territories show hatching, indicating no data. The visual pattern shows the highest rates concentrated across the Sahel region of Africa, with moderate rates in parts of South Asia and Latin America, and the lowest shades distributed across much of North America, Europe, and Oceania.",
+  "word_count": 212
+}

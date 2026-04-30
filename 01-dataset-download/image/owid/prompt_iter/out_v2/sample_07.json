@@ -1,0 +1,9 @@
+{
+  "slug": "net-official-development-assistance-and-aid-received",
+  "title": "Net official development assistance and official aid received",
+  "subtitle": "Net [official development assistance](#dod:oda), expressed in US dollars and adjusted for inflation.",
+  "caption": "In 2023, net official development assistance and official aid received by countries ranged from under $50 million to over $10 billion, expressed in constant 2021 US dollars. The darkest purple shading, indicating receipts of $10 billion or more, appears in India, Pakistan, and the Democratic Republic of the Congo. A second tier of high aid inflows, between $1 billion and $10 billion, covers much of sub-Saharan Africa—including Nigeria, Ethiopia, Kenya, and Tanzania—as well as Afghanistan, Bangladesh, the Philippines, and Colombia. Lighter purple shades, representing $250 million to $1 billion, appear across parts of Latin America such as Peru and Bolivia, in Southeast Asia including Indonesia and Vietnam, and in North African nations like Egypt and Morocco. Countries with no reported data, shown with diagonal hatching, include the United States, Canada, Australia, most of Western Europe, Russia, China, and several Gulf states. The geographic distribution shows the highest aid receipts concentrated in South Asia and sub-Saharan Africa, with lower but still substantial inflows scattered across Latin America and Southeast Asia, while high-income economies and large emerging markets report no data.",
+  "word_count": 179,
+  "latency_s": 3.9146437644958496,
+  "prompt_tag": "v2"
+}

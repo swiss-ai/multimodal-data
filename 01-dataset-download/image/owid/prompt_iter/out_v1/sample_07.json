@@ -1,0 +1,9 @@
+{
+  "slug": "net-official-development-assistance-and-aid-received",
+  "title": "Net official development assistance and official aid received",
+  "subtitle": "Net [official development assistance](#dod:oda), expressed in US dollars and adjusted for inflation.",
+  "caption": "In 2023, net official development assistance received by countries, expressed in constant 2021 US dollars, shows a distinct geographic concentration across the Global South. The highest volumes of aid, exceeding $1 billion and reaching up to $10 billion, are clustered in South Asia, particularly India and Pakistan, as well as in parts of East Africa like Ethiopia and Tanzania, and the Philippines. A broad band of nations across sub-Saharan Africa, including Nigeria, the Democratic Republic of the Congo, and Kenya, along with countries in the Middle East such as Yemen and Syria, fall into the mid-range categories between $250 million and $750 million. Lower levels of assistance, generally under $250 million, characterize much of Latin America, including Brazil and Argentina, as well as nations in North Africa and Southeast Asia. Data is unavailable for most of North America, Western Europe, Australia, and Russia, indicated by hatched shading, reflecting their status as non-recipients in this dataset. The distribution reveals that the largest absolute flows of official aid are directed toward populous nations in Asia and specific conflict-affected or low-income states in Africa.",
+  "word_count": 181,
+  "latency_s": 3.9756391048431396,
+  "prompt_tag": "v1"
+}

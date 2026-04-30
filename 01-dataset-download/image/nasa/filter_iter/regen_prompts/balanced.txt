@@ -1,0 +1,119 @@
+You are writing a training caption for a NASA image, with both the image and a seed caption in hand. Your goal is the best grounded caption a careful reader would write — using the seed for what seeds are good for, and using your eyes for what eyes are good for.
+
+================================================================
+THE BALANCE
+================================================================
+
+The seed is good for: the IDENTITY of the visible subject (what this spacecraft is called, what mission it's part of, what facility it is), its PURPOSE (what it's built to do), its PROVENANCE (who designed / built / operates it), and the SCIENTIFIC PHENOMENON it represents (why a rille forms, what creates a bloom). These are facts a viewer cannot derive from pixels alone, and getting them right is much of the caption's training value.
+
+Your eyes are good for: WHAT IS PHYSICALLY IN THE FRAME — shape, color, material, structure, spatial layout, readable text on signs/labels, visible action. These are facts the seed often skips or states clumsily; your observation is more reliable than the seed's paraphrase.
+
+The art is knowing which source to trust for which claim. When the seed says "LRV sitting on the lunar surface" and you see a rover on gray regolith, the seed tells you it's an LRV and you tell the reader what it looks like. When the seed says "35 miles north-northwest of Charleston" and you see a cloud spiral over a coastline, your eyes tell you the storm is over the Southeast; the seed's distance-from-city fact is not something you can see or verify, and stating it in the caption makes the VLM memorize pipeline metadata rather than learn visual concepts.
+
+================================================================
+WHAT THE SEED CAN AND CANNOT GIVE YOU
+================================================================
+
+USE seed facts when they tell you:
+- WHAT the visible object IS (Lunar Reconnaissance Orbiter, VIPER, Fast-MAC, MMS spacecraft, Apollo 13 Service Module, Prinz-Harbinger rille).
+- WHO designed / built / operates it (Marshall Space Flight Center, Boeing, JPL, Goddard).
+- WHAT IT DOES / its scientific purpose (studies water ice, tests circulation-control aerodynamics, carries radar instruments).
+- HISTORICAL PROGRAM context tied to the visible object (first used on Apollo 15; part of the Viking program; second flight of X).
+- SCIENTIFIC PROCESS that explains the visible phenomenon (lava flow carved the rille; phytoplankton blooms from nutrient upwelling).
+
+IGNORE seed facts that describe IMAGE METADATA rather than the subject:
+- Where the picture was taken (at Edwards Air Force Base, in Baikonur, at Cape Canaveral, at Cosmonaut Hotel, near Charleston). A continental/regional reference that a reader could confirm from the pixels (e.g., a visible coastline of the Southeast US) is fine; a base/city/GPS reference is not.
+- When the picture was taken (exact date, exact time, year-when-photographed). A historical-program date tied to the visible object is fine ("first used during Apollo 15"); a photo-taken year or date is NOT, even if the seed states it. For example, if the seed says "Voyager 1 photographed Jupiter in 1979", drop the 1979 unless that year is visibly printed on the image itself. If the seed says "1998 Continuous Data Sonic Boom Test", drop the 1998 unless it appears on a visible label in the frame. Default: omit all image-taken dates and years.
+- Specs not visibly displayed on the object (fuselage length, wing area, exact thrust in pounds, exact weight). If the image has a legible spec placard, quote it literally; otherwise, drop the specs.
+- Which satellite / telescope / camera captured the frame, UNLESS that attribution is essential scientific context AND given in a bare participial phrase ("imaged by the Lunar Reconnaissance Orbiter"). Never "was captured by X on date Y from place Z".
+
+IGNORE the seed entirely when it is primarily about an off-frame EVENT or PERSON rather than the visible subject:
+- Event / ceremony / anniversary / media-briefing / panel / dinner / public-event / VIP-visit framing.
+- Biographical or career summary of a named person.
+- Roll-calls or name lists.
+- Future-tense schedules.
+- Multi-photo series.
+- HTML boilerplate.
+In these cases, describe the image purely from your eyes — no seed-derived names, missions, locations, or dates.
+
+Never write a biographical sentence about a person (their career, years of service, missions flown). A name quoted verbatim from a visible tag is fine; a CV-style elaboration is not.
+
+================================================================
+HOW TO WRITE THE CAPTION
+================================================================
+
+Start with the visible SUBJECT of the frame. State what it is doing or how it looks, using your eyes. Weave in the seed's identity + purpose + provenance where they add non-trivial context. Close with scientific or program context if relevant. Typically 3–6 sentences.
+
+Verifiable text quoting: when you quote a sign, label, patch, or screen, reproduce the text LITERALLY, including abbreviations. "NASA LaRC" stays "NASA LaRC" — do not silently expand to "NASA Langley Research Center".
+
+Personal identity: a face in a spacesuit, helmet, uniform, or at a console is NOT visually identifiable. Drop personal names. Describe the action.
+
+Counts: state an integer count only if you can enumerate each instance in the frame AND the full set is visible. Otherwise use "several", "a row of", "multiple".
+
+No image-medium self-reference. Do not use "this image", "this photograph", "this view", "this scene", "this data visualization", "the image", "the photograph", "the scene", "the view" as a stand-in for the image itself. Do not use verbs like "captures / depicts / shows / reveals / was captured by / was composed from / was assembled from" with the image as subject or object. This applies to inverted and passive word orders too. Start every sentence with a visible SUBJECT. To attribute to an instrument, use a bare participial phrase ("imaged by the Cassini spacecraft"), no medium noun. "View" or "scene" is OK only for spatial extent ("dominates the view over the Southeast US" ✓).
+
+Stubborn patterns to NEVER use in astronomy / satellite / data-product captions — use the rewrite on the right:
+
+❌ "the view captures the planet in darkness"
+✅ "the planet appears in darkness" (make the subject the grammatical subject)
+
+❌ "The view captures the rear detail of the flap"
+✅ "The rear detail of the flap is visible" (or: just describe the detail directly)
+
+❌ "The image was captured by the Voyager 2 spacecraft and composed from blue, green, and violet frames"
+✅ "Imaged by the Voyager 2 spacecraft through blue, green, and violet filters" (participial, no medium noun)
+
+❌ "was assembled from data collected by NOAA's GOES-14 satellite"
+✅ "imaged by the GOES-14 satellite"
+
+❌ "captured this view of Saturn"
+✅ "imaged Saturn" (the instrument is the subject, the planet is the object, no "view")
+
+If you find yourself writing "the view" or "the image" or "the scene" as the grammatical subject or object of a verb, rewrite the sentence so a visible subject takes that slot.
+
+No pipeline references: never mention "the source caption", "the seed", "the provided text", "according to the caption".
+
+No training-data expansion. If the seed is terse, the rewrite is relatively short. Do not fill gaps with prior world-knowledge.
+
+Do not prefix named NASA assets with "NASA" or possessive "NASA's" — corpus context is implicit. The only legitimate "NASA" is quoting text visibly written on a sign, patch, or label.
+
+No weasel verbs: "appears to", "seems", "might", "likely", "is believed to".
+
+================================================================
+WORKED EXAMPLES
+================================================================
+
+Seed: "This photograph of an astronaut getting the Lunar Roving Vehicle (LRV) ready for exploration of the lunar surface was taken during activities of the Apollo 15 mission. Designed and developed by the Marshall Space Flight Center and built by the Boeing Company, the LRV was first used on the Apollo 15 mission and increased the range of astronauts' mobility and productivity on the lunar surface."
+
+Rewrite:
+The Lunar Roving Vehicle (LRV) sits on the gray lunar surface beside the gold-foil-wrapped descent stage of the Lunar Module, its tubular frame supporting wire-mesh wheels, a high-gain antenna mast, and folded crew seats. Tire tracks and footprints cross the foreground regolith. The LRV was designed and developed by Marshall Space Flight Center and built by the Boeing Company, first used on the Apollo 15 mission to extend the range and productivity of crewed lunar-surface exploration.
+
+— Kept: LRV identity, MSFC designer, Boeing builder, Apollo 15 first-use. Dropped: no year-taken, no location, no "was taken".
+
+---
+
+Seed: "Side view of a F-105B (serial #54-0102) photographed on Rogers Dry Lakebed at Edwards Air Force Base, California in 1959. The black stripes across the left wheel-panel complete the lettering on the bottom of the wing when wheels are retracted. Two of the F-105B characteristics are fuselage length of 61 feet 1.33 inches and a wing area of 385.0 square feet."
+
+Rewrite:
+A silver F-105B fighter jet sits on a flat, light-colored dry lakebed under a bright sky. The aircraft has a long, slender nose with a forward probe, a single-seat cockpit canopy, and "U.S. AIR FORCE" lettering along the fuselage with tail number 40102. Black-and-white stripes painted on the left wing panel are designed to complete lettering patterns visible on the wing underside when the landing gear retracts.
+
+— Kept: aircraft type (F-105B, inferable from tail/context), visible markings, wing-stripe design purpose. Dropped: "Edwards AFB", "1959", "61 feet 1.33 inches", "385 square feet" — all metadata or unverifiable specs.
+
+---
+
+Seed: "Expedition 43 Russian Cosmonaut Gennady Padalka of the Russian Federal Space Agency (Roscosmos) talks with an instructor during an Soyuz TMA-16M Trajectory and Flight Plan briefing, Thursday, March 19, 2015 at Cosmonaut Hotel in Baikonur, Kazakhstan."
+
+Rewrite:
+A man in a blue polo shirt with a logo on the left chest and wire-rimmed glasses leans forward to speak with a person in the foreground, who is out of focus. Black office chairs line the wall behind him, and the room is lit by overhead fluorescent light.
+
+— The seed is entirely about an off-frame event (briefing, Expedition assignment, location). Ignored entirely; captioned from eyes alone.
+
+================================================================
+SEED CAPTION
+================================================================
+{caption}
+
+================================================================
+OUTPUT
+================================================================
+Output ONLY the rewritten caption. No preamble. No explanation. No surrounding quotes. One paragraph.

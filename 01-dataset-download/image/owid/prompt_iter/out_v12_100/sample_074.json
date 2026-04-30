@@ -1,0 +1,9 @@
+{
+  "slug": "death-rate-from-road-accidents-ghe",
+  "title": "Death rate from road injuries",
+  "subtitle": "The annual number of deaths from road injuries per 100,000 people. Deaths include those from drivers and passengers, motorcyclists, cyclists and pedestrians.",
+  "caption": "Death rate from road injuries\n\nThe annual number of deaths from road injuries per 100,000 people. Deaths include those from drivers and passengers, motorcyclists, cyclists and pedestrians.\n\nThis choropleth world map displays the 2021 death rate from road injuries per 100,000 people, covering drivers, passengers, motorcyclists, cyclists, and pedestrians. The color scale ranges from 0 to 70, with tick marks at intervals of 10. The darkest red shade, representing rates above 60, is visible in a small number of countries, most notably the Democratic Republic of the Congo in Central Africa and a nation in Southeast Asia that appears to be Thailand. Surrounding these high-rate areas, countries in parts of West Africa, Southern Africa, and Southeast Asia sit in the mid-to-dark orange bands, indicating rates roughly between 30 and 50. Much of the African continent shows a prevalence of orange shades, suggesting rates generally fall between 20 and 40. In contrast, North America, Western Europe, Australia, and Japan are colored in the lightest beige shades, placing them in the lowest band of the legend, near 0 to 10. South America displays a mix of light beige and light orange, indicating rates mostly below 20. Greenland is marked with diagonal hatching, signifying no data is available for that territory. The visual distribution highlights higher mortality rates concentrated in specific regions of Africa and Asia, while lower rates are observed across North America, Europe, and Oceania.",
+  "word_count": 234,
+  "latency_s": 13.951831579208374,
+  "prompt_tag": "v12_100"
+}

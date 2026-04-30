@@ -1,0 +1,9 @@
+{
+  "slug": "employment-discrimination-lgbt-equaldex",
+  "title": "Employment discrimination based on sexual orientation or gender identity",
+  "subtitle": "Includes discrimination in hiring, promotion, termination and harassment at work. Only legal status considered, not enforcement.",
+  "caption": "Across the globe in 2025, legal protections against employment discrimination based on sexual orientation or gender identity vary significantly by country. The map displays nations colored according to the scope of their legal statutes, ranging from comprehensive coverage to a complete absence of protections. Blue regions, including the United States, Canada, Australia, and most of South America, indicate laws that protect both sexual orientation and gender identity. Green areas, such as India and Argentina, show protections limited to gender identity only, while light yellow regions like the Philippines and Thailand protect sexual orientation only. A large contiguous band of red covers much of Africa, the Middle East, and Russia, signaling no legal protections in these territories. Several countries in Europe and the Americas appear in mustard yellow, denoting that protections vary by region within the country's borders. The visual distribution places the highest concentration of comprehensive legal protections in the Americas and Oceania, while the absence of protections dominates the map across Africa and Asia.",
+  "word_count": 165,
+  "latency_s": 9.124514818191528,
+  "prompt_tag": "v3_100"
+}

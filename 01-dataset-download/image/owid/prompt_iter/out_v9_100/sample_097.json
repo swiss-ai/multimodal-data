@@ -1,0 +1,9 @@
+{
+  "slug": "plastic-waste-per-capita-imports-vs-exports",
+  "title": "Plastic waste per capita imports vs. exports",
+  "subtitle": "",
+  "caption": "Plastic waste per capita imports vs. exports\n\nImports per person (tonnes; plotted on a logarithmic axis)\n\nThis scatter plot maps the relationship between plastic waste exports and imports per person for various countries in 2024, with both axes plotted on a logarithmic scale ranging from 0.000001 to over 10 tonnes. The data points are color-coded by income group, distinguishing low-income, lower-middle-income, upper-middle-income, and high-income countries. A diagonal line running from the bottom-left to the top-right marks the point where imports equal exports, serving as a visual reference for trade balance. High-income countries, shown in dark green, generally occupy the upper and right-hand sections of the chart, indicating higher volumes of trade. Austria and Norway appear in the top-right quadrant with exports and imports both exceeding 10 tonnes per person, while Canada and Bulgaria sit nearby with imports around 10 tonnes and exports between 1 and 10 tonnes. The Bahamas and Malaysia show high import levels relative to their exports, positioning them well above the diagonal line. In contrast, French Polynesia and Ecuador appear near the bottom of the chart with very low values on both axes, below 0.001 tonnes. Lower-middle-income countries like Nepal and Burundi cluster in the bottom-left corner with minimal trade activity. Upper-middle-income nations such as Turkey and Azerbaijan display moderate to high import levels with lower export figures. The distribution shows a positive correlation where nations with higher export volumes typically maintain higher import volumes, though the specific ratios vary significantly across the income groups.",
+  "word_count": 248,
+  "latency_s": 8.443150281906128,
+  "prompt_tag": "v9_100"
+}

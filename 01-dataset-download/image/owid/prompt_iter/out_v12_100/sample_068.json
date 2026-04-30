@@ -1,0 +1,9 @@
+{
+  "slug": "fruit-consumption-per-capita",
+  "title": "Fruit consumption per capita",
+  "subtitle": "Average fruit consumption per person, measured in kilograms per year.",
+  "caption": "Fruit consumption per capita\n\nAverage fruit consumption per person, measured in kilograms per year.\n\nThis choropleth world map displays 2023 average fruit consumption per person, measured in kilograms per year. The legend spans from 0 kg to 180 kg, with tick points every 20 kg. The darkest green shades, representing the highest consumption levels above 140 kg, are visible in the United States, Canada, and several countries in the Middle East including Iran and Turkey. In Europe, Spain and Italy appear in dark green bands indicating consumption between 120 kg and 140 kg. Most of South America, including Brazil and Argentina, sits in mid-range green shades between 60 kg and 100 kg. Australia and New Zealand fall in the 80 kg to 100 kg range. Across Africa, consumption levels vary widely: South Africa and Morocco appear in darker green bands around 80 kg to 100 kg, while many countries in Central and West Africa sit in the lightest shades, below 40 kg. In Asia, China and India show mid-range consumption between 40 kg and 80 kg, while Japan and South Korea appear in darker bands above 100 kg. Greenland and several small island nations show hatching, indicating no data. The data is based on per capita food supply at the consumer level, but does not account for food waste at the consumer level. The visual pattern shows the highest fruit consumption concentrated in North America, parts of Europe, and the Middle East, with the lowest consumption distributed across much of Africa and parts of Asia.",
+  "word_count": 255,
+  "latency_s": 15.729974746704102,
+  "prompt_tag": "v12_100"
+}

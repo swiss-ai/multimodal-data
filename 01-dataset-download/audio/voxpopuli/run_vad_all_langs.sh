@@ -38,7 +38,7 @@ for lang in "${LANGS[@]}"; do
     echo ""
     echo "[$(date '+%F %T')] Starting VAD for ${lang}..."
 
-    python -m audio_tokenization.utils.prepare_data.run_vad \
+    python -m audio_tokenization.prepare.preprocess.run_vad \
         --audio_dir "${AUDIO_DIR}" \
         --output_dir "${OUTPUT_DIR}" \
         --dataset "${DATASET}" \

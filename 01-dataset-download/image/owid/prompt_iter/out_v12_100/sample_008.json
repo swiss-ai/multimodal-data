@@ -1,0 +1,9 @@
+{
+  "slug": "openness-of-executive-recruitment-score",
+  "title": "Openness of Executive Recruitment Score",
+  "subtitle": "Data by [Polity 5](#dod:polity).",
+  "caption": "Openness of Executive Recruitment Score\n\nData by Polity 5.\n\nThis choropleth world map displays the Openness of Executive Recruitment Score for the year 2020. The legend categorizes countries based on how executive power is transferred, ranging from \"Power seized\" (represented by dark red) to \"Open\" (represented by blue), with intermediate categories for \"Hereditary succession,\" \"Dual, chief minister designated,\" and \"Dual, chief minister elected.\" The note clarifies that the underlying numeric values range from 0 for seized power to 4 for open recruitment. The vast majority of the world's landmass, including North America, South America, Europe, Australia, and large portions of Asia and Africa, is colored in the solid blue shade corresponding to the \"Open\" category. In contrast, a distinct cluster of countries in North Africa and the Middle East appears in shades of red and orange. Specifically, Sudan, Libya, and Yemen are visible in the darkest red band, indicating that power was seized. Neighboring countries such as Algeria, Mauritania, and Saudi Arabia appear in lighter red or orange shades, falling into the \"Hereditary succession\" or intermediate bands. A few territories, including Greenland and Western Sahara, are marked with diagonal hatching to indicate no data is available. The visual distribution shows a global predominance of open executive recruitment, with concentrated exceptions in specific regions of Africa and the Middle East where hereditary or seized power mechanisms are recorded.",
+  "word_count": 227,
+  "latency_s": 12.198931217193604,
+  "prompt_tag": "v12_100"
+}

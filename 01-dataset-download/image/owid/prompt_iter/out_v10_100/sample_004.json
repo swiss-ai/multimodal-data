@@ -1,0 +1,9 @@
+{
+  "slug": "electricity-renewables",
+  "title": "Electricity generation from renewables",
+  "subtitle": "Measured in [terawatt-hours](#dod:watt-hours). Renewable sources include solar, wind, hydropower, bioenergy, geothermal, wave, and tidal.",
+  "caption": "Electricity generation from renewables\n\nMeasured in terawatt-hours. Renewable sources include solar, wind, hydropower, bioenergy, geothermal, wave, and tidal.\n\nThe map displays global electricity generation from renewable sources in 2025, measured in terawatt-hours. China and the United States are shaded in the darkest blue, indicating generation levels exceeding 1,000 TWh, with China appearing to reach the highest bracket above 2,000 TWh. Brazil and Canada are colored in a medium-dark blue, placing them in the 200 to 500 TWh range. A group of countries including India, Russia, and several nations in Western Europe such as Germany and France fall within the 50 to 200 TWh band, represented by lighter shades of blue. Most countries in Africa, the Middle East, and parts of Asia are shaded in very light green or white, corresponding to generation levels below 50 TWh. Greenland, Western Sahara, and a few other territories are marked with diagonal hatching to denote no available data. The color scale at the bottom progresses from white for 0 TWh through various shades of green and blue up to dark blue for values over 2,000 TWh, providing a visual gradient of renewable electricity production across nations.",
+  "word_count": 192,
+  "latency_s": 10.449139833450317,
+  "prompt_tag": "v10_100"
+}

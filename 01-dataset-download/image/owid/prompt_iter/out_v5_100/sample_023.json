@@ -1,0 +1,9 @@
+{
+  "slug": "the-gender-wage-ratio-in-different-income-percentiles",
+  "title": "The gender wage ratio in different income percentiles",
+  "subtitle": "The gender ratio refers to the raw female-male wage ratio. \"Ninetieth percentile\" indicates an income higher than that of 90% of the population - thus, for example, in 2010 a 74% ratio in the ninetieth percentile indicates that the highest earning women made 74% of the hourly wage of the highest earning men.",
+  "caption": "Between 1980 and 2010, the raw female-to-male hourly wage ratio in the United States shows distinct trajectories across three income percentiles. The vertical axis measures this ratio from 0% to 100%, where a value of 80% indicates women earn 80% of the hourly wage of men in that specific income bracket. The fiftieth percentile line, representing median earners, begins at the lowest point on the chart in 1980, sitting near 60%, and rises steadily to become the highest line by 2010, reaching just above 80%. The tenth percentile line, tracking lower-income earners, starts slightly higher than the median line in 1980 at roughly 65% and climbs to approximately 80% by the end of the period, converging closely with the median line. The ninetieth percentile line, representing the highest earners, displays a different pattern; it starts near 62% in 1980, rises to a peak around 75% in 1990, and then flattens out, remaining static between 70% and 75% through 2010. While the lower and middle income groups show continuous convergence toward parity over the thirty-year span, the top income group shows a plateau after 1990. The data shows the largest gains occurring among median and lower-income workers, while the wage ratio for the highest earners remains the lowest of the three groups by 2010.",
+  "word_count": 213,
+  "latency_s": 12.836714267730713,
+  "prompt_tag": "v5_100"
+}

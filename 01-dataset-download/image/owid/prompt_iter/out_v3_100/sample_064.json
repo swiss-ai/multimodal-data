@@ -1,0 +1,9 @@
+{
+  "slug": "deaths-due-to-unsafe-sex",
+  "title": "Deaths due to unsafe sex",
+  "subtitle": "Estimated annual number of deaths attributed to [unsafe sex](#dod:unsafe_sex). Unsafe sex is defined as the risk of disease due to sexual transmission. Unsafe sex is an important risk factor in cervical cancer, HIV and sexually-transmitted infections.",
+  "caption": "The 2023 world map displays the estimated annual number of deaths attributed to unsafe sex, defined as the risk of disease from sexual transmission including cervical cancer, HIV, and sexually-transmitted infections. The color scale ranges from light beige for zero deaths to deep maroon for 300,000 deaths, revealing a distinct geographic distribution of mortality. The highest death counts, falling in the 100,000 to 300,000 band, are concentrated in South Africa and India. China and Russia appear in the 30,000 to 100,000 range, while the United States, Brazil, and Mexico occupy the 10,000 to 30,000 band. Large portions of North America, Europe, and Australia show the lowest values, falling between zero and 1,000 deaths. The visual pattern shows the heaviest burden located in southern Africa and South Asia, with lower counts across the Americas and Europe.",
+  "word_count": 135,
+  "latency_s": 10.946831703186035,
+  "prompt_tag": "v3_100"
+}

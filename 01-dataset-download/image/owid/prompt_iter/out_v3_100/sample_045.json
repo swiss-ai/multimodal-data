@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-people-who-identify-as-religious-or-spiritual",
+  "title": "Share of people who identify as religious or spiritual",
+  "subtitle": "",
+  "caption": "In 2023, the composition of religious and spiritual identity varies significantly across 25 countries, as shown by a stacked horizontal bar chart. India leads with the highest share of people identifying as \"Religious\" (dark blue), accounting for roughly 65% of the population, followed by Nigeria and Turkey, where this category also dominates. In contrast, Japan and Australia show minimal shares in the \"Religious\" category, with Japan at under 5% and Australia at around 10%. The \"Both religious and spiritual\" group (light green) is most prominent in Tanzania and the Philippines, each exceeding 30%, while it is nearly absent in Egypt and Brazil. The \"Spiritual\" category (dark green) peaks in Mexico and the United States, both hovering near 40%, whereas it is negligible in India and Nigeria. The \"Neither religious nor spiritual\" segment (pink) is largest in Sweden, Spain, and the United Kingdom, each surpassing 50%, and smallest in India and Nigeria. The \"Did not answer/'I don't know'\" portion (gray) remains consistently small across all nations, rarely exceeding 5%. The most visible pattern is the inverse relationship between the \"Religious\" and \"Neither religious nor spiritual\" categories: countries with high shares in one tend to have low shares in the other.",
+  "word_count": 199,
+  "latency_s": 13.283644437789917,
+  "prompt_tag": "v3_100"
+}

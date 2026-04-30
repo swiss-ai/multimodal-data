@@ -1,0 +1,10 @@
+PERSONA: civic / commercial architecture
+
+BUILDING (for reference, not fed to model): Crater Lake Lodge | lodge | public & commercial | Klamath Falls, Oregon, United States of America
+
+CAPTION (131.1s, 309 words):
+A black-and-white architectural floor plan titled "ORIGINAL BUILDING BASEMENT PLAN" occupies the center of the sheet. The plan is divided into three primary sections from left to right. The leftmost section is a rectangular room labeled "CRAWL SPACE" with three small square symbols along its left wall. The central section is a larger rectangular area also labeled "CRAWL SPACE," containing two parallel rows of three dashed circles each, with four small square symbols between the rows. The rightmost section is a complex of partitioned rooms. In the upper portion of this section, a room labeled "COOLER" sits to the left of a room labeled "STORAGE." Below these, another room labeled "COOLER" is positioned to the left of a room labeled "STORAGE." Further down, a room labeled "TRANSFORMER VAULT" is situated next to a corridor. The lower-left area of this section contains a room labeled "STORAGE" and a smaller adjacent space labeled "STOR." with a staircase symbol. Dimension lines with measurements such as "12'-0"", "7'-0"", "15'-8"", and "11'-7"" are placed throughout the partitioned rooms.
+
+Section cut markers labeled "C," "D," and "E" with directional arrows are positioned around the perimeter of the plan. Below the main drawing, a graphic scale bar is marked in increments for "FEET" (0 to 50) and "METERS" (0 to 10), accompanied by the text "SCALE: 1/8" = 1'-0"". A north arrow symbol is located to the right of the scale.
+
+A vertical title block runs along the right edge of the sheet. From top to bottom, it contains the text: "HISTORIC AMERICAN BUILDINGS SURVEY", "SHEET 4 OF 23 SHEETS", "SURVEY NO. OR-48", "CRATER LAKE NATIONAL PARK KLAMATH COUNTY, OREGON", "NAME AND LOCATION OF STRUCTURE", "CRATER LAKE LODGE", and "DRAWN BY: TIMOTHY STACKS". Below the drawing area, additional text reads "OFFICE OF ARCHAEOLOGY AND HISTORIC PRESERVATION" and "UNITED STATES DEPARTMENT OF THE INTERIOR NATIONAL PARK SERVICE".

@@ -1,0 +1,9 @@
+{
+  "slug": "deaths-from-preterm-birth-complications",
+  "title": "Death rate from neonatal preterm birth complications",
+  "subtitle": "The estimated death rate from [neonatal](#dod:neonatal) [preterm birth complications](#dod:preterm-birth-complications) in children under five years old, per 100,000.",
+  "caption": "The choropleth map displays the estimated death rate from neonatal preterm birth complications in children under five years old per 100,000 population for the year 2023. The color scale ranges from pale yellow for the lowest rates to dark blue for the highest, with distinct bands marking thresholds at 0, 10, 20, 50, 100, 200, 500, and 1,000 deaths per 100,000. The highest mortality rates, falling in the 500 to 1,000 band, appear across a contiguous region of West and Central Africa, including Mali, Niger, Chad, and Nigeria. Moderate rates in the 50 to 200 band cover much of South Asia, including India and Pakistan, as well as parts of South America like Venezuela and Bolivia. Conversely, the lowest rates, in the 0 to 10 band, are visible across Western and Northern Europe, Australia, Canada, and the United States. Large areas of Russia and China fall into the 10 to 20 band. The map shows a clear geographic concentration of high mortality in sub-Saharan Africa, while the lowest rates cluster in high-income regions of Europe, North America, and Oceania.",
+  "word_count": 179,
+  "latency_s": 11.776464939117432,
+  "prompt_tag": "v4_100"
+}

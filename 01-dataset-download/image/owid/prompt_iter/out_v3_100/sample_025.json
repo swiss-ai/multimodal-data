@@ -1,0 +1,9 @@
+{
+  "slug": "monthly-sea-ice-extent-in-the-arctic-decadal-average",
+  "title": "Monthly sea ice extent in the Arctic, decadal average",
+  "subtitle": "Each point represents the monthly average sea ice extent, averaged across all years within the decade. The current decade is highlighted in red, with the current year shown in black for comparison.",
+  "caption": "Monthly average Arctic sea ice extent, calculated as a decadal average, follows a consistent seasonal cycle where coverage peaks in early spring and reaches its minimum in late summer. The lines trace a U-shaped curve across the twelve months, with the highest values occurring in February and March and the lowest in September. A clear downward shift is visible across the decades; the line representing the 1980s sits at the top of the chart, showing a peak extent near 16 million square kilometers, while the line for the 2020s sits at the bottom, peaking below 15 million square kilometers. This separation between the decades is most pronounced during the winter and spring months, whereas the lines converge more closely during the September minimum, where all decades drop below 6 million square kilometers. The black line representing 2025 tracks slightly below the 2020s average for most of the year. The chart shows a consistent reduction in sea ice extent across all months when comparing the 1980s average to the 2020s average.",
+  "word_count": 170,
+  "latency_s": 10.344132661819458,
+  "prompt_tag": "v3_100"
+}

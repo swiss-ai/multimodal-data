@@ -1,0 +1,9 @@
+{
+  "slug": "openness-of-executive-recruitment-score",
+  "title": "Openness of Executive Recruitment Score",
+  "subtitle": "Data by [Polity 5](#dod:polity).",
+  "caption": "Openness of Executive Recruitment Score, 2020\nData by Polity 5.\n\nThe choropleth map displays the openness of executive recruitment across countries in 2020, using a color scale that ranges from dark red for \"Power seized\" to dark blue for \"Open.\" The legend identifies five categories: \"Power seized\" (dark red), \"Hereditary succession\" (orange-red), \"Dual, chief minister designated\" (light red), \"Dual, chief minister elected\" (purple-blue), and \"Open\" (dark blue). The highest openness scores appear across North America, South America, Western Europe, Australia, and parts of East Asia, where countries like the United States, Brazil, Germany, and Japan fall into the \"Open\" category. In contrast, the lowest scores cluster in North Africa and the Middle East, with countries such as Libya, Sudan, and Yemen marked in dark red for \"Power seized.\" Hereditary succession is visible in Saudi Arabia and Oman, shown in orange-red. A few countries, including Russia and Thailand, are shaded in light red, indicating a dual system where the chief minister is designated rather than elected. Gray areas, such as Greenland and parts of the Horn of Africa, denote no available data. The map shows a clear geographic divide: open executive recruitment dominates the Americas and much of Europe and Oceania, while restricted or non-elective systems prevail in parts of Africa and the Middle East. The most concentrated pattern is the prevalence of \"Open\" recruitment across the Western Hemisphere and Western Europe, contrasted with \"Power seized\" or \"Hereditary succession\" in a band stretching from West Africa through the Arabian Peninsula.",
+  "word_count": 249,
+  "latency_s": 13.302674531936646,
+  "prompt_tag": "v6_100"
+}

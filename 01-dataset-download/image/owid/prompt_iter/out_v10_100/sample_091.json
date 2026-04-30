@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-cancer-deaths-attributed-to-risk-factors",
+  "title": "Share of cancer deaths attributed to risk factors",
+  "subtitle": "The estimated share of deaths from [cancers](#dod:cancer) attributed to all [risk factors](#dod:risk-factor). The remaining share represents deaths that would be expected to have occurred in the absence of these known risk factors.",
+  "caption": "Share of cancer deaths attributed to risk factors\n\nThe estimated share of deaths from cancers attributed to all risk factors. The remaining share represents deaths that would be expected to have occurred in the absence of these known risk factors.\n\nThis horizontal bar chart displays the estimated share of cancer deaths attributed to risk factors for various cancer types worldwide in 2023. Cervical cancer shows the highest attribution at 100%, followed by mesothelioma at 91.7%. Lung, tracheal, and bronchus cancers have 76.4% of deaths attributed to risk factors, while larynx cancer stands at 73.4%. Esophageal and colon and rectum cancers both fall within the 56% range, specifically 56.4% and 56.2% respectively. Liver cancer is attributed at 48.2%, and lip and oral cavity cancers at 39.4%. Pancreatic cancer shows 38.7%, while uterine and bladder cancers are both at 33%. Breast cancer is at 29.8%, kidney cancer at 27.9%, and nasopharynx cancer at 23.7%. Stomach cancer has 19% attribution, leukemia 18.7%, and thyroid cancer 11.6%. Gallbladder and biliary tract cancers are at 11.4%, multiple myeloma at 7.6%, and non-Hodgkin lymphoma at 4.8%. Prostate cancer shows the lowest attribution at 0.9%. The note indicates that in some cases, IHME methodology for calculating risks can include negative values, which can reflect potential protective effects or indicate uncertainty due to weak or poorly understood relationships between the risk factors and health outcomes.",
+  "word_count": 227,
+  "latency_s": 13.483659267425537,
+  "prompt_tag": "v10_100"
+}

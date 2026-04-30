@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-children-reaching-sufficient-reading-comprehension-by-the-end-of-lower-secondary-age",
+  "title": "Share of children achieving minimum reading proficiency by the end of lower-secondary age",
+  "subtitle": "",
+  "caption": "Share of children achieving minimum reading proficiency by the end of lower-secondary age\n\nPercentage of children at lower secondary school age meeting reading comprehension standards. This data accounts for school completion rates to estimate reading skills for all children, not just those in school.\n\nThe bar chart displays data for 2022, ranking countries by the percentage of children achieving minimum reading proficiency. The bars are color-coded by income level, with dark green representing high-income countries, light green for upper-middle-income, light purple for lower-middle-income, and dark purple for low-income countries. At the top of the distribution, Ireland leads with a value exceeding 80%, followed closely by a cluster of high-income nations including Australia, Lithuania, and Spain, which all sit between roughly 70% and 80%. Turkey and Greece appear in the middle of the range, with values hovering near the 60% to 70% mark. As the values descend, the chart shows a mix of income groups; Moldova and Brazil fall within the 40% to 50% band, while Kazakhstan and Azerbaijan are positioned between 30% and 40%. The lower end of the chart features the Dominican Republic and Cambodia, with values dropping below 20%. Throughout the visualization, high-income countries predominantly occupy the upper half of the ranking, while lower-middle-income countries are concentrated in the bottom quartile, though there is some overlap in the middle ranges where upper-middle-income nations like Turkey and Brazil are interspersed with high-income peers.",
+  "word_count": 234,
+  "latency_s": 12.655891418457031,
+  "prompt_tag": "v11_100"
+}

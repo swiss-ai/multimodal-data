@@ -1,0 +1,9 @@
+{
+  "slug": "number-oil-spills",
+  "title": "Global number of oil spills from tankers",
+  "subtitle": "Tanker accidents are broken down by magnitude based on the amount of oil spilled.",
+  "caption": "From 1970 to 2024, the global number of oil spills from tankers shows a distinct downward trajectory, with annual totals falling from a peak of nearly 120 incidents in the mid-1970s to fewer than 10 in recent years. The stacked bars break these accidents down by magnitude, distinguishing between medium spills (7–700 tonnes) and large spills (>700 tonnes). In the early 1970s, the bars are dominated by medium spills, which reached a high of roughly 95 in 1974, while large spills frequently numbered between 20 and 30 per year. Over the subsequent decades, the height of the bars steadily decreases, with both categories contributing to the decline. By the 2010s and into the 2020s, the total annual count remains consistently low, typically staying below 10, with large spills becoming rare events that often register as zero or single digits. The most visible pattern is the sustained reduction in frequency across both spill sizes over the fifty-four-year period.",
+  "word_count": 157,
+  "latency_s": 12.245758533477783,
+  "prompt_tag": "v3_100"
+}

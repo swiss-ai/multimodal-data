@@ -1,0 +1,8 @@
+{
+  "slug": "covid-icu-patients-per-million",
+  "title": "Number of COVID-19 patients in ICU per million",
+  "subtitle": "",
+  "note": "For countries where the number of ICU patients is not reported, we display the closest metric (patients ventilated or in critical condition).",
+  "caption": "Number of COVID-19 patients in ICU per million\n\nThis line chart tracks the number of COVID-19 patients in intensive care units per million people across nine countries from March 2020 through August 2024. The vertical axis ranges from 0 to 140, while the horizontal axis marks time in roughly six-month intervals. Multiple colored lines represent France, the United Kingdom, Spain, Canada, Israel, the United States, Germany, Italy, Belgium, and the Netherlands. The highest peaks occur in early 2020 and late 2020 to early 2021, with several countries exceeding 80 patients per million — Belgium and Spain reach above 100, and Belgium briefly surpasses 120. A secondary cluster of peaks appears around September 2021, with the United States and Germany approaching 80. After mid-2022, all lines remain below 20, with most hovering near or below 10 through 2023 and into 2024. Canada’s line remains consistently lower than others after early 2021, rarely exceeding 20. Israel shows sharp spikes in early 2021 and again in late 2021, then declines steadily. For countries where ICU patient counts are not reported, the displayed metric reflects patients who are ventilated or in critical condition. The visual pattern shows repeated waves of high ICU occupancy through 2021, followed by sustained low levels from 2022 onward across all represented nations.",
+  "word_count": 213
+}

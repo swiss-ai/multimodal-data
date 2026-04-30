@@ -1,0 +1,9 @@
+{
+  "slug": "rate-of-child-deaths-attributed-to-child-and-maternal-malnutrition",
+  "title": "Rate of child deaths attributed to child and maternal malnutrition",
+  "subtitle": "The estimated number of deaths attributed to child and maternal malnutrition, per 100,000 children under the age of 5.",
+  "caption": "Rate of child deaths attributed to child and maternal malnutrition\n\nThe estimated number of deaths attributed to child and maternal malnutrition, per 100,000 children under the age of 5.\n\nThis choropleth world map displays 2023 rates of child deaths attributed to child and maternal malnutrition, per 100,000 children under five. The legend spans from zero to over 2,000, with specific tick points at 10, 20, 50, 100, 200, 500, 1,000 and 2,000. The darkest shades are concentrated across Sub-Saharan Africa: Chad, Somalia, the Central African Republic, and Nigeria fall into the highest visible bands, with values above 500 and extending into the 1,000 and 2,000 range. Surrounding West and East African countries appear in darker orange shades that sit in the hundreds. In South and Southeast Asia, India, Pakistan, and Afghanistan sit in mid-range orange shades that fall between the 50 and 200 thresholds. Latin America and the Middle East show a mix of lighter and mid-range shades, with no single band dominating the region. North America, most of Europe, and Australia sit predominantly in the lightest shades of the legend, though not uniformly — some countries appear slightly darker than others within these continents. Greenland and a few small territories show either a very pale shade or hatching; the exact status is difficult to distinguish. The visual pattern shows the highest rates concentrated across the African continent and parts of South Asia, with the lowest shades distributed across much of North America, Europe, and Oceania.",
+  "word_count": 246,
+  "latency_s": 15.43203353881836,
+  "prompt_tag": "v12_100"
+}

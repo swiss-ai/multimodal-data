@@ -1,0 +1,9 @@
+{
+  "slug": "global-co2-concentration",
+  "title": "Global atmospheric CO₂ concentration",
+  "subtitle": "Atmospheric carbon dioxide (CO₂) concentration is measured in parts per million (ppm).",
+  "caption": "Global atmospheric carbon dioxide concentration has risen continuously from approximately 335 parts per million in 1979 to over 420 parts per million by 2025. The visualization tracks this accumulation using two overlapping lines: a blue line representing monthly averages and a smoother orange line indicating the annual average. Superimposed on the long-term upward trajectory is a distinct, repeating seasonal cycle visible in the monthly data, where concentrations oscillate up and down within each year. Despite these regular annual fluctuations, the overall trend remains strictly positive, with the concentration level increasing by nearly 90 parts per million over the forty-six-year period shown. The chart illustrates a consistent accumulation of atmospheric carbon dioxide without any visible periods of sustained decline or stabilization.",
+  "word_count": 120,
+  "latency_s": 2.702939748764038,
+  "prompt_tag": "v1"
+}

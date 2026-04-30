@@ -1,0 +1,9 @@
+{
+  "slug": "injuries-from-terrorist-attacks",
+  "title": "Injuries from terrorist attacks",
+  "subtitle": "Confirmed non-fatal injuries, including all victims and attackers who were hurt because of a [terrorist attack](#dod:terrorism).",
+  "caption": "The world map displays confirmed non-fatal injuries from terrorist attacks in 2021, using a color scale ranging from pale yellow for single-digit figures to deep maroon for over 1,000 injuries. The highest concentrations of injuries appear in South Asia and the Middle East, with Afghanistan and Yemen shaded in the darkest maroon band, indicating more than 1,000 non-fatal casualties in each. India, the United States, and Nigeria fall into the orange-red bands, representing between 100 and 300 injuries. A broad swath of countries across Europe, South America, and Australia appears in the lightest yellow, signifying fewer than 10 injuries or zero reported cases. Several nations, including Greenland and parts of central Africa, are marked with diagonal hatching to denote missing data. The geographic distribution shows a clear clustering of high-injury zones in conflict-affected regions, while most of the Western Hemisphere and Oceania remain in the lowest injury bands.",
+  "word_count": 148,
+  "latency_s": 3.357113838195801,
+  "prompt_tag": "v2"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "cumulative-number-of-objects-launched-into-outer-space",
+  "title": "Cumulative number of objects launched into space",
+  "subtitle": "This includes satellites, probes, landers, crewed spacecrafts, and space station flight elements launched into Earth orbit or beyond.",
+  "caption": "Cumulative number of objects launched into space\n\nThis includes satellites, probes, landers, crewed spacecrafts, and space station flight elements launched into Earth orbit or beyond.\n\nThe chart tracks the cumulative count of space objects from 1957 to 2025, with the \"World\" total rising from zero to approximately 25,000. The global trend line remains below 5,000 until roughly 1990, then accelerates gradually to about 7,000 by 2010, before climbing steeply to reach the 25,000 mark by the end of the period. The United States line follows a similar trajectory but at a lower magnitude, ending near 16,000. Russia’s cumulative total sits between 3,000 and 4,000 for most of the period after 1980, finishing just under 4,000. China’s line begins near zero and rises sharply after 2010, reaching approximately 2,000 by 2025. Japan, France, India, and Germany each remain below 1,000 throughout, with Japan and France approaching or slightly exceeding 500 by 2025, while India and Germany stay closer to 200–300. The European Space Agency line remains near the bottom, barely distinguishable from zero until the final years, where it rises slightly above 100. All lines are attributed according to the launching country on behalf of another, as noted. The visual spacing between the World total and the sum of individual national lines suggests contributions from other entities not separately labeled. The steepest growth across all visible lines occurs between 2010 and 2025, particularly for the World and United States series.",
+  "word_count": 239,
+  "latency_s": 18.206125020980835,
+  "prompt_tag": "v11_100"
+}

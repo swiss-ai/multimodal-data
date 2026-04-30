@@ -1,0 +1,9 @@
+{
+  "slug": "depressive-disorders-prevalence-by-age",
+  "title": "Share of people who have depressive disorders, by age",
+  "subtitle": "Estimated share of people who have  [depressive disorders](#dod:depressive_disorders), whether or not they are diagnosed, based on representative surveys, medical data and statistical modelling.",
+  "caption": "Share of people who have depressive disorders, by age, World, 2023\nEstimated share of people who have depressive disorders, whether or not they are diagnosed, based on representative surveys, medical data and statistical modelling.\n\nThis horizontal bar chart displays the estimated share of the global population with depressive disorders across specific age groups for the year 2023. The data is presented as a percentage, with bars extending to the right to indicate the magnitude of the share for each category. The values range from a low of 0.98% for children aged 5-14 to a high of 5.46% for adults aged 65-69. The chart distinguishes between age-standardized figures, which stand at 3.81%, and the aggregate figure for all ages, which is 4%. The distribution shows a distinct pattern where prevalence is lowest among the youngest demographic and rises significantly as age increases. The bar for ages 5-14 is the shortest on the chart, sitting below the 1% mark. The share jumps to 4.55% for the 15-19 age group and continues to climb through the 20s and 30s. The highest values cluster in the older adult categories, with ages 65-69 at 5.46%, ages 60-64 at 5.4%, and ages 70+ at 5.36%. The middle-aged groups from 40 to 59 also show high shares, generally hovering between 5.28% and 5.39%. The visual arrangement highlights that the prevalence of depressive disorders is substantially higher in adult populations compared to children, with the peak occurring in the late 60s.",
+  "word_count": 243,
+  "latency_s": 13.659940242767334,
+  "prompt_tag": "v6_100"
+}

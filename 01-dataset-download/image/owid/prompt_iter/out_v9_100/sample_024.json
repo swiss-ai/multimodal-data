@@ -1,0 +1,9 @@
+{
+  "slug": "legal-frameworks-regarding-violence-against-women",
+  "title": "Legal frameworks addressing violence against women",
+  "subtitle": "A higher percentage indicates stronger legislation.",
+  "caption": "Legal frameworks addressing violence against women\nA higher percentage indicates stronger legislation.\n\nThis choropleth map displays the strength of legal frameworks addressing violence against women across countries in 2024, using a continuous color scale where darker blue shades represent higher percentages of implemented laws. The legend ranges from 0% to 100%, with intermediate bands at 10% intervals, while grey hatching marks regions with no available data. The highest values, falling in the 90-100% band, appear across North America (United States, Canada), Western and Northern Europe (United Kingdom, France, Germany, Sweden, Norway), Australia, and parts of South America (Argentina, Bolivia). Countries in the 70-80% range include Brazil, Mexico, and several Eastern European nations. Mid-range values between 40-60% cover much of Asia (India, China, Indonesia) and scattered African nations like South Africa and Kenya. The lowest bands, 0-30%, dominate the Sahel region of Africa (Mali, Niger, Chad) and parts of the Middle East, where countries appear in the lightest green shades. Large areas of central Africa and some island nations show no data. The geographic distribution shows a clear concentration of stronger legislation in the Americas, Europe, and Oceania, while weaker frameworks cluster across sub-Saharan Africa and parts of Asia. The map reveals that legal coverage for violence against women varies substantially by region, with the most comprehensive frameworks visible in high-income countries and the least comprehensive in low-income regions.",
+  "word_count": 228,
+  "latency_s": 13.282114744186401,
+  "prompt_tag": "v9_100"
+}

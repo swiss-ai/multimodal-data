@@ -1,0 +1,8 @@
+{
+  "slug": "the-ratio-scale-and-an-exponential-function",
+  "title": "The ratio scale and an exponential function",
+  "subtitle": "Unit 13 'Economic fluctuations and unemployment’ Section 13.1 'Growth and fluctuations'\nin The CORE Team, The Economy. Available at: https://tinyco.re/3666382 [Figure 13.4a]",
+  "note": "The chart illustrates real GDP per capita in 2011 US$. CC-BY-ND-NC",
+  "caption": "The ratio scale and an exponential function\n\nUnit 13 'Economic fluctuations and unemployment’ Section 13.1 'Growth and fluctuations'\nin The CORE Team, The Economy. Available at: https://tinyco.re/3666382 [Figure 13.4a]\n\nThis line chart plots the real GDP per capita in 2011 US$ for the United Kingdom from 1950 to 2020, utilizing a logarithmic scale on the vertical axis. The y-axis features non-linear spacing with labeled grid lines at $7,000, $8,000, $9,000, $10,000, and $20,000. A single blue line representing the United Kingdom begins near the $7,000 mark in 1950 and follows a generally upward trajectory across the seven decades. The line exhibits short-term fluctuations, including visible dips around the mid-1970s, early 1980s, and 2009, yet maintains a consistent long-term rise. By 2020, the data point sits above the $20,000 grid line. Superimposed on the data is a faint, dotted straight line representing an exponential function fit, labeled with the equation y = 9407.2 * e^(0.023*x) and an R-squared value of 0.9844. The blue data line oscillates closely around this fitted trend line throughout the period, staying within the visual bounds defined by the $7,000 starting point and the value exceeding $20,000 at the end of the timeline.",
+  "word_count": 196
+}

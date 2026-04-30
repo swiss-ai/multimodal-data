@@ -1,0 +1,9 @@
+{
+  "slug": "infectious-and-parasitic-diseases-death-rate-who-mdb",
+  "title": "Infectious and parasitic diseases death rate",
+  "subtitle": "The reported annual death rate from [infectious](#dod:communicable-diseases) and [parasitic diseases](#dod:parasitic-infection) per 100,000 people, based on the [underlying cause](#dod:underlying-cause-of-death) listed on death certificates.",
+  "caption": "Infectious and parasitic diseases death rate\n\nThe reported annual death rate from infectious and parasitic diseases per 100,000 people, based on the underlying cause listed on death certificates.\n\nThis line chart displays age-standardized mortality rates for seven countries from 1950 to 2023, revealing distinct trajectories across different regions. South Africa presents a unique and extreme pattern compared to the other nations; its data series begins around 1995 near 125 deaths per 100,000 people, rises sharply to a peak just under 400 around 2006, and subsequently declines to approximately 130 by 2023. In contrast, the United States starts the period with the highest rate among the non-South African group, beginning near 80 in 1950 before undergoing a steady decline to roughly 15 by 2023. Brazil’s trend line initiates in 1980 at approximately 65 and decreases gradually to a range between 25 and 30 in the final years. The remaining countries—Russia, France, Germany, and Australia—cluster in the lower portion of the chart throughout the observed period. Russia fluctuates between 20 and 30 from 1980 onward. France, Germany, and Australia all begin near 40 in 1950 and converge into a tight band below 20 by the 1970s, maintaining low rates through 2023. The metric is age-standardized to allow for comparisons, though the data notes that not all deaths in a country may have been registered with a cause of death.",
+  "word_count": 227,
+  "latency_s": 16.31967782974243,
+  "prompt_tag": "v10_100"
+}

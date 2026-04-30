@@ -1,0 +1,9 @@
+{
+  "slug": "foreign-aid-given-for-emergencies-and-longer-term-development",
+  "title": "Foreign aid given for emergencies and longer-term development",
+  "subtitle": "Committed bilateral [official development assistance (ODA)](#dod:oda) from governments and multilateral organizations, grants from civil society organizations. Aid for emergencies, such as natural disasters and wars, is often called humanitarian aid. This data is expressed in US dollars and adjusted for inflation.",
+  "caption": "Committed bilateral official development assistance from DAC countries, adjusted for inflation, shows a substantial rise in total funding between 1971 and 2024, with aid for longer-term development consistently comprising the majority of the total. The green area representing development aid begins near $50 billion in 1971, fluctuates through the 1980s and 1990s, and climbs steadily after 2000 to reach a peak above $180 billion around 2022 before declining slightly. The pink area at the bottom, representing aid for emergencies, remains relatively low and flat for the first three decades, generally staying below $10 billion, before showing a visible increase in the 2010s and reaching a high point near $30 billion in 2024. The overall shape of the chart displays a long-term upward trajectory in total aid volume, punctuated by a sharp acceleration in the 2000s and a distinct peak in the early 2020s.",
+  "word_count": 143,
+  "latency_s": 10.482187747955322,
+  "prompt_tag": "v4_100"
+}

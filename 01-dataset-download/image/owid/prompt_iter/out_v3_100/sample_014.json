@@ -1,0 +1,9 @@
+{
+  "slug": "total-cardiologists-per-million-people",
+  "title": "Cardiologists per million people",
+  "subtitle": "",
+  "caption": "Across 15 countries in 2022, the number of cardiologists per million people ranges from 26 to 297, with data for some nations drawn from years between 2017 and 2021. Greece holds the highest density at 297 cardiologists per million, followed by Italy at 226 and Bulgaria at 197. Hungary records 128, while Sweden (99 in 2017), France (92), Spain (84 in 2019), and Israel (71) fall between 70 and 100. Egypt (60 in 2019), Turkey (47), Germany (45 in 2021), Tunisia (39 in 2019), the United Kingdom (29 in 2021), and Ireland (26 in 2021) occupy the lower half of the ranking. The bar lengths show a steep drop from Greece to Italy, then a more gradual decline through the middle and bottom tiers. The distribution is heavily skewed toward higher values in southern and eastern Europe, with western and northern European countries clustered in the middle to lower range.",
+  "word_count": 150,
+  "latency_s": 14.761580467224121,
+  "prompt_tag": "v3_100"
+}

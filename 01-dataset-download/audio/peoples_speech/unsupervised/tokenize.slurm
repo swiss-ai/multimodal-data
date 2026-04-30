@@ -21,6 +21,7 @@ set -euo pipefail
 RESUME=${1:-false}
 
 REPO_DIR=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer
+RUNTIME_ENV_SH="${REPO_DIR}/scripts/utils/source_lhotse_runtime.sh"
 LOG_DIR="${REPO_DIR}/logs"
 mkdir -p "${LOG_DIR}"
 
@@ -39,16 +40,12 @@ echo "=========================================="
 srun --kill-on-bad-exit=0 -u bash -c '
     set -e
     export LD_PRELOAD=/opt/venv/lib/python3.12/site-packages/ray/core/libjemalloc.so
-    export PYTHONPATH=/iopsstor/scratch/cscs/xyixuan/dev/lhotse:'"${REPO_DIR}"':${PYTHONPATH:-}
-
-    # Install torchaudio once per node; other local ranks wait.
-    if [ "${SLURM_LOCALID}" = "0" ]; then
-        uv pip install --python /opt/venv/bin/python --no-deps --no-build-isolation \
-            git+https://github.com/pytorch/audio.git@release/2.9
-        touch /tmp/.torchaudio_ready_${SLURM_JOB_ID}
-    else
-        while [ ! -f /tmp/.torchaudio_ready_${SLURM_JOB_ID} ]; do sleep 1; done
-    fi
+    export REPO_DIR='"${REPO_DIR}"'
+    export INSTALL_TORCHAUDIO=1
+    export INSTALL_ONCE_PER_NODE=1
+    export RUNTIME_READY_FILE=/tmp/.lhotse_runtime_ready_${SLURM_JOB_ID}
+    export PRINT_LHOTSE_RUNTIME=0
+    source '"${RUNTIME_ENV_SH}"'
 
     cd '"${REPO_DIR}"'
 

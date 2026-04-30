@@ -1,0 +1,9 @@
+{
+  "slug": "healthcare-access-quality-un",
+  "title": "Coverage of essential health services",
+  "subtitle": "Coverage of essential health services is measured as an index on a scale of 0 to 100 (where higher is better). This index is based on risk-standardized death rates – which give a measure of healthcare access and quality – and whether common interventions are carried out.",
+  "caption": "In 2023, the global coverage of essential health services varies significantly by region, with the highest index scores concentrated in the Americas, Europe, and Australia. The map displays a distinct geographic divide: North America, Western Europe, and Australia appear in the darkest blue, placing them in the 80 to 100 range on the 0 to 100 scale. In contrast, the lowest values appear across sub-Saharan Africa and parts of South Asia, where countries like Chad, the Central African Republic, and Somalia fall into the lightest green and pale blue bands, corresponding to scores between 0 and 40. Large areas of the Middle East and Eastern Europe occupy the middle ground, shaded in medium blue tones that indicate scores between 60 and 80. Greenland and a few other territories are marked with hatching to indicate no available data. The visual pattern shows a clear gradient where high-income regions cluster at the top of the scale while low-income regions in Africa and South Asia cluster at the bottom.",
+  "word_count": 166,
+  "latency_s": 9.993876218795776,
+  "prompt_tag": "v4_100"
+}

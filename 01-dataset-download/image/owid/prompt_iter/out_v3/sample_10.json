@@ -1,0 +1,9 @@
+{
+  "slug": "population-growth-rate-with-and-without-migration",
+  "title": "Population growth rate with and without migration",
+  "subtitle": "The annual change in population with migration included versus the change if there was zero migration (neither emigration nor immigration). The latter, therefore, represents the population change based only on domestic births and deaths.",
+  "caption": "Annual population growth rates in the United States from 1950 to 2023 are plotted as two distinct lines: one accounting for migration and one representing growth based solely on domestic births and deaths. The line including migration consistently remains above the line excluding migration throughout the entire period, with the gap between the two widening over time. In the early 1950s, both lines track closely together near 1.5%, but by the 1970s, the rate without migration drops below 1.0% while the rate with migration stays above 1.1%. From 1990 to 2020, the line including migration fluctuates between 0.9% and 1.2%, whereas the line excluding migration declines steadily from roughly 0.8% to near zero. Both lines show a sharp drop around 2020, falling to their lowest points on the chart before a partial recovery in 2023. The divergence between the two trajectories increases in the latter decades, with the rate including migration ending near 0.6% and the rate excluding migration ending near 0.2%.",
+  "word_count": 162,
+  "latency_s": 3.9947073459625244,
+  "prompt_tag": "v3"
+}

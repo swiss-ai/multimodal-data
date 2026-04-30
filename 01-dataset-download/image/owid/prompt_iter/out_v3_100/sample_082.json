@@ -1,0 +1,9 @@
+{
+  "slug": "countries-by-income-classification",
+  "title": "Countries by income classification",
+  "subtitle": "The World Bank's income classification divides countries into four categories based on their gross national income (GNI) per capita. Thresholds between income groups have changed over time.",
+  "caption": "From 1987 to 2024, the stacked area chart tracks the number of countries classified into four income groups based on gross national income per capita. The total count of countries rises from approximately 165 in 1987 to roughly 220 by 2024. The high-income category, shown in dark green at the top, expands significantly during the early 1990s and maintains a steady presence of around 80 countries through the end of the period. The upper-middle income band, colored light green, grows in the early 1990s before contracting slightly in later years. The lower-middle income group, represented by the pink area, shows a visible decline in the number of countries starting around 2005. The low-income category, at the bottom in purple, decreases from nearly 50 countries in 1987 to approximately 25 by 2024. The most prominent visible pattern is the reduction in the number of low-income countries alongside the expansion of the high-income and upper-middle income groups over the observed timeframe.",
+  "word_count": 159,
+  "latency_s": 12.583199977874756,
+  "prompt_tag": "v3_100"
+}

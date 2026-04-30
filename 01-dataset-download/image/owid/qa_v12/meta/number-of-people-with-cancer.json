@@ -1,0 +1,8 @@
+{
+  "slug": "number-of-people-with-cancer",
+  "title": "Number of people with cancer",
+  "subtitle": "Estimated number of people with any form of [cancer](#dod:cancer).",
+  "note": "[Non-melanoma skin cancers](#dod:non-melanoma-skin-cancer) are excluded due to potentially incomplete records and inconsistent registry practices.",
+  "caption": "Number of people with cancer\n\nEstimated number of people with any form of cancer.\n\nThis choropleth world map displays the estimated number of people with any form of cancer in 2023, excluding non-melanoma skin cancers due to potentially incomplete records and inconsistent registry practices. The legend uses a color scale ranging from pale yellow for values near zero to dark blue for values up to 30 million, with specific thresholds at 10,000, 30,000, 100,000, 300,000, 1 million, 3 million, and 10 million. The United States and China appear in the darkest blue band, indicating values in the 10 million to 30 million range. Russia and India sit in the next darkest band, corresponding to values between 3 million and 10 million. Brazil, Mexico, and several Western European nations including Germany, France, and the United Kingdom fall into the 1 million to 3 million range. Much of South America, Eastern Europe, and parts of Southeast Asia display mid-range teal shades that align with the 100,000 to 1 million thresholds. Large portions of Africa and Central Asia show lighter green and yellow shades, generally falling between 10,000 and 300,000. Greenland is marked with diagonal hatching to indicate no data. The visual distribution shows the highest absolute numbers concentrated in North America and East Asia, with progressively lower counts across South America, Europe, and Africa.",
+  "word_count": 222
+}

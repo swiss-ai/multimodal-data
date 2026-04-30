@@ -1,0 +1,8 @@
+{
+  "slug": "oil-production-by-region",
+  "title": "Oil production by region",
+  "subtitle": "Measured in [terawatt-hours](#dod:watt-hours).",
+  "note": "CIS (Commonwealth of Independent States) is an organization of ten post-Soviet republics in Eurasia following break-up of the Soviet Union.",
+  "caption": "Oil production by region\n\nMeasured in terawatt-hours.\n\nThis stacked area chart tracks oil production by region from 1965 to 2024, with values measured in terawatt-hours. The vertical axis ranges from 0 to 60,000 TWh. The Middle East, represented by the bottom blue layer, starts near 5,000 TWh in 1965, rises to approximately 15,000 TWh by the late 1970s, dips in the mid-1980s, and recovers to roughly 17,000 TWh by 2024. North America, shown in maroon, begins around 8,000 TWh, declines to a low point near 10,000 TWh in the mid-1980s, and climbs steadily to exceed 15,000 TWh in the final years. The CIS region, defined in the note as an organization of ten post-Soviet republics in Eurasia following the break-up of the Soviet Union, appears as a green band that expands significantly after 1965, peaks near 15,000 TWh around 1980, contracts in the 1990s, and stabilizes near 10,000 TWh by 2024. Europe, Asia Pacific, Africa, and South and Central America occupy the upper layers of the stack. Europe and Asia Pacific show moderate growth with some fluctuation, while Africa and South and Central America remain in thinner bands throughout the timeline. Total global production, indicated by the top edge of the stack, rises from under 20,000 TWh in 1965 to over 50,000 TWh by 2024, with noticeable plateaus and dips occurring around 1980, the early 1990s, and the late 2000s.",
+  "word_count": 230
+}

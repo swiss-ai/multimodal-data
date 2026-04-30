@@ -1,0 +1,9 @@
+{
+  "slug": "stay-at-home-covid",
+  "title": "Stay-at-home requirements during the COVID-19 pandemic",
+  "subtitle": "If policies vary at the subnational level, the index is shown as the response level of the strictest sub-region.",
+  "caption": "Stay-at-home requirements during the COVID-19 pandemic\n\nIf policies vary at the subnational level, the index is shown as the response level of the strictest sub-region.\n\nThe world map displays stay-at-home requirements across countries as of December 31, 2022, using a five-category color scale. The vast majority of nations, including the United States, Canada, Brazil, Australia, and most of Europe and Africa, are shaded in dark blue, indicating that no measures were in place. A smaller group of countries, such as China, South Korea, and parts of Eastern Europe, appear in light blue, signifying that stay-at-home orders were recommended but not required. India, Nepal, and Bangladesh are colored orange, representing a status where requirements were in effect except for essential activities. No countries on the map are shaded red, which would denote requirements with few exceptions. Greenland and a few other small territories are marked with diagonal hatching to show that no data is available. The visual distribution shows that by the end of 2022, most of the world had lifted mandatory stay-at-home orders, with only a limited number of countries in South Asia maintaining stricter rules. The subtitle clarifies that for nations with regional variations, the map reflects the policy of the strictest sub-region.",
+  "word_count": 204,
+  "latency_s": 11.655150175094604,
+  "prompt_tag": "v10_100"
+}

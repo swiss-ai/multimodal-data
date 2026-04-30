@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-urban-population-with-improved-sanitation-facilities",
+  "title": "Share of urban population using at least basic sanitation facilities",
+  "subtitle": "Basic sanitation services are [improved sanitation facilities](#dod:improved-sanitation), such as latrines and toilets, that are not shared with other households.",
+  "caption": "In 2024, the share of the urban population using at least basic sanitation facilities varies significantly across the globe, with the highest coverage concentrated in North America, Europe, and parts of South America. Countries in these regions, including the United States, Brazil, and the majority of the European continent, display the darkest shades of blue, indicating that nearly 100% of their urban residents have access to improved facilities such as latrines and toilets that are not shared with other households. In contrast, the lowest levels of access appear across a broad band of sub-Saharan Africa and parts of the Middle East. Nations such as Chad, the Central African Republic, and Sudan are shaded in pale yellow and light green, corresponding to coverage rates often falling between 10% and 40%. Intermediate values are visible in countries like India and parts of Southeast Asia, where the color scale suggests urban sanitation access ranges roughly between 50% and 80%. The geographic distribution shows a clear divide, with high-coverage areas dominating the northern hemisphere and the Americas, while lower-coverage areas are clustered in central Africa and specific regions of Asia.",
+  "word_count": 186,
+  "latency_s": 3.7797203063964844,
+  "prompt_tag": "v1"
+}

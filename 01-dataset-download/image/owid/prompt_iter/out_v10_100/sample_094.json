@@ -1,0 +1,9 @@
+{
+  "slug": "electoral-pluralism-index-eiu",
+  "title": "Electoral Pluralism Index",
+  "subtitle": "Data by the [Economist Intelligence Unit](#dod:economist-intelligence-unit). Expert estimates of the extent to which all citizens can choose their political leaders in free and fair elections. Higher values indicate more pluralism.",
+  "caption": "Electoral Pluralism Index\n\nData by the Economist Intelligence Unit. Expert estimates of the extent to which all citizens can choose their political leaders in free and fair elections. Higher values indicate more pluralism.\n\nThe 2024 world map displays the Electoral Pluralism Index using a color scale ranging from 1 to 10, where dark red represents the lowest scores and dark blue represents the highest. North America, Western Europe, Australia, and New Zealand are shaded in dark blue, corresponding to index values between 9 and 10. In contrast, Russia, China, and the majority of the Middle East and North Africa region appear in dark red, indicating scores between 1 and 2. A band of orange and yellow hues, representing values from 3 to 5, covers much of sub-Saharan Africa and parts of South Asia. India is depicted in light blue, placing it in the 7 to 8 range, while Brazil and Argentina fall within the 6 to 7 band shown in pale yellow and light blue. Greenland and several smaller island nations are marked with diagonal hatching to denote no data. The visual distribution shows a concentration of high pluralism scores in the Americas and Oceania, while low scores dominate the Eurasian landmass and the African continent. The gradient transitions from red through orange and yellow to blue illustrate the varying degrees of electoral freedom estimated by experts across different geopolitical regions.",
+  "word_count": 231,
+  "latency_s": 9.79360556602478,
+  "prompt_tag": "v10_100"
+}

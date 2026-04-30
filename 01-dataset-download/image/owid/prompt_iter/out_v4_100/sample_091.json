@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-cancer-deaths-attributed-to-risk-factors",
+  "title": "Share of cancer deaths attributed to risk factors",
+  "subtitle": "The estimated share of deaths from [cancers](#dod:cancer) attributed to all [risk factors](#dod:risk-factor). The remaining share represents deaths that would be expected to have occurred in the absence of these known risk factors.",
+  "caption": "Across 24 cancer types worldwide in 2023, the estimated share of deaths attributed to known risk factors ranges from nearly total attribution to less than one percent. Cervical cancer shows the highest value at 100%, followed by mesothelioma at 91.7% and lung, tracheal, and bronchus cancers at 76.4%. Larynx cancer registers 73.4%, while esophageal and colon and rectum cancers fall in the mid-50% range. Liver cancer sits at 48.2%, and lip and oral cavity, pancreatic, and uterine cancers cluster between 33% and 39%. Breast, kidney, and nasopharynx cancers occupy the 23% to 30% band. Stomach and leukemia cancers are near 19%, thyroid and gallbladder and biliary tract cancers hover around 11–12%, multiple myeloma is at 7.6%, non-Hodgkin lymphoma at 4.8%, and prostate cancer shows the lowest value at 0.9%. The bars descend in length from top to bottom, with the longest bar reaching the full width of the chart and the shortest barely extending past the axis label.",
+  "word_count": 158,
+  "latency_s": 9.169038534164429,
+  "prompt_tag": "v4_100"
+}

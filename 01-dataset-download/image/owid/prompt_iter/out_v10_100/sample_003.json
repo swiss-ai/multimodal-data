@@ -1,0 +1,9 @@
+{
+  "slug": "burden-of-disease-who",
+  "title": "Burden of disease",
+  "subtitle": "[Disability-Adjusted Life Years](#dod:dalys) (DALYs) per 100,000 individuals from all causes. DALYs measure the total burden of disease – both from years of life lost due to premature death and years lived with a disability. One DALY equals one lost year of healthy life.",
+  "caption": "Burden of disease\n\nDisability-Adjusted Life Years (DALYs) per 100,000 individuals from all causes. DALYs measure the total burden of disease – both from years of life lost due to premature death and years lived with a disability. One DALY equals one lost year of healthy life.\n\nThe choropleth map displays the burden of disease for 2021 using a color scale ranging from light beige to dark red, representing values from 0 to over 60,000 Disability-Adjusted Life Years per 100,000 individuals. The highest burden, indicated by the darkest red shades corresponding to values between 50,000 and 60,000, is concentrated in a band across sub-Saharan Africa, including countries such as the Central African Republic, Chad, and Somalia. Russia and parts of Eastern Europe also appear in darker red tones, falling within the 40,000 to 50,000 range. In contrast, North America, Western Europe, and Australia are shaded in lighter orange hues, indicating lower burdens generally between 10,000 and 20,000 DALYs. South America and much of Asia display intermediate values, mostly clustering in the 20,000 to 30,000 range. Greenland is marked with diagonal hatching to signify that no data is available for that region. The visual distribution highlights a distinct geographic disparity, with the most intense coloration appearing in specific regions of Africa and Eurasia, while the Americas and Oceania predominantly feature lighter shades associated with lower disease burden metrics.",
+  "word_count": 226,
+  "latency_s": 15.128494024276733,
+  "prompt_tag": "v10_100"
+}

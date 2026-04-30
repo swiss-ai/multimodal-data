@@ -1,0 +1,9 @@
+{
+  "slug": "fossil-electricity-per-capita",
+  "title": "Per capita electricity generation from fossil fuels",
+  "subtitle": "",
+  "caption": "Per capita electricity generation from fossil fuels, 2025\n\nElectricity generation from coal, oil, and gas, measured in kilowatt-hours per person.\n\nThe choropleth map displays global per capita electricity generation from fossil fuels for the year 2025, utilizing a color scale ranging from light beige for 0 kWh to dark brown for 10,000 kWh. The highest values, represented by the darkest brown shades indicating generation between 5,000 and 10,000 kWh per person, are concentrated in the Middle East, specifically Saudi Arabia, as well as in North America, including the United States and Canada, and Australia. Russia and several nations in Northern and Central Europe also fall within these upper bands, showing values generally exceeding 2,000 kWh. A middle range of orange hues, corresponding to 500 to 2,000 kWh, covers large portions of South America, such as Brazil and Argentina, along with China, India, and much of Southeast Asia. Lower generation levels, depicted in pale beige tones representing 0 to 500 kWh, dominate the African continent, with the exception of South Africa which appears in a darker orange band. Regions marked with diagonal hatching, including Greenland and parts of Central Africa, indicate areas where no data is available. The visual distribution highlights a distinct contrast between the high per capita fossil fuel electricity usage in industrialized nations and resource-rich states compared to the lower usage observed across most of the Global South.",
+  "word_count": 230,
+  "latency_s": 15.031770944595337,
+  "prompt_tag": "v10_100"
+}

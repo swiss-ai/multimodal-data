@@ -1,0 +1,9 @@
+{
+  "slug": "dalys-to-ncds-vs-gdp",
+  "title": "Disease burden from non-communicable diseases vs. GDP per capita",
+  "subtitle": "Disease burden to non-communicable diseases (NCDs), measured in DALYs (Disability-Adjusted Life Years) per 100,000 individuals versus gross domestic product (GDP) per capita, adjusted for inflation and differences in living costs between countries.",
+  "caption": "The scatter plot maps the relationship between GDP per capita and the disease burden from non-communicable diseases for countries in 2023, with circle size representing population. The horizontal axis plots GDP per capita on a logarithmic scale ranging from $2,000 to $100,000, while the vertical axis measures Disability-Adjusted Life Years (DALYs) per 100,000 individuals from 0 to 50,000. A negative relationship is visible across the data points: countries with lower GDP per capita generally show higher disease burden, while those with higher GDP per capita cluster lower on the vertical axis. Nauru sits at the top of the chart with a disease burden near 50,000 DALYs, while Singapore and Japan appear at the bottom right with values below 15,000 DALYs and GDP per capita exceeding $50,000. In the lower-left quadrant, Burundi and Mozambique show disease burdens around 20,000 to 25,000 DALYs with GDP per capita under $2,000. Large circles for China and India appear in the middle of the distribution, with disease burdens between 20,000 and 25,000 DALYs and GDP per capita between $10,000 and $20,000. The United States and Germany occupy the high-income, low-burden section of the chart. The data points form a downward-sloping distribution from the upper left to the lower right.",
+  "word_count": 204,
+  "latency_s": 17.375742435455322,
+  "prompt_tag": "v4_100"
+}

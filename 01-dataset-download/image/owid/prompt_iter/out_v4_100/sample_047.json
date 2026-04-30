@@ -1,0 +1,9 @@
+{
+  "slug": "gdp-per-capita-prados-de-la-escosura",
+  "title": "GDP per capita",
+  "subtitle": "This data is adjusted for inflation and differences in living costs between countries.",
+  "caption": "The choropleth map displays GDP per capita for 2020, adjusted for inflation and cost of living differences, using a color scale ranging from light green for the lowest values to dark blue for the highest. The highest values appear across North America, Western Europe, and Australia, where countries like the United States, Canada, Germany, and Australia fall into the darkest blue band representing over $20,000. Mid-range values, shown in teal and medium green, cover much of Latin America, Eastern Europe, and parts of Asia including China and Russia, generally falling between $5,000 and $10,000. The lowest GDP per capita figures, depicted in pale green, dominate sub-Saharan Africa and parts of South Asia, with many countries clustered below $2,000. Several regions, including Greenland and parts of central Africa, are marked as having no available data. The geographic distribution shows a clear concentration of higher income levels in the Global North and lower levels across the Global South.",
+  "word_count": 156,
+  "latency_s": 10.215143918991089,
+  "prompt_tag": "v4_100"
+}

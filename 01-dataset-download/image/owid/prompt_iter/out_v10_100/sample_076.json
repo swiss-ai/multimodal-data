@@ -1,0 +1,9 @@
+{
+  "slug": "age-standardized-death-rate-by-cause",
+  "title": "Death rate by cause",
+  "subtitle": "The estimated annual death rate per 100,000 people from broad categories of causes of death. Injuries (such as accidents, violence and suicides); communicable, maternal, neonatal and nutritional diseases; and [non-communicable diseases](#dod:non-communicable-diseases).",
+  "caption": "Death rate by cause\n\nThe estimated annual death rate per 100,000 people from broad categories of causes of death. Injuries (such as accidents, violence and suicides); communicable, maternal, neonatal and nutritional diseases; and non-communicable diseases.\n\nThis stacked area chart displays the global death rate by cause from 1980 to 2023, measured as the estimated annual deaths per 100,000 people using an age-standardized metric. The total death rate, represented by the upper boundary of the stacked areas, shows a consistent downward trend, falling from approximately 1,300 in 1980 to roughly 750 in 2023. The largest component throughout the period is non-communicable diseases (NCDs), shown in pink, which starts near 800 in 1980 and declines to just over 500 by 2023. The green band, representing communicable, maternal, neonatal, and nutritional diseases, sits above the NCD layer; this category begins at a height of roughly 400 in 1980 and shrinks significantly to a band of about 200 by the end of the timeline. The topmost layer, injuries, appears as a thin tan band that remains relatively narrow and stable across the decades, contributing a small portion to the total. A distinct upward spike is visible in the total rate around 2020, where the value rises briefly before returning to the previous downward trajectory. By 2023, the combined height of the three colored regions settles near the 750 mark, with the pink NCD section comprising the majority of the remaining total.",
+  "word_count": 237,
+  "latency_s": 16.092449426651,
+  "prompt_tag": "v10_100"
+}

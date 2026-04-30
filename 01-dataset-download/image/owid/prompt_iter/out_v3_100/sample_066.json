@@ -1,0 +1,9 @@
+{
+  "slug": "energy-intensity-vs-gdp",
+  "title": "Energy intensity vs. GDP per capita",
+  "subtitle": "Energy intensity represents [primary energy](#dod:primaryenergy) consumption, using the [substitution method](#dod:substitutionmethod), per unit of gross domestic product (GDP). GDP is adjusted for inflation and differences in living costs between countries.",
+  "caption": "In 2022, the relationship between economic output and energy efficiency varies widely across nations, as shown by the distribution of countries on a scatter plot of GDP per capita versus energy intensity. The horizontal axis measures GDP per capita on a logarithmic scale ranging from $1,000 to $100,000, while the vertical axis tracks energy intensity in kilowatt-hours per dollar. A dense cluster of points occupies the lower-left quadrant, where countries such as Burundi, Chad, and Liberia combine low GDP per capita with energy intensity below 1 kWh per dollar. Moving rightward along the income scale, a broad band of nations including the United States, Australia, and Norway maintains energy intensity between 1 and 2 kWh per dollar. Distinct outliers appear in the upper regions of the chart, where Turkmenistan, North Korea, and Bahrain exhibit energy intensity exceeding 4 kWh per dollar despite varying levels of GDP. The data points are color-coded by continent, showing that high-intensity outliers are distributed across Asia, the Americas, and Europe rather than concentrated in a single region. The overall distribution shows no single linear trend, with high energy intensity visible at both the lowest and highest ends of the GDP spectrum.",
+  "word_count": 196,
+  "latency_s": 13.148676633834839,
+  "prompt_tag": "v3_100"
+}

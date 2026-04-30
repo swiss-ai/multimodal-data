@@ -1,0 +1,8 @@
+{
+  "slug": "share-electricity-source-facet",
+  "title": "Share of electricity production by source",
+  "subtitle": "",
+  "note": "",
+  "caption": "Share of electricity production by source\n\nThis multi-panel line chart displays the share of electricity production by source for the United Kingdom, United States, France, and Sweden from 1985 to 2025. The legend identifies the United Kingdom in dark orange, the United States in brown, France in blue, and Sweden in green. In the Coal panel, the United Kingdom and United States begin above 40% in 1985, with the United Kingdom peaking near 70% around 1990 before both decline sharply after 2010 to below 5% by 2025. The Gas panel shows the United Kingdom rising from near zero to over 40% by 2010, then fluctuating between 30% and 40%, while the United States climbs steadily from under 10% to over 40% by 2025. In Nuclear, France remains consistently above 60% throughout the period, while Sweden stays between 30% and 50%, and the United Kingdom and United States hover between 10% and 25%. Hydropower shows Sweden fluctuating between 30% and 50%, France between 10% and 20%, and the United Kingdom and United States remaining below 10%. Solar production is negligible until after 2010, then rises steeply for all four countries, with the United Kingdom reaching over 6% by 2025. Wind production also begins near zero, then increases notably after 2010, with the United Kingdom exceeding 20% by 2025, Sweden approaching 20%, and the United States and France remaining below 10%. The data source is Ember (2026) and Energy Institute - Statistical Review of World Energy (2025).",
+  "word_count": 245
+}

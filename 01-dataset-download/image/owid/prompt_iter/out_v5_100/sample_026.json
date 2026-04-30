@@ -1,0 +1,9 @@
+{
+  "slug": "share-artificial-intelligence-job-postings",
+  "title": "Share of artificial intelligence jobs among all job postings",
+  "subtitle": "A job posting is considered an AI job if it requests one or more AI skills, e.g., \"natural language processing\", \"neural networks\", \"machine learning\", or \"robotics\".",
+  "caption": "Across nine countries between 2014 and 2024, the share of job postings requesting artificial intelligence skills varies significantly, with the United States consistently occupying the highest position on the vertical axis. The chart tracks these percentages over time, showing the United States rising from roughly 0.6% in 2014 to a peak of 1.8% in 2024, with a visible dip in 2023. The United Kingdom follows a similar upward trajectory, starting near 0.4% in 2014 and reaching approximately 1.25% by 2024, though it experiences a sharp decline in 2023 before recovering. Sweden, the Netherlands, and Spain cluster in the middle range; Sweden rises from 0.9% in 2019 to 1.3% in 2024, while the Netherlands and Spain both reach roughly 1.25% in 2024 after starting lower in 2019. Austria and Italy show more moderate growth, with Austria moving from 0.6% to just over 1.0% and Italy rising from 0.5% to roughly 0.9% over the same period. New Zealand remains at the bottom of the distribution throughout the observed years, starting below 0.2% in 2014 and ending near 0.55% in 2024. The lines show a general upward trend across all nations, with the gap between the highest and lowest values widening over time. The United States maintains the largest share of AI job postings among all countries shown in every year from 2014 through 2024.",
+  "word_count": 222,
+  "latency_s": 14.471946477890015,
+  "prompt_tag": "v5_100"
+}

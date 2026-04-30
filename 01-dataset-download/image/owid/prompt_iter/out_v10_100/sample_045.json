@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-people-who-identify-as-religious-or-spiritual",
+  "title": "Share of people who identify as religious or spiritual",
+  "subtitle": "",
+  "caption": "Share of people who identify as religious or spiritual\n\nThe chart displays the distribution of responses across 24 countries in 2023, categorized into five groups: \"Religious\" (dark blue), \"Both religious and spiritual\" (light green), \"Spiritual\" (dark green), \"Neither religious nor spiritual\" (pink), and \"Did not answer/'I don't know'\" (grey). India shows the highest share of respondents identifying as \"Religious,\" with the dark blue segment extending past the 60% mark. Nigeria and Turkey also exhibit large \"Religious\" shares, both exceeding 50%. In contrast, Japan has the smallest \"Religious\" segment, occupying less than 10% of the bar. The \"Neither religious nor spiritual\" category dominates the responses in Sweden, Australia, and the United Kingdom, where the pink segments extend from approximately the 35% mark to nearly 100%. Spain and Argentina show similar patterns, with the pink category comprising the majority of the bar. The \"Both religious and spiritual\" category is most prominent in the Philippines and Tanzania, where the light green segments span roughly 30 percentage points each. The \"Spiritual\" category constitutes a significant portion of the bars in the United States and Mexico, appearing as the largest single segment in those countries. Grey segments representing non-responses or uncertainty are visible but generally small across all listed nations, typically occupying less than 5% of the total bar length. The data source is the Global Flourishing Study (2024).",
+  "word_count": 224,
+  "latency_s": 14.708593368530273,
+  "prompt_tag": "v10_100"
+}

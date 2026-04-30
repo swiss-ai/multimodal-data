@@ -1,0 +1,9 @@
+{
+  "slug": "stratospheric-ozone-concentration-projections",
+  "title": "Stratospheric ozone concentration projections",
+  "subtitle": "Stratospheric ozone concentrations with projections to 2100 based on chemistry-climate models. These are measured as global and regional averages relative to levels in 1960 (1960 = 0).",
+  "caption": "Stratospheric ozone concentration projections from 1960 to 2100 show diverging regional trajectories relative to 1960 baseline levels. The Arctic line rises steadily after 1980, crossing above zero around 2020 and reaching approximately +35 by 2100. The Global line dips slightly below zero until the 1990s, then climbs gradually to hover just above zero through 2100. The Antarctic line plunges sharply to nearly -120 around 2000, then recovers steadily but remains below zero throughout the projection period, ending near -5 in 2100. All three lines converge near zero in 1960, as defined by the baseline. The Arctic shows the strongest recovery and overshoot, while the Antarctic exhibits the deepest decline and slowest return toward baseline. The gap between Arctic and Antarctic widens over time, with Arctic values exceeding Antarctic by more than 40 units by 2100.",
+  "word_count": 135,
+  "latency_s": 10.601487159729004,
+  "prompt_tag": "v4_100"
+}

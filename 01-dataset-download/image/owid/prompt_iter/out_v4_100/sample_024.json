@@ -1,0 +1,9 @@
+{
+  "slug": "legal-frameworks-regarding-violence-against-women",
+  "title": "Legal frameworks addressing violence against women",
+  "subtitle": "A higher percentage indicates stronger legislation.",
+  "caption": "Across the globe in 2024, the percentage of legal frameworks addressing violence against women varies significantly, with darker blue shades indicating stronger legislation. North America, Western Europe, and Australia display the highest coverage, falling within the 80% to 100% range. In contrast, large portions of sub-Saharan Africa and parts of the Middle East appear in the lightest green bands, representing 0% to 30% coverage. Countries such as Brazil, Russia, and China occupy the middle bands, showing between 40% and 70% legislative coverage. The map reveals a distinct geographic divide where high-income regions generally show comprehensive legal frameworks, while many developing nations show lower percentages. The distribution shows a clear concentration of strong legislation in the Americas and Europe, while the lowest values cluster across central Africa and parts of Asia.",
+  "word_count": 130,
+  "latency_s": 8.005776643753052,
+  "prompt_tag": "v4_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "innovation-in-computing-power-index-of-computing-speed",
+  "title": "Innovation in computing power: Index of computing speed",
+  "subtitle": "Unit 21 'Capstone: Innovation, information, and the networked economy' Section 21.1 'The innovation process: Invention and diffusion' in The CORE Team, The Economy. Available at https://tinyco.re/21010330 [Figure 21.3]",
+  "caption": "Between 1850 and 2000, the index of computing speed rises exponentially, plotted on a logarithmic vertical axis where each major gridline represents a tenfold increase. Early mechanical devices like the Scheutz Difference Engine and the Japanese abacus cluster near the bottom of the scale, registering between 1 and 100 computations per second relative to manual calculation. By the mid-20th century, machines such as the IBM 604 and SEAC push the index into the tens of thousands. The post-1960 era shows a dense accumulation of labeled systems including the Cray I, IBM 3090, and Compaq GS320, which ascend rapidly toward the top right corner. By the year 2000, the MCR Linux Cluster reaches an index value exceeding 100 trillion computations per second. The distribution of data points forms a steep, continuous upward trajectory, with the vertical distance between early 19th-century tools and late 20th-century supercomputers spanning more than twelve orders of magnitude.",
+  "word_count": 151,
+  "latency_s": 3.6075944900512695,
+  "prompt_tag": "v2"
+}

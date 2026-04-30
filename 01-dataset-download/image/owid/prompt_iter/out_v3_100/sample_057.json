@@ -1,0 +1,9 @@
+{
+  "slug": "caribbean-acropora",
+  "title": "Share of Caribbean reefs with Acropora corals present or dominant",
+  "subtitle": "The share of coral reefs in the Caribbean where major reef-building group of corals, _Acropora_, was dominant or present. The declines show the loss of coral cover as a result of pressures including water pollution, disease outbreaks, and [coral bleaching](#dod:coral_bleaching).",
+  "caption": "Between 1950 and 2007, the share of Caribbean reefs with Acropora corals present or dominant shows a sustained decline across both metrics. The orange line, representing reefs where Acropora was present, begins at roughly 90% in 1950 and falls to approximately 20% by 2007. The blue line, tracking reefs where Acropora was dominant, starts near 80% and drops to below 10% over the same period. Both lines show a temporary recovery in the 1970s, with the \"present\" metric rising to roughly 75% and the \"dominant\" metric reaching 60%, before resuming a downward trajectory. From 1980 onward, the decline accelerates, with the \"dominant\" line falling below 20% around 1990. By the end of the timeline, the gap between the two metrics narrows, with both values remaining below 20%. The chart shows a consistent reduction in the prevalence of Acropora corals across the Caribbean region over the second half of the 20th century.",
+  "word_count": 151,
+  "latency_s": 11.50960636138916,
+  "prompt_tag": "v3_100"
+}

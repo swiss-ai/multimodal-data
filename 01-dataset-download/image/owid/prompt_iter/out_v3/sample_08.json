@@ -1,0 +1,9 @@
+{
+  "slug": "road-accident-deaths-per-passenger-kilometers",
+  "title": "Road accident deaths per billion passenger kilometers",
+  "subtitle": "Number of deaths due to road accidents per billion passenger kilometers traveled on the road.",
+  "caption": "Across seven countries between 1970 and 2022, road accident deaths per billion passenger kilometers show divergent trajectories. Russia’s line, spanning 1990 to 2022, begins near 145, rises to a peak above 240 around 2005, then falls to approximately 150 by 2022. Argentina’s shorter series, from 2008 to 2022, starts above 150, dips below 120, and ends near 110. Turkey’s line begins near 100 in 1970, declines to around 50 by 1990, fluctuates slightly, and ends below 20. India’s line, starting near 25 in 1970, remains mostly flat until 2010, then rises to about 30 before falling again. Poland’s line, beginning near 50 in 1985, trends downward to below 15 by 2022. The United States’ line starts near 50 in 1970, declines steadily to below 15 by 2022. Germany’s line begins near 25 in 1970, falls to below 10 by 2000, and remains low. The United Kingdom’s line starts near 25 in 1970, drops to below 10 by 1990, and stays near 5 through 2022. The most visible pattern is the steep decline in death rates for Western European and North American countries over the full period, contrasted with higher and more volatile rates in Russia and Argentina during their observed windows.",
+  "word_count": 201,
+  "latency_s": 6.029498100280762,
+  "prompt_tag": "v3"
+}

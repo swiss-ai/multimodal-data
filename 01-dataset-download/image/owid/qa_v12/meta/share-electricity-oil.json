@@ -1,0 +1,8 @@
+{
+  "slug": "share-electricity-oil",
+  "title": "Share of electricity production from oil",
+  "subtitle": "",
+  "note": "",
+  "caption": "Share of electricity production from oil, 2025\n\nMeasured as a percentage of total electricity produced in the country or region.\n\nThis choropleth world map displays the share of electricity production from oil in 2025, measured as a percentage of total electricity produced in each country or region. The legend ranges from 0% to 50%, with specific tick points at 1%, 2%, 5%, 10%, and 20%. The darkest brown shades, indicating shares above 20% and extending toward 50%, are concentrated in specific regions: several countries in the Middle East including Saudi Arabia and Yemen, parts of West Africa such as Senegal and Guinea-Bissau, and island nations like Papua New Guinea and some Caribbean states. Medium orange shades, representing shares between 5% and 20%, appear across parts of Latin America including Mexico and Brazil, portions of North Africa, and scattered countries in Asia. Lighter orange and pale shades, indicating shares below 5%, dominate most of North America, Europe, Russia, China, India, and Australia. Greenland and Antarctica show hatching patterns indicating no data. The visual pattern shows the highest reliance on oil for electricity production concentrated in specific developing regions and island nations, while most large industrialized economies and populous countries fall in the lower percentage bands of the legend.",
+  "word_count": 207
+}

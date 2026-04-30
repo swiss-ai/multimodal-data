@@ -1,0 +1,9 @@
+{
+  "slug": "cumulative-deaths-in-armed-conflicts",
+  "title": "Deaths in armed conflicts based on where they occurred, 1989-2024",
+  "subtitle": "Included are deaths of combatants and civilians due to fighting in [armed conflicts](#dod:armed-conflict-ucdp) that were ongoing over that time.",
+  "caption": "Deaths in armed conflicts based on where they occurred, 1989–2024\nIncluded are deaths of combatants and civilians due to fighting in armed conflicts that were ongoing over that time.\n\nThe horizontal bar chart displays the total number of deaths in armed conflicts by geographic region from 1989 to 2024, with values labeled directly on each bar. The global total reaches 3.9 million deaths, shown as the longest bar at the top. Africa accounts for 2.0 million deaths, the second-highest value and more than half the global total. The Middle East follows with 720,000 deaths, then Asia and Oceania with 580,000 deaths. Europe records 370,000 deaths, and the Americas show the lowest regional total at 230,000 deaths. Each region’s bar is color-coded: red for World, purple for Africa, tan for Middle East, teal for Asia and Oceania, blue for Europe, and salmon for Americas. The data includes only deaths occurring within the borders of each region during active armed conflicts over the period, excluding deaths of nationals fighting abroad. The difference between the global total and the sum of regional totals suggests some deaths may be unassigned to specific regions or counted separately. Africa’s death toll exceeds that of all other regions combined except the global aggregate. The Americas’ figure is less than one-tenth of Africa’s and roughly one-sixth of the Middle East’s. The ordering of bars from highest to lowest visually emphasizes the concentration of conflict-related mortality in Africa and the Middle East relative to other regions over this 35-year span.",
+  "word_count": 251,
+  "latency_s": 13.160520315170288,
+  "prompt_tag": "v8_100"
+}

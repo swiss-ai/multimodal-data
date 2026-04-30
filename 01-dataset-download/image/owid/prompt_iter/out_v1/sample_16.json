@@ -1,0 +1,9 @@
+{
+  "slug": "crude-death-rate-the-share-of-the-population-that-dies-each-year-who",
+  "title": "Crude death rate: the share of the population that dies each year",
+  "subtitle": "",
+  "caption": "In 2021, the share of the population dying annually varied across the globe, with the highest rates concentrated in Eastern Europe and parts of Southern Africa. The map displays the crude death rate, measuring the estimated number of deaths from all causes per 100,000 people. The darkest red shading, indicating rates above 1.5%, covers Russia, Ukraine, and Bulgaria, alongside Botswana and Lesotho in the south. Moderate rates, falling between 0.9% and 1.2%, appear across much of the United States, China, and Western Europe. Lighter shades dominate the Middle East and large sections of Africa, where countries like Nigeria and Ethiopia show rates below 0.6%. Greenland is marked as having no available data. The visualization reveals a distinct geographic distribution where mortality shares are highest in specific Eastern European and Southern African nations, while remaining lower across the Middle East and equatorial regions.",
+  "word_count": 142,
+  "latency_s": 3.1845357418060303,
+  "prompt_tag": "v1"
+}

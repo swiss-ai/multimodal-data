@@ -1,0 +1,9 @@
+{
+  "slug": "number-of-european-overseas-colonies-and-colonizers",
+  "title": "Number of European overseas colonies and colonizers",
+  "subtitle": "The colonizers are the United Kingdom, France, Spain, Portugal, Netherlands, Germany, Belgium, and Italy. Only colonized countries that are independent today are considered.",
+  "caption": "Between 1462 and 2022, the number of independent countries categorized as colonized by European powers fluctuates significantly, while the count of European colonizing nations remains nearly constant. The chart displays three stacked areas: \"European colonizers\" at the top, \"Colonized\" at the bottom, and \"Neither colonized nor colonizer\" in the middle. The purple band representing the colonizers—United Kingdom, France, Spain, Portugal, Netherlands, Germany, Belgium, and Italy—stays flat near the 200 mark throughout the timeline, indicating a stable count of these nations. In contrast, the magenta area for colonized countries begins near zero in 1462, rises gradually to roughly 45 by 1800, dips slightly, then surges to a peak of nearly 100 around 1920 before collapsing back to zero by the late 20th century. The tan middle section, representing countries that were neither colonized nor colonizers, shrinks as colonization expands and re-expands as decolonization occurs. The most visible pattern is the sharp rise and fall of colonized territories between 1850 and 1970, forming a distinct mountain-like shape against the otherwise stable backdrop of colonizer counts.",
+  "word_count": 173,
+  "latency_s": 4.415185451507568,
+  "prompt_tag": "v3"
+}

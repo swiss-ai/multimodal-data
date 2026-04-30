@@ -1,0 +1,9 @@
+{
+  "slug": "number-of-parties-env-agreements",
+  "title": "Number of parties in multilateral environmental agreements",
+  "subtitle": "Total number of global parties signed on to multilateral agreements designed to address trans-boundary environmental issues.",
+  "caption": "Between 1971 and 2015, the number of parties signing multilateral environmental agreements rose from zero to near-universal participation for the earliest treaties. The Vienna Convention on Ozone leads the group, reaching approximately 195 parties by 2015, closely followed by the UN Framework Convention on Climate Change and the Convention on Biological Diversity, which both exceed 190 parties. These three lines display a steep ascent beginning in the late 1980s and early 1990s, flattening out near the top of the vertical axis. The UN Convention to Combat Desertification and the World Heritage Convention follow a similar trajectory, crossing the 150-party mark before 2010. Later agreements, such as the Stockholm Convention on Persistent Organic Pollutants and the Cartagena Protocol on Biosafety, show a delayed start around the year 2000 but exhibit a rapid increase in signatories over the subsequent decade. The Convention on the Conservation of Migratory Species of Wild Animals remains the lowest curve, rising slowly to roughly 125 parties. The chart shows a consistent pattern where older agreements accumulate more signatories over time, while newer treaties follow a comparable growth path shifted to the right along the timeline.",
+  "word_count": 188,
+  "latency_s": 13.018563270568848,
+  "prompt_tag": "v3_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "physical-integrity-rights-score-fariss-kenwick-reuning",
+  "title": "Physical Integrity Rights Score",
+  "subtitle": "The score captures the extent to which citizens are protected from government killings, torture, political imprisonments, extrajudicial executions, mass killings and disappearances. Large positive scores mean abuses are rare relative to other countries and years, large negative scores that abuses are relatively widespread.",
+  "caption": "Across the globe in 2019, the Physical Integrity Rights Score varies significantly, with the color scale ranging from dark red for widespread abuses (scores near -4) to dark blue for rare abuses (scores near +4). The highest scores appear concentrated in western and northern Europe—specifically Norway, Sweden, and Iceland—as well as Canada, Australia, and New Zealand, all falling within the deep blue bands. In contrast, the lowest scores are visible across the Middle East and North Africa, with Yemen, Saudi Arabia, and Algeria shaded in the darkest red tones indicating scores between -3 and -4. Large portions of sub-Saharan Africa and parts of Asia display mid-range orange and light red shades, corresponding to scores between -1 and -2. The map shows a clear geographic divide where the most positive scores cluster in the Global North and Oceania, while the most negative scores concentrate in the Middle East and North Africa.",
+  "word_count": 150,
+  "latency_s": 8.42475938796997,
+  "prompt_tag": "v4_100"
+}

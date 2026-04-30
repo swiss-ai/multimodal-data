@@ -1,0 +1,9 @@
+{
+  "slug": "merchandise-exports-by-continent",
+  "title": "Merchandise exports by continent of destination",
+  "subtitle": "Figures correspond to the value of [merchandise exports](#dod:merchandise-exports) by continental destination as a share of [gross domestic product](#dod:gdp) (GDP). All partner countries are classified into continent groupings according to OWID's classification.",
+  "caption": "Between 1949 and 2014, India's merchandise exports as a share of GDP show a long-term upward trend, with the total value rising from under 2% to over 16%. The stacked area chart reveals that exports to Asia, represented by the blue base layer, constitute the largest and fastest-growing component, expanding from a negligible share to account for roughly half of the total by 2014. Exports to Western Europe, shown in red, form the second-largest segment, growing steadily to reach approximately 3% of GDP. The remaining layers—North America, South America, Africa, Eastern Europe, and Oceania—contribute smaller, relatively stable shares throughout the period. A sharp, temporary spike in total exports occurs around 2008, reaching nearly 18% of GDP before receding. The most striking visible pattern is the dominance of intra-Asian trade in driving India’s export growth over the six decades shown.",
+  "word_count": 139,
+  "latency_s": 9.1979660987854,
+  "prompt_tag": "v4_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "net-official-development-assistance-and-aid-received",
+  "title": "Net official development assistance and official aid received",
+  "subtitle": "Net [official development assistance](#dod:oda), expressed in US dollars and adjusted for inflation.",
+  "caption": "In 2023, the global distribution of net official development assistance and official aid received shows a concentration of higher inflows across specific regions in Africa and Asia. The map displays values in constant 2021 US dollars using a color scale where darker shades represent larger amounts. The highest band, exceeding $10 billion, appears in Ethiopia, Pakistan, and Ukraine. Countries in the $1 billion to $10 billion range include India, Kenya, and the Democratic Republic of the Congo, covering much of sub-Saharan Africa and parts of South Asia. Lighter shades, representing amounts between $50 million and $250 million, appear in nations such as Bolivia, Namibia, and Laos. North America, Western Europe, and Australia show no data, consistent with their status as donor rather than recipient nations in this dataset. The visual pattern places the largest aid volumes in a band stretching from East Africa through South Asia to Eastern Europe.",
+  "word_count": 149,
+  "latency_s": 3.2515311241149902,
+  "prompt_tag": "v3"
+}

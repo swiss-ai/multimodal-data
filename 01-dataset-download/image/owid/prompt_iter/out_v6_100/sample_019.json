@@ -1,0 +1,9 @@
+{
+  "slug": "prevalence-of-polio-rates-in-the-united-states",
+  "title": "Polio case and death rates in the United States",
+  "subtitle": "The reported rates are per 100,000 US population and include both [wild-](#dod:wild-poliovirus) and [vaccine-derived poliovirus](#dod:vaccine-derived-poliovirus) infections that occurred indigenously and as imported cases.",
+  "caption": "Polio case and death rates in the United States\nThe reported rates are per 100,000 US population and include both wild- and vaccine-derived poliovirus infections that occurred indigenously and as imported cases.\n\nThe line chart tracks the reported polio case rate and polio death rate in the United States from 1910 through 2023, measuring the number of cases and deaths per 100,000 people. The vertical axis spans from 0 to 40, while the horizontal axis covers the full century. The orange line representing the case rate displays significant volatility during the first half of the timeline, characterized by recurring spikes. A sharp rise occurs around 1916, reaching approximately 28 per 100,000, followed by a period of fluctuation where values frequently climb between 5 and 15. The highest recorded values appear in the late 1940s and early 1950s, where the case rate surges past 30 and peaks above 35 per 100,000. Following this maximum, the line drops precipitously, falling below 5 by 1960 and reaching zero shortly thereafter. The blue line, indicating the death rate, follows a similar trajectory but at a much lower magnitude, generally remaining below 5 per 100,000 even during the peak outbreak years. Both lines converge at zero from the 1960s onward, maintaining a flat trajectory along the horizontal axis for the remainder of the observed period. The data shows a transition from a pattern of frequent, high-magnitude outbreaks to a sustained absence of reported cases and deaths.",
+  "word_count": 241,
+  "latency_s": 14.293094396591187,
+  "prompt_tag": "v6_100"
+}

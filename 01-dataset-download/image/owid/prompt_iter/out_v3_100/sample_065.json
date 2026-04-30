@@ -1,0 +1,9 @@
+{
+  "slug": "number-of-deaths-from-road-injuries",
+  "title": "Deaths from road injuries",
+  "subtitle": "Annual number of deaths from road injuries. Road injuries include deaths of drivers, passengers, pedestrians and cyclists.",
+  "caption": "The 2023 world map displays the annual number of deaths from road injuries, covering drivers, passengers, pedestrians, and cyclists, using a color scale ranging from light beige for zero deaths to dark red for 100,000 deaths. The highest values, falling in the darkest red band representing 100,000 deaths, are visible in China and India. A secondary tier of high mortality, shown in dark orange-red bands between 30,000 and 100,000, covers the United States, Brazil, Russia, Indonesia, and Nigeria. Mid-range values appear across much of Africa, the Middle East, and parts of South America, while the lowest counts sit in the lightest beige bands across Greenland, Iceland, and parts of northern Europe. The distribution shows the largest absolute numbers of road injury deaths concentrated in the most populous nations of Asia and the Americas.",
+  "word_count": 133,
+  "latency_s": 10.717389345169067,
+  "prompt_tag": "v3_100"
+}

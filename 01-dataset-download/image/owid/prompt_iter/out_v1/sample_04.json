@@ -1,0 +1,9 @@
+{
+  "slug": "share-who-drank-alcohol-last-week",
+  "title": "Share of population who drank alcohol in the last week, United Kingdom",
+  "subtitle": "Share of a given demographic who drank any alcohol in the last week.",
+  "caption": "Between 2005 and 2016, the share of the United Kingdom population who drank alcohol in the last week varied significantly across age and gender groups. Males aged 45 to 64 consistently reported the highest prevalence, starting near 77% in 2005 and declining to approximately 69% by 2016. In contrast, females aged 16 to 24 consistently recorded the lowest figures, beginning around 56% and falling to roughly 42% over the same period. Most demographic lines exhibit a general downward trend, particularly noticeable among younger cohorts; for instance, the share for males aged 25 to 44 dropped from over 70% to just above 60%. While older male groups maintained higher consumption rates than their female counterparts throughout the timeline, the gap between males and females aged 65 and over narrowed slightly as both lines converged near the 63% mark by the end of the series. The data reveals a persistent stratification where middle-aged men are the most frequent drinkers, while young women are the least likely to have consumed alcohol in the preceding week.",
+  "word_count": 172,
+  "latency_s": 4.138595342636108,
+  "prompt_tag": "v1"
+}

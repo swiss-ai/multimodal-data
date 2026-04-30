@@ -1,0 +1,9 @@
+{
+  "slug": "injuries-from-terrorist-attacks",
+  "title": "Injuries from terrorist attacks",
+  "subtitle": "Confirmed non-fatal injuries, including all victims and attackers who were hurt because of a [terrorist attack](#dod:terrorism).",
+  "caption": "In 2021, confirmed non-fatal injuries from terrorist attacks were distributed unevenly across the globe, with the highest concentrations appearing in specific regions of the Middle East, South Asia, and North America. The map uses a color scale ranging from pale yellow for zero injuries to deep maroon for over 1,000, revealing that Afghanistan and Iraq recorded the highest absolute numbers, falling into the darkest category. Significant clusters of injuries, represented by orange and red shades indicating counts between 30 and 300, are visible across the Sahel region of Africa, including Mali and Burkina Faso, as well as in India, Yemen, and the United States. In contrast, vast areas including Australia, most of South America, and Western Europe display very light shading, corresponding to fewer than 10 injuries or zero reported cases. Greenland and parts of the ocean are marked with hatching to indicate no available data. The geographic distribution shows a distinct pattern where the burden of non-fatal injuries is heavily localized to conflict-affected zones and specific national territories rather than being spread uniformly across continents.",
+  "word_count": 176,
+  "latency_s": 3.821718215942383,
+  "prompt_tag": "v1"
+}

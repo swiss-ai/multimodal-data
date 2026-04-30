@@ -1,0 +1,9 @@
+{
+  "slug": "views-ai-impact-society-next-20-years",
+  "title": "Views about AI's impact on society in the next 20 years",
+  "subtitle": "Survey respondents were asked, \"Will artificial intelligence help or harm people in the next 20 years?\"",
+  "caption": "In 2021, survey respondents across 11 countries offered divergent predictions regarding whether artificial intelligence will help or harm society over the next two decades. The stacked horizontal bars show that Japan and China hold the most optimistic outlooks, with 61% of respondents in each nation expecting AI to mostly help, while the \"mostly harm\" category remains low at 13%. Germany and Italy follow with majority or near-majority expectations of benefit, though Italy shows a higher share of pessimism at 32%. In contrast, Pakistan records the lowest level of optimism at 19% and the highest level of pessimism at 52%. The United States and India display a split distribution where the share expecting harm equals or nearly equals the share expecting help, both hovering around 33% to 35%. Indonesia stands out for a large concentration of uncertainty, with 44% of respondents selecting \"no opinion or don't know,\" the highest value in that category across the dataset. The data shows a wide range in public sentiment, with the proportion expecting AI to mostly help falling from 61% in Japan to 19% in Pakistan.",
+  "word_count": 181,
+  "latency_s": 9.460622072219849,
+  "prompt_tag": "v4_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "views-ai-impact-society-next-20-years",
+  "title": "Views about AI's impact on society in the next 20 years",
+  "subtitle": "Survey respondents were asked, \"Will artificial intelligence help or harm people in the next 20 years?\"",
+  "caption": "Views about AI's impact on society in the next 20 years\n\nSurvey respondents were asked, \"Will artificial intelligence help or harm people in the next 20 years?\"\n\nThis stacked horizontal bar chart presents 2021 survey data regarding public expectations of artificial intelligence across eleven countries. The legend categorizes responses into five groups: \"Mostly help\" (blue), \"Neither\" (green), \"No response\" (purple), \"No opinion or don't know\" (tan), and \"Mostly harm\" (maroon). Japan and China show the highest levels of optimism, with 61% of respondents in each country selecting \"Mostly help.\" Germany follows closely at 60%, while Italy stands at 50%. In contrast, Pakistan records the lowest share for this category at 19%, with Indonesia at 22%. The \"Mostly harm\" category reaches its peak in Pakistan, where 52% of respondents selected this option. France, India, and the United States also show substantial shares for \"Mostly harm,\" ranging from 35% to 36%. The \"No opinion or don't know\" band is most prominent in Indonesia at 44%, followed by Canada and India at 30%. The \"Neither\" category remains a minor segment across most nations, typically falling between 5% and 10%, except in Canada where it is negligible. The \"No response\" category appears as a very thin purple sliver in several bars, such as the United States and India, indicating minimal non-response. The data reflects a global total of 120,000–130,000 people aged 15+ surveyed, with most countries utilizing a nationally representative sample of around 1,000 people.",
+  "word_count": 241,
+  "latency_s": 14.682526111602783,
+  "prompt_tag": "v12_100"
+}

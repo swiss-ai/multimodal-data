@@ -1,0 +1,9 @@
+{
+  "slug": "terrorist-attacks-by-region",
+  "title": "Terrorist attacks by region",
+  "subtitle": "Number of [terrorist attacks](#dod:terrorism) by world region.",
+  "caption": "Terrorist attacks by region\n\nNumber of terrorist attacks by world region.\n\nThe stacked area chart tracks the annual number of terrorist attacks across world regions from 1992 to 2021, with the vertical axis ranging from 0 to 18,000. The total volume of attacks begins near 4,000 in 1992, declines to a low point below 1,000 around 1998, and then rises steadily to a global peak of approximately 16,500 in 2014 before falling to roughly 5,000 by 2021. The Middle East & North Africa region, represented by the orange band, constitutes the largest share of the total during the peak years, expanding significantly after 2003 to reach a maximum height of roughly 8,000 to 9,000 attacks annually around 2014. Sub-Saharan Africa, shown in blue at the base of the stack, remains relatively low until 2010, after which it rises to occupy a band between 1,000 and 2,000 through the end of the period. South Asia, depicted in pink, shows a distinct surge starting around 2010, peaking near 5,000 in 2014, and declining thereafter. Southeast Asia and South America contribute smaller, fluctuating bands throughout the timeline, generally staying below the 2,000 mark individually. The regions of Australasia & Oceania, Central Asia, Eastern Europe, North America, East Asia, and Central America & Caribbean appear as very thin layers or are barely visible within the stack, indicating consistently lower counts relative to the dominant regions. The overall shape of the chart is defined by the sharp ascent and subsequent descent of the Middle East & North Africa and South Asia bands between 2010 and 2021.",
+  "word_count": 261,
+  "latency_s": 16.95699167251587,
+  "prompt_tag": "v11_100"
+}

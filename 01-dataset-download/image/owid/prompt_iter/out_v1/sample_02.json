@@ -1,0 +1,9 @@
+{
+  "slug": "municipal-waste-recycled",
+  "title": "Municipal waste recycled",
+  "subtitle": "Waste from households that is collected by local authorities and recycled.",
+  "caption": "In 2022, the total mass of municipal waste recycled by local authorities varied significantly across nations, with the highest volumes concentrated in North America and Western Europe. The United States and Germany recorded the largest absolute quantities, both exceeding 30 million tonnes, followed by Japan and France in the 10 to 30 million tonne range. Substantial recycling activity, falling between 3 and 10 million tonnes, is visible in Canada, the United Kingdom, Italy, and Australia. Mid-range volumes appear in countries such as Spain, South Korea, and South Africa, while lower totals characterize nations in South America and parts of Asia. Large portions of the map, including most of Africa, Russia, and Central Asia, display no available data for this metric. The distribution highlights a concentration of high-volume recycling infrastructure in industrialized economies, contrasting with lower reported figures or missing data across the Global South.",
+  "word_count": 144,
+  "latency_s": 3.20552396774292,
+  "prompt_tag": "v1"
+}

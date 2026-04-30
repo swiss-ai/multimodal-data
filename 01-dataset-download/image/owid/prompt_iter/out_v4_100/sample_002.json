@@ -1,0 +1,9 @@
+{
+  "slug": "augmented-hdi-vs-gdp-per-capita",
+  "title": "Augmented Human Development Index vs. GDP per capita",
+  "subtitle": "The Augmented Human Development Index (AHDI) is a summary measure of achievement in four key dimensions of human development: a long and healthy life, being knowledgeable, being free and having a decent standard of living. GDP per capita is adjusted for inflation and differences in living costs between countries.",
+  "caption": "Across countries in 2020, the Augmented Human Development Index (AHDI) and GDP per capita show a positive relationship, with higher income generally coinciding with higher development scores. The scatter plot places GDP per capita on a logarithmic horizontal axis and AHDI on a vertical axis ranging from 0 to 0.8. A dense cluster of points occupies the lower-left quadrant, where nations such as Burundi, DR Congo, and Chad register GDP per capita below $2,000 and AHDI scores between 0.1 and 0.2. Moving toward the upper-right, countries like Switzerland, Japan, and the United States display GDP per capita exceeding $50,000 and AHDI scores above 0.8. Several nations deviate from the central trend line: Qatar and Kuwait appear far to the right with high GDP but moderate AHDI scores around 0.4 to 0.5, while Moldova and Peru sit above the main cluster with AHDI scores near 0.5 despite lower GDP levels. Circle sizes correspond to population, highlighting large populations in India and China within the middle-income range. The data points form an upward-sloping distribution that flattens at the highest income levels.",
+  "word_count": 179,
+  "latency_s": 15.318002700805664,
+  "prompt_tag": "v4_100"
+}

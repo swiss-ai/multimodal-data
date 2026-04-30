@@ -1,0 +1,9 @@
+{
+  "slug": "lighting-sources-uk",
+  "title": "Lighting sources in the United Kingdom",
+  "subtitle": "The share of lighting across the United Kingdom, sourced from different energy sources.",
+  "caption": "Across the United Kingdom from 1700 to 2025, the share of lighting sourced from different energy sources shifts through distinct phases of adoption and replacement. Candles dominate the chart for the first century, occupying nearly the entire vertical space until the early 1800s. Whale oil enters the mix around 1800 and grows to cover roughly 40% of the total by 1850, while kerosene appears briefly in the mid-19th century before receding. Gas lighting emerges around 1820, expands rapidly after 1850 to reach a peak share near 80% around 1900, then declines as electricity rises. Electricity first appears in the data around 1880, grows slowly until 1920, then accelerates sharply to surpass gas by 1950 and reaches 100% by the early 2000s. The stacked area format shows how each new source displaces prior ones rather than adding to total lighting capacity. Electricity’s rise from zero to full coverage over 140 years forms the most extended and complete transition visible in the chart.",
+  "word_count": 161,
+  "latency_s": 13.631632089614868,
+  "prompt_tag": "v3_100"
+}

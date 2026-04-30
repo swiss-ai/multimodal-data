@@ -1,0 +1,9 @@
+{
+  "slug": "lighting-sources-uk",
+  "title": "Lighting sources in the United Kingdom",
+  "subtitle": "The share of lighting across the United Kingdom, sourced from different energy sources.",
+  "caption": "Lighting sources in the United Kingdom, 1700 to 2025\n\nThe share of lighting across the United Kingdom, sourced from different energy sources.\n\nFrom 1700 to approximately 1800, the beige area representing candles occupies nearly the entire vertical space, indicating a share close to 100%. A thin grey band for whale oil emerges around 1750, fluctuating between 0% and roughly 15% through the early 19th century before declining. Starting near 1810, a purple region labeled gas begins to rise from the baseline, expanding steadily to reach approximately 40% by 1850 and peaking near 80% around 1880. During the late 19th and early 20th centuries, a red band for kerosene appears, occupying a share roughly between 10% and 25% before diminishing after 1920. The blue area representing electricity enters the chart around 1880 at the bottom axis and climbs gradually until 1920, after which its growth accelerates sharply. By 1950, the electricity share surpasses the 80% mark, and by 1970, it fills the chart area up to the 100% line, where it remains through 2025. As electricity expands, the shares for gas, kerosene, and earlier sources contract, with the purple gas band disappearing entirely by the mid-20th century. The transition shows a clear succession where newer sources displace the vertical space previously held by candles, whale oil, gas, and kerosene.",
+  "word_count": 218,
+  "latency_s": 15.482875108718872,
+  "prompt_tag": "v11_100"
+}

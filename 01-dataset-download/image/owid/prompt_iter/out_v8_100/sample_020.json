@@ -1,0 +1,9 @@
+{
+  "slug": "endemic-amphibian-species-by-country",
+  "title": "Endemic amphibian species",
+  "subtitle": "[Endemic species](#dod:endemic_species) are those known to occur naturally within one country only.",
+  "caption": "Endemic amphibian species, 2025\nEndemic species are those known to occur naturally within one country only.\n\nThis choropleth map displays the count of endemic amphibian species for each country in 2025, using a continuous color scale ranging from pale yellow for zero endemics to deep blue for counts exceeding 300. The data shows a distinct concentration of high species counts in tropical and subtropical regions, particularly across the Americas and parts of Asia. The highest values, falling in the darkest blue band representing more than 300 species, appear in Brazil, Colombia, and India. Moving down the scale, countries such as Mexico, Peru, China, and Australia display medium-to-high counts, shaded in the blue bands corresponding to ranges between 30 and 300 species. In contrast, the map shows very low numbers or no endemics across vast areas of northern latitudes and arid zones. Canada, Russia, and the majority of the Middle East and North Africa region appear in the lightest yellow shade, indicating zero endemic species. Several nations in central Africa and parts of Europe show low counts, falling within the 1 to 10 range. The visual pattern highlights a strong geographic clustering where biodiversity hotspots for endemic amphibians coincide with specific equatorial and coastal zones, while large continental interiors and high-latitude regions remain devoid of species restricted to single national borders.",
+  "word_count": 220,
+  "latency_s": 11.696275472640991,
+  "prompt_tag": "v8_100"
+}

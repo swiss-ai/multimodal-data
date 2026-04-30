@@ -1,0 +1,9 @@
+{
+  "slug": "elections-for-the-governments-chief-executive",
+  "title": "Elections for the government's chief executive",
+  "subtitle": "Data by the Lexical Index of Electoral Democracy.",
+  "caption": "Elections for the government's chief executive\n\nData by the Lexical Index of Electoral Democracy.\n\nThe 2025 world map displays the status of elections for the government's chief executive across nations, categorized into three distinct visual groups based on the Lexical Index of Electoral Democracy. The majority of the globe is shaded in blue, representing countries where such elections are held (\"Yes\"). This blue category encompasses the entirety of North and South America, Europe, Australia, and the majority of Sub-Saharan Africa. In Asia, nations including India, Japan, South Korea, and Indonesia also fall within this blue band. Conversely, a contiguous band of countries colored in orange indicates the absence of these elections (\"No\"). This orange grouping includes China, Russia, and most nations across the Middle East and North Africa, such as Saudi Arabia, Iran, and Egypt, as well as specific countries in Sub-Saharan Africa like Sudan and Eritrea. A third category, marked by diagonal hatching, denotes regions with \"No data.\" This pattern is visible primarily over Greenland in the North Atlantic. The distribution shows a clear geographic divide, with the \"Yes\" status dominating the Western Hemisphere and Oceania, while the \"No\" status clusters across large portions of Eurasia and Northern Africa. The visual contrast between the solid blue and orange fields highlights the global variation in executive electoral processes for the year 2025, with the hatched area remaining the only region excluded from the binary classification.",
+  "word_count": 235,
+  "latency_s": 10.41387391090393,
+  "prompt_tag": "v11_100"
+}

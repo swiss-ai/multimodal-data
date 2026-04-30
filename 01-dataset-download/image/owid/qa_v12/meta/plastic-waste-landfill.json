@@ -1,0 +1,8 @@
+{
+  "slug": "plastic-waste-landfill",
+  "title": "Share of plastic waste that is sent to landfill",
+  "subtitle": "",
+  "note": "Regional aggregates were calculated by Our World in Data and are based on those specified by the [OECD](#dod:oecd-regions).",
+  "caption": "Share of plastic waste that is sent to landfill\n\nThis line chart tracks the share of plastic waste sent to landfill from 2000 to 2019 across various global regions and specific countries. The vertical axis ranges from 0% to over 75%, while the horizontal axis marks the years 2000 and 2019. In 2000, Oceania and the United States occupied the highest positions, starting at 75.1% and 74.4% respectively; by 2019, these figures remained high at 74.9% and 72.9%, showing minimal change. Conversely, Europe began at 68% in 2000 but experienced a significant decline, dropping to 44.2% by 2019. The line for the Americas (excluding USA) started at 61.4% and decreased slightly to 60.1%. The World average shifted from 59.4% down to 49.2%. The Middle East & North Africa region shows an upward trend, rising from 50.7% to 54.1%. At the lower end of the chart in 2000, Sub-Saharan Africa, China, and India clustered closely together between 25.1% and 27.7%. By 2019, Sub-Saharan Africa rose to 30.2%, while China and India increased to 36.4% and 36.3% respectively. Asia (excluding China and India) started at 48.8% and fell to 39.4%. Regional aggregates were calculated by Our World in Data and are based on those specified by the OECD. The visual data highlights a divergence where some regions maintained or increased landfill usage shares, while others, particularly Europe and parts of Asia, saw substantial reductions over the two-decade period.",
+  "word_count": 236
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "rate-of-child-deaths-attributed-to-child-and-maternal-malnutrition",
+  "title": "Rate of child deaths attributed to child and maternal malnutrition",
+  "subtitle": "The estimated number of deaths attributed to child and maternal malnutrition, per 100,000 children under the age of 5.",
+  "caption": "Across the globe in 2023, the rate of child deaths attributed to child and maternal malnutrition varies significantly by region, measured as the estimated number of deaths per 100,000 children under the age of 5. The map displays a continuous color scale ranging from light beige for rates near zero to deep maroon for rates exceeding 2,000. The highest mortality rates cluster heavily across sub-Saharan Africa, with countries such as Somalia, Chad, and the Central African Republic falling into the darkest bands, indicating rates between 1,000 and 2,000 deaths per 100,000 children. Moderate rates, generally falling between 100 and 500, appear across parts of South Asia, including India and Pakistan, as well as in portions of Central America and the Andean region of South America. In contrast, North America, Europe, Australia, and much of East Asia appear in the lightest shades, corresponding to rates below 10 deaths per 100,000 children. Greenland and a few other territories are marked with hatching to indicate no available data. The geographic distribution shows the highest concentration of malnutrition-related child mortality in central and western Africa.",
+  "word_count": 181,
+  "latency_s": 11.552488088607788,
+  "prompt_tag": "v3_100"
+}

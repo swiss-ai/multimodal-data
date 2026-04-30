@@ -1,0 +1,9 @@
+{
+  "slug": "near-earth-asteroids-discovered-over-time",
+  "title": "Near-Earth asteroids discovered over time",
+  "subtitle": "Cumulative number of discovered asteroids with an orbit that brings them into proximity with Earth. This is broken down by size of the asteroid.",
+  "caption": "Near-Earth asteroids discovered over time\n\nCumulative number of discovered asteroids with an orbit that brings them into proximity with Earth. This is broken down by size of the asteroid.\n\nThis stacked area chart tracks the cumulative number of discovered Near-Earth asteroids from 1990 to 2025, categorized by physical size. The vertical axis measures the count of asteroids, ranging from 0 to 40,000, while the horizontal axis represents the timeline. The data is divided into three distinct bands: the bottom black layer represents asteroids larger than 1 kilometer, the middle purple layer covers those between 140 meters and 1 kilometer, and the top orange layer includes asteroids smaller than 140 meters. Throughout the entire period, the black band remains a thin, flat strip near the baseline, indicating a low and steady cumulative count for the largest objects. The purple band shows a consistent upward slope, reaching a cumulative total of approximately 11,000 to 12,000 by 2025. The orange band constitutes the largest portion of the chart, driving the steep exponential rise in the total count, particularly after 2010. By the end of the timeline in 2025, the total cumulative number of discovered asteroids reaches the 40,000 mark. The visual trend demonstrates that the vast majority of discoveries over this 35-year period belong to the smallest size category. The chart defines Near-Earth asteroids as those with a closest approach to the Sun of less than 1.3 astronomical units, where 1 AU equals the distance from Earth to the Sun.",
+  "word_count": 247,
+  "latency_s": 14.97025442123413,
+  "prompt_tag": "v12_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "co-emissions-per-capita-vs-fossil-fuel-consumption-per-capita",
+  "title": "CO₂ emissions per capita vs. fossil fuel consumption per capita",
+  "subtitle": "Fossil fuel consumption is measured as the average consumption of energy from coal, oil and gas per person. [Fossil fuel and industry emissions](#dod:fossilemissions) are included. [Land-use change emissions](#dod:land-use-change-emissions) are not included.",
+  "caption": "In 2024, per capita CO2 emissions rise in tandem with per capita fossil fuel energy consumption across nations, plotted on logarithmic axes. Countries cluster along an upward-sloping band: Pakistan and the Philippines sit near the lower left, each below 1 tonne of emissions and under 5,000 kWh of fossil energy per person. India and Indonesia occupy the middle-lower range, between 1 and 3 tonnes and 5,000 to 10,000 kWh. China, Japan, and the United Kingdom fall in the mid-range, around 5 to 10 tonnes and 20,000 to 40,000 kWh. The United States, South Korea, and Singapore appear higher, between 10 and 20 tonnes and 50,000 to 100,000 kWh. Qatar, Kuwait, and Saudi Arabia reach the upper right, exceeding 20 tonnes and 100,000 kWh. Circle size reflects population, with India and China shown as the largest bubbles. High-income countries dominate the upper half of the plot; lower-middle-income countries concentrate in the lower left. The data shows a consistent positive relationship: higher fossil energy use per person coincides with higher emissions per person.",
+  "word_count": 171,
+  "latency_s": 12.760724067687988,
+  "prompt_tag": "v4_100"
+}

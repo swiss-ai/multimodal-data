@@ -1,0 +1,9 @@
+{
+  "slug": "plastic-waste-region-and-polymer",
+  "title": "Plastic waste generation by region and polymer",
+  "subtitle": "Polymer types are as follows: Acrylonitrile Butadiene (AB), Acrylonitrile Styrene Acrylate (ASA), Styrene Acrylonitrile (SAN), Polyurethane (PUR), Polyvinyl Chloride (PVC), Polystyrene (PS), Linear Low-Density Polyethylene (LLDPE), Polypropylene (PP), Polyethylene Terephthalate (PET), High-Density Polyethylene (HDPE).",
+  "caption": "Plastic waste generation in 2019 is broken down by polymer type and region using a stacked horizontal bar chart. The chart lists various polymers on the vertical axis, including PVC, PUR, PS, HDPE, PET, PP, and others, while the horizontal axis measures the percentage share of waste generation by region. For every polymer type shown, the United States, represented by the teal segment on the far right, consistently accounts for the largest share of waste generation, typically comprising between 15% and 25% of the total. Europe, shown in blue, and China, shown in maroon, follow as the next largest contributors across most categories, with Europe generally holding a share between 15% and 20% and China between 15% and 20%. The remaining regions, including Asia excluding China and India, the Middle East and North Africa, India, Sub-Saharan Africa, the Americas excluding the USA, and Oceania, make up the smaller segments in the middle of the bars. The distribution of regional shares remains relatively consistent across different polymer types, with the United States, Europe, and China forming the dominant blocks in the stack for materials ranging from road marking coatings to bioplastics.",
+  "word_count": 190,
+  "latency_s": 11.134532451629639,
+  "prompt_tag": "v4_100"
+}

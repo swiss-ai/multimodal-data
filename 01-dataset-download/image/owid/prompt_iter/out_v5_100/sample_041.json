@@ -1,0 +1,9 @@
+{
+  "slug": "gavi-supported-countries",
+  "title": "Gavi supported countries",
+  "subtitle": "Gavi provides financial and expert knowledge support for countries to access new and underused vaccines. Support is given to countries with a Gross National Income per capita of less than US$1,810, calculated using the World Bank Atlas Method, over the past three years.",
+  "caption": "In 2024, the map displays the geographic distribution of countries eligible for Gavi support, a program providing financial and expert knowledge for vaccine access to nations with a Gross National Income per capita below US$1,810. The visualization uses a binary color scheme where teal indicates eligibility and light beige denotes ineligibility. The teal shading covers a contiguous block of nations across sub-Saharan Africa, including Nigeria, the Democratic Republic of the Congo, Ethiopia, Kenya, and South Africa, alongside countries in the Sahel region such as Mali and Niger. In Asia, the eligible category includes Pakistan, Afghanistan, Bangladesh, Nepal, Myanmar, and North Korea, as well as Yemen and Syria in the Middle East. Island nations in the Pacific and Caribbean, such as Papua New Guinea, the Solomon Islands, and Haiti, also appear in the teal band. Conversely, the light beige color fills the entirety of North America, South America, Europe, and Australia, indicating these regions do not meet the income threshold. Large economies in Asia, specifically China, India, and Indonesia, along with Russia and most of the Middle East including Saudi Arabia, fall into the not eligible category. The data shows a clear concentration of supported nations in the lower-income regions of Africa and South Asia, while higher-income regions across the Americas, Europe, and Oceania remain outside the support scope.",
+  "word_count": 218,
+  "latency_s": 11.322789907455444,
+  "prompt_tag": "v5_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "monthly-sea-ice-extent-in-the-arctic-decadal-average",
+  "title": "Monthly sea ice extent in the Arctic, decadal average",
+  "subtitle": "Each point represents the monthly average sea ice extent, averaged across all years within the decade. The current decade is highlighted in red, with the current year shown in black for comparison.",
+  "caption": "Monthly sea ice extent in the Arctic, decadal average\n\nEach point represents the monthly average sea ice extent, averaged across all years within the decade. The current decade is highlighted in red, with the current year shown in black for comparison.\n\nThe chart displays five decadal average lines alongside a single-year series for 2025, tracking monthly sea ice extent from January to December. The vertical axis ranges from 4 million to 16 million square kilometers. All series follow a consistent seasonal curve, peaking in the early months and reaching a minimum in late summer. The 1980s line, rendered in the lightest blue, occupies the highest position, starting near 14.5 million square kilometers in January and descending to a low of approximately 7.5 million in September. Subsequent decades show a progressive downward shift; the 1990s, 2000s, and 2010s lines cluster tightly below the 1980s trace, with September minimums falling between 5.5 and 6.5 million square kilometers. The 2020s average, shown in red, sits lower still, beginning around 13.5 million square kilometers and bottoming out near 4.5 million. The black line representing 2025 tracks closely with the 2020s average for most of the year, dipping to roughly 4.5 million square kilometers in September before rising toward 11 million by December. The horizontal axis marks months 1 through 12, with data present for all months in the decadal averages, while the 2025 series and the historical years 1987 and 1988 contain minor gaps.",
+  "word_count": 240,
+  "latency_s": 15.236285209655762,
+  "prompt_tag": "v11_100"
+}

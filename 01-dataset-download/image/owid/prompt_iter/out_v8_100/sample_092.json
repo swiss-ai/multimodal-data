@@ -1,0 +1,9 @@
+{
+  "slug": "elections-for-the-governments-chief-executive",
+  "title": "Elections for the government's chief executive",
+  "subtitle": "Data by the Lexical Index of Electoral Democracy.",
+  "caption": "Elections for the government's chief executive, 2025\nData by the Lexical Index of Electoral Democracy.\n\nThis world map displays the status of elections for the government's chief executive across countries in 2025, using a color-coded system to distinguish between nations that hold such elections and those that do not. The legend defines three categories: blue indicates \"Yes,\" orange indicates \"No,\" and a hatched gray pattern represents \"No data.\" The blue coloration covers the majority of the global landmass, including the entirety of North and South America, Australia, and most of Europe and sub-Saharan Africa. In contrast, the orange areas, signifying the absence of chief executive elections, form a contiguous band stretching from North Africa through the Middle East and into Central and East Asia. Specific countries falling into this \"No\" category include Morocco, Algeria, Libya, Egypt, Saudi Arabia, Iran, Afghanistan, China, and Vietnam. Greenland is the primary region marked with the hatched pattern, indicating that data is unavailable for that territory. The distribution shows a clear geographic divide where the Americas and Oceania are uniformly blue, while the \"No\" classification is concentrated in a specific longitudinal belt across the Eastern Hemisphere. The visual pattern establishes that holding elections for the head of government is the prevailing condition for the majority of sovereign states represented on the map.",
+  "word_count": 217,
+  "latency_s": 10.35625147819519,
+  "prompt_tag": "v8_100"
+}

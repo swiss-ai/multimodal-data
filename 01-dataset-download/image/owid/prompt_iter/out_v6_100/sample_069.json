@@ -1,0 +1,9 @@
+{
+  "slug": "measles-number-unvaccinated",
+  "title": "Number of one-year-olds who are not vaccinated against measles",
+  "subtitle": "",
+  "caption": "Number of one-year-olds who are not vaccinated against measles, 2023\n\nGlobal distribution of unvaccinated children in the first year of life\n\nThis choropleth map displays the absolute count of one-year-olds who did not receive the measles vaccine in 2023, using a color scale that ranges from pale beige for zero cases to deep maroon for populations exceeding one million. The visualization highlights a distinct concentration of unvaccinated children across specific regions in Africa and Asia, where the darkest shades dominate the landscape. India and Nigeria appear in the deepest red, placing them in the highest category with more than one million unvaccinated infants each. Pakistan, Ethiopia, and the Democratic Republic of the Congo also fall within this uppermost band, showing figures between 300,000 and one million. In South America, Brazil stands out with a darker red tone compared to its neighbors, indicating a count between 100,000 and 300,000, while Mexico and Indonesia show similar mid-range values. Across much of Western Europe, North America, and Australia, the map remains in the lightest beige tones, signifying counts near zero or well below 10,000. Russia and China display lighter orange shades, suggesting numbers between 10,000 and 30,000, which contrasts with the intense clustering seen in South Asia and Sub-Saharan Africa. Several nations in Central Africa and the Middle East occupy the intermediate bands, with counts ranging from 30,000 to 100,000. The data reveals a geographic pattern where the highest absolute numbers of unvaccinated one-year-olds cluster in a few populous nations in the Global South, while vast areas of the developed world show minimal counts.",
+  "word_count": 261,
+  "latency_s": 15.271484851837158,
+  "prompt_tag": "v6_100"
+}

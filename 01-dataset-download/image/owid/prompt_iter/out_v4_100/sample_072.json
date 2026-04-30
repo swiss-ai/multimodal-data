@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-children-vaccinated-against-measles",
+  "title": "Share of one-year-olds vaccinated against measles",
+  "subtitle": "Share of one-year-olds who have received the first dose of the measles vaccine (MCV1).",
+  "caption": "Across the globe in 2024, the share of one-year-olds vaccinated against measles varies significantly by region. The map displays a clear geographic divide: the highest coverage rates, falling in the 95% to 100% band, are concentrated across North America, Europe, and East Asia, including countries such as the United States, Germany, and China. In contrast, the lowest vaccination shares, appearing in the 0% to 40% range, are clustered primarily in central and southern Africa, with nations like Chad and Somalia visible in the lightest color bands. Many countries in South America and Southeast Asia occupy the middle ground, showing coverage levels between 60% and 80%. The data shows a distinct pattern where high-income regions maintain near-universal coverage, while specific areas in sub-Saharan Africa lag significantly behind.",
+  "word_count": 126,
+  "latency_s": 8.23320746421814,
+  "prompt_tag": "v4_100"
+}

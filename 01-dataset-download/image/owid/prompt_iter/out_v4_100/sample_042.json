@@ -1,0 +1,9 @@
+{
+  "slug": "plastic-waste-generation-total",
+  "title": "Plastic waste generation",
+  "subtitle": "This measures total plastic waste generation prior to management and therefore does not represent the quantity of plastic at risk of polluting waterways, rivers and the ocean environment.",
+  "caption": "Across the globe in 2010, total plastic waste generation varies significantly by country, with the highest volumes concentrated in North America, East Asia, and parts of South America. The United States and China both fall into the darkest red band, indicating generation exceeding 10 million tonnes, while Brazil also appears in this highest category. Russia, India, and several Western European nations including Germany and the United Kingdom occupy the next tier, with waste generation between 5 and 10 million tonnes. Much of Africa, Central Asia, and Oceania shows lighter shading, corresponding to generation below 2.5 million tonnes, with many countries in sub-Saharan Africa and central Asia falling under 1 million tonnes. Several regions, including Greenland, Western Sahara, and parts of the Middle East, are marked with diagonal hatching to denote no available data. The geographic distribution shows that the largest absolute quantities of plastic waste prior to management are generated in a small number of highly populous or high-consumption economies, while most of the world’s countries generate substantially less.",
+  "word_count": 169,
+  "latency_s": 10.096521615982056,
+  "prompt_tag": "v4_100"
+}

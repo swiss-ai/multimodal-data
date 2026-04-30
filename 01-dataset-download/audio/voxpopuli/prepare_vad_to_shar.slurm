@@ -18,11 +18,11 @@ set -euo pipefail
 REPO_DIR=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer
 
 # Input dataset roots
-AUDIO_ROOT=${AUDIO_ROOT:-/capstor/store/cscs/swissai/infra01/audio-datasets/voxpopuli/raw_audios}
-VAD_DIR=${VAD_DIR:-/capstor/store/cscs/swissai/infra01/audio-datasets/voxpopuli/vad_results_merged/per_lang_year_dedup}
+AUDIO_ROOT=${AUDIO_ROOT:-/capstor/store/cscs/swissai/infra01/audio-datasets/raw/voxpopuli/raw_audios}
+VAD_DIR=${VAD_DIR:-/capstor/store/cscs/swissai/infra01/audio-datasets/raw/voxpopuli/vad_results_merged/per_lang_year_dedup}
 
 # Shared output root (each job writes to SHAR_ROOT/node_XX)
-SHAR_ROOT=${SHAR_ROOT:-/iopsstor/scratch/cscs/xyixuan/audio-datasets/voxpopuli_shar}
+SHAR_ROOT=${SHAR_ROOT:-/capstor/store/cscs/swissai/infra01/audio-datasets/SHAR/stage_1_rebuild/voxpopuli_shar_v2}
 
 # Processing parameters
 NUM_WORKERS_PER_NODE=${NUM_WORKERS_PER_NODE:-288}
@@ -100,7 +100,7 @@ echo "[rank ${RANK}] output=${NODE_SHAR_DIR}"
 cd "${REPO_DIR}"
 export PYTHONPATH="${REPO_DIR}:${PYTHONPATH:-}"
 
-python -m audio_tokenization.utils.prepare_data.prepare_audio_dir_to_shar \
+python -m audio_tokenization.prepare.prepare_audio_dir_to_shar \
   --audio-root "${AUDIO_ROOT}" \
   --jsonl-files "${ASSIGNED_JSONLS[@]}" \
   --shar-dir "${NODE_SHAR_DIR}" \
@@ -114,6 +114,7 @@ python -m audio_tokenization.utils.prepare_data.prepare_audio_dir_to_shar \
   --vad-min-chunk-sec "${VAD_MIN_CHUNK_SEC}" \
   --vad-sample-rate "${VAD_SAMPLE_RATE}" \
   --vad-max-merge-gap-sec "${VAD_MAX_MERGE_GAP_SEC}" \
-  --vad-max-duration-sec "${VAD_MAX_DURATION_SEC}"
+  --vad-max-duration-sec "${VAD_MAX_DURATION_SEC}" \
+  --resampling-backend torchaudio
 
 echo "[rank ${RANK}] finished"

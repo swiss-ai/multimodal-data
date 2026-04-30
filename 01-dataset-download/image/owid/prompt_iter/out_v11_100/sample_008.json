@@ -1,0 +1,9 @@
+{
+  "slug": "openness-of-executive-recruitment-score",
+  "title": "Openness of Executive Recruitment Score",
+  "subtitle": "Data by [Polity 5](#dod:polity).",
+  "caption": "Openness of Executive Recruitment Score\n\nData by Polity 5.\n\nThe 2020 world map displays the Openness of Executive Recruitment Score, where values range from 0 (power seized) to 4 (open recruitment). The majority of countries, including the United States, Canada, Brazil, Australia, and most of Europe and Asia, are shaded in the darkest blue, corresponding to the \"Open\" category at the high end of the scale. In contrast, a distinct cluster of nations in North Africa and the Middle East, such as Algeria, Libya, Sudan, and Yemen, appear in dark red, indicating the \"Power seized\" classification at the lowest end of the spectrum. Saudi Arabia and Oman are shaded in orange-red, falling within the \"Hereditary succession\" band. A few countries, including Myanmar and North Korea, are colored in lighter red or orange shades, placing them in the intermediate \"Dual, chief minister designated\" or \"Dual, chief minister elected\" ranges. Greenland and Western Sahara are marked with diagonal hatching, signifying no data is available for these territories. The visual distribution shows a broad prevalence of the highest openness score across the Americas, Oceania, and large parts of Eurasia, while the lowest scores are concentrated in specific regions of Africa and the Middle East. The note clarifies that the underlying numeric values span from 4 for open recruitment down to 0 where executive power is seized, aligning with the color gradient from blue to red.",
+  "word_count": 232,
+  "latency_s": 11.6285400390625,
+  "prompt_tag": "v11_100"
+}

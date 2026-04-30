@@ -1,0 +1,9 @@
+{
+  "slug": "the-burden-of-disease-vs-gdp-per-capita",
+  "title": "The burden of disease vs. GDP per capita",
+  "subtitle": "The burden of disease is measured in Disability-Adjusted Life Years (DALYs). DALYs measure the total burden of disease – both from years of life lost due to premature death and years lived with a disability. One DALY equals one lost year of healthy life. Here it is age-standardized and expressed per 100,000 individuals.",
+  "caption": "Across countries in 2023, the burden of disease measured in Disability-Adjusted Life Years (DALYs) per 100,000 people shows a negative relationship with GDP per capita. The scatter plot displays a downward-sloping distribution where nations with lower economic output per person generally experience higher rates of premature death and disability. African countries, including the Central African Republic, Niger, Chad, and Burundi, occupy the upper-left quadrant with DALY rates exceeding 60,000 and GDP per capita below $5,000. In contrast, high-income nations in Europe and North America, such as Singapore, the United States, and Germany, cluster in the bottom-right with DALY rates between 10,000 and 20,000 and GDP per capita above $50,000. Circle sizes indicate population, revealing that populous Asian nations like India, China, and Indonesia sit in the middle of the distribution with DALY rates ranging from roughly 20,000 to 40,000. The data shows a clear concentration of high disease burden in low-income regions and low disease burden in high-income regions.",
+  "word_count": 159,
+  "latency_s": 12.115957975387573,
+  "prompt_tag": "v4_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "cumulative-global-plastics",
+  "title": "Cumulative global production of plastics",
+  "subtitle": "Cumulative annual production of polymer resin and fibers.",
+  "caption": "Cumulative global production of plastics\nCumulative annual production of polymer resin and fibers.\n\nThe area chart tracks the total accumulation of polymer resin and fibers produced worldwide from 1950 through 2019, measured in billion tonnes. The vertical axis ranges from zero to 10 billion tonnes, while the horizontal axis marks decades from 1950 to 2019. The data shows a distinct curve of acceleration over the seventy-year period. In the initial decades, the filled area remains close to the baseline; the cumulative total sits well below 1 billion tonnes in 1960 and rises only slightly by 1970. A visible inflection occurs around the 1980 mark, where the slope begins to steepen as the total crosses the 1 billion tonne threshold. By 1990, the cumulative volume reaches approximately 2 billion tonnes. The rate of accumulation increases further in the subsequent decades. The curve passes the 4 billion tonne mark shortly after the year 2000. By 2010, the total exceeds 6 billion tonnes. The final segment of the chart shows the steepest ascent, with the cumulative total approaching 10 billion tonnes by the end of the timeline in 2019. The figures exclude international aviation. The visual pattern displays a trajectory where the volume added in recent decades far exceeds the total production of the first thirty years of the record.",
+  "word_count": 217,
+  "latency_s": 12.768684387207031,
+  "prompt_tag": "v7_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "farmed-crustaceans",
+  "title": "Number of farmed crustaceans killed for food",
+  "subtitle": "The data includes farmed crustaceans such as shrimps, crabs, lobsters, prawns, and crayfish.",
+  "caption": "In 2022, the number of farmed crustaceans killed for food is estimated using upper and lower bounds alongside a mid-point value, with the World total reaching a mid-point of 630 billion. China accounts for the largest share among individual nations, with a mid-point estimate of 320 billion, followed by Ecuador at 62 billion and Indonesia at 49 billion. The upper bound for the World reaches 950 billion, while China's upper bound sits at 450 billion. Ecuador's upper bound of 100 billion exceeds Indonesia's upper bound of 77 billion. The lower bound for the World stands at 310 billion, with China at 190 billion, Ecuador at 22 billion, and Indonesia at 20 billion. The mid-point estimates show China's figure is roughly five times larger than Ecuador's and more than six times larger than Indonesia's.",
+  "word_count": 133,
+  "latency_s": 9.514650583267212,
+  "prompt_tag": "v4_100"
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "labor-force-participation-rate-by-age",
+  "title": "Labor force participation rate by age",
+  "subtitle": "Share of the working-age population (ages 15 and over) who are economically active (employed or unemployed).",
+  "caption": "Labor force participation rate by age\n\nShare of the working-age population (ages 15 and over) who are economically active (employed or unemployed).\n\nThe chart displays four trend lines representing global labor force participation rates by age group from 1990 to 2024, based on modeled ILO estimates where employment includes subsistence farming. The \"Aged 25-54\" series, shown in orange, remains the highest throughout the period, starting near 80% in 1990 and hovering just below that level until a dip around 2020, after which it recovers to approximately 79% by 2024. The \"Aged 55-64\" line, in brown, begins around 53% in 1990, dips slightly before rising steadily to cross 60% by 2024. In contrast, the \"Aged 15-24\" series, depicted in blue, starts near 58% in 1990 and declines consistently to about 42% by 2020, then stabilizes near 43% through 2024. The \"Aged 65+\" line, in green, stays relatively flat between 19% and 21% across the entire timeframe, with a minor dip around 2020 followed by a return to 21%. All figures correspond to modeled ILO estimates using the 13th ICLS definition of employment. The vertical axis ranges from 0% to 80%, marked at 10-percentage-point intervals, while the horizontal axis spans years from 1990 to 2024 in five-year increments. Each line is composed of connected dots indicating annual values, with no gaps or hatched regions visible. The relative ordering of the lines remains consistent: 25-54 above 55-64, which is above 15-24, which is above 65+, except for a brief crossover between 55-64 and 15-24 around 2000.",
+  "word_count": 253,
+  "latency_s": 12.751402854919434,
+  "prompt_tag": "v11_100"
+}

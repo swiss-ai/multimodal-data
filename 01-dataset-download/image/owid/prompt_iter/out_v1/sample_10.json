@@ -1,0 +1,9 @@
+{
+  "slug": "population-growth-rate-with-and-without-migration",
+  "title": "Population growth rate with and without migration",
+  "subtitle": "The annual change in population with migration included versus the change if there was zero migration (neither emigration nor immigration). The latter, therefore, represents the population change based only on domestic births and deaths.",
+  "caption": "Between 1950 and 2023, the annual population growth rate in the United States is tracked under two scenarios: one including migration and one assuming zero migration. The line representing growth with migration consistently remains above the line for growth without migration, indicating that net migration adds to the population increase throughout the period. Both lines follow a similar downward trajectory, starting near 1.5% in 1950 and falling to approximately 0.6% by 2023. The gap between the two lines widens over time; while the difference was negligible in the 1950s, by the 2010s the rate with migration hovered around 1.0% while the rate without migration dropped below 0.5%. A sharp, synchronized decline occurs for both metrics around 2020, with the \"without migration\" line briefly dipping near zero before recovering slightly. The data illustrates that while natural increase has slowed significantly over seven decades, migration has increasingly become the primary component of overall population growth.",
+  "word_count": 153,
+  "latency_s": 3.6862967014312744,
+  "prompt_tag": "v1"
+}

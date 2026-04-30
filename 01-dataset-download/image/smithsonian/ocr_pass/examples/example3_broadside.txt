@@ -1,0 +1,87 @@
+# Dense printed text — broadside / flyer / poster body
+
+id:        00000348___nmaahc_NMAAHC-2010_55_43_001
+image:     example3_broadside.jpg
+caption:   385 chars
+ocr:       4987 chars · tags {'printed_article': 3} · 15.27s
+
+─── ORIGINAL CURATOR CAPTION ───
+
+A trifold pamphlet made of black print on yellowed paper. The cover has large black text that reads: "Fight Racism—Overturn the Bakke Decision!" Below the text is a drawing of people protesting. The interior contains text describing the details of the Bakke court case. The back of the pamphlet provides information on how to join the National Committee to Overturn the Bakke Decision.
+
+─── QWEN3.6-27B OCR OUTPUT ───
+
+[printed_article] On the top-left section of the document:
+has gone too far'?
+Despite its claim of objective legal reasoning, the Bakke decision reflects broad political and economic changes. The 1970's have been a period of relative inactivity for movements against racial discrimination. There has been less pressure on employers to hire and promote minority workers and less pressure on the government to enforce or expand affirmative action programs.
+
+The 1970's have also been a time of economic recession. All poor and working people face severe competition for jobs and educational opportunities. Workers' real wages have declined. Social services of all kinds have been cut back. And historically, in times like these minorities have been blamed for society's problems.
+
+Many of the hard-won gains of the 1950's and 60's are now being reversed. Minority admissions to colleges and professional schools have decreased. Minorities have been hurt most by rising unemployment and social service cuts. In financially-troubled cities like New York and Newark, services to minority communities have been slashed and the communities allowed to deteriorate.
+
+The increased visibility of racist groups like the Ku Klux Klan and the Nazi Party is another sign of minorities under attack. Racist violence has erupted in Boston, Chicago, Louisville and other communities.
+
+[printed_article] On the middle-left section of the document:
+OPPOSE THE BAKKE DECISION
+
+Legal rulings like the Bakke decision hide the fact that the Civil Rights movement of the 1960's produced gains for all poor and working people, and the current setbacks are setbacks for all. The struggles that minorities led for racial equality and decent living conditions meant that the employment of people of all colors was boosted by the expansion of social service jobs and vocational training programs. Working class children of all races who were unable to attend college in the past received work-study jobs and other types of financial aid which made higher education a possibility. Improvements in services such as low-cost housing, community medical clinics and new schools were gains for both whites and minorities. And the militancy and pride that was developed by minorities during the struggles for racial equality carried over into union organizing drives for hospital workers, clerks and other workers in the late 1960's. Minority people often led those battles. The Civil Rights movement also gave women of all races inspiration and legal and political precedents to demand equal rights in this society.
+
+But in the 1970's needed social programs like financial aid or affirmative action have suddenly become "too expensive." Wages have become "too costly" and jobs are eliminated. The gains of the 1960's are being reversed, and the effect is to set whites fighting minorities for a limited number of medical school seats and jobs.
+
+It's going to take the united efforts of people of all colors, ages and occupations to continue the fight for racial equality and justice and prevent further setbacks in the gains won during the 1960's. Affirmative action programs must be defended and expanded. But affirmative action alone is not enough. We must rebuild the broad struggle for racial equality. Joining the campaign to overturn the Bakke decision is one important place to begin.
+
+[printed_article] On the top-right section of the document:
+BUILDING A NATIONAL CAMPAIGN
+
+A number of groups around the country are working against the Bakke decision. The National Committee to Overturn the Bakke decision (NCOBD) was formed in late April, 1977, and is doing education and organizing work in communities, schools and workplaces as part of this effort. The campaign has taken the form of holding house meetings and forums on the Bakke case, working with the media, circulating a petition asking Congress to oppose the decision, and organizing protest actions. The NCOBD helped to organize the National Day of Protest against Bakke on October 8, 1977, which drew more than 10,000 people nationwide to demonstrations in major cities. Tentative plans are also underway for a "National Week" on racism and Bakke in January or February, and for a national protest in April, before the U.S. Supreme Court decision is expected to come down.
+
+The NCOBD has established regional and local committees in communities, schools, and the labor sector in several metropolitan areas throughout the country. We are also building a support network of groups and individuals who can assist the work of the NCOBD in various ways but cannot participate in the committees themselves.
+
+What you can do:
+1. Talk to your friends about the Bakke issue and the national campaign.
+2. Sign our petition.
+3. Contact a regional or local committee in your area to join the support network.
+4. Attend and support our activities.
+5. Make a donation to the NCOBD. Any financial help is greatly needed.
+6. Distribute our petition and/or brochures.
+7.
+
+─── AUGMENTED TRAINING CAPTION (what the tokenizer sees) ───
+
+A trifold pamphlet made of black print on yellowed paper. The cover has large black text that reads: "Fight Racism—Overturn the Bakke Decision!" Below the text is a drawing of people protesting. The interior contains text describing the details of the Bakke court case. The back of the pamphlet provides information on how to join the National Committee to Overturn the Bakke Decision.
+
+Text visible in the image:
+[printed_article] On the top-left section of the document:
+has gone too far'?
+Despite its claim of objective legal reasoning, the Bakke decision reflects broad political and economic changes. The 1970's have been a period of relative inactivity for movements against racial discrimination. There has been less pressure on employers to hire and promote minority workers and less pressure on the government to enforce or expand affirmative action programs.
+
+The 1970's have also been a time of economic recession. All poor and working people face severe competition for jobs and educational opportunities. Workers' real wages have declined. Social services of all kinds have been cut back. And historically, in times like these minorities have been blamed for society's problems.
+
+Many of the hard-won gains of the 1950's and 60's are now being reversed. Minority admissions to colleges and professional schools have decreased. Minorities have been hurt most by rising unemployment and social service cuts. In financially-troubled cities like New York and Newark, services to minority communities have been slashed and the communities allowed to deteriorate.
+
+The increased visibility of racist groups like the Ku Klux Klan and the Nazi Party is another sign of minorities under attack. Racist violence has erupted in Boston, Chicago, Louisville and other communities.
+
+[printed_article] On the middle-left section of the document:
+OPPOSE THE BAKKE DECISION
+
+Legal rulings like the Bakke decision hide the fact that the Civil Rights movement of the 1960's produced gains for all poor and working people, and the current setbacks are setbacks for all. The struggles that minorities led for racial equality and decent living conditions meant that the employment of people of all colors was boosted by the expansion of social service jobs and vocational training programs. Working class children of all races who were unable to attend college in the past received work-study jobs and other types of financial aid which made higher education a possibility. Improvements in services such as low-cost housing, community medical clinics and new schools were gains for both whites and minorities. And the militancy and pride that was developed by minorities during the struggles for racial equality carried over into union organizing drives for hospital workers, clerks and other workers in the late 1960's. Minority people often led those battles. The Civil Rights movement also gave women of all races inspiration and legal and political precedents to demand equal rights in this society.
+
+But in the 1970's needed social programs like financial aid or affirmative action have suddenly become "too expensive." Wages have become "too costly" and jobs are eliminated. The gains of the 1960's are being reversed, and the effect is to set whites fighting minorities for a limited number of medical school seats and jobs.
+
+It's going to take the united efforts of people of all colors, ages and occupations to continue the fight for racial equality and justice and prevent further setbacks in the gains won during the 1960's. Affirmative action programs must be defended and expanded. But affirmative action alone is not enough. We must rebuild the broad struggle for racial equality. Joining the campaign to overturn the Bakke decision is one important place to begin.
+
+[printed_article] On the top-right section of the document:
+BUILDING A NATIONAL CAMPAIGN
+
+A number of groups around the country are working against the Bakke decision. The National Committee to Overturn the Bakke decision (NCOBD) was formed in late April, 1977, and is doing education and organizing work in communities, schools and workplaces as part of this effort. The campaign has taken the form of holding house meetings and forums on the Bakke case, working with the media, circulating a petition asking Congress to oppose the decision, and organizing protest actions. The NCOBD helped to organize the National Day of Protest against Bakke on October 8, 1977, which drew more than 10,000 people nationwide to demonstrations in major cities. Tentative plans are also underway for a "National Week" on racism and Bakke in January or February, and for a national protest in April, before the U.S. Supreme Court decision is expected to come down.
+
+The NCOBD has established regional and local committees in communities, schools, and the labor sector in several metropolitan areas throughout the country. We are also building a support network of groups and individuals who can assist the work of the NCOBD in various ways but cannot participate in the committees themselves.
+
+What you can do:
+1. Talk to your friends about the Bakke issue and the national campaign.
+2. Sign our petition.
+3. Contact a regional or local committee in your area to join the support network.
+4. Attend and support our activities.
+5. Make a donation to the NCOBD. Any financial help is greatly needed.
+6. Distribute our petition and/or brochures.
+7.

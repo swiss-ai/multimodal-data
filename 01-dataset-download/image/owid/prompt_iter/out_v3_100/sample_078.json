@@ -1,0 +1,9 @@
+{
+  "slug": "facilitate-orderly-safe-migration",
+  "title": "National policies for orderly, safe, regular, and responsible migration",
+  "subtitle": "The United Nations measures whether national migration policies meet International Organization for Migration criteria in a variety of policy domains, to ensure orderly, safe, regular, and responsible migration.",
+  "caption": "In 2021, national migration policies across the globe are categorized by their alignment with International Organization for Migration criteria, ranging from requiring further progress to fully meeting standards. The map displays a distribution where the majority of countries, including the United States, Canada, Australia, and most of Europe, fall into the \"Meets criteria\" category, represented by light blue. A smaller group of nations, such as Peru, South Africa, and Iran, are shaded in dark blue, indicating they \"Fully meets criteria.\" Conversely, countries like Yemen, Sudan, and Myanmar appear in red, signaling that their policies \"Require further progress.\" Orange shading, denoting that a country \"Partially meets criteria,\" covers large areas including China, India, and Brazil. Gray hatching marks regions where no data is available, visible across parts of the Middle East and Central Africa. The visual pattern shows a prevalence of light blue across the Americas, Europe, and Oceania, while red and orange appear more frequently in parts of Africa and Asia.",
+  "word_count": 161,
+  "latency_s": 10.63874864578247,
+  "prompt_tag": "v3_100"
+}

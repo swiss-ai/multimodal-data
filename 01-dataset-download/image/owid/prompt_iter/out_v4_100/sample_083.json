@@ -1,0 +1,9 @@
+{
+  "slug": "depressive-disorders-prevalence-by-age",
+  "title": "Share of people who have depressive disorders, by age",
+  "subtitle": "Estimated share of people who have  [depressive disorders](#dod:depressive_disorders), whether or not they are diagnosed, based on representative surveys, medical data and statistical modelling.",
+  "caption": "Across the global population in 2023, the estimated share of people with depressive disorders varies significantly by age group, with prevalence rates generally rising from childhood through older adulthood. The horizontal bar chart displays these percentages, showing the lowest rate among children aged 5-14 at 0.98%. Prevalence increases steadily through adolescence and young adulthood, reaching 4.55% for ages 15-19 and 4.78% for ages 20-24. The highest rates appear in the older age brackets, where the share remains consistently above 5% for all groups from age 30 upwards. The peak prevalence occurs in the 65-69 age group at 5.46%, followed closely by those aged 70+ at 5.36% and ages 60-64 at 5.4%. An age-standardized estimate sits at 3.81%, while the aggregate figure for all ages combined is 4%. The data shows a clear pattern where depressive disorders are least common in early childhood and most common in the elderly population.",
+  "word_count": 149,
+  "latency_s": 10.065438985824585,
+  "prompt_tag": "v4_100"
+}

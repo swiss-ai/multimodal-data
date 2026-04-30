@@ -1,0 +1,9 @@
+{
+  "slug": "per-capita-plastic-waste-vs-gdp-per-capita",
+  "title": "Per capita plastic waste vs. GDP per capita",
+  "subtitle": "Per capita plastic waste generation rate is measured in kilograms per person per day. GDP per capita is adjusted for inflation and differences in living costs between countries.",
+  "caption": "In 2010, the relationship between national wealth and plastic waste generation is plotted for countries worldwide, with GDP per capita on a logarithmic horizontal axis and daily plastic waste per person on the vertical axis. The data points, color-coded by continent, show a general upward trend where higher GDP per capita coincides with higher per capita plastic waste, though the distribution is wide. At the lower end of the economic scale, countries like the Democratic Republic of Congo, Togo, and Tanzania generate less than 0.05 kg of plastic waste per person per day. Moving toward the middle of the income distribution, nations such as China, Indonesia, and Brazil cluster between 0.05 kg and 0.15 kg. The chart highlights significant variation among wealthier nations; while the United States and Germany sit near the top with roughly 0.35 kg and 0.5 kg respectively, other high-income countries like Sweden and Canada remain lower, around 0.1 kg. Several small island nations and territories, including Antigua and Barbuda, Kuwait, and Guyana, appear as outliers with very high waste generation rates exceeding 0.5 kg per person per day, despite varying levels of GDP. The size of each circle corresponds to population, making India and China visually prominent in the lower-middle income range. Across the full range of the chart, the vertical spread of data points increases as GDP rises, showing that while wealthier nations generally produce more waste, the specific amounts vary considerably between countries with similar economic output.",
+  "word_count": 243,
+  "latency_s": 12.726398468017578,
+  "prompt_tag": "v5_100"
+}

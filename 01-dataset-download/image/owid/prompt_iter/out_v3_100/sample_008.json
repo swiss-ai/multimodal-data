@@ -1,0 +1,9 @@
+{
+  "slug": "openness-of-executive-recruitment-score",
+  "title": "Openness of Executive Recruitment Score",
+  "subtitle": "Data by [Polity 5](#dod:polity).",
+  "caption": "The 2020 world map displays the Openness of Executive Recruitment Score, categorizing nations by how their chief executives are selected. The color scale ranges from red, representing \"Power seized\" or \"Hereditary succession,\" to blue, representing \"Open\" recruitment where the chief minister is elected. Blue dominates the visual field, covering the Americas, Australia, most of Europe, and parts of Asia, indicating that open executive recruitment is the most common method globally. Red and orange hues appear in concentrated clusters across North Africa, the Middle East, and parts of Southeast Asia. Countries such as Saudi Arabia, Sudan, and Myanmar fall into the red bands, signifying hereditary succession or seized power. A distinct band of orange and lighter red stretches across the Sahel and Arabian Peninsula, marking systems with dual or designated chief ministers. The map shows a clear geographic divide, with open systems prevalent in the Western Hemisphere and Oceania, while closed or mixed systems define the political landscape of the Middle East and specific African nations.",
+  "word_count": 165,
+  "latency_s": 9.615070581436157,
+  "prompt_tag": "v3_100"
+}

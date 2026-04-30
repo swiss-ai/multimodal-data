@@ -1,0 +1,9 @@
+{
+  "slug": "energy-use-per-person-vs-gdp-per-capita",
+  "title": "Energy use per person vs. GDP per capita",
+  "subtitle": "Energy refers to [primary energy](#dod:primaryenergy), measured in [kilowatt-hours](#dod:watt-hours) per person, using the [substitution method](#dod:substitutionmethod). Gross domestic product (GDP) is adjusted for inflation and differences in living costs between countries.",
+  "caption": "Across countries in 2024, per capita energy consumption and GDP per capita exhibit a strong positive association, with both variables plotted on logarithmic scales. Nations with the highest economic output per person, such as Qatar, Bahrain, Norway, and Canada, consistently record the highest energy use, exceeding 100,000 kilowatt-hours annually. Conversely, countries at the lower end of the economic spectrum, including Burundi, Somalia, and Liberia, cluster in the bottom left, with energy consumption below 1,000 kilowatt-hours and GDP per capita under $2,000. The data points generally follow a diagonal trajectory from the bottom left to the top right, indicating that as income rises, energy demand increases. While most regions align with this trend, specific variations exist; for instance, some Middle Eastern nations show energy use that is notably high relative to their GDP, while certain European countries maintain high economic output with comparatively moderate energy consumption. The overall distribution demonstrates a consistent link where wealthier populations utilize significantly more primary energy than those in lower-income economies.",
+  "word_count": 165,
+  "latency_s": 3.749732494354248,
+  "prompt_tag": "v1"
+}

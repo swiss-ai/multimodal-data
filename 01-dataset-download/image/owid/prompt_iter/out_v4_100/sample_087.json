@@ -1,0 +1,9 @@
+{
+  "slug": "excess-mortality-raw-death-count",
+  "title": "Excess mortality: Raw number of deaths from all causes compared to projection based on previous years",
+  "subtitle": "The reported number of weekly or monthly deaths in 2020–2024 and the projected number of deaths for 2020, which is based on the reported deaths in 2015–2019.",
+  "caption": "Weekly deaths in the United States from January 2020 through January 2021 are plotted against a projected baseline derived from 2015–2019 data. The projection line, shown in black, remains relatively flat between 50,000 and 60,000 deaths throughout the year. The 2020 data line, colored orange, tracks near the projection until March, then rises to a peak of nearly 80,000 deaths in late April. Following a decline to roughly 60,000 in June, the line climbs again, reaching its highest point of approximately 88,000 deaths by early January 2021. The 2021 line, in purple, begins in early January at roughly 88,000 deaths, drops to 60,000 by March, and rises again to 75,000 by September. The 2022 line, in teal, starts near 85,000 deaths in January and falls to the 60,000 level by April. The 2023 line, in blue, begins near 70,000 deaths and declines to roughly 58,000 by mid-year. The 2017 line, in dark blue, fluctuates between 55,000 and 65,000 deaths. The 2019 line, in grey, stays between 55,000 and 62,000 deaths. The 2016, 2018, and 2015 lines remain clustered in the lowest band, generally between 50,000 and 58,000 deaths. The 2020 and 2021 lines show the largest deviations above the projected baseline.",
+  "word_count": 201,
+  "latency_s": 12.794179201126099,
+  "prompt_tag": "v4_100"
+}

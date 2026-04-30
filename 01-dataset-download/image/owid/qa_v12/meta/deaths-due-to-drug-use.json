@@ -1,0 +1,8 @@
+{
+  "slug": "deaths-due-to-drug-use",
+  "title": "Deaths attributed to drug use",
+  "subtitle": "Estimated annual number of deaths attributed to [drug use](#dod:drug_use).",
+  "note": "",
+  "caption": "Deaths attributed to drug use\n\nEstimated annual number of deaths attributed to drug use.\n\nThis choropleth world map displays the estimated annual number of deaths attributed to drug use in 2023. The legend uses a color scale ranging from 0 to 50,000, with specific thresholds marked at 100, 200, 500, 1,000, 2,000, 5,000, 10,000, and 20,000. The darkest brown shades, indicating the highest death counts, are visible in the United States, Russia, China, and Brazil, placing these nations in the upper bands of the scale, likely exceeding 10,000 or 20,000 deaths. India and Mexico appear in dark orange shades that sit in the mid-to-high range, generally between 2,000 and 10,000. A broad cluster of countries across Europe, including Germany, France, and the United Kingdom, along with Australia and Canada, display medium orange tones that correspond to the 1,000 to 5,000 range. Much of Africa and parts of the Middle East show lighter beige and pale orange shades, indicating lower absolute numbers, often falling below 1,000 or 500. Greenland and several small island nations appear in a very pale shade or are hatched, signifying no data or values near zero. The visual distribution highlights significant variation, with the highest concentrations of deaths located in North America, Eurasia, and South America, while many regions in Africa and Oceania show lighter coloration.",
+  "word_count": 219
+}

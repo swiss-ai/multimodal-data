@@ -1,0 +1,9 @@
+{
+  "slug": "deaths-by-age-group",
+  "title": "Deaths per year, by age group",
+  "subtitle": "",
+  "caption": "Deaths per year, by age group, World\nAnnual deaths by age group, World\n\nThis stacked area chart tracks the number of annual deaths worldwide from 1950 to 2023, categorized by age groups ranging from under 9 years old to 100 and older. The vertical axis measures deaths in millions, scaling from 0 to 70 million. The total height of the stacked areas shows a general upward trend over the period, rising from just under 50 million in 1950 to over 60 million by 2023, with a distinct spike occurring around 2020. The composition of these deaths shifts visibly across the decades. The bottom layer, representing children under 9, starts as the largest single segment in 1950, accounting for roughly 22 million deaths, but contracts steadily to approximately 5 million by 2023. Conversely, the layers for older age groups expand. The band for ages 70-79 grows from a thin strip in 1950 to a substantial section by 2023, while the segments for ages 80-89 and 90-99 also widen significantly over time. The middle bands, covering ages 30 to 69, maintain relatively consistent thickness throughout the timeline, though the specific distribution within them adjusts. The topmost slivers for ages 100+ remain minimal but show slight growth in the later years. The data shows a transition where the bulk of global mortality moves from the youngest age bracket in the mid-20th century to the oldest age brackets in the early 21st century.",
+  "word_count": 239,
+  "latency_s": 12.5544912815094,
+  "prompt_tag": "v6_100"
+}

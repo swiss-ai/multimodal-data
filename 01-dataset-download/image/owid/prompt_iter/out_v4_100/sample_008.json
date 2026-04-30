@@ -1,0 +1,9 @@
+{
+  "slug": "openness-of-executive-recruitment-score",
+  "title": "Openness of Executive Recruitment Score",
+  "subtitle": "Data by [Polity 5](#dod:polity).",
+  "caption": "The 2020 choropleth map displays the Openness of Executive Recruitment Score across nations, utilizing a color gradient to distinguish between open elections and power seizures. The vast majority of the globe appears in blue, indicating that executive recruitment is open in North and South America, Europe, Australia, and large portions of Asia and Africa. In contrast, a concentrated cluster of countries in North Africa and the Middle East displays red and orange tones, signifying systems where power is seized or determined by hereditary succession; this grouping includes Libya, Sudan, and Saudi Arabia. Specific nations such as Myanmar and Yemen also appear in the red spectrum, denoting seized power, while Somalia and Chad show orange hues associated with hereditary succession. Greenland and parts of the Middle East remain gray, marking areas where no data is available. The visual distribution highlights a global prevalence of open executive recruitment, with regional exceptions concentrated in the Middle East and parts of Africa.",
+  "word_count": 158,
+  "latency_s": 9.059019565582275,
+  "prompt_tag": "v4_100"
+}

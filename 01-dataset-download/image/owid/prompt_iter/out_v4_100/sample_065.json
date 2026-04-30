@@ -1,0 +1,9 @@
+{
+  "slug": "number-of-deaths-from-road-injuries",
+  "title": "Deaths from road injuries",
+  "subtitle": "Annual number of deaths from road injuries. Road injuries include deaths of drivers, passengers, pedestrians and cyclists.",
+  "caption": "Across the globe in 2023, the annual number of deaths from road injuries varies widely, ranging from zero in several nations to over 100,000 in the most populous countries. The map displays the highest mortality figures in the darkest red bands, concentrated in China and India, where the annual death toll exceeds 100,000. The United States, Brazil, and Russia occupy the next tier, with figures falling between 30,000 and 100,000. A middle range of 3,000 to 30,000 deaths covers much of the rest of the world, including Mexico, Indonesia, and large portions of Africa and the Middle East. Conversely, the lightest shades indicate fewer than 1,000 annual deaths across most of Western Europe, Australia, and Canada. Greenland and parts of the Sahara appear with hatching to denote missing data. The visual distribution places the heaviest burden of road injury fatalities in Asia and the Americas, while Europe and Oceania show the lowest absolute numbers.",
+  "word_count": 154,
+  "latency_s": 11.067551612854004,
+  "prompt_tag": "v4_100"
+}

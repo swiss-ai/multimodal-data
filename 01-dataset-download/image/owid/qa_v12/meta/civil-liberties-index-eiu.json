@@ -1,0 +1,8 @@
+{
+  "slug": "civil-liberties-index-eiu",
+  "title": "Civil Liberties Index",
+  "subtitle": "Data by the [Economist Intelligence Unit](#dod:economist-intelligence-unit). The index ranges from 0 to 10 (most liberties).",
+  "note": "",
+  "caption": "Civil Liberties Index\n\nData by the Economist Intelligence Unit. The index ranges from 0 to 10 (most liberties).\n\nThis choropleth world map displays the 2024 Civil Liberties Index, where scores range from 0 to 10, with 10 representing the most liberties. The legend uses a color gradient from dark red for the lowest scores (0-1) through orange and yellow for mid-range scores, to light and dark blue for the highest scores (8-10). Countries in the darkest red band, indicating scores between 0 and 1, include China, Saudi Arabia, and North Korea. A broad region encompassing Russia, much of the Middle East, and parts of Africa is shaded in darker reds and oranges, corresponding to scores generally below 5. In contrast, Western Europe, Canada, Australia, and New Zealand are colored in the darkest blue shades, placing them in the highest band of 9 to 10. The United States and several countries in South America and Southern Africa appear in lighter blue shades, indicating scores in the 7 to 8 range. Large portions of Africa and Asia are depicted in yellow and orange hues, signifying mid-range index values between approximately 3 and 6. Greenland is marked with diagonal hatching, which the legend identifies as \"No data.\" The overall visual pattern shows the highest civil liberties scores concentrated in Western democracies, while the lowest scores are clustered in authoritarian states across Asia and the Middle East.",
+  "word_count": 233
+}

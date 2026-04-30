@@ -1,0 +1,9 @@
+{
+  "slug": "vegetable-oil-vs-gdp",
+  "title": "Vegetable oil supply per person vs. GDP per capita",
+  "subtitle": "Average vegetable oil supply per capita, measured in kilograms per year versus gross domestic product (GDP) per capita, adjusted for inflation and differences in living costs between countries.",
+  "caption": "In 2023, the relationship between national wealth and vegetable oil consumption displays a positive correlation across the globe, with higher GDP per capita generally coinciding with higher supply per person. The scatter plot maps countries on a logarithmic horizontal axis for GDP and a linear vertical axis for kilograms of vegetable oil per year. European nations such as Austria, France, and Ireland cluster in the upper-right quadrant, showing GDP levels between $50,000 and $100,000 paired with oil supplies ranging from 15 to 20 kg. North American and Oceanian countries, including the United States, Canada, and Australia, occupy similar high-income positions with supplies reaching 25 to 28 kg. In contrast, countries in sub-Saharan Africa like Niger, DR Congo, and Burkina Faso appear in the bottom-left, with GDP under $5,000 and oil supplies below 10 kg. Several outliers deviate from the general trend; Brazil and Algeria maintain oil supplies near 25 kg despite GDP levels around $10,000 to $20,000, while Denmark and Norway show lower oil consumption relative to their high GDP. The data points show a wide dispersion in the middle-income range, where countries like Jordan, Belize, and Suriname share similar GDP levels but vary significantly in oil availability.",
+  "word_count": 198,
+  "latency_s": 14.761491775512695,
+  "prompt_tag": "v4_100"
+}

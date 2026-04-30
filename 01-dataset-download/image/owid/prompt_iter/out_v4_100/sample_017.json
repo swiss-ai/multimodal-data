@@ -1,0 +1,9 @@
+{
+  "slug": "biweekly-growth-covid-cases",
+  "title": "Biweekly change in confirmed COVID-19 cases",
+  "subtitle": "The biweekly change on any given date measures the percentage change in the number of new confirmed cases over the last 14 days, relative to the number in the previous 14 days. Due to limited testing, the number of confirmed cases is lower than the true number of infections.",
+  "caption": "Across the globe on February 22, 2026, the biweekly change in confirmed COVID-19 cases shows a distinct geographic split, with the majority of reporting nations experiencing a decline in infections. The map visualizes the percentage change in new cases over the previous 14 days, where deep blue shades indicate a reduction of 75% to 100%. This category of steep decline includes countries in South America such as Peru and Venezuela, alongside Central American nations like Guatemala and Honduras. In Europe, a similar pattern of sharp decrease is visible in Greece and the Czech Republic. Conversely, a smaller cluster of countries displays rising case numbers, represented by light orange and peach tones corresponding to increases between 0% and 50%. This upward trend is concentrated in parts of South America, including Brazil and Argentina, as well as in northern Europe with Sweden and Finland. The vast majority of the world, including North America, Africa, Asia, and Australia, appears in grey, indicating that no data is available for these regions on this date. The visual distribution highlights a concentration of falling case counts in specific pockets of the Americas and Europe, while rising counts are limited to a few scattered territories.",
+  "word_count": 198,
+  "latency_s": 13.383869647979736,
+  "prompt_tag": "v4_100"
+}

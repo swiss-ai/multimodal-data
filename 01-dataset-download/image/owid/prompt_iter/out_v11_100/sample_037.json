@@ -1,0 +1,9 @@
+{
+  "slug": "stratospheric-ozone-concentration-projections",
+  "title": "Stratospheric ozone concentration projections",
+  "subtitle": "Stratospheric ozone concentrations with projections to 2100 based on chemistry-climate models. These are measured as global and regional averages relative to levels in 1960 (1960 = 0).",
+  "caption": "Stratospheric ozone concentration projections\n\nStratospheric ozone concentrations with projections to 2100 based on chemistry-climate models. These are measured as global and regional averages relative to levels in 1960 (1960 = 0).\n\nThe chart displays three trend lines representing stratospheric ozone concentrations from 1960 to 2100, measured as deviations relative to 1960 levels where the baseline is zero. The Arctic series, shown in orange, rises slightly above zero in the 1960s before dipping to approximately -25 around the year 2000, then climbs steadily to reach nearly 40 by 2100. The Global series, depicted in brown, follows a similar but less extreme trajectory, dropping to roughly -15 around 2000 and recovering to just above zero by the end of the century. The Antarctic series, in blue, shows the most pronounced decline, falling sharply to a minimum near -125 around 2005 before beginning a gradual recovery that brings it to approximately -5 by 2100. All three lines converge near zero in 1960 by definition. The Arctic and Global lines cross the zero baseline around 2030 and 2040 respectively, while the Antarctic line remains below zero throughout the entire period shown. Figures represent the mean across a number of model runs; model projections have notable uncertainty around such average trends. The vertical axis spans from -140 to 40, with horizontal gridlines marking intervals of 20 units. The horizontal axis covers 140 years, with labeled tick marks every 20 years from 1960 to 2100.",
+  "word_count": 239,
+  "latency_s": 16.118544101715088,
+  "prompt_tag": "v11_100"
+}

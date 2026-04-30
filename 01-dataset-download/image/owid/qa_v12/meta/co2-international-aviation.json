@@ -1,0 +1,8 @@
+{
+  "slug": "co2-international-aviation",
+  "title": "CO₂ emissions from international aviation",
+  "subtitle": "International aviation emissions are here allocated to the country of departure of each flight.",
+  "note": "",
+  "caption": "CO₂ emissions from international aviation\n\nInternational aviation emissions are here allocated to the country of departure of each flight.\n\nThis choropleth world map displays 2024 CO₂ emissions from international aviation, allocated to the country of departure for each flight. The legend uses a blue color scale ranging from 0 tonnes to over 30 million tonnes, with specific thresholds marked at 300,000 t, 1 million t, 3 million t, 10 million t, and 30 million t. The United States sits in the darkest blue band, indicating emissions above 30 million tonnes. The United Kingdom appears in the second-darkest band, falling between 10 million and 30 million tonnes. A cluster of countries including China, Germany, France, Australia, and the Netherlands occupy the next tier, sitting in the medium-dark blue shades that correspond to the 3 million to 10 million tonne range. Canada, Brazil, India, and several European nations appear in lighter blue shades, placing them in the 1 million to 3 million tonne band. Much of South America, Africa, and parts of Asia show very pale blue or near-white coloring, indicating emissions below 300,000 tonnes or near zero. Greenland and Antarctica display a hatched pattern, denoting no data. The visual distribution shows the highest emission levels concentrated in North America and Western Europe, with mid-range values scattered across major economies in Asia and Oceania, while large portions of the Global South remain in the lowest visible bands.",
+  "word_count": 235
+}

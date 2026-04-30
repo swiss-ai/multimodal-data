@@ -1,0 +1,9 @@
+{
+  "slug": "life-expectancy-at-birth-oecd",
+  "title": "Life expectancy",
+  "subtitle": "The [period life expectancy](#dod:period-life-expectancy) at birth, in a given year.",
+  "caption": "In 2022, period life expectancy at birth varies widely across the globe, with the highest values concentrated in North America, Europe, and parts of East Asia. Countries including Canada, the United States, Australia, and most of Western Europe appear in the darkest blue bands, indicating life expectancies of 80 years or more. Russia and China also fall within these higher ranges. In contrast, the majority of the African continent is shaded in the lightest colors or marked with hatching to denote no available data, placing those regions in the lowest bands of 40 to 55 years where data exists. India and parts of Southeast Asia occupy the middle of the spectrum, shown in medium blue tones corresponding to the 65 to 75-year range. South Africa stands out as an exception on its continent, displaying a darker shade than its neighbors. The map shows a clear geographic divide, with the longest life expectancies clustered in the northern hemisphere and the shortest in sub-Saharan Africa.",
+  "word_count": 163,
+  "latency_s": 6.267638921737671,
+  "prompt_tag": "v3_100"
+}

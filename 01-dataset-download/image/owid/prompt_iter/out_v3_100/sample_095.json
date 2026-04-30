@@ -1,0 +1,9 @@
+{
+  "slug": "cashew-nut-yields",
+  "title": "Cashew nut yields",
+  "subtitle": "Yields are measured in tonnes per hectare.",
+  "caption": "Cashew nut yields measured in tonnes per hectare show divergent trajectories for Peru, Mali, China, and Mexico between 1980 and 2024. Peru’s line occupies the upper range of the chart, fluctuating mostly between 4 and 7 tonnes per hectare, with a peak near 6.8 tonnes around 2005 and a sharp drop to below 4.5 tonnes in 2023 before recovering slightly. Mali’s yield remains flat near 1.4 tonnes per hectare from 1992 through 2015, then rises steeply to over 4 tonnes by 2019 before falling back to around 1 tonne by 2024. China’s line stays below 2 tonnes for most of the period, with a brief spike above 1.5 tonnes around 2013 and a sustained rise after 2010 that plateaus near 1.2 tonnes after 2020. Mexico begins near 1.2 tonnes in 1980, spikes to over 6 tonnes in 1983, then declines steadily to below 1 tonne by 2024. The most visible pattern is the wide variation in yield levels and volatility across countries, with Peru consistently higher and more variable, while Mali and China show recent convergence near 1 tonne per hectare despite earlier divergence.",
+  "word_count": 184,
+  "latency_s": 8.074969053268433,
+  "prompt_tag": "v3_100"
+}

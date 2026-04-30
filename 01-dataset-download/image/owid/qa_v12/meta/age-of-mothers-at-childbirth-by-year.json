@@ -1,0 +1,8 @@
+{
+  "slug": "age-of-mothers-at-childbirth-by-year",
+  "title": "Age distribution of mothers at childbirth by year",
+  "subtitle": "Each line shows the [fertility rate by age](#dod:age-specific-fertility-rate) in a given year: how many children were born per woman, at each age.",
+  "note": "",
+  "caption": "Age distribution of mothers at childbirth by year\n\nEach line shows the fertility rate by age in a given year: how many children were born per woman, at each age.\n\nThis line chart displays the fertility rate by age of women in the United States across selected years ranging from 1940 to 2023. The horizontal axis represents the age of women from 12 to 55, while the vertical axis measures the fertility rate from 0 to 0.3. The data reveals a distinct shift in the age distribution of childbirth over time. The 1960 line, depicted in dark blue, shows the highest peak on the chart, reaching a fertility rate of approximately 0.27 at age 23. In contrast, the lines for 2020 and 2023, shown in light green, display much lower and flatter distributions, with peaks hovering around 0.11 to 0.12 and occurring at older ages, specifically between 29 and 30. The 1950 line follows a similar shape to 1960 but with a lower maximum of roughly 0.21. Intermediate years such as 1970, 1980, and 1990 show a progressive lowering and rightward shifting of the curve compared to the 1960 peak. By age 40, all plotted lines converge near the bottom of the chart, indicating low fertility rates for this age group across all years. The visual progression demonstrates a transition from a concentration of births in the early twenties in the mid-20th century to a broader distribution centered in the late twenties and early thirties in recent years.",
+  "word_count": 248
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "innovation-in-computing-power-index-of-computing-speed",
+  "title": "Innovation in computing power: Index of computing speed",
+  "subtitle": "Unit 21 'Capstone: Innovation, information, and the networked economy' Section 21.1 'The innovation process: Invention and diffusion' in The CORE Team, The Economy. Available at https://tinyco.re/21010330 [Figure 21.3]",
+  "caption": "Between 1850 and 2005, the index of computing speed—measured as computations per second relative to manual calculation—increased by more than 14 orders of magnitude. The data points, plotted on a logarithmic vertical axis, show a consistent upward trajectory from the mid-19th century through the early 21st century. Early mechanical devices, such as the Scheutz Difference Engine and the Japanese abacus, cluster near the bottom of the scale with values below 100. By the 1940s, electromechanical systems like the IBM Type 601 and the Atanasoff-Berry Computer reached the thousands. The post-war era saw rapid acceleration, with the IBM 7030 Stretch and CDC 6600 surpassing one million computations per second in the 1960s. By the 1990s and 2000s, supercomputers including the Cray CS6400 and the MCR Linux Cluster achieved speeds exceeding one trillion computations per second. The distribution of points forms a steep, near-linear slope on the log scale, indicating exponential growth in processing power over the 150-year period.",
+  "word_count": 157,
+  "latency_s": 4.271206378936768,
+  "prompt_tag": "v1"
+}

@@ -1,0 +1,93 @@
+# Handwriting recovery — primary-source content the curator paraphrased
+
+id:        00000223___nmaahc_NMAAHC-2014_174_3_3_1001
+image:     example1_handwriting_letter.jpg
+caption:   804 chars
+ocr:       1938 chars · tags {'handwriting': 3} · 9.25s
+
+─── ORIGINAL CURATOR CAPTION ───
+
+Letter to Giles Saunders from Samuel Fox regarding the slave trade. This letter was written in Richmond, Kentucky, on January 14, 1847, by Samuel Fox to Giles Saunders in Richmond, Virginia. The letter details the sale of enslaved people by Fox and his associates, including the recovery of one enslaved man who was loaned out for the use of a horse. There are also details regarding a customer dissatisfied with the purchase of two enslaved people. The paper is folded in half and the letter is written on the right hand side continuing onto the left side of the reverse. On the left hand side of the front is a list of names of enslaved people with monetary denominations. On the left hand side of the reverse is the address with a postmark dated January 16 from Richmond, Kentucky stamped in blue ink.
+
+─── QWEN3.6-27B OCR OUTPUT ───
+
+[handwriting] On the top right corner of the page:
+4935
+
+[handwriting] On the left side of the document:
+1 edmund lost 316
+2 ann lost 171
+3 wills lost 185
+4 Sam lost - 320
+5 jo lost - 295
+6 peter lost 356
+7 Ruth lost - 212
+8 Tom lost 262-50
+10 delpha & chile 460
+12 nelly & milly 375
+13 william lost 311
+14 william lost 478
+15 william lost
+
+William 6 231
+antony 6 244
+jermionah 300
+Fred 6 250
+
+Ruth 1 for boy 8
+Tom 2 milly 9
+Lucy 3 milly 10
+Delpha 4 William 11
+William 5 ann 12
+Milly 6 peter 13
+Edmond 7 Billy 14
+Linda 15
+Sarah 16
+
+[handwriting] On the right side of the document:
+Richmond Madison Co Ky January 28th 1857
+
+Dear sir I received your letter dated Jan 5th and before stating to me that Hagins had started home on the fiftieth of last month with $1000 in negroes i think you ought to me at least how many head he started with not that i think that there will be any thing wrong about it unless Hagins should die on the way and not then unless they should fall in to the hands of a rebel to be taken care of until we could get them Hagins sent me word by young Mr Brown on his return home from hog killing that his horse had died and that he wanted money to redeem a negro by that he have found for money to by horses with and for himself money i sent Levi Willis fourth with with a big strong horse and money to redeem the Negro that he had to pawn for money i told Willis to redeem the boy on paper i got the mule in to evening and i started Willis the next morning early and to travel day and night until he met him the weather is very cold here so cold as i was felt in my life i changed Willis not to let them travel until the weather get better There is a good deal talk from what i can learn among our friends here about your stay and they say the opinion is that you are buying of Negroes and that the had better be buy careful how nice deal now for i think the best plan for us is for me and hagins to take the Negroes
+
+─── AUGMENTED TRAINING CAPTION (what the tokenizer sees) ───
+
+Letter to Giles Saunders from Samuel Fox regarding the slave trade. This letter was written in Richmond, Kentucky, on January 14, 1847, by Samuel Fox to Giles Saunders in Richmond, Virginia. The letter details the sale of enslaved people by Fox and his associates, including the recovery of one enslaved man who was loaned out for the use of a horse. There are also details regarding a customer dissatisfied with the purchase of two enslaved people. The paper is folded in half and the letter is written on the right hand side continuing onto the left side of the reverse. On the left hand side of the front is a list of names of enslaved people with monetary denominations. On the left hand side of the reverse is the address with a postmark dated January 16 from Richmond, Kentucky stamped in blue ink.
+
+Text visible in the image:
+[handwriting] On the top right corner of the page:
+4935
+
+[handwriting] On the left side of the document:
+1 edmund lost 316
+2 ann lost 171
+3 wills lost 185
+4 Sam lost - 320
+5 jo lost - 295
+6 peter lost 356
+7 Ruth lost - 212
+8 Tom lost 262-50
+10 delpha & chile 460
+12 nelly & milly 375
+13 william lost 311
+14 william lost 478
+15 william lost
+
+William 6 231
+antony 6 244
+jermionah 300
+Fred 6 250
+
+Ruth 1 for boy 8
+Tom 2 milly 9
+Lucy 3 milly 10
+Delpha 4 William 11
+William 5 ann 12
+Milly 6 peter 13
+Edmond 7 Billy 14
+Linda 15
+Sarah 16
+
+[handwriting] On the right side of the document:
+Richmond Madison Co Ky January 28th 1857
+
+Dear sir I received your letter dated Jan 5th and before stating to me that Hagins had started home on the fiftieth of last month with $1000 in negroes i think you ought to me at least how many head he started with not that i think that there will be any thing wrong about it unless Hagins should die on the way and not then unless they should fall in to the hands of a rebel to be taken care of until we could get them Hagins sent me word by young Mr Brown on his return home from hog killing that his horse had died and that he wanted money to redeem a negro by that he have found for money to by horses with and for himself money i sent Levi Willis fourth with with a big strong horse and money to redeem the Negro that he had to pawn for money i told Willis to redeem the boy on paper i got the mule in to evening and i started Willis the next morning early and to travel day and night until he met him the weather is very cold here so cold as i was felt in my life i changed Willis not to let them travel until the weather get better There is a good deal talk from what i can learn among our friends here about your stay and they say the opinion is that you are buying of Negroes and that the had better be buy careful how nice deal now for i think the best plan for us is for me and hagins to take the Negroes

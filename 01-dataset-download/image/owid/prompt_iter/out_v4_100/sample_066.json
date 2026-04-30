@@ -1,0 +1,9 @@
+{
+  "slug": "energy-intensity-vs-gdp",
+  "title": "Energy intensity vs. GDP per capita",
+  "subtitle": "Energy intensity represents [primary energy](#dod:primaryenergy) consumption, using the [substitution method](#dod:substitutionmethod), per unit of gross domestic product (GDP). GDP is adjusted for inflation and differences in living costs between countries.",
+  "caption": "In 2022, the relationship between national wealth and energy efficiency shows a wide dispersion, with GDP per capita plotted on a logarithmic horizontal axis against energy intensity in kilowatt-hours per dollar on the vertical axis. The data points reveal that high energy intensity is not exclusive to low-income nations; Turkmenistan, Bahrain, and North Korea all record values exceeding 4 kWh per dollar, placing them among the highest on the chart despite varying economic outputs. Conversely, countries with the highest GDP per capita, such as Norway, Denmark, and Qatar, cluster in the lower-right section, maintaining energy intensity levels between 1 and 2 kWh per dollar. A dense grouping of African nations, including Burundi, Liberia, and Chad, occupies the bottom-left corner, characterized by low GDP per capita below $2,000 and low energy intensity under 1 kWh per dollar. The distribution lacks a single linear trend, as middle-income countries like Russia, Ukraine, and Libya display moderate to high energy usage relative to their economic output, while others like Chile and Bulgaria sit lower on the intensity scale. The chart shows that the most energy-intensive economies in 2022 include Turkmenistan, Bahrain, and North Korea, while the most efficient include Denmark, Norway, and Ireland.",
+  "word_count": 199,
+  "latency_s": 12.55121922492981,
+  "prompt_tag": "v4_100"
+}

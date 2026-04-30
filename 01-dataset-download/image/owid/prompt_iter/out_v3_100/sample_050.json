@@ -1,0 +1,9 @@
+{
+  "slug": "share-who-are-worried-about-vs-share-of-deaths-from-terrorism",
+  "title": "Share who are worried about vs. share of deaths from terrorism",
+  "subtitle": "Respondents who said they worried \"very much\" or \"a great deal\". Confirmed deaths, including all victims and attackers who died because of a [terrorist attack](#dod:terrorism).",
+  "caption": "Across countries, the share of people who worry about terrorism versus the share of deaths from terrorism shows a wide dispersion of outcomes. The vertical axis measures the percentage of respondents who said they worried \"very much\" or \"a great deal,\" ranging from roughly 30% to over 90%, while the horizontal axis plots the share of deaths from terrorism on a logarithmic scale from 0.0001% to 1%. Iraq and Nigeria sit in the upper-right quadrant, combining high worry levels—around 85% to 90%—with the highest visible shares of deaths, near 1% and 0.2% respectively. Myanmar and the Maldives show very high worry, above 90% and 80%, despite death shares below 0.01%. At the opposite end, New Zealand and the Netherlands report low worry, around 30% to 35%, alongside very low death shares, below 0.01%. Circle size indicates the number of attacks, with Iraq and Nigeria also showing the largest circles, corresponding to 500 or more attacks. The pattern visible in the chart is that high levels of public worry do not consistently align with high shares of terrorism-related deaths.",
+  "word_count": 178,
+  "latency_s": 12.932507038116455,
+  "prompt_tag": "v3_100"
+}

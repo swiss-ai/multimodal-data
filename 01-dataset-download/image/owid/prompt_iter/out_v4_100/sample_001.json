@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-workers-in-informal-employment-vs-gdp-per-capita",
+  "title": "Share of workers in informal employment vs. GDP per capita",
+  "subtitle": "Share of employed people working in jobs that lack basic social or legal protection and employment benefits. Does not include illegal and illicit activities. Figures refer to [national estimates](#dod:ilo-national-estimates) and may not be fully comparable across countries. GDP per capita is adjusted for inflation and differences in living costs between countries.",
+  "caption": "Across countries in 2024, the share of workers in informal employment varies widely against GDP per capita, with the data points forming a distinct downward curve from left to right. Countries with lower GDP per capita, such as the Democratic Republic of Congo, Chad, and Tanzania, cluster in the upper-left quadrant where informal employment rates exceed 80%. In contrast, nations with higher GDP per capita, including Germany, Spain, and South Korea, occupy the bottom-right area with informal employment shares generally below 20%. The size of the circles, which represents population, highlights that India and Indonesia sit in the middle of the distribution with large populations and moderate informal employment rates around 80% and 60% respectively. The chart shows a consistent pattern where higher GDP per capita coincides with lower shares of informal employment, while lower GDP per capita aligns with higher shares of informal employment.",
+  "word_count": 145,
+  "latency_s": 8.16043758392334,
+  "prompt_tag": "v4_100"
+}

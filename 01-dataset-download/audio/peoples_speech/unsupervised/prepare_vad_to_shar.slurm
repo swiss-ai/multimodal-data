@@ -16,17 +16,18 @@
 set -euo pipefail
 
 REPO_DIR=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-audio-tokenizer
+RUNTIME_ENV_SH="${REPO_DIR}/scripts/utils/source_lhotse_runtime.sh"
 LOG_DIR="${REPO_DIR}/logs"
 
 # Input dataset roots
-DATA_ROOT=/iopsstor/scratch/cscs/xyixuan/audio-datasets/raw/unsupervised_peoples_speech_commercial_wds
+DATA_ROOT=/capstor/store/cscs/swissai/infra01/audio-datasets/raw/unsupervised_peoples_speech_commercial_wds
 WDS_SHARDS_DIRS=${WDS_SHARDS_DIRS:-${DATA_ROOT}/audio,${DATA_ROOT}/audio2}
 
 # Per-shard VAD JSONL directory (produced by filter_langid_vad.py --languages all)
 VAD_PER_SHARD_DIR=${VAD_PER_SHARD_DIR:-${DATA_ROOT}/vad_results_all_per_shard}
 
 # Shared output root (each job writes to SHAR_ROOT/node_XX)
-SHAR_ROOT=${SHAR_ROOT:-/iopsstor/scratch/cscs/xyixuan/audio-datasets/shar/ups_all_lang_shar_v2}
+SHAR_ROOT=${SHAR_ROOT:-/capstor/store/cscs/swissai/infra01/audio-datasets/SHAR/stage_1_rebuild/ups_all_lang_shar_v3}
 
 # Per-node tuning
 NUM_WORKERS_PER_NODE=${NUM_WORKERS_PER_NODE:-288}
@@ -79,8 +80,7 @@ if [ ! -d "${VAD_PER_SHARD_DIR}" ]; then
 fi
 
 cd "${REPO_DIR}"
-uv pip install --no-deps --no-build-isolation git+https://github.com/pytorch/audio.git@release/2.9
-export PYTHONPATH="${REPO_DIR}:${PYTHONPATH:-}"
+source "${RUNTIME_ENV_SH}"
 
 # Discover all tars that have a corresponding VAD file
 mapfile -t ALL_SHARDS < <(
@@ -142,7 +142,7 @@ EOF
 echo "[rank ${RANK}] host=${HOST} assigned=${COUNT} shards (${FIRST} .. ${LAST})"
 echo "[rank ${RANK}] output=${NODE_SHAR_DIR}"
 
-python -m audio_tokenization.utils.prepare_data.prepare_wds_to_shar \
+python -m audio_tokenization.prepare.prepare_wds_to_shar \
   --wds-shards "${ASSIGNED_TARS[@]}" \
   --shar-dir "${NODE_SHAR_DIR}" \
   --vad-segmentation \
@@ -151,8 +151,8 @@ python -m audio_tokenization.utils.prepare_data.prepare_wds_to_shar \
   --shard-size "${SHARD_SIZE}" \
   --target-sr "${TARGET_SR}" \
   --min-sr "${MIN_SR}" \
-  --text-ext "" \
   --shar-format flac \
+  --resampling-backend torchaudio \
   --vad-max-chunk-sec "${VAD_MAX_CHUNK_SEC}" \
   --vad-min-chunk-sec "${VAD_MIN_CHUNK_SEC}" \
   --vad-sample-rate "${VAD_SAMPLE_RATE}" \

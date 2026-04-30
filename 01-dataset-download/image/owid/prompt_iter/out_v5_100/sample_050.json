@@ -1,0 +1,9 @@
+{
+  "slug": "share-who-are-worried-about-vs-share-of-deaths-from-terrorism",
+  "title": "Share who are worried about vs. share of deaths from terrorism",
+  "subtitle": "Respondents who said they worried \"very much\" or \"a great deal\". Confirmed deaths, including all victims and attackers who died because of a [terrorist attack](#dod:terrorism).",
+  "caption": "Across countries in 2022, the share of people worried about terrorism is plotted against the share of deaths from terrorism, with circle size indicating the number of attacks. The vertical axis measures the share of people worried about terrorism, ranging from 30% to 90%, while the horizontal axis shows the share of deaths from terrorism on a logarithmic scale from 0.0001% to 1%. Countries are color-coded by region: North America, South America, Africa, Europe, Asia, and Oceania. Myanmar and Nigeria show high worry levels above 90% with relatively low death shares around 0.01% and 0.1% respectively. Iraq stands out with both high worry (around 85%) and the highest death share near 1%. China reports moderate worry at 60% with very low death share below 0.001%. Germany and the United Kingdom show worry levels around 50-60% with death shares under 0.001%. India has worry near 60% and death share around 0.005%. New Zealand reports the lowest worry at 30% with death share around 0.1%. Canada and the Netherlands show worry below 30% with death shares under 0.001%. The data shows no clear relationship between the share of people worried about terrorism and the share of deaths from terrorism across countries.",
+  "word_count": 199,
+  "latency_s": 12.64061689376831,
+  "prompt_tag": "v5_100"
+}

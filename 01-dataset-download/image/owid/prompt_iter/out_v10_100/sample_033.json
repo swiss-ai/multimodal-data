@@ -1,0 +1,9 @@
+{
+  "slug": "deaths-averted-due-to-rotavirus-vaccine",
+  "title": "Rotavirus deaths prevented by vaccination",
+  "subtitle": "The number of [rotavirus](#dod:rotavirus) deaths of children under five years old that were prevented in 2016 due to the rotavirus vaccine.",
+  "caption": "Rotavirus deaths prevented by vaccination\n\nThe number of rotavirus deaths of children under five years old that were prevented in 2016 due to the rotavirus vaccine.\n\nThis choropleth map displays the estimated number of rotavirus deaths prevented by vaccination in 2016, using a color scale ranging from pale yellow for zero deaths to dark blue for 3,000 or more. The highest values, represented by the darkest blue shade indicating 1,000 to 3,000+ prevented deaths, are concentrated in specific regions of Africa and Asia. Nigeria, the Democratic Republic of the Congo, Ethiopia, and Tanzania in Africa, along with India and China in Asia, fall into this highest category. A secondary tier of countries, shaded in medium blue representing 300 to 1,000 prevented deaths, includes Brazil, Mexico, Pakistan, Indonesia, and several nations in Southern and East Africa such as South Africa and Kenya. Lighter shades of teal and green, corresponding to ranges between 10 and 300 prevented deaths, cover much of South America, including Argentina and Colombia, as well as countries like the United States, Russia, and Turkey. Large portions of the map, including most of Europe, Canada, Australia, and Greenland, are colored pale yellow, signifying that fewer than 10 deaths were prevented in these areas. Several regions, particularly in central Africa and parts of the Middle East, are marked with gray hatching to indicate that no data is available.",
+  "word_count": 228,
+  "latency_s": 16.020394325256348,
+  "prompt_tag": "v10_100"
+}

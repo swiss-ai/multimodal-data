@@ -1,0 +1,9 @@
+{
+  "slug": "deaths-from-volcanic-eruptions",
+  "title": "Deaths from volcanic eruptions",
+  "subtitle": "Includes direct deaths, in addition to secondary impacts such as a tsunami or earthquake triggered by an eruption. Due to data availability, recent data will be more complete than older historical estimates.",
+  "caption": "Between 1570 and 2024, the number of deaths from volcanic eruptions worldwide shows a pattern of sporadic, high-magnitude spikes against a baseline of low annual mortality. The vertical axis measures deaths up to 60,000, while the horizontal axis spans the timeline. Most years register near zero, with thin red lines barely rising above the axis. However, specific years display extreme outliers: a peak around 1815 reaches the chart’s maximum at 60,000 deaths, followed by another major spike near 1902 exceeding 40,000. Additional significant events appear around 1883 (roughly 36,000) and 1991 (approximately 23,000). Smaller clusters of elevated mortality occur in the late 1700s and early 1900s, while the period from 1950 onward shows fewer large spikes but more frequent moderate events. The data reveals that volcanic fatalities are not distributed evenly over time but concentrate in isolated years with catastrophic loss of life.",
+  "word_count": 143,
+  "latency_s": 11.186789751052856,
+  "prompt_tag": "v4_100"
+}

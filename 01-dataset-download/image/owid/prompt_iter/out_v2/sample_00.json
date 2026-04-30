@@ -1,0 +1,9 @@
+{
+  "slug": "bleaching-events-enso",
+  "title": "Number of coral bleaching events by stage of the ENSO cycle",
+  "subtitle": "[Coral bleaching](#dod:coral_bleaching) typically occurs when water temperatures rise above the normal range for the coral's habitat.  This is more likely during El Niño stages of the [ENSO cycle](#dod:enso_cycle) when tropical sea temperatures are warmer.",
+  "caption": "The bar chart tracks the number of coral bleaching events recorded annually between 1980 and 2016, categorized by the stage of the El Niño-Southern Oscillation (ENSO) cycle. The vertical axis measures the count of events, while the horizontal axis displays the timeline. Three distinct categories appear: El Niño, represented by dark red bars; Moderate, shown in purple; and La Niña, depicted in blue. The data reveals a fluctuating pattern with significant spikes in activity during specific years. The highest single-year total occurs in 1998, where the El Niño category reaches approximately 73 events. Other prominent peaks include 2010, dominated by La Niña events at roughly 53, and 2016, where El Niño events rise to about 54. Moderate activity shows a cluster of elevated counts between 2002 and 2006, peaking near 40 events in 2005. The distribution shows that while bleaching events occur across all three phases, the largest annual totals align with either El Niño or La Niña stages, with the years 1998, 2010, and 2016 standing out as the periods with the most recorded incidents.",
+  "word_count": 176,
+  "latency_s": 4.5647993087768555,
+  "prompt_tag": "v2"
+}

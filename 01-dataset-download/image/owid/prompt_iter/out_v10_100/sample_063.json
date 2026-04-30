@@ -1,0 +1,9 @@
+{
+  "slug": "extensively-drug-resistant-tuberculosis",
+  "title": "Incidence and prevalence of extensively drug-resistant tuberculosis",
+  "subtitle": "The estimated number of people living with [extensively drug-resistant tuberculosis](#dod:drug-resistant-tuberculosis) (prevalence) versus new cases each year (incidence).",
+  "caption": "Incidence and prevalence of extensively drug-resistant tuberculosis\n\nThe estimated number of people living with extensively drug-resistant tuberculosis (prevalence) versus new cases each year (incidence).\n\nThe chart displays two trend lines tracking global estimates from 1990 to 2023. The blue line, representing prevalence, and the orange line, representing incidence, both begin near zero in 1990 and follow a similar upward trajectory for the first decade. Between 1990 and 2000, both metrics rise steadily, reaching approximately 10,000 to 12,000 cases. From 2000 to 2010, the rate of increase accelerates for both series; prevalence climbs from roughly 12,000 to nearly 28,000, while incidence rises from about 10,000 to just over 20,000. After 2010, the slope of both lines flattens, indicating a slower rate of growth compared to the previous decade. Throughout the entire period, the prevalence line remains consistently higher than the incidence line, with the gap between the two widening over time. By 2023, the prevalence line reaches a value slightly above 32,000, while the incidence line ends near 24,000. The data presented includes tuberculosis cases in HIV-negative people, as tuberculosis cases among people with HIV are classified under HIV/AIDS cases.",
+  "word_count": 189,
+  "latency_s": 13.04361367225647,
+  "prompt_tag": "v10_100"
+}

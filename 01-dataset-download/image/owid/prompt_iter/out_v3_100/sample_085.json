@@ -1,0 +1,9 @@
+{
+  "slug": "monthly-average-surface-temperatures-by-decade",
+  "title": "Monthly average surface temperatures by decade",
+  "subtitle": "The temperature of the air measured 2 meters above the ground, encompassing land, sea, and in-land water surfaces.",
+  "caption": "Monthly average surface temperatures by decade show a consistent upward shift across the calendar year, with each successive decade positioned higher on the vertical axis than the one before. The lines trace a bell-shaped curve peaking in July (month 7) and dipping to their lowest in January (month 1), reflecting the annual cycle of solar insolation. In the 1940s, global average temperatures ranged from just under 12°C in January to about 15.7°C in July; by the 2020s, those same months registered near 13.2°C and 16.8°C respectively. The gap between decades widens slightly during the Northern Hemisphere summer months — June through August — where the 2020s line sits visibly above the 2010s, which in turn sits above the 2000s. All ten decades follow the same seasonal arc, but the entire set of curves has lifted over time, with the most recent decade occupying the highest position across all twelve months. The vertical spacing between lines grows larger toward the top of the chart, indicating that warming is not uniform across the year but more pronounced during warmer months.",
+  "word_count": 178,
+  "latency_s": 11.828252077102661,
+  "prompt_tag": "v3_100"
+}

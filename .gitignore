@@ -1,8 +1,26 @@
 .claude
+.codex
 CLAUDE.md
 core_clariden_*
+core_nid*
 *.out
 *.err
+*.log
+*.log.*
+
+# Image artifacts (no binary images in source tree)
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.webp
+*.gif
+*.bmp
+
+# Large materialized image dirs
+01-dataset-download/image/nasa/filter_iter/images/
+01-dataset-download/image/nasa/filter_iter/images_thumb/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

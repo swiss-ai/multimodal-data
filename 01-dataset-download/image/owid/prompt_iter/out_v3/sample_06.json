@@ -1,0 +1,9 @@
+{
+  "slug": "innovation-in-computing-power-index-of-computing-speed",
+  "title": "Innovation in computing power: Index of computing speed",
+  "subtitle": "Unit 21 'Capstone: Innovation, information, and the networked economy' Section 21.1 'The innovation process: Invention and diffusion' in The CORE Team, The Economy. Available at https://tinyco.re/21010330 [Figure 21.3]",
+  "caption": "From 1850 to the early 2000s, the index of computing speed rises exponentially, with the vertical axis plotted on a logarithmic scale to accommodate growth spanning from manual calculation to trillions of computations per second. Early data points cluster near the bottom of the chart, where the \"By Hand\" baseline sits at 1, and mechanical devices like the Scheutz Difference Engine and Japanese abacus register values below 100. A visible inflection occurs around 1940 as electronic systems emerge; the IBM Type 601 and Atanasoff-Berry Computer appear between 100 and 1,000 computations per second. Post-1950, the slope steepens significantly: the IBM 7090 and DEC PDP-4 reach the 100,000 to 1 million range by 1960, while the Cray I and IBM 3090 Mod 400 occupy the 10 billion to 1 trillion band by 1980. The highest labeled points, including the Compaq GS320-32 Wildfire and MCR Linux Cluster, exceed 10 trillion computations per second after the year 2000. The distribution shows a consistent upward trajectory where each successive decade introduces machines orders of magnitude faster than their predecessors.",
+  "word_count": 175,
+  "latency_s": 4.662898778915405,
+  "prompt_tag": "v3"
+}

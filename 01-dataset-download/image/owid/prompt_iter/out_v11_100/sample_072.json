@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-children-vaccinated-against-measles",
+  "title": "Share of one-year-olds vaccinated against measles",
+  "subtitle": "Share of one-year-olds who have received the first dose of the measles vaccine (MCV1).",
+  "caption": "Share of one-year-olds vaccinated against measles\n\nShare of one-year-olds who have received the first dose of the measles vaccine (MCV1).\n\nThe 2024 world map displays vaccination coverage using a color scale ranging from 0% to 100%, where dark blue represents the highest coverage and pale yellow indicates the lowest. Large portions of the globe, including North America, most of Europe, Russia, China, Australia, and Brazil, are shaded in the darkest blue, corresponding to the 95% to 100% band. In contrast, a distinct cluster of countries in Central Africa, including the Democratic Republic of the Congo, Chad, and Niger, along with Yemen and Papua New Guinea, appear in the lightest shades of yellow and pale green, placing them in the 0% to 60% range. Intermediate coverage levels, represented by teal and medium blue shades roughly between 70% and 90%, are visible across parts of South America, such as Peru and Bolivia, as well as in nations like India and Indonesia. Greenland is marked with diagonal hatching, indicating no data is available for that region. The distribution shows a clear gradient where the highest bands dominate the northern hemisphere and Oceania, while the lowest bands are concentrated in specific regions of Africa and the Middle East. Measles is a highly contagious viral disease, most common in young children, and its effects include blindness, inflammation of the brain, severe diarrhea, and severe respiratory infections such as pneumonia.",
+  "word_count": 234,
+  "latency_s": 13.04980993270874,
+  "prompt_tag": "v11_100"
+}

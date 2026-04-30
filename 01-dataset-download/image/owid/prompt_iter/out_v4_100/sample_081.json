@@ -1,0 +1,9 @@
+{
+  "slug": "female-employment-to-population-ratio-latest-vs-1980",
+  "title": "Female employment rate, 1980 vs. 2024",
+  "subtitle": "Share of the working-age population who are employed. Figures refer to [national estimates](#dod:ilo-national-estimates) and may not be fully comparable across countries.",
+  "caption": "Across countries, the share of the working-age population employed in 2024 plotted against 1980 shows a general upward trend in female employment rates. The horizontal axis measures the 2024 rate while the vertical axis measures the 1980 rate, with circle size indicating population. Most labeled countries sit above the diagonal line where x equals y, showing higher employment in 2024 than in 1980. The United States, Brazil, and the United Kingdom cluster in the middle range, with 2024 rates between 50% and 60% and 1980 rates between 40% and 50%. Malawi and Thailand appear in the upper left, with 1980 rates near or above 80% and 2024 rates around 40% to 60%. Nigeria and the Bahamas sit far to the right, with 2024 rates between 80% and 90% and 1980 rates between 25% and 35%. Pakistan and Bangladesh appear in the lower left, with both 1980 and 2024 rates below 20%. The data shows that while many countries increased female employment over this period, the magnitude of change and the starting levels vary widely across regions.",
+  "word_count": 176,
+  "latency_s": 12.808056116104126,
+  "prompt_tag": "v4_100"
+}

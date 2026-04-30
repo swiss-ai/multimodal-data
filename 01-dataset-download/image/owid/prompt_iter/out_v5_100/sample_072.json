@@ -1,0 +1,9 @@
+{
+  "slug": "share-of-children-vaccinated-against-measles",
+  "title": "Share of one-year-olds vaccinated against measles",
+  "subtitle": "Share of one-year-olds who have received the first dose of the measles vaccine (MCV1).",
+  "caption": "Across the globe in 2024, the share of one-year-olds who received the first dose of the measles vaccine (MCV1) varies widely, ranging from zero to full coverage depending on the country. The map uses a continuous color scale where the lightest yellow-green represents 0% coverage and the deepest navy blue represents 100% coverage. The highest vaccination rates appear across most of Europe, including the United Kingdom, France, Germany, and Spain, as well as across North America, where the United States and Canada fall into the darkest blue band. In South America, Brazil and Argentina also show high coverage levels in the 90-100% range. In contrast, the lowest coverage rates cluster across central and western Africa, where countries such as Chad, the Central African Republic, Nigeria, and Somalia appear in the lightest yellow-green band, indicating vaccination shares between 0% and 40%. Intermediate values appear in parts of Southeast Asia and the Middle East; for instance, Indonesia and Pakistan sit in the 60-80% range, while India and Egypt fall into the 80-90% band. Large areas of the map, particularly Greenland and parts of the Pacific, display a hatched pattern indicating no available data. The geographic distribution shows a clear divide, with the darkest blue tones dominating the Americas, Europe, and Australia, while the lightest tones concentrate heavily across the African continent.",
+  "word_count": 219,
+  "latency_s": 12.25461721420288,
+  "prompt_tag": "v5_100"
+}
