@@ -1,6 +1,28 @@
 # Dataset Download Scripts
 
-Tools for downloading and verifying HuggingFace datasets with robust error handling and caching support.
+Tools for downloading all datasets used in Apertus training, plus utilities for
+verifying HuggingFace cache integrity and testing dataset loading.
+
+Most datasets are distributed on HuggingFace Hub and can be downloaded with the
+generic scripts in this directory. A few datasets require custom download procedures
+(direct wget, Zenodo, Kaggle, or img2dataset); those are covered in `special/`.
+
+## Quick Start
+
+To reproduce all Apertus dataset downloads:
+
+```bash
+# Set cache locations (adjust to your storage)
+export HF_HUB_CACHE=/shared/hf_hub_cache
+export DATA_ROOT=/shared/vision-datasets
+
+# Optional: authenticate for gated datasets (e.g. google/scin)
+huggingface-cli login
+
+bash reproduce_apertus_downloads.sh
+```
+
+For datasets that require special handling, see the `special/` directory.
 
 ## Dependencies
 
@@ -60,21 +82,21 @@ The download process uses **two separate cache locations** both can be configure
    - Must be specified via `--cache-dir` parameter
    - These are the files after `download_and_prepare()` processing
 
-**Consideration son clusters like clariden**
-- Your team might have a central cache location for datasets and the hf hub files. Set the cache paths accordingly.
-- Especially for large files and datasets its recommended to use a cache location on the cluster filesystems (ex. capstor on alps)
-- Ex. for vision datasets we use:
-  - `CACHE_DIR=/capstor/store/cscs/swissai/infra01/vision-datasets/hf_datasets_cache` 
-  - `HF_HUB_CACHE=/capstor/store/cscs/swissai/infra01/vision-datasets/hf_hub_cache`
+**Considerations on shared clusters**
+- Teams often share a central HF cache location to avoid re-downloading the same files.
+  Set `HF_HUB_CACHE` and `CACHE_DIR` to a shared filesystem path.
+- Example:
+  - `export CACHE_DIR=/shared/vision-datasets/hf_datasets_cache`
+  - `export HF_HUB_CACHE=/shared/vision-datasets/hf_hub_cache`
 
 **Setting the cache location example:**
 ```bash
 # Set custom hub cache location for large downloads
-export HF_HUB_CACHE="/capstor/cache/hf_hub"
+export HF_HUB_CACHE="/shared/hf_hub_cache"
 python download_hf_dataset.py --dataset-name "..." --cache-dir "/path/to/cache"
 
 # Or inline:
-HF_HUB_CACHE="/capstor/cache/hf_hub" python download_hf_dataset.py ...
+HF_HUB_CACHE="/shared/hf_hub_cache" python download_hf_dataset.py ...
 ```
 
 If `HF_HUB_CACHE` is not set, HuggingFace libraries default to `~/.cache/huggingface/hub`.
@@ -118,7 +140,7 @@ This script is specific to Alps cluster so best check the paths and configuratio
 **Configuration via environment variables:**
 - `DATASET_NAME`: HF dataset repo (default: mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M)
 - `SUBSET_NAME`: Dataset config(s) or use `""` to auto-detect all
-- `CACHE_DIR`: Datasets cache path for processed datasets (default: /capstor/store/cscs/swissai/infra01/vision-datasets/hf_cache)
+- `CACHE_DIR`: Datasets cache path for processed datasets (default: ~/.cache/huggingface/datasets)
 - `HF_HUB_CACHE`: HuggingFace Hub cache path for raw downloads (default: ~/.cache/huggingface/hub) - IMPORTANT for large datasets
 - `NUM_PROC`: Download workers (default: auto = half of CPUs)
 - `MAX_RETRIES`: Max retry attempts for each specific http download request (default: 10)
@@ -136,7 +158,7 @@ sbatch download_hf_dataset.slurm
 DATASET_NAME="google/docci" sbatch download_hf_dataset.slurm ""
 
 # Set custom hub cache for large datasets
-HF_HUB_CACHE="/capstor/cache/hf_hub" sbatch download_hf_dataset.slurm ocrvqa
+HF_HUB_CACHE="/shared/hf_hub_cache" sbatch download_hf_dataset.slurm ocrvqa
 
 # Tune for unstable network
 MAX_RETRIES=20 BACKOFF_FACTOR=1.5 sbatch download_hf_dataset.slurm ocrvqa
@@ -245,7 +267,7 @@ Uses the same two-cache system as download scripts:
 # Test all configs (auto-detect)
 python load_dataset_test.py \
     --dataset-name "ibm-research/duorc" \
-    --cache-dir "/capstor/.../hf_datasets_cache"
+    --cache-dir "~/.cache/huggingface/datasets"
 
 # Test specific configs (comma-separated)
 python load_dataset_test.py \
@@ -285,8 +307,8 @@ SLURM wrapper for `load_dataset_test.py` for cluster-based dataset testing.
 - `DATASET_NAME`: HF dataset repo (default: mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M)
 - `SUBSET_NAME`: Dataset config (optional)
 - `SPLIT`: Split to load (default: train)
-- `CACHE_DIR`: Datasets cache path (default: /capstor/.../hf_datasets_cache)
-- `HF_HUB_CACHE`: Hub cache path (default: /capstor/.../hf_hub_cache)
+- `CACHE_DIR`: Datasets cache path (default: ~/.cache/huggingface/datasets)
+- `HF_HUB_CACHE`: Hub cache path (default: ~/.cache/huggingface/hub)
 - `METHOD`: Loading method - "default" or "builder_load" (default: builder_load)
 - `STREAMING`: Enable streaming (default: false)
 - `NUM_PROC`: Number of processes (default: auto)
@@ -303,6 +325,26 @@ DATASET_NAME="google/docci" sbatch builder_loader_test.slurm
 # Test with streaming mode
 METHOD="default" STREAMING=true sbatch builder_loader_test.slurm
 ```
+
+---
+
+---
+
+## `special/` — Dataset-specific Download Scripts
+
+Some datasets cannot be retrieved with a plain `hf download` and need extra steps.
+
+| Directory | Dataset | Method |
+|---|---|---|
+| `special/swissimage/` | SWISSIMAGE | WMS tile download via swisstopo API + img2dataset |
+| `special/laion_aesthetics/` | LAION Aesthetics 12M | Export URLs from HF + img2dataset |
+| `special/pixmo_cap/` | PixMo-Cap images | Export URLs from HF + img2dataset |
+| `special/medmax/` | MedMax | wget split archives from HF resolve |
+| `special/medmnist/` | MedMNIST | Zenodo download via zenodo_get |
+| `special/slide/` | SLIDE | wget from Figshare |
+| `special/skyscript/` | SkyScript | wget from AWS S3 |
+| `special/bigdocs/` | BigDocs-7.5M (extra) | wget external image archives (COCO, TextVQA, TableFact) |
+| `special/medical/` | Various medical datasets | Kaggle CLI + wget from Zenodo/Figshare |
 
 ---
 

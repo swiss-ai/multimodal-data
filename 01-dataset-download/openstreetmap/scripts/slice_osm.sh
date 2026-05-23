@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#SBATCH --account=infra01
+# Set your SLURM account: #SBATCH --account=<your-account>
 #SBATCH --job-name=sliceOSM
 #SBATCH --output=/capstor/scratch/cscs/%u/logs/osm-%x-%A.out
 #SBATCH --error=/capstor/scratch/cscs/%u/logs/osm-%x-%A.err

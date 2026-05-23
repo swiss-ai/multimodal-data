@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --account=infra01
+# Set your SLURM account: #SBATCH --account=<your-account>
 #SBATCH --environment=awscli
 #SBATCH --job-name=downloadS3bucket
-#SBATCH --output=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/s3-%x-%A.out
-#SBATCH --error=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/s3-%x-%A.err
+#SBATCH --output=logs/s3-%x-%A.out
+#SBATCH --error=logs/s3-%x-%A.err
 #SBATCH --partition=normal
 #SBATCH --time=12:00:00
 #SBATCH --nodes=1

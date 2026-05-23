@@ -1,9 +1,8 @@
 #!/bin/bash
-#SBATCH --account=a-infra01
-#SBATCH --environment=emu3
+# Set your SLURM account: #SBATCH --account=<your-account>
 #SBATCH --job-name=testHFdset
-#SBATCH --output=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/test-%x-%A.out
-#SBATCH --error=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/test-%x-%A.err
+#SBATCH --output=logs/test-%x-%A.out
+#SBATCH --error=logs/test-%x-%A.err
 #SBATCH --partition=debug
 #SBATCH --time=01:00:00
 #SBATCH --nodes=1
@@ -40,8 +39,8 @@
 DATASET_NAME="${DATASET_NAME:-mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M}"
 SUBSET_NAME="${SUBSET_NAME:-}"
 SPLIT="${SPLIT:-train}"
-CACHE_DIR="${CACHE_DIR:-/capstor/store/cscs/swissai/infra01/vision-datasets/hf_datasets_cache}"
-HF_HUB_CACHE="${HF_HUB_CACHE:-/capstor/store/cscs/swissai/infra01/vision-datasets/hf_hub_cache}"
+CACHE_DIR="${CACHE_DIR:-${HOME}/.cache/huggingface/datasets}"
+HF_HUB_CACHE="${HF_HUB_CACHE:-${HOME}/.cache/huggingface/hub}"
 METHOD="${METHOD:-builder_load}"
 STREAMING="${STREAMING:-false}"
 NUM_PROC="${NUM_PROC:-auto}"

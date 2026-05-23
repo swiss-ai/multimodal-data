@@ -1,9 +1,8 @@
 #!/bin/bash
-#SBATCH --account=infra01
-#SBATCH --environment=emu3
+# Set your SLURM account: #SBATCH --account=<your-account>
 #SBATCH --job-name=dwnldHFdset
-#SBATCH --output=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/hf-%x-%A.out
-#SBATCH --error=/iopsstor/scratch/cscs/%u/multimodal-data/01-dataset-download/logs/hf-%x-%A.err
+#SBATCH --output=logs/hf-%x-%A.out
+#SBATCH --error=logs/hf-%x-%A.err
 #SBATCH --partition=normal
 #SBATCH --time=12:00:00
 #SBATCH --nodes=1
@@ -58,13 +57,16 @@ DATASET_NAME="${DATASET_NAME:-mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M}"
 SUBSET_NAME="${SUBSET_NAME:-$1}"  # Use first argument if SUBSET_NAME not set
 SPLIT="${SPLIT:-train}"
 CACHE_DIR="${CACHE_DIR:-${HOME}/.cache/huggingface/datasets}"
+# On shared clusters you may want to point this at a common cache location, e.g.:
+#   export CACHE_DIR=/shared/vision-datasets/hf_datasets_cache
+#   export HF_HUB_CACHE=/shared/vision-datasets/hf_hub_cache
 FORCE_REDOWNLOAD="${FORCE_REDOWNLOAD:-false}"
 NUM_PROC="${NUM_PROC:-auto}"
 MAX_RETRIES="${MAX_RETRIES:-10}"
 BACKOFF_FACTOR="${BACKOFF_FACTOR:-1.2}"
 USE_HF_TRANSFER="${USE_HF_TRANSFER:-false}"
 HF_HUB_CACHE="${HF_HUB_CACHE:-${HOME}/.cache/huggingface/hub}"
-CLUSTER_REPO_HOME="${CLUSTER_MOME:-$SLURM_SUBMIT_DIR}" # directory where to find this repository
+CLUSTER_REPO_HOME="${CLUSTER_REPO_HOME:-$SLURM_SUBMIT_DIR}"
 
 # Auto-detect number of processes if set to "auto"
 if [ "$NUM_PROC" = "auto" ]; then
