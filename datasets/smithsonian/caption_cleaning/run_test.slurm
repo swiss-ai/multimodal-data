@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=smithsonian-caption-cleaning-test
+#SBATCH --time=02:00:00
+#SBATCH --partition=normal
+#SBATCH --account=infra01
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus-per-task=4
+#SBATCH --cpus-per-task=288
+#SBATCH --reservation=SD-69241-apertus-1-5
+#SBATCH --output=logs/%x_%j.out
+#SBATCH --error=logs/%x_%j.err
+
+set -euo pipefail
+
+VENV=.venv
+SCRIPT_DIR=.
+
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export PYTHONUNBUFFERED=1
+export VLLM_WORKER_MULTIPROC_METHOD=spawn
+
+echo "Started at $(date --iso-8601=seconds)"
+echo "Script dir: ${SCRIPT_DIR}"
+echo "venv: ${VENV}"
+
+cd "${SCRIPT_DIR}"
+
+echo ""
+echo "=== Step 1: Environment sanity check (01_test_env.py) ==="
+uenv run prgenv-gnu/24.11:v1 --view=modules -- bash -lc "
+module load cuda gcc cmake ninja
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export PYTHONUNBUFFERED=1
+export VLLM_WORKER_MULTIPROC_METHOD=spawn
+${VENV}/bin/python ${SCRIPT_DIR}/01_test_env.py
+"
+
+echo ""
+echo "=== Step 2: Sample and report (02_sample_and_report.py) ==="
+uenv run prgenv-gnu/24.11:v1 --view=modules -- bash -lc "
+module load cuda gcc cmake ninja
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export PYTHONUNBUFFERED=1
+export VLLM_WORKER_MULTIPROC_METHOD=spawn
+${VENV}/bin/python ${SCRIPT_DIR}/02_sample_and_report.py
+"
+
+echo ""
+echo "Finished at $(date --iso-8601=seconds)"
+echo "Report: ${SCRIPT_DIR}/../data/cleaning_report.md"
