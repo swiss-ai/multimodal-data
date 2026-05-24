@@ -175,8 +175,8 @@ if __name__ == "__main__":
     logger.info("Initializing medmax...")
 
     a = MedMaxAdapter(
-        data_dir="/path/to/medical/raw/medmax_data",
-        cache_file="/path/to/.cache/medmax/metadata.pkl",
+        data_dir=os.getenv("MEDMAX_DATA_DIR", "/path/to/data"),
+        cache_file=os.getenv("MEDMAX_CACHE", "/path/to/cache.pkl"),
         image_only=True,
         decode_workers=100,
     )

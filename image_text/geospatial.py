@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import io
 import json
+import os
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
 from pathlib import Path
@@ -50,7 +51,6 @@ def ensure_generic_placeholders(caption: str, num_images: int) -> str:
 
 
 def ensure_swisstopo_prefix(caption: str) -> str:
-    # prefix = "<img1> <img2>"
     prefix = "Map: <img1>\nSatellite: <img2>"
     normalized = caption.replace("<map>", "<img1>").replace("<sat>", "<img2>")
     if normalized.startswith(prefix):
@@ -203,14 +203,14 @@ def validate_counts(expected: dict[str, dict], seen_keys: set[str], dataset_name
 
 def build_swisstopo(output_root: Path, samples_per_shard: int, limit: int | None) -> int:
     captions = load_captions(
-        Path("/tmp/shared/captions/Swisstopo"),
+        Path(os.getenv("SWISSTOPO_CAPTION_DIR", "/path/to/captions")),
         "captions_*.jsonl",
     )
     seen: set[str] = set()
 
     def samples() -> Iterator[Sample]:
         for sample in iter_swisstopo_samples(
-            Path("/path/to/data/vision-datasets/swisstopo/paired"),
+            Path(os.getenv("SWISSTOPO_DATA_DIR", "/path/to/data")),
             captions,
         ):
             seen.add(sample.key)
@@ -229,14 +229,14 @@ def build_swisstopo(output_root: Path, samples_per_shard: int, limit: int | None
 
 def build_ign(output_root: Path, samples_per_shard: int, limit: int | None) -> int:
     captions = load_captions(
-        Path("/tmp/shared/captions/IGN"),
+        Path(os.getenv("IGN_CAPTION_DIR", "/path/to/captions")),
         "caption_*.jsonl",
     )
     seen: set[str] = set()
 
     def samples() -> Iterator[Sample]:
         for sample in iter_ign_samples(
-            Path("/path/to/data/vision-datasets/ign_city_tiles"),
+            Path(os.getenv("IGN_DATA_DIR", "/path/to/data")),
             captions,
         ):
             seen.add(sample.key)
@@ -255,18 +255,14 @@ def build_ign(output_root: Path, samples_per_shard: int, limit: int | None) -> i
 
 def build_flair(output_root: Path, samples_per_shard: int, limit: int | None) -> int:
     captions = load_captions(
-        Path("/tmp/shared/captions/IGNF--FLAIR-HUB"),
+        Path(os.getenv("FLAIR_CAPTION_DIR", "/path/to/captions")),
         "caption_*.jsonl",
     )
     seen: set[str] = set()
 
     def samples() -> Iterator[Sample]:
         for sample in iter_flair_samples(
-            Path(
-                "/path/to/data/vision-datasets/hf_hub_cache/"
-                "datasets--IGNF--FLAIR-HUB/snapshots/"
-                "4cf55f57fd468fbd802681687c529a98c1274ce1/data"
-            ),
+            Path(os.getenv("FLAIR_DATA_DIR", "/path/to/data")),
             captions,
         ):
             seen.add(sample.key)

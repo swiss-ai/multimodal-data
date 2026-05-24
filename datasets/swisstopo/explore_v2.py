@@ -9,15 +9,16 @@ Goals:
 """
 
 import csv
+import os
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import urlencode
 
 import requests
 
-WMS = "https://wms.geo.admin.ch/"
-OUT = Path("/tmp/toolbox/swisstopo_maps/data/explore_v2")
-FILTERED = "/tmp/toolbox/swisstopo_maps/data/filtered_test.csv"
+WMS = os.environ.get("WMS_URL", "https://wms.geo.admin.ch/")
+OUT = Path(os.environ.get("EXPLORE_OUT_DIR", "/tmp/toolbox/swisstopo_maps/data/explore_v2"))
+FILTERED = os.environ.get("FILTERED_CSV", "/tmp/toolbox/swisstopo_maps/data/filtered_test.csv")
 
 # Densest tiles from filtered_test.csv (building_frac):
 #   tile_000176 = 0.121, tile_000197 = 0.055, tile_000200 = 0.028

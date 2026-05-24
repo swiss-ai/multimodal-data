@@ -1,8 +1,14 @@
 import os
+import sys
 
 import datasets
 
-path = "/path/to/data/medical/apertus_image_only_v2"
+path = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("DATASET_PATH", "")
+if not path:
+    print("Usage: python verify_dataset.py <dataset_path>", file=sys.stderr)
+    print("  or set DATASET_PATH environment variable", file=sys.stderr)
+    sys.exit(1)
+
 dataset_paths = [os.path.join(path, d) for d in os.listdir(path)]
 
 for dataset_path in dataset_paths:

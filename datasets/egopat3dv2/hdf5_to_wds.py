@@ -1,6 +1,5 @@
 import io
 import os
-import shutil
 from collections import deque
 
 import cv2
@@ -41,15 +40,13 @@ def avg_hash(img):
     return hash_str
 
 
-output_dir = "output_wds2"
-_ = shutil
-# shutil.rmtree(output_dir, ignore_errors=True)
+output_dir = os.environ.get("OUTPUT_DIR", "output_wds2")
 if os.path.exists(output_dir):
     raise FileExistsError(f"Output directory '{output_dir}' already exists")
 os.makedirs(output_dir, exist_ok=True)
 
 with (
-    h5py.File("RGB_dataset.hdf5", "r") as f,
+    h5py.File(os.environ.get("HDF5_PATH", "RGB_dataset.hdf5"), "r") as f,
     wds.ShardWriter(os.path.join(output_dir, "shard-%06d.tar"), maxcount=SHARD_SIZE) as sink,
 ):
     color_grp = f["color"]

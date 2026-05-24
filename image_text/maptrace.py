@@ -4,12 +4,12 @@ import os
 import pyarrow.parquet as pq
 import webdataset
 
-BASE = "/path/to/data/vision-datasets/hf_hub_cache/datasets--google--MapTrace/snapshots/00bae0d2d917fd12548a089285d633dadf1bc81c"
+BASE = os.getenv("MAPTRACE_BASE_DIR", "/path/to/data")
 DATASETS = {
     "maptrace": os.path.join(BASE, "maptrace"),
     "floormaps": os.path.join(BASE, "floormaps"),
 }
-OUT_DIR = "/path/to/data/vision-datasets/MapTrace"
+OUT_DIR = os.getenv("MAPTRACE_OUT_DIR", "/path/to/output")
 
 
 def detect_ext(image_bytes):

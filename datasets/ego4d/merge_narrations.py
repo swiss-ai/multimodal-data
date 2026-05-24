@@ -33,9 +33,9 @@ import re
 import orjson
 import polars as pl
 
-NARRATION_JSON = "/path/to/data/vision-datasets/ego4d/v2/annotations/narration.json"
-ALL_NARRATIONS_JSON = "/path/to/data/vision-datasets/ego4d/v2/annotations/all_narrations_redacted.json"
-OUT_PARQUET = "/tmp/ego4d/narrations.parquet"
+NARRATION_JSON = os.environ.get("NARRATION_JSON", "")
+ALL_NARRATIONS_JSON = os.environ.get("ALL_NARRATIONS_JSON", "")
+OUT_PARQUET = os.environ.get("OUT_PARQUET", "/tmp/ego4d/narrations.parquet")
 
 SUMMARY_MIN_SEC = 20.0  # intervals shorter than this → single midpoint timestamp
 
@@ -48,10 +48,7 @@ C_ALTERNATIVES = (
     + 1 * ["the ego"]
 )
 
-_rng = random.Random()  # unseeded — variety across runs is fine for training data
-
-
-# ── Text cleaning ─────────────────────────────────────────────────────────────
+_rng = random.Random()
 
 _RE_ANY_TAG = re.compile(r"#\w+\s*")
 _RE_C = re.compile(r"(?<![A-Za-z])C(?![A-Za-z])")
@@ -69,7 +66,7 @@ def clean_text(raw: str) -> str:
     return text
 
 
-# ── Timestamp helpers ─────────────────────────────────────────────────────────
+# Timestamp helpers
 
 
 def narration_timestamp(clip_start: float, clip_end: float) -> list:
@@ -84,7 +81,7 @@ def summary_timestamps(start: float, end: float) -> list:
     return [start + duration * k / 8 for k in range(1, 6)]
 
 
-# ── Summary helpers ───────────────────────────────────────────────────────────
+# Summary helpers
 
 
 def select_nonoverlapping(summaries: list, start_key: str, end_key: str, text_key: str) -> list:
@@ -103,7 +100,7 @@ def select_nonoverlapping(summaries: list, start_key: str, end_key: str, text_ke
     return selected
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# Main
 
 
 def main():
@@ -119,7 +116,7 @@ def main():
     redacted_vids = set(all_videos.keys())
     exclusive = {uid: v for uid, v in narr_data.items() if uid not in redacted_vids}
 
-    # ── Phase 1: pre-collect and clean summaries per video ────────────────────
+    # Phase 1: pre-collect and clean summaries per video
     # Summaries are cleaned once here; the same cleaned text is reused both as
     # summary rows in the parquet and as context for short narrations.
     print("Pre-collecting summaries …", flush=True)
@@ -150,7 +147,7 @@ def main():
             for s in sums
         ]
 
-    # ── Phase 2 & 3: narrations + summaries → buckets ────────────────────────
+    # Phase 2 & 3: narrations + summaries -> buckets
     buckets: dict[str, list] = {}
     seen: set[tuple] = set()
 
@@ -199,7 +196,7 @@ def main():
             seen.add(dk)
             add(video_uid, ts, s["caption"], "summary")
 
-    # ── Flatten + write ───────────────────────────────────────────────────────
+    # Flatten + write
     keys, video_uids, timestamps_col, captions, types = [], [], [], [], []
     for video_uid, entries in buckets.items():
         for i, (ts, caption, kind) in enumerate(entries):

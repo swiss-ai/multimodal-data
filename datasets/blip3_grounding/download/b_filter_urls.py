@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import os
+
 from functools import lru_cache
 from multiprocessing import get_context
 from pathlib import Path
@@ -10,7 +12,7 @@ import pyarrow.parquet as pq
 
 INPUT_DIR = Path("/tmp/metadata/blip3_grounding_50m/parquet")
 OUTPUT_DIR = Path("/tmp/metadata/blip3_grounding_50m/filtered")
-ROBOTS_PARQUET = Path("/path/to/data/users/vsabolce/apertus_v1/robotstxt/fineweb_robots_compressed.parquet")
+ROBOTS_PARQUET = Path(os.environ.get("ROBOTS_PARQUET_PATH", "robotstxt/fineweb_robots_compressed.parquet"))
 BLACKLIST_HOSTS = Path("/tmp/blacklist/hosts")
 BLACKLIST_URLS = Path("/tmp/blacklist/urls_full.txt")
 BATCH_SIZE = 100_000

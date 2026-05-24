@@ -1,9 +1,10 @@
 import csv
+import os
 from urllib.parse import urlencode
 
-wms_url = "https://wms.geo.admin.ch/"
-input_file = "./data/swisstopo_tiles_settlement_500m_overlap50m.csv"
-output_file = "./data/map_urls.csv"
+wms_url = os.environ.get("WMS_URL", "https://wms.geo.admin.ch/")
+input_file = os.environ.get("TILES_CSV", "./data/swisstopo_tiles_settlement_500m_overlap50m.csv")
+output_file = os.environ.get("OUT_CSV", "./data/map_urls.csv")
 
 layers = [
     "ch.swisstopo.pixelkarte-farbe",
@@ -11,9 +12,8 @@ layers = [
     "ch.swisstopo-vd.amtliche-vermessung",
     "ch.swisstopo-vd.geometa-standav",
     "ch.swisstopo.swisstlm3d-karte-farbe",
-    "ch.are.bauzonen",  # to check if building zone
-    "ch.swisstopo.vec25-gebaeude",  # to check if building zone
-    #
+    "ch.are.bauzonen",
+    "ch.swisstopo.vec25-gebaeude",
     "ch.swisstopo.landeskarte-farbe-10",
     "ch.swisstopo.pixelkarte-farbe-pk100.noscale",
     "ch.swisstopo.pixelkarte-farbe-pk200.noscale",

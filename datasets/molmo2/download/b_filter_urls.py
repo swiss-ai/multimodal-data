@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 from functools import lru_cache
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -7,11 +8,11 @@ from urllib.parse import urlsplit
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-INPUT_DIR = Path("/tmp/metadata/Molmo2-MultiImageQA/parquet")
-OUTPUT_DIR = Path("/tmp/metadata/Molmo2-MultiImageQA/filtered")
+INPUT_DIR = Path(os.environ.get("METADATA_DIR", "/tmp/metadata/Molmo2-MultiImageQA/parquet"))
+OUTPUT_DIR = Path(os.environ.get("FILTERED_DIR", "/tmp/metadata/Molmo2-MultiImageQA/filtered"))
 INPUT_PATH = INPUT_DIR / "metadata.parquet"
 OUTPUT_PATH = OUTPUT_DIR / "metadata.parquet"
-ROBOTS_PARQUET = Path("/path/to/data/users/vsabolce/apertus_v1/robotstxt/fineweb_robots_compressed.parquet")
+ROBOTS_PARQUET = Path(os.environ.get("ROBOTS_PARQUET_PATH", ""))
 BATCH_SIZE = 100_000
 OUTPUT_SCHEMA = pa.schema([("url", pa.string())])
 

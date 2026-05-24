@@ -26,8 +26,7 @@ ROOT_OUTPUT_DIR = "/path/to/data/vision-datasets/mlfoundations"
 OUTPUT_DIR = os.path.join(ROOT_OUTPUT_DIR, "MINT-1T-HTML")
 
 # STAGE 1
-HASH_DIR = os.path.join(SCRATCH_DIR, "hash")
-HASH_DIR = "/tmp/mint/hash/html"  # legacy path
+HASH_DIR = "/tmp/mint/hash/html"
 
 # STAGE 2
 DEDUP_DB_DIR = os.path.join(SCRATCH_DIR, "dedup_dbs")
@@ -40,7 +39,6 @@ CHUNK_SIZE = 10
 INVALID_IMAGE = "INVALID"
 ROCKSDB_BG_JOBS = 4
 
-# Global for Stage 3 workers
 reject_db = None
 
 
@@ -74,9 +72,6 @@ def make_rocksdb(path, write_buffer_mb=64):
 # STAGE 1: HASHING
 # ==========================================
 
-
-# NOTE: This stage is currently disabled. It was run once to generate the hash
-# files, and the rest of the pipeline relies on those existing files.
 
 # def process_shard_hashing(paths, chunk_num):
 #     if not paths:

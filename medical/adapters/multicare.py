@@ -82,7 +82,7 @@ if __name__ == "__main__":
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
     a = MultiCaReAdapter(
-        data_dir="/path/to/vision-datasets/medical/raw/multicare-case-images/data",
+        data_dir=os.getenv("MULTICARE_DATA_DIR", "/path/to/data"),
         dataset_id="multicare_case_images",
     )
 

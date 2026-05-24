@@ -95,12 +95,8 @@ if __name__ == "__main__":
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
     a = OpenPMC18mAdapter(
-        data_dir="/path/to/medical/raw/open-pmc-18m",
+        data_dir=os.getenv("OPEN_PMC_18M_DATA_DIR", "/path/to/data"),
     )
 
     for batch in a.stream(logger=logger, skip=5, batch_size=1000):
-        # for b in batch:
-        #     print("obtained sample:", b.meta.sample_id, b.image.size)
-        # break
-
         print("obtained batch of size:", len(batch))

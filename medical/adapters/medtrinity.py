@@ -227,8 +227,8 @@ if __name__ == "__main__":
     logger.info("Initializing MedTrinityFullAdapter...")
 
     a = MedTrinityFullAdapter(
-        data_dir="/path/to/medical/raw/medtrinity_25m",
-        cache_file="/path/to/.cache/medtrinity/metadata_legal.pkl",
+        data_dir=os.getenv("MEDTRINITY_DATA_DIR", "/path/to/data"),
+        cache_file=os.getenv("MEDTRINITY_CACHE", "/path/to/cache.pkl"),
         image_only=True,
         decode_workers=100,
     )

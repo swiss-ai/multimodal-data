@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
-"""
-Extract URLs from HQ-50K zip (train/all.txt + test/*.txt), deduplicate,
-and write to a parquet file for the robots.txt filtering stage.
-"""
 
+import os
 import zipfile
 from pathlib import Path
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-ZIP_PATH = Path("/path/to/data/vision-datasets/raw/cooldown/hf___YangQiee___HQ-50K/HQ-50K.zip")
-OUTPUT_DIR = Path("/tmp/metadata/HQ-50K/parquet")
+ZIP_PATH = Path(os.environ.get("HQ50K_ZIP_PATH", ""))
+OUTPUT_DIR = Path(os.environ.get("METADATA_DIR", "/tmp/metadata/HQ-50K/parquet"))
 OUTPUT_PATH = OUTPUT_DIR / "metadata.parquet"
 OUTPUT_SCHEMA = pa.schema([("url", pa.string())])
 

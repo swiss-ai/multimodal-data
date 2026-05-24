@@ -97,7 +97,7 @@ For setting the correct zoom levels and understanding tile coordinates, refer to
 
 ### (Optional) Scrape Script
 
-The `scripts/run.py` script can also be used independently to scrape tiles from a running tile server. Usage:
+The `run.py` script can also be used independently to scrape tiles from a running tile server. Usage:
 
 ```plaintext
 run.py [-h] [--bbox MIN_LON MIN_LAT MAX_LON MAX_LAT] --zoom ZOOM [--sample_ratio SAMPLE_RATIO] --save_dir SAVE_DIR [--url URL]

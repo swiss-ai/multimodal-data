@@ -14,10 +14,11 @@ Writes:
 
 import argparse
 import json
+import os
 import re
 from pathlib import Path
 
-WORK_DIR = Path("/tmp/recaption_blip3")
+WORK_DIR = Path(os.environ.get("RECAPTION_WORK_DIR", "/tmp/recaption_blip3"))
 OUTPUT_DIR = WORK_DIR / "output"
 VALID_DIR = WORK_DIR / "output_valid"
 INVALID_DIR = WORK_DIR / "output_invalid"

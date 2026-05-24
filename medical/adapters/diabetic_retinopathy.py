@@ -132,7 +132,7 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    ZIP_PATH = "/path/to/vision-datasets/medical/raw/apertus/diabetic-retinopathy-2015-data-colored-resized.zip"
+    ZIP_PATH = os.getenv("DIABETIC_RETINOPATHY_ZIP", "/path/to/data.zip")
     adapter = DiabeticRetinopathyAdapter(zip_path=ZIP_PATH)
     for batch in adapter.stream(logger=logger, batch_size=4):
         for s in batch:

@@ -49,8 +49,8 @@ def process_file(args):
             assert file_obj is not None
 
             if not member.name.endswith(".jpg"):
-                tmp_path.addfile(member)
-                return True
+                tmp_tar.addfile(member, file_obj)
+                continue
 
             fd_in, temp_in = tempfile.mkstemp(dir="/dev/shm", suffix=".jpg")
             fd_out, temp_out = tempfile.mkstemp(dir="/dev/shm", suffix=".jxl")
@@ -76,7 +76,7 @@ def process_file(args):
                 member.size = len(jxl_bytes)
                 tmp_tar.addfile(member, io.BytesIO(jxl_bytes))
             else:
-                tmp_path.addfile(member, file_obj)
+                tmp_tar.addfile(member, io.BytesIO(img_bytes))
 
             os.remove(temp_in)
             os.remove(temp_out)

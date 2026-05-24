@@ -108,13 +108,6 @@ def main():
     print("Building work list...", flush=True)
     work = build_work_list(args.dpi)
 
-    already_done = sum(
-        1
-        for p in PDF_DIR.glob("*.pdf")
-        if (IMG_DIR / "x" / "x").parent.parent  # just to avoid recomputing
-        and True
-    ) - len(work)
-    # simpler count:
     total_pdfs = sum(1 for _ in PDF_DIR.glob("*.pdf"))
     already_done = total_pdfs - len(work)
 

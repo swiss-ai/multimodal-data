@@ -25,7 +25,6 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 from tqdm import tqdm
 
-# ── Config ────────────────────────────────────────────────────────────────────
 
 CAPTION_DIR = "/path/to/data/medical-datasets/raw/dailymed_spl/parquet_caption"
 SRC_DIR = "/path/to/data/medical-datasets/raw/dailymed_spl/parquet_md"
@@ -38,6 +37,7 @@ N_PERM = 128
 LSH_BANDS = 16
 LSH_ROWS = 8  # N_PERM == LSH_BANDS * LSH_ROWS
 SHINGLE_K = 5
+
 
 IMAGE_RE = re.compile(r"\[\[IMAGE: [^\]|]+ \| ([^\]]+)\]\]")
 
@@ -58,8 +58,6 @@ _A = _RNG.integers(1, 2**32, size=N_PERM, dtype=np.uint64)
 _B = _RNG.integers(0, 2**32, size=N_PERM, dtype=np.uint64)
 
 
-# ── MinHash / LSH ─────────────────────────────────────────────────────────────
-
 
 def compute_minhash(text: str) -> np.ndarray | None:
     words = re.sub(r"\W+", " ", text.lower()).split()
@@ -70,7 +68,6 @@ def compute_minhash(text: str) -> np.ndarray | None:
         [int(hashlib.md5(s.encode()).hexdigest()[:16], 16) & 0xFFFFFFFFFFFFFFFF for s in shingles],
         dtype=np.uint64,
     )
-    # (N_PERM, n_shingles) – uint64 wraps naturally, giving N_PERM independent hash fns
     hashes = _A[:, None] * base[None, :] + _B[:, None]
     return hashes.min(axis=1)
 
@@ -131,17 +128,11 @@ def find_cross_doc_duplicates(signatures: dict) -> set:
     return to_drop
 
 
-# ── Caption similarity (dedup 2) ──────────────────────────────────────────────
-
-
 def word_jaccard(a: str, b: str) -> float:
     wa, wb = set(a.lower().split()), set(b.lower().split())
     if not wa or not wb:
         return 0.0
     return len(wa & wb) / len(wa | wb)
-
-
-# ── Segment builder (dedup 1 + 2) ────────────────────────────────────────────
 
 
 def parse_segments(markdown: str, doc_id: str, images_by_name: dict, captions: dict):
@@ -191,9 +182,6 @@ def parse_segments(markdown: str, doc_id: str, images_by_name: dict, captions: d
     return segments, images_bytes_out
 
 
-# ── Caption loading ───────────────────────────────────────────────────────────
-
-
 def load_captions() -> dict:
     caps = {}
     files = sorted(Path(CAPTION_DIR).glob("task_*.jsonl"))
@@ -208,9 +196,6 @@ def load_captions() -> dict:
                 caps[(r["doc_id"], r["image_name"])] = r["caption"]
     print(f"[interleave2] {len(caps)} captions loaded")
     return caps
-
-
-# ── Main ──────────────────────────────────────────────────────────────────────
 
 
 def main():

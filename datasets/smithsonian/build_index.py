@@ -123,7 +123,6 @@ def _parse_art_shard(args):
                 content = d.get("content", {})
                 ft = content.get("freetext", {})
                 dnr = content.get("descriptiveNonRepeating", {})
-                content.get("indexedStructured", {})
 
                 # ── Extract media idsIds ──────────────────────────────────────
                 media_obj = dnr.get("online_media", {})

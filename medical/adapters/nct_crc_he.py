@@ -189,8 +189,8 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    ZIP_PATH = "/path/to/vision-datasets/medical/raw/apertus/NCT-CRC-HE-100K.zip"
-    EXTRACT_DIR = "/path/to/vision-datasets/medical/raw/apertus/NCT-CRC-HE-100K_uncompressed"
+    ZIP_PATH = os.getenv("NCT_CRC_HE_ZIP", "/path/to/data.zip")
+    EXTRACT_DIR = os.getenv("NCT_CRC_HE_EXTRACT_DIR", "/path/to/extract")
 
     adapter = NctCrcHeAdapter(zip_path=ZIP_PATH, extract_dir=EXTRACT_DIR)
     for batch in adapter.stream(logger=logger, batch_size=4):

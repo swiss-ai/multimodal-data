@@ -41,9 +41,6 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
 
-#
-# Load datasets methods copied from benchmark-image-tokenizer-repo
-#
 def _parse_split_slice(split: str) -> Tuple[str, Optional[int], Optional[int]]:
     """
     Parse split string that may contain slice notation.

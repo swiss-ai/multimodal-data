@@ -23,7 +23,7 @@ os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 HQ50K_ROOT = Path("/path/to/data/vision-datasets/raw/cooldown/hf___YangQiee___HQ-50K/downloaded")
 DOCCI_ARROW = Path("/path/to/data/vision-datasets/raw/stage2/hf___google___docci/docci-train.arrow")
 DOCCI_IMAGES_DIR = DOCCI_ARROW.parent / "images"
-MODEL_PATH = "/tmp/models/models--google--gemma-4-31B-it/snapshots/439edf5652646a0d1bd8b46bfdc1d3645761a445"
+MODEL_PATH = os.environ.get("RECAPTION_MODEL_PATH", "")
 OUTPUT_DIR = _ROOT / "artifacts" / "hq50k_caption"
 
 HQ50K_SHARD_SIZES = [6881, 6834, 6934, 6786, 8410, 961]
@@ -111,7 +111,6 @@ def main() -> None:
             tensor_parallel_size=1,
             max_num_seqs=4,
             enforce_eager=False,
-            download_dir=Path("/tmp/models"),
             limit_mm_per_prompt={"image": N_DOCCI_EXAMPLES + 1},
         )
     )

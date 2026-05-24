@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extract all images for specific hashes from tar archives.
 
-Usage: python3 main_hashes.py <hash1> [hash2] [hash3] ...
+Usage: python3 check_duplicates.py <hash1> [hash2] [hash3] ...
 
 Queries parquet files to find all keys matching the given hashes,
 then extracts the images into per-hash directories under extracted/.
@@ -14,7 +14,7 @@ from collections import defaultdict
 
 import duckdb
 
-PARQUET_DIR = "/tmp/mint/hash"
+PARQUET_DIR = os.environ.get("PARQUET_DIR", "/tmp/mint/hash")
 
 
 def query_by_hashes(parquet_dir, hashes):

@@ -2,10 +2,11 @@
 """Generate a flat per-tar task list for tar-parallel recovery runs."""
 
 import json
+import os
 import sys
 from pathlib import Path
 
-WORK_DIR = Path("/tmp/recaption_blip3")
+WORK_DIR = Path(os.environ.get("RECAPTION_WORK_DIR", "/tmp/recaption_blip3"))
 
 
 def find_incomplete_chunks(n_chunks: int) -> list[int]:

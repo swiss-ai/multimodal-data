@@ -26,7 +26,7 @@ os.environ.setdefault("HF_HUB_OFFLINE", "1")
 os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 HQ50K_ROOT = Path("/path/to/data/vision-datasets/raw/cooldown/hf___YangQiee___HQ-50K/downloaded")
-MODEL_PATH = "/tmp/models/models--google--gemma-4-31B/snapshots/5dc307ed18be972e945cea1bfd3facf5bfd5fa39"
+MODEL_PATH = os.environ.get("RECAPTION_MODEL_PATH", "")
 OUTPUT_DIR = _ROOT / "artifacts" / "hq50k_base_caption"
 HQ50K_SHARD_SIZES = [6881, 6834, 6934, 6786, 8410, 961]
 
@@ -81,7 +81,7 @@ def main() -> None:
     llm = LLM(
         model=MODEL_PATH,
         tokenizer=MODEL_PATH,
-        download_dir="/tmp/models",
+        download_dir=os.environ.get("RECAPTION_MODEL_DOWNLOAD_DIR", ""),
         tensor_parallel_size=1,
         enforce_eager=False,
         dtype="bfloat16",

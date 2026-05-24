@@ -11,7 +11,7 @@ from collections import defaultdict
 
 import duckdb
 
-PARQUET_DIR = "/tmp/mint/hash"
+PARQUET_DIR = os.environ.get("PARQUET_DIR", "/tmp/mint/hash")
 TOP_N = 25
 SAMPLES_PER_HASH = 10
 

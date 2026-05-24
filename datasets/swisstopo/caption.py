@@ -18,15 +18,13 @@ import random
 import tarfile
 from pathlib import Path
 
-DATA_ROOT = Path("/path/to/data/vision-datasets/processed/swisstopo___swissmap___cooldown2")
-OUTPUT_ROOT = Path("/tmp/toolbox/swisstopo_maps/outputs")
-NUM_SHARDS = 154
+DATA_ROOT = Path(os.environ.get("SWISSTOPO_DATA_ROOT", ""))
+OUTPUT_ROOT = Path(os.environ.get("SWISSTOPO_CAPTION_OUTPUT", "/tmp/toolbox/swisstopo_maps/outputs"))
+NUM_SHARDS = int(os.environ.get("NUM_SHARDS", "154"))
 
-GEMMA_PATH = "/tmp/models/models--google--gemma-4-31B-it/snapshots/439edf5652646a0d1bd8b46bfdc1d3645761a445"
+GEMMA_PATH = os.environ.get("GEMMA_MODEL_PATH", "")
 
-# ---------------------------------------------------------------------------
 # Prompts
-# ---------------------------------------------------------------------------
 FILTER_PROMPT = """\
 Look at this image. It is a tile from a Swiss topographic, cadastral, or land-survey map.
 

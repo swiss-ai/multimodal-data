@@ -26,15 +26,13 @@ parser.add_argument("--max-per-shard", type=int, default=10000)
 args = parser.parse_args()
 
 
-# ==========================================
-# CONFIGURATION
-# ==========================================
+# Configuration
 
 # fmt:off
-COCOTEXT_ZIP = "/tmp/bigdocs_subsets/train2014.zip"
-TEXTOCR_ZIP = "/tmp/bigdocs_subsets/train_val_images.zip"
-BIGDOCS_SNAPSHOT = "/path/to/data/vision-datasets/hf_hub_cache/datasets--ServiceNow--BigDocs-7.5M/snapshots/dae4403c28307bd5328920740e81ce5232819e74"
-PUBTABLES_SNAPSHOT = "/path/to/data/vision-datasets/hf_hub_cache/datasets--bsmock--pubtables-1m/snapshots/35b1c097807e0b07ec5313879b85956b7b3890db"
+COCOTEXT_ZIP = os.environ.get("COCOTEXT_ZIP", "/tmp/bigdocs_subsets/train2014.zip")
+TEXTOCR_ZIP = os.environ.get("TEXTOCR_ZIP", "/tmp/bigdocs_subsets/train_val_images.zip")
+BIGDOCS_SNAPSHOT = os.environ.get("BIGDOCS_SNAPSHOT", "")
+PUBTABLES_SNAPSHOT = os.environ.get("PUBTABLES_SNAPSHOT", "")
 PUBTABLES_IMAGE_ARCHIVES = [
     "PubTables-1M-Detection_Images_Train_Part1.tar.gz",
     "PubTables-1M-Detection_Images_Train_Part2.tar.gz",
@@ -47,9 +45,7 @@ PUBTABLES_IMAGE_ARCHIVES = [
 # fmt:on
 
 
-# ==========================================
-# DATASET LOADERS
-# ==========================================
+# Dataset loaders
 # Each loader yields (sample_key: str, image_bytes: bytes) pairs.
 
 
@@ -153,9 +149,7 @@ LOADERS = {
 }
 
 
-# ==========================================
-# WRITER
-# ==========================================
+# Writer
 
 
 def write_webdataset(dataset_name, loader_fn, output_dir, max_per_shard):
@@ -181,9 +175,7 @@ def write_webdataset(dataset_name, loader_fn, output_dir, max_per_shard):
     print(f"[{dataset_name}] Done. Total: {total} samples")
 
 
-# ==========================================
-# MAIN
-# ==========================================
+# Main
 
 
 def main():

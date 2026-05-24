@@ -1,17 +1,3 @@
-# import os
-# import zipfile
-# import PIL.Image
-#
-# dir_path = "/path/to/data/medical/raw/slide"
-#
-# for archive in archives:
-#     jpg_files = [f for f in archive.namelist() if f.endswith(".jpg")]
-#     for jpg_file in jpg_files:
-#         with archive.open(jpg_file) as file:
-#             image = PIL.Image.open(file)
-#             image = image.resize((768, 584))
-
-
 import io
 import os
 import zipfile
@@ -50,9 +36,7 @@ class SLIDEAdapter(Dataset):
         return batch
 
 
-# --- Usage ---
-
-dataset = SLIDEAdapter(dir_path="/path/to/data/medical/raw/slide")
+dataset = SLIDEAdapter(dir_path=os.environ.get("SLIDE_DIR", "/path/to/data/medical/raw/slide"))
 
 loader = DataLoader(
     dataset,
@@ -61,7 +45,6 @@ loader = DataLoader(
     collate_fn=SLIDEAdapter.collate_fn,
 )
 
-# Test it
 if __name__ == "__main__":
     total = 0
     for batch in loader:

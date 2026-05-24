@@ -4,7 +4,7 @@ Clean dataset by copying it to a ___cleaned suffix directory,
 removing the first N lines from every .txt file.
 
 Usage:
-    python clean_dataset.py <path> <num_lines_to_remove>
+    python clean_text_prefix.py <path> <num_lines_to_remove>
 """
 
 import argparse
@@ -27,7 +27,6 @@ def process_tar_file(args):
             for member in src_tar.getmembers():
                 f = src_tar.extractfile(member)
                 if f is None:
-                    # Directory or special file
                     dst_tar.addfile(member)
                     continue
 

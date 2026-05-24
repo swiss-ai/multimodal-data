@@ -171,8 +171,8 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    TAR_PATH = "/path/to/vision-datasets/medical/raw/apertus/medicat.tar.gz"
-    CACHE = "/path/to/.cache/medicat_metadata.pkl"
+    TAR_PATH = os.getenv("MEDICAT_TAR_PATH", "/path/to/data.tar.gz")
+    CACHE = os.getenv("MEDICAT_CACHE", "/path/to/cache.pkl")
 
     adapter = MediCaTAdapter(tar_path=TAR_PATH, cache_file=CACHE)
     for batch in adapter.stream(logger=logger, batch_size=4):

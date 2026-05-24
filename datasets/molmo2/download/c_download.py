@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
+import os
 from pathlib import Path
 
 import img2dataset
 
-INPUT_PATH = Path("/tmp/metadata/Molmo2-MultiImageQA/filtered/metadata.parquet")
-OUTPUT_DIR = Path("/path/to/data/vision-datasets/processed/hf___allenai___Molmo2-MultiImageQA___downloaded")
+INPUT_PATH = Path(os.environ.get("FILTERED_PARQUET", "/tmp/metadata/Molmo2-MultiImageQA/filtered/metadata.parquet"))
+OUTPUT_DIR = Path(os.environ.get("MOLMO2_DOWNLOAD_DIR", ""))
 
 
 def main():

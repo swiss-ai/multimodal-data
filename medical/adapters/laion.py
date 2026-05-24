@@ -111,11 +111,8 @@ if __name__ == "__main__":
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
     a = LAIONAestheticsAdapter(
-        data_dir="/path/to/vision-datasets/LAION-Aesthetics",
+        data_dir=os.getenv("LAION_DATA_DIR", "/path/to/data"),
     )
 
     for batch in a.stream(logger=logger, skip=0, batch_size=1000):
-        # for b in batch:
-        #     print("obtained sample:", b.meta.sample_id, b.image.size)
-        # break
         print("obtained batch of size:", len(batch))

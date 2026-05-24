@@ -11,7 +11,6 @@ NUM_KEYS = 20
 
 
 def extract_samples(tar_path, out_dir, n=NUM_KEYS):
-    """Extract the first n WDS keys from tar_path into out_dir. Returns list of keys."""
     os.makedirs(out_dir, exist_ok=True)
 
     dataset = wds.WebDataset([tar_path], shardshuffle=False)

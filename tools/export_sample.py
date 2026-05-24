@@ -3,9 +3,9 @@ import os
 
 import duckdb
 
-PARQUET_GLOB = "/path/to/data/medical-datasets/raw/dailymed_spl/interleaved/*.parquet"
-SAMPLE_ID = "animal/20260318_dcd2ac5e-a42b-4fcc-ab0a-0cef02de1560"
-OUT_DIR = "/tmp/toolbox/duplic/data"
+PARQUET_GLOB = os.environ.get("PARQUET_GLOB", "/path/to/data/medical-datasets/raw/dailymed_spl/interleaved/*.parquet")
+SAMPLE_ID = os.environ.get("SAMPLE_ID", "animal/20260318_dcd2ac5e-a42b-4fcc-ab0a-0cef02de1560")
+OUT_DIR = os.environ.get("OUT_DIR", "/tmp/toolbox/duplic/data")
 
 os.makedirs(OUT_DIR, exist_ok=True)
 

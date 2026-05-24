@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import os
 from functools import lru_cache
 from multiprocessing import get_context
 from pathlib import Path
@@ -9,9 +10,9 @@ from urllib.parse import urlsplit
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-SOURCE_PARQUET = Path("/path/to/data/vision-datasets/raw/OpenFace-CQUPT___FaceCaption-15M/FaceCaption-v2.parquet")
-OUTPUT_DIR = Path("/tmp/metadata/FaceCaption-15M/filtered")
-ROBOTS_PARQUET = Path("/path/to/data/users/vsabolce/apertus_v1/robotstxt/fineweb_robots_compressed.parquet")
+SOURCE_PARQUET = Path(os.environ.get("FACECAPTION_SOURCE_PARQUET", ""))
+OUTPUT_DIR = Path(os.environ.get("FILTERED_DIR", "/tmp/metadata/FaceCaption-15M/filtered"))
+ROBOTS_PARQUET = Path(os.environ.get("ROBOTS_PARQUET_PATH", ""))
 BATCH_SIZE = 100_000
 WORKER_COUNT = 15
 OUTPUT_SCHEMA = pa.schema(

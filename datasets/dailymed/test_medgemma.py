@@ -22,9 +22,6 @@ to write a rich, information-dense description. The text will be inserted direct
 image position and must read naturally inline.
 """
 
-# ── load a handful of representative docs ────────────────────────────────────
-
-
 def load_docs(targets: list[str]) -> list[dict]:
     files = sorted(glob.glob(f"{PARQUET_DIR}/part-*.parquet"))
     results = {}
@@ -48,8 +45,6 @@ docs = load_docs(TARGETS)
 print(f"Loaded {len(docs)} docs")
 for d in docs:
     print(f"  {d['id']}  —  {len(d['images'])} images")
-
-# ── build vLLM messages ───────────────────────────────────────────────────────
 
 CONTEXT_LINES = 40
 MAX_CONTEXT_CHARS = 20_000  # ~5k tokens; drop image if exceeded
@@ -102,8 +97,6 @@ def build_messages(doc: dict, img: dict) -> list[dict] | None:
     ]
 
 
-# ── load model ────────────────────────────────────────────────────────────────
-
 from vllm import LLM, SamplingParams
 
 llm = LLM(
@@ -116,8 +109,6 @@ llm = LLM(
 )
 sampling = SamplingParams(temperature=0.2, top_p=0.9, max_tokens=512)
 print("Model loaded.\n")
-
-# ── run ───────────────────────────────────────────────────────────────────────
 
 for doc in docs:
     imgs = doc["images"]

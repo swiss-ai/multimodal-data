@@ -17,8 +17,8 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 from PIL import Image
 
-INPUT_DIR = Path("/path/to/data/vision-datasets/raw/OpenFace-CQUPT___FaceCaption-15M___downloaded")
-OUTPUT_DIR = Path("/path/to/data/vision-datasets/raw/OpenFace-CQUPT___FaceCaption-15M___cropped")
+INPUT_DIR = Path(os.environ.get("FACECAPTION_INPUT_DIR", ""))
+OUTPUT_DIR = Path(os.environ.get("FACECAPTION_CROP_DIR", ""))
 DEFAULT_WORKER_COUNT = 16
 
 Image.MAX_IMAGE_PIXELS = None

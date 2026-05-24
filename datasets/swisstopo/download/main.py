@@ -1,12 +1,11 @@
 import csv
+import os
 import uuid
 from urllib.parse import urlencode
 
-WMS_URL = "https://wms.geo.admin.ch/"
-# load LV-95 coordinates
-CSV_PATH = "data/downlaod_swisstopo_tiles_settlement_500m_overlap50m.csv"
-# output CSV path
-OUT_CSV = "./data/swisstopo_urls.csv"
+WMS_URL = os.environ.get("WMS_URL", "https://wms.geo.admin.ch/")
+CSV_PATH = os.environ.get("TILES_CSV", "data/download_swisstopo_tiles_settlement_500m_overlap50m.csv")
+OUT_CSV = os.environ.get("OUT_CSV", "./data/swisstopo_urls.csv")
 
 
 def build_url_pair(bbox, width, height, crs="EPSG:2056"):
@@ -14,7 +13,6 @@ def build_url_pair(bbox, width, height, crs="EPSG:2056"):
     bbox: "minX,minY,maxX,maxY"
     width/height: image size
     crs: coordinate system
-    out_img/out_map: output path
     """
     pair_id = str(uuid.uuid4())
     urls = []

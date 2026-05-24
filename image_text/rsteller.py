@@ -3,8 +3,8 @@ import os
 
 import webdataset as wds
 
-SRC_DIR = "/path/to/data/vision-datasets/hf_hub_cache/datasets--SlytherinGe--RSTeller/snapshots/a03b35f1bc9a3ac14ae93724d175c2611f1bba5b/JPG"
-OUT_DIR = "/path/to/data/vision-datasets/RSTeller"
+SRC_DIR = os.getenv("RSTELLER_SRC_DIR", "/path/to/data")
+OUT_DIR = os.getenv("RSTELLER_OUT_DIR", "/path/to/output")
 
 src_tars = sorted(f for f in os.listdir(SRC_DIR) if f.endswith(".tar"))
 src_urls = [os.path.join(SRC_DIR, f) for f in src_tars]

@@ -132,7 +132,7 @@ def process_file(args: tuple) -> tuple[int, bool]:
     if not patch_file.exists():
         os.link(src, dst)
         return 0, True
-    patches = [json.loads(line) for line in patch_file.read_text().splitlines() if l.strip()]
+    patches = [json.loads(line) for line in patch_file.read_text().splitlines() if line.strip()]
     n = patch_parquet(src, dst, patches)
     if n == 0:
         os.link(src, dst)

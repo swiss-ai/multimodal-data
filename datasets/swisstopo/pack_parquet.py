@@ -19,10 +19,10 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-DATA_ROOT = Path("/path/to/data/vision-datasets/processed/swisstopo___swissmap___cooldown2")
-CAPTIONS_ROOT = Path("/tmp/toolbox/swisstopo_maps/outputs/captions_full")
-OUTPUT_ROOT_FULL = Path("/path/to/data/vision-datasets/raw/cooldown/swisstopo___maps_recap")
-OUTPUT_ROOT_SAMPLE = Path("/tmp/toolbox/swisstopo_maps/outputs/sample_parquet")
+DATA_ROOT = Path(os.environ.get("SWISSTOPO_DATA_ROOT", ""))
+CAPTIONS_ROOT = Path(os.environ.get("SWISSTOPO_CAPTIONS_ROOT", "/tmp/toolbox/swisstopo_maps/outputs/captions_full"))
+OUTPUT_ROOT_FULL = Path(os.environ.get("SWISSTOPO_OUTPUT_FULL", ""))
+OUTPUT_ROOT_SAMPLE = Path(os.environ.get("SWISSTOPO_OUTPUT_SAMPLE", "/tmp/toolbox/swisstopo_maps/outputs/sample_parquet"))
 NUM_SHARDS = 154
 MAX_BYTES = 2 * 1024 * 1024 * 1024  # 2 GB
 ROW_GROUP_SIZE = 256

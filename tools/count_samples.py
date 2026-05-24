@@ -7,7 +7,6 @@ from multiprocessing import Pool
 
 
 def count_files_in_tar(tar_path):
-    """Open a tar.gz and count how many files are inside it."""
     print(f"Processing {tar_path}...")
     try:
         with tarfile.open(tar_path, "r:gz") as tf:
@@ -21,7 +20,7 @@ if __name__ == "__main__":
     tar_files = sorted(glob.glob("*.tar.gz"))
     print(f"Found {len(tar_files)} tar.gz archives\n")
 
-    with Pool(63) as pool:
+    with Pool() as pool:
         results = pool.map(count_files_in_tar, tar_files)
 
     total = 0

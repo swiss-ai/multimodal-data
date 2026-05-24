@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
+import os
 from pathlib import Path
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-DATASET_DIR = Path("/path/to/data/vision-datasets/raw/sft/hf___allenai___Molmo2-MultiImageQA/data")
-OUTPUT_DIR = Path("/tmp/metadata/Molmo2-MultiImageQA/parquet")
+DATASET_DIR = Path(os.environ.get("MOLMO2_DATASET_DIR", ""))
+OUTPUT_DIR = Path(os.environ.get("METADATA_OUTPUT_DIR", "/tmp/metadata/Molmo2-MultiImageQA/parquet"))
 OUTPUT_PATH = OUTPUT_DIR / "metadata.parquet"
 BATCH_SIZE = 4096
 OUTPUT_SCHEMA = pa.schema([("url", pa.string())])

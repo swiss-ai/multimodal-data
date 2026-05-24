@@ -133,7 +133,7 @@ class HoloAssistAdapter(BaseDataset):
 
 
 if __name__ == "__main__":
-    debug_path = "/path/to/debug/holoassist"
+    debug_path = os.getenv("HOLOASSIST_DEBUG_DIR", "/tmp/holoassist")
     logger = logging.getLogger("main")
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
@@ -141,8 +141,7 @@ if __name__ == "__main__":
     os.makedirs(debug_path, exist_ok=True)
 
     a = HoloAssistAdapter(
-        # data_dir="/path/to/vision-datasets/holoassist/video_pitch_shifted.tar",
-        data_dir="/path/to/vision-datasets/holoassist/video_compress.tar",
+        data_dir=os.getenv("HOLOASSIST_DATA_DIR", "/path/to/data.tar"),
         min_laplacian_threshold=10,
         avg_laplacian_threshold=1000,
         imagehash_tolerance=8,
@@ -151,8 +150,5 @@ if __name__ == "__main__":
     total = 0
     for bi, batch in enumerate(a.stream(logger=logger, skip=0, batch_size=100)):
         total += len(batch)
-        # for b in batch:
-        #     b.image.save(f"{debug_path}/sample_{b.meta.sample_id:06d}.jpg")
         print(f"last sample_id in batch {bi}: {batch[-1].meta.sample_id}")
-        # break
     print("Total samples:", total)

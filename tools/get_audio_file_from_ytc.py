@@ -8,7 +8,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from datasets import load_dataset
 
 OUT_ROOT = "./ytc"
-# langs left to download LANGS = ["es", "nl", "en", "fr", "it", "pt"]
+# Languages for download: LANGS = ["es", "nl", "en", "fr", "it", "pt"]
 LANGS = []
 
 MAX_WORKERS = 6
@@ -52,7 +52,6 @@ def process_one_video(args):
 
     if not os.path.exists(temp):
         print("Download failed:", ytid)
-        # sleep
         time.sleep(random.uniform(1, 2))
         return
 
@@ -124,5 +123,4 @@ def main():
 
 
 if __name__ == "__main__":
-    # main()
-    process_one_video((".", "FjJmfa5ZUoQ", [("test.wav", 0, 1000)]))
+    main()

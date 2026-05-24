@@ -3,14 +3,15 @@
 
 import io
 import json
+import os
 import re
 import tarfile
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-TAR_PATH = Path("/path/to/data/vision-datasets/raw/stage2/hf___Salesforce___blip3-grounding-50m___recap/0000_00.tar")
-OUTPUT_DIR = Path("/path/to/data/vision-datasets/raw/stage2/hf___Salesforce___blip3-grounding-50m___recap/sample")
+TAR_PATH = Path(os.environ.get("RECAPTION_SAMPLE_TAR", ""))
+OUTPUT_DIR = Path(os.environ.get("RECAPTION_SAMPLE_OUTPUT_DIR", ""))
 N_SAMPLES = 50
 
 COLORS = [
@@ -58,10 +59,10 @@ def draw_and_save(img: Image.Image, caption: str, out_stem: Path):
     w, h = img.size
     draw = ImageDraw.Draw(img)
     try:
-        font = ImageFont.truetype(
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-            size=max(12, h // 60),
-        )
+        font = ImageFont.load_default()
+        font_path = os.environ.get("RECAPTION_FONT_PATH")
+        if font_path:
+            font = ImageFont.truetype(font_path, size=max(12, h // 60))
     except Exception:
         font = ImageFont.load_default()
 

@@ -4,6 +4,7 @@
 import argparse
 import io
 import json
+import os
 import re
 import sys
 import tarfile
@@ -12,8 +13,8 @@ from pathlib import Path
 from PIL import Image
 from vllm import LLM, SamplingParams
 
-MODEL_PATH = "/tmp/models/models--Qwen--Qwen3.6-27B/snapshots/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9"
-WORK_DIR = Path("/tmp/recaption_blip3")
+MODEL_PATH = os.environ.get("RECAPTION_MODEL_PATH", "")
+WORK_DIR = Path(os.environ.get("RECAPTION_WORK_DIR", "/tmp/recaption_blip3"))
 OUTPUT_DIR = WORK_DIR / "output"
 BATCH_SIZE = 32
 MAX_LLM_EDGE = 512

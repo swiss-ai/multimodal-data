@@ -16,7 +16,7 @@ stats = {
 }
 
 
-path = "/tmp/ego/sample_A"
+path = os.environ.get("SAMPLE_DIR", "/tmp/ego/sample_A")
 for subdir in os.listdir(path):
     subdir_path = os.path.join(path, subdir)
     metadata_path = os.path.join(subdir_path, "metadata.json")

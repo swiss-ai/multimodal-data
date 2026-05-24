@@ -67,7 +67,6 @@ def process_shard(shard_path):
 
 
 def main():
-    # shutil.rmtree(OUTPUT_DIR, ignore_errors=True)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     all_shards = sorted(glob.glob(INPUT_SHARDS))

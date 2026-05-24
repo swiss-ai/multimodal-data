@@ -26,16 +26,16 @@ from pathlib import Path
 import pyarrow.ipc as ipc
 from openai import OpenAI
 
-# ── Paths ──────────────────────────────────────────────────────────────────────
+# Paths
 
-HQ50K_ROOT = Path("/path/to/data/vision-datasets/raw/cooldown/hf___YangQiee___HQ-50K/downloaded")
-DOCCI_ARROW = Path("/path/to/data/vision-datasets/raw/stage2/hf___google___docci/docci-train.arrow")
+HQ50K_ROOT = Path(os.environ.get("HQ50K_ROOT", ""))
+DOCCI_ARROW = Path(os.environ.get("DOCCI_ARROW_PATH", ""))
 DOCCI_IMAGES_DIR = DOCCI_ARROW.parent / "images"
 
 _default_output_dir = Path(__file__).parent / "artifacts" / "candidates"
 OUTPUT_DIR = Path(os.environ.get("OUTPUT_DIR", str(_default_output_dir)))
 
-# ── Config ─────────────────────────────────────────────────────────────────────
+# Config
 
 API_BASE_URL = os.environ.get("API_BASE_URL", "http://localhost:8080/v1")
 MODEL_NAME = os.environ.get("MODEL_NAME", "Qwen/Qwen3.5-397B-A17B-KPhL")
@@ -60,7 +60,7 @@ PROMPT = (
 FEWSHOT_PROMPT = PROMPT
 CAPTION_PROMPT = PROMPT
 
-# ── Helpers ────────────────────────────────────────────────────────────────────
+# Helpers
 
 
 def to_data_url(image_bytes: bytes, media_type: str = "image/jpeg") -> str:
@@ -176,7 +176,7 @@ def load_completed_ids(output_path: Path) -> set[str]:
     return completed
 
 
-# ── Main ────────────────────────────────────────────────────────────────────────
+# Main
 
 
 def main() -> None:

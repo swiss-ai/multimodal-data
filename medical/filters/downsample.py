@@ -31,12 +31,10 @@ class ImageDownsampleFilter(BaseFilter):
                 results.append(sample)
                 continue
 
-            # get scale factor
             scale = (self.max_pixels / current_pixels) ** 0.5
             new_width = int(width * scale)
             new_height = int(height * scale)
 
-            # resize
             sample.image = sample.image.resize((new_width, new_height), self.resample)
             results.append(sample)
 

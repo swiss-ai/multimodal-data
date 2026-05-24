@@ -14,8 +14,8 @@ import tarfile
 import time
 from pathlib import Path
 
-SRC = Path("/path/to/data/vision-datasets/raw/stage2/hf___Salesforce___blip3-grounding-50m")
-DST = Path("/path/to/data/vision-datasets/raw/stage2/hf___Salesforce___blip3-grounding-50m___cleaned")
+SRC = Path(os.getenv("CLEAN_SENTENCES_SRC", "/path/to/data"))
+DST = Path(os.getenv("CLEAN_SENTENCES_DST", "/path/to/data_cleaned"))
 
 BAD_WORDS = [
     "sentence",

@@ -18,8 +18,8 @@ import av
 import cv2
 import numpy as np
 
-DATA_DIR = "/path/to/data/vision-datasets/egoexo4D"
-OUT_DIR = "/tmp/ego/sample_mid2"
+DATA_DIR = os.environ.get("EGOEXO4D_DIR", "")
+OUT_DIR = os.environ.get("OUT_DIR", "/tmp/ego/sample_mid2")
 TAKES_PATH = os.path.join(DATA_DIR, "takes.json")
 KEYSTEP_PATHS = [
     os.path.join(DATA_DIR, "annotations/keystep_train.json"),
@@ -103,7 +103,6 @@ def process_single_take(arg):
     video_path = os.path.join(root_dir, rel_path)
 
     container = av.open(video_path)
-    # container.streams.video[0].thread_type = "AUTO"
 
     stream = container.streams.video[0]
     time_base = stream.time_base
@@ -137,15 +136,12 @@ def process_single_take(arg):
             if score < LAPLACIAN_THRESHOLD:
                 continue
 
-            # 2. duplicate check
-            # img_pil = Image.fromarray(gray)
-            # cur_hash = imagehash.phash(img_pil)
+            # duplicate check
             dist_to_mid = abs(current_index - target_frame_index)
             candidates.append(
                 {
                     "dist": dist_to_mid,
                     "img": img,
-                    # "hash": cur_hash,
                     "idx": current_index,
                 }
             )
@@ -178,7 +174,6 @@ def process_single_take(arg):
         rel_path = take_data["frame_aligned_videos"]["aria01"][mod]["relative_path"]
         video_path = os.path.join(root_dir, rel_path)
         container = av.open(video_path)
-        # container.streams.video[0].thread_type = "AUTO"
         stream = container.streams.video[0]
         time_base = stream.time_base
         for desc in descriptions.values():

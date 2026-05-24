@@ -701,8 +701,9 @@ def export_hf_dataset(loader: BaseLoader, *, stage: str = "candidates") -> Path:
 
 
 def set_cpu_affinity(worker_index: int) -> None:
-    start = worker_index * 72
-    stop = start + 72
+    cores_per_worker = int(os.environ.get("SFT_RECAPTION_CORES_PER_WORKER", 72))
+    start = worker_index * cores_per_worker
+    stop = start + cores_per_worker
     try:
         os.sched_setaffinity(0, range(start, stop))
     except AttributeError:

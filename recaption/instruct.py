@@ -10,16 +10,14 @@ import os
 from loaders.wds import WdsLoader
 from vllm import LLM, SamplingParams
 
-# ── Config ────────────────────────────────────────────────────────────────────
-
-INPUT_DIR = "/tmp/shared/EgoPAT3Dv2/output_wds"
-OUTPUT_DIR = "/tmp/toolbox/caption_gen/logs/egopat"
-PROMPT_PATH = "/tmp/toolbox/caption_gen/prompts/ego_3.txt"
+INPUT_DIR = os.environ.get("WDS_INPUT_DIR", "/tmp/shared/EgoPAT3Dv2/output_wds")
+OUTPUT_DIR = os.environ.get("WDS_OUTPUT_DIR", "/tmp/toolbox/caption_gen/logs/egopat")
+PROMPT_PATH = os.environ.get("PROMPT_PATH", "/tmp/toolbox/caption_gen/prompts/ego_3.txt")
 
 IMAGE_KEYS = ("img0.jpg", "img1.jpg", "img2.jpg")
 
 MODEL = "moonshotai/Kimi-VL-A3B-Instruct"
-MODEL_DIR = "/tmp/models"
+MODEL_DIR = os.environ.get("MODEL_DIR", "/tmp/models")
 
 SAMPLING = SamplingParams(
     temperature=0.1,
@@ -31,8 +29,6 @@ TENSOR_PARALLEL_SIZE = 4
 GPU_MEMORY_UTIL = 0.95
 MAX_MODEL_LEN = 16384
 BATCH_SIZE = 128
-
-# ─────────────────────────────────────────────────────────────────────────────
 
 
 def build_messages(b64_images: list[str], prompt: str) -> list[dict]:

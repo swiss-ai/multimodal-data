@@ -4,7 +4,7 @@ import os
 
 import webdataset as wds
 
-dir = "/path/to/data/vision-datasets/swisstopo"
+dir = os.environ.get("SWISSTOPO_SORTED_DIR", "")
 output_dir = os.path.join(dir, "paired")
 input_dir = os.path.join(dir, "sorted")
 tar_files = sorted([f for f in os.listdir(input_dir) if f.endswith(".tar")])
@@ -26,8 +26,6 @@ for sat_item, map_item in itertools.batched(ds, 2):
             "__key__": pair_id,
             "map.png": map_img,
             "sat.png": sat_img,
-            # "map.json": map_item["json"],
-            # "sat.json": sat_item["json"],
         }
     )
 

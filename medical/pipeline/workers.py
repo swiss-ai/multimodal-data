@@ -2,7 +2,6 @@ import logging
 import multiprocessing as mp
 from collections.abc import Callable, Sequence
 
-# import ray.util.multiprocessing as mp
 from pipeline.base import BaseFilter
 from pipeline.schema import Sample
 
@@ -22,7 +21,6 @@ def _process_batch(batch_data: list[Sample]) -> list[Sample]:
     global _worker_filters
     assert _worker_filters is not None, "Filters not initialized"
 
-    # samples = [Sample.deserialize(data) for data in batch_data]  # ray version
     current = list(batch_data)
 
     for f in _worker_filters:
@@ -56,7 +54,6 @@ class WorkerPool:
         if not samples:
             return []
 
-        # serialized = [s.serialize() for s in samples]
         serialized = samples
 
         sub_batch_size = max(1, len(serialized) // self.num_workers)

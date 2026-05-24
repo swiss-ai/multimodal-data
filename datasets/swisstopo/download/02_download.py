@@ -20,7 +20,7 @@ if __name__ == "__main__":
         output_format="webdataset",
         input_format="csv",
         url_col="url",
-        save_additional_columns=["sample_id", "bbox"],
+        save_additional_columns=["id", "bbox"],
         number_sample_per_shard=10000,
         timeout=120,
         retries=0,

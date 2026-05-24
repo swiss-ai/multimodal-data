@@ -177,7 +177,7 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    BASE = "/path/to/vision-datasets/medical/raw/meditron"
+    BASE = os.getenv("MEDITRON_BASE_DIR", "/path/to/data")
     datasets = [
         {"dataset_id": "busi", "data_dir": f"{BASE}/BUSI"},
         {"dataset_id": "iu_xray", "data_dir": f"{BASE}/iu_xray"},

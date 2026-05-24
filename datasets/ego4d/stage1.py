@@ -12,8 +12,8 @@ import imagehash
 import numpy as np
 from PIL import Image
 
-DATA_DIR = "/path/to/data/vision-datasets/egoexo4D"
-OUT_DIR = "/tmp/ego/sample_A2"
+DATA_DIR = os.environ.get("EGOEXO4D_DIR", "")
+OUT_DIR = os.environ.get("OUT_DIR", "/tmp/ego/sample_A2")
 TAKES_PATH = os.path.join(DATA_DIR, "takes.json")
 KEYSTEP_PATHS = [
     os.path.join(DATA_DIR, "annotations/keystep_train.json"),
@@ -60,8 +60,6 @@ with open(TAKES_PATH, "r") as f:
     takes = json.load(f)
 
 for ti, take in enumerate(takes):
-    # if ti > 24:
-    #     break
 
     root_dir = os.path.join(DATA_DIR, take["root_dir"])
     if (
@@ -94,8 +92,6 @@ for ti, take in enumerate(takes):
     metadata = []
 
     for fi, frame in enumerate(container.decode(video=0)):
-        # if fi > 100:
-        #     break
 
         filename = f"frame_{fi:06d}.jpg"
         img = frame.to_ndarray(format="bgr24")

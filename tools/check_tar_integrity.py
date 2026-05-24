@@ -5,7 +5,7 @@ import os
 import tarfile
 import time
 
-DEFAULT_ROOT = "/path/to/data/vision-datasets/hf___Salesforce___blip3-grounding-50m___downloaded"
+DEFAULT_ROOT = os.environ.get("TAR_ROOT", "/path/to/data/vision-datasets/hf___Salesforce___blip3-grounding-50m___downloaded")
 DEFAULT_PROGRESS_SECS = 60
 READ_CHUNK_SIZE = 1024 * 1024
 

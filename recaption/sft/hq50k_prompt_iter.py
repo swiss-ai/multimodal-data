@@ -30,7 +30,7 @@ os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 DATASET_ROOT = Path("/path/to/data/vision-datasets/raw/cooldown/hf___YangQiee___HQ-50K/downloaded")
 OUTPUT_ROOT = _ROOT / "artifacts" / "hq50k_prompt_iter"
-MODEL_PATH = "/tmp/models/models--google--gemma-4-31B-it/snapshots/439edf5652646a0d1bd8b46bfdc1d3645761a445"
+MODEL_PATH = os.environ.get("RECAPTION_MODEL_PATH", "")
 # Fixed image positions (shard_index, member_index_within_shard)
 # Chosen to span shards and different positions for visual diversity
 FIXED_IMAGE_POSITIONS = [
@@ -328,7 +328,6 @@ def main() -> None:
             tensor_parallel_size=1,
             max_num_seqs=4,
             enforce_eager=False,
-            download_dir=Path("/tmp/models"),
             chat_template_kwargs={"enable_thinking": True},
         )
     )

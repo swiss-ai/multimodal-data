@@ -24,9 +24,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 from tqdm import tqdm
 
-# -----------------------------------------------------------------------------
-# Config
-# -----------------------------------------------------------------------------
+
 SRC_DIR = "/path/to/data/medical-datasets/raw/dailymed_spl/parquet"
 DST_DIR = "/path/to/data/medical-datasets/raw/dailymed_spl/parquet_md"
 NUM_WORKERS = 256
@@ -38,9 +36,6 @@ CHUNK_ROWS = 4096  # rows per pool dispatch chunk
 NS = "{urn:hl7-org:v3}"
 
 
-# -----------------------------------------------------------------------------
-# XML -> Markdown
-# -----------------------------------------------------------------------------
 def _local(tag: str) -> str:
     return tag.split("}", 1)[1] if "}" in tag else tag
 
@@ -251,7 +246,6 @@ def _render_section(sec, depth: int = 2) -> str:
 
 
 def _render_header(root) -> str:
-    """Frontmatter-ish header: title, manufacturer, generic, ingredients, form."""
     lines = []
     title_el = root.find(f"{NS}title")
     title = _collapse_ws(_inline(title_el)) if title_el is not None else ""
@@ -359,9 +353,6 @@ def xml_to_markdown(xml_text: str) -> str:
     return md
 
 
-# -----------------------------------------------------------------------------
-# Driver
-# -----------------------------------------------------------------------------
 def _convert_chunk(xmls):
     return [xml_to_markdown(x) for x in xmls]
 

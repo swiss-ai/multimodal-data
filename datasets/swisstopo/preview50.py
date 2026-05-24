@@ -8,6 +8,7 @@ Filenames embed layer + scale + frac so we can spot patterns.
 """
 
 import csv
+import os
 import random
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -15,8 +16,8 @@ from pathlib import Path
 import build_urls as bu
 import requests
 
-OUT = Path("/tmp/toolbox/swisstopo_maps/data/preview50")
-TILES = "/tmp/toolbox/swisstopo_maps/data/filtered_test.csv"
+OUT = Path(os.environ.get("PREVIEW_OUT_DIR", "/tmp/toolbox/swisstopo_maps/data/preview50"))
+TILES = os.environ.get("TILES_CSV", "/tmp/toolbox/swisstopo_maps/data/filtered_test.csv")
 N = 50
 
 

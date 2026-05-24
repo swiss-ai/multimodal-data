@@ -14,16 +14,14 @@ from PIL import Image
 from transformers import AutoProcessor
 from vllm import LLM, SamplingParams
 
-# ── Config ────────────────────────────────────────────────────────────────────
-
-INPUT_DIR = "/tmp/shared/EgoPAT3Dv2/output_wds"
-OUTPUT_DIR = "/tmp/toolbox/caption_gen/logs/egopat"
-PROMPT_PATH = "/tmp/toolbox/caption_gen/prompts/ego_3.txt"
+INPUT_DIR = os.environ.get("WDS_INPUT_DIR", "/tmp/shared/EgoPAT3Dv2/output_wds")
+OUTPUT_DIR = os.environ.get("WDS_OUTPUT_DIR", "/tmp/toolbox/caption_gen/logs/egopat")
+PROMPT_PATH = os.environ.get("PROMPT_PATH", "/tmp/toolbox/caption_gen/prompts/ego_3.txt")
 
 IMAGE_KEYS = ("img0.jpg", "img1.jpg", "img2.jpg")
 
 MODEL = "moonshotai/Kimi-VL-A3B-Thinking-2506"
-MODEL_DIR = "/tmp/models"
+MODEL_DIR = os.environ.get("MODEL_DIR", "/tmp/models")
 
 SAMPLING = SamplingParams(
     temperature=0.8,
@@ -38,8 +36,6 @@ GPU_MEMORY_UTIL = 0.95
 
 BOT = "◁think▷"
 EOT = "◁/think▷"
-
-# ─────────────────────────────────────────────────────────────────────────────
 
 
 def extract_thinking_and_summary(text: str) -> tuple[str, str]:

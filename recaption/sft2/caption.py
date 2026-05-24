@@ -25,12 +25,12 @@ from pathlib import Path
 
 from vllm import LLM, SamplingParams
 
-DATA_ROOT = Path("/tmp/data/vision-datasets/processed/hf___mlfoundations___MINT-1T-ArXiv___processed")
+DATA_ROOT = Path(os.environ.get("CAPTION_DATA_ROOT", ""))
 SAMPLE_DIR = DATA_ROOT / "sample"
-OUTPUT_ROOT = Path("/tmp/toolbox/story_caption/outputs")
+OUTPUT_ROOT = Path(os.environ.get("CAPTION_OUTPUT_ROOT", ""))
 
-GEMMA_PATH = "/tmp/models/models--google--gemma-4-31B-it/snapshots/439edf5652646a0d1bd8b46bfdc1d3645761a445"
-QWEN_PATH = "/tmp/models/models--Qwen--Qwen3.5-27B/snapshots/fc05daec18b0a78c049392ed2e771dde82bdf654"
+GEMMA_PATH = os.environ.get("CAPTION_GEMMA_MODEL_PATH", "")
+QWEN_PATH = os.environ.get("CAPTION_QWEN_MODEL_PATH", "")
 
 PERSONAS = [
     "a curious undergraduate student encountering this figure for the first time",

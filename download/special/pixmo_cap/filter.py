@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 from argparse import ArgumentParser
 from functools import lru_cache
 from pathlib import Path
@@ -10,7 +11,7 @@ import pyarrow.parquet as pq
 
 DEFAULT_INPUT_PATH = Path("data.parquet")
 DEFAULT_OUTPUT_PATH = Path("filtered.parquet")
-DEFAULT_ROBOTS_PARQUET = Path("/path/to/data/users/vsabolce/apertus_v1/robotstxt/fineweb_robots_compressed.parquet")
+DEFAULT_ROBOTS_PARQUET = Path(os.environ.get("ROBOTS_PARQUET_PATH", "/path/to/robotstxt/fineweb_robots_compressed.parquet"))
 BATCH_SIZE = 10_000
 
 

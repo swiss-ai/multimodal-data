@@ -45,8 +45,7 @@ def process_shard_subset(shard_list, worker_id):
     record_count = 0
     records = []
 
-    for key, img, meta in ds:
-        _ = key
+    for _, img, meta in ds:
         h = compute_phash(img)
         records.append({"key": meta["url"], "orig_key": key, "phash": h})
 

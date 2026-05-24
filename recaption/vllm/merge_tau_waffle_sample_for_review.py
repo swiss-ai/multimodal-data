@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 from pathlib import Path
 
@@ -12,7 +13,7 @@ import webdataset as wds
 WORKDIR = Path(__file__).resolve().parent.parent
 _LOCAL_ROOT = WORKDIR / "outputs" / "tau_waffle_architecture_gemma4_sample16"
 SAMPLE_ROOT = _LOCAL_ROOT / "sample_webdataset"
-CAPSTOR_ROOT = Path("/tmp/test")
+CAPSTOR_ROOT = Path(os.environ.get("CAPTIONS_ROOT", "/tmp/test"))
 CAPTIONS_ROOT = CAPSTOR_ROOT / "captions"
 OUTPUT_ROOT = CAPSTOR_ROOT / "inspection"
 IMAGE_KEYS = ("jpg", "jpeg", "png", "webp")

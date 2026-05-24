@@ -5,12 +5,13 @@ from multiprocessing import get_context
 from pathlib import Path
 from urllib.parse import urlsplit
 
+import os
 import pyarrow as pa
 import pyarrow.parquet as pq
 
 INPUT_DIR = Path("metadata/parquet")
 OUTPUT_DIR = Path("metadata/filtered")
-ROBOTS_PARQUET = Path("/path/to/data/users/vsabolce/apertus_v1/robotstxt/fineweb_robots_compressed.parquet")
+ROBOTS_PARQUET = Path(os.environ.get("ROBOTS_PARQUET", "fineweb_robots_compressed.parquet"))
 BLACKLIST_HOSTS = Path("blacklist/hosts")
 BLACKLIST_URLS = Path("blacklist/urls_full.txt")
 BATCH_SIZE = 100_000

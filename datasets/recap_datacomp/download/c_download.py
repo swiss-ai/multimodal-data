@@ -9,9 +9,9 @@ import img2dataset
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-ROOT_DIR = Path("/tmp/metadata/Recap-DataComp-1B")
+ROOT_DIR = Path(os.environ.get("RECAP_ROOT", "/tmp/metadata/Recap-DataComp-1B"))
 INPUT_DIR = ROOT_DIR / "filtered"
-OUTPUT_DIR = Path("/path/to/data/vision-datasets/processed/hf___UCSC-VLAA___Recap-DataComp-1B___downloaded_p2")
+OUTPUT_DIR = Path(os.environ.get("RECAP_DOWNLOAD_DIR", ""))
 CHUNK_SIZE = 320_000
 PROCESSES_COUNT = 32
 THREAD_COUNT = 32

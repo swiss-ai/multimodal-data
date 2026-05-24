@@ -28,9 +28,7 @@ print("Configuration:")
 for arg_name, arg_value in vars(args).items():
     print(f"{arg_name}: {arg_value}")
 
-# ==========================================
-# CONFIGURATION
-# ==========================================
+# Configuration
 
 INPUT_DIR = "/path/to/data/vision-datasets/hf_hub_cache/datasets--imageomics--TreeOfLife-10M/snapshots/91debffb7146c32c89d76feb1eb575b555e2ecc7/dataset"
 ROOT_OUTPUT_DIR = "/path/to/data/vision-datasets/imageomics"
@@ -71,9 +69,7 @@ not_allowed_license = [
     "No known copyright restrictions",
 ]
 
-# ==========================================
-# STAGE 1: HASHING
-# ==========================================
+# Stage 1: Hashing
 
 
 def get_tar_paths():
@@ -132,9 +128,7 @@ def process_shard_hashing(paths, wi):
     return True
 
 
-# ==========================================
-# STAGE 2: DEDUPLICATION
-# ==========================================
+# Stage 2: Deduplication
 
 
 def run_stage_2_deduplication():
@@ -195,9 +189,7 @@ def run_stage_2_deduplication():
     return True
 
 
-# ==========================================
-# STAGE 3: REWRITING
-# ==========================================
+# Stage 3: Rewriting
 
 
 def load_reject_list(path):
@@ -249,9 +241,7 @@ def process_tar_file_rewrite(tar_path):
     return f"Worker {worker_id}: Kept {kept}, Dropped {dropped} in {tar_filename}"
 
 
-# ==========================================
-# MAIN
-# ==========================================
+# Main
 
 
 def init_worker_hashing(license_dict_path):

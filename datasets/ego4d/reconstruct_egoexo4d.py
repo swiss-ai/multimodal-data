@@ -13,7 +13,7 @@ if __name__ == "__main__":
     map_x = np.load("aria_map_x.npy")
     map_y = np.load("aria_map_y.npy")
 
-    root_dir = "/path/to/data/vision-datasets/egoexo4D/takes"
+    root_dir = os.environ.get("EGOEXO4D_TAKES_DIR", "")
     paths = [os.path.join(root_dir, take) for take in os.listdir(root_dir)]
     paths.sort()
 
@@ -26,10 +26,6 @@ if __name__ == "__main__":
         os.makedirs(f"sample/{size}", exist_ok=True)
 
     for i in range(0, len(paths), 250):
-        if counter in [7, 10, 12, 13, 14, 15, 16, 17]:
-            counter += 1
-            continue
-
         take = paths[i]
         av_path = os.path.join(take, "frame_aligned_videos", "aria01_214-1.mp4")
         if not os.path.exists(av_path):
@@ -39,7 +35,7 @@ if __name__ == "__main__":
             stream = container.streams.video[0]
             stream.thread_type = "AUTO"
 
-            seek_point = int(stream.duration * 0.5)  # type:ignore
+            seek_point = int(stream.duration * 0.5)
             container.seek(seek_point, stream=stream)
 
             for i, frame in enumerate(container.decode(video=0), start=0):

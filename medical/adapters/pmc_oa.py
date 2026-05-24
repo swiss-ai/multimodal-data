@@ -133,7 +133,7 @@ if __name__ == "__main__":
     logger.info("Initializing...")
 
     a = PMCOAAdapter(
-        data_dir="/path/to/medical/raw/pmc_oa",
+        data_dir=os.getenv("PMC_OA_DATA_DIR", "/path/to/data"),
         decode_workers=64,
     )
 

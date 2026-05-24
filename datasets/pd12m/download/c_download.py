@@ -8,9 +8,9 @@ import img2dataset
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-ROOT_DIR = Path("/tmp/metadata/PD12M")
+ROOT_DIR = Path(os.environ.get("PD12M_ROOT", "/tmp/metadata/PD12M"))
 INPUT_DIR = ROOT_DIR / "filtered"
-OUTPUT_DIR = Path("/path/to/data/vision-datasets/hf___Spawning___PD12M___downloaded")
+OUTPUT_DIR = Path(os.environ.get("PD12M_DOWNLOAD_DIR", ""))
 CHUNK_SIZE = 320_000
 PROCESSES_COUNT = 16
 THREAD_COUNT = 8

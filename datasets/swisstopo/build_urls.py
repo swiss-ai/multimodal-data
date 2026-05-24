@@ -20,11 +20,12 @@ Cadastral is also gated on building density: tiles with
 
 import argparse
 import csv
+import os
 import random
 from pathlib import Path
 from urllib.parse import urlencode
 
-WMS = "https://wms.geo.admin.ch/"
+WMS = os.environ.get("WMS_URL", "https://wms.geo.admin.ch/")
 
 LAYER_WEIGHTS = {
     "ch.swisstopo.pixelkarte-farbe": 0.675,

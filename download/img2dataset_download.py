@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
 import shutil
 from pathlib import Path
 
@@ -8,9 +9,9 @@ import img2dataset
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-ROOT_DIR = Path("/tmp/metadata/blip3_grounding_50m")
+ROOT_DIR = Path(os.environ.get("METADATA_DIR", "metadata/blip3_grounding_50m"))
 INPUT_DIR = ROOT_DIR / "filtered"
-OUTPUT_DIR = Path("/path/to/data/vision-datasets/hf___Salesforce___blip3-grounding-50m___downloaded")
+OUTPUT_DIR = Path(os.environ.get("OUTPUT_DIR", "downloaded"))
 CHUNK_SIZE = 320_000
 NUMBER_SAMPLE_PER_SHARD = 10_000
 INPUT_SCHEMA = pa.schema([("url", pa.string()), ("caption", pa.string())])

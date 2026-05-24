@@ -1,13 +1,4 @@
-# SwissAI/Apertus — multimodal-data repository
-# Comprehensive ignore patterns for a clean public codebase
-
-# ---------------------------------------------------------------------------
-# Project-specific (SwissAI internal)
-# ---------------------------------------------------------------------------
-.claude
-CLAUDE.md
-core_clariden*
-core_nid*
+# multimodal-data repository
 
 # ---------------------------------------------------------------------------
 # Python cache / compiled
@@ -208,5 +199,5 @@ node_modules/
 ._*
 .Spotlight-V100
 .Trashes
- ehthumbs.db
- Desktop.ini
+ehthumbs.db
+Desktop.ini

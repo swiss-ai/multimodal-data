@@ -56,10 +56,8 @@ class ImageSample(Sample):
     def serialize(self) -> bytes:
         buf = io.BytesIO()
 
-        # serialize image bytes to buffer
         fmt = self.image.format or "PNG"
         if fmt.upper() in ("JPEG", "JPG") and self.image.mode == "RGBA":
-            # jpeg does not support alpha channel
             self.image.convert("RGB").save(buf, format=fmt)
         else:
             self.image.save(buf, format=fmt)
@@ -86,10 +84,8 @@ class ImageTextSample(Sample):
     def serialize(self) -> bytes:
         buf = io.BytesIO()
 
-        # serialize image bytes to buffer
         fmt = self.image.format or "PNG"
         if fmt.upper() in ("JPEG", "JPG") and self.image.mode == "RGBA":
-            # jpeg does not support alpha channel
             self.image.convert("RGB").save(buf, format=fmt)
         else:
             self.image.save(buf, format=fmt)

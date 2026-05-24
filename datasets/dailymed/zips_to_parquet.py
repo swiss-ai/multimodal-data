@@ -20,9 +20,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 from tqdm import tqdm
 
-# -----------------------------------------------------------------------------
-# Config
-# -----------------------------------------------------------------------------
+
 SRC_DIR = "/path/to/data/medical-datasets/raw/dailymed_spl/raw_zips2"
 DST_DIR = "/path/to/data/medical-datasets/raw/dailymed_spl/parquet"
 NUM_WORKERS = 256
@@ -31,9 +29,6 @@ ROW_GROUP_ROWS = 256
 COMPRESSION = "zstd"
 COMPRESSION_LEVEL = 3
 
-# -----------------------------------------------------------------------------
-# Schema
-# -----------------------------------------------------------------------------
 IMAGE_STRUCT = pa.struct(
     [
         pa.field("name", pa.string()),
@@ -51,9 +46,6 @@ SCHEMA = pa.schema(
 IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tif", ".tiff", ".svg")
 
 
-# -----------------------------------------------------------------------------
-# Worker
-# -----------------------------------------------------------------------------
 def category_from_outer_name(outer_basename: str) -> str:
     # dm_spl_release_human_otc_part3.zip -> human_otc_part3
     name = outer_basename
@@ -112,9 +104,6 @@ def process_inner(task):
         return {"_error": f"{row_id}: {type(e).__name__}: {e}"}
 
 
-# -----------------------------------------------------------------------------
-# Writer
-# -----------------------------------------------------------------------------
 class ShardWriter:
     def __init__(self, dst_dir: str, target_bytes: int):
         self.dst_dir = dst_dir
@@ -156,9 +145,6 @@ class ShardWriter:
             self.writer = None
 
 
-# -----------------------------------------------------------------------------
-# Main
-# -----------------------------------------------------------------------------
 def main():
     outer_zips = sorted(os.path.join(SRC_DIR, n) for n in os.listdir(SRC_DIR) if n.lower().endswith(".zip"))
     print(f"[enum] {len(outer_zips)} outer zips in {SRC_DIR}", flush=True)

@@ -38,9 +38,6 @@ import os
 import sys
 from pathlib import Path
 
-# -----------------------------------------------------------------------
-# Config (env vars)
-# -----------------------------------------------------------------------
 TASK_ID = int(os.environ.get("TASK_ID", "0"))
 TASK_COUNT = int(os.environ.get("TASK_COUNT", "1"))
 TEST_MODE = os.environ.get("TEST_MODE", "") == "1"
@@ -80,9 +77,6 @@ PINNED_IDS = [
 TEST_PINNED_IMAGES = 5
 
 
-# -----------------------------------------------------------------------
-# Worker isolation
-# -----------------------------------------------------------------------
 def _configure_worker_dirs() -> None:
     root = Path(f"/tmp/{os.environ.get('USER', 'user')}/spl-recap-{TASK_ID}")
     for key, sub in {
@@ -108,9 +102,6 @@ def _configure_worker_dirs() -> None:
 CONTEXT_WINDOW_LINES = 40
 
 
-# -----------------------------------------------------------------------
-# Context extraction
-# -----------------------------------------------------------------------
 def extract_image_context(markdown: str, image_name: str) -> tuple[str, str]:
     """
     Returns (header, section) where:
@@ -157,9 +148,6 @@ def extract_image_context(markdown: str, image_name: str) -> tuple[str, str]:
     return header, section
 
 
-# -----------------------------------------------------------------------
-# Generation tasks: one per image
-# -----------------------------------------------------------------------
 def doc_to_tasks(row: dict) -> list[dict]:
     images = row.get("images") or []
     markdown = row.get("markdown") or ""
@@ -183,9 +171,6 @@ def doc_to_tasks(row: dict) -> list[dict]:
     return tasks
 
 
-# -----------------------------------------------------------------------
-# Prompt
-# -----------------------------------------------------------------------
 SYSTEM_PROMPT = """\
 You are a medical writer producing interleaved pharmaceutical documents.
 
@@ -232,9 +217,6 @@ def build_messages(task: dict) -> list[dict]:
     ]
 
 
-# -----------------------------------------------------------------------
-# Data loading
-# -----------------------------------------------------------------------
 def load_all_rows() -> dict[str, dict]:
     assert Path(INPUT_JSONL).exists(), f"Input JSONL not found: {INPUT_JSONL}\nRun dump_input.py first."
     by_id: dict[str, dict] = {}
@@ -289,9 +271,6 @@ def load_assigned_tasks() -> list[dict]:
     return tasks
 
 
-# -----------------------------------------------------------------------
-# Output helpers
-# -----------------------------------------------------------------------
 def load_done_ids(out_path: Path) -> set[str]:
     if not out_path.exists():
         return set()
@@ -307,9 +286,6 @@ def load_done_ids(out_path: Path) -> set[str]:
     return done
 
 
-# -----------------------------------------------------------------------
-# Main
-# -----------------------------------------------------------------------
 def main() -> None:
     _configure_worker_dirs()
 

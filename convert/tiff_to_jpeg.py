@@ -1,14 +1,13 @@
 import io
+import os
 import zipfile
 from pathlib import Path
 
 import webdataset as wds
 from PIL import Image
 
-data_dir = Path(
-    "/path/to/data/vision-datasets/hf_hub_cache/datasets--IGNF--FLAIR-HUB/snapshots/4cf55f57fd468fbd802681687c529a98c1274ce1/data"
-)
-output_dir = Path("/tmp/shared/IGNF--FLAIR-HUB-RGB")
+data_dir = Path(os.getenv("TIFF_TO_JPEG_DATA_DIR", "/path/to/data"))
+output_dir = Path(os.getenv("TIFF_TO_JPEG_OUTPUT_DIR", "/path/to/output"))
 
 
 def tiff_to_jpeg(tiff_bytes: io.BytesIO) -> bytes:

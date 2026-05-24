@@ -5,19 +5,18 @@ import zipfile
 
 import webdataset as wds
 
-SNAPSHOT = "/path/to/data/vision-datasets/hf_hub_cache/datasets--MBZUAI--GeoChat_Instruct/snapshots/8eb13307eabc7fa9c1f8b0e61e372a327ccd68b1"
+SNAPSHOT = os.getenv("GEOCHAT_SNAPSHOT", "/path/to/data")
 JSON_PATH = os.path.join(SNAPSHOT, "GeoChat_Instruct.json")
 ZIP_PARTS = [
     os.path.join(SNAPSHOT, "images_partaa"),
     os.path.join(SNAPSHOT, "images_partab"),
     os.path.join(SNAPSHOT, "images_partac"),
 ]
-ZIP_PREFIX = "share/softwares/kartik/GeoChat_finetuning/final_images_llava/"
-OUT_DIR = "/path/to/data/vision-datasets/GeoChat_Instruct"
+ZIP_PREFIX = os.getenv("GEOCHAT_ZIP_PREFIX", "")
+OUT_DIR = os.getenv("GEOCHAT_OUT_DIR", "/path/to/output")
 
-# Resume parameters: set to 0 / 0 for a fresh run.
-START_INDEX = 276372
-START_SHARD = 73
+START_INDEX = int(os.getenv("GEOCHAT_START_INDEX", "0"))
+START_SHARD = int(os.getenv("GEOCHAT_START_SHARD", "0"))
 
 
 class MultiFile:

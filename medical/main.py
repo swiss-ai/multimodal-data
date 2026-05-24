@@ -1,8 +1,6 @@
 import json
 import logging
-import os
 import sys
-import time
 from functools import partial
 
 from adapters import ADAPTER_REGISTRY
@@ -66,9 +64,6 @@ def main(config_path: str):
     )
 
     pipeline.scan()
-
-    time.sleep(10)
-    os._exit(0)
 
 
 if __name__ == "__main__":

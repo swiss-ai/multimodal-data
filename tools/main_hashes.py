@@ -14,7 +14,7 @@ from collections import defaultdict
 
 import duckdb
 
-PARQUET_DIR = "/tmp/mint/hash"
+PARQUET_DIR = os.environ.get("PARQUET_DIR", "/tmp/mint/hash")
 
 
 def query_by_hashes(parquet_dir, hashes):

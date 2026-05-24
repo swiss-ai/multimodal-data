@@ -12,7 +12,7 @@ CURATED_DIR = ARTIFACTS_DIR / "curated"
 PARQUET_EXPORT_DIR = ARTIFACTS_DIR / "parquet"
 CACHE_DIR = Path(os.environ.get("SFT_RECAPTION_CACHE_DIR", str(WORKDIR / ".cache")))
 LOGS_DIR = Path(os.environ.get("SFT_RECAPTION_LOGS_DIR", str(WORKDIR / "logs")))
-SHARED_MODEL_CACHE_ROOT = Path("/tmp/models")
+SHARED_MODEL_CACHE_ROOT = Path("")
 
 DEFAULT_MODEL_REPO = "google/gemma-4-26B-A4B-it"
 DEFAULT_DTYPE = "bfloat16"

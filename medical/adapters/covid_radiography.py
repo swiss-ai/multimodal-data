@@ -134,7 +134,7 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    ZIP_PATH = "/path/to/vision-datasets/medical/raw/apertus/covid19-radiography-database.zip"
+    ZIP_PATH = os.getenv("COVID_RADIOGRAPHY_ZIP", "/path/to/data.zip")
     adapter = CovidRadiographyAdapter(zip_path=ZIP_PATH)
     for batch in adapter.stream(logger=logger, batch_size=4):
         for s in batch:

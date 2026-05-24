@@ -1,15 +1,16 @@
 """Download a grid of (layer x scale x resolution) samples for a few tiles for visual inspection."""
 
 import csv
+import os
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import urlencode
 
 import requests
 
-WMS = "https://wms.geo.admin.ch/"
-OUT = Path("/tmp/toolbox/swisstopo_maps/data/explore")
-CSV_FILE = "/tmp/toolbox/swisstopo_maps/data/tiles_settlement_500m_overlap50m.csv"
+WMS = os.environ.get("WMS_URL", "https://wms.geo.admin.ch/")
+OUT = Path(os.environ.get("EXPLORE_OUT_DIR", "/tmp/toolbox/swisstopo_maps/data/explore"))
+CSV_FILE = os.environ.get("TILES_CSV", "/tmp/toolbox/swisstopo_maps/data/tiles_settlement_500m_overlap50m.csv")
 
 LAYERS = [
     "ch.swisstopo.pixelkarte-farbe",

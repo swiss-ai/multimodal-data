@@ -22,8 +22,8 @@ args = parser.parse_args()
 # CONFIGURATION
 # ==========================================
 
-ROBOTS_DIR = "/path/to/scratch/snajemmeyer/MINT_1T_robots_filtered"
-INPUT_DIR = "/path/to/data/vision-datasets/MINT_1T"
+ROBOTS_DIR = os.environ.get("ROBOTS_DIR", "/path/to/scratch/MINT_1T_robots_filtered")
+INPUT_DIR = os.environ.get("INPUT_DIR", "/path/to/data/vision-datasets/MINT_1T")
 SCRATCH_DIR = "/tmp/mint"
 
 # ROOT_OUTPUT_DIR = "/path/to/data/vision-datasets/mlfoundations"
@@ -75,9 +75,6 @@ def make_rocksdb(path, write_buffer_mb=64):
 # STAGE 1: HASHING
 # ==========================================
 
-
-# NOTE: This stage is currently disabled. It was run once to generate the hash
-# files, and the rest of the pipeline relies on those existing files.
 
 # def process_shard_hashing(paths, chunk_num):
 #     if not paths:

@@ -4,12 +4,13 @@
 import argparse
 import io
 import json
+import os
 import tarfile
 from pathlib import Path
 
-WORK_DIR = Path("/tmp/recaption_blip3")
+WORK_DIR = Path(os.environ.get("RECAPTION_WORK_DIR", "/tmp/recaption_blip3"))
 VALID_DIR = WORK_DIR / "output_valid"
-OUTPUT_ROOT = Path("/path/to/data/vision-datasets/raw/stage2/hf___Salesforce___blip3-grounding-50m___recap")
+OUTPUT_ROOT = Path(os.environ.get("RECAPTION_MERGE_OUTPUT_ROOT", ""))
 
 
 def main():

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
+import os
 from pathlib import Path
 
 import img2dataset
 
-INPUT_PATH = Path("/tmp/metadata/HQ-50K/filtered/metadata.parquet")
-OUTPUT_DIR = Path("/path/to/data/vision-datasets/raw/cooldown/hf___YangQiee___HQ-50K/downloaded")
+INPUT_PATH = Path(os.environ.get("FILTERED_PARQUET", "/tmp/metadata/HQ-50K/filtered/metadata.parquet"))
+OUTPUT_DIR = Path(os.environ.get("DOWNLOAD_DIR", "/tmp/HQ-50K/downloaded"))
 
 
 def main():

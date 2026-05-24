@@ -113,11 +113,11 @@ def main():
     all_ok = True
     for tp in nmnh_tiers:
         gaps = find_gaps(tp)
-        status = "✅" if not gaps else f"❌ {len(gaps)} gaps remain: {gaps}"
+        status = "OK" if not gaps else f"FAIL: {len(gaps)} gaps remain: {gaps}"
         log.info(f"  {tp}: {status}")
         if gaps:
             all_ok = False
-    log.info("\nOVERALL: " + ("✅ ALL GAPS FILLED" if all_ok else "❌ STILL HAS GAPS"))
+    log.info("\nOVERALL: " + ("ALL GAPS FILLED" if all_ok else "STILL HAS GAPS"))
 
 
 if __name__ == "__main__":

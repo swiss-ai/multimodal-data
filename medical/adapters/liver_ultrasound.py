@@ -130,7 +130,7 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    ZIP_PATH = "/path/to/vision-datasets/medical/raw/apertus/annotated-ultrasound-liver-images-dataset.zip"
+    ZIP_PATH = os.getenv("LIVER_ULTRASOUND_ZIP", "/path/to/data.zip")
     adapter = LiverUltrasoundAdapter(zip_path=ZIP_PATH)
     for batch in adapter.stream(logger=logger, batch_size=4):
         for s in batch:

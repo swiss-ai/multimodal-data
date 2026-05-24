@@ -145,7 +145,7 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    ZIP_PATH = "/path/to/vision-datasets/medical/raw/apertus/nih-chest-xrays.zip"
+    ZIP_PATH = os.getenv("NIH_CHEST_XRAY_ZIP", "/path/to/data.zip")
     adapter = NihChestXrayAdapter(zip_path=ZIP_PATH)
     for batch in adapter.stream(logger=logger, batch_size=4):
         for s in batch:

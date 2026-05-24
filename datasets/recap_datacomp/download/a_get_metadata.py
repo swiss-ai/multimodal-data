@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
+import os
 from pathlib import Path
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-DATASET_DIR = Path("/path/to/data/vision-datasets/hf___UCSC-VLAA___Recap-DataComp-1B/data/train_data")
-OUTPUT_DIR = Path("/tmp/metadata/Recap-DataComp-1B/parquet")
+DATASET_DIR = Path(os.environ.get("RECAP_DATACOMP_DIR", ""))
+OUTPUT_DIR = Path(os.environ.get("METADATA_OUTPUT_DIR", "/tmp/metadata/Recap-DataComp-1B/parquet"))
 BATCH_SIZE = 10000
 OUTPUT_SCHEMA = pa.schema([("url", pa.string()), ("caption", pa.string())])
 

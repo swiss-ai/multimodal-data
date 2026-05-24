@@ -38,16 +38,16 @@ from pathlib import Path
 import orjson
 import polars as pl
 
-PARQUET = "/tmp/ego4d/narrations.parquet"
-VIDEO_DIR = Path("/path/to/data/vision-datasets/ego4d/v2/full_scale")
-OUT_DIR = Path("/tmp/ego4d/narrations")
-EGO4D_JSON = "/path/to/data/vision-datasets/ego4d/ego4d.json"
+PARQUET = os.environ.get("NARRATIONS_PARQUET", "/tmp/ego4d/narrations.parquet")
+VIDEO_DIR = Path(os.environ.get("EGO4D_VIDEO_DIR", ""))
+OUT_DIR = Path(os.environ.get("OUT_DIR", "/tmp/ego4d/narrations"))
+EGO4D_JSON = os.environ.get("EGO4D_JSON", "")
 
 WORKERS = 32
 PRE_SEEK_SEC = 4.0  # fast pre-seek this many seconds before target
 
 
-# ── ego4d metadata ────────────────────────────────────────────────────────────
+# ego4d metadata
 
 
 def load_video_meta(path: str) -> dict:
@@ -77,7 +77,7 @@ def is_redacted(ts: float, redacted: list) -> bool:
     return any(start <= ts <= end for start, end in redacted)
 
 
-# ── Frame extraction ──────────────────────────────────────────────────────────
+# Frame extraction
 
 
 def extract_frame(video_path: str, ts: float, out_path: str, max_dim: int) -> bool:
@@ -110,7 +110,7 @@ def extract_frame(video_path: str, ts: float, out_path: str, max_dim: int) -> bo
     return subprocess.run(cmd, capture_output=True).returncode == 0
 
 
-# ── Per-video worker ──────────────────────────────────────────────────────────
+# Per-video worker
 
 
 def process_video(video_uid: str, rows, out_base: Path, vmeta: dict):
@@ -172,7 +172,7 @@ def process_video(video_uid: str, rows, out_base: Path, vmeta: dict):
     return done, skipped, errors
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# Main
 
 
 def main():
@@ -186,7 +186,6 @@ def main():
     df = pl.read_parquet(PARQUET)
 
     all_videos = df["video_uid"].unique().sort().to_list()
-    # all_videos = all_videos[:5]  # TODO: keep for debug
     my_videos = all_videos[args.job_id :: args.num_jobs]
 
     if not my_videos:

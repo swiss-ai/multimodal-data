@@ -184,7 +184,7 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    ZIP_PATH = "/path/to/vision-datasets/medical/raw/apertus/MedPix-2_0.zip"
+    ZIP_PATH = os.getenv("MEDPIX_ZIP_PATH", "/path/to/data.zip")
     adapter = MedPixAdapter(dataset_id=DATASET_ID, zip_path=ZIP_PATH)
 
     for batch in adapter.stream(logger=logger, skip=0, batch_size=4):

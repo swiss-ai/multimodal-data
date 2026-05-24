@@ -132,14 +132,11 @@ if __name__ == "__main__":
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
     a = MedMNISTAdapter(
-        data_dir="/path/to/medical/raw/medmnist",
+        data_dir=os.getenv("MEDMNIST_DATA_DIR", "/path/to/data"),
     )
 
     total = 0
     for batch in a.stream(logger=logger, skip=0, batch_size=1000):
         total += len(batch)
         print(f"[{datetime.now():%H:%M:%S}] {len(batch)}")
-        # for b in batch:
-        #     print("obtained sample:", b.meta.sample_id, b.image.shape)
-        # break
     print("Total samples:", total)

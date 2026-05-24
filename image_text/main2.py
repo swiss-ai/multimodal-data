@@ -4,15 +4,16 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
 from pathlib import Path
 
 import webdataset as wds
 
-DEFAULT_DATASET_DIR = Path("/tmp/shared/EgoPAT3Dv2_processed/output_wds")
-DEFAULT_CAPTION_DIR = Path("/tmp/toolbox/caption_gen/logs/egopat")
-DEFAULT_OUTPUT_DIR = Path("/tmp/shared/EgoPAT3Dv2_processed/wds")
+DEFAULT_DATASET_DIR = Path(os.getenv("EGOPAT_DATASET_DIR", "/path/to/data"))
+DEFAULT_CAPTION_DIR = Path(os.getenv("EGOPAT_CAPTION_DIR", "/path/to/captions"))
+DEFAULT_OUTPUT_DIR = Path(os.getenv("EGOPAT_OUTPUT_DIR", "/path/to/output"))
 DEFAULT_SAMPLES_PER_SHARD = 10_000
 
 

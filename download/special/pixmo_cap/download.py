@@ -2,7 +2,7 @@ import os
 
 import img2dataset
 
-output_folder = "/tmp/toolbox/get_pixmo_cap/pixmo-cap-dl"
+output_folder = os.environ.get("OUTPUT_FOLDER", "/tmp/pixmo-cap-dl")
 
 if __name__ == "__main__":
     os.makedirs(output_folder, exist_ok=True)

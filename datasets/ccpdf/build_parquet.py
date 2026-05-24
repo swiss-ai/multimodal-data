@@ -1,4 +1,5 @@
 import json
+import os
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -6,13 +7,9 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-IMAGES_DIR = Path("/tmp/toolbox/ccpdf/images")
-JSONL_DIR = Path(
-    "/path/to/data/vision-datasets/raw/sft/nemotron_image_training_v3/hf___nvidia___Nemotron-Image-Training-v3"
-)
-OUTPUT_DIR = Path(
-    "/path/to/data/vision-datasets/raw/sft/nemotron_image_training_v3/swissai___Nemotron-Image-Training-v3"
-)
+IMAGES_DIR = Path(os.environ.get("CCPDF_IMAGES_DIR", "/tmp/toolbox/ccpdf/images"))
+JSONL_DIR = Path(os.environ.get("CCPDF_JSONL_DIR", ""))
+OUTPUT_DIR = Path(os.environ.get("CCPDF_OUTPUT_DIR", ""))
 
 SCHEMA = pa.schema(
     [
@@ -48,7 +45,6 @@ def process_shard(shard_num: str) -> None:
     shard_name = f"long_document_ccpdf_{shard_num}"
     jsonl_path = JSONL_DIR / shard_name / f"{shard_name}.jsonl"
     shard_dir = OUTPUT_DIR / shard_name
-    # Sentinel: presence of part-00000 means shard is complete
     sentinel = shard_dir / f"{shard_name}-00000.parquet"
 
     if sentinel.exists():

@@ -24,7 +24,6 @@ OUTPUT_DIR = "/path/to/data/vision-datasets/LAION-Aesthetics_clean"
 NUM_PROCESSES = 280
 ROCKSDB_BG_JOBS = 8
 
-# Global variable for Stage 3 workers
 reject_set = None
 
 
@@ -35,7 +34,6 @@ reject_set = None
 
 
 def hashing_decoder(key, data):
-    """Decodes image to numpy array for hashing."""
     extension = key.split(".")[-1].lower()
     if extension not in ["jpg", "jpeg", "png"]:
         return None
@@ -96,7 +94,6 @@ def process_shard_hashing(shard_list, worker_id):
 
 
 def passthrough_decoder(key, data):
-    """Passes through raw bytes for rewriting."""
     extension = key.split(".")[-1].lower()
     if extension in ["jpg", "jpeg", "png"]:
         return data
@@ -125,8 +122,6 @@ def process_shard_rewrite(shard_path):
     output_path = os.path.join(OUTPUT_DIR, basename)
 
     if os.path.exists(output_path):
-        # simple check to avoid overwriting if run partially before
-        # Ideally, check file integrity or size
         print(f"[Stage 3] Output exists, skipping: {basename}")
         return "Skipped"
 
@@ -147,13 +142,11 @@ def process_shard_rewrite(shard_path):
             dropped += 1
             continue
 
-        # reconstruct sample
         sample = {"__key__": key, "json": meta, "jpg": img_bytes}
         sink.write(sample)
         kept += 1
 
     sink.close()
-    # print(f"Finished {basename}: Kept {kept}, Dropped {dropped}")
     return f"Kept: {kept}, Dropped: {dropped}"
 
 

@@ -2,6 +2,7 @@ import glob
 import os
 import random
 import shutil
+import sys
 
 import webdataset as wds
 
@@ -10,7 +11,8 @@ SAMPLES = 5
 
 random.seed(42)
 
-with open("../paths/paths.txt", "r") as f:
+paths_file = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("PATHS_FILE", "paths.txt")
+with open(paths_file, "r") as f:
     paths = [line.strip() for line in f if line.strip()]
 
 print(f"Found {len(paths)} paths")
@@ -31,7 +33,7 @@ print(f"Sampling from {len(sampling_tars)} .tar files")
 shutil.rmtree("sampled", ignore_errors=True)
 for parent_path, tar in sampling_tars:
     print(f"Sampling from: {tar}")
-    dataset = wds.WebDataset(tar, shardshuffle=False)  # type: ignore
+    dataset = wds.WebDataset(tar, shardshuffle=False)
     path = os.path.join(
         "sampled",
         os.path.basename(parent_path.rstrip("/")),

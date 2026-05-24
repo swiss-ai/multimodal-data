@@ -12,9 +12,9 @@ DATASET_ROOT = Path("/path/to/data/vision-datasets/MIT-10M")
 IMAGE_TIER = "big"
 IMAGE_ARCHIVE_DIR = DATASET_ROOT / "data" / IMAGE_TIER
 MANIFEST_ROOT = WORKDIR / "manifests" / "mit_10m_big"
-MODEL_DIR = "/tmp/models"
+MODEL_DIR = os.environ.get("RECAPTION_MODEL_DIR", "/tmp/models")
 MODEL_REPO = "Qwen/Qwen3.5-9B"
-MODEL_CACHE_DIR = Path(MODEL_DIR) / "models--Qwen--Qwen3.5-9B"
+MODEL_CACHE_DIR = Path(os.environ.get("RECAPTION_MODEL_CACHE_DIR", str(Path(MODEL_DIR) / "models--Qwen--Qwen3.5-9B")))
 LANGUAGE_CONFIGS = {
     "ar": {"name": "Arabic", "output_subdir": "ar"},
     "de": {"name": "German", "output_subdir": "de"},

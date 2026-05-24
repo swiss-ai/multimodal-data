@@ -74,7 +74,8 @@ class EgoExo4DAdapter(BaseDataset):
         return "egoexo4d"
 
     def stream(self, logger, skip=None, batch_size=1):
-        _ = skip  # not implemented
+        if skip:
+            logger.warning("Skip is not supported for EgoExo4D.")
         pending = []
 
         total_videos = len(self.take_paths)
@@ -138,16 +139,17 @@ class EgoExo4DAdapter(BaseDataset):
 
 
 if __name__ == "__main__":
+    debug_path = os.getenv("EGOEXO4D_DEBUG_DIR", "/tmp/egoexo4d")
     logger = logging.getLogger("main")
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
-    shutil.rmtree("/path/to/debug/egoexo4d", ignore_errors=True)
-    os.makedirs("/path/to/debug/egoexo4d", exist_ok=True)
+    shutil.rmtree(debug_path, ignore_errors=True)
+    os.makedirs(debug_path, exist_ok=True)
 
     a = EgoExo4DAdapter(
-        data_dir="/path/to/vision-datasets/egoexo4D",
-        aria_map_x_path="/path/to/ego/aria_maps/egoexo4d/map_x.npy",
-        aria_map_y_path="/path/to/ego/aria_maps/egoexo4d/map_y.npy",
+        data_dir=os.getenv("EGOEXO4D_DATA_DIR", "/path/to/data"),
+        aria_map_x_path=os.getenv("EGOEXO4D_MAP_X", "/path/to/map_x.npy"),
+        aria_map_y_path=os.getenv("EGOEXO4D_MAP_Y", "/path/to/map_y.npy"),
         size=512,
         laplacian_threshold=400,
         imagehash_tolerance=5,
@@ -159,8 +161,7 @@ if __name__ == "__main__":
         total += len(batch)
         for b in batch:
             print("obtained sample:", b.meta.sample_id, b.image.size)
-            b.image.save(f"/path/to/debug/egoexo4d/sample_{b.meta.sample_id:06d}.jpg")
+            b.image.save(os.path.join(debug_path, f"sample_{b.meta.sample_id:06d}.jpg"))
         t1 = time.time()
         print("Total so far:", total, "Speed:", total / (t1 - t0), "samples/sec")
-        break
     print("Total samples:", total)

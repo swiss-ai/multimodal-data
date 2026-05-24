@@ -21,7 +21,7 @@ from tqdm import tqdm
 URLS_FILE = Path(__file__).parent / "urls.txt"
 OUT_DIR = Path(__file__).parent / "data" / "pdfs"
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; research-downloader/1.0; mailto:tommychu2256@gmail.com)"}
+HEADERS = {"User-Agent": "Apertus/1.0 (research data preparation)"}
 CHUNK = 256 * 1024  # 256 KB streaming chunk
 
 

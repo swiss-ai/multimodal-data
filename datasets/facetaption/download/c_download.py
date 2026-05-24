@@ -9,9 +9,9 @@ import img2dataset
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-ROOT_DIR = Path("/tmp/metadata/FaceCaption-15M")
+ROOT_DIR = Path(os.environ.get("FACECAPTION_ROOT", "/tmp/metadata/FaceCaption-15M"))
 INPUT_DIR = ROOT_DIR / "filtered"
-OUTPUT_DIR = Path("/path/to/data/vision-datasets/raw/OpenFace-CQUPT___FaceCaption-15M___downloaded")
+OUTPUT_DIR = Path(os.environ.get("FACECAPTION_DOWNLOAD_DIR", ""))
 CHUNK_SIZE = 160_000
 PROCESSES_COUNT = 16
 THREAD_COUNT = 8

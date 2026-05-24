@@ -22,7 +22,6 @@ class MMC4Adapter(BaseDataset):
         self.outer_zips = sorted(glob.glob(os.path.join(data_dir, "mmc4_*.zip")))
         if not self.outer_zips:
             raise FileNotFoundError(f"No outer zip files found in {data_dir}")
-        raise NotImplementedError("disabled for now")
 
     @property
     def id(self):
@@ -203,7 +202,7 @@ class MMC4Adapter(BaseDataset):
 
 
 if __name__ == "__main__":
-    data_dir = "/path/to/medical/raw/MMC4"
+    data_dir = os.getenv("MMC4_DATA_DIR", "/path/to/data")
     adapter = MMC4Adapter(
         data_dir=data_dir,
         batch_size=1000,

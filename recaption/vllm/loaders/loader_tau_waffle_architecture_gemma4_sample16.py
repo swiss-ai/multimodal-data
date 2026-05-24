@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from collections.abc import Iterator
 from pathlib import Path
 from types import SimpleNamespace
@@ -11,11 +12,11 @@ from vllm import SamplingParams
 WORKDIR = Path(__file__).resolve().parent
 _LOCAL_ROOT = WORKDIR / "outputs" / "tau_waffle_architecture_gemma4_sample16"
 DATASET_ROOT = _LOCAL_ROOT / "sample_webdataset"
-OUTPUT_ROOT = Path("/tmp/test")
+OUTPUT_ROOT = Path(os.environ.get("RECAPTION_OUTPUT_ROOT", "/tmp/test"))
 OUTPUT_DIR = OUTPUT_ROOT / "captions"
-MODEL_DIR = "/tmp/models"
+MODEL_DIR = os.environ.get("RECAPTION_MODEL_DIR", "/tmp/models")
 MODEL_REPO = "google/gemma-4-31B-it"
-MODEL_CACHE_DIR = Path(MODEL_DIR) / "models--google--gemma-4-31B-it"
+MODEL_CACHE_DIR = Path(os.environ.get("RECAPTION_MODEL_CACHE_DIR", str(Path(MODEL_DIR) / "models--google--gemma-4-31B-it")))
 MODEL_USED = str(MODEL_CACHE_DIR)
 THINKING_ENABLED = False
 IMAGE_KEYS_TO_MEDIA_TYPES = {

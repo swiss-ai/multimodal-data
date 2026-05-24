@@ -129,7 +129,6 @@ python download_hf_dataset.py \
 ### 2. `download_hf_dataset.slurm`
 
 SLURM wrapper for `download_hf_dataset.py` with environment setup and job management.
-This script is specific to Alps cluster so best check the paths and configuration before you run.
 
 **What it does:**
 - Sets up Python environment with required packages (datasets, hf_transfer, huggingface_hub)
@@ -191,7 +190,7 @@ this is useful.
 - The script prints the corrupted files so you can delete them afterwards manually. 
 - When rerun the download script, it will notice the blobs are missing and redownload them.
 - HF hub checks file hashes on download, but it doesn't guarantee that the downloaded files remain valid after.
-- The hash is also not checked by the hf datasets library before processing (no option to activate this which is a missing feature IMO)
+- The hash is also not checked by the hf datasets library before processing
 
 **Example:**
 ```bash

@@ -2,6 +2,7 @@ import glob
 import io
 import os
 import re
+import sys
 import tarfile
 
 
@@ -52,10 +53,8 @@ def process_dataset(src_dir, dst_dir):
     print("Done.")
 
 
-import sys
-
 if len(sys.argv) == 3:
     process_dataset(sys.argv[1], sys.argv[2])
 else:
-    print("Usage: clean.py <src_dir> <dst_dir>")
+    print("Usage: clean_text_tar.py <src_dir> <dst_dir>")
     sys.exit(1)

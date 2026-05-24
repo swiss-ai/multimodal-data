@@ -6,7 +6,7 @@ from datasets import load_dataset
 
 NUM_PROCS = 32
 BATCH_SIZE = 1000
-DEST_DIR = "/tmp/vision/mint/parts"
+DEST_DIR = os.environ.get("MINT_DEST_DIR", "/tmp/vision/mint/parts")
 
 
 def process_shard(rank, num_shards):

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
+import os
 from pathlib import Path
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-DATASET_DIR = Path("/path/to/data/vision-datasets/hf___Spawning___PD12M/metadata")
-OUTPUT_DIR = Path("/tmp/metadata/PD12M/parquet")
+DATASET_DIR = Path(os.environ.get("PD12M_METADATA_DIR", ""))
+OUTPUT_DIR = Path(os.environ.get("METADATA_OUTPUT_DIR", "/tmp/metadata/PD12M/parquet"))
 BATCH_SIZE = 16384
 OUTPUT_SCHEMA = pa.schema([("url", pa.string()), ("caption", pa.string())])
 

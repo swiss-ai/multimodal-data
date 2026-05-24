@@ -4,7 +4,6 @@ import os
 from multiprocessing import Pool
 
 # fmt:off
-# Remove this line - set HF_TOKEN env var before running
 os.environ.setdefault("HF_HOME", os.environ.get("HF_HUB_CACHE", os.path.expanduser("~/.cache/huggingface")))
 os.environ.setdefault("HF_HUB_CACHE", os.path.expanduser("~/.cache/huggingface"))
 os.environ.setdefault("HF_DATASETS_CACHE", os.path.expanduser("~/.cache/huggingface/datasets"))
@@ -37,7 +36,6 @@ INVALID_IMAGE = "INVALID"
 NUM_PROCESSES = args.num_processes
 ROCKSDB_BG_JOBS = 4
 
-# Global variable for Stage 3 workers
 reject_set = None
 
 # ==========================================
@@ -64,7 +62,6 @@ def process_shard_hashing(paths, wi):
     print(f"[Stage 1][{wi=}] starting stream...")
 
     ds = wds.WebDataset(paths, shardshuffle=False).to_tuple("__url__", "__key__", "jpg")
-    # ds = ds.slice(2)
 
     records = []
     for _url_full, _key, img_bytes in ds:
@@ -187,7 +184,6 @@ def process_tar_file_rewrite(tar_path):
         return
 
     ds = wds.WebDataset([tar_path], shardshuffle=False).to_tuple("__key__", "jpg")
-    # ds = ds.slice(2)
 
     sink = wds.TarWriter(output_path)
     kept = 0

@@ -27,7 +27,7 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-# ── Paths ─────────────────────────────────────────────────────────────────────
+
 NV_BASE = Path(
     "/path/to/data/vision-datasets/raw/sft/nemotron_image_training_v3/hf___nvidia___Nemotron-Image-Training-v3"
 )
@@ -49,11 +49,9 @@ BATCH_ROWS = 64
 READ_THREADS = 32
 
 
-# ── Extraction ────────────────────────────────────────────────────────────────
-
-
 def extract_mulberry():
     if MULBERRY_ROOT.exists():
+        print(
         print("[setup] mulberry already extracted", flush=True)
         return
     print("[setup] extracting mulberry_images.tar (~21 GB)...", flush=True)
@@ -72,9 +70,6 @@ def extract_mapqa():
             members = [m for m in zf.namelist() if "/images/" in m and not m.endswith("/")]
             zf.extractall(MAPQA_DIR, members=members)
         print(f"[setup] {split} done", flush=True)
-
-
-# ── Parquet builder ───────────────────────────────────────────────────────────
 
 
 def build_parquet(task: dict) -> tuple:
@@ -179,8 +174,6 @@ def build_parquet(task: dict) -> tuple:
     )
     return name, written, skipped
 
-
-# ── Main ──────────────────────────────────────────────────────────────────────
 
 ALL_DATASETS = ["mulberry_1", "mulberry_2", "mapqa", "zhwiki_1", "zhwiki_2"]
 

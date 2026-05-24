@@ -1,10 +1,12 @@
+import os
+
 from datasets import load_dataset
 
 columns = [f"image_{i}_path" for i in [1, 2, 3]]
 
 ds = load_dataset(
     "parquet",
-    data_dir="/path/to/data/medical/raw/scin",
+    data_dir=os.environ.get("DATA_DIR", "/path/to/data/medical/raw/scin"),
     streaming=True,
 ).select_columns(columns)["train"]
 

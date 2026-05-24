@@ -16,7 +16,7 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-HQ50K_ROOT = Path("/path/to/data/vision-datasets/raw/cooldown/hf___YangQiee___HQ-50K/downloaded")
+HQ50K_ROOT = Path(os.environ.get("HQ50K_ROOT", ""))
 CANDIDATES_DIR = Path(__file__).parent / "artifacts" / "candidates"
 EXPORT_DIR = Path(__file__).parent / "artifacts" / "parquet"
 

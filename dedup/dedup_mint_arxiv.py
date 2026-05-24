@@ -5,7 +5,6 @@ import sys
 from multiprocessing import Pool
 
 # fmt:off
-# Remove this line - set HF_TOKEN env var before running
 os.environ.setdefault("HF_HOME", os.environ.get("HF_HUB_CACHE", os.path.expanduser("~/.cache/huggingface")))
 os.environ.setdefault("HF_HUB_CACHE", os.path.expanduser("~/.cache/huggingface"))
 os.environ.setdefault("HF_DATASETS_CACHE", os.path.expanduser("~/.cache/huggingface/datasets"))
@@ -41,7 +40,6 @@ OUTPUT_DIR = os.path.join(ROOT_OUTPUT_DIR, "MINT-1T-ArXiv")
 NUM_PROCESSES = 128
 ROCKSDB_BG_JOBS = 4
 
-# Global variable for Stage 3 workers
 reject_set = None
 
 # ==========================================
@@ -79,7 +77,6 @@ def process_shard_hashing(paths, chunk_num):
         streaming=True,
     )
     ds = ds.cast_column("jpg", HFImage(decode=False))
-    # ds = ds.take(10)
 
     records = []
     part_idx = 0
@@ -214,7 +211,6 @@ def process_tar_file_rewrite(tar_path):
         streaming=True,
     )
     ds = ds.cast_column("jpg", HFImage(decode=False))
-    # ds = ds.take(10)
 
     sink = wds.TarWriter(output_path)
     kept = 0

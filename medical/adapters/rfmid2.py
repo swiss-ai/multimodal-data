@@ -68,14 +68,11 @@ if __name__ == "__main__":
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
     a = RFMiD2Adapter(
-        data_dir="/path/to/medical/raw/rfmid2",
+        data_dir=os.getenv("RFMID2_DATA_DIR", "/path/to/data"),
     )
 
     total = 0
     for batch in a.stream(logger=logger, skip=0, batch_size=100):
         total += len(batch)
-        # for b in batch:
-        #     print("obtained sample:", b.meta.sample_id, b.meta.data["path"])
-        # break
         print("Processed batch of size:", len(batch))
     print("Total samples:", total)

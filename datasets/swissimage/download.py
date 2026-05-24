@@ -2,8 +2,8 @@ import os
 
 import img2dataset
 
-input_file = "/tmp/downloads/vids/swissimage/swissimage.csv"
-output_folder = "/path/to/data/vision-datasets/SWISSIMAGE/"
+input_file = os.environ.get("SWISSIMAGE_URLS", "/tmp/downloads/vids/swissimage/swissimage.csv")
+output_folder = os.environ.get("SWISSIMAGE_OUTPUT_DIR", "")
 process_count = 8
 
 if __name__ == "__main__":

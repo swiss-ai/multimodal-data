@@ -26,8 +26,8 @@ except ModuleNotFoundError as exc:
     ) from exc
 
 
-DEFAULT_ROBOTS_PARQUET = "/path/to/data/users/vsabolce/apertus_v1/robotstxt/fineweb_robots_compressed.parquet"
-DEFAULT_HOST_BLACKLIST = "/tmp/blacklist/hosts"
+DEFAULT_ROBOTS_PARQUET = os.environ.get("ROBOTS_PARQUET_PATH", "")
+DEFAULT_HOST_BLACKLIST = os.environ.get("HOST_BLACKLIST_PATH", "")
 
 
 def parse_json_list(raw_value: Optional[str]) -> Optional[List[str]]:
@@ -91,7 +91,7 @@ def choose_status_policy(status: str) -> bool:
 def load_robots_records(
     robots_parquet: str, domains: Sequence[str]
 ) -> Dict[Tuple[str, str], Tuple[str, Optional[RobotFileParser]]]:
-    if not domains:
+    if not robots_parquet or not domains:
         return {}
 
     robots_table = pq.read_table(

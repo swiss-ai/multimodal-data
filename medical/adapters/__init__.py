@@ -42,7 +42,6 @@ adapters = [
     ISICAdapter,
     HoloAssistAdapter,
     LAIONAestheticsAdapter,
-    # apertus extension
     MediCaTAdapter,
     NihChestXrayAdapter,
     CovidRadiographyAdapter,

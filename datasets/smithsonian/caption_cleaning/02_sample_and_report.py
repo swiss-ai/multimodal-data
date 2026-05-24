@@ -242,7 +242,7 @@ def write_report(
             n_cleaned = sum(1 for s in samples if s["status"] == "CLEANED")
             n_post = sum(1 for s in samples if s["status"] == "POST_FILTERED")
             lines.append(
-                f"## {subset_key}  ✅ CLEAN  ({n_pre} pre-filtered, {n_cleaned} cleaned, {n_post} post-filtered)\n"
+                f"## {subset_key}  CLEAN  ({n_pre} pre-filtered, {n_cleaned} cleaned, {n_post} post-filtered)\n"
             )
             for i, s in enumerate(samples, 1):
                 status = s["status"]
@@ -258,7 +258,7 @@ def write_report(
                 lines.append(sep + "\n")
         else:
             skip_reason = SKIP_REASONS.get(subset_key, "no useful prose")
-            lines.append(f"## {subset_key}  ❌ SKIP — {skip_reason}\n")
+            lines.append(f"## {subset_key}  SKIP — {skip_reason}\n")
             for i, s in enumerate(samples, 1):
                 raw = s["raw"]
                 lines.append(f"### [{i}] ({len(raw)}c)\n```\n{raw}\n```\n")
@@ -288,9 +288,9 @@ def main() -> None:
                 n_pre = sum(1 for s in samples if s["status"] == "PRE_FILTERED")
                 n_cleaned = sum(1 for s in samples if s["status"] == "CLEANED")
                 n_post = sum(1 for s in samples if s["status"] == "POST_FILTERED")
-                print(f"  ✅ {subset_key}: {n_cleaned} cleaned, {n_pre} pre-filtered, {n_post} post-filtered")
+                print(f"  {subset_key}: {n_cleaned} cleaned, {n_pre} pre-filtered, {n_post} post-filtered")
             else:
-                print(f"  ❌ {subset_key}: SKIP")
+                print(f"  {subset_key}: SKIP")
         return
 
     rng = random.Random(RANDOM_SEED)
@@ -376,9 +376,9 @@ def main() -> None:
             n_pre = sum(1 for s in samples if s["status"] == "PRE_FILTERED")
             n_cleaned = sum(1 for s in samples if s["status"] == "CLEANED")
             n_post = sum(1 for s in samples if s["status"] == "POST_FILTERED")
-            print(f"  ✅ {subset_key}: {n_cleaned} cleaned, {n_pre} pre-filtered, {n_post} post-filtered")
+            print(f"  {subset_key}: {n_cleaned} cleaned, {n_pre} pre-filtered, {n_post} post-filtered")
         else:
-            print(f"  ❌ {subset_key}: SKIP")
+            print(f"  {subset_key}: SKIP")
 
 
 if __name__ == "__main__":

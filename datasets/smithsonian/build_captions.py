@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-import os
-
 """
 Phase 1 — Tier scoring and caption construction (CPU only).
 
@@ -14,6 +12,7 @@ Reads the index Parquet files produced by 01_build_index.py and:
 import html
 import json
 import logging
+import os
 import re
 import sys
 from multiprocessing import Pool, cpu_count

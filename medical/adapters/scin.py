@@ -74,14 +74,11 @@ if __name__ == "__main__":
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
     a = SCINAdapter(
-        data_dir="/path/to/medical/raw/scin",
+        data_dir=os.getenv("SCIN_DATA_DIR", "/path/to/data"),
     )
 
     total = 0
     for batch in a.stream(logger=logger, skip=0, batch_size=1000):
         total += len(batch)
-        # for b in batch:
-        #     print("obtained sample:", b.meta.sample_id, b.image.size)
-        # break
         print("Processed batch of size:", len(batch))
     print("Total samples:", total)

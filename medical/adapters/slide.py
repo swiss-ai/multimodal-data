@@ -97,15 +97,12 @@ if __name__ == "__main__":
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
     a = SLIDEAdapter(
-        data_dir="/path/to/medical/raw/slide",
+        data_dir=os.getenv("SLIDE_DATA_DIR", "/path/to/data"),
         decode_workers=3,
     )
 
     total = 0
     for batch in a.stream(logger=logger, skip=1998, batch_size=100):
         total += len(batch)
-        # for b in batch:
-        #     print("obtained sample:", b.meta.sample_id, b.image.size)
-        # break
         print("Processed batch of size:", len(batch))
     print("Total samples:", total)

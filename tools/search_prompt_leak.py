@@ -16,13 +16,13 @@ PHRASES = [
 ]
 
 DATASETS = {
-    "SkyScript": "/path/to/data/vision-datasets/processed/gh___wangzhecheng___SkyScript___processed",
-    "GeoChat": "/path/to/data/vision-datasets/processed/hf___MBZUAI___GeoChat_Instruct___processed",
-    "MapTrace": "/path/to/data/vision-datasets/processed/hf___google___MapTrace___processed",
-    "swisstopo": "/path/to/data/vision-datasets/processed/swisstopo___map_sat___processed",
-    "ign_city": "/path/to/data/vision-datasets/processed/ign___ign_city_tiles___processed",
-    "RSTeller": "/path/to/data/vision-datasets/processed/hf___SlytherinGe___RSTeller___processed",
-    "FLAIR-HUB": "/path/to/data/vision-datasets/processed/ign___IGNF___FLAIR-HUB___processed",
+    "SkyScript": os.environ.get("SKYSCRIPT_PATH", "/path/to/data/vision-datasets/processed/gh___wangzhecheng___SkyScript___processed"),
+    "GeoChat": os.environ.get("GEOCHAT_PATH", "/path/to/data/vision-datasets/processed/hf___MBZUAI___GeoChat_Instruct___processed"),
+    "MapTrace": os.environ.get("MAPTRACE_PATH", "/path/to/data/vision-datasets/processed/hf___google___MapTrace___processed"),
+    "swisstopo": os.environ.get("SWISSTOPO_PATH", "/path/to/data/vision-datasets/processed/swisstopo___map_sat___processed"),
+    "ign_city": os.environ.get("IGN_CITY_PATH", "/path/to/data/vision-datasets/processed/ign___ign_city_tiles___processed"),
+    "RSTeller": os.environ.get("RSTELLER_PATH", "/path/to/data/vision-datasets/processed/hf___SlytherinGe___RSTeller___processed"),
+    "FLAIR-HUB": os.environ.get("FLAIR_HUB_PATH", "/path/to/data/vision-datasets/processed/ign___IGNF___FLAIR-HUB___processed"),
 }
 
 

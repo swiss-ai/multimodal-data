@@ -63,9 +63,6 @@ function import_osm() {
         return
     fi
 
-    # echo "$(date) | Resetting podman environment"
-    # podman system reset -f
-
     echo "$(date) | Importing OSM PBF file: ${pbf_path}"
     chmod 644 "${pbf_path}"
     podman volume create ${volume_name}

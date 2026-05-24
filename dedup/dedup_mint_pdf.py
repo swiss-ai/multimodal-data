@@ -7,7 +7,6 @@ from multiprocessing import Pool
 from PIL import Image, ImageSequence
 
 # fmt:off
-# Remove this line - set HF_TOKEN env var before running
 os.environ.setdefault("HF_HOME", os.environ.get("HF_HUB_CACHE", os.path.expanduser("~/.cache/huggingface")))
 os.environ.setdefault("HF_HUB_CACHE", os.path.expanduser("~/.cache/huggingface"))
 os.environ.setdefault("HF_DATASETS_CACHE", os.path.expanduser("~/.cache/huggingface/datasets"))
@@ -46,7 +45,6 @@ OUTPUT_DIR = os.path.join(ROOT_OUTPUT_DIR, HF_DATASET_NAME)
 NUM_PROCESSES = args.num_cpus
 ROCKSDB_BG_JOBS = 4
 
-# Global variable for Stage 3 workers
 reject_set = None
 
 # ==========================================
@@ -85,8 +83,6 @@ def process_shard_hashing(worker_id, total_workers):
         .select_columns(["__key__", "tiff"])
         .cast_column("tiff", HFImage(decode=False))
     )
-
-    # ds = ds.take(10)
 
     records = []
     chunk_idx = 0
@@ -233,8 +229,6 @@ def process_shard_rewrite(worker_id, total_workers):
         .select_columns(["__key__", "tiff"])
         .cast_column("tiff", HFImage(decode=False))
     )
-
-    # ds = ds.take(10)
 
     sink = wds.TarWriter(output_path)  # type:ignore
     kept = 0

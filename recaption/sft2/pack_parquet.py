@@ -23,8 +23,8 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-INPUT_ROOT = Path("/tmp/toolbox/story_caption/outputs/full_run")
-OUTPUT_ROOT = Path("/tmp/data/vision-datasets/processed/swisstopo___swissmap___cooldown")
+INPUT_ROOT = Path(os.environ.get("PACK_PARQUET_INPUT_ROOT", ""))
+OUTPUT_ROOT = Path(os.environ.get("PACK_PARQUET_OUTPUT_ROOT", ""))
 
 MAX_BYTES = 2 * 1024 * 1024 * 1024
 ROW_GROUP_SIZE = 256

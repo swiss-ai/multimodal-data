@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """
-evaluate_quality.py
-
 Evaluates sampled datasets for prompt leakage and pretraining data quality
 using a vLLM-powered LLM.
 

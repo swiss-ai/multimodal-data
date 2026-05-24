@@ -25,19 +25,15 @@ from pathlib import Path
 
 from vllm import LLM, SamplingParams
 
-# ---------------------------------------------------------------------------
 # Paths
-# ---------------------------------------------------------------------------
-DATA_ROOT = Path("/path/to/data/vision-datasets/processed/hf___mlfoundations___MINT-1T-ArXiv___processed")
+DATA_ROOT = Path(os.environ.get("DATA_ROOT", ""))
 SAMPLE_DIR = DATA_ROOT / "sample"
-OUTPUT_ROOT = Path("/tmp/toolbox/story_caption/outputs")
+OUTPUT_ROOT = Path(os.environ.get("CAPTION_OUTPUT_ROOT", "/tmp/toolbox/story_caption/outputs"))
 
-GEMMA_PATH = "/tmp/models/models--google--gemma-4-31B-it/snapshots/439edf5652646a0d1bd8b46bfdc1d3645761a445"
-QWEN_PATH = "/tmp/models/models--Qwen--Qwen3.5-27B/snapshots/fc05daec18b0a78c049392ed2e771dde82bdf654"
+GEMMA_PATH = os.environ.get("GEMMA_MODEL_PATH", "")
+QWEN_PATH = os.environ.get("QWEN_MODEL_PATH", "")
 
-# ---------------------------------------------------------------------------
 # Personas & prompt templates
-# ---------------------------------------------------------------------------
 PERSONAS = [
     "a curious undergraduate student encountering this figure for the first time",
     "an experienced professor explaining this figure to a graduate seminar",
@@ -140,8 +136,6 @@ def jpeg_dimensions(data: bytes) -> tuple[int, int]:
 
 
 def model_short_name(model_path: str) -> str:
-    """Extract a readable model name from the path."""
-    # e.g. 'models--google--gemma-4-31B-it' -> 'gemma-4-31B-it'
     for part in model_path.split("/"):
         if part.startswith("models--"):
             return part.split("--", 2)[-1]
@@ -227,7 +221,7 @@ def process_chunk(
     caption_sampling = SamplingParams(temperature=0.7, top_p=0.9, max_tokens=1024)
     model_name = model_short_name(model_path)
 
-    # --- Filter ---
+    # Filter
     accepted = []
     skipped = 0
     for batch_start in range(0, len(samples), batch_size):
@@ -244,7 +238,7 @@ def process_chunk(
     if not accepted:
         return 0, skipped
 
-    # --- Caption ---
+    # Caption
     for s in accepted:
         s["persona"] = rng.choice(PERSONAS)
         s["style"] = rng.choice(PROMPT_STYLES)
@@ -256,7 +250,7 @@ def process_chunk(
         for s, out in zip(batch, outputs):
             s["caption"] = out.outputs[0].text.strip()
 
-    # --- Write ---
+    # Write
     for s in accepted:
         safe_key = s["key"].replace("/", "_")
         (out_dir / f"{safe_key}.jpg").write_bytes(s["jpg"])

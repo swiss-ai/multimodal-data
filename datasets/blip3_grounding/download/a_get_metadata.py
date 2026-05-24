@@ -25,9 +25,6 @@ def main():
     for parquet_path in parquet_files:
         part_id = parquet_path.stem.rsplit("_", 1)[-1]
         output_path = OUTPUT_DIR / f"metadata_{part_id}.parquet"
-        # if output_path.exists():
-        #     print(f"skip {output_path}")
-        #     continue
 
         rows_written = 0
         with pq.ParquetWriter(output_path, OUTPUT_SCHEMA) as writer:

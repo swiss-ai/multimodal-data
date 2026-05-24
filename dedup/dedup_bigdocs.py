@@ -4,7 +4,6 @@ import os
 from multiprocessing import Pool
 
 # fmt:off
-# Remove this line - set HF_TOKEN env var before running
 os.environ.setdefault("HF_HOME", os.environ.get("HF_HUB_CACHE", os.path.expanduser("~/.cache/huggingface")))
 os.environ.setdefault("HF_HUB_CACHE", os.path.expanduser("~/.cache/huggingface"))
 os.environ.setdefault("HF_DATASETS_CACHE", os.path.expanduser("~/.cache/huggingface/datasets"))
@@ -39,7 +38,6 @@ INVALID_IMAGE = "INVALID"
 NUM_PROCESSES = args.num_processes
 ROCKSDB_BG_JOBS = 4
 
-# Global variable for Stage 3 workers
 reject_set = None
 
 # ==========================================
@@ -78,12 +76,11 @@ def process_shard_hashing(parquet_paths, wi):
 
             nparr = np.frombuffer(img_bytes, np.uint8)
             img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
-            # validation
             if img is None:
                 records.append({"key": key, "hash": INVALID_IMAGE})
                 continue
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
             height, width = img.shape[:2]
             if not (100 <= width <= 8000 and 100 <= height <= 8000):
                 records.append({"key": key, "hash": INVALID_IMAGE})

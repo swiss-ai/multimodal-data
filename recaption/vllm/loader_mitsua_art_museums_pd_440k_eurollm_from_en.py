@@ -7,7 +7,7 @@ from types import SimpleNamespace
 from vllm import SamplingParams
 
 WORKDIR = Path(__file__).resolve().parent
-MODEL_DIR = "/tmp/models"
+MODEL_DIR = os.environ.get("MODEL_DIR", "/tmp/models")
 MODEL_REPO = "utter-project/EuroLLM-22B-Instruct-2512"
 MODEL_CACHE_DIR = Path(MODEL_DIR) / "models--utter-project--EuroLLM-22B-Instruct-2512"
 ENGLISH_CAPTIONS_DIR = WORKDIR / "outputs" / "mitsua_art_museums_pd_440k" / "en"

@@ -2,9 +2,6 @@ import csv
 import math
 from urllib.parse import urlencode
 
-# ----------------------------
-# EPSG:4326 -> EPSG:3857
-# ----------------------------
 R = 6378137.0
 
 
@@ -14,10 +11,6 @@ def lonlat_to_webmercator(lon: float, lat: float):
     y = R * math.log(math.tan(math.pi / 4 + math.radians(lat) / 2))
     return x, y
 
-
-# ----------------------------
-# French cities
-# ----------------------------
 CITIES = {
     "Paris": (2.3522, 48.8566),
     "Marseille": (5.3698, 43.2965),
@@ -28,13 +21,9 @@ CITIES = {
     "Strasbourg": (7.7521, 48.5734),
     "Montpellier": (3.8767, 43.6110),
     "Bordeaux": (-0.5792, 44.8378),
-    # "Lille": (3.0573, 50.6292),
 }
 
 
-# ----------------------------
-# 500m*500m
-# ----------------------------
 def iter_tiles_3857(center_lon, center_lat, tile_size_m=500.0, radius_m=20000.0):
     cx, cy = lonlat_to_webmercator(center_lon, center_lat)
 
@@ -56,12 +45,10 @@ def iter_tiles_3857(center_lon, center_lat, tile_size_m=500.0, radius_m=20000.0)
 
 
 def build_wms_url(base_url: str, params: dict) -> str:
-    #
-    return base_url + "?" + urlencode(params, safe=",:")  #
+    return base_url + "?" + urlencode(params, safe=",:")
 
 
 def main():
-    # ===== params =====
     out_csv = "france_tiles_template.csv"
 
     tile_size_m = 1000.0
@@ -71,7 +58,6 @@ def main():
     transparent = "TRUE"
     img_format = "image/png"
 
-    # ===== France WMS config =====
     wms_base = "https://data.geopf.fr/wms-r/wms"
     layer = "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2"
     crs = "EPSG:3857"
@@ -98,7 +84,6 @@ def main():
 
             url = build_wms_url(wms_base, params)
 
-            # url｜bbox
             rows_out.append(
                 {
                     "url": url,

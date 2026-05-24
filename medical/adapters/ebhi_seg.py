@@ -170,7 +170,7 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
-    TAR_PATH = "/path/to/vision-datasets/medical/raw/apertus/EBHI-Seg.tar"
+    TAR_PATH = os.getenv("EBHI_SEG_TAR_PATH", "/path/to/data.tar")
     adapter = EBHISegAdapter(tar_path=TAR_PATH)
     for batch in adapter.stream(logger=logger, batch_size=4):
         for s in batch:

@@ -356,8 +356,6 @@ def main():
 
     download_mode = DownloadMode.FORCE_REDOWNLOAD if args.force_redownload else DownloadMode.REUSE_CACHE_IF_EXISTS
 
-    # All checks only useful to test deterioration over time
-    # (hf hub files have hash as filename so could run check directly on it manually)
     verification_mode = VerificationMode.BASIC_CHECKS
 
     print(f"Dataset:                {args.dataset_name}")
