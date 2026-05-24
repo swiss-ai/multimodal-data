@@ -1,0 +1,50 @@
+{
+  "adapters": [
+    {
+      "id": "MedTrinityDemo"
+    },
+    {
+      "id": "Meditron",
+      "dataset_id": "busi",
+      "data_dir": "/path/to/medical/meditron/BUSI",
+      "image_only": true,
+      "decode_workers": 100
+    }
+  ],
+  "filters": [
+    {
+      "id": "ImageResolution",
+      "min_width": 64,
+      "min_height": 64,
+      "max_width": 8192,
+      "max_height": 8192
+    },
+    {
+      "id": "ImageDownsample",
+      "max_pixels": 4194304,
+      "pil_resample": 1
+    },
+    {
+      "id": "ImageResolution",
+      "min_width": 64,
+      "min_height": 64
+    },
+    {
+      "id": "ImageDeduplication",
+      "db_path": "/path/to/multimodal-data/demo/deduplication",
+      "algorithm": "phash"
+    }
+  ],
+  "writer": {
+    "output_dir": "/path/to/multimodal-data/demo/target",
+    "target_shard_bytes": 20000000,
+    "num_workers": 40
+  },
+  "pipeline": {
+    "log_file": "/path/to/multimodal-data/demo/pipeline.log",
+    "manifest_db": "/path/to/multimodal-data/demo/manifest.db",
+    "checkpoint_db": "/path/to/multimodal-data/demo/checkpoint.db",
+    "num_workers": 40,
+    "batch_size": 400
+  }
+}

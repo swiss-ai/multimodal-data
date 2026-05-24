@@ -1,0 +1,23 @@
+{
+  "adapters": [
+    {
+      "id": "Meditron",
+      "dataset_id": "ddti",
+      "data_dir": "/path/to/vision-datasets/medical/raw/meditron/DDTI",
+      "image_only": false,
+      "decode_workers": 100
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/path/to/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/path/to/multimodal-data/image-text-v1/ddti/pipeline.log",
+    "manifest_db": "/path/to/multimodal-data/image-text-v1/ddti/manifest.db",
+    "checkpoint_db": "/path/to/multimodal-data/image-text-v1/ddti/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}

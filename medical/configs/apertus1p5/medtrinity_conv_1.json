@@ -1,0 +1,23 @@
+{
+  "adapters": [
+    {
+      "id": "Meditron",
+      "dataset_id": "medtrinity_conv_1",
+      "data_dir": "/path/to/vision-datasets/medical/raw/meditron/medtrinity_conversations_1_formatted",
+      "image_only": false,
+      "decode_workers": 100
+    }
+  ],
+  "writer": {
+    "type": "webdataset",
+    "output_dir": "/path/to/vision-datasets/medical/apertus_image_text_v1",
+    "maxcount": 10000
+  },
+  "pipeline": {
+    "log_file": "/path/to/multimodal-data/image-text-v1/medtrinity_conv_1/pipeline.log",
+    "manifest_db": "/path/to/multimodal-data/image-text-v1/medtrinity_conv_1/manifest.db",
+    "checkpoint_db": "/path/to/multimodal-data/image-text-v1/medtrinity_conv_1/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 400
+  }
+}

@@ -1,0 +1,29 @@
+
+{
+  "adapters": [
+    {
+      "id": "LAIONAesthetics",
+      "data_dir": "/path/to/vision-datasets/LAION-Aesthetics",
+      "decode_workers": 8
+    }
+  ],
+  "filters": [
+    {
+      "id": "ImageDeduplication",
+      "db_path": "/path/to/multimodal-data/stage1/deduplication",
+      "algorithm": "phash"
+    }
+  ],
+  "writer": {
+    "output_dir": "/path/to/vision-datasets/LAION-Aesthetics_clean",
+    "target_shard_bytes": 900000000,
+    "num_workers": 100
+  },
+  "pipeline": {
+    "log_file": "/path/to/multimodal-data/stage1/pipeline.log",
+    "manifest_db": "/path/to/multimodal-data/stage1/manifest.db",
+    "checkpoint_db": "/path/to/multimodal-data/stage1/checkpoint.db",
+    "num_workers": 100,
+    "batch_size": 10000
+  }
+}
