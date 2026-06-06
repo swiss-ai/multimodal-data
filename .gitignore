@@ -81,3 +81,6 @@ env/
 # Environment variables
 .env
 .env.local
+
+# 55MB test sample — keep local, never track
+01-dataset-download/audio/wavepulse_radio/samples/test_bad.wav

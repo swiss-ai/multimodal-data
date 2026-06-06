@@ -1,21 +1,21 @@
 #!/bin/bash
 #SBATCH --account=infra01
 #SBATCH --reservation=SD-69241-apertus-1-5
-#SBATCH --job-name=qwen-ocr-serve-10n
+#SBATCH --job-name=qwen-ocr-serve-20n
 #SBATCH --environment=/iopsstor/scratch/cscs/xyixuan/apertus/model-launch/src/swiss_ai_model_launch/assets/envs/vllm.toml
 #SBATCH --output=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-image-tokenzier/logs/qwen_ocr_serve_%j.out
 #SBATCH --error=/iopsstor/scratch/cscs/xyixuan/apertus/benchmark-image-tokenzier/logs/qwen_ocr_serve_%j.err
 #SBATCH --time=04:00:00
-#SBATCH --nodes=10
+#SBATCH --nodes=20
 #SBATCH --ntasks-per-node=2
 #SBATCH --gpus-per-task=2
 #SBATCH --cpus-per-task=36
 #SBATCH --partition=normal
 #SBATCH --exclusive
 #
-# Spawn 20 vLLM instances of Qwen3.6-27B (TP=2 each) across 10 GH200 nodes,
+# Spawn 40 vLLM instances of Qwen3.6-27B (TP=2 each) across 20 GH200 nodes,
 # 2 instances per node (GPUs 0,1 → port 8080; GPUs 2,3 → port 8081).
-# No router — client distributes work round-robin to the 20 endpoints.
+# No router — client distributes work round-robin to the 40 endpoints.
 
 set -e
 

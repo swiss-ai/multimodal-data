@@ -158,7 +158,7 @@ def send(ep: str, img_bytes: bytes) -> tuple[float, str]:
                 {"type": "text", "text": PROMPT},
             ],
         }],
-        "max_tokens": 1024,
+        "max_tokens": 4096,
         "temperature": 0.0,
         "repetition_penalty": 1.1,
         "chat_template_kwargs": {"enable_thinking": False},

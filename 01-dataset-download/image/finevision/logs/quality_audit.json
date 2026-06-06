@@ -1,0 +1,947 @@
+{
+  "funsd": {
+    "subset": "funsd",
+    "sampled_rows": 65,
+    "img_count_dist": {
+      "1": 65
+    },
+    "turn_count_dist": {
+      "8": 8,
+      "15": 6,
+      "11": 5,
+      "24": 4,
+      "9": 4
+    },
+    "assistant_len_p50": 9,
+    "assistant_len_p95": 55,
+    "empty_count": 370,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "handwriting_forms": {
+    "subset": "handwriting_forms",
+    "sampled_rows": 50,
+    "img_count_dist": {
+      "1": 50
+    },
+    "turn_count_dist": {
+      "1": 50
+    },
+    "assistant_len_p50": 40,
+    "assistant_len_p95": 47,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "CoSyn_400k_chemical": {
+    "subset": "CoSyn_400k_chemical",
+    "sampled_rows": 51,
+    "img_count_dist": {
+      "1": 51
+    },
+    "turn_count_dist": {
+      "6": 23,
+      "7": 21,
+      "5": 7
+    },
+    "assistant_len_p50": 192,
+    "assistant_len_p95": 296,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "CoSyn_400k_circuit": {
+    "subset": "CoSyn_400k_circuit",
+    "sampled_rows": 51,
+    "img_count_dist": {
+      "1": 51
+    },
+    "turn_count_dist": {
+      "7": 28,
+      "6": 19,
+      "5": 4
+    },
+    "assistant_len_p50": 184,
+    "assistant_len_p95": 260,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "CoSyn_400k_graphic": {
+    "subset": "CoSyn_400k_graphic",
+    "sampled_rows": 51,
+    "img_count_dist": {
+      "1": 51
+    },
+    "turn_count_dist": {
+      "1": 51
+    },
+    "assistant_len_p50": 988,
+    "assistant_len_p95": 1855,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "CoSyn_400k_music": {
+    "subset": "CoSyn_400k_music",
+    "sampled_rows": 51,
+    "img_count_dist": {
+      "1": 51
+    },
+    "turn_count_dist": {
+      "7": 44,
+      "6": 6,
+      "5": 1
+    },
+    "assistant_len_p50": 164,
+    "assistant_len_p95": 248,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "CoSyn_400k_nutrition": {
+    "subset": "CoSyn_400k_nutrition",
+    "sampled_rows": 204,
+    "img_count_dist": {
+      "1": 204
+    },
+    "turn_count_dist": {
+      "16": 29,
+      "15": 24,
+      "12": 22,
+      "17": 21,
+      "20": 20
+    },
+    "assistant_len_p50": 106,
+    "assistant_len_p95": 457,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "although the": 1
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "although the",
+        "Although the product itself does not contain milk, it is produced in a facility that also processes milk products, suggesting potential cross-contamination.\nAnswer: No"
+      ]
+    ]
+  },
+  "aguvis-stage-1": {
+    "subset": "aguvis-stage-1",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "5": 295,
+      "4": 75,
+      "3": 20,
+      "2": 8,
+      "1": 2
+    },
+    "assistant_len_p50": 31,
+    "assistant_len_p95": 60,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "memotion": {
+    "subset": "memotion",
+    "sampled_rows": 306,
+    "img_count_dist": {
+      "1": 306
+    },
+    "turn_count_dist": {
+      "1": 306
+    },
+    "assistant_len_p50": 120,
+    "assistant_len_p95": 128,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "mmra": {
+    "subset": "mmra",
+    "sampled_rows": 171,
+    "img_count_dist": {
+      "2": 171
+    },
+    "turn_count_dist": {
+      "1": 171
+    },
+    "assistant_len_p50": 134,
+    "assistant_len_p95": 185,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "cocoqa": {
+    "subset": "cocoqa",
+    "sampled_rows": 255,
+    "img_count_dist": {
+      "1": 255
+    },
+    "turn_count_dist": {
+      "1": 137,
+      "2": 76,
+      "3": 23,
+      "4": 15,
+      "5": 4
+    },
+    "assistant_len_p50": 6,
+    "assistant_len_p95": 10,
+    "empty_count": 155,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "art": {
+    "subset": "art",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 390,
+      "2": 10
+    },
+    "assistant_len_p50": 46,
+    "assistant_len_p95": 150,
+    "empty_count": 5,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "groundui": {
+    "subset": "groundui",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 380,
+      "2": 12,
+      "3": 4,
+      "17": 1,
+      "16": 1
+    },
+    "assistant_len_p50": 93,
+    "assistant_len_p95": 93,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "chinesememe": {
+    "subset": "chinesememe",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 191,
+    "assistant_len_p95": 416,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "latex_handwritten": {
+    "subset": "latex_handwritten",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 168,
+    "assistant_len_p95": 276,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "coco_colors": {
+    "subset": "coco_colors",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 239,
+    "assistant_len_p95": 307,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "lnqa": {
+    "subset": "lnqa",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "5": 116,
+      "4": 96,
+      "6": 79,
+      "7": 42,
+      "3": 34
+    },
+    "assistant_len_p50": 45,
+    "assistant_len_p95": 109,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "SynthCodeNet": {
+    "subset": "SynthCodeNet",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 921,
+    "assistant_len_p95": 4961,
+    "empty_count": 0,
+    "very_long_count": 19,
+    "repetition_count": 0,
+    "placeholder_hits": {
+      "<img>": 2,
+      "<image>": 1
+    },
+    "meta_hits": {},
+    "placeholder_examples": [
+      [
+        "<img>",
+        "<loc_0><loc_0><loc_500><loc_500><_HTML_><header>\n    \t<nav class=\"navbar navbar-default navbar-static-top\">\n    \t\t<div class=\"container-fluid\">\n    \t\t\t<div class=\"navbar-header\">\n                    <"
+      ],
+      [
+        "<img>",
+        "<loc_0><loc_0><loc_500><loc_500><_HTML_>\n<section class=\"heading\">\n    <h1><i class=\"fal fa-horizontal-rule\"></i> New Products</h1>\n</section>\n<!-- Flickity HTML init -->\n<section class=\"product-slide"
+      ]
+    ],
+    "meta_examples": []
+  },
+  "tat_dqa": {
+    "subset": "tat_dqa",
+    "sampled_rows": 51,
+    "img_count_dist": {
+      "1": 47,
+      "2": 4
+    },
+    "turn_count_dist": {
+      "6": 51
+    },
+    "assistant_len_p50": 245,
+    "assistant_len_p95": 406,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "CoSyn_400k_document": {
+    "subset": "CoSyn_400k_document",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "9": 217,
+      "8": 138,
+      "10": 17,
+      "7": 11,
+      "6": 10
+    },
+    "assistant_len_p50": 118,
+    "assistant_len_p95": 189,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "GPT-?": 1
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "GPT-?",
+        "The quantity for OpenAI GPT-3 API access is specified in the table under the description.\nAnswer: 500000"
+      ]
+    ]
+  },
+  "wildvision": {
+    "subset": "wildvision",
+    "sampled_rows": 56,
+    "img_count_dist": {
+      "1": 56
+    },
+    "turn_count_dist": {
+      "1": 51,
+      "3": 2,
+      "2": 2,
+      "7": 1
+    },
+    "assistant_len_p50": 523,
+    "assistant_len_p95": 1596,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "I'm sorry": 1
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "I'm sorry",
+        "I'm sorry, I can't provide real-time or current event information, and I don't have the ability to verify the content of images or the actions depicted in them. However, if this image is indeed showin"
+      ]
+    ]
+  },
+  "multihiertt": {
+    "subset": "multihiertt",
+    "sampled_rows": 153,
+    "img_count_dist": {
+      "3": 66,
+      "4": 53,
+      "5": 20,
+      "6": 11,
+      "7": 3
+    },
+    "turn_count_dist": {
+      "1": 150,
+      "2": 2,
+      "3": 1
+    },
+    "assistant_len_p50": 50,
+    "assistant_len_p95": 74,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "CoSyn_400k_math": {
+    "subset": "CoSyn_400k_math",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 1067,
+    "assistant_len_p95": 1801,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "despite the": 1
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "despite the",
+        "To solve this problem, we'll follow these steps:\n\n1) Find the equilibrium points by setting $\\frac{dI}{dt} = 0$:\n\n   $$ 0 = rI(1-I) - cI $$\n   $$ 0 = 0.5I(1-I) - 0.1I $$\n   $$ 0 = 0.5I - 0.5I^2 - 0.1I"
+      ]
+    ]
+  },
+  "localized_narratives": {
+    "subset": "localized_narratives",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 151,
+    "assistant_len_p95": 332,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "densefusion_1m": {
+    "subset": "densefusion_1m",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 1125,
+    "assistant_len_p95": 1558,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "although the": 2,
+      "despite the": 1
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "although the",
+        "The image is a collage of several photographs and text elements. In the top left, there is a photograph of a deer standing in water with lily pads around it. The deer is facing left with its head turn"
+      ],
+      [
+        "despite the",
+        "The image is a digital composite primarily in shades of blue and white, with a central text block and four smaller video frames arranged in a 2x2 grid. At the top, there is a logo for \"ABC American Ba"
+      ]
+    ]
+  },
+  "spark": {
+    "subset": "spark",
+    "sampled_rows": 153,
+    "img_count_dist": {
+      "1": 153
+    },
+    "turn_count_dist": {
+      "2": 98,
+      "1": 55
+    },
+    "assistant_len_p50": 53,
+    "assistant_len_p95": 85,
+    "empty_count": 19,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "CoSyn_400k_table": {
+    "subset": "CoSyn_400k_table",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "9": 142,
+      "10": 113,
+      "8": 74,
+      "11": 37,
+      "5": 22
+    },
+    "assistant_len_p50": 162,
+    "assistant_len_p95": 292,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "GPT-?": 1,
+      "despite the": 1,
+      "although the": 1
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "GPT-?",
+        "The average cognitive load for \"Language learning with Duolingo AI\" is 6.9 and for \"Open-ended conversation with GPT-3\" is 7.2. Since 6.9 is less than 7.2, the statement is true.\nAnswer: Yes"
+      ],
+      [
+        "despite the",
+        "In the table, Cali and Bucaramanga show Low Church Attendance with affiliations to the Green Party and Alternative Democratic Pole, while Ibagu\u00e9 has Low Church Attendance and is affiliated with the Li"
+      ]
+    ]
+  },
+  "SynthChartNet": {
+    "subset": "SynthChartNet",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 242,
+    "assistant_len_p95": 464,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "spot_the_diff": {
+    "subset": "spot_the_diff",
+    "sampled_rows": 204,
+    "img_count_dist": {
+      "2": 204
+    },
+    "turn_count_dist": {
+      "1": 194,
+      "3": 8,
+      "2": 2
+    },
+    "assistant_len_p50": 78,
+    "assistant_len_p95": 213,
+    "empty_count": 2,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "mmevol": {
+    "subset": "mmevol",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "4": 255,
+      "5": 52,
+      "3": 50,
+      "2": 22,
+      "1": 7
+    },
+    "assistant_len_p50": 263,
+    "assistant_len_p95": 1066,
+    "empty_count": 60,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "based on the image": 2,
+      "despite the": 10,
+      "the description is": 1,
+      "although the": 2
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "based on the image",
+        "Firstly, based on the image, the food-related objects present are a popsicle, a homemade popsicle maker, and a bowl of different kinds of fruit. Secondly, upon closely examining the bowl of fruit, I c"
+      ],
+      [
+        "despite the",
+        "The image captures the bustling atmosphere of a shopping mall, teeming with life and activity. The ceiling is a spectacle in itself, adorned with a stunning pattern of purple, yellow, and white flower"
+      ]
+    ]
+  },
+  "nlvr2": {
+    "subset": "nlvr2",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "2": 400
+    },
+    "turn_count_dist": {
+      "2": 251,
+      "1": 145,
+      "4": 2,
+      "3": 2
+    },
+    "assistant_len_p50": 4,
+    "assistant_len_p95": 4,
+    "empty_count": 661,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "wordart": {
+    "subset": "wordart",
+    "sampled_rows": 304,
+    "img_count_dist": {
+      "3": 73,
+      "5": 63,
+      "6": 62,
+      "4": 58,
+      "2": 48
+    },
+    "turn_count_dist": {
+      "1": 304
+    },
+    "assistant_len_p50": 25,
+    "assistant_len_p95": 43,
+    "empty_count": 1,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "yesbut": {
+    "subset": "yesbut",
+    "sampled_rows": 364,
+    "img_count_dist": {
+      "1": 364
+    },
+    "turn_count_dist": {
+      "1": 364
+    },
+    "assistant_len_p50": 163,
+    "assistant_len_p95": 341,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "although the": 5
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "although the",
+        "Although the person has purchased a king size bed, but only less than half of the space is used by the person for sleeping."
+      ],
+      [
+        "although the",
+        "The image is ironic because although the clothes are of branded companies but they are hanging in very poor building."
+      ]
+    ]
+  },
+  "svrd": {
+    "subset": "svrd",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 270,
+    "assistant_len_p95": 1117,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "olmOCR-mix-0225-books": {
+    "subset": "olmOCR-mix-0225-books",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 1767,
+    "assistant_len_p95": 5009,
+    "empty_count": 0,
+    "very_long_count": 20,
+    "repetition_count": 1,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "although the": 2,
+      "despite the": 1
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "although the",
+        "years experience in teaching/research/extension in Institution of University standard in the faculty of Agriculture/Veterinary & Animal Science/Dairy Science/Home Science/Agricultural Engineering.\n\n2."
+      ],
+      [
+        "despite the",
+        "both during the few days that she had passed on earth. Maurice, in his turn, said that his mother, dying young, was also called by the same name, and this coincidence, how little soever was its import"
+      ]
+    ]
+  },
+  "synthdog": {
+    "subset": "synthdog",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 302,
+    "assistant_len_p95": 718,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "although the": 1
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "although the",
+        "scale that roughly fo llows the WI rating system w ith respect to its physical and technical dema nds. Typically s tarts at M4. Subgrades of ar e commonly use d, although the distinc tions are typical"
+      ]
+    ]
+  },
+  "olmOCR-mix-0225-documents": {
+    "subset": "olmOCR-mix-0225-documents",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 2427,
+    "assistant_len_p95": 6327,
+    "empty_count": 0,
+    "very_long_count": 49,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {
+      "although the": 6,
+      "the sentence structure": 1,
+      "despite the": 2
+    },
+    "placeholder_examples": [],
+    "meta_examples": [
+      [
+        "although the",
+        "performed is to use measured, though very weak, ground motion data from small earthquakes to compare the predictions. Cramer and Real (1992) and the companion paper by Stepp (1992) discuss the results"
+      ],
+      [
+        "although the",
+        "(f) A document purporting to convey or encumber real property or any interest therein that has been recorded by the register of deeds for the jurisdiction in which the real property is located, althou"
+      ]
+    ]
+  },
+  "latexformulas": {
+    "subset": "latexformulas",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 122,
+    "assistant_len_p95": 308,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "tal_ocr_eng": {
+    "subset": "tal_ocr_eng",
+    "sampled_rows": 400,
+    "img_count_dist": {
+      "1": 400
+    },
+    "turn_count_dist": {
+      "1": 400
+    },
+    "assistant_len_p50": 24,
+    "assistant_len_p95": 69,
+    "empty_count": 31,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  },
+  "SynthFormulaNet": {
+    "subset": "SynthFormulaNet",
+    "sampled_rows": 306,
+    "img_count_dist": {
+      "1": 306
+    },
+    "turn_count_dist": {
+      "1": 306
+    },
+    "assistant_len_p50": 140,
+    "assistant_len_p95": 604,
+    "empty_count": 0,
+    "very_long_count": 0,
+    "repetition_count": 0,
+    "placeholder_hits": {},
+    "meta_hits": {},
+    "placeholder_examples": [],
+    "meta_examples": []
+  }
+}

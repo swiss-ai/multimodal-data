@@ -1,37 +1,56 @@
 #!/bin/bash
-# Download Multilingual LibriSpeech dataset for audio tokenization
+# Download Multilingual LibriSpeech (facebook/multilingual_librispeech) — 7 non-English
+# subsets in parquet format (~88 GiB) for audio tokenization.
+#
+# Subsets: german, dutch, french, spanish, italian, portuguese, polish
+# (each top-level dir holds the train/dev/test/9_hours/1_hours parquet shards;
+#  the repo's legacy `data/` audio tree is intentionally NOT downloaded.)
+#
+# Usage:
+#   sbatch /iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download/audio/mls/download.sh
+#
 #SBATCH --account=infra01
-#SBATCH --environment=nemo
 #SBATCH --job-name=dwnld-mls
-#SBATCH --output=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/hf-%x-%A.out
-#SBATCH --error=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/hf-%x-%A.err
+#SBATCH --environment=nemo_26_02
+#SBATCH --output=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/mls-%x-%A.out
+#SBATCH --error=/iopsstor/scratch/cscs/%u/apertus/multimodal-data/01-dataset-download/logs/mls-%x-%A.err
 #SBATCH --partition=normal
 #SBATCH --time=12:00:00
-#SBATCH --reservation=PA-2338-RL
 #SBATCH --nodes=1
+#SBATCH --cpus-per-task=288
+#SBATCH --reservation=SD-69241-apertus-1-5-0
 
-export HF_TOKEN="$(cat $HOME/.hf-token)"
+set -euo pipefail
 
-# Install hf_transfer for faster downloads
-pip install -q hf_transfer
-
+export PYTHONPATH="/capstor/store/cscs/swissai/infra01/MLLM/pip-packages:${PYTHONPATH:-}"
+export PATH="/capstor/store/cscs/swissai/infra01/MLLM/pip-packages/bin:${PATH}"
 export HF_HUB_ENABLE_HF_TRANSFER=1
-export HF_HUB_CACHE="/capstor/store/cscs/swissai/infra01/audio-datasets/hf_hub_cache"
-export CACHE_DIR="/capstor/store/cscs/swissai/infra01/audio-datasets/mls_cache"
-export NUM_PROC=64
-export MAX_RETRIES=15
-export BACKOFF_FACTOR=1.0
 
-SCRIPT_DIR="/iopsstor/scratch/cscs/xyixuan/apertus/multimodal-data/01-dataset-download"
+DATASET_REPO="facebook/multilingual_librispeech"
+REVISION="2e83e61823b4c47dcbcb1980bb88601274127609"  # main as of 2026-06-06
+DEST_DIR="/capstor/store/cscs/swissai/infra01/audio-datasets/raw/hf___facebook___multilingual_librispeech"
 
-# Download all 7 non-English subsets of Multilingual LibriSpeech
-# Subsets: german, dutch, french, spanish, italian, portuguese, polish
-# Each subset has splits: train, dev, test, 9_hours, 1_hours
+export HF_HUB_CACHE="${DEST_DIR}/.hf_cache"
+mkdir -p "${DEST_DIR}"
 
-python "$SCRIPT_DIR/download_hf_dataset.py" \
-    --dataset-name "facebook/multilingual_librispeech" \
-    --subset-name "german,dutch,french,spanish,italian,portuguese,polish" \
-    --cache-dir "$CACHE_DIR" \
-    --num-proc "$NUM_PROC" \
-    --max-retries "$MAX_RETRIES" \
-    --backoff-factor "$BACKOFF_FACTOR"
+echo "========================================"
+echo "Multilingual LibriSpeech (7 non-English subsets) Download"
+echo "Repo:     ${DATASET_REPO}"
+echo "Revision: ${REVISION}"
+echo "Dest:     ${DEST_DIR}"
+echo "========================================"
+
+# All 7 language patterns go in a SINGLE --include (multiple --include flags
+# silently overwrite each other in huggingface-cli).
+huggingface-cli download "${DATASET_REPO}" \
+  --repo-type dataset \
+  --revision "${REVISION}" \
+  --local-dir "${DEST_DIR}" \
+  --include "german/*" "dutch/*" "french/*" "spanish/*" "italian/*" "portuguese/*" "polish/*" \
+  --max-workers 64
+
+echo "[$(date '+%F %T')] Download finished"
+rm -rf "${HF_HUB_CACHE}"
+echo "Final size:"
+du -sh "${DEST_DIR}"
+echo "Done."
