@@ -84,3 +84,7 @@ env/
 
 # 55MB test sample — keep local, never track
 01-dataset-download/audio/wavepulse_radio/samples/test_bad.wav
+
+# Large reproducible audioset length-bucket indexes — keep local, regenerate as needed
+01-dataset-download/audio/audio_set/length_buckets/audioset_unbal_train_buckets.tsv
+01-dataset-download/audio/audio_set/length_buckets/audioset_unbal_train_utt2len.tsv
