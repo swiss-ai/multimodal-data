@@ -1,67 +1,15 @@
 # Dataset Download Scripts
 
-Tools for downloading all datasets used in Apertus training onto the CSCS
-filesystems, plus utilities for HuggingFace cache integrity verification,
-dataset loading tests, and SHAR repacking.
+Tools for downloading all datasets used in Apertus training, plus utilities for
+verifying HuggingFace cache integrity and testing dataset loading.
 
 Most datasets are distributed on HuggingFace Hub and can be downloaded with the
-generic scripts in this directory. A few require custom procedures (direct
-wget, Zenodo, Kaggle, img2dataset) and live under `special/`. Per-dataset
-download recipes (pinned by commit) live under `../datasets/<dataset>/download.slurm`.
+generic scripts in this directory. A few datasets require custom download procedures
+(direct wget, Zenodo, Kaggle, or img2dataset); those are covered in `special/`.
 
-## Pick a download recipe by file *shape*
+## Quick Start
 
-The bottleneck is **how a dataset's bytes are packed**, not its total size:
-
-- **Few large files** (parquet, tar, big shards) → `huggingface-cli` +
-  `HF_HUB_ENABLE_HF_TRANSFER=1`, which chunks each big file into parallel byte
-  ranges. Template: `../datasets/chartnet_realworldchart/download.slurm`.
-- **Many small files** (wav, opus, flac, jpg) → `git clone` + `git lfs pull`.
-  `huggingface-cli` pays per-file HTTP overhead, so thousands of tiny files
-  crawl; git batches the LFS resolution instead. Template:
-  `../datasets/police_scanner/download.slurm`.
-
-## Convention: one `download.slurm` per dataset
-
-Each dataset lives in its own directory under `../datasets/<dataset>/` and
-ships a self-contained download script. All download scripts use
-**`huggingface-cli download`** (raw files straight to a `--local-dir`, pinned
-by `--revision`), not the `datasets` builder. The shape is the same everywhere
-— see any recent script such as `../datasets/chartnet_realworldchart/download.slurm`
-as the reference template.
-
-Required settings (every HF download script):
-
-- `#SBATCH --account=infra01 --partition=normal --time=12:00:00 --cpus-per-task=288`
-- `#SBATCH --environment=nemo_26_02` (verify the current container — rolls periodically)
-- `#SBATCH --reservation=SD-69241-apertus-1-5-0` (verify with `scontrol show reservation` — names roll monthly)
-- Pin the commit: `--revision <sha>`
-- `export HF_HUB_ENABLE_HF_TRANSFER=1` and `--max-workers 64`
-- Shared pip packages: set both `PYTHONPATH` and `PATH` to
-  `/capstor/store/cscs/swissai/infra01/MLLM/pip-packages`
-- Destination naming:
-  `/capstor/store/cscs/swissai/infra01/{audio-,vision-}datasets/raw/{hf|ms}___{Provider}___{Dataset}`
-- Clean up the hub cache after download: `rm -rf "${HF_HUB_CACHE}"`
-- Logs: `/iopsstor/scratch/cscs/%u/apertus/multimodal-data/download/logs/`
-
-Downloading a subset of a repo (e.g. selected languages): pass **all** glob
-patterns to a **single** `--include` flag — multiple `--include` flags silently
-overwrite each other.
-
-```bash
-huggingface-cli download facebook/multilingual_librispeech \
-    --repo-type dataset --revision <sha> --local-dir "$DEST" \
-    --include "german/*" "dutch/*" "french/*" --max-workers 64
-```
-
-Multi-TB datasets should add an `afterany` auto-resubmit loop (one 12 h window
-is not enough); see `../datasets/peoples_speech/unsupervised/download.sh` for
-the pattern.
-
-`reproduce_apertus_downloads.sh` records the exact commands used for the
-Apertus 1.5 download set.
-
-## Quick Start (generic `download_hf_dataset.slurm`)
+To reproduce all Apertus dataset downloads:
 
 ```bash
 # Set cache locations (adjust to your storage)
@@ -78,73 +26,87 @@ For datasets that require special handling, see the `special/` directory.
 
 ## Dependencies
 
-All required Python packages are specified in `requirements.txt` with minimum
-version requirements:
+All required Python packages are specified in `requirements.txt` with minimum version requirements:
 
 ```bash
+# Install dependencies locally
 pip install -r requirements.txt
 ```
 
 **Key dependencies:**
-- `huggingface_hub>=0.16.0,<1.0.0` — **CRITICAL**: must be <1.0.0
-  (`configure_http_backend` was removed in 1.0.0)
-- `datasets>=2.14.0` — dataset loading and preparation
-- `hf_transfer>=0.1.0` — optional: faster downloads
-- `requests>=2.28.0` — HTTP session with security fixes
-- `urllib3>=1.26.0` — retry mechanism
-- `tqdm>=4.64.0` — progress bars for cache verification
+- `huggingface_hub>=0.16.0,<1.0.0` - **CRITICAL**: Must be <1.0.0 (configure_http_backend removed in 1.0.0)
+- `datasets>=2.14.0` - Dataset loading and preparation
+- `hf_transfer>=0.1.0` - Optional: faster downloads
+- `requests>=2.28.0` - HTTP session with security fixes
+- `urllib3>=1.26.0` - Retry mechanism
+- `tqdm>=4.64.0` - Progress bars for cache verification
 
-The SLURM scripts install these dependencies at runtime.
+**Note**: The SLURM script automatically installs these dependencies at runtime using `requirements.txt`.
 
 ## Scripts Overview
 
 ### 1. `download_hf_dataset.py`
 
-Downloads and processes HuggingFace datasets to a local cache with HTTP retry
-logic and automatic configuration detection. Handles HF Hub API rate limits via
-its retry logic; on failure you can just restart the script and it resumes,
+Downloads and processes HuggingFace datasets to a local cache with HTTP retry logic and automatic configuration detection.
+It can deal with hf hub api rate limits, with its retry logic. Upon failure you can just restart the script and it will resume,
 skipping already-downloaded configs.
 
 **What it does:**
 - Downloads datasets from HuggingFace Hub with configurable retry logic
-- If subset not specified, auto-detects and downloads all dataset configurations
+- If subset not specified - Auto-detects and downloads all dataset configurations
 - Skips already-cached configurations automatically
 - Supports parallel downloads with configurable workers
 - Provides detailed error reports for failed downloads
 
 **Key options:**
 - `--dataset-name`: HuggingFace dataset repository (required)
-- `--subset-name`: specific config(s) to download (comma-separated), or auto-detect all if omitted
-- `--cache-dir`: local HF *datasets* cache (required) — where the processed dataset files end up. Don't confuse with the HF *hub* cache.
-- `--num-proc`: parallel download processes (default: auto-detect)
-- `--max-retries`: max retry attempts on failure (default: 5)
-- `--backoff-factor`: exponential backoff multiplier (default: 1.0)
-- `--force-redownload`: force re-download even if cached
-- `--trust-remote-code`: allow using dataset script
+- `--subset-name`: Specific config(s) to download (comma-separated) or auto-detect all if omitted
+- `--cache-dir`: Local cache directory path (required) - this directory is the hf datasets cache location where the processed dataset files which are rdy will be stored. Don't mix this up with the hf hub cache.
+- `--num-proc`: Number of parallel download processes (default: auto-detect)
+- `--max-retries`: Maximum retry attempts on failure (default: 5)
+- `--backoff-factor`: Exponential backoff multiplier (default: 1.0)
+- `--force-redownload`: Force re-download even if cached
+- `--trust-remote-code`: Allow using dataset script
 
 **Cache Configuration:**
 
-The download process uses **two separate cache locations**:
+The download process uses **two separate cache locations** both can be configured:
 
-1. **HF Hub Cache (`HF_HUB_CACHE`)** — raw files downloaded from HuggingFace Hub.
-   Default: `~/.cache/huggingface/hub`.
-2. **Datasets Cache (`CACHE_DIR`)** — processed datasets ready for use.
-   Must be specified via `--cache-dir`.
+1. **HF Hub Cache (`HF_HUB_CACHE`)**:
+   - Stores raw files downloaded from HuggingFace Hub
+   - Default: `~/.cache/huggingface/hub`
+   - These are the original files before any processing
 
-**On shared clusters:** point both `HF_HUB_CACHE` and `CACHE_DIR` at a shared
-filesystem so teams don't re-download the same files. Example:
+2. **Datasets Cache (`CACHE_DIR`)**:
+   - Stores processed datasets ready for use
+   - Must be specified via `--cache-dir` parameter
+   - These are the files after `download_and_prepare()` processing
+
+**Considerations on shared clusters**
+- Teams often share a central HF cache location to avoid re-downloading the same files.
+  Set `HF_HUB_CACHE` and `CACHE_DIR` to a shared filesystem path.
+- Example:
+  - `export CACHE_DIR=/shared/vision-datasets/hf_datasets_cache`
+  - `export HF_HUB_CACHE=/shared/vision-datasets/hf_hub_cache`
+
+**Setting the cache location example:**
+```bash
+# Set custom hub cache location for large downloads
+export HF_HUB_CACHE="/shared/hf_hub_cache"
+python download_hf_dataset.py --dataset-name "..." --cache-dir "/path/to/cache"
+
+# Or inline:
+HF_HUB_CACHE="/shared/hf_hub_cache" python download_hf_dataset.py ...
 ```
-export CACHE_DIR=/shared/vision-datasets/hf_datasets_cache
-export HF_HUB_CACHE=/shared/vision-datasets/hf_hub_cache
-```
 
-**Tips:**
-- For unstable networks, raise `--max-retries` and `--backoff-factor`.
-- HF datasets are first downloaded by the Hub, then processed by the
-  `datasets` library. If processing errors out after a clean download, the
-  cache may be corrupted (common on distributed FS with large datasets) —
-  run `hf_hub_cache_check.py` to detect and re-pull missing/corrupted blobs.
-- The retry logic respects HF's `Retry-After` headers; you will not be blocked.
+If `HF_HUB_CACHE` is not set, HuggingFace libraries default to `~/.cache/huggingface/hub`.
+
+**Tips/Useful Knowledge:**
+- When network is unstable (use higher `--max-retries` and `--backoff-factor`)
+- Hf datasets are first downloaded by the huggingface hub and then processed by hf datasets library.
+- If an error occurs during processing after download, it might be that the cache is corrupted (can happen especially with large datasets on the distributed filesystem)
+- In such case, run the hf_hub_cache_check provided to make sure the cache is valid
+- The retry logic doesn't overwhelm the hub api, it respects retry-after headers and waits for the specified time before retrying - you will not be blocked ;)
 
 **Example:**
 ```bash
@@ -153,7 +115,7 @@ python download_hf_dataset.py \
     --dataset-name "HuggingFaceM4/FineVision" \
     --cache-dir "/path/to/cache"
 
-# Specific configs with retry tuning
+# Download specific configs with retry tuning
 python download_hf_dataset.py \
     --dataset-name "ibm-research/duorc" \
     --subset-name "ParaphraseRC,SelfRC" \
@@ -162,110 +124,214 @@ python download_hf_dataset.py \
     --backoff-factor 1.5
 ```
 
+---
+
 ### 2. `download_hf_dataset.slurm`
 
-SLURM wrapper for `download_hf_dataset.py` with environment setup and job
-management. Installs deps from `requirements.txt`, cleans stale lock files,
-and configures resources.
+SLURM wrapper for `download_hf_dataset.py` with environment setup and job management.
+
+**What it does:**
+- Sets up Python environment with required packages (datasets, hf_transfer, huggingface_hub)
+- Configures SLURM job parameters and resource allocation
+- Cleans up stale lock files before download
+- Provides detailed job logging and progress tracking
 
 **Configuration via environment variables:**
-- `DATASET_NAME`, `SUBSET_NAME`, `CACHE_DIR`, `HF_HUB_CACHE`, `NUM_PROC`,
-  `MAX_RETRIES`, `BACKOFF_FACTOR`, `FORCE_REDOWNLOAD`, `USE_HF_TRANSFER`,
-  `CLUSTER_REPO_HOME`.
-- `CLUSTER_REPO_HOME` defaults to `SLURM_SUBMIT_DIR` and must point to the
-  repository checkout in the cluster environment.
+- `DATASET_NAME`: HF dataset repo (default: mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M)
+- `SUBSET_NAME`: Dataset config(s) or use `""` to auto-detect all
+- `CACHE_DIR`: Datasets cache path for processed datasets (default: ~/.cache/huggingface/datasets)
+- `HF_HUB_CACHE`: HuggingFace Hub cache path for raw downloads (default: ~/.cache/huggingface/hub) - IMPORTANT for large datasets
+- `NUM_PROC`: Download workers (default: auto = half of CPUs)
+- `MAX_RETRIES`: Max retry attempts for each specific http download request (default: 10)
+- `BACKOFF_FACTOR`: Backoff multiplier (default: 1.2)
+- `FORCE_REDOWNLOAD`: Re-download if cached (default: false)
+- `USE_HF_TRANSFER`: Enable fast transfer of actual downloads (default: false, bypasses retry logic)
+- `CLUSTER_REPO_HOME`: Defaults to `SLURM_SUBMIT_DIR`, must point to location of this repository in the cluster environment
 
 **Example:**
 ```bash
-sbatch download_hf_dataset.slurm                                  # defaults
-DATASET_NAME="google/docci" sbatch download_hf_dataset.slurm ""   # auto-detect all configs
+# Use defaults
+sbatch download_hf_dataset.slurm
+
+# Override dataset
+DATASET_NAME="google/docci" sbatch download_hf_dataset.slurm ""
+
+# Set custom hub cache for large datasets
 HF_HUB_CACHE="/shared/hf_hub_cache" sbatch download_hf_dataset.slurm ocrvqa
+
+# Tune for unstable network
 MAX_RETRIES=20 BACKOFF_FACTOR=1.5 sbatch download_hf_dataset.slurm ocrvqa
 ```
 
-### 3. `hf_hub_cache_check.py` / `hf_hub_cache_check.slurm`
+---
 
-Parallel SHA256 verification of HuggingFace cache blobs (filename *is* the
-sha256). Useful for catching corruption on the distributed filesystem after a
-large download, before processing. The SLURM wrapper runs the same check as a
-cluster job.
+### 3. `hf_hub_cache_check.py`
 
+Verifies integrity of downloaded HuggingFace cache files using parallel SHA256 checksum verification.
+In thr HF Hub cache files are stored with their sha256 hash as filename. This script verifies the integrity. 
+Can be used to make sure source files are valid before processing them. Especially on huge datasets and files on distributed filesystems
+this is useful.
+
+**What it does:**
+- Recursively scans cache for all blob files (including nested dataset subsets)
+- Verifies each blob's SHA256 hash matches its filename
+- Uses memory-mapped I/O for efficient processing of large files
+- Parallel verification with configurable workers and batching
+- Identifies corrupted or mismatched files
+
+**Key options:**
+- `--cache-dir`: HF cache directory (default: ~/.cache/huggingface)
+- `--dataset`: Verify specific dataset only (e.g., 'username/dataset-name')
+- `--workers`: Number of parallel workers (default: CPU count)
+- `--batch-size`: Files per batch for granular progress (default: 10)
+- `--list`: List all datasets in cache and exit
+
+**Useful Tips:**
+- The script prints the corrupted files so you can delete them afterwards manually. 
+- When rerun the download script, it will notice the blobs are missing and redownload them.
+- HF hub checks file hashes on download, but it doesn't guarantee that the downloaded files remain valid after.
+- The hash is also not checked by the hf datasets library before processing
+
+**Example:**
 ```bash
-python hf_hub_cache_check.py                                    # all datasets
-python hf_hub_cache_check.py --dataset "HuggingFaceM4/FineVision" --workers 32
-python hf_hub_cache_check.py --list                             # list cached datasets, no verify
+# Verify all datasets
+python hf_hub_cache_check.py
+
+# Verify specific dataset
+python hf_hub_cache_check.py --dataset "HuggingFaceM4/FineVision"
+
+# List cached datasets, not run any verification
+python hf_hub_cache_check.py --list
+
+# Fast verification with more workers
+python hf_hub_cache_check.py --workers 32 --batch-size 20
+```
+
+---
+
+### 4. `hf_hub_cache_check.slurm`
+
+SLURM wrapper for `hf_hub_cache_check.py` for cluster-based verification.
+
+**What it does:**
+- Runs cache verification as a SLURM job
+- Configures parallel workers and batch size
+- Provides job logging and completion tracking
+
+**Configuration:**
+- `DATASET_NAME`: Specific dataset to verify (default: mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M)
+- Workers and batch size are hardcoded in the script (128 workers, batch size 10)
+
+**Example:**
+```bash
+# Verify default dataset
 sbatch hf_hub_cache_check.slurm
+
+# Verify specific dataset
 DATASET_NAME="google/docci" sbatch hf_hub_cache_check.slurm
 ```
 
-**Key options (Python):** `--cache-dir`, `--dataset`, `--workers`,
-`--batch-size`, `--list`.
+---
 
-Corrupted blobs are printed so you can delete them; re-running the download
-re-fetches the missing blobs. HF Hub verifies hashes only at download time —
-this script lets you re-verify after the fact.
+### 5. `load_dataset_test.py`
 
-### 4. `load_dataset_test.py` / `load_dataset_test.slurm`
+Tests loading of downloaded HuggingFace datasets with comprehensive statistics reporting.
 
-Tests loading of downloaded HuggingFace datasets with comprehensive statistics
-reporting.
+**What it does:**
+- Tests dataset loading using two methods: "default" (load_dataset) or "builder_load" (builder.as_dataset)
+- Auto-detects and tests all configs when `--subset-name` is not specified
+- Supports comma-separated config names for batch testing
+- Prints condensed stats for multi-config tests, full details for single config
+- Provides summary report with success/failure counts
+- Supports both streaming and non-streaming modes
+- Supports split slicing notation (e.g., "train[:100]")
 
-**Methods:** `"default"` (`load_dataset`) or `"builder_load"`
-(`builder.as_dataset`). Auto-detects all configs when `--subset-name` is
-omitted; supports comma-separated config names for batch testing. Prints
-condensed stats for multi-config tests, full details for single-config.
-Supports streaming and split slicing (`"train[:100]"`).
+**Key options:**
+- `--dataset-name`: HuggingFace dataset repository (required)
+- `--subset-name`: Config name(s) - single, comma-separated, or omit to auto-detect all (optional)
+- `--split`: Split to load, supports slicing (default: train)
+- `--cache-dir`: Datasets cache directory (required)
+- `--method`: Loading method - "default" or "builder_load" (default: builder_load)
+- `--streaming`: Enable streaming mode (default: False)
+- `--num-proc`: Number of parallel processes (optional)
 
-**Key options:** `--dataset-name` (required), `--subset-name`, `--split`,
-`--cache-dir` (required), `--method`, `--streaming`, `--num-proc`.
+**Cache Configuration:**
 
-**SLURM env vars:** `DATASET_NAME`, `SUBSET_NAME`, `SPLIT`, `CACHE_DIR`,
-`HF_HUB_CACHE`, `METHOD`, `STREAMING`, `NUM_PROC`, `CLUSTER_REPO_HOME`.
+Uses the same two-cache system as download scripts:
+- **HF Hub Cache (`HF_HUB_CACHE`)**: Raw downloads from HuggingFace
+- **Datasets Cache (`--cache-dir`)**: Processed datasets ready for use
 
+**Example:**
 ```bash
 # Test all configs (auto-detect)
 python load_dataset_test.py \
     --dataset-name "ibm-research/duorc" \
     --cache-dir "~/.cache/huggingface/datasets"
 
-# Single config, full details, builder_load
+# Test specific configs (comma-separated)
 python load_dataset_test.py \
-    --dataset-name "google/docci" --subset-name "default" \
-    --cache-dir "./cache" --method builder_load
+    --dataset-name "ibm-research/duorc" \
+    --subset-name "ParaphraseRC,SelfRC" \
+    --cache-dir "./cache"
 
-# Streaming + slice
+# Test single config with full details
 python load_dataset_test.py \
-    --dataset-name "google/docci" --cache-dir "./cache" \
-    --method default --streaming --split "train[:1000]"
+    --dataset-name "google/docci" \
+    --subset-name "default" \
+    --cache-dir "./cache" \
+    --method builder_load
 
-# SLURM
-sbatch load_dataset_test.slurm
-DATASET_NAME="google/docci" sbatch load_dataset_test.slurm
+# Test with streaming and slice
+python load_dataset_test.py \
+    --dataset-name "google/docci" \
+    --cache-dir "./cache" \
+    --method default \
+    --streaming \
+    --split "train[:1000]"
 ```
 
-### 5. `merge_shar.py`
+---
 
-Merges existing Lhotse SHAR shards into fewer, larger shards **without**
-re-decoding/resampling/re-tokenizing. Preserves field order and alignment from
-`shar_index.json` so `CutSet.from_shar(...)` stays valid.
+### 6. `load_dataset_test.slurm`
 
-### 6. `rsync_*_to_capstor.slurm`
+SLURM wrapper for `load_dataset_test.py` for cluster-based dataset testing.
 
-SLURM jobs that rsync staged datasets between scratch and capstor storage:
+**What it does:**
+- Runs dataset loading test as a SLURM job
+- Installs dependencies from requirements.txt
+- Configures cache locations and loading parameters
+- Provides detailed job logging
 
-- `rsync_audio_only_to_capstor.slurm` — push audio-dataset-only payloads.
-- `rsync_ups_to_capstor.slurm` — generic upstream-to-capstor push.
-- `rsync_voxpopuli_to_capstor.slurm` — VoxPopuli-specific transfer.
+**Configuration via environment variables:**
+- `DATASET_NAME`: HF dataset repo (default: mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M)
+- `SUBSET_NAME`: Dataset config (optional)
+- `SPLIT`: Split to load (default: train)
+- `CACHE_DIR`: Datasets cache path (default: ~/.cache/huggingface/datasets)
+- `HF_HUB_CACHE`: Hub cache path (default: ~/.cache/huggingface/hub)
+- `METHOD`: Loading method - "default" or "builder_load" (default: builder_load)
+- `STREAMING`: Enable streaming (default: false)
+- `NUM_PROC`: Number of processes (default: auto)
+- `CLUSTER_REPO_HOME`: Repository location (default: $SLURM_SUBMIT_DIR)
 
-### 7. `to_shar_examples.sh`
+**Example:**
+```bash
+# Test with defaults
+sbatch builder_loader_test.slurm
 
-Reference commands for converting various source formats into Lhotse SHAR
-shards. Use as a cookbook when adding a new dataset's `prepare_to_shar.slurm`.
+# Test specific dataset
+DATASET_NAME="google/docci" sbatch builder_loader_test.slurm
+
+# Test with streaming mode
+METHOD="default" STREAMING=true sbatch builder_loader_test.slurm
+```
+
+---
+
+---
 
 ## `special/` — Dataset-specific Download Scripts
 
-Some datasets cannot be retrieved with a plain `hf download` and need extra
-steps.
+Some datasets cannot be retrieved with a plain `hf download` and need extra steps.
 
 | Directory | Dataset | Method |
 |---|---|---|
@@ -279,35 +345,131 @@ steps.
 | `special/bigdocs/` | BigDocs-7.5M (extra) | wget external image archives (COCO, TextVQA, TableFact) |
 | `special/medical/` | Various medical datasets | Kaggle CLI + wget from Zenodo/Figshare |
 
-## `audio/` — Cross-dataset audio helpers
+---
+
+## Important Notes
+
+**HuggingFace Authentication:**
+
+For private datasets or higher API rate limits, set your HuggingFace token:
+```bash
+export HF_TOKEN="your_token_here"
+```
+
+**Cache Location:**
+
+Make sure you point the cache-dir to the spot where the dataset should be for further processing (dedup, tokenize etc...)
+
+## Typical Workflow
+
+1. **Download dataset:**
+   ```bash
+   DATASET_NAME="google/docci" sbatch download_hf_dataset.slurm
+   ```
+
+2. **Verify integrity if download failed or you want to reprocess a large dataset after some time:**
+   ```bash
+   DATASET_NAME="google/docci" sbatch hf_hub_cache_check.slurm
+   ```
+
+3. **Test dataset loading:**
+   ```bash
+   DATASET_NAME="google/docci" sbatch load_dataset_test.slurm
+   ```
+
+4. **Use in training:**
+   Point your training script to the cache directory with `--cache-dir` flag.
+
+---
+
+## Per-dataset download recipes (from `data-pipeline/adapter`)
+
+Per-dataset download scripts live under `../datasets/<dataset>/download.slurm`.
+The next sections document the conventions those scripts follow.
+
+### Pick a download recipe by file *shape*
+
+The bottleneck is **how a dataset's bytes are packed**, not its total size:
+
+- **Few large files** (parquet, tar, big shards) → `huggingface-cli` +
+  `HF_HUB_ENABLE_HF_TRANSFER=1`, which chunks each big file into parallel byte
+  ranges. Template: `../datasets/chartnet_realworldchart/download.slurm`.
+- **Many small files** (wav, opus, flac, jpg) → `git clone` + `git lfs pull`.
+  `huggingface-cli` pays per-file HTTP overhead, so thousands of tiny files
+  crawl; git batches the LFS resolution instead. Template:
+  `../datasets/police_scanner/download.slurm`.
+
+### Convention: one `download.slurm` per dataset
+
+Each dataset lives in its own directory under `../datasets/<dataset>/` and
+ships a self-contained download script. All download scripts use
+**`huggingface-cli download`** (raw files straight to a `--local-dir`, pinned
+by `--revision`), not the `datasets` builder. The shape is the same
+everywhere — see any recent script such as
+`../datasets/chartnet_realworldchart/download.slurm` as the reference
+template.
+
+Required settings (every HF download script):
+
+- `#SBATCH --account=infra01 --partition=normal --time=12:00:00 --cpus-per-task=288`
+- `#SBATCH --environment=nemo_26_02` (verify the current container — rolls periodically)
+- `#SBATCH --reservation=SD-69241-apertus-1-5-0` (verify with `scontrol show reservation` — names roll monthly)
+- Pin the commit: `--revision <sha>`
+- `export HF_HUB_ENABLE_HF_TRANSFER=1` and `--max-workers 64`
+- Shared pip packages: set both `PYTHONPATH` and `PATH` to
+  `/capstor/store/cscs/swissai/infra01/MLLM/pip-packages`
+- Destination naming:
+  `/capstor/store/cscs/swissai/infra01/{audio-,vision-}datasets/raw/{hf|ms}___{Provider}___{Dataset}`
+- Clean up the hub cache after download: `rm -rf "${HF_HUB_CACHE}"`
+- Logs: `/iopsstor/scratch/cscs/%u/apertus/multimodal-data/download/logs/`
+
+Downloading a subset of a repo (e.g. selected languages): pass **all** glob
+patterns to a **single** `--include` flag — multiple `--include` flags
+silently overwrite each other.
+
+```bash
+huggingface-cli download facebook/multilingual_librispeech \
+    --repo-type dataset --revision <sha> --local-dir "$DEST" \
+    --include "german/*" "dutch/*" "french/*" --max-workers 64
+```
+
+Multi-TB datasets should add an `afterany` auto-resubmit loop (one 12 h
+window is not enough); see `../datasets/peoples_speech/unsupervised/download.sh`
+for the pattern.
+
+### `merge_shar.py`
+
+Merges existing Lhotse SHAR shards into fewer, larger shards **without**
+re-decoding/resampling/re-tokenizing. Preserves field order and alignment
+from `shar_index.json` so `CutSet.from_shar(...)` stays valid.
+
+### `to_shar_examples.sh`
+
+Reference commands for converting various source formats into Lhotse SHAR
+shards. Use as a cookbook when adding a new dataset's `prepare_to_shar.slurm`.
+
+### `rsync_*_to_capstor.slurm`
+
+SLURM jobs that rsync staged datasets between scratch and capstor storage:
+
+- `rsync_audio_only_to_capstor.slurm` — push audio-dataset-only payloads.
+- `rsync_ups_to_capstor.slurm` — generic upstream-to-capstor push.
+- `rsync_voxpopuli_to_capstor.slurm` — VoxPopuli-specific transfer.
+
+### `audio/` — cross-dataset audio helpers
 
 Pipeline-stage scripts that operate across audio datasets:
 
 - `build_all_interleave.slurm` — build interleaved audio+text shards across
-  all configured datasets.
+  configured datasets.
 - `build_voxpopuli_interleave.slurm` — VoxPopuli-specific interleave builder.
 - `run_vad_multichannel.py` — multichannel voice-activity detection helper
   used by several speech datasets.
 
-## Authentication
+### Authentication
 
 For gated/private datasets or higher rate limits:
 
 ```bash
 export HF_TOKEN="$(cat $HOME/.hf-token)"
-# or
-export HF_TOKEN="your_token_here"
 ```
-
-## Typical Workflow
-
-1. **Per-dataset download** (most common):
-   `sbatch <abs-path>/datasets/<dataset>/download.slurm`
-2. **Generic HF download**:
-   `DATASET_NAME="google/docci" sbatch download_hf_dataset.slurm`
-3. **Verify integrity** (failed download or large dataset re-process):
-   `DATASET_NAME="google/docci" sbatch hf_hub_cache_check.slurm`
-4. **Test loading**:
-   `DATASET_NAME="google/docci" sbatch load_dataset_test.slurm`
-5. **Process:** hand the `raw/<...>` dir to the dataset's
-   convert/tokenize/SHAR steps.

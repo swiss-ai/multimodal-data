@@ -10,14 +10,12 @@ open-weight models, image-text pairing, and verification across 60+ datasets.
 .
 ├── README.md
 ├── medical/           # Medical data pipeline (streaming adapters + filters + writers)
-├── preprocessing/     # Earlier streaming-adapter framework (superseded by medical/ — pending consolidation)
-├── tokenization/      # Text-SFT chat/preprocess/pack/tokenize scripts
-├── download/          # Dataset download scripts (HF Hub, S3, img2dataset, special) + audio/ helpers
+├── download/          # Dataset download scripts (HF Hub, S3, img2dataset, special)
 ├── dedup/             # Perceptual-hash deduplication pipeline (hash→classify→rewrite)
 ├── recaption/         # Recaption engines (vLLM Qwen3.5, BLIP3, structured SFT)
 ├── convert/           # Image format conversion (PNG→JPEG, TIFF→JPEG, text cleaning)
 ├── image_text/        # Image-text pairing utilities (JSON, parquet, ZIP sources)
-├── datasets/          # Per-dataset preprocessing scripts (audio + image, flat)
+├── datasets/          # Per-dataset preprocessing scripts
 │   ├── bigdocs/       # BigDocs-7.5M parquet/zips → webdataset
 │   ├── bigearthnet/   # BigEarthNet Sentinel-2 bands → RGB + QA conversations
 │   ├── ccpdf/         # CommonCanvas PDF download + parquet
@@ -55,23 +53,6 @@ TCM-Pretrain, Fine-T2I, MedMax, RSTeller, MapTrace, PMC-OA, GeoChat,
 NIH-Chest-Xray, DaTikZ, FLAIR-HUB, Product-Catalogue, MultiCaRe,
 NCT-CRC-HE-100K, Diabetic-Retinopathy, Brain-Tumor-MRI, Liver-Ultrasound,
 Breast-Ultrasound, EBHI-Seg, MedPix-2
-
-### Audio (Apertus 1.5)
-Emilia-YODAS, YODAS2, AISHELL/AISHELL4, AlloAva, AMI, Aozora-Hurigana,
-AudioSet, AudioCite, CommonVoice / CommonVoice25, CORAL, EuroSpeech,
-F1-Team-Radio, Farsi-ASR, FreeSound (permissive), GigaSpeech / GigaSpeech2,
-Granary (Voxpopuli, YODAS, YTC), HuI-Audio-Corpus-German, IndicVoices,
-Infore2-Audiobooks, JavisData-Audios, Kathbath, Kazakh-Speech,
-LAION-Audio-300M, LegCo-Speech, Libri-Heavy, Libri-Light, Linto-Arabic,
-Localized-Narratives, MarcoLongSpeech, MediaSpeech, MLS, ML-Spoken-Words,
-MNSC, MRSaudio, MTG-Jamendo, MultiDialog, MultiMed, NB-Tale, NSynth,
-OlmoASR-Pool, Omnilingual-ASR, OpenSLR108-MediaSpeech, OtoSpeech,
-Parlament-Parla, ParlaSpeech-RS, Peoples-Speech, Police-Scanner,
-Russian-Librispeech, Samromur-Children / Samromur-Milljon, Seamless-Align,
-SoundScapes, SRG-Apertus, Thorsten-DE, ThroatAcousticPairing, ToneWebinars,
-TUDA-DE, UltraVoice, UN-Transcription, Uzbek-Speech, VCTK, VGGSound,
-VietSpeech, VoiceAssistant-400K, VoxPopuli, WavePulse-Radio,
-WeNetSpeech, WildASR, ZA-African-Voices, Zeroth-Korean, ZoengJyutGaai
 
 ### Cooldown Datasets
 DOCCI, OWID, WAFFLE, HQ-50K, Smithsonian Open Access, DailyMed SPL, NASA,
@@ -171,26 +152,6 @@ Liver-Ultrasound, NCT-CRC-HE-100K, NIH-Chest-Xray
 - HuggingFace datasets (sharded parquet)
 - Webdataset (tar shards)
 
-## Earlier Adapter Framework (`preprocessing/`)
-
-An earlier snapshot of the streaming adapter framework that became `medical/`.
-Same architecture (`adapters/`, `filters/`, `pipeline/`, `writers/`,
-`main.py`, `run.slurm`) but with a smaller adapter set (`meditron`, `medmax`,
-`medtrinity`, `medtrinity_demo`, `mmc4`, `pmc_oa` — all already present in
-`medical/adapters/`). Kept temporarily for history; pending consolidation into
-`medical/`.
-
-## Tokenization (`tokenization/`)
-
-Text-SFT tokenization pipeline:
-
-- `text-sft/chat_preprocess.py` — chat-format normalization
-- `text-sft/tokenize_sft.py` — main tokenizer entry point
-- `text-sft/indexed_to_packed.py` — pack indexed samples into training shards
-- `text-sft/tests/` — unit tests for chat preprocessing
-
-See `tokenization/text-sft/README.md` for usage.
-
 ## Recaption Pipelines (`recaption/`)
 
 ### vLLM Engine (`recaption/vllm/`)
@@ -233,12 +194,6 @@ Loaders for: HQ-50K, Google RSRCC, DRiM-VisualReason-Hard, MINT-1T-ArXiv.
 | `dedup_wds.py` | Generic WDS | Master script with configurable stages |
 
 ## Dataset-Specific Scripts (`datasets/`)
-
-Per-dataset preprocessing lives under `datasets/<name>/` (flat — audio and
-image datasets are mixed). Most directories ship a `download.slurm`
-(huggingface-cli or git-lfs), plus dataset-specific
-convert/tokenize/SHAR steps. See `download/README.md` for download
-conventions and the file-shape → recipe mapping.
 
 ### BigDocs (`datasets/bigdocs/`)
 Converts BigDocs-7.5M subsets (ArxivOCR, ArxivTableCap, cord-v2, pubtables-1m)
@@ -316,18 +271,6 @@ Dataset-specific download scripts in `download/special/`:
 - `bigdocs/` — External archives (COCO, TextVQA, TableFact)
 - `medical/` — Kaggle CLI + wget for Zenodo/Figshare datasets
 
-### Audio cross-dataset helpers (`download/audio/`)
-- `build_all_interleave.slurm` — build interleaved audio+text shards across
-  configured datasets
-- `build_voxpopuli_interleave.slurm` — VoxPopuli-specific interleave builder
-- `run_vad_multichannel.py` — multichannel voice-activity detection helper
-
-### SHAR repacking
-- `merge_shar.py` — merge existing Lhotse SHAR shards without
-  re-decoding/re-tokenizing
-- `to_shar_examples.sh` — cookbook commands for new
-  `prepare_to_shar.slurm` scripts
-
 ### Reproduce Full Apertus Downloads
 ```bash
 bash download/reproduce_apertus_downloads.sh
@@ -371,3 +314,45 @@ gated and access-restricted datasets.
   approval before downloading.
 - Model weights for recaptioning are not included. Download them separately
   from HuggingFace Hub and set the `MODEL_DIR` or model path accordingly.
+
+---
+
+## Additions from `data-pipeline/adapter`
+
+### `preprocessing/` — earlier adapter framework
+An earlier snapshot of the streaming adapter framework that became `medical/`.
+Same architecture (`adapters/`, `filters/`, `pipeline/`, `writers/`,
+`main.py`, `run.slurm`) but with a smaller adapter set (`meditron`, `medmax`,
+`medtrinity`, `medtrinity_demo`, `mmc4`, `pmc_oa` — all already present in
+`medical/adapters/`). Kept temporarily for history; pending consolidation
+into `medical/`.
+
+### `tokenization/` — text-SFT pipeline
+- `text-sft/chat_preprocess.py` — chat-format normalization
+- `text-sft/tokenize_sft.py` — main tokenizer entry point
+- `text-sft/indexed_to_packed.py` — pack indexed samples into training shards
+- `text-sft/tests/` — unit tests for chat preprocessing
+
+See `tokenization/text-sft/README.md` for usage.
+
+### `datasets/` — audio coverage
+Adapter-branch additions extend `datasets/` with audio per-dataset
+directories (Emilia-YODAS, AISHELL/AISHELL4, AlloAva, AMI, AudioSet,
+GigaSpeech/2, LibriHeavy, Libri-Light, MLS, ML-Spoken-Words, NSynth,
+OmniLingual-ASR, Peoples-Speech, VCTK, VGGSound, VoxPopuli, WeNetSpeech,
+and ~80 others). Each ships a self-contained `download.slurm` following
+the convention in `download/README.md`.
+
+### `download/audio/` — cross-dataset audio helpers
+- `build_all_interleave.slurm`, `build_voxpopuli_interleave.slurm` — build
+  interleaved audio+text shards
+- `run_vad_multichannel.py` — multichannel voice-activity detection helper
+
+### `download/` — SHAR repacking & rsync helpers
+- `merge_shar.py` — merge existing Lhotse SHAR shards without re-decoding
+- `to_shar_examples.sh` — cookbook for new `prepare_to_shar.slurm` scripts
+- `rsync_{audio_only,ups,voxpopuli}_to_capstor.slurm` — staged transfers
+  between scratch and capstor
+
+See `download/README.md` for download conventions (file-shape recipe,
+per-dataset convention, SLURM template requirements).
