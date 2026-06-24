@@ -1,36 +1,22 @@
-.claude
-.codex
-CLAUDE.md
-core_clariden_*
-core_nid*
-*.out
-*.err
-*.log
-*.log.*
+# multimodal-data repository
 
-# Image artifacts (no binary images in source tree)
-*.png
-*.jpg
-*.jpeg
-*.tif
-*.tiff
-*.webp
-*.gif
-*.bmp
-
-# Large materialized image dirs
-01-dataset-download/image/nasa/filter_iter/images/
-01-dataset-download/image/nasa/filter_iter/images_thumb/
-
-# Byte-compiled / optimized / DLL files
+# ---------------------------------------------------------------------------
+# Python cache / compiled
+# ---------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# C extensions
+# ---------------------------------------------------------------------------
+# C extensions & build artifacts
+# ---------------------------------------------------------------------------
 *.so
-
-# Distribution / packaging
+*.dylib
+*.dll
 .Python
 build/
 develop-eggs/
@@ -47,12 +33,13 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# PyInstaller
+MANIFEST
 *.manifest
 *.spec
 
-# Unit test / coverage reports
+# ---------------------------------------------------------------------------
+# Test / coverage reports
+# ---------------------------------------------------------------------------
 htmlcov/
 .tox/
 .coverage
@@ -62,29 +49,161 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
-.pytest_cache/
 
+# ---------------------------------------------------------------------------
 # Virtual environments
+# ---------------------------------------------------------------------------
 venv/
 ENV/
 env/
-.venv
+.venv/
 
-# IDE
+# ---------------------------------------------------------------------------
+# IDE / editor / agent state
+# ---------------------------------------------------------------------------
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 .DS_Store
+Thumbs.db
+.claude
+.codex
+CLAUDE.md
 
-# Environment variables
+# ---------------------------------------------------------------------------
+# Environment & secrets
+# ---------------------------------------------------------------------------
 .env
 .env.local
+.env.*.local
+secrets/
+*.key
+*.pem
+*.crt
 
-# 55MB test sample — keep local, never track
-01-dataset-download/audio/wavepulse_radio/samples/test_bad.wav
+# ---------------------------------------------------------------------------
+# Logs / core dumps (HPC)
+# ---------------------------------------------------------------------------
+*.log
+*.log.*
+*.out
+*.err
+logs/
+core_clariden_*
+core_nid*
 
-# Large reproducible audioset length-bucket indexes — keep local, regenerate as needed
-01-dataset-download/audio/audio_set/length_buckets/audioset_unbal_train_buckets.tsv
-01-dataset-download/audio/audio_set/length_buckets/audioset_unbal_train_utt2len.tsv
+# ---------------------------------------------------------------------------
+# Jupyter notebooks & checkpoints
+# ---------------------------------------------------------------------------
+*.ipynb
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Data files (must NOT be committed to a code repository)
+# ---------------------------------------------------------------------------
+# Tabular
+*.parquet
+*.csv
+*.tsv
+
+# Archives
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+
+# Images (sample data / generated outputs)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+*.ico
+
+# Audio / video
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.flac
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.flv
+
+# Documents
+*.pdf
+*.docx
+*.doc
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.odt
+*.ods
+
+# Fonts
+*.woff
+*.woff2
+*.ttf
+*.eot
+*.otf
+
+# ---------------------------------------------------------------------------
+# ML / model artifacts
+# ---------------------------------------------------------------------------
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.onnx
+*.h5
+*.hdf5
+*.pb
+*.npy
+*.npz
+
+# ---------------------------------------------------------------------------
+# Database files
+# ---------------------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ---------------------------------------------------------------------------
+# SLURM / HPC output
+# ---------------------------------------------------------------------------
+slurm-*.out
+slurm-*.err
+
+# ---------------------------------------------------------------------------
+# Node (if any frontend tooling is ever added)
+# ---------------------------------------------------------------------------
+node_modules/
+
+# ---------------------------------------------------------------------------
+# macOS / Windows metadata
+# ---------------------------------------------------------------------------
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
