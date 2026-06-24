@@ -1,4 +1,5 @@
 import os
+import sys
 import logging
 import argparse
 import tempfile
@@ -9,6 +10,7 @@ import numpy as np
 from datasets import Dataset
 from faster_whisper import WhisperModel, BatchedInferencePipeline
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from loaders import LOADERS
 
 logging.basicConfig(
