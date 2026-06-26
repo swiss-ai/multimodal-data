@@ -1,0 +1,8 @@
+{
+  "slug": "death-rate-from-cardiovascular-disease-ghe",
+  "title": "Death rate from cardiovascular diseases",
+  "subtitle": "Estimated death rate from [cardiovascular diseases](#dod:cvd) per 100,000 people.",
+  "note": "",
+  "caption": "Death rate from cardiovascular diseases\n\nEstimated death rate from cardiovascular diseases per 100,000 people.\n\nThis choropleth world map displays the estimated death rate from cardiovascular diseases per 100,000 people for the year 2021. The color scale ranges from 0 to over 500, with specific thresholds marked at 100, 250, and 500. The darkest purple shades, indicating rates above 500, are concentrated in Eastern Europe and Northern Asia, specifically covering Russia, Ukraine, and Belarus. Surrounding these areas, countries in Central and Eastern Europe appear in dark pink shades that fall within the 250 to 500 range. In North America, the United States is shaded in a medium pink tone, placing it in the 100 to 250 band, while Canada and Mexico appear in lighter shades below this threshold. Most of South America, Australia, and Western Europe are covered in light pink, corresponding to values between 0 and 100 or slightly above. A broad region across North and Sub-Saharan Africa, along with parts of the Middle East and Central Asia, is colored in the lightest beige shades, indicating rates near the bottom of the scale, close to 0 to 100. Greenland is marked with diagonal hatching, signifying that no data is available for this territory. The visual distribution highlights a distinct gradient where the highest mortality rates are clustered in the northern latitudes of Eurasia, while the lowest rates are observed across much of Africa, South America, and Oceania.",
+  "word_count": 237
+}

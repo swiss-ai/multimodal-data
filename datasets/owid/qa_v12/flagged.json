@@ -1,0 +1,7263 @@
+[
+  {
+    "slug": "share-of-the-population-with-no-formal-education-with-projections",
+    "word_count": 224,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "pupil-teacher-ratio-for-primary-education-by-country",
+    "word_count": 246,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "reported-cases-of-measles",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-out-of-pocket-expenditure-on-healthcare",
+    "word_count": 213,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "average-oecd-education-expenditure-by-source-of-funding-gdp",
+    "word_count": 249,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "human-rights-index-vs-gdp-per-capita",
+    "word_count": 312,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "share-of-children-vaccinated-against-measles",
+    "word_count": 270,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "gender-ratios-for-mean-years-of-schooling",
+    "word_count": 272,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "ti-corruption-perception-index",
+    "word_count": 228,
+    "flags": [
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "unpaid-parking-violations-per-diplomat",
+    "word_count": 244,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-government-expenditure-going-to-interest-payments",
+    "word_count": 245,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-countries-having-implemented-a-vat",
+    "word_count": 159,
+    "flags": [
+      "short:159"
+    ]
+  },
+  {
+    "slug": "continents-according-to-our-world-in-data",
+    "word_count": 193,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "child-mortality-vs-population-growth",
+    "word_count": 306,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "global-child-deaths-by-cause",
+    "word_count": 223,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "poverty-headcount-rate-vs-poverty-gap",
+    "word_count": 327,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "long:327"
+    ]
+  },
+  {
+    "slug": "total-shortfall-from-extreme-poverty",
+    "word_count": 274,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "confidence-in-the-effectiveness-of-vaccines-vs-perception-of-importance",
+    "word_count": 278,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "price-levels-relative-to-us-vs-gdp-per-capita",
+    "word_count": 328,
+    "flags": [
+      "long:328"
+    ]
+  },
+  {
+    "slug": "death-rate-from-air-pollution-per-100000",
+    "word_count": 237,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "dalys-particulate-matter",
+    "word_count": 255,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "depression-vs-self-reported-life-satisfaction",
+    "word_count": 332,
+    "flags": [
+      "long:332"
+    ]
+  },
+  {
+    "slug": "meat-supply-per-person",
+    "word_count": 236,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "fruit-consumption-per-capita",
+    "word_count": 212,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "fatality-rates-in-the-us-due-to-weather-events",
+    "word_count": 217,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "fatality-rates-due-to-lightning-in-the-us",
+    "word_count": 223,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "solar-pv-prices",
+    "word_count": 230,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "prevalence-of-undernourishment-vs-share-of-children-who-are-stunted",
+    "word_count": 307,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "extreme-poverty-vs-child-mortality",
+    "word_count": 335,
+    "flags": [
+      "long:335"
+    ]
+  },
+  {
+    "slug": "fish-consumption-vs-gdp-per-capita",
+    "word_count": 340,
+    "flags": [
+      "long:340"
+    ]
+  },
+  {
+    "slug": "renewable-energy-investment-of-gdp",
+    "word_count": 193,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "solar-pv-prices-vs-cumulative-capacity",
+    "word_count": 268,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-agricultural-landowners-who-are-female",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "investment-in-renewable-energy-by-technology",
+    "word_count": 224,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "years-of-fossil-fuel-reserves-left",
+    "word_count": 246,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "child-mortality-rate-ihme",
+    "word_count": 247,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-the-population-infected-with-hiv",
+    "word_count": 237,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "neonatal-mortality-wdi",
+    "word_count": 244,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "children-per-woman-fertility-rate-vs-level-of-prosperity",
+    "word_count": 354,
+    "flags": [
+      "long:354"
+    ]
+  },
+  {
+    "slug": "how-many-deaths-does-it-take-for-a-disaster-to-receive-news-coverage",
+    "word_count": 236,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "how-many-deaths-does-it-take-for-a-disaster-in-different-continents-to-receive-news-coverage",
+    "word_count": 202,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "fertilizer-use-in-kg-per-hectare-of-arable-land",
+    "word_count": 259,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-adults-who-are-smoking-by-level-of-prosperity",
+    "word_count": 317,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-the-population-at-risk-of-catastrophic-expenditure-when-surgical-care-is-required",
+    "word_count": 252,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-children-underweight",
+    "word_count": 256,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "area-meadows-and-pastures",
+    "word_count": 261,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "global-hunger-index",
+    "word_count": 242,
+    "flags": [
+      "banned:\\balarming\\b",
+      "banned:\\bindicates? that\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-new-hiv-infections-per-year",
+    "word_count": 248,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "daily-protein-supply-of-animal-origin-vs-plant-origin",
+    "word_count": 311,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "coefficient-of-variation-in-caloric-consumption-vs-gdp-per-capita",
+    "word_count": 289,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "share-of-dietary-energy-supply-from-fats-vs-gdp-per-capita",
+    "word_count": 311,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "who-regions",
+    "word_count": 177,
+    "flags": [
+      "short:177"
+    ]
+  },
+  {
+    "slug": "key-crop-yields",
+    "word_count": 244,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "dietary-composition-by-country",
+    "word_count": 254,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "cereal-land-spared",
+    "word_count": 260,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "the-maternal-mortality-ratio-in-1985-and-2020",
+    "word_count": 301,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "food-supply-vs-life-expectancy",
+    "word_count": 248,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "mean-versus-median-monthly-per-capita-expenditure-or-income",
+    "word_count": 250,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "milk-yields-per-animal",
+    "word_count": 232,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "per-capita-milk-consumption",
+    "word_count": 264,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "children-per-woman-vs-population-growth",
+    "word_count": 264,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-consumer-expenditure-spent-on-food",
+    "word_count": 221,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "commodity-price-index-cereal-crops-and-petroleum",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bdramatic\\w*"
+    ]
+  },
+  {
+    "slug": "land-use",
+    "word_count": 212,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "long-term-prices-food",
+    "word_count": 268,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "pesticide-breakdown-by-type",
+    "word_count": 215,
+    "flags": [
+      "banned:\\bappears? to\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "fruit-consumption-by-fruit-type",
+    "word_count": 261,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "crude-birth-rate",
+    "word_count": 226,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "children-in-employment-ages-7-14-vs-weekly-hours-worked-by-children-ages-7-14",
+    "word_count": 303,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "weekly-hours-worked-by-children-7-14-vs-gdp-per-capita-ppp",
+    "word_count": 323,
+    "flags": [
+      "long:323"
+    ]
+  },
+  {
+    "slug": "share-of-population-15-years-and-older-with-no-education",
+    "word_count": 244,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "duration-of-pre-primary-education",
+    "word_count": 269,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "global-hunger-index-vs-gdp-per-capita",
+    "word_count": 291,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "share-of-women-using-modern-contraceptive-methods",
+    "word_count": 240,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "hydropower-generation",
+    "word_count": 204,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "injuries-from-terrorist-attacks",
+    "word_count": 223,
+    "flags": [
+      "banned:\\bbecause\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "terrorist-attacks-fatalities-and-injuries",
+    "word_count": 227,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "absolute-number-of-deaths-from-household-air-pollution",
+    "word_count": 258,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-from-indoor-air-pollution-vs-gdp-per-capita",
+    "word_count": 296,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "the-gender-wage-ratio-in-different-income-percentiles",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "antibiotic-use-in-livestock-in-europe",
+    "word_count": 245,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "time-required-to-start-business",
+    "word_count": 213,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-agriculture-in-total-employment",
+    "word_count": 150,
+    "flags": [
+      "short:150"
+    ]
+  },
+  {
+    "slug": "births-attended-by-health-staff-sdgs",
+    "word_count": 249,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-population-living-in-poverty-by-national-poverty-lines",
+    "word_count": 234,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-from-disasters",
+    "word_count": 201,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "homicide-rate-unodc",
+    "word_count": 255,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-conflict-terrorism-per-100000",
+    "word_count": 265,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-central-government-expenditures-funded-by-taxes",
+    "word_count": 265,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "child-homicide-rate-per-100000",
+    "word_count": 232,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cancer-death-rates-by-age",
+    "word_count": 194,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "diarrheal-disease-death-rates",
+    "word_count": 254,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "fire-death-rates",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "road-deaths-by-type",
+    "word_count": 163,
+    "flags": [
+      "short:163"
+    ]
+  },
+  {
+    "slug": "suicide-deaths-by-age",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "malnutrition-death-rates",
+    "word_count": 263,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "respiratory-disease-death-rate",
+    "word_count": 204,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cardiovascular-disease-death-rates",
+    "word_count": 235,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "youth-not-in-education-employment-training",
+    "word_count": 279,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "percentage-of-primary-schools-with-toilets",
+    "word_count": 289,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "tuberculosis-death-rates",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicides-ihme",
+    "word_count": 227,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "internally-displaced-persons-from-disasters",
+    "word_count": 266,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "suicide-vs-violent-deaths",
+    "word_count": 369,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "long:369"
+    ]
+  },
+  {
+    "slug": "average-precipitation-per-year",
+    "word_count": 264,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "disaster-risk-reduction-progress",
+    "word_count": 249,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\breflects?\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "health-expenditure-government-expenditure",
+    "word_count": 207,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "surgeons-per-100000",
+    "word_count": 278,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "number-of-people-severely-food-insecure",
+    "word_count": 269,
+    "flags": [
+      "banned:\\bsevere\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-people-moderately-or-severely-food-insecure",
+    "word_count": 255,
+    "flags": [
+      "banned:\\bsevere\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-severely-food-insecure-people-by-region",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "suicide-rate-vs-income-inequality",
+    "word_count": 297,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "agriculture-orientation-index",
+    "word_count": 235,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-arable-land-which-is-organic",
+    "word_count": 282,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "hepatitis-death-rate",
+    "word_count": 242,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-unsafe-sanitation",
+    "word_count": 262,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "proportion-with-ict-skills-in-presentations",
+    "word_count": 258,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "school-life-expectancy-primary-gender-parity-index-gpi",
+    "word_count": 270,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "proportion-of-women-subjected-to-physical-or-sexual-violence",
+    "word_count": 241,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "natural-disaster-deaths-ihme",
+    "word_count": 242,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "tariff-rate-applied-weighted-mean-all-products",
+    "word_count": 238,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "reported-vs-estimated-total-number-of-paralytic-polio-cases-globally",
+    "word_count": 250,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "proportion-of-local-breeds-at-risk-of-extinction",
+    "word_count": 253,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "proportion-of-animal-breeds-genetic-conservation",
+    "word_count": 244,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "fatal-occupational-injuries-among-employees",
+    "word_count": 246,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "total-oda-for-infrastructure-by-recipient",
+    "word_count": 265,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-reported-guinea-worm-dracunculiasis-cases",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "remittance-costs-as-share-of-amount-remitted",
+    "word_count": 238,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "parties-to-multilateral-agreements-on-hazardous-waste",
+    "word_count": 252,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "domestic-material-consumption-per-unit-of-gdp",
+    "word_count": 275,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "proportion-of-forest-area-within-legally-established-protected-areas",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "above-ground-biomass-in-forest-per-hectare",
+    "word_count": 215,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "coverage-by-protected-areas-of-important-sites-for-mountain-biodiversity",
+    "word_count": 269,
+    "flags": [
+      "banned:\\bsuggests?\\b",
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "mountain-green-cover-index",
+    "word_count": 251,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "red-list-index",
+    "word_count": 280,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "countries-that-are-parties-to-the-nagoya-protocol",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "countries-that-adopt-guarantees-for-public-access-to-information",
+    "word_count": 212,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "countries-with-stats-plan-funded-by-source",
+    "word_count": 257,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "breakdown-of-child-mortality-by-cause",
+    "word_count": 251,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rates-from-drug-use-disorders",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "drug-disorder-dalys-rate",
+    "word_count": 230,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "disease-burden-by-age",
+    "word_count": 253,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "burden-of-disease-by-cause",
+    "word_count": 294,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-total-disease-burden-by-cause",
+    "word_count": 270,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "disease-burden-by-region",
+    "word_count": 267,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "homicide-rates-from-firearms",
+    "word_count": 241,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "dalys-to-ncds-vs-gdp",
+    "word_count": 289,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "disease-burden-rates-from-cancers",
+    "word_count": 250,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-cancers-vs-average-income",
+    "word_count": 272,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "share-of-population-with-cancer-age-standardized",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-people-with-cancer",
+    "word_count": 222,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-population-with-cancer-by-age",
+    "word_count": 222,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-people-with-cancer-by-age",
+    "word_count": 229,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-cancer-deaths-attributed-to-risk-factors",
+    "word_count": 264,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "econimpact2c",
+    "word_count": 259,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "proportion-of-labor-force-who-are-women",
+    "word_count": 249,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "global-fishery-catch-by-sector",
+    "word_count": 262,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "years-lived-with-disability-vs-health-expenditure-per-capita",
+    "word_count": 337,
+    "flags": [
+      "long:337"
+    ]
+  },
+  {
+    "slug": "drinking-water-services-coverage-urban",
+    "word_count": 246,
+    "flags": [
+      "banned:\\bappears? to\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "drinking-water-service-coverage",
+    "word_count": 212,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "sanitation-facilities-coverage-in-rural-areas",
+    "word_count": 217,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "gender-inequality-index-from-the-human-development-report",
+    "word_count": 235,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "gender-wage-gap-vs-gdp-per-capita-income-groups",
+    "word_count": 322,
+    "flags": [
+      "long:322"
+    ]
+  },
+  {
+    "slug": "alcohol-drug-use-disorders-share-total-disease",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "alcohol-consumption-by-15-19-year-old-males-vs-females",
+    "word_count": 329,
+    "flags": [
+      "long:329"
+    ]
+  },
+  {
+    "slug": "lung-cancer-death-rates-males",
+    "word_count": 222,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "household-vs-outdoor-air-pollution-death-rates",
+    "word_count": 309,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "consumption-of-ozone-depleting-substances",
+    "word_count": 233,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "excess-skin-cancer-cases-due-to-ozone-depletion",
+    "word_count": 216,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "military-personnel",
+    "word_count": 276,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "hypothetical-global-meat-demand",
+    "word_count": 264,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "armed-forces-personnel",
+    "word_count": 234,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "military-spending-as-a-share-of-gdp-sipri",
+    "word_count": 242,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "armed-forces-personnel-of-total-labor-force",
+    "word_count": 246,
+    "flags": [
+      "banned:\\bsuggests?\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "terrain-ruggedness-index",
+    "word_count": 262,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "mental-health-as-risk-for-drug-dependency",
+    "word_count": 282,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-of-females-defined-as-obese",
+    "word_count": 271,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "gap-in-gdp-per-hour-worked-with-respect-to-the-united-states",
+    "word_count": 268,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "refugee-population-by-country-or-territory-of-origin",
+    "word_count": 261,
+    "flags": [
+      "banned:\\bbecause\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "refugee-population-by-country-or-territory-of-asylum",
+    "word_count": 235,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "annual-working-hours-per-person-employed",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "incidence-of-tuberculosis-sdgs",
+    "word_count": 247,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "hepatitis-b-incidence-sdgs",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "interventions-ntds-sdgs",
+    "word_count": 268,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-in-state-based-conflicts-by-region",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "drowning-death-rates-under-5",
+    "word_count": 224,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "global-primary-energy",
+    "word_count": 257,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "under-5-mortality-rate-sdgs",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "mortality-rate-attributable-to-wash",
+    "word_count": 281,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "ihr-core-capacity-index-sdgs",
+    "word_count": 244,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-venomous-animal",
+    "word_count": 281,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "incidence-of-venomous-animal-contact",
+    "word_count": 270,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-children-dying-from-diarrheal-diseases",
+    "word_count": 242,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "men-experienced-sexual-violence-by-age-18",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bappears? to\\b",
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "coffee-bean-production",
+    "word_count": 222,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "banana-production",
+    "word_count": 212,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "rice-production",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "urban-agglomerations-more-than-1-million",
+    "word_count": 259,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "stratospheric-ozone-concentration-projections",
+    "word_count": 245,
+    "flags": [
+      "banned:\\bdramatic\\w*"
+    ]
+  },
+  {
+    "slug": "fertility-rate-vs-the-share-living-in-extreme-poverty",
+    "word_count": 340,
+    "flags": [
+      "long:340"
+    ]
+  },
+  {
+    "slug": "adolescent-fertility",
+    "word_count": 249,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-conflict-and-terrorism",
+    "word_count": 231,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "average-harmonized-learning-outcome-scores",
+    "word_count": 232,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "plastic-fate-to-2050",
+    "word_count": 229,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "the-incidence-of-malaria-per-1000-population",
+    "word_count": 237,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "infectious-disease-death-rates",
+    "word_count": 253,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "land-area-km",
+    "word_count": 272,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "population-density-by-city",
+    "word_count": 284,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "capital-city-population",
+    "word_count": 249,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "percentage-of-men-in-the-united-states-who-live-alone-by-age",
+    "word_count": 235,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "significant-volcanic-eruptions",
+    "word_count": 235,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "acres-burned-per-wildfire-usa",
+    "word_count": 232,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "significant-earthquakes",
+    "word_count": 255,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "earthquake-deaths",
+    "word_count": 224,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-volcanic-eruptions",
+    "word_count": 220,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "the-percentage-of-neonates-protected-at-birth-against-neonatal-tetanus",
+    "word_count": 256,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "inflation-and-central-bank-independence-oecd-countries",
+    "word_count": 321,
+    "flags": [
+      "long:321"
+    ]
+  },
+  {
+    "slug": "food-aid-received",
+    "word_count": 272,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cross-country-variation-in-patience",
+    "word_count": 246,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "cross-country-variation-in-risk-taking",
+    "word_count": 266,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "cross-country-variation-in-positive-reciprocity",
+    "word_count": 286,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "cross-country-variation-in-negative-reciprocity",
+    "word_count": 244,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "share-of-deaths-from-terrorism",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bbecause\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "global-primary-energy-share-inc-biomass",
+    "word_count": 256,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "natural-disasters-by-type",
+    "word_count": 268,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "number-of-internet-users",
+    "word_count": 227,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "cancer-incidence",
+    "word_count": 225,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "carbon-dioxide-emissions-are-higher-in-richer-countries",
+    "word_count": 271,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "inequality-in-life-expectancy",
+    "word_count": 263,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "population-growth-rate-vs-median-age",
+    "word_count": 309,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "leverage-ratio-of-banks-in-the-uk-and-us-19602018",
+    "word_count": 253,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "hours-of-work-per-1000-lumen-hours",
+    "word_count": 177,
+    "flags": [
+      "short:177"
+    ]
+  },
+  {
+    "slug": "endemic-reef-forming-coral-species",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-infant-deaths",
+    "word_count": 215,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "press-freedom-index-rsf",
+    "word_count": 206,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "relative-change-in-female-height",
+    "word_count": 264,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "child-deaths-from-rotavirus",
+    "word_count": 244,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "youth-mortality-rate",
+    "word_count": 238,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "child-mortality-complete-gapminder",
+    "word_count": 228,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "neonatal-mortality-ihme",
+    "word_count": 249,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "trust-healthcare-vs-vaccine-safety",
+    "word_count": 337,
+    "flags": [
+      "long:337"
+    ]
+  },
+  {
+    "slug": "average-years-of-schooling-vs-gdp-per-capita",
+    "word_count": 278,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "child-deaths-from-invasive-non-typhoidal-salmonella",
+    "word_count": 249,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-who-are-worried-about-vs-share-of-deaths-from-terrorism",
+    "word_count": 287,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "threatened-mammal-species",
+    "word_count": 233,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "stunting-ihme-vs-gdp",
+    "word_count": 264,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-rotavirus-children-under-5",
+    "word_count": 264,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "black-rhinos",
+    "word_count": 216,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "number-of-rhinos-poached",
+    "word_count": 247,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "lung-cancer-deaths-men-women",
+    "word_count": 324,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "long:324"
+    ]
+  },
+  {
+    "slug": "researchers-in-rd-per-million-people-vs-gdp-pc",
+    "word_count": 286,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-from-pneumonia-in-children-under-5",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "maternal-deaths-by-income-group",
+    "word_count": 247,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "pneumonia-risk-factors",
+    "word_count": 244,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "tuberculosis-deaths",
+    "word_count": 229,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "age-standardized-deaths-from-all-causes",
+    "word_count": 222,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-preterm-birth-complications",
+    "word_count": 266,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "meningitis-death-rates-children-under-5",
+    "word_count": 260,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "mortality-neonatal-asphyxia-and-trauma",
+    "word_count": 269,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "congenital-birth-defect-mortality-rates-in-children-under-5",
+    "word_count": 201,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "protein-energy-malnutrition-mortality-rates-in-children",
+    "word_count": 237,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-tuberculosis-cases",
+    "word_count": 239,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-obesity-by-age",
+    "word_count": 220,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-child-deaths-by-the-type-of-congenital-birth-defect",
+    "word_count": 175,
+    "flags": [
+      "short:175"
+    ]
+  },
+  {
+    "slug": "male-high-blood-pressure",
+    "word_count": 280,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "women-high-blood-pressure",
+    "word_count": 256,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "pneumonia-death-rates-age-standardized",
+    "word_count": 265,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "child-deaths-from-malaria",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "child-deaths-from-malaria-number",
+    "word_count": 256,
+    "flags": [
+      "banned:\\bstark\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-preterm-birth-complications-vs-gdp",
+    "word_count": 287,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "tetanus-mortality-in-children-under-5",
+    "word_count": 242,
+    "flags": [
+      "banned:\\bstark\\b",
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "share-of-children-under-fifteen-years-old-with-hiv",
+    "word_count": 253,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-deaths-secondhand-smoke",
+    "word_count": 226,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-deaths-suicide",
+    "word_count": 212,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-suicide-deaths",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "infant-mortality-rate",
+    "word_count": 230,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-neonatal-deaths-ihme",
+    "word_count": 221,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "suicide-rate-in-1980-vs-2023",
+    "word_count": 315,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-cysticercosis",
+    "word_count": 227,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-syphilis-by-age",
+    "word_count": 208,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "large-household-expenditures-health",
+    "word_count": 235,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "schools-access-drinking-water",
+    "word_count": 171,
+    "flags": [
+      "short:171"
+    ]
+  },
+  {
+    "slug": "schools-access-computers",
+    "word_count": 167,
+    "flags": [
+      "title_mismatch",
+      "short:167"
+    ]
+  },
+  {
+    "slug": "share-of-schools-with-access-to-single-sex-basic-sanitation",
+    "word_count": 184,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "schools-materials-students-with-disabilities",
+    "word_count": 218,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "systems-track-gender-equality",
+    "word_count": 158,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "title_mismatch",
+      "short:158"
+    ]
+  },
+  {
+    "slug": "water-bodies-good-water-quality",
+    "word_count": 288,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "water-basins-cooperation-plan",
+    "word_count": 215,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "death-rates-unsafe-water-vs-gdp",
+    "word_count": 279,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "share-of-the-population-with-latent-tuberculosis-infection",
+    "word_count": 247,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-amphetamine",
+    "word_count": 209,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-cardiovascular-diseases-by-risk-factor-age-standardized",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "primary-energy-consumption-by-source",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-people-saying-they-do-not-want-homosexual-neighbors",
+    "word_count": 231,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-neonatal-deaths-igme",
+    "word_count": 213,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-infant-deaths-ihme",
+    "word_count": 211,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "groundnuts-yield",
+    "word_count": 225,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cassava-yields",
+    "word_count": 205,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "pea-yields",
+    "word_count": 226,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "lettuce-yields",
+    "word_count": 214,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "prevalence-of-modern-contraception-methods-vs-womens-mean-years-of-schooling",
+    "word_count": 375,
+    "flags": [
+      "long:375"
+    ]
+  },
+  {
+    "slug": "share-cereal-human-food",
+    "word_count": 255,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cereals-human-food-vs-gdp",
+    "word_count": 286,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "bean-production",
+    "word_count": 227,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "cereal-production",
+    "word_count": 253,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "cumulative-covid-cases-region",
+    "word_count": 265,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-deaths-and-cases-covid-19",
+    "word_count": 254,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-covid-deaths-region",
+    "word_count": 225,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "daily-covid-deaths-region",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "total-daily-covid-deaths",
+    "word_count": 233,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "annual-hours-of-free-time-per-worker-and-income-finn",
+    "word_count": 299,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "carbon-dioxide-emissions-are-higher-in-richer-countries-finn",
+    "word_count": 272,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "public-gathering-rules-covid",
+    "word_count": 231,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "stay-at-home-covid",
+    "word_count": 235,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "daily-cases-covid-region",
+    "word_count": 238,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "weekly-growth-covid-deaths",
+    "word_count": 264,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "weekly-growth-covid-cases",
+    "word_count": 267,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "weekly-covid-deaths",
+    "word_count": 237,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "biweekly-growth-covid-cases",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "biweekly-change-covid-deaths",
+    "word_count": 258,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "biweekly-confirmed-covid-19-cases",
+    "word_count": 210,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "biweekly-covid-deaths",
+    "word_count": 249,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "biweekly-covid-cases-per-million-people",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "biweekly-covid-deaths-per-million-people",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "primary-energy-fossil-nuclear-renewables",
+    "word_count": 260,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-measles-gbd",
+    "word_count": 205,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "weekly-covid-cases-per-million-people",
+    "word_count": 226,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "per-capita-ghg-co2-excluding-land-use",
+    "word_count": 228,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "per-capita-co-emissions-vs-human-development-index",
+    "word_count": 332,
+    "flags": [
+      "long:332"
+    ]
+  },
+  {
+    "slug": "cereal-yield-vs-extreme-poverty-scatter",
+    "word_count": 308,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "energy-use-per-capita-vs-co2-emissions-per-capita",
+    "word_count": 325,
+    "flags": [
+      "long:325"
+    ]
+  },
+  {
+    "slug": "per-capita-renewables",
+    "word_count": 242,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "per-capita-nuclear",
+    "word_count": 229,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "excess-mortality-p-scores-average-baseline",
+    "word_count": 261,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "annual-percentage-change-nuclear",
+    "word_count": 233,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "annual-change-coal",
+    "word_count": 243,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "annual-change-gas",
+    "word_count": 234,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "annual-change-wind",
+    "word_count": 234,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "annual-percentage-change-wind",
+    "word_count": 243,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "life-satisfaction-vs-co-emissions-per-capita",
+    "word_count": 289,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "declining-share-of-the-top-1-in-some-european-economies-and-japan",
+    "word_count": 223,
+    "flags": [
+      "banned:\\bdramatic\\w*"
+    ]
+  },
+  {
+    "slug": "ppp-conversion-factor-for-private-consumption",
+    "word_count": 220,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-electricity-oil",
+    "word_count": 207,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "primary-energy-nuclear",
+    "word_count": 225,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "primary-energy-hydro",
+    "word_count": 229,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "low-carbon-elec-per-capita",
+    "word_count": 256,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "coal-prod-per-capita",
+    "word_count": 189,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "excess-mortality-p-scores-average-baseline-by-age",
+    "word_count": 277,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "oil-prod-per-capita",
+    "word_count": 169,
+    "flags": [
+      "short:169"
+    ]
+  },
+  {
+    "slug": "excess-mortality-raw-death-count",
+    "word_count": 255,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "co2-emissions-domestic-aviation",
+    "word_count": 231,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "covid-containment-and-health-index",
+    "word_count": 290,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "per-capita-co2-domestic-aviation-vs-land-area",
+    "word_count": 285,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "number-airline-passengers",
+    "word_count": 253,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "per-capita-co2-domestic-aviation-vs-gdp",
+    "word_count": 273,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "community-health-workers",
+    "word_count": 261,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "q2-gdp-growth-vs-confirmed-cases-per-million-people",
+    "word_count": 276,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "dtp3-children-unvaccinated",
+    "word_count": 267,
+    "flags": [
+      "banned:\\bsevere\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "ipv1-number-unvaccinated",
+    "word_count": 253,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "hib3-number-unvaccinated",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bsevere\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "measles-number-unvaccinated",
+    "word_count": 262,
+    "flags": [
+      "banned:\\bsevere\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "rotavirus-number-unvaccinated",
+    "word_count": 234,
+    "flags": [
+      "banned:\\bsevere\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "polio-number-unvaccinated",
+    "word_count": 256,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "pcv3-number-unvaccinated",
+    "word_count": 245,
+    "flags": [
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "rubella-number-unvaccinated",
+    "word_count": 285,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "malaria-deaths-ihme",
+    "word_count": 226,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "maternal-deaths-ihme",
+    "word_count": 233,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-children-wasted-who",
+    "word_count": 265,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "rural-without-improved-sanitation",
+    "word_count": 278,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "rural-without-improved-water",
+    "word_count": 279,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-global-deforestation",
+    "word_count": 232,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "annual-afforestation",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "annual-forest-expansion",
+    "word_count": 223,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deforestation-share-forest-area",
+    "word_count": 247,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-deaths-from-opioid-overdoses",
+    "word_count": 222,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "current-covid-patients-hospital",
+    "word_count": 209,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "current-covid-hospitalizations-per-million",
+    "word_count": 211,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "covid-icu-patients-per-million",
+    "word_count": 213,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "co-emissions-per-capita-vs-fossil-fuel-consumption-per-capita",
+    "word_count": 321,
+    "flags": [
+      "long:321"
+    ]
+  },
+  {
+    "slug": "co2-deforestation-for-food",
+    "word_count": 269,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "change-forest-vs-gdp",
+    "word_count": 283,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "exported-deforestation",
+    "word_count": 250,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "imported-deforestation",
+    "word_count": 247,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "declining-share-of-the-top-1-in-some-european-economies-and-japan-with-finland",
+    "word_count": 252,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "manufacturing-wages-relative-to-the-us-with-finland",
+    "word_count": 258,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "share-of-household-consumption-in-gdp-vs-gdp-per-capita",
+    "word_count": 355,
+    "flags": [
+      "long:355"
+    ]
+  },
+  {
+    "slug": "share-of-the-population-living-in-extreme-poverty-vs-average-consumption-or-income",
+    "word_count": 335,
+    "flags": [
+      "long:335"
+    ]
+  },
+  {
+    "slug": "uk-daily-covid-cases-7day-average",
+    "word_count": 267,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "uk-daily-new-covid-cases",
+    "word_count": 244,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "projected-change-dependency-ratios",
+    "word_count": 255,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "share-global-co2-coal",
+    "word_count": 243,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cumulative-co2-oil",
+    "word_count": 266,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "share-global-cumulative-co2-coal",
+    "word_count": 234,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "cumulative-co2-flaring",
+    "word_count": 255,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "the-burden-of-disease-vs-gdp-per-capita",
+    "word_count": 293,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "uk-cumulative-covid-deaths-rate",
+    "word_count": 243,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "share-deforestation-domestic-consumption",
+    "word_count": 256,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "food-transport-emissions",
+    "word_count": 230,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "food-emissions-life-cycle",
+    "word_count": 233,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "food-share-total-emissions",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "emissions-from-food",
+    "word_count": 241,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "threatened-bird-species",
+    "word_count": 220,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "weekly-covid-deaths-per-million-people",
+    "word_count": 234,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "maternal-mortality-ratio-who-gho",
+    "word_count": 210,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-species-threatened",
+    "word_count": 222,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "share-of-species-evaluated-iucn",
+    "word_count": 239,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "endemic-shark-and-ray-species",
+    "word_count": 224,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "endemic-freshwater-crab-species",
+    "word_count": 252,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "coral-bleaching-events",
+    "word_count": 274,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "bleaching-events-enso",
+    "word_count": 284,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "severe-bleaching-events-enso",
+    "word_count": 254,
+    "flags": [
+      "banned:\\bsevere\\b",
+      "banned:\\blikely\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "antidepressants-per-capita",
+    "word_count": 275,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "poverty-share-on-less-than-30-per-day",
+    "word_count": 257,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cereal-allocation-by-country",
+    "word_count": 244,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "un-projection-of-annual-infant-deaths",
+    "word_count": 175,
+    "flags": [
+      "short:175"
+    ]
+  },
+  {
+    "slug": "maize-yield-gap",
+    "word_count": 274,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cost-calorie-sufficient-diet",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-calorie-diet-unaffordable",
+    "word_count": 270,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-nutritional-diet-unaffordable",
+    "word_count": 293,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-nutritional-diet-unaffordable",
+    "word_count": 299,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-healthy-diet-unaffordable",
+    "word_count": 313,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cost-nutritious-diet-share-food-expenditure",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cost-healthy-diet-share-food-expenditure",
+    "word_count": 245,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "millet-yield",
+    "word_count": 208,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "rye-yield",
+    "word_count": 241,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cost-calorie-sufficient-diet-share-food-expenditure",
+    "word_count": 247,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "mismanaged-plastic-waste-per-capita",
+    "word_count": 244,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "habitat-loss-25-species",
+    "word_count": 296,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "eat-lancet-diet-animal-products",
+    "word_count": 283,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "eat-lancet-diet-comparison",
+    "word_count": 280,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "average-farm-size-vs-gdp",
+    "word_count": 275,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "share-farms-smallholders",
+    "word_count": 207,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "land-sparing-by-crop",
+    "word_count": 249,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "covid-variants-bar",
+    "word_count": 234,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "share-living-with-less-than-1-int--per-day",
+    "word_count": 247,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-living-with-less-than-upper-middle-income-poverty-line",
+    "word_count": 279,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-living-with-less-than-320-int--per-day",
+    "word_count": 268,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "employed-fisheries-aquaculture",
+    "word_count": 218,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "per-capita-sources-of-protein",
+    "word_count": 249,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-living-with-less-than-10-int--per-day",
+    "word_count": 234,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "above-or-below-extreme-poverty-line-world-bank",
+    "word_count": 257,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "poverty-gap-index-extreme-poverty",
+    "word_count": 269,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "annual-working-hours-per-worker-vs-gdp-per-capita-long-run",
+    "word_count": 248,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "total-population-in-extreme-poverty",
+    "word_count": 278,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "daily-mean-income",
+    "word_count": 224,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "interventions-for-substance-use-disorders",
+    "word_count": 198,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "level-of-national-compliance-with-labor-rights",
+    "word_count": 331,
+    "flags": [
+      "long:331"
+    ]
+  },
+  {
+    "slug": "tourism-gdp-proportion-of-total-gdp",
+    "word_count": 241,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "fishing-pressure-by-region",
+    "word_count": 298,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "fishing-pressure-by-taxa",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "budget-to-manage-invasive-alien-species",
+    "word_count": 254,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "sustainable-fisheries-as-a-proportion-of-gdp",
+    "word_count": 237,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "manufacturing-share-of-total-employment",
+    "word_count": 209,
+    "flags": [
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-and-missing-persons-due-to-natural-disasters",
+    "word_count": 224,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "prevalence-of-hepatitis-b-surface-antigen",
+    "word_count": 253,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-household-and-ambient-air-pollution",
+    "word_count": 230,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-household-air-pollution",
+    "word_count": 233,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-ambient-air-pollution",
+    "word_count": 260,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-road-traffic-injuries",
+    "word_count": 192,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-global-annual-co-emissions-from-other-industry",
+    "word_count": 228,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-land-covered-by-lakes-and-rivers",
+    "word_count": 253,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "nitrogen-emissions-seafood",
+    "word_count": 228,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "phosphorus-emissions-seafood",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "legal-frameworks-regarding-violence-against-women",
+    "word_count": 233,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "population-subjected-to-sexual-violence-male-vs-female",
+    "word_count": 312,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "countries-with-national-adaptation-plans-for-climate-change",
+    "word_count": 169,
+    "flags": [
+      "short:169"
+    ]
+  },
+  {
+    "slug": "representation-of-women-in-lower-chamber-of-parliament",
+    "word_count": 300,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "excess-mortality-p-scores-projected-baseline",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "excess-mortality-p-scores-projected-baseline-by-age",
+    "word_count": 272,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-excess-deaths-covid",
+    "word_count": 254,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-excess-mortality-p-scores-projected-baseline",
+    "word_count": 257,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "long-term-cod-catch",
+    "word_count": 205,
+    "flags": [
+      "banned:\\bdramatic\\w*"
+    ]
+  },
+  {
+    "slug": "cumulative-excess-deaths-per-million-covid",
+    "word_count": 242,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "covid-vaccine-share-boosters",
+    "word_count": 249,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "real-gdp-growth",
+    "word_count": 244,
+    "flags": [
+      "banned:\\bsuggests?\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-of-women-who-experienced-violence-by-an-intimate-partner-un",
+    "word_count": 268,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "net-zero-target-set",
+    "word_count": 227,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "deaths-and-disappearances-during-migration",
+    "word_count": 241,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "number-of-refugees-per-100000",
+    "word_count": 256,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-lead-exposure",
+    "word_count": 205,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-lead-exposure",
+    "word_count": 247,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "annual-growth-of-exports-of-goods-and-services",
+    "word_count": 281,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "nationally-determined-contributions",
+    "word_count": 238,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "decadal-economic-disasters-type",
+    "word_count": 240,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "children-lead-5micrograms",
+    "word_count": 280,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "disease-burden-lead",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "rate-disease-burden-lead",
+    "word_count": 254,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "per-capita-co2-region",
+    "word_count": 244,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "excess-deaths-cumulative-per-100k-economist",
+    "word_count": 256,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "emission-factors-food-transport",
+    "word_count": 262,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "distribution-of-population-across-income-thresholds-stacked-bar-30-only",
+    "word_count": 252,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "number-liberal-democracies-age",
+    "word_count": 218,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "agriculture-share-gdp",
+    "word_count": 213,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-children-stunted-who",
+    "word_count": 259,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "expenditure-on-cultural-and-natural-heritage-per-capita",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "country-position-nuclear-weapons",
+    "word_count": 176,
+    "flags": [
+      "short:176"
+    ]
+  },
+  {
+    "slug": "death-rate-in-state-based-conflicts",
+    "word_count": 226,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-state-based-conflicts-by-type",
+    "word_count": 217,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-in-armed-conflicts-by-type",
+    "word_count": 241,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "excess-deaths-daily-per-100k-economist",
+    "word_count": 246,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cobalt-production",
+    "word_count": 226,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "food-production-ukraine-russia",
+    "word_count": 211,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "electricity-demand",
+    "word_count": 245,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "maize-exports-ukraine-russia-perspective",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "net-electricity-imports",
+    "word_count": 276,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-final-energy-consumption-from-renewable-sources",
+    "word_count": 211,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "countries-using-ecosystem-based-approaches-to-manage-marine-areas",
+    "word_count": 236,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "attendance-major-artificial-intelligence-conferences",
+    "word_count": 212,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "computer-chess-ability",
+    "word_count": 197,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "government-transparency",
+    "word_count": 271,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "adolescent-fertility-15-19",
+    "word_count": 246,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "countries-long-standing-liberal-democracies-row",
+    "word_count": 293,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "political-regime-amb-row",
+    "word_count": 261,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "countries-long-standing-electoral-democracies",
+    "word_count": 277,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "democracies-autocracies-amb-row",
+    "word_count": 256,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "civil-liberties-rating-fh",
+    "word_count": 263,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "multi-party-elections-hoe-row",
+    "word_count": 230,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "multi-party-elections-legislature-row",
+    "word_count": 217,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "excess-deaths-cumulative-economist-who",
+    "word_count": 269,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "transparent-laws-row",
+    "word_count": 237,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "justified-political-positions-score",
+    "word_count": 241,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "common-good-justifications-score",
+    "word_count": 284,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "elite-consultations-score",
+    "word_count": 270,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "elections-for-the-governments-chief-executive",
+    "word_count": 210,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "political-opposition-lexical",
+    "word_count": 212,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "political-liberties-lexical",
+    "word_count": 209,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "competitive-elections-lexical",
+    "word_count": 203,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "working-hours-vs-hourly-wage",
+    "word_count": 252,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "political-regime-bti",
+    "word_count": 257,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "free-fair-elections-bti",
+    "word_count": 293,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "effective-power-to-govern-score-bti",
+    "word_count": 274,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "separation-of-powers-score-bti",
+    "word_count": 258,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\bindicates? that\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "countries-democracies-autocracies-bti",
+    "word_count": 259,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "people-living-in-democracies-autocracies-bti",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-space-visits",
+    "word_count": 200,
+    "flags": [
+      "banned:\\bsuggests?\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-people-space",
+    "word_count": 246,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "full-democracy-lexical",
+    "word_count": 260,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "electoral-democracy-lexical",
+    "word_count": 250,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-venomous-animal-contact",
+    "word_count": 228,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "distribution-democracy-index-polity",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "citizen-satisfaction-with-democracy",
+    "word_count": 228,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-unsafe-water-sources-vs-share-in-extreme-poverty",
+    "word_count": 326,
+    "flags": [
+      "long:326"
+    ]
+  },
+  {
+    "slug": "expected-years-of-schooling-vs-share-in-extreme-poverty",
+    "word_count": 345,
+    "flags": [
+      "long:345"
+    ]
+  },
+  {
+    "slug": "share-of-population-living-in-extreme-poverty-lines-cbn",
+    "word_count": 279,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "artificial-intelligence-parameter-count",
+    "word_count": 259,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "infant-mortality-rates",
+    "word_count": 246,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "poverty-share-of-population-living-on-less-than-40-a-day",
+    "word_count": 231,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "income-share-top-1-before-tax-wid",
+    "word_count": 266,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "income-share-top-10-before-tax-wid",
+    "word_count": 257,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "income-share-distribution-before-tax-middle40-wid",
+    "word_count": 257,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "gini-coefficient-before-tax-wid",
+    "word_count": 276,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "income-share-distribution-before-tax-wid",
+    "word_count": 261,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "palma-ratio-wid",
+    "word_count": 255,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-the-top-10-vs-gini-coefficient-before-tax-wid",
+    "word_count": 335,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "long:335"
+    ]
+  },
+  {
+    "slug": "share-of-population-in-multidimensional-poverty-urban-vs-rural-cme",
+    "word_count": 203,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "influenza-vaccination-rate-elderly-oecd",
+    "word_count": 221,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-infant-deaths-unwpp",
+    "word_count": 219,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-deaths",
+    "word_count": 249,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "burden-of-disease",
+    "word_count": 233,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "healthy-life-expectancy-at-birth",
+    "word_count": 240,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "total-disease-burden",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-obesity",
+    "word_count": 253,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-secondhand-smoke",
+    "word_count": 238,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-unsafe-water-sources",
+    "word_count": 267,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-lack-of-access-to-hand-washing-facilities",
+    "word_count": 284,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-unsafe-sanitation",
+    "word_count": 277,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-alcohol-use",
+    "word_count": 227,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-drug-use",
+    "word_count": 219,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-low-physical-activity",
+    "word_count": 220,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-high-blood-sugar",
+    "word_count": 228,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-unsafe-sex",
+    "word_count": 228,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-malaria-ihme",
+    "word_count": 235,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-population-in-extreme-poverty-2011-ppp",
+    "word_count": 246,
+    "flags": [
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-natural-disasters",
+    "word_count": 228,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-who",
+    "word_count": 253,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "total-disease-burden-who",
+    "word_count": 269,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-fires-and-burns",
+    "word_count": 226,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "burden-of-disease-who",
+    "word_count": 235,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-fires-and-burns-ihme",
+    "word_count": 268,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-fires-and-burns-who",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-fires-and-burns-who",
+    "word_count": 222,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-hivaids",
+    "word_count": 229,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-diarrheal-diseases",
+    "word_count": 230,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-diarrheal-diseases",
+    "word_count": 231,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-meningitis",
+    "word_count": 187,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-meningitis",
+    "word_count": 245,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-diabetes",
+    "word_count": 246,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-children-who-are-underweight",
+    "word_count": 259,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-liver-disease",
+    "word_count": 264,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicide-rate-age-standardized",
+    "word_count": 244,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-alzheimers",
+    "word_count": 250,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-road-accidents",
+    "word_count": 242,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-drowning",
+    "word_count": 231,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-drowning",
+    "word_count": 230,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-gbd",
+    "word_count": 268,
+    "flags": [
+      "banned:\\blikely\\b",
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "death-rate-from-liver-disease-gbd",
+    "word_count": 254,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-diabetes-gbd",
+    "word_count": 248,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-from-conflict-and-terrorism-gbd",
+    "word_count": 255,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-natural-disasters-gbd",
+    "word_count": 255,
+    "flags": [
+      "banned:\\bsuggests?\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-poisoning",
+    "word_count": 238,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-poisoning-gbd",
+    "word_count": 226,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-tuberculosis-gbd",
+    "word_count": 242,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-secondhand-smoke-gbd",
+    "word_count": 263,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-secondhand-smoke",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-from-unsafe-water-sources-gbd",
+    "word_count": 279,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-unsafe-sanitation-gbd",
+    "word_count": 295,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "rate-of-premature-deaths-due-to-alcohol-gbd",
+    "word_count": 288,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rates-from-no-access-to-handwashing-facilities",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-from-drug-use",
+    "word_count": 258,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "death-rates-from-indoor-air-pollution-gbd",
+    "word_count": 250,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-due-to-low-physical-activity",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-due-to-low-physical-activity-gbd",
+    "word_count": 265,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "death-rates-from-high-blood-pressure",
+    "word_count": 228,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-from-high-blood-sugar-gbd",
+    "word_count": 243,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "death-rates-from-unsafe-sex",
+    "word_count": 257,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-from-unsafe-sex-gbd",
+    "word_count": 262,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rates-from-high-blood-sugar",
+    "word_count": 241,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "incidence-of-meningitis",
+    "word_count": 229,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-diarrheal-diseases-who",
+    "word_count": 262,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-diarrheal-diseases-who",
+    "word_count": 222,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-from-malaria-ghe",
+    "word_count": 225,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "infectious-disease-death-rates-gbd",
+    "word_count": 248,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-infectious-diseases",
+    "word_count": 245,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-malnutrition",
+    "word_count": 212,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-malnutrition",
+    "word_count": 234,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-strokes",
+    "word_count": 198,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-ozone-pollution",
+    "word_count": 248,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-ozone-pollution",
+    "word_count": 251,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "incidence-of-hivaids",
+    "word_count": 223,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "incidence-of-tuberculosis",
+    "word_count": 257,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-digestive-diseases",
+    "word_count": 227,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-strokes",
+    "word_count": 207,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-digestive-diseases-gbd",
+    "word_count": 221,
+    "flags": [
+      "banned:\\blikely\\b",
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-ozone-pollution-gbd",
+    "word_count": 239,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-ambient-particulate-air-pollution",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-malaria-ghe",
+    "word_count": 262,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-tuberculosis-ghe",
+    "word_count": 241,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-from-tuberculosis-ghe",
+    "word_count": 223,
+    "flags": [
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-strokes-ghe",
+    "word_count": 209,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-strokes-who",
+    "word_count": 214,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-alzheimers-other-dementias",
+    "word_count": 235,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-malnutrition-ghe",
+    "word_count": 223,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-malnutrition-ghe",
+    "word_count": 217,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicidesghe",
+    "word_count": 205,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicide-rate-ghe",
+    "word_count": 210,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-suicides-ghe",
+    "word_count": 235,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-from-suicide-ghe",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-drowning-ghe",
+    "word_count": 256,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-poisonings-ghe",
+    "word_count": 212,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-pneumonia-ghe",
+    "word_count": 195,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-meningitis-ghe",
+    "word_count": 208,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-from-hivaids-who",
+    "word_count": 234,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-hivaids-who",
+    "word_count": 226,
+    "flags": [
+      "banned:\\bstark\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-new-hivaids-infections-who",
+    "word_count": 256,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-child-deaths-igme",
+    "word_count": 228,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-infant-deaths-gho",
+    "word_count": 238,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "neonatal-mortality-rate-gho",
+    "word_count": 243,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-youth-deaths",
+    "word_count": 229,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "physical-integrity-rights-index-vdem",
+    "word_count": 250,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "alzheimers-parkinsons-prevalence",
+    "word_count": 214,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-meningitis-who",
+    "word_count": 217,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-poverty-lower-middle-income-vs-share-mpi-poor",
+    "word_count": 299,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "landline-internet-subscriptions",
+    "word_count": 249,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "landline-phone-subscriptions",
+    "word_count": 247,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "date-of-the-peak-cherry-tree-blossom-in-kyoto",
+    "word_count": 284,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "homicides-unodc",
+    "word_count": 227,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "child-deaths-by-world-region-un-data",
+    "word_count": 268,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "p10-vs-gdp-per-capita",
+    "word_count": 330,
+    "flags": [
+      "long:330"
+    ]
+  },
+  {
+    "slug": "male-vs-female-suicide-who",
+    "word_count": 292,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "suicide-rates-by-age-detailed-who",
+    "word_count": 264,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "suicide-death-rates-by-sex-who",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-population-with-large-household-expenditures-on-health-10pc",
+    "word_count": 222,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "primary-energy-consumption-from-solar-and-wind",
+    "word_count": 234,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "gender-of-the-head-of-state",
+    "word_count": 197,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "women-political-empowerment-index",
+    "word_count": 281,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "women-civil-society-participation-index",
+    "word_count": 251,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "share-of-s-aureus-bloodstream-infections-that-are-resistant-to-antibiotics",
+    "word_count": 267,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-e-coli-bloodstream-infections-due-to-antimicrobial-resistant-bacteria",
+    "word_count": 263,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "equality-of-political-power-across-social-groups-score",
+    "word_count": 268,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "self-harm-death-rates-by-age",
+    "word_count": 247,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "technology-infrastructure-diffusion-uk",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bdramatic\\w*"
+    ]
+  },
+  {
+    "slug": "male-female-ratio-suicides-rates",
+    "word_count": 313,
+    "flags": [
+      "banned:\\bsuggests?\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "suicide-rate-2000-2019-who",
+    "word_count": 282,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-amphetamine-who",
+    "word_count": 181,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "rate-of-disease-burden-from-drug-use-disorders-who",
+    "word_count": 237,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "were-flu-vaccines-available-in-the-country",
+    "word_count": 252,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "sources-population-dataset",
+    "word_count": 228,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "homicide-rate-who-mortality-database",
+    "word_count": 251,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicides-whomd",
+    "word_count": 222,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicide-rate-who-age-standardized",
+    "word_count": 216,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-deaths-from-homicide",
+    "word_count": 253,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicides-by-sex-of-the-victim",
+    "word_count": 233,
+    "flags": [
+      "banned:\\bappears? to\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "homicide-rate-ihme-vs-who-mort-db",
+    "word_count": 249,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "number-reported-cases-of-cholera",
+    "word_count": 258,
+    "flags": [
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-population-satisfied-with-government-services",
+    "word_count": 241,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "friends-family-anxious-depressed",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "government-revenues-as-a-share-of-gdp-imf",
+    "word_count": 271,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "conversion-therapies-banned",
+    "word_count": 249,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "science-helps-a-lot-treating-anxiety-depression-vs-gdp-per-capita",
+    "word_count": 335,
+    "flags": [
+      "long:335"
+    ]
+  },
+  {
+    "slug": "men-women-friends-family-anxious-depressed",
+    "word_count": 338,
+    "flags": [
+      "long:338"
+    ]
+  },
+  {
+    "slug": "representation-of-women-in-the-judiciary",
+    "word_count": 264,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "unemployment-rate-by-disability",
+    "word_count": 295,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "psychiatrists-working-in-the-mental-health-sector",
+    "word_count": 242,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "dealing-with-anxiety-depression-comparison",
+    "word_count": 333,
+    "flags": [
+      "long:333"
+    ]
+  },
+  {
+    "slug": "dealt-with-anxiety-depression-religious-spiritual",
+    "word_count": 264,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "dealt-with-anxiety-depression-took-prescribed-medication",
+    "word_count": 268,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "dealt-with-anxiety-depression-friends-family",
+    "word_count": 264,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "perceived-comfort-speaking-anxiety-depression-vs-talked-to-family-friends-when-had-anxiety-depression",
+    "word_count": 336,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "long:336"
+    ]
+  },
+  {
+    "slug": "upper-secondary-completion-rate-adjusted-gender-parity-index",
+    "word_count": 227,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "lower-secondary-completion-rate-adjusted-gender-parity-index",
+    "word_count": 259,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "adult-population-covered-in-primary-data-on-the-prevalence-of-major-depression",
+    "word_count": 248,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "number-of-countries-with-primary-data-on-prevalence-of-mental-illnesses-in-the-global-burden-of-disease-study",
+    "word_count": 263,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "population-covered-by-mobile-network-by-network-capability",
+    "word_count": 220,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "anxiety-disorders-treatment-gap",
+    "word_count": 245,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "blood-donations-men-sex-with-men",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "censorship-of-lgbt-issues",
+    "word_count": 223,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "age-of-consent-same-sex-partners-equaldex",
+    "word_count": 208,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "discrimination-lgbt-equaldex",
+    "word_count": 215,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "women-choose-where-to-live-same-way-as-men",
+    "word_count": 251,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "women-can-obtain-divorce-same-as-men",
+    "word_count": 234,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "women-have-the-same-rights-to-remarry-as-men",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "countries-third-gender-recognized",
+    "word_count": 230,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-armed-conflicts-by-type",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "female-homicide-rate",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicides-by-firearm",
+    "word_count": 246,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cholera-case-fatality-rate",
+    "word_count": 176,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "short:176"
+    ]
+  },
+  {
+    "slug": "criminal-penalties-or-civil-remedies-sexual-harassment-in-employment",
+    "word_count": 247,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "international-tourist-arrivals-by-region-of-origin",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "trips-by-domestic-tourists-per-person",
+    "word_count": 229,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "average-length-of-stay",
+    "word_count": 234,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "monthly-co2-emissions-from-international-aviation",
+    "word_count": 262,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "child-homicide-rate",
+    "word_count": 232,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "homicide-rate-by-age-of-the-victim",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "deaths-averted-due-to-rotavirus-vaccine",
+    "word_count": 252,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "international-tourist-trips-per-1000-people",
+    "word_count": 249,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "international-tourist-departures",
+    "word_count": 234,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "local-guests-in-hotels-and-similar-establishments",
+    "word_count": 203,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "foreign-guests-in-hotels-and-similar-establishments",
+    "word_count": 241,
+    "flags": [
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-reported-cholera-deaths",
+    "word_count": 214,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "women-political-empowerment-index-vs-electoral-democracy-index",
+    "word_count": 251,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-invasive-non-typhoidal-salmonella-children-under-5",
+    "word_count": 271,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-typhoid-paratyphoid-fever-children-under-5",
+    "word_count": 246,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-substance-disorders-who",
+    "word_count": 257,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "deaths-alcohol-drugs-by-sex-who",
+    "word_count": 222,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "wealth-share-richest-10-percent",
+    "word_count": 254,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "gini-coefficient-after-vs-before-tax-lis-scatter",
+    "word_count": 295,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "share-of-children-with-diarrhea-receiving-zinc",
+    "word_count": 241,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "palma-ratio-after-tax-lis",
+    "word_count": 257,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "threshold-income-marking-the-poorest-decile-vs-mean-income-wb",
+    "word_count": 324,
+    "flags": [
+      "long:324"
+    ]
+  },
+  {
+    "slug": "income-share-top-1-before-tax-wid-extrapolations",
+    "word_count": 262,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "annual-growth-income-consumption-poorest-vs-total-population",
+    "word_count": 364,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "long:364"
+    ]
+  },
+  {
+    "slug": "annual-reported-ai-incidents-controversies",
+    "word_count": 220,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "market-share-logic-chip-production-manufacturing-stage",
+    "word_count": 217,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "primary-secondary-enrollment-completion-rates",
+    "word_count": 245,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "views-ai-impact-society-next-20-years",
+    "word_count": 229,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-suicide-and-non-suicide-terrorist-attacks",
+    "word_count": 235,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "terrorism-deaths-by-region",
+    "word_count": 263,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "suicide-and-other-terrorist-attacks",
+    "word_count": 199,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-terrorist-attacks-by-method-of-attack-stacked-bar",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bbecause\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "terrorist-attacks-by-method-stacked",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "laying-hens-cages-and-cage-free",
+    "word_count": 242,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "terrorism-deaths-rate",
+    "word_count": 244,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "annual-scholarly-publications-on-artificial-intelligence",
+    "word_count": 262,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-terrorist-attacks-by-method",
+    "word_count": 215,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "hypertension-adults-30-79",
+    "word_count": 273,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "diabetes-prevalence-who-gho",
+    "word_count": 261,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "infectious-and-parasitic-diseases-death-rate-who-mdb",
+    "word_count": 228,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "respiratory-infection-death-rate-who-mdb",
+    "word_count": 221,
+    "flags": [
+      "banned:\\bdramatic\\w*",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "farmed-crustaceans",
+    "word_count": 270,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "wild-caught-fish",
+    "word_count": 238,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "hepatitis-c-deaths-by-type-of-disease",
+    "word_count": 261,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "hepatitis-b-deaths-by-type-of-disease",
+    "word_count": 242,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "hepatitis-b-total-number-of-deaths-by-age-group",
+    "word_count": 251,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "hepatitis-c-total-number-of-deaths-by-age-group",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "attitudes-bans-factory-farming",
+    "word_count": 253,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-of-mothers-who-have-lost-an-infant",
+    "word_count": 227,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "banning-of-chick-culling",
+    "word_count": 250,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "democracy-index-by-source",
+    "word_count": 236,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "political-regime-classification-by-source",
+    "word_count": 270,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "inequality-adjusted-human-development-index-vs-gdp-per-capita",
+    "word_count": 310,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "domestic-policy-free-from-interference-of-other-states-score",
+    "word_count": 273,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "political-centralization-index",
+    "word_count": 265,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "fur-farming-ban",
+    "word_count": 217,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-mountain-land-that-is-degraded",
+    "word_count": 238,
+    "flags": [
+      "banned:\\blikely\\b",
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-in-wars",
+    "word_count": 238,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "stillbirth-rate",
+    "word_count": 242,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-by-cause-who-mdb",
+    "word_count": 247,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "death-rates-from-natural-disasters",
+    "word_count": 237,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "peaceful-and-hostile-relationships-between-states",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "inequality-in-education",
+    "word_count": 247,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "income-inequality-atkinson-index-undp",
+    "word_count": 253,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "plastics-waste-in-2019-by-region-and-application",
+    "word_count": 273,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "dengue-fever-deaths",
+    "word_count": 256,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "share-plastic-waste-recycled",
+    "word_count": 218,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "gross-national-income-per-capita-males-vs-females",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "share-plastic-fate",
+    "word_count": 274,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "reduction-in-hdi-when-adjusting-for-inequalities",
+    "word_count": 268,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "plastic-waste-landfill",
+    "word_count": 236,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "plastic-waste-region-and-polymer",
+    "word_count": 295,
+    "flags": [
+      "banned:\\bappears? to\\b",
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "life-expectancy-marimekko",
+    "word_count": 214,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "plastic-waste-incinerated",
+    "word_count": 230,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "share-of-plastic-waste-that-is-mismanaged",
+    "word_count": 266,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "projections-plastic-by-disposal-method",
+    "word_count": 272,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "plastic-waste-disposal-projections",
+    "word_count": 291,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "plastic-leakage-to-aquatic-environments",
+    "word_count": 264,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "share-plastic-waste-exports",
+    "word_count": 219,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "broad-causes-of-death",
+    "word_count": 259,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "probability-that-a-male-will-outlive-a-female",
+    "word_count": 237,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "total-cardiologists-per-million-people",
+    "word_count": 168,
+    "flags": [
+      "title_mismatch",
+      "short:168"
+    ]
+  },
+  {
+    "slug": "average-non-hdl-cholesterol-levels",
+    "word_count": 240,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-wars-project-mars",
+    "word_count": 203,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "mens-life-expectancy-at-birth",
+    "word_count": 218,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "number-of-new-wars",
+    "word_count": 224,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "life-expectancy-at-different-ages",
+    "word_count": 255,
+    "flags": [
+      "banned:\\bdramatic\\w*"
+    ]
+  },
+  {
+    "slug": "annual-death-rates-in-different-age-groups-females",
+    "word_count": 348,
+    "flags": [
+      "long:348"
+    ]
+  },
+  {
+    "slug": "cardiac-surgeons-per-million-people",
+    "word_count": 162,
+    "flags": [
+      "title_mismatch",
+      "short:162"
+    ]
+  },
+  {
+    "slug": "gamma-camera-or-nuclear-medicine-availability",
+    "word_count": 240,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "cardiovascular-disease-death-rate-males-vs-females",
+    "word_count": 283,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "state-capacity-index",
+    "word_count": 234,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "peaceful-and-hostile-relationships-between-states-no-relationship-included",
+    "word_count": 227,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "reported-cases-of-leprosy",
+    "word_count": 257,
+    "flags": [
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "united-nations-membership-status",
+    "word_count": 172,
+    "flags": [
+      "short:172"
+    ]
+  },
+  {
+    "slug": "status-of-endemicity-of-cutaneous-leishmaniasis",
+    "word_count": 221,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "status-of-endemicity-of-visceral-leishmaniasis",
+    "word_count": 249,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "status-of-endemicity-of-onchocerciasis",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "cancer-incidence-rate-by-age-group",
+    "word_count": 227,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "reported-cases-of-acute-african-trypanosomiasis",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "incidence-rate-of-cardiovascular-disease",
+    "word_count": 245,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "reported-cases-of-human-african-trypanosomiasis-t-b-gambiense",
+    "word_count": 228,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "states-involved-in-wars",
+    "word_count": 223,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-snakebite-envenoming",
+    "word_count": 253,
+    "flags": [
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "chronic-respiratory-diseases-death-rate-who-mdb",
+    "word_count": 251,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-from-maternal-disorders-ihme",
+    "word_count": 292,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-snakebite-envenoming",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-rheumatic-heart-disease-who-ghe-age-standardized",
+    "word_count": 258,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-cardiomyopathy-myocarditis-endocarditis-who-ghe-age-standardized",
+    "word_count": 234,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-from-hypertensive-heart-disease-who-ghe-age-standardized",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-countries-where-armed-conflicts-took-place",
+    "word_count": 224,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-armed-conflicts-by-type-and-country",
+    "word_count": 259,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-in-armed-conflicts",
+    "word_count": 262,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "death-rate-in-armed-conflicts-by-type-and-country",
+    "word_count": 237,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-wars-by-war-1800-2011-bar-chart",
+    "word_count": 230,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-intrastate-conflicts",
+    "word_count": 230,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-in-interstate-conflicts",
+    "word_count": 237,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-in-non-state-conflicts",
+    "word_count": 270,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "deaths-from-one-sided-violence",
+    "word_count": 259,
+    "flags": [
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "number-of-new-state-based-conflicts",
+    "word_count": 238,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-interstate-conflicts-gibler-miller",
+    "word_count": 228,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "states-involved-in-interstate-conflicts",
+    "word_count": 265,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "rate-of-interstate-conflicts",
+    "word_count": 262,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "war-rate-correlates-of-war",
+    "word_count": 268,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-armed-conflicts",
+    "word_count": 233,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-wars-correlates-of-war",
+    "word_count": 244,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-in-wars-project-mars",
+    "word_count": 227,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "death-rate-in-wars-correlates-of-war",
+    "word_count": 246,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-interstate-conflicts-by-region-gibler-miller",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-state-based-conflicts",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-wars-by-region-project-mars",
+    "word_count": 252,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "cases-of-multidrug-resistant-tuberculosis",
+    "word_count": 200,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "tuberculosis-patients-with-hiv-share",
+    "word_count": 250,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cases-of-extensively-drug-resistant-tuberculosis",
+    "word_count": 234,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "tuberculosis-deaths-under-five-ihme",
+    "word_count": 252,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "sites-providing-rapid-tuberculosis-diagnostics-per-million-people",
+    "word_count": 239,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "tuberculosis-cases-attributable-to-risk-factors",
+    "word_count": 216,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "global-deaths-in-violent-political-conflicts-over-the-long-run",
+    "word_count": 292,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "global-death-rate-in-violent-political-conflicts-over-the-long-run",
+    "word_count": 260,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "new-reported-cases-tetanus",
+    "word_count": 206,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "prohibition-of-nuclear-weapons",
+    "word_count": 250,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "share-of-the-population-without-access-to-clean-fuels-for-cooking",
+    "word_count": 229,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "annual-rate-of-change-in-urban-populations",
+    "word_count": 294,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "annual-temperature-anomalies",
+    "word_count": 236,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "monthly-surface-temperature-anomalies-by-decade",
+    "word_count": 280,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "long-run-methane-concentration",
+    "word_count": 176,
+    "flags": [
+      "short:176"
+    ]
+  },
+  {
+    "slug": "annual-growth-rate-of-urban-population-share",
+    "word_count": 252,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "global-methane-concentrations",
+    "word_count": 224,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "sea-surface-temperature",
+    "word_count": 230,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "median-income-after-tax-lis",
+    "word_count": 261,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "average-nitrate-concentration-in-freshwater",
+    "word_count": 215,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "sex-ratio-at-sixty-years-old",
+    "word_count": 202,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-population-with-cancer-crude",
+    "word_count": 242,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "annual-number-of-fires",
+    "word_count": 237,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "maternal-mortality-rate-who-mdb",
+    "word_count": 256,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "suicide-rates-among-young-people-who-mdb",
+    "word_count": 277,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "fraction-of-countries-with-available-data-on-deaths-from-suicides-by-income-group",
+    "word_count": 221,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "inequality-of-incomes-before-and-after-taxes-and-transfers-scatter-working-age-pop",
+    "word_count": 282,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "suicide-rates-source-comparison",
+    "word_count": 321,
+    "flags": [
+      "long:321"
+    ]
+  },
+  {
+    "slug": "cumulative-deaths-in-armed-conflicts",
+    "word_count": 221,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-deaths-in-armed-conflicts-by-country-region-and-type",
+    "word_count": 254,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "suicide-rates-among-young-women-who-mdb",
+    "word_count": 325,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "long:325"
+    ]
+  },
+  {
+    "slug": "suicide-rates-among-young-men-who-mdb",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "long-run-air-pollution",
+    "word_count": 268,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "change-air-pollutant-emissions",
+    "word_count": 223,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "affected-by-disasters-vs-gdp",
+    "word_count": 271,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-deaths-in-armed-conflicts-by-type",
+    "word_count": 194,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "natural-disasters-by-yearly-impact",
+    "word_count": 267,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-tsunamis",
+    "word_count": 169,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "short:169"
+    ]
+  },
+  {
+    "slug": "people-treated-for-river-blindness",
+    "word_count": 235,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "tsunami-deaths",
+    "word_count": 233,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "cumulative-death-rates-in-armed-conflicts",
+    "word_count": 261,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "countries-in-which-gender-marker-can-be-legally-changed",
+    "word_count": 282,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "funding-for-trachoma",
+    "word_count": 196,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "suicide-rates-by-age-who-mdb",
+    "word_count": 256,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "suicide-rate-male-female-who-mdb",
+    "word_count": 298,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "annual-research-development-funding-for-neglected-tropical-diseases",
+    "word_count": 247,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "number-of-people-with-mild-or-severe-anemia-from-ntds",
+    "word_count": 216,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "number-suicide-deaths-source-comparison",
+    "word_count": 286,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "lgbt-legal-equality-index",
+    "word_count": 260,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "legal-status-of-same-sex-sexual-acts",
+    "word_count": 220,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "parents-same-sex-vs-different-sex",
+    "word_count": 231,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "winter-temperature-anomalies",
+    "word_count": 222,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "road-accident-deaths-per-passenger-kilometers",
+    "word_count": 225,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "completeness-of-homelessness-data",
+    "word_count": 254,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "number-child-deaths-malnutrition",
+    "word_count": 251,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "commodity-driven-deforestation",
+    "word_count": 279,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "tree-cover-loss-from-wildfires",
+    "word_count": 253,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "tree-cover-loss",
+    "word_count": 272,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "living-languages",
+    "word_count": 214,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "weekly-share-of-the-total-land-area-burnt-by-wildfires",
+    "word_count": 273,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "per-capita-electricity-demand",
+    "word_count": 278,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "monthly-sea-ice-extent-in-the-arctic-decadal-average",
+    "word_count": 280,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-of-cervical-and-all-cancer-deaths-due-to-unsafe-sex",
+    "word_count": 244,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-all-cancer-deaths-attributable-to-alcohol-use",
+    "word_count": 276,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "liver-cancer-death-rate",
+    "word_count": 226,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cervical-cancer-death-rate-in-women",
+    "word_count": 230,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-lung-cancer-deaths-attributed-to-air-pollution",
+    "word_count": 250,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-new-cancers-caused-by-all-known-infectious-agents",
+    "word_count": 263,
+    "flags": [
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-new-cancers-caused-by-all-known-infections-by-type",
+    "word_count": 241,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "share-of-new-cancers-caused-by-helicobacter-pylori-bacteria",
+    "word_count": 266,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "banned:\\bcaused by\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "5-year-survival-rate-of-cancers-among-female-patients-in-england",
+    "word_count": 171,
+    "flags": [
+      "short:171"
+    ]
+  },
+  {
+    "slug": "routes-to-diagnosis",
+    "word_count": 236,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "share-of-stage-4-cancers-by-diagnosis-route-in-england",
+    "word_count": 340,
+    "flags": [
+      "long:340"
+    ]
+  },
+  {
+    "slug": "cancer-death-rates-by-type-who-db",
+    "word_count": 242,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "foreign-aid-given-as-grants-and-concessional-loans",
+    "word_count": 259,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "share-of-low-birthweight-babies-born",
+    "word_count": 256,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-invasive-cervical-cancers-caused-by-each-hpv-type",
+    "word_count": 258,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "child-and-maternal-malnutrition-death-rate",
+    "word_count": 242,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-cancers-attributed-to-9-hpv-types",
+    "word_count": 238,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "rate-of-child-deaths-attributed-to-child-and-maternal-malnutrition",
+    "word_count": 246,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "species-represented-in-the-living-planet-index",
+    "word_count": 218,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "prosperity-gap",
+    "word_count": 269,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "share-richest-1-wid-vs-pip",
+    "word_count": 341,
+    "flags": [
+      "long:341"
+    ]
+  },
+  {
+    "slug": "rate-of-new-cervical-cancer-cases-gco",
+    "word_count": 251,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "reported-rate-of-new-cervical-cancer-cases",
+    "word_count": 225,
+    "flags": [
+      "banned:\\blikely\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "plastic-waste-generation-by-industrial-sector",
+    "word_count": 255,
+    "flags": [
+      "chrome:Our World in Data"
+    ]
+  },
+  {
+    "slug": "coastal-eutrophication",
+    "word_count": 270,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "progress-toward-productive-and-sustainable-agriculture",
+    "word_count": 248,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "energy-mineral-prices",
+    "word_count": 216,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "share-of-population-in-severe-multidimensional-poverty",
+    "word_count": 279,
+    "flags": [
+      "banned:\\bsevere\\b"
+    ]
+  },
+  {
+    "slug": "neonatal-sepsis-and-infection-death-rate-in-infants",
+    "word_count": 240,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "global-antimicrobial-resistance-and-use-surveillance-system-glass-by-pathogen",
+    "word_count": 246,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "civilian-and-combatant-deaths-in-armed-conflicts",
+    "word_count": 234,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-armed-conflicts-by-region",
+    "word_count": 231,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "civilian-and-combatant-deaths-in-armed-conflicts-based-on-where-they-occurred",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "deaths-in-armed-conflicts-by-country",
+    "word_count": 256,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "neonatal-deaths-from-infections-attributed-to-antimicrobial-resistance-by-syndrome",
+    "word_count": 244,
+    "flags": [
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "long-run-birth-rate",
+    "word_count": 221,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "birth-rate-total",
+    "word_count": 325,
+    "flags": [
+      "long:325"
+    ]
+  },
+  {
+    "slug": "monthly-birth-rate-per-day",
+    "word_count": 170,
+    "flags": [
+      "short:170"
+    ]
+  },
+  {
+    "slug": "global-deaths-from-infections-attributable-to-antimicrobial-resistance",
+    "word_count": 294,
+    "flags": [
+      "banned:\\bbecause\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "global-deaths-by-syndrome-and-antimicrobial-resistance",
+    "word_count": 265,
+    "flags": [
+      "banned:\\bbecause\\b",
+      "banned:\\bcaused by\\b"
+    ]
+  },
+  {
+    "slug": "number-of-infections-tested-for-antibiotic-susceptibility",
+    "word_count": 240,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "cohort-fertility-rate-by-age",
+    "word_count": 342,
+    "flags": [
+      "long:342"
+    ]
+  },
+  {
+    "slug": "effective-fertility-rate-children-per-woman-who-are-expected-to-survive-until-childbearing-age",
+    "word_count": 286,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-the-population-living-with-hivaids",
+    "word_count": 211,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "average-battery-cell-price",
+    "word_count": 239,
+    "flags": [
+      "banned:\\bappears? to\\b"
+    ]
+  },
+  {
+    "slug": "replacement-fertility-rate",
+    "word_count": 241,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "oil-rents-as-a-share-of-gdp",
+    "word_count": 247,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-who-agree-vaccines-are-effective",
+    "word_count": 265,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "annual-co-emissions-from-aviation",
+    "word_count": 270,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "leading-cause-of-child-mortality-among-children-under-five",
+    "word_count": 271,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "political-polarization-score",
+    "word_count": 251,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "smoking-bans-in-public-places",
+    "word_count": 301,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-of-firms-that-say-corruption-is-a-big-problem-for-them",
+    "word_count": 232,
+    "flags": [
+      "banned:\\bsevere\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "cancer-death-rates-in-children-under-10-years-old",
+    "word_count": 246,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "share-of-people-who-feel-close-to-at-least-one-person",
+    "word_count": 238,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-of-people-who-recently-donated-to-charity",
+    "word_count": 229,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "self-reported-hopefulness",
+    "word_count": 198,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "cardiac-procedures-per-million-people",
+    "word_count": 156,
+    "flags": [
+      "short:156"
+    ]
+  },
+  {
+    "slug": "mobile-money-account-usage",
+    "word_count": 237,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "media-corruption-score",
+    "word_count": 287,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "clientelism-index",
+    "word_count": 239,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "judicial-corruption-score",
+    "word_count": 247,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "executive-corruption-index",
+    "word_count": 262,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "public-sector-corruption-index",
+    "word_count": 230,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "average-exposure-pm25-pollution",
+    "word_count": 280,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "freedom-score-fh",
+    "word_count": 277,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-population-living-in-extreme-poverty-2017-prices",
+    "word_count": 262,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "perceived-trust-between-people",
+    "word_count": 232,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "median2021-vs-median2017",
+    "word_count": 271,
+    "flags": [
+      "banned:\\bwe (see|observe|notice|can see)\\b"
+    ]
+  },
+  {
+    "slug": "new-drugs-approved-in-the-united-states-by-designations",
+    "word_count": 263,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "internally-displaced-people-due-to-conflict",
+    "word_count": 243,
+    "flags": [
+      "banned:\\bdue to\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "trials-by-intervention",
+    "word_count": 261,
+    "flags": [
+      "banned:\\bindicates? that\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-clinical-trials-by-sponsor",
+    "word_count": 264,
+    "flags": [
+      "banned:\\bsuggests?\\b",
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "lack-of-access-to-clean-fuels-for-cooking-vs-gdp-per-capita",
+    "word_count": 279,
+    "flags": [
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-clinical-trials-by-purpose",
+    "word_count": 262,
+    "flags": [
+      "banned:\\breflects?\\b",
+      "banned:\\bdue to\\b"
+    ]
+  },
+  {
+    "slug": "number-of-clinical-trials-with-results-posted",
+    "word_count": 284,
+    "flags": [
+      "banned:\\bsuggests?\\b",
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "number-of-clinical-trials-by-study-type",
+    "word_count": 273,
+    "flags": [
+      "banned:\\bsuggests?\\b"
+    ]
+  },
+  {
+    "slug": "merchandise-imports-as-a-share-of-countrys-gdp",
+    "word_count": 245,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-in-informal-employment-male",
+    "word_count": 281,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "unemployment-rate-for-young-people",
+    "word_count": 281,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-in-vulnerable-employment",
+    "word_count": 265,
+    "flags": [
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-in-informal-employment-female",
+    "word_count": 249,
+    "flags": [
+      "banned:\\blikely\\b"
+    ]
+  },
+  {
+    "slug": "gender-gap-in-average-wages-2000-vs-today",
+    "word_count": 257,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "deaths-from-abortion-and-miscarriage-per-100000-people",
+    "word_count": 245,
+    "flags": [
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "average-annual-surface-temperature",
+    "word_count": 240,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "monthly-spending-data-center-us",
+    "word_count": 258,
+    "flags": [
+      "banned:\\breflects?\\b"
+    ]
+  },
+  {
+    "slug": "share-waste-collected",
+    "word_count": 241,
+    "flags": [
+      "title_mismatch"
+    ]
+  },
+  {
+    "slug": "population-by-labor-force-status-bars",
+    "word_count": 297,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-of-professional-software-developers-using-ai-tools",
+    "word_count": 191,
+    "flags": [
+      "banned:\\bbecause\\b"
+    ]
+  },
+  {
+    "slug": "prison-capacity",
+    "word_count": 288,
+    "flags": [
+      "banned:\\bindicates? that\\b"
+    ]
+  },
+  {
+    "slug": "share-of-prisoners-that-are-pre-trial-detainees",
+    "word_count": 225,
+    "flags": [
+      "title_mismatch",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-population-living-in-the-capital-city",
+    "word_count": 249,
+    "flags": [
+      "banned:\\bbecause\\b",
+      "regional_binary"
+    ]
+  },
+  {
+    "slug": "share-of-population-living-in-rural-areas",
+    "word_count": 238,
+    "flags": [
+      "regional_binary"
+    ]
+  }
+]

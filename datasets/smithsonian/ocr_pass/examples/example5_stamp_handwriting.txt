@@ -1,0 +1,55 @@
+# Stamp + handwriting on a photograph
+
+id:        00000038___nmaahc_NMAAHC-2021_16_22_6_001
+image:     example5_stamp_handwriting.jpg
+caption:   231 chars
+ocr:       261 chars · tags {'handwriting': 2, 'stamp': 2} · 1.57s
+
+─── ORIGINAL CURATOR CAPTION ───
+
+A yellow wove paper envelope addressed to John Sheaffer of Bareville, Leacock Township, PA. This envelope features a red three cents George Washington stamp on the front, is postmarked August 17, and has no markings on the reverse.
+
+─── QWEN3.6-27B OCR OUTPUT ───
+
+[handwriting] On the yellow envelope:
+Mr.
+
+[stamp] On the circular postmark:
+NEW ORLEANS
+AUG
+17
+LA.
+
+[stamp] On the red postage stamp:
+3 POSTAGE 3
+THREE CENTS
+
+[handwriting] On the yellow envelope:
+Dear John Sheaffer
+Bearville Postoffice
+Lancaster County
+Penn'a
+
+─── AUGMENTED TRAINING CAPTION (what the tokenizer sees) ───
+
+A yellow wove paper envelope addressed to John Sheaffer of Bareville, Leacock Township, PA. This envelope features a red three cents George Washington stamp on the front, is postmarked August 17, and has no markings on the reverse.
+
+Text visible in the image:
+[handwriting] On the yellow envelope:
+Mr.
+
+[stamp] On the circular postmark:
+NEW ORLEANS
+AUG
+17
+LA.
+
+[stamp] On the red postage stamp:
+3 POSTAGE 3
+THREE CENTS
+
+[handwriting] On the yellow envelope:
+Dear John Sheaffer
+Bearville Postoffice
+Lancaster County
+Penn'a

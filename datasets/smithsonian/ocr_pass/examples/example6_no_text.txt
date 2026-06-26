@@ -1,0 +1,20 @@
+# NO_TEXT — augmentation is a no-op
+
+id:        00000010___nmaahc_NMAAHC-0FF76745ACAA2_4001
+image:     example6_no_text.jpg
+caption:   1546 chars
+ocr:       7 chars · tags {} · 0.45s
+
+─── ORIGINAL CURATOR CAPTION ───
+
+Pointe shoe and tights worn by Emiko Flanagan of Dance Theatre of Harlem. One ballet pointe shoe custom-colored with cosmetics to a light tan to match the skin tone of the dancer. The exterior of the shoe is made of satin fabric and has a leather sole. A drawstring runs around the top of the foot opening and is tied in a bow at the vamp. A length of custom-colored elastic tape is hand sewn to the shoe on either side of the back seam. Two lengths of custom-colored satin ribbon are hand sewn to the binding, one each on the left and right side quarters of the shoe. The leather sole has hatch marks on the front half and impressed text at the heel that reads: "5 1/2 / XXXX / M / Grishko / MADE IN RUSSIA". Uneven wear on the platform of the toe box indicates this shoe was worn on the left foot. The fabric-covered shank is broken at the arch of the foot with evidence of adhesive on the fabric cover surrounding the break. A pair of dance tights, size large/extra-large, with inherent holes in feet that are custom-dyed to a light tan to match the skin tone of the dancer. The foot holes allow the tights to be worn covering the foot and toes, with the hole at the ball of the foot, or worn footless with the foot portion rolled at the ankle. The tights have an elastic waistband with the clothing designer logo woven within the waistband that repeats "Capezio". A clothing tag is attached at the back of the waist with the care instructions, size, and materials. On the back of the tag is hand-written text in black ink reading "EF / 13-1".
+
+─── QWEN3.6-27B OCR OUTPUT ───
+
+NO_TEXT
+
+─── AUGMENTED TRAINING CAPTION ───
+
+(no OCR block appended; augmented = curator caption verbatim)
+
+Pointe shoe and tights worn by Emiko Flanagan of Dance Theatre of Harlem. One ballet pointe shoe custom-colored with cosmetics to a light tan to match the skin tone of the dancer. The exterior of the shoe is made of satin fabric and has a leather sole. A drawstring runs around the top of the foot opening and is tied in a bow at the vamp. A length of custom-colored elastic tape is hand sewn to the shoe on either side of the back seam. Two lengths of custom-colored satin ribbon are hand sewn to the binding, one each on the left and right side quarters of the shoe. The leather sole has hatch marks on the front half and impressed text at the heel that reads: "5 1/2 / XXXX / M / Grishko / MADE IN RUSSIA". Uneven wear on the platform of the toe box indicates this shoe was worn on the left foot. The fabric-covered shank is broken at the arch of the foot with evidence of adhesive on the fabric cover surrounding the break. A pair of dance tights, size large/extra-large, with inherent holes in feet that are custom-dyed to a light tan to match the skin tone of the dancer. The foot holes allow the tights to be worn covering the foot and toes, with the hole at the ball of the foot, or worn footless with the foot portion rolled at the ankle. The tights have an elastic waistband with the clothing designer logo woven within the waistband that repeats "Capezio". A clothing tag is attached at the back of the waist with the care instructions, size, and materials. On the back of the tag is hand-written text in black ink reading "EF / 13-1".

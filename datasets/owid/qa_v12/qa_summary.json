@@ -1,0 +1,83 @@
+{
+  "n": 200,
+  "batches": [
+    {
+      "batch": 1,
+      "pass": 31,
+      "minor": 5,
+      "hallucination": 4,
+      "degen": 0
+    },
+    {
+      "batch": 2,
+      "pass": 35,
+      "minor": 2,
+      "hallucination": 3,
+      "degen": 0
+    },
+    {
+      "batch": 3,
+      "pass": 29,
+      "minor": 3,
+      "hallucination": 8,
+      "degen": 0
+    },
+    {
+      "batch": 4,
+      "pass": 24,
+      "minor": 7,
+      "hallucination": 9,
+      "degen": 0
+    },
+    {
+      "batch": 5,
+      "pass": 28,
+      "minor": 1,
+      "hallucination": 11,
+      "degen": 0
+    }
+  ],
+  "hallucinated_slugs": [
+    "terrorist-attacks-fatalities-and-injuries",
+    "number-of-new-state-based-conflicts",
+    "production-printed-books-half-century",
+    "women-required-to-obey-husband",
+    "incidence-rate-of-cardiovascular-disease",
+    "income-inequality-in-market-and-disposable-income-across-the-world",
+    "suicide-rate-in-1980-vs-2023",
+    "per-capita-co-emissions-from-international-flights-tourism-adjusted",
+    "banning-of-chick-culling",
+    "child-deaths-from-invasive-non-typhoidal-salmonella",
+    "human-development-index-groups",
+    "ratio-of-same-day-to-tourist-trips",
+    "uk-inflation-and-unemployment-rate-19892017",
+    "grocery-bag-environmental-impact",
+    "share-of-people-who-feel-close-to-at-least-one-person",
+    "extent-of-extensive-agriculture",
+    "universal-suffrage-men-lexical",
+    "annual-growth-of-exports-of-goods-and-services",
+    "share-who-trust-government",
+    "deaths-from-fires-and-burns",
+    "child-mortality-complete-gapminder",
+    "share-of-population-with-large-household-expenditures-on-health-10pc",
+    "liberal-political-institutions-index",
+    "lgbt-legal-equality-index",
+    "share-of-the-population-living-in-extreme-poverty-vs-average-consumption-or-income",
+    "percentage-of-primary-schools-with-toilets",
+    "cumulative-number-artificial-intelligence-bills-passed",
+    "key-features-of-human-rights",
+    "local-gov-disaster-strategies",
+    "share-electricity-source-facet",
+    "reported-cases-of-measles",
+    "neonatal-mortality-ihme",
+    "joint-adoptions-same-sex-partners-equaldex",
+    "local-govts-risk-reduction",
+    "international-trips-for-personal-reasons"
+  ],
+  "total": {
+    "pass": 147,
+    "minor": 18,
+    "hallucination": 35,
+    "degen": 0
+  }
+}

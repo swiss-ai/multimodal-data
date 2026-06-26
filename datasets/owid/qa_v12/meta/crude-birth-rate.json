@@ -1,0 +1,8 @@
+{
+  "slug": "crude-birth-rate",
+  "title": "Birth rate",
+  "subtitle": "The total number of births per 1,000 people in a given year.",
+  "note": "",
+  "caption": "Birth rate\n\nThe total number of births per 1,000 people in a given year.\n\nThis choropleth world map displays birth rates for the year 2023, measured as the total number of births per 1,000 people. The legend ranges from 10 to 50, with color bands progressing from light blue for lower rates to dark purple for higher rates. The highest birth rates, represented by the darkest purple shades, are concentrated in Sub-Saharan Africa. Countries such as Niger, Chad, Somalia, and the Democratic Republic of the Congo fall into the upper bands of the scale, with values exceeding 40 and approaching 50 births per 1,000 people. Surrounding nations in West and Central Africa also display dark purple hues, indicating rates generally above 30. In contrast, most of Europe, North America, and East Asia appear in the lightest shades of blue, corresponding to the lower end of the scale near 10 to 15. Parts of South America and Southeast Asia show mid-range values, depicted in lighter to medium blue tones. Greenland and a few other territories are marked with a hatched pattern, indicating no data is available for these regions. The visual distribution highlights a distinct geographic pattern where the highest birth rates are clustered in specific African regions, while the lowest rates are found across much of the Northern Hemisphere's developed nations and parts of East Asia.",
+  "word_count": 226
+}

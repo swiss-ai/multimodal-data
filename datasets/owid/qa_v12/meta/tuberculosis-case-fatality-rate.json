@@ -1,0 +1,8 @@
+{
+  "slug": "tuberculosis-case-fatality-rate",
+  "title": "Tuberculosis case fatality rate",
+  "subtitle": "The estimated share of people who die from [tuberculosis](#dod:tuberculosis), out of those diagnosed.",
+  "note": "",
+  "caption": "Tuberculosis case fatality rate\n\nThe estimated share of people who die from tuberculosis, out of those diagnosed.\n\nThis choropleth world map displays the estimated tuberculosis case fatality rate for 2024, representing the share of diagnosed individuals who die from the disease. The legend ranges from 0% to over 40%, using a color scale that transitions from pale beige for the lowest rates to deep maroon for the highest. A distinct cluster of countries in Southern Africa, including Lesotho and Eswatini, falls into the darkest maroon band, indicating fatality rates exceeding 35% and approaching the 40% threshold. Surrounding nations in the southern region appear in dark orange and red shades, placing them in the 20% to 30% range. In West Africa, countries such as Guinea and Sierra Leone sit in the mid-range orange bands, corresponding to values between 10% and 20%. Much of North Africa, the Middle East, and parts of Asia display lighter orange shades, generally falling between 5% and 15%. North America, Western Europe, Australia, and large portions of South America are colored in the palest beige, signifying rates near the bottom of the scale, close to 0% to 5%. Several territories, including Greenland and Western Sahara, are marked with diagonal hatching to indicate no data is available. The visual distribution highlights the highest fatality shares concentrated in Southern Africa, with progressively lighter shades observed across the rest of the continents.",
+  "word_count": 232
+}

@@ -1,0 +1,8 @@
+{
+  "slug": "air-trips-per-capita",
+  "title": "Number of air travel trips per capita",
+  "subtitle": "",
+  "note": "The allocation of air travel trips to each country is based on the number of passengers originating from that respective country.",
+  "caption": "Number of air travel trips per capita\n\nThis choropleth world map displays the number of air travel trips per capita for the year 2019. The legend ranges from 0 to 2.5, with specific tick marks at 0, 0.5, 1, 1.5, 2, and 2.5. The allocation of air travel trips to each country is based on the number of passengers originating from that respective country. The darkest blue shades, representing values between 2 and 2.5 trips per capita, are visible in Australia, New Zealand, the United States, Spain, and Iceland. Surrounding these high-frequency regions, Canada, the United Kingdom, France, Germany, and the Scandinavian countries appear in medium-dark blue shades that fall within the 1 to 2 range. In the Middle East, the United Arab Emirates and Qatar also sit in these mid-to-higher bands. Much of South America, Eastern Europe, and parts of Asia display lighter blue shades, indicating values generally between 0 and 1. The vast majority of the African continent, along with large portions of Central Asia and Russia, appears in the lightest shade of the legend, corresponding to values near zero. Greenland and several territories in central Africa show a hatched pattern, indicating no data is available for those areas. The visual distribution highlights a concentration of higher per capita air travel in North America, Western Europe, and Oceania, while lower frequencies characterize most of the Global South and Eurasia.",
+  "word_count": 231
+}

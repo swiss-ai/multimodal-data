@@ -1,0 +1,47 @@
+id:           00006731___npg_NPG-NPG_96_121MedicalFaculty-000001
+dimensions:   3193x4000
+ocr_chars:    1,291
+tags:         {"engraving": 8}
+gate:         KEEP — Contains names and descriptive text.
+ver_grade:    5/5  issues: none
+
+=== OCR transcription ===
+[engraving] On the top-left portrait frame:
+VALENTINE MOTT, M.D.
+PROF. OF OPERATIVE SURGERY WITH SURGICAL AND PATHOLOGICAL ANATOMY
+
+[engraving] On the top-center portrait frame:
+THEODORE TRELINGHUYSER.
+CHANCELLOR.
+
+[engraving] On the top-right portrait frame:
+CRANVILLE SHARP PATTISON, M. D.
+PROF. OF GENERAL, DESCRIPTIVE, AND SURGICAL ANATOMY.
+
+[engraving] On the middle-left portrait frame:
+JOHN REVERE, M. D.
+PROF. OF THE THEORY AND PRACTICE OF MEDICINE.
+
+[engraving] On the middle-right portrait frame:
+MARTYN PAINE, M. D.
+PROF. OF THE INSTITUTES OF MEDICINE AND OF MATERIA MEDICA.
+
+[engraving] On the bottom-left portrait frame:
+CUNNING S. BEDFORD, M. D.
+PROF. OF OBSTETRICS AND THE DISEASES OF WOMEN AND CHILDREN.
+
+[engraving] On the bottom-right portrait frame:
+JOHN WILLIAM DRAPER, M. D.
+PROF. OF CHEMISTRY.
+
+[engraving] On the lower section below portraits:
+Drawn & Engraved by J. Beringer.
+LITH. OF G&W ENDICOTT 59 BEEKMAN ST N YORK
+From Photographs by Brady.
+
+MEDICAL FACULTY OF THE UNIVERSITY OF NEW YORK,
+AND THE FOUNDERS OF THE MEDICAL DEPARTMENT.
+
+New York,
+Published by Samuel S. and William Wood, 261 Pearl St.
+Entered according to Act of Congress in the year 1857 by Samuel S. & William Wood in the Clerk's Office of the District Court of the Southern District of New York.

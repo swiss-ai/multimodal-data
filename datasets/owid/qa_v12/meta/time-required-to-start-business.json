@@ -1,0 +1,8 @@
+{
+  "slug": "time-required-to-start-business",
+  "title": "Time required to start a business",
+  "subtitle": "Number of calendar days needed to complete the procedures to legally operate a business.",
+  "note": "If a procedure can be sped up at additional cost, the fastest procedure, independent of cost, is chosen.",
+  "caption": "Time required to start a business\n\nNumber of calendar days needed to complete the procedures to legally operate a business.\n\nThis choropleth world map displays the time required to start a business in 2019, measured in calendar days. The legend uses a color gradient ranging from very light green for 0 to 1 day, transitioning through teal and blue shades, up to dark blue for 200 days. Specific thresholds marked on the scale include 2, 5, 10, 20, 50, and 100 days. The darkest blue shades, indicating durations approaching or exceeding 100 days, are visible in specific countries such as Venezuela, Iran, and Vietnam. Large portions of South America, Africa, and parts of Asia display mid-range blue and teal colors, suggesting requirements generally falling between 10 and 50 days. In contrast, North America, Australia, and most of Western Europe appear in the lightest green shades, corresponding to the lowest end of the scale near 0 to 5 days. Greenland is marked with diagonal hatching, indicating no data is available for that territory. The visual distribution shows a concentration of longer processing times in specific regions of the Global South, while many developed economies cluster in the shortest duration category. The data reflects the fastest procedure available independent of cost if expedited options exist.",
+  "word_count": 213
+}

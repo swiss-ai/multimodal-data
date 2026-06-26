@@ -1,0 +1,8 @@
+{
+  "slug": "coal-prod-per-capita",
+  "title": "Coal production per capita",
+  "subtitle": "Measured in [kilowatt-hours](#dod:watt-hours) per person.",
+  "note": "",
+  "caption": "Coal production per capita\n\nMeasured in kilowatt-hours per person.\n\nThis horizontal bar chart displays coal production per capita for five countries in 2024, measured in kilowatt-hours per person. Australia sits at the top of the chart with a value of 122,882 kWh, a bar that extends significantly further to the right than any other entry. South Africa follows with 24,141 kWh, and China is positioned just below at 18,491 kWh. The United States appears in the middle of the ranking with 8,534 kWh, while India sits at the bottom of the visible list with 3,456 kWh. The visual gap between the first and second entries is substantial, with Australia's bar length exceeding the combined lengths of the other four bars. The remaining countries show a descending order of magnitude, with each bar clearly separated from the next. The data source note indicates that population figures are based on various sources from 2024, while energy statistics draw from the Energy Institute Statistical Review of World Energy (2025) and The Shift Data Portal (2019). All bars are rendered in the same shade of blue, arranged vertically from highest to lowest value.",
+  "word_count": 189
+}

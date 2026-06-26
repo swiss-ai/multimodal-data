@@ -1,0 +1,8 @@
+{
+  "slug": "stroke-death-rates-by-age",
+  "title": "Death rate from stroke by age group",
+  "subtitle": "Estimated annual death rate from [stroke](#dod:stroke) shown as a rate per 100,000 people in each age group, based on the [underlying cause](#dod:underlying-cause-of-death) listed on death certificates.",
+  "note": "",
+  "caption": "Death rate from stroke by age group\n\nEstimated annual death rate from stroke shown as a rate per 100,000 people in each age group, based on the underlying cause listed on death certificates.\n\nThis line chart tracks the estimated annual death rate from stroke per 100,000 people across different age groups from 1980 to 2023. The vertical axis ranges from 0 to 2,000. The line representing the 70+ years old age group is positioned significantly higher than all others, starting near the 2,000 mark in 1980 and following a downward trajectory to finish below 1,000 by 2023. The 50-69 years old group forms the second highest line, beginning around 300 and declining to a value near 100. Below this, the lines for All ages, Age-standardized, and 15-49 years old cluster together in the lower section of the chart, all starting between 100 and 200 and ending near or below the 100 mark. The lines for Under-5s and 5-14 years old remain flat along the bottom of the chart, staying very close to zero throughout the entire period. All visible lines show a decrease over the forty-three-year span, with the most substantial numerical drop occurring in the 70+ years old category.",
+  "word_count": 200
+}

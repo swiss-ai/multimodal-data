@@ -1,0 +1,129 @@
+# Multi-region form — printed boilerplate + handwritten names + official seal
+
+id:        00000462___nmaahc_NMAAHC-2012_158_12_001
+image:     example2_bill_of_sale.jpg
+caption:   807 chars
+ocr:       1865 chars · tags {'printed_article': 6, 'handwriting': 3, 'stamp': 1} · 7.46s
+
+─── ORIGINAL CURATOR CAPTION ───
+
+Bill of sale for Sally and her daughters, Sylvia, Charlotte, and Elizabeth. A printed bill of sale form completed with handwritten details. The one-sided single-sheet document begins with "The State of South-Carolina" at the top left and details the sale of a woman and her three daughters from A. Nachman to C.W. Seignious for the sum of Twelve Hundred Dollars. The description is written as "A Negro Woman named Sally - and her three Children, viz, Sylvia - Charlotte and Elizabeth, the children all warranted sound, the woman, not warrant free sound --- To Have and to Hold the said Slaves with their increase". It is signed and dated March 7, 1854, Charleston, South Carolina. At the bottom left corner is printed "Printed by A. J. Burke, 40 Broad-st." There are no marks or inscriptions on the reverse.
+
+─── QWEN3.6-27B OCR OUTPUT ───
+
+[printed_article] On the top right corner of the document:
+Fees $5.
+
+[printed_article] On the header section of the document:
+The State of South-Carolina.
+KNOW ALL MEN BY THESE PRESENTS, That
+
+[handwriting] On the first blank line after "That":
+I A Nachman
+
+[printed_article] On the main body of the deed:
+for and in
+consideration of the sum of Twelve Hundred Dollars
+to me in hand paid, at and before the sealing and delivery of these Presents, By
+(the receipt whereof I do hereby acknowledge)
+have bargained and sold, and by these presents, do bargain, sell, and deliver to the said
+A Negro Woman named Sally -
+and her three Children, viz., Sylvia -
+Charlotte and Elizabeth, the children
+all warrantee sound, the woman, not
+warrantee sound
+To Have and to Hold the said Slaves with their increase
+unto the said C.W. Segnious his Executors, Administrators
+and Assigns, to the and the only proper use and behoof forever.
+And I the said J. Nachman
+Executors, and Administrators, the said bargained premises unto the said
+C.W. Segnious his
+Executors, Administrators and Assigns, from and against all persons shall and will warrant
+and forever defend, by these presents.
+
+[handwriting] On the handwritten names inserted into the form:
+C.W. Segnious
+C.W. Segnious
+J. Nachman
+C.W. Segnious
+
+[printed_article] On the witness clause:
+In Witness Whereof, I have hereunto set my Hand and Seal
+Dated at Charleston- on the 7 day of March Anno Domini,
+one thousand eight hundred and 54 and in the 78 year of the
+Independence of the United States of America.
+
+[printed_article] On the signature block area:
+SIGNED, SEALED AND DELIVERED, }
+IN THE PRESENCE OF }
+
+[handwriting] On the signature lines:
+John S Ryan
+J Nachman
+
+[stamp] On the circular seal next to the seller's signature:
+JN
+
+[printed_article] On the bottom footer of the document:
+Printed by A. J. Burke, 40 Broad-st.
+
+─── AUGMENTED TRAINING CAPTION (what the tokenizer sees) ───
+
+Bill of sale for Sally and her daughters, Sylvia, Charlotte, and Elizabeth. A printed bill of sale form completed with handwritten details. The one-sided single-sheet document begins with "The State of South-Carolina" at the top left and details the sale of a woman and her three daughters from A. Nachman to C.W. Seignious for the sum of Twelve Hundred Dollars. The description is written as "A Negro Woman named Sally - and her three Children, viz, Sylvia - Charlotte and Elizabeth, the children all warranted sound, the woman, not warrant free sound --- To Have and to Hold the said Slaves with their increase". It is signed and dated March 7, 1854, Charleston, South Carolina. At the bottom left corner is printed "Printed by A. J. Burke, 40 Broad-st." There are no marks or inscriptions on the reverse.
+
+Text visible in the image:
+[printed_article] On the top right corner of the document:
+Fees $5.
+
+[printed_article] On the header section of the document:
+The State of South-Carolina.
+KNOW ALL MEN BY THESE PRESENTS, That
+
+[handwriting] On the first blank line after "That":
+I A Nachman
+
+[printed_article] On the main body of the deed:
+for and in
+consideration of the sum of Twelve Hundred Dollars
+to me in hand paid, at and before the sealing and delivery of these Presents, By
+(the receipt whereof I do hereby acknowledge)
+have bargained and sold, and by these presents, do bargain, sell, and deliver to the said
+A Negro Woman named Sally -
+and her three Children, viz., Sylvia -
+Charlotte and Elizabeth, the children
+all warrantee sound, the woman, not
+warrantee sound
+To Have and to Hold the said Slaves with their increase
+unto the said C.W. Segnious his Executors, Administrators
+and Assigns, to the and the only proper use and behoof forever.
+And I the said J. Nachman
+Executors, and Administrators, the said bargained premises unto the said
+C.W. Segnious his
+Executors, Administrators and Assigns, from and against all persons shall and will warrant
+and forever defend, by these presents.
+
+[handwriting] On the handwritten names inserted into the form:
+C.W. Segnious
+C.W. Segnious
+J. Nachman
+C.W. Segnious
+
+[printed_article] On the witness clause:
+In Witness Whereof, I have hereunto set my Hand and Seal
+Dated at Charleston- on the 7 day of March Anno Domini,
+one thousand eight hundred and 54 and in the 78 year of the
+Independence of the United States of America.
+
+[printed_article] On the signature block area:
+SIGNED, SEALED AND DELIVERED, }
+IN THE PRESENCE OF }
+
+[handwriting] On the signature lines:
+John S Ryan
+J Nachman
+
+[stamp] On the circular seal next to the seller's signature:
+JN
+
+[printed_article] On the bottom footer of the document:
+Printed by A. J. Burke, 40 Broad-st.

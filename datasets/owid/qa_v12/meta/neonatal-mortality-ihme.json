@@ -1,0 +1,8 @@
+{
+  "slug": "neonatal-mortality-ihme",
+  "title": "Neonatal mortality rate",
+  "subtitle": "The share of newborns who die before reaching 28 days of age.",
+  "note": "",
+  "caption": "Neonatal mortality rate\n\nThe share of newborns who die before reaching 28 days of age.\n\nThis choropleth world map displays the neonatal mortality rate for the year 2019, representing the share of newborns who die before reaching 28 days of age. The legend at the bottom defines the color scale, ranging from 0% to 25%, with specific intervals marked at 0.5%, 1%, 2.5%, 5%, and 10%. A distinct hatched pattern indicates areas with no data. The highest mortality rates, represented by the darkest red shades corresponding to values between 10% and 25%, are concentrated in a band across Sub-Saharan Africa. Countries such as Somalia, the Central African Republic, and Chad fall within this darkest category. Surrounding nations in West and East Africa generally appear in dark orange shades, indicating rates in the 5% to 10% range. In South Asia, Pakistan and Afghanistan sit in the mid-range orange bands, falling between the 2.5% and 5% thresholds. Most of South America, Mexico, and parts of Southeast Asia display lighter orange shades, placing them in the 1% to 2.5% range. North America, Europe, Australia, and Russia are predominantly covered in the lightest beige shades, signifying rates below 0.5% or near 0%. Greenland is marked with the hatched pattern, indicating no data is available for that territory. The visual distribution highlights a clear geographic disparity, with the highest shares of neonatal deaths clustered in specific regions of Africa and South Asia, while the lowest shares are observed across the Global North and Oceania.",
+  "word_count": 249
+}

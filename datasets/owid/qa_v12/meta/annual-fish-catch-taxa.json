@@ -1,0 +1,8 @@
+{
+  "slug": "annual-fish-catch-taxa",
+  "title": "Annual fish catch relative to mean catch",
+  "subtitle": "Fish catch is measured as annual catch divided by the mean catch over the stock's time series. A value greater than one means annual catch is higher than average over the entire time period.",
+  "note": "",
+  "caption": "Annual fish catch relative to mean catch\n\nFish catch is measured as annual catch divided by the mean catch over the stock's time series. A value greater than one means annual catch is higher than average over the entire time period.\n\nThis line chart tracks the annual fish catch relative to the mean catch for five distinct categories from 1970 to 2018. The vertical axis ranges from 0 to 1.6, where a value of 1.0 represents the long-term average. The purple line representing Tuna consistently occupies the upper portion of the chart, starting near 0.6 in 1970 and rising to fluctuate primarily between 1.2 and 1.5 from the late 1990s onward, ending near 1.3 in 2018. In contrast, the brown line for Other marine fish begins at the lowest point on the chart, below 0.1 in 1970, rises to a peak near 1.3 around 1995, and then declines sharply to finish below 0.3 by 2018. The lines for Shrimps (green), Mackerels (orange), and Forage fish (blue) cluster more closely together in the middle and lower sections. Shrimps and Mackerels both show peaks exceeding 1.0 in the mid-1970s and again in the mid-1990s, before trending downward to end between 0.6 and 0.7. Forage fish fluctuates around the 1.0 mark in the early years but drops below 0.8 after 2000, ending near 0.5. By the final year shown, four of the five categories sit below the 1.0 average line, with only Tuna remaining significantly above the mean.",
+  "word_count": 245
+}

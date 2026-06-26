@@ -1,0 +1,18 @@
+PERSONA: educational buildings
+
+BUILDING (for reference, not fed to model): George Washington Junior High School | school | educational | Tampa, Florida, United States of America
+
+CAPTION (549.9s, 506 words):
+The image displays a black-and-white architectural floor plan titled "THIRD FLOOR PLAN" for the "GEORGE WASHINGTON JUNIOR HIGH SCHOOL" located at "707 COLUMBUS DRIVE" in "TAMPA," "HILLSBOROUGH COUNTY," "FLORIDA." The drawing is part of the "HISTORIC AMERICAN BUILDINGS SURVEY," identified as "SHEET 4 OF 5 SHEETS" with the survey number "FL-445." A north arrow is positioned in the lower right corner. The scale is noted as "1/8" = 1'-0"" with a corresponding graphic scale bar marked in feet and meters. The drawing credits "YVONNE MCKINLEY 2002" as the draftsman.
+
+A legend in the upper right corner defines the symbology used: a triangle for "DOOR," cross-hatching for "BRICK WALL -PLASTER ON INTERIOR," diagonal hatching for "WOOD STUD WALL WITH PLASTER ON BOTH SIDES," a grid pattern for "VCT OVER WOOD FLOOR," a stippled pattern for "CONCRETE FLOOR," and a blank rectangle for "STUCCO." Additional symbols include a circle with a cross for "LIGHTS," a small circle for "ROOF DRAINS," a circle with a dot for "VENTS," a larger circle for "CHIMNEY FLUE," a T-shape for "LEADER HEAD AND DOWNSPOUT," and a dot for "DOWNSPOUT."
+
+The plan depicts a symmetrical U-shaped building layout surrounding a central open courtyard labeled "ROOF." The courtyard contains four circular symbols labeled "ROOF VENTILATOR" and is bordered by a line labeled "CONCRETE PARAPET CAP." Dimension lines surround the exterior of the building, indicating overall lengths such as "165'-6 3/4"" on the left and right sides, and "174'-3"" across the top.
+
+The top wing of the building, running east-west, contains a central "HALLWAY" dimensioned "171'-9" x 11'-0"." Flanking the hallway are rooms labeled from left to right: "CLASSROOM 23'-0" x 31'-8"," "CLASSROOM 31'-0" x 22'-7"," "OLD RESTROOM 14'-5" x 22'-7"," "CLASSROOM 30'-9" x 22'-3"," "ADMINISTRATION 15'-2" x 22'-9"," "CLASSROOM 31'-5" x 22'-9"," and "CLASSROOM 22'-11" x 31'-9"." Stairwells labeled "WOOD STAIRS" with "DN" arrows are located at the far left and far right ends of this wing.
+
+The left wing, running north-south, features a "CORRIDOR 7'-8" x 119'-0"" along its inner edge. Rooms along the outer wall, from top to bottom, are labeled: "CLASSROOM 24'-3" x 31'-9"," "RESTROOM 24'-3" x 7'-2"," "CLASSROOM 24'-3" x 23'-6"," "CLASSROOM 24'-3" x 27'-3"," and "CLASSROOM 24'-3" x 26'-9"." A stairwell is located in the bottom corner of this wing.
+
+The right wing mirrors the left with a "CORRIDOR 7'-8" x 119'-0"". Rooms along the outer wall, from top to bottom, are labeled: "CLASSROOM 22'-8" x 31'-6"," "CLASSROOM 22'-10 x 29'-10"," "CLASSROOM 22'-8" x 27'-10"," and "CLASSROOM 22'-3" x 28'-0"." A stairwell is located in the bottom corner.
+
+Between the wings and the central courtyard, additional rooms are situated. On the left side, a room is labeled "CLASSROOM 22'-6" x 22'-11"" adjacent to a stairwell. On the right side, a room is labeled "CLASSROOM 21'-10" x 22'-5"" adjacent to a stairwell. Walls are rendered with various hatch patterns indicating brick, wood stud, and concrete construction as defined in the legend. Door swings are indicated by arcs, and windows are shown as breaks in the wall lines with multiple panes.

@@ -1,0 +1,8 @@
+{
+  "slug": "death-rate-in-wars-project-mars",
+  "title": "Death rate in wars",
+  "subtitle": "Deaths of combatants due to fighting, per 100,000 people. Included are [interstate](#dod:interstate-war-mars) and [civil](#dod:civil-war-mars) wars that were ongoing that year.",
+  "note": "",
+  "caption": "Death rate in wars\n\nDeaths of combatants due to fighting, per 100,000 people. Included are interstate and civil wars that were ongoing that year.\n\nThis bar chart displays the global death rate of combatants due to fighting per 100,000 people from 1816 to 2011, distinguishing between civil wars (red bars) and interstate wars (blue bars). The vertical axis ranges from 0 to 200. For the majority of the timeline, particularly between 1816 and 1907, bars remain very low, generally staying below the 10 mark. Two distinct periods show significantly higher values. Around 1918, blue bars representing interstate wars rise sharply to a range between 70 and 90, accompanied by a red bar for civil wars reaching approximately 65. The highest values on the chart occur between 1940 and 1951, where blue bars for interstate wars peak near 190. During this same mid-century period, red bars for civil wars appear in a cluster ranging roughly between 10 and 20. Following 1951, the values drop precipitously. From 1962 through 2011, the bars are consistently short, with most falling well below 10, indicating much lower death rates compared to the peaks observed in the early 20th century. The visual data highlights that interstate wars account for the highest recorded death rates in the dataset, specifically during the two major spikes, while civil war rates remain lower throughout the observed period.",
+  "word_count": 227
+}

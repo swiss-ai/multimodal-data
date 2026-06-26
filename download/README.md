@@ -379,3 +379,97 @@ Make sure you point the cache-dir to the spot where the dataset should be for fu
 
 4. **Use in training:**
    Point your training script to the cache directory with `--cache-dir` flag.
+
+---
+
+## Per-dataset download recipes (from `data-pipeline/adapter`)
+
+Per-dataset download scripts live under `../datasets/<dataset>/download.slurm`.
+The next sections document the conventions those scripts follow.
+
+### Pick a download recipe by file *shape*
+
+The bottleneck is **how a dataset's bytes are packed**, not its total size:
+
+- **Few large files** (parquet, tar, big shards) → `huggingface-cli` +
+  `HF_HUB_ENABLE_HF_TRANSFER=1`, which chunks each big file into parallel byte
+  ranges. Template: `../datasets/chartnet_realworldchart/download.slurm`.
+- **Many small files** (wav, opus, flac, jpg) → `git clone` + `git lfs pull`.
+  `huggingface-cli` pays per-file HTTP overhead, so thousands of tiny files
+  crawl; git batches the LFS resolution instead. Template:
+  `../datasets/police_scanner/download.slurm`.
+
+### Convention: one `download.slurm` per dataset
+
+Each dataset lives in its own directory under `../datasets/<dataset>/` and
+ships a self-contained download script. All download scripts use
+**`huggingface-cli download`** (raw files straight to a `--local-dir`, pinned
+by `--revision`), not the `datasets` builder. The shape is the same
+everywhere — see any recent script such as
+`../datasets/chartnet_realworldchart/download.slurm` as the reference
+template.
+
+Required settings (every HF download script):
+
+- `#SBATCH --account=infra01 --partition=normal --time=12:00:00 --cpus-per-task=288`
+- `#SBATCH --environment=nemo_26_02` (verify the current container — rolls periodically)
+- `#SBATCH --reservation=SD-69241-apertus-1-5-0` (verify with `scontrol show reservation` — names roll monthly)
+- Pin the commit: `--revision <sha>`
+- `export HF_HUB_ENABLE_HF_TRANSFER=1` and `--max-workers 64`
+- Shared pip packages: set both `PYTHONPATH` and `PATH` to
+  `/capstor/store/cscs/swissai/infra01/MLLM/pip-packages`
+- Destination naming:
+  `/capstor/store/cscs/swissai/infra01/{audio-,vision-}datasets/raw/{hf|ms}___{Provider}___{Dataset}`
+- Clean up the hub cache after download: `rm -rf "${HF_HUB_CACHE}"`
+- Logs: `/iopsstor/scratch/cscs/%u/apertus/multimodal-data/download/logs/`
+
+Downloading a subset of a repo (e.g. selected languages): pass **all** glob
+patterns to a **single** `--include` flag — multiple `--include` flags
+silently overwrite each other.
+
+```bash
+huggingface-cli download facebook/multilingual_librispeech \
+    --repo-type dataset --revision <sha> --local-dir "$DEST" \
+    --include "german/*" "dutch/*" "french/*" --max-workers 64
+```
+
+Multi-TB datasets should add an `afterany` auto-resubmit loop (one 12 h
+window is not enough); see `../datasets/peoples_speech/unsupervised/download.sh`
+for the pattern.
+
+### `merge_shar.py`
+
+Merges existing Lhotse SHAR shards into fewer, larger shards **without**
+re-decoding/resampling/re-tokenizing. Preserves field order and alignment
+from `shar_index.json` so `CutSet.from_shar(...)` stays valid.
+
+### `to_shar_examples.sh`
+
+Reference commands for converting various source formats into Lhotse SHAR
+shards. Use as a cookbook when adding a new dataset's `prepare_to_shar.slurm`.
+
+### `rsync_*_to_capstor.slurm`
+
+SLURM jobs that rsync staged datasets between scratch and capstor storage:
+
+- `rsync_audio_only_to_capstor.slurm` — push audio-dataset-only payloads.
+- `rsync_ups_to_capstor.slurm` — generic upstream-to-capstor push.
+- `rsync_voxpopuli_to_capstor.slurm` — VoxPopuli-specific transfer.
+
+### `audio/` — cross-dataset audio helpers
+
+Pipeline-stage scripts that operate across audio datasets:
+
+- `build_all_interleave.slurm` — build interleaved audio+text shards across
+  configured datasets.
+- `build_voxpopuli_interleave.slurm` — VoxPopuli-specific interleave builder.
+- `run_vad_multichannel.py` — multichannel voice-activity detection helper
+  used by several speech datasets.
+
+### Authentication
+
+For gated/private datasets or higher rate limits:
+
+```bash
+export HF_TOKEN="$(cat $HOME/.hf-token)"
+```

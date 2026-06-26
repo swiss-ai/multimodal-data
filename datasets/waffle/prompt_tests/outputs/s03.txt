@@ -1,0 +1,14 @@
+PERSONA: sacred architecture
+
+BUILDING (for reference, not fed to model): Cathedral Basilica of St. Augustine | cathedral | religious | St. Augustine, Florida, United States of America
+
+CAPTION (1479.1s, 416 words):
+The sheet presents architectural drawings of a tower, titled "TOWER" at the top center. A central vertical section cuts through the structure, flanked by five plan views and a note block. The central section shows a multi-story tower with a pointed roof topped by a cross. Section lines labeled A-A, B-B, C-C, and D-D mark the locations of the corresponding plans. The lower portion of the section shows a staircase with "TURNED BALUSTERS" and a dimension of "16'-6"" for the height to the first floor level. Above this, a ladder ascends through openings labeled "I BEAMS 12" x 5 3/4". Dimensions along the section include "19'-4"", "15'-0"", and "16'-1"".
+
+To the left of the central section, "PLAN-ON-C-C" depicts an octagonal plan with a dimension of "12'-0"" across the interior. An arrow points to the perimeter with the label "LOUVERS". Below this, "PLAN-ON-B-B" shows a larger octagonal plan within a square exterior wall. Dimensions read "12'-0"" and "12'-8"". An arrow indicates "UP LOUVERS".
+
+To the right of the central section, "ROOF-PLAN" shows an octagonal roof with radial lines meeting at a central point, labeled "TILE ROOF". Below the roof plan, "PLAN-ON-A-A" displays a square plan with an interior octagonal space. Dimensions include "12'-0"". Labels indicate "I BEAMS 12" x 5 3/4"", "MACHINE", and "LOUVERS". A note points to a corner detail: "CONCRETE BRACKET UNDER BEAM & OCTAGON.". In the upper right corner, "PLAN ON D-D" shows a square plan with dimensions "18'-0"" by "18'-0"". Two ladders are drawn and labeled "LADDER", with dimensions "6'-6"" and "3'-2"".
+
+A text block on the right side reads: "NOTE. FIRST & SECOND FLOORS OF TOWER SHOWN ON SHEETS NOS. 1 & 2. ALL STAIRS ARE LADDERS ABOVE SECOND FLOOR.". Below the note is a compass rose indicating North. Three scale bars are provided: "SCALE OF TOWER" marked in feet up to 30, "SCALE OF PLANS" marked in feet up to 15, and "METRIC" marked in centimeters up to 100.
+
+The title block at the bottom contains the text "MEASURED BY D. CORLEY." and "DRAWN BY H. C. DOZIER.". The agency is listed as "U.S. DEPARTMENT OF THE INTERIOR OFFICE OF NATIONAL PARKS, BUILDINGS, AND RESERVATIONS BRANCH OF PLANS AND DESIGN". The structure name is "CATHEDRAL", located in "FLORIDA - ST. JOHNS COUNTY - ST. AUGUSTINE". The survey information reads "SURVEY NO. 15-7", date "8-2-34", "HISTORIC AMERICAN BUILDINGS SURVEY", "SHEET 9 OF 16 SHEETS", and "INDEX NO. FLA. 55. SAUG 2.". A circular stamp with "HABS" is visible near the center bottom.

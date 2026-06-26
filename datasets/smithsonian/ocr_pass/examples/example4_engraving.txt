@@ -1,0 +1,41 @@
+# Engraved object — short, exact text
+
+id:        00000021___nmaahc_NMAAHC-2022_5_6_001
+image:     example4_engraving.jpg
+caption:   521 chars
+ocr:       219 chars · tags {'engraving': 4} · 1.55s
+
+─── ORIGINAL CURATOR CAPTION ───
+
+This round metal slave badge from 1803 is for Mechanic No. 137. On the recto is "CHARLESTON" stamped across the top. Under that is "No. 137" engraved, "MECHANIC" stamped, and "1803" stamped. The bottom edge has been trimmed, with the very top of an "1802" stamped date visible, indicating this badge is reworked from the previous year. On the verso is a stamped cartouche at the bottom center with the maker's name "C PRINCE." There is a hole punched at the center top. A thin piece of the bottom of the badge is missing.
+
+─── QWEN3.6-27B OCR OUTPUT ───
+
+[engraving] On the top curved area of the copper token:
+CHARLESTON
+
+[engraving] In the center-left of the token:
+Nº 137
+
+[engraving] Across the middle of the token:
+MECHANIC
+
+[engraving] At the bottom of the token:
+1803
+
+─── AUGMENTED TRAINING CAPTION (what the tokenizer sees) ───
+
+This round metal slave badge from 1803 is for Mechanic No. 137. On the recto is "CHARLESTON" stamped across the top. Under that is "No. 137" engraved, "MECHANIC" stamped, and "1803" stamped. The bottom edge has been trimmed, with the very top of an "1802" stamped date visible, indicating this badge is reworked from the previous year. On the verso is a stamped cartouche at the bottom center with the maker's name "C PRINCE." There is a hole punched at the center top. A thin piece of the bottom of the badge is missing.
+
+Text visible in the image:
+[engraving] On the top curved area of the copper token:
+CHARLESTON
+
+[engraving] In the center-left of the token:
+Nº 137
+
+[engraving] Across the middle of the token:
+MECHANIC
+
+[engraving] At the bottom of the token:
+1803

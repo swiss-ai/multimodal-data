@@ -314,3 +314,45 @@ gated and access-restricted datasets.
   approval before downloading.
 - Model weights for recaptioning are not included. Download them separately
   from HuggingFace Hub and set the `MODEL_DIR` or model path accordingly.
+
+---
+
+## Additions from `data-pipeline/adapter`
+
+### `preprocessing/` — earlier adapter framework
+An earlier snapshot of the streaming adapter framework that became `medical/`.
+Same architecture (`adapters/`, `filters/`, `pipeline/`, `writers/`,
+`main.py`, `run.slurm`) but with a smaller adapter set (`meditron`, `medmax`,
+`medtrinity`, `medtrinity_demo`, `mmc4`, `pmc_oa` — all already present in
+`medical/adapters/`). Kept temporarily for history; pending consolidation
+into `medical/`.
+
+### `tokenization/` — text-SFT pipeline
+- `text-sft/chat_preprocess.py` — chat-format normalization
+- `text-sft/tokenize_sft.py` — main tokenizer entry point
+- `text-sft/indexed_to_packed.py` — pack indexed samples into training shards
+- `text-sft/tests/` — unit tests for chat preprocessing
+
+See `tokenization/text-sft/README.md` for usage.
+
+### `datasets/` — audio coverage
+Adapter-branch additions extend `datasets/` with audio per-dataset
+directories (Emilia-YODAS, AISHELL/AISHELL4, AlloAva, AMI, AudioSet,
+GigaSpeech/2, LibriHeavy, Libri-Light, MLS, ML-Spoken-Words, NSynth,
+OmniLingual-ASR, Peoples-Speech, VCTK, VGGSound, VoxPopuli, WeNetSpeech,
+and ~80 others). Each ships a self-contained `download.slurm` following
+the convention in `download/README.md`.
+
+### `download/audio/` — cross-dataset audio helpers
+- `build_all_interleave.slurm`, `build_voxpopuli_interleave.slurm` — build
+  interleaved audio+text shards
+- `run_vad_multichannel.py` — multichannel voice-activity detection helper
+
+### `download/` — SHAR repacking & rsync helpers
+- `merge_shar.py` — merge existing Lhotse SHAR shards without re-decoding
+- `to_shar_examples.sh` — cookbook for new `prepare_to_shar.slurm` scripts
+- `rsync_{audio_only,ups,voxpopuli}_to_capstor.slurm` — staged transfers
+  between scratch and capstor
+
+See `download/README.md` for download conventions (file-shape recipe,
+per-dataset convention, SLURM template requirements).

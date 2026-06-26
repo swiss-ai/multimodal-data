@@ -1,0 +1,8 @@
+{
+  "slug": "coal-electricity-per-capita",
+  "title": "Per capita electricity generation from coal",
+  "subtitle": "Measured in [kilowatt-hours](#dod:watt-hours) per person.",
+  "note": "",
+  "caption": "Per capita electricity generation from coal\n\nMeasured in kilowatt-hours per person.\n\nThis choropleth world map displays 2025 estimates of per capita electricity generation from coal, measured in kilowatt-hours per person. The legend spans from 0 kWh to 5,000 kWh, with specific tick points at 100, 200, 500, 1,000, and 2,000. The darkest shades, indicating values above 2,000 kWh, are visible in Australia, South Africa, China, and parts of Eastern Europe including Poland. The United States and Canada sit in a dark orange band that falls between the 1,000 and 2,000 kWh thresholds. India and Indonesia appear in mid-range orange shades that sit between 500 and 1,000 kWh. Much of Western Europe, including Germany and Spain, displays lighter orange tones in the 100 to 500 kWh range. Large portions of South America, Africa, and the Middle East sit in the lightest shades of the legend, near the bottom of the scale below 100 kWh. Greenland, Western Sahara, and several smaller island nations show a hatched diagonal-line pattern indicating no data. The visual pattern shows the highest per capita generation concentrated in specific industrial economies and resource-rich nations, while the lowest values are distributed across much of the Global South.",
+  "word_count": 198
+}

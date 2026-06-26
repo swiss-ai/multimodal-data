@@ -1,0 +1,8 @@
+{
+  "slug": "united-nations-membership-status",
+  "title": "United Nations membership status",
+  "subtitle": "",
+  "note": "",
+  "caption": "United Nations membership status\n\nMembership is defined along current countries and their borders.\n\nThis choropleth world map displays the United Nations membership status for countries in 2024. The legend distinguishes between three categories: Member, Not a member, and No data. The vast majority of the world's landmass is colored in light blue, indicating Member status. This includes all of North and South America, Europe, Africa, Asia, and Oceania, with only a few exceptions. The \"Not a member\" category, represented by an orange color, applies to a small number of territories. Greenland, located in the North Atlantic, is shown in orange, as is Western Sahara in Northwest Africa. Additionally, the Holy See (Vatican City) and a small island territory in the Caribbean are also depicted in orange. No countries or territories are shown with the hatched pattern that would indicate \"No data.\" The visual pattern demonstrates near-universal membership, with the light blue color covering almost the entire globe, while the orange non-member status is restricted to a handful of specific, geographically dispersed locations.",
+  "word_count": 172
+}

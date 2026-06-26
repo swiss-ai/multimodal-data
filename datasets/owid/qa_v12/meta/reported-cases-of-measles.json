@@ -1,0 +1,8 @@
+{
+  "slug": "reported-cases-of-measles",
+  "title": "Reported cases of measles",
+  "subtitle": "",
+  "note": "",
+  "caption": "Reported cases of measles\n\nConfirmed measles cases, including those confirmed clinically, epidemiologically, or by laboratory investigation. Cases that have been discarded following laboratory investigation should not be included.\n\nThis choropleth world map displays reported cases of measles for the year 2023. The legend utilizes a color scale ranging from light beige for zero cases to dark red for 30,000 cases, with intermediate thresholds at 30, 100, 300, 1,000, 3,000, and 10,000. The darkest red shade, indicating values between 10,000 and 30,000, is visible in a specific cluster of countries including India, the Democratic Republic of the Congo, Yemen, and Indonesia. Russia and several nations in Central Asia and the Middle East appear in a medium-dark red band, suggesting case counts between 1,000 and 10,000. A broad area across Africa, including Nigeria, Ethiopia, and Sudan, along with parts of Southeast Asia like the Philippines, sits in the orange to light-red bands, corresponding to ranges between 300 and 3,000 cases. Much of South America, Australia, and Western Europe is colored in the lightest beige shades, indicating values near the bottom of the scale or zero. Distinct diagonal hatching covers the United States, Canada, Greenland, and France, signifying that no data is available for these territories. The visual distribution highlights the highest concentration of reported cases in parts of South Asia, Central Africa, and the Middle East, while large portions of the Americas and Oceania show either very low numbers or missing data.",
+  "word_count": 240
+}

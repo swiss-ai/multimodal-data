@@ -1,0 +1,8 @@
+{
+  "slug": "births-and-deaths",
+  "title": "Birth rate and death rate",
+  "subtitle": "Estimated number of annual births and deaths per 1,000 people.",
+  "note": "",
+  "caption": "Birth rate and death rate\n\nEstimated number of annual births and deaths per 1,000 people.\n\nThis line chart tracks the estimated annual birth and death rates in the United States from 1933 to 2023, measured per 1,000 people. The vertical axis ranges from 0 to 25, while the horizontal axis spans the ninety-year period. The blue line representing the birth rate begins near 17 in 1933, rises sharply to a peak exceeding 25 in the late 1940s, and remains above 20 until the early 1960s. Following this high point, the birth rate declines steadily, dropping below 15 by the mid-1970s. From 1980 through the early 2000s, the line fluctuates within the 14 to 16 range before resuming a downward trend, ending near 11 in 2023. The orange line, indicating the death rate, starts just under 10 in 1933 and generally stays between 8 and 10 for the majority of the timeline. It reaches its lowest points in the 1980s and early 2000s, hovering around 8.5. A distinct upward shift occurs near the end of the chart, where the death rate rises above 10 around 2020 before declining slightly. Throughout the entire period shown, the birth rate remains higher than the death rate, though the gap between the two lines narrows significantly in the final years of the dataset.",
+  "word_count": 218
+}

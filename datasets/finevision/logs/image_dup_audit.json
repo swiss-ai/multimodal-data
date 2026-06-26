@@ -1,0 +1,763 @@
+{
+  "handwriting_forms": {
+    "subset": "handwriting_forms",
+    "total_rows": 1400,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "memotion": {
+    "subset": "memotion",
+    "total_rows": 6991,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "art": {
+    "subset": "art",
+    "total_rows": 5492,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 96,
+    "multi_turn_dup_rows": 45,
+    "multi_turn_dup_pct": 46.875,
+    "jaccard_buckets": {
+      "0.0": 1,
+      "0.2": 6,
+      "0.3": 5,
+      "0.4": 4,
+      "0.5": 16,
+      "0.6": 16,
+      "0.7": 14,
+      "0.8": 16,
+      "0.9": 8,
+      "1.0": 42
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.8333333333333334,
+        "ast_i": "A \u7279\u8bb8\u7ecf\u9500\u5546 \u77f3\u818f\u7ebf \u627f\u63a5\uff1a\u5404\u79cd\u77f3\u818f\u7ebf\u3001\u706f\u76d8\u89d2\u82b1\u3001\u7f57\u9a6c\u67f1\u5934\u3001GRC\u5916\u5899\u53ca\u5404\u79cd\u8c6a\u534e\u88c5\u4fee \u5730\u5740\uff1a\u8001\u5317\u7fdf\u8def4858\u53f7\u76ca\u4f01\u5c45\u5efa\u6750\u5546\u573aD\u6392A\u53f7",
+        "ast_j": "\u7279\u8bb8\u7ecf\u9500\u5546 A \u77f3\u818f\u7ebf \u627f\u63a5\uff1a\u5404\u79cd\u77f3\u818f\u7ebf\u3001\u706f\u76d8\u89d2\u82b1\u3001\u7f57\u9a6c\u67f1\u5934\u3001GRC\u5916\u5899\u53ca\u5404\u79cd\u8c6a\u534e\u88c5\u4fee \u5730\u5740\uff1a\u8001\u5317\u7fdf\u8def4858\u53f7\u76ca\u4f01\u5c45\u5efa\u6750\u5546\u573aD\u6392A\u53f7  \u7535\u8bdd\uff1a164349906"
+      },
+      {
+        "jaccard": 0.8181818181818182,
+        "ast_i": "\u534e\u4e1c\u7406\u5de5\u5927\u5b66 \u7ee7\u7eed\u6559\u80b2\u5b66\u9662\u88d5\u5fb7\u6559\u80b2\u6559\u5b66\u70b9 1898 PEKING UNIVERSITY \u5317\u4eac\u5927\u5b66 \u7ee7\u7eed\u6559\u80b2\u5b66\u9662\u4e0a\u6d77\u5b66\u4e60\u4e2d\u5fc3 XN \u5f90\u6c47\u533a\u5c0f\u5fae\u4f01\u4e1a\u8d22\u52a1\u4f1a\u8ba1 \u57f9\u8bad\u54a8\u8be2\u57fa\u5730",
+        "ast_j": "\u7ee7\u7eed\u6559\u80b2\u5b66\u9662\u88d5\u5fb7\u6559\u80b2\u6559\u5b66\u70b9 \u534e\u4e1c\u7406\u5de5\u5927\u5b66 1898 PPKING UNIVERSITY \u5317\u4eac\u5927\u5b66 \u7ee7\u7eed\u6559\u80b2\u5b66\u9662\u4e0a\u6d77\u5b66\u4e60\u4e2d\u5fc3 \u5f90\u6c47\u533a\u5c0f\u5fae\u4f01\u4e1a\u8d22\u52a1\u4f1a\u8ba1 \u57f9\u8bad\u54a8\u8be2\u57fa\u5730 XN"
+      }
+    ]
+  },
+  "CoSyn_400k_graphic": {
+    "subset": "CoSyn_400k_graphic",
+    "total_rows": 26968,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "mmra": {
+    "subset": "mmra",
+    "total_rows": 1024,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "CoSyn_400k_chemical": {
+    "subset": "CoSyn_400k_chemical",
+    "total_rows": 8942,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 8942,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {
+      "0.0": 4496,
+      "0.1": 93998,
+      "0.2": 42650,
+      "0.3": 4185,
+      "0.4": 381,
+      "0.5": 32,
+      "0.6": 4,
+      "0.7": 4
+    },
+    "dup_examples": []
+  },
+  "multihiertt": {
+    "subset": "multihiertt",
+    "total_rows": 7619,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 175,
+    "multi_turn_dup_rows": 3,
+    "multi_turn_dup_pct": 1.7142857142857142,
+    "jaccard_buckets": {
+      "0.1": 84,
+      "0.2": 83,
+      "0.3": 63,
+      "0.4": 10,
+      "0.5": 8,
+      "1.0": 3
+    },
+    "dup_examples": []
+  },
+  "groundui": {
+    "subset": "groundui",
+    "total_rows": 13531,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 814,
+    "multi_turn_dup_rows": 132,
+    "multi_turn_dup_pct": 16.216216216216218,
+    "jaccard_buckets": {
+      "0.5": 37912,
+      "0.6": 3462,
+      "0.7": 3454,
+      "0.8": 1282,
+      "1.0": 4
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.8333333333333334,
+        "ast_i": "Normalized bounding box (center_x, center_y, width, height): [0.1095, 0.0471, 0.0226, 0.0486]",
+        "ast_j": "Normalized bounding box (center_x, center_y, width, height): [0.8723, 0.0471, 0.0226, 0.0486]"
+      },
+      {
+        "jaccard": 0.8333333333333334,
+        "ast_i": "Normalized bounding box (center_x, center_y, width, height): [0.5568, 0.5292, 0.8417, 0.0417]",
+        "ast_j": "Normalized bounding box (center_x, center_y, width, height): [0.5568, 0.5718, 0.8417, 0.0417]"
+      }
+    ]
+  },
+  "CoSyn_400k_circuit": {
+    "subset": "CoSyn_400k_circuit",
+    "total_rows": 10470,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 10470,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {
+      "0.0": 2305,
+      "0.1": 113072,
+      "0.2": 65130,
+      "0.3": 7068,
+      "0.4": 665,
+      "0.5": 67,
+      "0.6": 10,
+      "0.7": 3
+    },
+    "dup_examples": []
+  },
+  "spark": {
+    "subset": "spark",
+    "total_rows": 3904,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 2344,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {
+      "0.0": 347,
+      "0.1": 745,
+      "0.2": 441,
+      "0.3": 313,
+      "0.4": 457,
+      "0.5": 32,
+      "0.6": 9
+    },
+    "dup_examples": []
+  },
+  "cocoqa": {
+    "subset": "cocoqa",
+    "total_rows": 46287,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 20770,
+    "multi_turn_dup_rows": 10777,
+    "multi_turn_dup_pct": 51.8873375060183,
+    "jaccard_buckets": {
+      "0.0": 32207,
+      "1.0": 17067
+    },
+    "dup_examples": []
+  },
+  "CoSyn_400k_music": {
+    "subset": "CoSyn_400k_music",
+    "total_rows": 11969,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 11969,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {
+      "0.0": 3838,
+      "0.1": 173135,
+      "0.2": 57833,
+      "0.3": 4381,
+      "0.4": 194,
+      "0.5": 11,
+      "0.6": 1
+    },
+    "dup_examples": []
+  },
+  "spot_the_diff": {
+    "subset": "spot_the_diff",
+    "total_rows": 8566,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 545,
+    "multi_turn_dup_rows": 1,
+    "multi_turn_dup_pct": 0.1834862385321101,
+    "jaccard_buckets": {
+      "0.0": 157,
+      "0.1": 498,
+      "0.2": 472,
+      "0.3": 170,
+      "0.4": 49,
+      "0.5": 20,
+      "0.6": 2,
+      "0.7": 2,
+      "1.0": 1
+    },
+    "dup_examples": []
+  },
+  "tat_dqa": {
+    "subset": "tat_dqa",
+    "total_rows": 2207,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 2207,
+    "multi_turn_dup_rows": 286,
+    "multi_turn_dup_pct": 12.958767557770729,
+    "jaccard_buckets": {
+      "0.0": 8525,
+      "0.1": 12575,
+      "0.2": 4497,
+      "0.3": 2652,
+      "0.4": 1950,
+      "0.5": 1455,
+      "0.6": 701,
+      "0.7": 278,
+      "0.8": 284,
+      "0.9": 161,
+      "1.0": 82
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.9,
+        "ast_i": "To answer this question, I need to perform calculations using the financial data. The calculation is: (425.4+399.7+232.2",
+        "ast_j": "To answer this question, I need to perform calculations using the financial data. The calculation is: (425.4+399.7+232.2"
+      },
+      {
+        "jaccard": 0.9310344827586207,
+        "ast_i": "According to the financial document, (62) (in millions). The relevant text states: \"le impact $ 95 $ 167 $ 185 Unfavorab",
+        "ast_j": "According to the financial document, (52) (in millions). The relevant text states: \"vorable impact $ 95 $ 167 $ 185 Unfa"
+      }
+    ]
+  },
+  "wildvision": {
+    "subset": "wildvision",
+    "total_rows": 333,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 39,
+    "multi_turn_dup_rows": 2,
+    "multi_turn_dup_pct": 5.128205128205129,
+    "jaccard_buckets": {
+      "0.0": 33,
+      "0.1": 81,
+      "0.2": 68,
+      "0.3": 12,
+      "0.4": 4,
+      "0.8": 3,
+      "0.9": 2
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.8181818181818182,
+        "ast_i": "\u041d\u0430 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0438 \u043f\u043e\u043a\u0430\u0437\u0430\u043d\u043e \u0448\u0435\u0441\u0442\u044c \u043d\u0435\u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u043d\u044b\u0445 \u043f\u043b\u0430\u0442\u0435\u0436\u0435\u0439 \u043d\u0430 \u0441\u0443\u043c\u043c\u0443 \u043c\u0435\u043d\u044c\u0448\u0435 15,000 \u0440\u0443\u0431\u043b\u0435\u0439.",
+        "ast_j": "\u041d\u0430 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0438 \u043f\u043e\u043a\u0430\u0437\u0430\u043d\u043e \u0448\u0435\u0441\u0442\u044c \u043d\u0435\u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u043d\u044b\u0445 \u043f\u043b\u0430\u0442\u0435\u0436\u0435\u0439 \u043d\u0430 \u0441\u0443\u043c\u043c\u0443 \u043c\u0435\u043d\u044c\u0448\u0435 16,000 \u0440\u0443\u0431\u043b\u0435\u0439."
+      },
+      {
+        "jaccard": 0.926829268292683,
+        "ast_i": "### d. If you agreed the null hypothesis in the test was rejected, compute the effect size and provide the interpretatio",
+        "ast_j": "### d. If you agreed the null hypothesis in the test was rejected, compute the effect size and provide the interpretatio"
+      }
+    ]
+  },
+  "svrd": {
+    "subset": "svrd",
+    "total_rows": 4396,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "latex_handwritten": {
+    "subset": "latex_handwritten",
+    "total_rows": 39583,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "wordart": {
+    "subset": "wordart",
+    "total_rows": 4804,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "olmOCR-mix-0225-books": {
+    "subset": "olmOCR-mix-0225-books",
+    "total_rows": 15194,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "yesbut": {
+    "subset": "yesbut",
+    "total_rows": 4318,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "CoSyn_400k_nutrition": {
+    "subset": "CoSyn_400k_nutrition",
+    "total_rows": 6931,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 6931,
+    "multi_turn_dup_rows": 50,
+    "multi_turn_dup_pct": 0.7213966238638003,
+    "jaccard_buckets": {
+      "0.0": 35269,
+      "0.1": 604705,
+      "0.2": 185838,
+      "0.3": 43539,
+      "0.4": 13874,
+      "0.5": 5230,
+      "0.6": 1991,
+      "0.7": 517,
+      "0.8": 113,
+      "0.9": 12,
+      "1.0": 9
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.875,
+        "ast_i": "The document states that it is \"Certified sustainable by the Marine Stewardship Council (MSC).\"\nAnswer: Yes",
+        "ast_j": "The document mentions that it is \"Certified sustainable by the Marine Stewardship Council (MSC).\"\nAnswer: Yes"
+      },
+      {
+        "jaccard": 0.8,
+        "ast_i": "The protein content is listed as \"0g\" in the nutrition facts section.\nAnswer: 0g",
+        "ast_j": "The total fat content is listed as \"0g\" in the nutrition facts section.\nAnswer: 0g"
+      }
+    ]
+  },
+  "chinesememe": {
+    "subset": "chinesememe",
+    "total_rows": 54212,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "CoSyn_400k_math": {
+    "subset": "CoSyn_400k_math",
+    "total_rows": 66714,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "nlvr2": {
+    "subset": "nlvr2",
+    "total_rows": 50426,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 34627,
+    "multi_turn_dup_rows": 22041,
+    "multi_turn_dup_pct": 63.65264100268577,
+    "jaccard_buckets": {
+      "0.0": 14330,
+      "1.0": 23677
+    },
+    "dup_examples": []
+  },
+  "localized_narratives": {
+    "subset": "localized_narratives",
+    "total_rows": 199998,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "tal_ocr_eng": {
+    "subset": "tal_ocr_eng",
+    "total_rows": 256646,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "coco_colors": {
+    "subset": "coco_colors",
+    "total_rows": 118287,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "CoSyn_400k_table": {
+    "subset": "CoSyn_400k_table",
+    "total_rows": 46518,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 46518,
+    "multi_turn_dup_rows": 8,
+    "multi_turn_dup_pct": 0.017197643922782578,
+    "jaccard_buckets": {
+      "0.0": 67014,
+      "0.1": 1042892,
+      "0.2": 487128,
+      "0.3": 89044,
+      "0.4": 16814,
+      "0.5": 3357,
+      "0.6": 680,
+      "0.7": 129,
+      "0.8": 24,
+      "0.9": 7
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.8518518518518519,
+        "ast_i": "The matrix shows that there are 0 cases where actual success was predicted as failure (the cell under \"Actual Success\" a",
+        "ast_j": "The matrix shows that there are 0 cases where actual failure was predicted as success (the cell under \"Actual Failure\" a"
+      },
+      {
+        "jaccard": 0.9,
+        "ast_i": "The average life expectancy of the US population (79 years) is higher than that of Russian cosmonauts (78 years).\nAnswer",
+        "ast_j": "Yes, the average life expectancy of the US population (79 years) is higher than that of Russian cosmonauts (78 years).\nA"
+      }
+    ]
+  },
+  "CoSyn_400k_document": {
+    "subset": "CoSyn_400k_document",
+    "total_rows": 71282,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 71277,
+    "multi_turn_dup_rows": 12,
+    "multi_turn_dup_pct": 0.016835725409318575,
+    "jaccard_buckets": {
+      "0.0": 45639,
+      "0.1": 1390594,
+      "0.2": 711257,
+      "0.3": 115230,
+      "0.4": 22409,
+      "0.5": 5115,
+      "0.6": 1119,
+      "0.7": 193,
+      "0.8": 30,
+      "0.9": 5
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.8823529411764706,
+        "ast_i": "The statistics section provides a direct comparison between the previous and current season attendance numbers.\nAnswer: ",
+        "ast_j": "The statistics section provides a direct comparison between the previous and current season attendance numbers.\nAnswer: "
+      },
+      {
+        "jaccard": 0.9285714285714286,
+        "ast_i": "The job title is found in the professional experience section of the resume.\nAnswer: Instructional Designer",
+        "ast_j": "The title is found in the professional experience section of the resume.\nAnswer: Instructional Designer"
+      }
+    ]
+  },
+  "latexformulas": {
+    "subset": "latexformulas",
+    "total_rows": 552340,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "mmevol": {
+    "subset": "mmevol",
+    "total_rows": 160215,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 157537,
+    "multi_turn_dup_rows": 17740,
+    "multi_turn_dup_pct": 11.260846658245365,
+    "jaccard_buckets": {
+      "0.0": 131040,
+      "0.1": 424724,
+      "0.2": 244906,
+      "0.3": 97641,
+      "0.4": 42819,
+      "0.5": 22068,
+      "0.6": 12591,
+      "0.7": 8134,
+      "0.8": 5937,
+      "0.9": 3545,
+      "1.0": 16615
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.8324022346368715,
+        "ast_i": "Four potential impacts of the television, displaying an image of a bird, on the cat's behavior and overall well-being ar",
+        "ast_j": "Four potential impacts of the television, displaying an image of a bird, on the cat's behavior and overall well-being ar"
+      },
+      {
+        "jaccard": 0.9705882352941176,
+        "ast_i": "A) The surfer will successfully land and continue riding the wave. To predict what might happen next to the surfer and i",
+        "ast_j": "To predict what might happen next to the surfer and identify the necessary skills to avoid falling, we need to thoroughl"
+      }
+    ]
+  },
+  "olmOCR-mix-0225-documents": {
+    "subset": "olmOCR-mix-0225-documents",
+    "total_rows": 228858,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "lnqa": {
+    "subset": "lnqa",
+    "total_rows": 302780,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 302713,
+    "multi_turn_dup_rows": 4880,
+    "multi_turn_dup_pct": 1.6120880173629808,
+    "jaccard_buckets": {
+      "0.0": 71017,
+      "0.1": 787597,
+      "0.2": 1022990,
+      "0.3": 647139,
+      "0.4": 475122,
+      "0.5": 196268,
+      "0.6": 96050,
+      "0.7": 41705,
+      "0.8": 30984,
+      "0.9": 1795,
+      "1.0": 539
+    },
+    "dup_examples": [
+      {
+        "jaccard": 0.8,
+        "ast_i": "There is no celery present in the image; it only depicts the girl's face.",
+        "ast_j": "There is no religious symbol present in the image; it only depicts the girl's face."
+      },
+      {
+        "jaccard": 0.8823529411764706,
+        "ast_i": "There is no stomach present in the image; it features trees, clouds, and a blue sky.",
+        "ast_j": "There is no board present in the image; it features trees, clouds, and a blue sky."
+      }
+    ]
+  },
+  "synthdog": {
+    "subset": "synthdog",
+    "total_rows": 500000,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "densefusion_1m": {
+    "subset": "densefusion_1m",
+    "total_rows": 1058751,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 0,
+    "multi_turn_dup_rows": 0,
+    "multi_turn_dup_pct": 0.0,
+    "jaccard_buckets": {},
+    "dup_examples": []
+  },
+  "aguvis-stage-1": {
+    "subset": "aguvis-stage-1",
+    "total_rows": 458957,
+    "rows_with_image_literal": 0,
+    "image_literal_in_user": 0,
+    "image_literal_in_assistant": 0,
+    "image_literal_pct": 0.0,
+    "image_examples": [],
+    "multi_turn_rows": 384824,
+    "multi_turn_dup_rows": 32252,
+    "multi_turn_dup_pct": 8.380974159615825,
+    "jaccard_buckets": {
+      "0.0": 34561533,
+      "0.1": 161264,
+      "0.3": 3724045,
+      "0.6": 238,
+      "1.0": 265884
+    },
+    "dup_examples": []
+  }
+}

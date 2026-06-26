@@ -1,0 +1,8 @@
+{
+  "slug": "death-rate-from-falls",
+  "title": "Death rate from falls",
+  "subtitle": "Annual number of deaths from all types of falls per 100,000 people.",
+  "note": "",
+  "caption": "Death rate from falls\n\nAnnual number of deaths from all types of falls per 100,000 people.\n\nThis choropleth world map displays the death rate from falls in 2021, measured as the annual number of deaths from all types of falls per 100,000 people. The legend uses a color scale ranging from light blue for rates near zero to dark purple for rates of 50 or higher, with intermediate bands at 2, 5, 10, and 20. The highest death rates, represented by the darkest purple shades indicating values of 20 to over 50, are concentrated in specific regions including the United States, Canada, Australia, and parts of Northern and Eastern Europe such as Finland and Estonia. India and China also appear in darker purple bands, suggesting rates between 10 and 20. In contrast, much of Africa, the Middle East, and South America are depicted in lighter shades of blue, corresponding to lower death rates generally falling between 0 and 5 per 100,000 people. Western European countries like Spain and Italy show mid-range values in the 5 to 10 band. Greenland is marked with diagonal hatching, indicating no data is available for that territory. The visual distribution highlights a disparity where high-income nations in North America and Oceania, along with parts of Europe and Asia, exhibit higher mortality rates from falls compared to many developing regions in the Global South.",
+  "word_count": 228
+}

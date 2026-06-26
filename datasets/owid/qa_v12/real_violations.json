@@ -1,0 +1,1860 @@
+[
+  {
+    "slug": "above-or-below-extreme-poverty-line-world-bank",
+    "types": [
+      "indicates_that",
+      "reflects"
+    ]
+  },
+  {
+    "slug": "absolute-number-of-deaths-from-household-air-pollution",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "acres-burned-per-wildfire-usa",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "affected-by-disasters-vs-gdp",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "alzheimers-parkinsons-prevalence",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "annual-change-gas",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "annual-co-emissions-from-aviation",
+    "types": [
+      "because",
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "annual-growth-income-consumption-poorest-vs-total-population",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "annual-growth-of-exports-of-goods-and-services",
+    "types": [
+      "severe"
+    ]
+  },
+  {
+    "slug": "annual-hours-of-free-time-per-worker-and-income-finn",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "annual-research-development-funding-for-neglected-tropical-diseases",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "annual-scholarly-publications-on-artificial-intelligence",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "antidepressants-per-capita",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "anxiety-disorders-treatment-gap",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "artificial-intelligence-parameter-count",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "attendance-major-artificial-intelligence-conferences",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "attitudes-bans-factory-farming",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "average-battery-cell-price",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "average-harmonized-learning-outcome-scores",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "average-non-hdl-cholesterol-levels",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "average-oecd-education-expenditure-by-source-of-funding-gdp",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "average-years-of-schooling-vs-gdp-per-capita",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "bean-production",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "black-rhinos",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "bleaching-events-enso",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "breakdown-of-child-mortality-by-cause",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "broad-causes-of-death",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "budget-to-manage-invasive-alien-species",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "cancer-death-rates-by-type-who-db",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "capital-city-population",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "carbon-dioxide-emissions-are-higher-in-richer-countries",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "carbon-dioxide-emissions-are-higher-in-richer-countries-finn",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "censorship-of-lgbt-issues",
+    "types": [
+      "severe"
+    ]
+  },
+  {
+    "slug": "cereal-allocation-by-country",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "cereal-land-spared",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "cereal-yield-vs-extreme-poverty-scatter",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "cereals-human-food-vs-gdp",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "change-forest-vs-gdp",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "child-deaths-by-world-region-un-data",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "child-deaths-from-malaria-number",
+    "types": [
+      "stark"
+    ]
+  },
+  {
+    "slug": "children-in-employment-ages-7-14-vs-weekly-hours-worked-by-children-ages-7-14",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "children-lead-5micrograms",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "cholera-case-fatality-rate",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "chronic-respiratory-diseases-death-rate-who-mdb",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "citizen-satisfaction-with-democracy",
+    "types": [
+      "indicates_that",
+      "reflects"
+    ]
+  },
+  {
+    "slug": "civil-liberties-rating-fh",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "coal-prod-per-capita",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "coefficient-of-variation-in-caloric-consumption-vs-gdp-per-capita",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "commodity-price-index-cereal-crops-and-petroleum",
+    "types": [
+      "dramatic"
+    ]
+  },
+  {
+    "slug": "common-good-justifications-score",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "community-health-workers",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "competitive-elections-lexical",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "completeness-of-homelessness-data",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "confidence-in-the-effectiveness-of-vaccines-vs-perception-of-importance",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "conversion-therapies-banned",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "countries-in-which-gender-marker-can-be-legally-changed",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "countries-that-are-parties-to-the-nagoya-protocol",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "countries-third-gender-recognized",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "countries-with-stats-plan-funded-by-source",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "coverage-by-protected-areas-of-important-sites-for-mountain-biodiversity",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "covid-containment-and-health-index",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "covid-icu-patients-per-million",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "covid-vaccine-share-boosters",
+    "types": [
+      "because",
+      "reflects"
+    ]
+  },
+  {
+    "slug": "cumulative-people-space",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "cumulative-space-visits",
+    "types": [
+      "indicates_that",
+      "suggests"
+    ]
+  },
+  {
+    "slug": "daily-mean-income",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "daily-protein-supply-of-animal-origin-vs-plant-origin",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "dealt-with-anxiety-depression-took-prescribed-medication",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "death-rate-by-cause-who-mdb",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "death-rate-from-ambient-particulate-air-pollution",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "death-rate-from-cardiovascular-diseases-by-risk-factor-age-standardized",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "death-rate-from-digestive-diseases-gbd",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "death-rate-from-hivaids-who",
+    "types": [
+      "stark"
+    ]
+  },
+  {
+    "slug": "death-rate-from-malaria-ihme",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "death-rate-from-meningitis-who",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "death-rate-from-natural-disasters-gbd",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "death-rates-from-disasters",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "death-rates-from-drug-use",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "death-rates-from-natural-disasters",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "deaths-alcohol-drugs-by-sex-who",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "deaths-and-disappearances-during-migration",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "deaths-due-to-drug-use",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "deaths-from-alzheimers",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "deaths-from-alzheimers-other-dementias",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "deaths-from-secondhand-smoke",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "deaths-from-substance-disorders-who",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "deaths-from-syphilis-by-age",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "deaths-from-terrorist-attacks-by-method-of-attack-stacked-bar",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "deaths-from-volcanic-eruptions",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "decadal-economic-disasters-type",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "declining-share-of-the-top-1-in-some-european-economies-and-japan",
+    "types": [
+      "dramatic"
+    ]
+  },
+  {
+    "slug": "declining-share-of-the-top-1-in-some-european-economies-and-japan-with-finland",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "deforestation-share-forest-area",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "democracies-autocracies-amb-row",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "dietary-composition-by-country",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "disaster-risk-reduction-progress",
+    "types": [
+      "due_to",
+      "likely"
+    ]
+  },
+  {
+    "slug": "discrimination-lgbt-equaldex",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "distribution-democracy-index-polity",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "distribution-of-population-across-income-thresholds-stacked-bar-30-only",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "domestic-policy-free-from-interference-of-other-states-score",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "drinking-water-service-coverage",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "drinking-water-services-coverage-urban",
+    "types": [
+      "appears_to",
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "effective-power-to-govern-score-bti",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "elections-for-the-governments-chief-executive",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "electoral-democracy-lexical",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "elite-consultations-score",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "emission-factors-food-transport",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "emissions-from-food",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "excess-mortality-p-scores-average-baseline",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "excess-mortality-p-scores-projected-baseline",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "food-emissions-life-cycle",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "food-production-ukraine-russia",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "food-transport-emissions",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "foreign-aid-given-as-grants-and-concessional-loans",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "fraction-of-countries-with-available-data-on-deaths-from-suicides-by-income-group",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "free-fair-elections-bti",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "friends-family-anxious-depressed",
+    "types": [
+      "severe"
+    ]
+  },
+  {
+    "slug": "fruit-consumption-by-fruit-type",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "fruit-consumption-per-capita",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "funding-for-trachoma",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "fur-farming-ban",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "gender-gap-in-average-wages-2000-vs-today",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "gini-coefficient-after-vs-before-tax-lis-scatter",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "global-child-deaths-by-cause",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "global-deaths-by-syndrome-and-antimicrobial-resistance",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "global-deaths-from-infections-attributable-to-antimicrobial-resistance",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "global-fishery-catch-by-sector",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "global-hunger-index",
+    "types": [
+      "alarming",
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "global-hunger-index-vs-gdp-per-capita",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "global-methane-concentrations",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "government-transparency",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "gross-national-income-per-capita-males-vs-females",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "habitat-loss-25-species",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "health-expenditure-government-expenditure",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "homicide-rate-by-age-of-the-victim",
+    "types": [
+      "because",
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "homicide-rate-ihme-vs-who-mort-db",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "homicides-by-sex-of-the-victim",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "human-rights-index-vs-gdp-per-capita",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "ihr-core-capacity-index-sdgs",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "income-share-distribution-before-tax-middle40-wid",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "income-share-distribution-before-tax-wid",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "inequality-adjusted-human-development-index-vs-gdp-per-capita",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "inequality-of-incomes-before-and-after-taxes-and-transfers-scatter-working-age-pop",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "infectious-and-parasitic-diseases-death-rate-who-mdb",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "international-tourist-arrivals-by-region-of-origin",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "interventions-for-substance-use-disorders",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "investment-in-renewable-energy-by-technology",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "judicial-corruption-score",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "justified-political-positions-score",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "key-crop-yields",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "lack-of-access-to-clean-fuels-for-cooking-vs-gdp-per-capita",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "legal-frameworks-regarding-violence-against-women",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "legal-status-of-same-sex-sexual-acts",
+    "types": [
+      "indicates_that",
+      "reflects"
+    ]
+  },
+  {
+    "slug": "leverage-ratio-of-banks-in-the-uk-and-us-19602018",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "lgbt-legal-equality-index",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "life-expectancy-at-different-ages",
+    "types": [
+      "dramatic"
+    ]
+  },
+  {
+    "slug": "life-satisfaction-vs-co-emissions-per-capita",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "long-run-air-pollution",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "long-term-cod-catch",
+    "types": [
+      "dramatic"
+    ]
+  },
+  {
+    "slug": "long-term-prices-food",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "lung-cancer-death-rates-males",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "lung-cancer-deaths-men-women",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "maize-exports-ukraine-russia-perspective",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "male-female-ratio-suicides-rates",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "manufacturing-wages-relative-to-the-us-with-finland",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "market-share-logic-chip-production-manufacturing-stage",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "maternal-deaths-by-income-group",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "mean-versus-median-monthly-per-capita-expenditure-or-income",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "media-corruption-score",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "men-experienced-sexual-violence-by-age-18",
+    "types": [
+      "appears_to",
+      "reflects"
+    ]
+  },
+  {
+    "slug": "mens-life-expectancy-at-birth",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "military-personnel",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "millet-yield",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "monthly-sea-ice-extent-in-the-arctic-decadal-average",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "monthly-surface-temperature-anomalies-by-decade",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "multi-party-elections-hoe-row",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "multi-party-elections-legislature-row",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "nationally-determined-contributions",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "net-zero-target-set",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "new-drugs-approved-in-the-united-states-by-designations",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "nitrogen-emissions-seafood",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "number-airline-passengers",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "number-liberal-democracies-age",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "number-of-clinical-trials-by-purpose",
+    "types": [
+      "due_to",
+      "reflects"
+    ]
+  },
+  {
+    "slug": "number-of-clinical-trials-by-sponsor",
+    "types": [
+      "reflects",
+      "suggests"
+    ]
+  },
+  {
+    "slug": "number-of-clinical-trials-by-study-type",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "number-of-clinical-trials-with-results-posted",
+    "types": [
+      "reflects",
+      "suggests"
+    ]
+  },
+  {
+    "slug": "number-of-countries-where-armed-conflicts-took-place",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "number-of-countries-with-primary-data-on-prevalence-of-mental-illnesses-in-the-global-burden-of-disease-study",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-from-malaria-ghe",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "number-of-deaths-gbd",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "number-of-infections-tested-for-antibiotic-susceptibility",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "number-of-internet-users",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "number-of-new-hivaids-infections-who",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "number-of-new-state-based-conflicts",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "number-of-new-wars",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "number-of-rhinos-poached",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "number-suicide-deaths-source-comparison",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "parents-same-sex-vs-different-sex",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "parties-to-multilateral-agreements-on-hazardous-waste",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "peaceful-and-hostile-relationships-between-states",
+    "types": [
+      "severe"
+    ]
+  },
+  {
+    "slug": "peaceful-and-hostile-relationships-between-states-no-relationship-included",
+    "types": [
+      "severe"
+    ]
+  },
+  {
+    "slug": "people-treated-for-river-blindness",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "per-capita-co2-domestic-aviation-vs-gdp",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "per-capita-co2-domestic-aviation-vs-land-area",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "per-capita-co2-region",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "per-capita-electricity-demand",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "per-capita-ghg-co2-excluding-land-use",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "per-capita-milk-consumption",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "per-capita-renewables",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "per-capita-sources-of-protein",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "perceived-comfort-speaking-anxiety-depression-vs-talked-to-family-friends-when-had-anxiety-depression",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "percentage-of-men-in-the-united-states-who-live-alone-by-age",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "pesticide-breakdown-by-type",
+    "types": [
+      "appears_to",
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "phosphorus-emissions-seafood",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "physical-integrity-rights-index-vdem",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "plastic-waste-region-and-polymer",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "plastics-waste-in-2019-by-region-and-application",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "political-liberties-lexical",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "political-opposition-lexical",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "political-polarization-score",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "population-by-labor-force-status-bars",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "population-covered-by-mobile-network-by-network-capability",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "population-subjected-to-sexual-violence-male-vs-female",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "prevalence-of-undernourishment-vs-share-of-children-who-are-stunted",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "progress-toward-productive-and-sustainable-agriculture",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "proportion-of-animal-breeds-genetic-conservation",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "proportion-of-labor-force-who-are-women",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "proportion-with-ict-skills-in-presentations",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "psychiatrists-working-in-the-mental-health-sector",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "q2-gdp-growth-vs-confirmed-cases-per-million-people",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "rate-of-interstate-conflicts",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "real-gdp-growth",
+    "types": [
+      "indicates_that",
+      "suggests"
+    ]
+  },
+  {
+    "slug": "refugee-population-by-country-or-territory-of-origin",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "renewable-energy-investment-of-gdp",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "reported-rate-of-new-cervical-cancer-cases",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "representation-of-women-in-lower-chamber-of-parliament",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "researchers-in-rd-per-million-people-vs-gdp-pc",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "respiratory-infection-death-rate-who-mdb",
+    "types": [
+      "dramatic",
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "rice-production",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "routes-to-diagnosis",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "rubella-number-unvaccinated",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "sanitation-facilities-coverage-in-rural-areas",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "schools-materials-students-with-disabilities",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "sea-surface-temperature",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "self-reported-hopefulness",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "separation-of-powers-score-bti",
+    "types": [
+      "indicates_that",
+      "likely"
+    ]
+  },
+  {
+    "slug": "severe-bleaching-events-enso",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "share-deaths-suicide",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "share-farms-smallholders",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "share-in-informal-employment-female",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "share-of-adults-who-are-smoking-by-level-of-prosperity",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "share-of-arable-land-which-is-organic",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "share-of-cervical-and-all-cancer-deaths-due-to-unsafe-sex",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "share-of-children-underweight",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "share-of-children-with-diarrhea-receiving-zinc",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "share-of-deaths-from-opioid-overdoses",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "share-of-dietary-energy-supply-from-fats-vs-gdp-per-capita",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "share-of-females-defined-as-obese",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "share-of-global-annual-co-emissions-from-other-industry",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "share-of-mountain-land-that-is-degraded",
+    "types": [
+      "likely"
+    ]
+  },
+  {
+    "slug": "share-of-people-who-feel-close-to-at-least-one-person",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "share-of-population-in-multidimensional-poverty-urban-vs-rural-cme",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "share-of-population-living-in-extreme-poverty-2017-prices",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "share-of-population-living-in-extreme-poverty-lines-cbn",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "share-of-population-satisfied-with-government-services",
+    "types": [
+      "indicates_that",
+      "reflects"
+    ]
+  },
+  {
+    "slug": "share-of-professional-software-developers-using-ai-tools",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "share-of-the-top-10-vs-gini-coefficient-before-tax-wid",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "share-poverty-lower-middle-income-vs-share-mpi-poor",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "smoking-bans-in-public-places",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "state-capacity-index",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "states-involved-in-wars",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "status-of-endemicity-of-cutaneous-leishmaniasis",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "stay-at-home-covid",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "stratospheric-ozone-concentration-projections",
+    "types": [
+      "dramatic"
+    ]
+  },
+  {
+    "slug": "stunting-ihme-vs-gdp",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "suicide-and-other-terrorist-attacks",
+    "types": [
+      "appears_to"
+    ]
+  },
+  {
+    "slug": "suicide-deaths-by-age",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "suicide-rates-by-age-who-mdb",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "surgeons-per-100000",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "systems-track-gender-equality",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "technology-infrastructure-diffusion-uk",
+    "types": [
+      "dramatic"
+    ]
+  },
+  {
+    "slug": "terrorist-attacks-by-method-stacked",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "tetanus-mortality-in-children-under-5",
+    "types": [
+      "likely",
+      "stark"
+    ]
+  },
+  {
+    "slug": "the-maternal-mortality-ratio-in-1985-and-2020",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "the-percentage-of-neonates-protected-at-birth-against-neonatal-tetanus",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "time-required-to-start-business",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "total-oda-for-infrastructure-by-recipient",
+    "types": [
+      "due_to"
+    ]
+  },
+  {
+    "slug": "trials-by-intervention",
+    "types": [
+      "due_to",
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "tuberculosis-cases-attributable-to-risk-factors",
+    "types": [
+      "because",
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "uk-cumulative-covid-deaths-rate",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "uk-daily-covid-cases-7day-average",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "under-5-mortality-rate-sdgs",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "views-ai-impact-society-next-20-years",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "war-rate-correlates-of-war",
+    "types": [
+      "because"
+    ]
+  },
+  {
+    "slug": "water-basins-cooperation-plan",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "were-flu-vaccines-available-in-the-country",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "winter-temperature-anomalies",
+    "types": [
+      "reflects"
+    ]
+  },
+  {
+    "slug": "women-can-obtain-divorce-same-as-men",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "women-choose-where-to-live-same-way-as-men",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "women-civil-society-participation-index",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "women-have-the-same-rights-to-remarry-as-men",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "women-political-empowerment-index",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "women-political-empowerment-index-vs-electoral-democracy-index",
+    "types": [
+      "suggests"
+    ]
+  },
+  {
+    "slug": "working-hours-vs-hourly-wage",
+    "types": [
+      "indicates_that"
+    ]
+  },
+  {
+    "slug": "years-of-fossil-fuel-reserves-left",
+    "types": [
+      "due_to"
+    ]
+  }
+]

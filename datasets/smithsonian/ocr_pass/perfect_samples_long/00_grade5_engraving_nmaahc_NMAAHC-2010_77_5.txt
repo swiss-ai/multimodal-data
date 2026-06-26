@@ -1,0 +1,104 @@
+id:           00000000___nmaahc_NMAAHC-2010_77_5
+dimensions:   2080x3000
+ocr_chars:    3,139
+tags:         {"printed_article": 1, "engraving": 3, "handwriting": 2, "printed_caption": 1}
+gate:         KEEP — Contains substantial text on monument and caption.
+ver_grade:    5/5  issues: none
+
+=== OCR transcription ===
+[printed_article] On the top header area:
+SUPPLEMENT TO THE CINCINNATI GAZETTE.
+
+[engraving] On the background buildings/signs:
+COLORED
+ORPHAN
+FREEDMEN'S
+SCHOOL
+
+[engraving] On the main monument shaft:
+THE WHIPPING-POST.
+HUNTED DOWN WITH
+BLOOD-HOUNDS.
+SLAVERY FOR YEARS.
+BRANDED AND MAN-
+ACLED.
+
+THE AUCTION BLOCK—HUSBAND AND
+WIFE, PARENT AND CHILD, BRO-
+THER AND SISTER SOLD APART,
+DAUGHTERS, MOTHERS, WIVES, AND SIS-
+TERS RUINED.
+KNOWLEDGE A SEALED BOOK.
+FORT PILLOW MASSACRE.
+
+"Resolved by the Congress of the Confederate States
+of America, That the thanks of Congress are due and
+are hereby cordially tendered to Major-General For-
+bush and other officers and men of his command, for
+their late brilliant and successful campaign in Mis-
+sissippi, West Tennessee, and Kentucky—a campaign
+which has conferred on its authors fame as enduring
+as the records of the struggle which they have so
+brilliantly illustrated."
+NO QUARTER TO THE "NIGGER."
+NEW YORK RIOTS—BURNING OF THE COLORED
+ORPHAN ASYLUM, LAMP POST GALLOWS.
+HOMES TURNED.
+NEW ORLEANS AND MEMPHIS MASSACRES.
+"A NEGRO HAS NO RIGHTS WHICH A WHITE MAN
+IS BOUND TO RESPECT."
+"THIS IS A WHITE MAN'S GOVERNMENT."
+"The nigger and the white man are not likely to agree, un-
+less the nigger yields to the white man's views, which he can
+do, or die."—The Jefferson (Texas).
+"We must make the negro understand we are the men we
+were when we held them in abject bondage."—Meridian (Miss.)
+Mercury.
+"Agree among yourselves and act firmly on this agreement,
+that you will not employ any one who votes the Radical ticket."
+—Wade Hampton.
+"And now I say that, unless the negroes submit to the intelli-
+gent guidance of the powerful white race, their fate will be that of
+the Indians; they will be exterminated. The negroes can only be
+happy and prosperous as long as they are guided by the intelligence
+of the white race. Whenever it is sought to disfranchise the intelli-
+gence of the country, and make it subordinate to the ignorance of the
+country, whenever it is sought to subordinate the white race of the
+country to the black barbarism of the negro, the prosperity of the
+country is at an end."—Blair.
+"We are bound to have a war of races, and when there is one drop
+of blood spilled, we predict that it will flow as freely as does the Missis-
+sippi."—The Jefferson (Texas).
+
+[engraving] On the lower front panel of the monument base:
+BULLETS—REBEL PROTESTS AGAINST RE-
+PUBLICAN MEETINGS; CAMILLA, GEOR-
+GIA.
+KU-KLUX KLAN.
+NEGRO KILLED.—"ONE VOTE LESS."—Rich-
+mond Whig.
+EXPULSION OF COLORED MEMBERS OF
+THE HOUSE OF REPRESENTATIVES IN
+GEORGIA.
+EXPELLED FROM THE JURY BOX.
+FORCED AWAY FROM THE POLLS.
+
+BURNING SCHOOL-HOUSES AND CHURCH-
+ES THROUGHOUT THE "RECONSTRUCT-
+ED STATES."
+HUNG UP OR SHOT DOWN IN THE ROADS
+AND STREETS.
+"COLORED CRIMINALS SUFFER SEVERER
+PUNISHMENT THAN WHITES GUILTY OF
+THE SAME CRIME."
+THE GEORGIA MASSACRE.
+"WE DESPISE THE NEGRO."—N.Y. World.
+
+[handwriting] On the bottom left corner:
+Oct 8/68.
+
+[handwriting] On the artist signature near the bottom left of the illustration:
+F. Nast.
+
+[printed_caption] On the title below the illustration:
+PATIENCE ON A MONUMENT.

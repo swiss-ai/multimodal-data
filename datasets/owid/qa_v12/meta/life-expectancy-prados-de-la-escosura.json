@@ -1,0 +1,8 @@
+{
+  "slug": "life-expectancy-prados-de-la-escosura",
+  "title": "Life expectancy",
+  "subtitle": "Average number of years a newborn would live if age-specific mortality rates in the current year were to stay the same throughout its life.",
+  "note": "",
+  "caption": "Life expectancy\n\nAverage number of years a newborn would live if age-specific mortality rates in the current year were to stay the same throughout its life.\n\nThis choropleth world map displays life expectancy data for the year 2020. The legend utilizes a color scale ranging from pale yellow to dark navy blue, representing values from 54 years to 82 years, with specific intervals marked at 54, 58, 62, 66, 70, 74, 78, and 82 years. The darkest navy blue shades, indicating life expectancies of 78 to 82 years, are visible in Australia, South Korea, Japan, and across much of Western Europe, including Spain, France, and Italy. Canada and the United States also appear in dark blue bands near the upper end of the scale. In contrast, a cluster of countries in Central and Southern Africa, including Chad, the Central African Republic, and Nigeria, sit in the lightest yellow and pale green bands, corresponding to the 54 to 62-year range. Russia and parts of Eastern Europe appear in mid-range teal shades, generally falling between 66 and 70 years. South America shows a mix of medium to dark blue shades, with Brazil and Argentina appearing in darker bands than many African nations but lighter than Western Europe. Greenland is marked with diagonal hatching to indicate no data. The visual distribution places the highest values in Oceania, East Asia, and Western Europe, while the lowest values are concentrated in specific regions of Sub-Saharan Africa.",
+  "word_count": 241
+}
