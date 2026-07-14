@@ -16,8 +16,8 @@
 | Copernicus-Bench (bigearthnet, dfc2020, eurosat) | image      | Stage 1                 | [copernicus/](copernicus/)                                                                               | [source](https://huggingface.co/datasets/wangyi111/Copernicus-Bench/tree/a287ab1b414d2bff99557166988571c5885ed81a)         |
 | MMammoTH                                         | image-text | Stage 1                 | [preprocessing/](../preprocessing/)                                                                      | [source](https://huggingface.co/datasets/MAmmoTH-VL/MAmmoTH-VL-Instruct-12M/tree/bac8f77cb8a8f9c4d0de407c6e3a589bd722562a) |
 | HoloAssist                                       | image      | Stage 1                 | [holoassist.py](../medical/adapters/holoassist.py), [apertus1p5/](../medical/configs/apertus1p5/)        | [source](https://holoassist.github.io/)                                                                                    |
-| Nicola Handwriting - Docs                        | image      | Stage 1                 | [handwritting_data_processing_scripts](https://github.com/swiss-ai/handwritting_data_processing_scripts) | internal                                                                                                                   |
-| Nicola Handwriting - Slides                      | image      | Stage 1                 | [handwritting_data_processing_scripts](https://github.com/swiss-ai/handwritting_data_processing_scripts) | internal                                                                                                                   |
+| Nicola Handwriting - Docs                        | image      | Stage 1                 | [handwritting_data_processing_scripts](https://github.com/swiss-ai/handwritting_data_processing_scripts) | [source](https://huggingface.co/datasets/handwriting-apertus/handwriting_data) (internal)                                  |
+| Nicola Handwriting - Slides                      | image      | Stage 1                 | [handwritting_data_processing_scripts](https://github.com/swiss-ai/handwritting_data_processing_scripts) | [source](https://huggingface.co/datasets/handwriting-apertus/handwriting_data) (internal)                                  |
 
 ### Medical - Stage 1 (via `medical` pipeline)
 
@@ -161,7 +161,7 @@
 | CommonVoice 24                   | audio    | Stage 1 | [commonvoice/](commonvoice/)       | [source](https://commonvoice.mozilla.org/)                                      |
 | Unsupervised People's Speech     | audio    | Stage 1 | [peoples_speech/](peoples_speech/) | [source](https://huggingface.co/datasets/MLCommons/unsupervised_peoples_speech) |
 | VoxPopuli                        | audio    | Stage 1 | [voxpopuli/](voxpopuli/)           | [source](https://github.com/facebookresearch/voxpopuli)                         |
-| Gemeinderat Zurich               | audio    | Stage 1 | TODO                               | internal                                                                        |
+| Gemeinderat Zurich               | audio    | Stage 1 | -                                  | [source](https://www.cs.technik.fhnw.ch/i4ds-datasets)                          |
 
 ## Audio - Stage 2 / Cooldown
 
@@ -217,4 +217,4 @@
 | VoiceAssistant-400K         | audio    | SFT   | [voiceassistant_400k/](voiceassistant_400k/)     | [source](https://huggingface.co/datasets/gpt-omni/VoiceAssistant-400K)                          |
 | HeySQuAD (human + machine)  | audio    | SFT   | [heysquad/](heysquad/)                           | [source](https://huggingface.co/datasets/yijingwu/HeySQuAD_human)                               |
 | TCM Shizhen Speech (SFT)    | audio    | SFT   | -                                                | [source](https://huggingface.co/datasets/FreedomIntelligence/TCM-Instruction-Tuning-ShizhenGPT) |
-| Vocalized SFT               | audio    | SFT   | TODO                                             | internal                                                                                        |
+| Vocalized SFT               | audio    | SFT   | [vocalized__sft/](vocalized__sft/)               | internal                                                                                        |
