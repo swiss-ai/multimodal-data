@@ -1,6 +1,6 @@
-# Apertus Data Preparation
+# Apertus v1.5 Multimodal Data Preparation
 
-Complete data preprocessing toolkit for Apertus multimodal VLM training.
+Complete data preprocessing toolkit for Apertus v1.5 multimodal VLM training.
 Covers data download, deduplication, format conversion, recaptioning with
 open-weight models, image-text pairing, and verification across 60+ datasets.
 
