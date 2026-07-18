@@ -1,66 +1,64 @@
 #!/usr/bin/env python
-"""Generate README.md from summary.yaml (the source of truth).
-
-Edit summary.yaml, then run:  python datasets/generate_readme.py
-"""
 import os
 import yaml
 
 DIR = os.path.dirname(os.path.abspath(__file__))
-YAML = os.path.join(DIR, "summary.yaml")
-README = os.path.join(DIR, "README.md")
+COLS = [
+    "Dataset",
+    "License",
+    "Modality",
+    "Stage",
+    "Processing",
+    "Upstream",
+    "Comment",
+]
 
 
-def link(path):
-    """Markdown link whose text is the last segment of the path."""
-    text = path.rstrip("/").split("/")[-1]
-    return f"[{text}]({path})"
+def links(paths):
+    return ", ".join(f"[{p.rstrip('/').split('/')[-1]}]({p})" for p in paths) or "-"
 
 
-def paths_md(paths):
-    return ", ".join(link(p) for p in paths) if paths else "-"
+def source(u):
+    url, _, note = u.partition(" ")
+    return f"[link]({url}) {note}".rstrip() if url else ""
 
 
-def upstream_md(u):
-    if not u:
-        return ""
-    url = u.split(" ", 1)[0]
-    note = u[len(url):].strip()
-    return f"[source]({url})" + (f" {note}" if note else "")
+def comment(license_filtering, comment):
+    out = ""
+    if license_filtering and license_filtering != "-":
+        out += "[" + license_filtering + "] "
+    out += comment
+    return out
 
 
-def comment_md(rec):
-    fl = ", ".join(link(p) for p in rec.get("filtering", []))
-    parts = [x for x in (fl, rec.get("comment", "")) if x]
-    return " - ".join(parts)
+def row(r):
+    return [
+        r["dataset"],
+        r["license"],
+        r["modality"],
+        ", ".join(r["stage"]),
+        links(r["processing"]),
+        source(r["upstream"]),
+        comment(
+            links(r["license_filtering"]),
+            r["comment"],
+        ),
+    ]
 
 
 def main():
-    recs = yaml.safe_load(open(YAML))
-    cols = ["Dataset", "License", "Modality", "Stage", "Processing", "Upstream", "Comment"]
-    out = [
+    recs = yaml.safe_load(open(os.path.join(DIR, "summary.yaml")))
+    lines = [
         "# Datasets",
         "",
-        "Source of truth: [`summary.yaml`](summary.yaml). This table is generated - edit the YAML, then run `python datasets/generate_readme.py`.",
+        "Auto-generated from [`summary.yaml`](summary.yaml) with `python datasets/generate_readme.py`.",
         "",
-        "`Comment` documents license/subset filtering (which Mixed/NC/SA parts were removed or which permissive subset was kept): a linked path points to the filtering code, `TODO` marks filtering still to be documented.",
-        "",
-        "| " + " | ".join(cols) + " |",
-        "|" + "|".join(["---"] * len(cols)) + "|",
+        "| " + " | ".join(COLS) + " |",
+        "| " + " | ".join(["---"] * len(COLS)) + " |",
+        *["| " + " | ".join(row(r)) + " |" for r in recs],
     ]
-    for r in recs:
-        row = [
-            r["dataset"],
-            r.get("license", "") or "",
-            r["modality"],
-            ", ".join(r.get("stage", [])),
-            paths_md(r.get("processing", [])),
-            upstream_md(r.get("upstream", "")),
-            comment_md(r),
-        ]
-        out.append("| " + " | ".join(row) + " |")
-    open(README, "w").write("\n".join(out) + "\n")
-    print(f"wrote {README} ({len(recs)} rows)")
+    open(os.path.join(DIR, "README.md"), "w").write("\n".join(lines) + "\n")
+    print(f"wrote README.md ({len(recs)} rows)")
 
 
 if __name__ == "__main__":
