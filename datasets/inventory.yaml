@@ -122,7 +122,7 @@
   upstream: https://github.com/nrc-cnrc/COVID-US
   license: Mixed, Unknown
   license_filtering: []
-  comment: 'dropped non-NC/SA data sources'
+  comment: 'aggregates ultrasound clips from multiple per-source-licensed origins, non-permissive (NC/SA/unknown) sources were dropped in a pre-ingestion pass, processing assumes already filtered (raw/filtered/COVID_US) data'
 
 - dataset: DDTI Thyroid Ultrasound
   modality: image
@@ -149,7 +149,7 @@
   upstream: https://huggingface.co/datasets/mint-medmax/medmax_data/tree/2a63fb4d5e57bbf30a130976825fadf95ea95ebb
   license: Mixed
   license_filtering: [../medical/adapters/medmax.py]
-  comment: 'each image mapped by its `source` dataset via the metadata lookup, non-permissive samples were dropped'
+  comment: 'filtered by the per-sample `source` field: kept only permissive sources (pubmedvision-it/alignment, path-vqa, vqa-rad), pipeline assumes meta_lookup with cleared NC/SA/credentialed sources'
 
 - dataset: MedMNIST
   modality: image
@@ -410,7 +410,7 @@
   upstream: https://huggingface.co/datasets/CSU-JPG/TextAtlas5M/tree/f9f2a0f5000fbb078f718197acb45cfb9ceed551
   license: Mixed
   license_filtering: []
-  comment: 'subsets carry mixed licenses, kept only the non-NC/SA (MIT-licensed) subsets, dropped the rest'
+  comment: 'subsets carry mixed licenses, kept only the pre-selected MIT-licensed subsets, dropped the rest'
 
 - dataset: UNO-1M
   modality: image-text
@@ -536,7 +536,7 @@
   upstream: https://huggingface.co/datasets/openmed-community/multicare-case-images/tree/c8517124928d2fe3651ee6cb6c560fce66e02344
   license: Mixed
   license_filtering: []
-  comment: 'images carry per-article PMC CC licenses, samples taken from (pre-filtered) permissive articles'
+  comment: 'upstream carries a per-image `license` column, we kept only permissive CC BY images, dropped NC/SA/NO-CC, done pre-ingestion, the adapter assumes permissive stream'
 
 - dataset: NIH Chest X-ray
   modality: image
@@ -569,7 +569,7 @@
   modality: image-text
   stage: [Cooldown & LCP]
   processing: [chartnet/]
-  upstream: https://huggingface.co/datasets/ibm-granite/ChartNet/tree/52832dd476c9a7a7b01c20245e952958cef1e2b2
+  upstream: https://huggingface.co/datasets/ibm-granite/ChartNet/tree/febf15f665916a040630155298b5d0f0f47bd5f1
   license: Mixed
   license_filtering: [chartnet/download.slurm]
   comment: 'download.slurm fetches only the `core_permissive/*` subset (CDLA-Permissive-2.0)'
@@ -617,7 +617,7 @@
   upstream: https://tau-vailab.github.io/WAFFLE/
   license: Unknown
   license_filtering: [waffle/convert_to_parquet.py]
-  comment: 'convert_to_parquet.py classifies each image license into permissive (PD/CC0/CC-BY) vs sa buckets and drops NC/ND/unknown, only the permissive bucket is used'
+  comment: 'convert_to_parquet.py classifies each image license into permissive (PD/CC0/CC-BY) vs sa buckets and drops NC/ND/unknown, permissive/ and sa/ are written as separate parquet dirs, only the permissive/ bucket is ingested'
 
 - dataset: Swisstopo Maps
   modality: image-text
@@ -670,7 +670,7 @@
   processing: [owid/]
   upstream: https://ourworldindata.org/ (scraped)
   license: Unknown
-  license_filtering: [owid/download_graphers.py]
+  license_filtering: []
   comment: 'CC-BY-4.0 by site policy'
 
 - dataset: OWID Articles
@@ -833,7 +833,7 @@
   upstream: https://huggingface.co/datasets/General-Medical-AI/GMAI-VL-5.5M
   license: Mixed
   license_filtering: [gmai/]
-  comment: 'kept only the permissive source datasets, NC/SA constituents dropped'
+  comment: 'from the 14 GMAI-VL-5.5M-OpenSource subsets, kept only TotalSegmentator_v2, crc100k (NCT-CRC-HE-100K), PAD-UFES-20 (all CC-BY-4.0), other non-permissive subsets dropped'
 
 - dataset: PubMedVision
   modality: image-text
