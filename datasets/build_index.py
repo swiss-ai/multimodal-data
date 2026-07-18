@@ -12,6 +12,8 @@ COLS = [
     "Upstream",
     "Comment",
 ]
+SRC_FILE = "inventory.yaml"
+SCRIPT = os.path.basename(__file__)
 
 
 def links(paths):
@@ -46,20 +48,15 @@ def row(r):
     ]
 
 
-def main():
-    recs = yaml.safe_load(open(os.path.join(DIR, "summary.yaml")))
+if __name__ == "__main__":
+    recs = yaml.safe_load(open(os.path.join(DIR, SRC_FILE)))
     lines = [
         "# Datasets",
         "",
-        "Auto-generated from [`summary.yaml`](summary.yaml) with `python datasets/generate_readme.py`.",
+        f"Auto-generated from [`{SRC_FILE}`]({SRC_FILE}) with [`{SCRIPT}`]({SCRIPT}).",
         "",
         "| " + " | ".join(COLS) + " |",
         "| " + " | ".join(["---"] * len(COLS)) + " |",
         *["| " + " | ".join(row(r)) + " |" for r in recs],
     ]
-    open(os.path.join(DIR, "README.md"), "w").write("\n".join(lines) + "\n")
-    print(f"wrote README.md ({len(recs)} rows)")
-
-
-if __name__ == "__main__":
-    main()
+    open(os.path.join(DIR, "DATASETS.md"), "w").write("\n".join(lines) + "\n")

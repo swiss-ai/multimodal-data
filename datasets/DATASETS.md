@@ -1,6 +1,6 @@
 # Datasets
 
-Auto-generated from [`summary.yaml`](summary.yaml) with `python datasets/generate_readme.py`.
+Auto-generated from [`inventory.yaml`](inventory.yaml) with [`build_index.py`](build_index.py).
 
 | Dataset | License | Modality | Stage | Processing | Upstream | Comment |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -78,11 +78,11 @@ Auto-generated from [`summary.yaml`](summary.yaml) with `python datasets/generat
 | Crello | CDLA-Permissive-2.0 | image-text | Cooldown | [crello](crello/) | [link](https://huggingface.co/datasets/cyberagent/crello/tree/7997e2f434ee4aa73cf4cdf22c5954cb175872e1) |  |
 | DOCCI | CC-BY-4.0 | image-text | Cooldown | - | [link](https://huggingface.co/datasets/google/docci/tree/a0a43eaf34676ffd008fb6565dd8c2ba00d09100) |  |
 | PixMo Point Explanations | ODC-By-1.0 | image-text | Cooldown | [pixmo](pixmo/) | [link](https://huggingface.co/datasets/allenai/pixmo-point-explanations/tree/08a566fa00747e4c1c7e8481c350763b469c209c) |  |
-| OWID Grapher Charts | Unknown | image-text | Cooldown & LCP | [owid](owid/) | [link](https://ourworldindata.org/) (scraped) | [[download_graphers.py](owid/download_graphers.py)] OWID content is CC-BY-4.0 by site policy |
-| OWID Articles | Unknown | image-text | Cooldown & LCP | [owid](owid/) | [link](https://ourworldindata.org/) (scraped) | OWID content is CC-BY-4.0 by site policy |
-| OWID Data Insights | Unknown | image-text | Cooldown & LCP | [owid](owid/) | [link](https://ourworldindata.org/) (scraped) | OWID content is CC-BY-4.0 by site policy |
+| OWID Grapher Charts | Unknown | image-text | Cooldown & LCP | [owid](owid/) | [link](https://ourworldindata.org/) (scraped) | [[download_graphers.py](owid/download_graphers.py)] CC-BY-4.0 by site policy |
+| OWID Articles | Unknown | image-text | Cooldown & LCP | [owid](owid/) | [link](https://ourworldindata.org/) (scraped) | CC-BY-4.0 by site policy |
+| OWID Data Insights | Unknown | image-text | Cooldown & LCP | [owid](owid/) | [link](https://ourworldindata.org/) (scraped) | CC-BY-4.0 by site policy |
 | Argimi Finance 10K | CC-BY-4.0 | image-text | Cooldown | [argimi_finance_10k](argimi_finance_10k/) | [link](https://huggingface.co/datasets/artefactory/Argimi-Ardian-Finance-10k-text-image/tree/d019db455ff58bc14cae72422c4fc3ef0c301ea7) |  |
-| DailyMed SPL | Unknown | image-text | Cooldown | [dailymed](dailymed/), [dailymed_spl](dailymed_spl/) | [link](https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm) | DailyMed SPLs are FDA / US-government public-domain records, the whole release is non-NC/SA, no license filtering needed |
+| DailyMed SPL | Unknown | image-text | Cooldown | [dailymed](dailymed/), [dailymed_spl](dailymed_spl/) | [link](https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm) | FDA / US-government public-domain records, the whole release is non-NC/SA, no license filtering needed |
 | Innovator-VL-Instruct-46M | MIT | image-text | SFT | [innovator](innovator/), [innovator_vl](innovator_vl/), [download_innovator_vl_46m.slurm](sft/download_innovator_vl_46m.slurm) | [link](https://huggingface.co/datasets/InnovatorLab/Innovator-VL-Instruct-46M) |  |
 | SenseNova-SI-8M | Apache-2.0 | image-text | SFT | [sensenova_si_8m](sensenova_si_8m/) | [link](https://huggingface.co/datasets/sensenova/SenseNova-SI-8M) |  |
 | Nemotron-Image-Training-v3 | CC-BY-4.0 | image-text | SFT | [nemotron](nemotron/), [nemotron_image_training_v3](nemotron_image_training_v3/) | [link](https://huggingface.co/datasets/nvidia/Nemotron-Image-Training-v3) |  |
@@ -131,7 +131,7 @@ Auto-generated from [`summary.yaml`](summary.yaml) with `python datasets/generat
 | ParlaMent Parla | CC-BY-4.0 | audio | Stage 2 | [parlament_parla](parlament_parla/) | [link](https://huggingface.co/datasets/projecte-aina/parlament_parla_v3) |  |
 | SeamlessAlign | CC-BY-4.0 | audio | Stage 2 | [seamless_align](seamless_align/) | [link](https://huggingface.co/datasets/ai4bharat/SeamlessAlign) |  |
 | Kathbath | CC-BY-4.0 | audio | Stage 2 | [kathbath](kathbath/) | [link](https://huggingface.co/datasets/ai4bharat/Kathbath) |  |
-| Coral V3 | OpenRAIL | audio | Stage 2 | [coral](coral/) | [link](https://huggingface.co/datasets/CoRal-project/coral-v3) | OpenRAIL license allows commercial use, non-NC/SA, taken as-is, no filtering |
+| Coral V3 | OpenRAIL | audio | Stage 2 | [coral](coral/) | [link](https://huggingface.co/datasets/CoRal-project/coral-v3) | commercial use allowed, non-NC/SA, taken as-is, no filtering |
 | LegCo Speech | CC-BY-1.0 | audio | Stage 2 | [legco_speech](legco_speech/) | [link](https://huggingface.co/datasets/laubonghaudoi/legco-speech) |  |
 | MultiMed | MIT | audio | Stage 2 | [multimed](multimed/) | [link](https://huggingface.co/datasets/leduckhai/MultiMed) |  |
 | LibriHeavy | Apache-2.0 | audio | Stage 2 | [libriheavy](libriheavy/) | [link](https://huggingface.co/datasets/mythicinfinity/libriheavy) |  |

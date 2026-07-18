@@ -4,6 +4,9 @@ Complete data preprocessing toolkit for Apertus v1.5 multimodal VLM training.
 Covers data download, deduplication, format conversion, recaptioning with
 open-weight models, image-text pairing, and verification across 60+ datasets.
 
+For the full dataset inventory (license, modality, stage, processing scripts,
+upstream source), see [`datasets/DATASETS.md`](datasets/DATASETS.md).
+
 ## Directory Structure
 
 ```
@@ -16,6 +19,9 @@ open-weight models, image-text pairing, and verification across 60+ datasets.
 ├── convert/           # Image format conversion (PNG→JPEG, TIFF→JPEG, text cleaning)
 ├── image_text/        # Image-text pairing utilities (JSON, parquet, ZIP sources)
 ├── datasets/          # Per-dataset preprocessing scripts
+│   ├── inventory.yaml # Dataset inventory (source of truth)
+│   ├── DATASETS.md    # Rendered inventory table (generated)
+│   ├── build_index.py # Regenerate DATASETS.md from inventory.yaml
 │   ├── bigdocs/       # BigDocs-7.5M parquet/zips → webdataset
 │   ├── bigearthnet/   # BigEarthNet Sentinel-2 bands → RGB + QA conversations
 │   ├── ccpdf/         # CommonCanvas PDF download + parquet
