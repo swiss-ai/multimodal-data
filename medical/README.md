@@ -1,6 +1,8 @@
 # Multimodal data pipeline
 
-A streaming pipeline for loading, filtering, and writing large multimodal datasets.
+A fault-tolerant streaming pipeline for loading, filtering, and writing large
+multimodal datasets. Bundled adapters target the medical datasets in Apertus
+Stage 1, but the framework (adapters, filters, writers) is dataset-agnostic.
 
 ## Usage
 
@@ -73,6 +75,26 @@ print(ds[10:20])
 3. Workers apply filters sequentially.
 4. Accepted samples are sent to writer.
 5. Writer serializes (threaded) and writes to disk.
+
+## Available components
+
+Config `id` values map to the registry keys below (adapter/filter class name
+with the `Adapter`/`Filter` suffix removed). See `adapters/__init__.py`,
+`filters/__init__.py`, and `writers/__init__.py`.
+
+**Adapters** (`adapters/`, 25):
+`Meditron`, `MedMax`, `MedPix`, `MedTrinityDemo`, `MedTrinityFull`, `MMC4`,
+`MultiCaRe`, `PMCOA`, `OpenPMC18m`, `MedMNIST`, `SCIN`, `SLIDE`, `UWF`,
+`RFMiD2`, `ISIC`, `HoloAssist`, `LAIONAesthetics`, `MediCaT`, `NihChestXray`,
+`CovidRadiography`, `DiabeticRetinopathy`, `BrainTumorMRI`, `EBHISeg`,
+`LiverUltrasound`, `NctCrcHe`.
+
+**Filters** (`filters/`): `ImageResolution` (min/max dimensions),
+`ImageDownsample` (shrink large images), `ImageDeduplication` (perceptual-hash
+dedup, backed by a persistent DB).
+
+**Writers** (`writers/`): HuggingFace sharded parquet (`HuggingFaceDatasetWriter`)
+and webdataset tar shards (`WebDatasetWriter`).
 
 ## Configuration
 
