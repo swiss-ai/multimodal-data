@@ -1,0 +1,1421 @@
+- dataset: TreeOfLife-10M
+  modality: image
+  stage: [Stage 1]
+  processing: [tree_of_life/]
+  upstream: https://huggingface.co/datasets/imageomics/TreeOfLife-10M/tree/91debffb7146c32c89d76feb1eb575b555e2ecc7
+  license: Mixed
+  license_filtering: [tree_of_life/main.py]
+  comment: 'mapped each image to its per-image license (from licenses.csv) and kept only CC0/CC-BY/CC-BY-3.0/CC-BY-4.0/public-domain'
+
+- dataset: LAION Aesthetics 12M UMAP
+  modality: image
+  stage: [Stage 1]
+  processing: [laion/, ../medical/adapters/laion.py]
+  upstream: https://huggingface.co/datasets/dclure/laion-aesthetics-12m-umap/tree/06928317703bcfa6099c7fc0f13e11bb295e7769
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: MINT-1T HTML
+  modality: image-text
+  stage: [Stage 1]
+  processing: [mint_html/]
+  upstream: https://huggingface.co/datasets/mlfoundations/MINT-1T-HTML/tree/906a8b85cea61198ff7339c4dd711ad0b5361847
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MINT-1T PDF
+  modality: image
+  stage: [Stage 1]
+  processing: [mint_arxiv/]
+  upstream: https://huggingface.co/collections/mlfoundations/mint-1t
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MINT-1T ArXiv
+  modality: image
+  stage: [Stage 1]
+  processing: [mint_arxiv/]
+  upstream: https://huggingface.co/datasets/mlfoundations/MINT-1T-ArXiv/tree/7c5b00ffd5b563071010c3bf2082b4a8f836eb72
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: BigDocs-7.5M
+  modality: image
+  stage: [Stage 1]
+  processing: [bigdocs/]
+  upstream: https://huggingface.co/datasets/ServiceNow/BigDocs-7.5M/tree/dae4403c28307bd5328920740e81ce5232819e74
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: SWISSIMAGE 10cm
+  modality: image
+  stage: [Stage 1, Cooldown & LCP]
+  processing: [swissimage/, swisstopo/]
+  upstream: https://www.swisstopo.admin.ch/en/orthoimage-swissimage-10#Download
+  license: Open Government Data
+  license_filtering: []
+  comment: ''
+
+- dataset: Copernicus-Bench (bigearthnet, dfc2020, eurosat)
+  modality: image
+  stage: [Stage 1]
+  processing: [copernicus/]
+  upstream: https://huggingface.co/datasets/wangyi111/Copernicus-Bench/tree/a287ab1b414d2bff99557166988571c5885ed81a
+  license: Mixed
+  license_filtering: [copernicus/main.py]
+  comment: 'ingested only the three non-NC/SA subsets: BigEarthNet (CDLA-Permissive), EuroSAT (MIT), DFC2020'
+
+- dataset: MMammoTH
+  modality: image-text
+  stage: [Stage 1]
+  processing: [../preprocessing/]
+  upstream: https://huggingface.co/datasets/MAmmoTH-VL/MAmmoTH-VL-Instruct-12M/tree/bac8f77cb8a8f9c4d0de407c6e3a589bd722562a
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: HoloAssist
+  modality: image
+  stage: [Stage 1]
+  processing: [../medical/adapters/holoassist.py, ../medical/configs/apertus1p5/]
+  upstream: https://holoassist.github.io/
+  license: CDLA-Permissive-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Nicola Handwriting - Docs
+  modality: image
+  stage: [Stage 1]
+  processing: ['https://github.com/swiss-ai/handwritting_data_processing_scripts']
+  upstream: https://huggingface.co/datasets/handwriting-apertus/handwriting_data (internal)
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Nicola Handwriting - Slides
+  modality: image
+  stage: [Stage 1]
+  processing: ['https://github.com/swiss-ai/handwritting_data_processing_scripts']
+  upstream: https://huggingface.co/datasets/handwriting-apertus/handwriting_data (internal)
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Breast Ultrasound (BUSI)
+  modality: image
+  stage: [Stage 1, Stage 2]
+  processing: [../preprocessing/]
+  upstream: https://www.kaggle.com/datasets/sabahesaraki/breast-ultrasound-images-dataset
+  license: Unknown
+  license_filtering: []
+  comment: ''
+
+- dataset: COVID-US
+  modality: image
+  stage: [Stage 1, Stage 2]
+  processing: [../preprocessing/]
+  upstream: https://github.com/nrc-cnrc/COVID-US
+  license: Mixed, Unknown
+  license_filtering: []
+  comment: 'aggregates ultrasound clips from multiple per-source-licensed origins, non-permissive (NC/SA/unknown) sources were dropped in a pre-ingestion pass, processing assumes already filtered (raw/filtered/COVID_US) data'
+
+- dataset: DDTI Thyroid Ultrasound
+  modality: image
+  stage: [Stage 1, Stage 2]
+  processing: [../preprocessing/]
+  upstream: https://www.kaggle.com/datasets/dasmehdixtr/ddti-thyroid-ultrasound-images
+  license: Unknown
+  license_filtering: []
+  comment: ''
+
+- dataset: ISIC Skin Disease
+  modality: image
+  stage: [Stage 1]
+  processing: [../medical/adapters/isic.py]
+  upstream: https://www.kaggle.com/datasets/abhii1929/isic-skin-disease-image-dataset-4-classes
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MedMax
+  modality: image-text
+  stage: [Stage 1, Stage 2]
+  processing: [../medical/adapters/medmax.py, ../preprocessing/]
+  upstream: https://huggingface.co/datasets/mint-medmax/medmax_data/tree/2a63fb4d5e57bbf30a130976825fadf95ea95ebb
+  license: Mixed
+  license_filtering: [../medical/adapters/medmax.py]
+  comment: 'filtered by the per-sample `source` field: kept only permissive sources (pubmedvision-it/alignment, path-vqa, vqa-rad), pipeline assumes meta_lookup with cleared NC/SA/credentialed sources'
+
+- dataset: MedMNIST
+  modality: image
+  stage: [Stage 1]
+  processing: [../medical/adapters/medmnist.py]
+  upstream: https://zenodo.org/records/10519652
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MedTrinity-25M
+  modality: image-text
+  stage: [Stage 1, Stage 2]
+  processing: [../medical/adapters/medtrinity.py, ../preprocessing/]
+  upstream: https://huggingface.co/datasets/UCSC-VLAA/MedTrinity-25M/tree/89e5c684794e5c4cc1af9e8f1a7798af7c937dbf
+  license: Mixed
+  license_filtering: [../medical/adapters/medtrinity.py]
+  comment: 'kept only rows whose `source` is in `allowed_sources` list (deeplesion, brats, pmc_oa, NCT-CRC-HE-100K, nih_chest, ...)'
+
+- dataset: OpenPMC-18M
+  modality: image
+  stage: [Stage 1, Stage 2]
+  processing: [../medical/adapters/open_pmc_18m.py]
+  upstream: https://huggingface.co/datasets/vector-institute/open-pmc-18m/tree/b5a67783ec3e1bf91809a5efc4b72fbedacacdf6
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: PMC OA
+  modality: image
+  stage: [Stage 1, Stage 2]
+  processing: [../medical/adapters/pmc_oa.py, ../preprocessing/]
+  upstream: https://huggingface.co/datasets/axiong/pmc_oa/tree/1d2296e9c022a24e82a47e524d53f0915b98c926
+  license: Mixed
+  license_filtering: []
+  comment: 'sourced from the PMC Open Access commercial-use subset (CC-BY/CC0 articles only), non-commercial OA is excluded upstream'
+
+- dataset: RFMiD 2
+  modality: image
+  stage: [Stage 1]
+  processing: [../medical/adapters/rfmid2.py]
+  upstream: https://zenodo.org/records/7505822
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: SciN
+  modality: image
+  stage: [Stage 1]
+  processing: [../medical/adapters/scin.py]
+  upstream: https://huggingface.co/datasets/google/scin/tree/996257142f7517fb8991a28cfba46ec4e3f530a9
+  license: Other
+  license_filtering: []
+  comment: 'bespoke SCIN Data Use License (modified CC BY)'
+
+- dataset: SLID-E
+  modality: image
+  stage: [Stage 1]
+  processing: [../medical/adapters/slide.py]
+  upstream: https://figshare.com/articles/dataset/SLID-E/26172919
+  license: MIT, CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Open UFI
+  modality: image
+  stage: [Stage 1]
+  processing: [../medical/adapters/uwf.py]
+  upstream: https://springernature.figshare.com/articles/dataset/Open_UFI_and_clinical_IQA/26936446
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Recap-DataComp-1B
+  modality: image-text
+  stage: [Stage 2, Cooldown]
+  processing: [recap_datacomp/, recap_datacomp_1b/]
+  upstream: https://huggingface.co/datasets/UCSC-VLAA/Recap-DataComp-1B/tree/457c44d98651bcfdfb3cc8695f5e60a0d2705e78
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: LaTeX Formulas 80M
+  modality: image-text
+  stage: [Stage 2, Cooldown]
+  processing: [latex_formulas_80m/]
+  upstream: https://huggingface.co/datasets/OleehyO/latex-formulas-80M/tree/5cd783320b0092caa85720a85d86595f42df043b
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: BLIP3 Grounding 50M
+  modality: image-text
+  stage: [Stage 2]
+  processing: [blip3_grounding/]
+  upstream: https://huggingface.co/datasets/Salesforce/blip3-grounding-50m/tree/4d622c4f19b8a6b91ad914caf343306e363ff79b
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: PD12M Full
+  modality: image-text
+  stage: [Stage 2]
+  processing: [pd12m/]
+  upstream: https://huggingface.co/datasets/Spawning/pd12m-full/tree/7bda6bfe13c6a39fd0a286adced5df1228041720
+  license: CDLA-Permissive-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FaceCaption-15M
+  modality: image-text
+  stage: [Stage 2]
+  processing: [facecaption_15m/, facetaption/]
+  upstream: https://huggingface.co/datasets/OpenFace-CQUPT/FaceCaption-15M/tree/3ed92d90f7fc7199b47c4da17c6863b1a175f380
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Megalith-10M
+  modality: image-text
+  stage: [Stage 2]
+  processing: [megalith/]
+  upstream: https://huggingface.co/datasets/madebyollin/megalith-10m/tree/1e65a79953396f6d05f60eba4cc564541ad4be8c
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: SkyScript
+  modality: image-text
+  stage: [Stage 2, Cooldown]
+  processing: [skyscript/]
+  upstream: https://github.com/wangzhecheng/SkyScript
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: WebSight V0.2
+  modality: image-text
+  stage: [Stage 2]
+  processing: [websight/]
+  upstream: https://huggingface.co/datasets/HuggingFaceM4/WebSight/tree/b11f8172f89c992b56ac702319e02c428cca4a4e
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Open Images V7
+  modality: image-text
+  stage: [Stage 2]
+  processing: [openimages/]
+  upstream: https://huggingface.co/datasets/bitmind/open-images-v7/tree/4518ecd40f8f9ef66ee4356be438f840c714e95a
+  license: CC-BY-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: DaTikZ-V4
+  modality: image-text
+  stage: [Stage 2]
+  processing: [datikz_v4/]
+  upstream: https://huggingface.co/datasets/nllg/DaTikZ-V4/tree/33734c83608211682be11001a1618856fc1979dd
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Art Museums PD 440k
+  modality: image-text
+  stage: [Stage 2, Cooldown]
+  processing: [art_museums_pd/]
+  upstream: https://huggingface.co/datasets/Mitsua/art-museums-pd-440k/tree/fba945da78b36262eb9272067197cc28d06cffbf
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Fine-T2I
+  modality: image-text
+  stage: [Stage 2]
+  processing: [fine_t2i/]
+  upstream: https://huggingface.co/datasets/ma-xu/fine-t2i/tree/28fdd5663ee202b5cafc01d6ed08a03f14957854
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MapTrace
+  modality: image-text
+  stage: [Stage 2]
+  processing: [maptrace/]
+  upstream: https://huggingface.co/datasets/google/MapTrace/tree/8dd60adfde2f189768f27204c78ec44af07a67bf
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FLAIR-HUB
+  modality: image
+  stage: [Stage 2]
+  processing: [flair_hub/, ign/]
+  upstream: https://huggingface.co/datasets/IGNF/FLAIR-HUB/tree/8275163f72f0eed69050a703925791b7c3577f10
+  license: Etalab Open License 2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: IGN City Tiles
+  modality: image
+  stage: [Stage 2]
+  processing: [ign/]
+  upstream: https://geoservices.ign.fr/planign
+  license: Etalab Open License 2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Shopify Product Catalogue
+  modality: image-text
+  stage: [Stage 2]
+  processing: [product_catalogue/]
+  upstream: https://huggingface.co/datasets/Shopify/product-catalogue/tree/d5c517c509f5aca99053897ef1de797d6d7e5aa5
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: EgoPAT3Dv2
+  modality: image
+  stage: [Stage 2, Cooldown]
+  processing: [egopat3dv2/]
+  upstream: https://huggingface.co/datasets/ai4ce/EgoPAT3Dv2/tree/9f20d0b0f6f48022bc2e10c46f219e3b89c44681
+  license: Unknown
+  license_filtering: []
+  comment: ''
+
+- dataset: LLaVA-OV Mid-Training 85M
+  modality: image-text
+  stage: [Stage 2]
+  processing: []
+  upstream: https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M/tree/c5218cad785eba7d218137e8ce4997bda568a050
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: BLIP3o Long Caption
+  modality: image-text
+  stage: [Stage 2]
+  processing: []
+  upstream: https://huggingface.co/datasets/BLIP3o/BLIP3o-Pretrain-Long-Caption/tree/e4d07091a466d1a1e35a9b0c61caddc78d14a059
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: CommonCatalog CC-BY
+  modality: image-text
+  stage: [Stage 2]
+  processing: [../recaption/vllm/loader_commoncatalog.py]
+  upstream: https://huggingface.co/datasets/common-canvas/commoncatalog-cc-by/tree/80f50fe4a1ca937f37a11be3f8eee5199d776ff3
+  license: Mixed
+  license_filtering: [../recaption/vllm/loader_commoncatalog.py]
+  comment: 'loader_commoncatalog.py keeps only rows whose `licenseurl` is CC-BY (ALLOWED_LICENSE_URLS)'
+
+- dataset: TextAtlas5M
+  modality: image-text
+  stage: [Stage 2]
+  processing: []
+  upstream: https://huggingface.co/datasets/CSU-JPG/TextAtlas5M/tree/f9f2a0f5000fbb078f718197acb45cfb9ceed551
+  license: Mixed
+  license_filtering: []
+  comment: 'subsets carry mixed licenses, kept only the pre-selected MIT-licensed subsets, dropped the rest'
+
+- dataset: UNO-1M
+  modality: image-text
+  stage: [Stage 2]
+  processing: [../recaption/vllm/loader_uno_1m_v3.py]
+  upstream: https://huggingface.co/datasets/bytedance-research/UNO-1M/tree/f25bb61db6d6d66d82f41d1e613c0e04ba342e84
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: RSTeller
+  modality: image-text
+  stage: [Stage 2]
+  processing: [../image_text/rsteller.py]
+  upstream: https://huggingface.co/datasets/SlytherinGe/RSTeller/tree/a03b35f1bc9a3ac14ae93724d175c2611f1bba5b
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: GeoChat Instruct
+  modality: image-text
+  stage: [Stage 2]
+  processing: [../image_text/geochat.py]
+  upstream: https://huggingface.co/datasets/MBZUAI/GeoChat_Instruct/tree/8eb13307eabc7fa9c1f8b0e61e372a327ccd68b1
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MIT-10M
+  modality: image-text
+  stage: [Stage 2]
+  processing: [../recaption/vllm/loader_mit_10m_qwen_from_text.py]
+  upstream: https://huggingface.co/datasets/liboaccn/MIT-10M/tree/bcba6b2651771c69f93e000486c2baa0896d32c3
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: PixMo-Cap
+  modality: image-text
+  stage: [Stage 2, Cooldown]
+  processing: [pixmo/, ../download/special/pixmo_cap/, ../preprocessing/]
+  upstream: https://huggingface.co/datasets/allenai/pixmo-cap/tree/edce6390d9d5be6c8db0d863fbe62718c88988a4
+  license: ODC-By-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: PIN-200M
+  modality: image-text
+  stage: [Stage 2, Cooldown & LCP]
+  processing: [pin_200m/]
+  upstream: https://huggingface.co/datasets/m-a-p/PIN-200M/tree/f69c5da58f4284c6687a0e058c21e67fca9a1b66
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: TCM Shizhen (Book Vision + Web Vision)
+  modality: image-text
+  stage: [Stage 2, Cooldown & LCP]
+  processing: [tcm_pretrain_shizhen/]
+  upstream: https://huggingface.co/datasets/FreedomIntelligence/TCM-Pretrain-Data-ShizhenGPT/tree/db4874ce4e322f47432fe322c558e516c5aad71e
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Molmo2 Syn MultiImage
+  modality: image-text
+  stage: [Stage 2, Cooldown]
+  processing: [molmo2/, molmo2_synmultiimageqa/]
+  upstream: https://huggingface.co/datasets/allenai/Molmo2-MultiImageQA/tree/f47ca3644d394b548be07a68d5a6fc0275924f08
+  license: ODC-By-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Brain Tumor MRI
+  modality: image
+  stage: [Stage 2]
+  processing: [../medical/adapters/brain_tumor_mri.py]
+  upstream: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Diabetic Retinopathy
+  modality: image
+  stage: [Stage 2]
+  processing: [../medical/adapters/diabetic_retinopathy.py]
+  upstream: https://www.kaggle.com/datasets/sovitrath/diabetic-retinopathy-2015-data-colored-resized
+  license: CC0-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: EBHI-Seg
+  modality: image
+  stage: [Stage 2]
+  processing: [../medical/adapters/ebhi_seg.py]
+  upstream: https://github.com/dataset-ninja/ebhi-seg
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Liver Ultrasound
+  modality: image
+  stage: [Stage 2]
+  processing: [../medical/adapters/liver_ultrasound.py]
+  upstream: https://www.kaggle.com/datasets/orvile/annotated-ultrasound-liver-images-dataset
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MultiCare Images
+  modality: image
+  stage: [Stage 2]
+  processing: [../medical/adapters/multicare.py]
+  upstream: https://huggingface.co/datasets/openmed-community/multicare-images/tree/5c954c4fbf9abdcb55053488dab6c1ef142796b5
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MultiCare Case Images
+  modality: image
+  stage: [Stage 2]
+  processing: [../medical/adapters/multicare.py]
+  upstream: https://huggingface.co/datasets/openmed-community/multicare-case-images/tree/c8517124928d2fe3651ee6cb6c560fce66e02344
+  license: Mixed
+  license_filtering: []
+  comment: 'upstream carries a per-image `license` column, we kept only permissive CC BY images, dropped NC/SA/NO-CC, done pre-ingestion, the adapter assumes permissive stream'
+
+- dataset: NIH Chest X-ray
+  modality: image
+  stage: [Stage 2]
+  processing: [../medical/adapters/nih_chest_xray.py]
+  upstream: https://huggingface.co/datasets/alkzar90/NIH-Chest-X-ray-dataset/tree/36778e3b0e4f4b4fad31d1728d6190f3eda5b543
+  license: CC0-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: NCT-CRC-HE-100K
+  modality: image
+  stage: [Stage 2]
+  processing: [../medical/adapters/nct_crc_he.py]
+  upstream: https://zenodo.org/records/1214456
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MedPix-2
+  modality: image-text
+  stage: [Stage 2]
+  processing: [../medical/adapters/medpix.py]
+  upstream: https://zenodo.org/records/12624810
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: ChartNet
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [chartnet/]
+  upstream: https://huggingface.co/datasets/ibm-granite/ChartNet/tree/febf15f665916a040630155298b5d0f0f47bd5f1
+  license: Mixed
+  license_filtering: [chartnet/download.slurm]
+  comment: 'download.slurm fetches only the `core_permissive/*` subset (CDLA-Permissive-2.0)'
+
+- dataset: HQ-50K
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [hq50k/]
+  upstream: https://huggingface.co/datasets/YangQiee/HQ-50K/tree/1c501522f77594726b00b5943f1804c600e0230d
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: NASA Images
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [nasa/]
+  upstream: https://www.nasa.gov/ (scraped)
+  license: Unknown
+  license_filtering: [nasa/filter_cooldown.py]
+  comment: 'filter_cooldown.py hard-filters to `license == "PD"` (public domain), ESA-joint and unclear-license images are dropped'
+
+- dataset: Smithsonian Open Access
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [smithsonian/]
+  upstream: https://www.si.edu/openaccess
+  license: CC0-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Visual Genome
+  modality: image-text
+  stage: [Cooldown]
+  processing: [visual_genome/]
+  upstream: https://huggingface.co/datasets/ranjaykrishna/visual_genome/tree/65bc9e7e7353fff750326c9523e384701934e530
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: WAFFLE
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [waffle/]
+  upstream: https://tau-vailab.github.io/WAFFLE/
+  license: Unknown
+  license_filtering: [waffle/convert_to_parquet.py]
+  comment: 'convert_to_parquet.py classifies each image license into permissive (PD/CC0/CC-BY) vs sa buckets and drops NC/ND/unknown, permissive/ and sa/ are written as separate parquet dirs, only the permissive/ bucket is ingested'
+
+- dataset: Swisstopo Maps
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [swisstopo/]
+  upstream: https://www.geo.admin.ch/en/wms-available-services-an-data
+  license: Open Government Data
+  license_filtering: []
+  comment: ''
+
+- dataset: MINT-1T ArXiv (Cooldown)
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [mint_arxiv/]
+  upstream: https://huggingface.co/datasets/mlfoundations/MINT-1T-ArXiv/tree/7c5b00ffd5b563071010c3bf2082b4a8f836eb72
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Crello
+  modality: image-text
+  stage: [Cooldown]
+  processing: [crello/]
+  upstream: https://huggingface.co/datasets/cyberagent/crello/tree/7997e2f434ee4aa73cf4cdf22c5954cb175872e1
+  license: CDLA-Permissive-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: DOCCI
+  modality: image-text
+  stage: [Cooldown]
+  processing: []
+  upstream: https://huggingface.co/datasets/google/docci/tree/a0a43eaf34676ffd008fb6565dd8c2ba00d09100
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: PixMo Point Explanations
+  modality: image-text
+  stage: [Cooldown]
+  processing: [pixmo/]
+  upstream: https://huggingface.co/datasets/allenai/pixmo-point-explanations/tree/08a566fa00747e4c1c7e8481c350763b469c209c
+  license: ODC-By-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: OWID Grapher Charts
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [owid/]
+  upstream: https://ourworldindata.org/ (scraped)
+  license: Unknown
+  license_filtering: []
+  comment: 'CC-BY-4.0 by site policy'
+
+- dataset: OWID Articles
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [owid/]
+  upstream: https://ourworldindata.org/ (scraped)
+  license: Unknown
+  license_filtering: []
+  comment: 'CC-BY-4.0 by site policy'
+
+- dataset: OWID Data Insights
+  modality: image-text
+  stage: [Cooldown & LCP]
+  processing: [owid/]
+  upstream: https://ourworldindata.org/ (scraped)
+  license: Unknown
+  license_filtering: []
+  comment: 'CC-BY-4.0 by site policy'
+
+- dataset: Argimi Finance 10K
+  modality: image-text
+  stage: [Cooldown]
+  processing: [argimi_finance_10k/]
+  upstream: https://huggingface.co/datasets/artefactory/Argimi-Ardian-Finance-10k-text-image/tree/d019db455ff58bc14cae72422c4fc3ef0c301ea7
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: DailyMed SPL
+  modality: image-text
+  stage: [Cooldown]
+  processing: [dailymed/, dailymed_spl/]
+  upstream: https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm
+  license: Unknown
+  license_filtering: []
+  comment: 'FDA / US-government public-domain records, the whole release is non-NC/SA, no license filtering needed'
+
+- dataset: Innovator-VL-Instruct-46M
+  modality: image-text
+  stage: [SFT]
+  processing: [innovator/, innovator_vl/, sft/download_innovator_vl_46m.slurm]
+  upstream: https://huggingface.co/datasets/InnovatorLab/Innovator-VL-Instruct-46M
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: SenseNova-SI-8M
+  modality: image-text
+  stage: [SFT]
+  processing: [sensenova_si_8m/]
+  upstream: https://huggingface.co/datasets/sensenova/SenseNova-SI-8M
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Nemotron-Image-Training-v3
+  modality: image-text
+  stage: [SFT]
+  processing: [nemotron/, nemotron_image_training_v3/]
+  upstream: https://huggingface.co/datasets/nvidia/Nemotron-Image-Training-v3
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MapTrace (SFT)
+  modality: image-text
+  stage: [SFT]
+  processing: [maptrace/]
+  upstream: https://huggingface.co/datasets/google/MapTrace/tree/8dd60adfde2f189768f27204c78ec44af07a67bf
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: BigEarthNet (SFT)
+  modality: image-text
+  stage: [SFT]
+  processing: [sft/download_bigearthnet.slurm]
+  upstream: https://huggingface.co/datasets/BIFOLD-BigEarthNetv2-0/BigEarthNet.txt
+  license: CDLA-Permissive-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Google RSRCC
+  modality: image-text
+  stage: [SFT]
+  processing: [google_rsrcc/]
+  upstream: https://huggingface.co/datasets/google/RSRCC
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MolmoPoint-GUISyn
+  modality: image-text
+  stage: [SFT]
+  processing: [molmopoint_guisyn/]
+  upstream: https://huggingface.co/datasets/allenai/MolmoPoint-GUISyn
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: VDR Cooking Recipes
+  modality: image-text
+  stage: [SFT]
+  processing: [sft/download_vdr_cooking.slurm]
+  upstream: https://huggingface.co/datasets/racineai/VDR_Cooking_Recipes
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: TCM Shizhen (SFT)
+  modality: image-text
+  stage: [SFT]
+  processing: [sft/download_tcm_shizhen.slurm]
+  upstream: https://huggingface.co/datasets/FreedomIntelligence/TCM-Instruction-Tuning-ShizhenGPT
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: PixMo Ask Model Anything
+  modality: image-text
+  stage: [SFT]
+  processing: [pixmo/, ../preprocessing/]
+  upstream: https://huggingface.co/datasets/allenai/pixmo-ask-model-anything
+  license: ODC-By-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Path-VQA
+  modality: image-text
+  stage: [SFT]
+  processing: [sft/download_pathvqa.slurm]
+  upstream: https://huggingface.co/datasets/flaviagiammarino/path-vqa
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: Molmo2 MultiImageQA (SFT)
+  modality: image-text
+  stage: [SFT]
+  processing: [sft/download_molmo2_multiimage.slurm]
+  upstream: https://huggingface.co/datasets/allenai/Molmo2-MultiImageQA/tree/f47ca3644d394b548be07a68d5a6fc0275924f08
+  license: ODC-By-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Molmo2 SynMultiImageQA (SFT)
+  modality: image-text
+  stage: [SFT]
+  processing: [molmo2/, molmo2_synmultiimageqa/]
+  upstream: https://huggingface.co/datasets/allenai/Molmo2-SynMultiImageQA
+  license: ODC-By-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: GMAI-VL (permissive)
+  modality: image-text
+  stage: [SFT]
+  processing: [gmai/]
+  upstream: https://huggingface.co/datasets/General-Medical-AI/GMAI-VL-5.5M
+  license: Mixed
+  license_filtering: [gmai/]
+  comment: 'from the 14 GMAI-VL-5.5M-OpenSource subsets, kept only TotalSegmentator_v2, crc100k (NCT-CRC-HE-100K), PAD-UFES-20 (all CC-BY-4.0), other non-permissive subsets dropped'
+
+- dataset: PubMedVision
+  modality: image-text
+  stage: [SFT]
+  processing: [pubmedvision/]
+  upstream: https://huggingface.co/datasets/FreedomIntelligence/PubMedVision
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: LLaVA-OneVision2 Spatial (OSD + RoboRef Sim)
+  modality: image-text
+  stage: [SFT]
+  processing: [llava_onevision2_spatial/]
+  upstream: https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-2-Data/tree/e73747a5
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FineVision - lnqa_recap
+  modality: image-text
+  stage: [SFT]
+  processing: [finevision/redistill_lnqa.py]
+  upstream: https://huggingface.co/datasets/HuggingFaceM4/FineVision
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FineVision - CoSyn_400k
+  modality: image-text
+  stage: [SFT]
+  processing: [finevision/]
+  upstream: https://huggingface.co/datasets/HuggingFaceM4/FineVision
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FineVision - mmevol (judged)
+  modality: image-text
+  stage: [SFT]
+  processing: [finevision/redistill_mmevol_hybrid.py]
+  upstream: https://huggingface.co/datasets/HuggingFaceM4/FineVision
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FineVision - multihiertt
+  modality: image-text
+  stage: [SFT]
+  processing: [finevision/clean_multihiertt.py]
+  upstream: https://huggingface.co/datasets/HuggingFaceM4/FineVision
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FineVision - memotion (recap_en)
+  modality: image-text
+  stage: [SFT]
+  processing: [finevision/redistill_memotion_qwen.py]
+  upstream: https://huggingface.co/datasets/HuggingFaceM4/FineVision
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FineVision - chinesememe (recap_en)
+  modality: image-text
+  stage: [SFT]
+  processing: [finevision/redistill_chinesememe_qwen.py]
+  upstream: https://huggingface.co/datasets/HuggingFaceM4/FineVision
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: FineVision - spatialsense (gold)
+  modality: image-text
+  stage: [SFT]
+  processing: [finevision/redistill_spatialsense_gold.py]
+  upstream: https://huggingface.co/datasets/HuggingFaceM4/FineVision
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: LLaVA-OV Permissive
+  modality: image-text
+  stage: [SFT]
+  processing: []
+  upstream: https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Instruct-Data
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: PixMo Cap QA
+  modality: image-text
+  stage: [SFT]
+  processing: [pixmo/]
+  upstream: https://huggingface.co/datasets/allenai/pixmo-cap
+  license: ODC-By-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: PixMo Point Explanations (SFT)
+  modality: image-text
+  stage: [SFT]
+  processing: [pixmo/]
+  upstream: https://huggingface.co/datasets/allenai/pixmo-point-explanations
+  license: ODC-By-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: AudioSet (balanced + unbalanced)
+  modality: audio
+  stage: [Stage 1]
+  processing: [audio_set/]
+  upstream: https://huggingface.co/datasets/agkphysics/AudioSet
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MTG-Jamendo
+  modality: audio
+  stage: [Stage 1]
+  processing: [mtg_jamendo/]
+  upstream: https://huggingface.co/datasets/rkstgr/mtg-jamendo
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Suno
+  modality: audio
+  stage: [Stage 1]
+  processing: [suno/]
+  upstream: https://huggingface.co/datasets/nyuuzyou/suno
+  license: CC-BY-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: CommonVoice 24
+  modality: audio
+  stage: [Stage 1]
+  processing: [commonvoice/]
+  upstream: https://commonvoice.mozilla.org/
+  license: CC0-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Unsupervised People's Speech
+  modality: audio
+  stage: [Stage 1]
+  processing: [peoples_speech/]
+  upstream: https://huggingface.co/datasets/MLCommons/unsupervised_peoples_speech
+  license: CC-BY-SA, CC-BY
+  license_filtering: [peoples_speech/unsupervised/license_filter.py, peoples_speech/unsupervised/generate_commercial_ids.py]
+  comment: 'generate_commercial_ids.py selects archive IDs with commercial-use licenses (PD/CC0/US-Gov/CC-BY, excluding SA/NC), license_filter.py rewrites the shards to keep only those samples'
+
+- dataset: VoxPopuli
+  modality: audio
+  stage: [Stage 1]
+  processing: [voxpopuli/]
+  upstream: https://github.com/facebookresearch/voxpopuli
+  license: Mixed, CC0-1.0
+  license_filtering: []
+  comment: 'uses only the CC0 raw-audio "VoxPopuli Data" tarballs, the other subsets under other terms are excluded'
+
+- dataset: Gemeinderat Zurich
+  modality: audio
+  stage: [Stage 1]
+  processing: []
+  upstream: https://www.cs.technik.fhnw.ch/i4ds-datasets
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: AISHELL-1/3/4
+  modality: audio
+  stage: [Stage 2]
+  processing: [aishell/, aishell4/]
+  upstream: https://www.openslr.org/33/
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Zeroth Korean
+  modality: audio
+  stage: [Stage 2]
+  processing: [zeroth_korean/]
+  upstream: https://huggingface.co/datasets/Bingsu/zeroth-korean
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: People's Speech (supervised)
+  modality: audio
+  stage: [Stage 2]
+  processing: [peoples_speech/]
+  upstream: https://huggingface.co/datasets/MLCommons/peoples_speech
+  license: CC-BY-SA, CC-BY
+  license_filtering: []
+  comment: 'uses only the CC-BY configs (clean + dirty), the CC-BY-SA subsets (clean_sa/dirty_sa) are excluded'
+
+- dataset: SPC-R
+  modality: audio
+  stage: [Stage 2]
+  processing: [spc_r_segmented/]
+  upstream: https://huggingface.co/datasets/i4ds/spc_r
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: WenetSpeech
+  modality: audio
+  stage: [Stage 2]
+  processing: [wenetspeech/]
+  upstream: https://huggingface.co/datasets/wenet-e2e/wenetspeech
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: CommonVoice (48-lang, Stage 2)
+  modality: audio
+  stage: [Stage 2]
+  processing: [commonvoice/]
+  upstream: https://commonvoice.mozilla.org/
+  license: CC0-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: GigaSpeech
+  modality: audio
+  stage: [Stage 2]
+  processing: [gigaspeech/]
+  upstream: https://huggingface.co/datasets/speechcolab/gigaspeech
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: GigaSpeech 2
+  modality: audio
+  stage: [Stage 2]
+  processing: [gigaspeech2/]
+  upstream: https://huggingface.co/datasets/speechcolab/gigaspeech2
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: OmniLingual ASR
+  modality: audio
+  stage: [Stage 2]
+  processing: [omnilingual_asr/]
+  upstream: https://huggingface.co/datasets/facebook/omnilingual-asr-corpus
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: EuroSpeech
+  modality: audio
+  stage: [Stage 2]
+  processing: [eurospeech/]
+  upstream: https://huggingface.co/datasets/disco-eth/EuroSpeech
+  license: Mixed
+  license_filtering: [eurospeech/download_permissive.slurm]
+  comment: 'download_permissive.slurm downloads only the 5 countries whose parliamentary license is non-NC/SA (Italy CC-BY-4.0, UK OGL-3.0, Bulgaria CC-BY-2.5, France Licence Ouverte, Norway NLOD-2.0)'
+
+- dataset: Granary (YODAS, YTC, VoxPopuli, others)
+  modality: audio
+  stage: [Stage 2]
+  processing: [granary/]
+  upstream: https://huggingface.co/datasets/espnet/yodas-granary
+  license: CC-BY-3.0
+  license_filtering: []
+  comment: ''
+
+- dataset: ParlaSpeech-RS
+  modality: audio
+  stage: [Stage 2]
+  processing: [parlaspeech_rs/]
+  upstream: https://huggingface.co/datasets/classla/ParlaSpeech-RS
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: ParlaMent Parla
+  modality: audio
+  stage: [Stage 2]
+  processing: [parlament_parla/]
+  upstream: https://huggingface.co/datasets/projecte-aina/parlament_parla_v3
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: SeamlessAlign
+  modality: audio
+  stage: [Stage 2]
+  processing: [seamless_align/]
+  upstream: https://huggingface.co/datasets/ai4bharat/SeamlessAlign
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Kathbath
+  modality: audio
+  stage: [Stage 2]
+  processing: [kathbath/]
+  upstream: https://huggingface.co/datasets/ai4bharat/Kathbath
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Coral V3
+  modality: audio
+  stage: [Stage 2]
+  processing: [coral/]
+  upstream: https://huggingface.co/datasets/CoRal-project/coral-v3
+  license: OpenRAIL
+  license_filtering: []
+  comment: 'commercial use allowed, non-NC/SA, taken as-is, no filtering'
+
+- dataset: LegCo Speech
+  modality: audio
+  stage: [Stage 2]
+  processing: [legco_speech/]
+  upstream: https://huggingface.co/datasets/laubonghaudoi/legco-speech
+  license: CC-BY-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MultiMed
+  modality: audio
+  stage: [Stage 2]
+  processing: [multimed/]
+  upstream: https://huggingface.co/datasets/leduckhai/MultiMed
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: LibriHeavy
+  modality: audio
+  stage: [Stage 2]
+  processing: [libriheavy/]
+  upstream: https://huggingface.co/datasets/mythicinfinity/libriheavy
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: VietSpeech
+  modality: audio
+  stage: [Stage 2]
+  processing: [vietspeech/]
+  upstream: https://huggingface.co/datasets/NhutP/VietSpeech
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Infore2 Audiobooks
+  modality: audio
+  stage: [Stage 2]
+  processing: [infore2_audiobooks/]
+  upstream: https://huggingface.co/datasets/doof-ferb/infore2_audiobooks
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: ViMedCSS
+  modality: audio
+  stage: [Stage 2]
+  processing: [vimedcss/]
+  upstream: https://huggingface.co/datasets/tensorxt/ViMedCSS
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Kazakh Speech
+  modality: audio
+  stage: [Stage 2]
+  processing: [kazakh/, kazakh_speech/]
+  upstream: https://huggingface.co/datasets/Flamme-VRM/kazakh-speech-dataset
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MLS
+  modality: audio
+  stage: [Stage 2]
+  processing: [mls/]
+  upstream: https://huggingface.co/datasets/facebook/multilingual_librispeech
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: F1 Team Radio
+  modality: audio
+  stage: [Stage 2]
+  processing: [f1_team_radio/]
+  upstream: https://huggingface.co/datasets/MikCil/f1-team-radio
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Zoengjyutgaai
+  modality: audio
+  stage: [Stage 2]
+  processing: [zoengjyutgaai/]
+  upstream: https://huggingface.co/datasets/CanCLID/zoengjyutgaai
+  license: CC-BY-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Emilia/YODAS
+  modality: audio
+  stage: [Stage 2]
+  processing: [Emilia_YODAS/]
+  upstream: https://huggingface.co/datasets/amphion/Emilia-Dataset
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: HUI-Audio-Corpus-German
+  modality: audio
+  stage: [Stage 2]
+  processing: [hui_audio_corpus_german/, hui_audio_german/]
+  upstream: https://opendata.iisys.de/opendata/Datasets/HUI-Audio-Corpus-German
+  license: CC0-1.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Russian LibriSpeech
+  modality: audio
+  stage: [Cooldown]
+  processing: [russian_librispeech/]
+  upstream: https://www.openslr.org/96/
+  license: Public Domain
+  license_filtering: []
+  comment: ''
+
+- dataset: SloPalSpeech
+  modality: audio
+  stage: [Cooldown]
+  processing: [slopalspeech/]
+  upstream: https://huggingface.co/datasets/NaiveNeuron/SloPalSpeech
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: ToneWebinars
+  modality: audio
+  stage: [Cooldown]
+  processing: [tonewebinars/]
+  upstream: https://huggingface.co/datasets/Vikhrmodels/ToneWebinars
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Tuda-De
+  modality: audio
+  stage: [Cooldown]
+  processing: [tuda_de/]
+  upstream: https://huggingface.co/datasets/uhhlt/Tuda-De
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MediaSpeech
+  modality: audio
+  stage: [Cooldown]
+  processing: [mediaspeech/, openslr108_mediaspeech/]
+  upstream: https://www.openslr.org/108/
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Farsi ASR
+  modality: audio
+  stage: [Cooldown]
+  processing: [farsi_asr/]
+  upstream: https://huggingface.co/datasets/farsi-asr/farsi-asr-dataset
+  license: MIT
+  license_filtering: []
+  comment: ''
+
+- dataset: Aozora Hurigana
+  modality: audio
+  stage: [Cooldown]
+  processing: [aozora_hurigana/]
+  upstream: https://github.com/ndl-lab/hurigana-speech-corpus-aozora
+  license: Public Domain Mark
+  license_filtering: []
+  comment: ''
+
+- dataset: Ghana English Speech
+  modality: audio
+  stage: [Cooldown]
+  processing: [ghana_english/]
+  upstream: https://huggingface.co/datasets/ghananlpcommunity/ghana-english-speech-600hrs
+  license: CC-BY-4.0, CC-BY-NC-4.0
+  license_filtering: []
+  comment: 'CC-BY-4.0 at ingestion, relicensed to NC after (inclusion predates the change): [relicense commit](https://huggingface.co/datasets/ghananlpcommunity/ghana-english-speech-600hrs/commit/8f300b3dedb3d90dbe1af3dcd90d3b55aacbf29a)'
+
+- dataset: CC-Podcasts
+  modality: audio
+  stage: [Cooldown]
+  processing: [ccpodcasts/]
+  upstream: https://huggingface.co/datasets/shuyuej/CC-Podcasts
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Localized Narratives (audio)
+  modality: audio
+  stage: [Cooldown]
+  processing: [localized_narratives/]
+  upstream: https://storage.googleapis.com/localized-narratives
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: MRSAudio
+  modality: audio
+  stage: [Stage 2]
+  processing: [mrsaudio/]
+  upstream: https://huggingface.co/datasets/MRSAudio/MRSAudio
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Marco Longspeech
+  modality: audio
+  stage: [SFT]
+  processing: [marco_longspeech/]
+  upstream: https://huggingface.co/datasets/AIDC-AI/Marco_Longspeech
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: AudioMCQ StrongAC GeminiCoT
+  modality: audio
+  stage: [SFT]
+  processing: [audiomcq_strongac_cot/]
+  upstream: https://huggingface.co/datasets/Harland/AudioMCQ-StrongAC-GeminiCoT
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: TeleAntiFraud
+  modality: audio
+  stage: [SFT]
+  processing: [teleantifraud/]
+  upstream: https://huggingface.co/datasets/JimmyMa99/TeleAntiFraud
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: VoiceAssistant-400K
+  modality: audio
+  stage: [SFT]
+  processing: [voiceassistant_400k/]
+  upstream: https://huggingface.co/datasets/gpt-omni/VoiceAssistant-400K
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: HeySQuAD (human + machine)
+  modality: audio
+  stage: [SFT]
+  processing: [heysquad/]
+  upstream: https://huggingface.co/datasets/yijingwu/HeySQuAD_human
+  license: CC-BY-4.0
+  license_filtering: []
+  comment: ''
+
+- dataset: TCM Shizhen Speech (SFT)
+  modality: audio
+  stage: [SFT]
+  processing: []
+  upstream: https://huggingface.co/datasets/FreedomIntelligence/TCM-Instruction-Tuning-ShizhenGPT
+  license: Apache-2.0
+  license_filtering: []
+  comment: ''
+
+- dataset: Vocalized SFT
+  modality: audio
+  stage: [SFT]
+  processing: [vocalized__sft/]
+  upstream: https://huggingface.co/datasets/swiss-ai/vocalized-sft (internal)
+  license: Apache-2.0
+  license_filtering: []
+  comment: 'in-house generated, Qwen3-TTS vocalization of the already-permissive text-SFT mix (license inherits from the non-NC/SA text sources)'

@@ -98,7 +98,7 @@ logs/
 # Data files (must NOT be committed to a code repository)
 # ---------------------------------------------------------------------------
 # Tabular
-*.parquet
+# *.parquet
 *.csv
 *.tsv
 
