@@ -167,7 +167,7 @@
   upstream: https://huggingface.co/datasets/UCSC-VLAA/MedTrinity-25M/tree/89e5c684794e5c4cc1af9e8f1a7798af7c937dbf
   license: Mixed
   license_filtering: [../medical/adapters/medtrinity.py]
-  comment: 'kept only rows whose `source` is in `allowed_sources` list (deeplesion, brats, pmc_oa, NCT-CRC-HE-100K, nih_chest, ...)'
+  comment: 'kept only rows whose `source` is in `allowed_sources` list (deeplesion, brats, pmc_oa, NCT-CRC-HE-100K, nih_chest, ...), click-accept on HF'
 
 - dataset: OpenPMC-18M
   modality: image
@@ -446,7 +446,7 @@
   upstream: https://huggingface.co/datasets/liboaccn/MIT-10M/tree/bcba6b2651771c69f93e000486c2baa0896d32c3
   license: Apache-2.0
   license_filtering: []
-  comment: ''
+  comment: 'click-accept on HF'
 
 - dataset: PixMo-Cap
   modality: image-text
@@ -1047,9 +1047,9 @@
   stage: [Stage 2]
   processing: [wenetspeech/]
   upstream: https://huggingface.co/datasets/wenet-e2e/wenetspeech
-  license: CC-BY-4.0
+  license: CC-BY-4.0, NC
   license_filtering: []
-  comment: ''
+  comment: 'requires filing an application form and aggreeing to addiional ToA on HF'
 
 - dataset: CommonVoice (48-lang, Stage 2)
   modality: audio
@@ -1065,18 +1065,18 @@
   stage: [Stage 2]
   processing: [gigaspeech/]
   upstream: https://huggingface.co/datasets/speechcolab/gigaspeech
-  license: Apache-2.0
+  license: Apache-2.0, NC
   license_filtering: []
-  comment: ''
+  comment: 'requires aggreeing to addiional ToA on HF'
 
 - dataset: GigaSpeech 2
   modality: audio
   stage: [Stage 2]
   processing: [gigaspeech2/]
   upstream: https://huggingface.co/datasets/speechcolab/gigaspeech2
-  license: Apache-2.0
+  license: Apache-2.0, NC
   license_filtering: []
-  comment: ''
+  comment: 'requires aggreeing to addiional ToA on HF'
 
 - dataset: OmniLingual ASR
   modality: audio
@@ -1130,7 +1130,7 @@
   upstream: https://huggingface.co/datasets/ai4bharat/SeamlessAlign
   license: CC-BY-4.0
   license_filtering: []
-  comment: ''
+  comment: 'requires click-accept on HF'
 
 - dataset: Kathbath
   modality: audio
@@ -1139,7 +1139,7 @@
   upstream: https://huggingface.co/datasets/ai4bharat/Kathbath
   license: CC-BY-4.0
   license_filtering: []
-  comment: ''
+  comment: 'requires click-accept on HF'
 
 - dataset: Coral V3
   modality: audio
@@ -1148,7 +1148,7 @@
   upstream: https://huggingface.co/datasets/CoRal-project/coral-v3
   license: OpenRAIL
   license_filtering: []
-  comment: 'commercial use allowed, non-NC/SA, taken as-is, no filtering'
+  comment: 'commercial use allowed, non-NC/SA, taken as-is, no filtering, requires click-accept on HF'
 
 - dataset: LegCo Speech
   modality: audio
@@ -1184,7 +1184,7 @@
   upstream: https://huggingface.co/datasets/NhutP/VietSpeech
   license: Apache-2.0
   license_filtering: []
-  comment: ''
+  comment: 'requires click-accept on HF'
 
 - dataset: Infore2 Audiobooks
   modality: audio
@@ -1247,7 +1247,7 @@
   upstream: https://huggingface.co/datasets/amphion/Emilia-Dataset
   license: CC-BY-4.0
   license_filtering: []
-  comment: ''
+  comment: 'requires click-accept on HF'
 
 - dataset: HUI-Audio-Corpus-German
   modality: audio
@@ -1382,7 +1382,7 @@
   upstream: https://huggingface.co/datasets/JimmyMa99/TeleAntiFraud
   license: Apache-2.0
   license_filtering: []
-  comment: ''
+  comment: 'requires click-accept on HF'
 
 - dataset: VoiceAssistant-400K
   modality: audio
