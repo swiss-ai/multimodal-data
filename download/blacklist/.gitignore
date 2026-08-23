@@ -1,0 +1,8 @@
+blocked_ip.txt
+blocked_domains.txt
+blocked_urls.txt
+blocked_url_paths.txt
+manifest.json
+
+.ruff_cache/
+__pycache__/
