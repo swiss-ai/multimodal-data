@@ -1,0 +1,572 @@
+{
+  "built_at_utc": "2026-08-23T17:09:29Z",
+  "feeds": [
+    {
+      "bytes": 2804671,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 50872,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-1d.ipv4",
+      "name": "abuseipdb_s100_1d_ipv4",
+      "requested_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-1d.ipv4",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 40171,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 609,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://reputation.alienvault.com/reputation.generic",
+      "name": "alienvault_reputation_generic",
+      "requested_url": "https://reputation.alienvault.com/reputation.generic",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 42024,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 2918,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://www.binarydefense.com/banlist.txt",
+      "name": "binarydefense_banlist",
+      "requested_url": "https://www.binarydefense.com/banlist.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 73788,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 4629,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset",
+      "name": "firehol_level1",
+      "requested_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 2128213,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 148084,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_abusers_30d.netset",
+      "name": "firehol_abusers_30d",
+      "requested_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_abusers_30d.netset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 6168,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 373,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webclient.netset",
+      "name": "firehol_webclient",
+      "requested_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webclient.netset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 21892,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 1452,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webserver.netset",
+      "name": "firehol_webserver",
+      "requested_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_webserver.netset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 112825,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 7964,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://iplists.firehol.org/files/bitcoin_nodes_1d.ipset",
+      "name": "firehol_bitcoin_nodes_1d",
+      "requested_url": "https://iplists.firehol.org/files/bitcoin_nodes_1d.ipset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 802629,
+      "counts": {
+        "domains": 18146,
+        "ip_networks": 0,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/stamparm/blackbook/master/blackbook.csv",
+      "name": "stamparm_blackbook",
+      "requested_url": "https://raw.githubusercontent.com/stamparm/blackbook/master/blackbook.csv",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 168497,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 11685,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://blackhole.monster/blackhole-today",
+      "name": "blackhole_monster_today",
+      "requested_url": "https://blackhole.monster/blackhole-today",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 389611,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 26762,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://lists.blocklist.de/lists/all.txt",
+      "name": "blocklist_de_all",
+      "requested_url": "https://lists.blocklist.de/lists/all.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 4745,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 249,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/botscout_1d.ipset",
+      "name": "firehol_botscout_1d",
+      "requested_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/botscout_1d.ipset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 26834,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 552,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://danger.rulez.sk/projects/bruteforceblocker/blist.php",
+      "name": "danger_rulez_bruteforceblocker",
+      "requested_url": "https://danger.rulez.sk/projects/bruteforceblocker/blist.php",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 214471,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 15000,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://cinsscore.com/list/ci-badguys.txt",
+      "name": "cinsscore_badguys",
+      "requested_url": "https://cinsscore.com/list/ci-badguys.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 27621,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 1900,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://iplists.firehol.org/files/cleantalk_1d.ipset",
+      "name": "firehol_cleantalk_1d",
+      "requested_url": "https://iplists.firehol.org/files/cleantalk_1d.ipset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 390494,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 8011,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/fox-it/cobaltstrike-extraneous-space/master/cobaltstrike-servers.csv",
+      "name": "foxit_cobaltstrike_servers",
+      "requested_url": "https://raw.githubusercontent.com/fox-it/cobaltstrike-extraneous-space/master/cobaltstrike-servers.csv",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 14971,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 1000,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://iplists.firehol.org/files/dshield_top_1000.ipset",
+      "name": "firehol_dshield_top_1000",
+      "requested_url": "https://iplists.firehol.org/files/dshield_top_1000.ipset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 4711,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 5,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://rules.emergingthreats.net/open/suricata/rules/botcc.rules",
+      "name": "emergingthreats_botcc_rules",
+      "requested_url": "https://rules.emergingthreats.net/open/suricata/rules/botcc.rules",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 7669,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 544,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://rules.emergingthreats.net/open/suricata/rules/compromised-ips.txt",
+      "name": "emergingthreats_compromised_ips",
+      "requested_url": "https://rules.emergingthreats.net/open/suricata/rules/compromised-ips.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 17467766,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 13,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://rules.emergingthreats.net/open/suricata/rules/emerging-malware.rules",
+      "name": "emergingthreats_emerging_malware_rules",
+      "requested_url": "https://rules.emergingthreats.net/open/suricata/rules/emerging-malware.rules",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 23817,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 1578,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://iplists.firehol.org/files/gpf_comics.ipset",
+      "name": "firehol_gpf_comics",
+      "requested_url": "https://iplists.firehol.org/files/gpf_comics.ipset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 36957,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 2581,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://blocklist.greensnow.co/greensnow.txt",
+      "name": "greensnow_blacklist",
+      "requested_url": "https://blocklist.greensnow.co/greensnow.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 511,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 31,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://www.sekuripy.hr/blacklist.txt",
+      "name": "sekuripy_blacklist",
+      "requested_url": "https://www.sekuripy.hr/blacklist.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 9271,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 583,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://iplists.firehol.org/files/maxmind_proxy_fraud.ipset",
+      "name": "firehol_maxmind_proxy_fraud",
+      "requested_url": "https://iplists.firehol.org/files/maxmind_proxy_fraud.ipset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 738,
+      "counts": {
+        "domains": 39,
+        "ip_networks": 0,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/Hestat/minerchk/master/hostslist.txt",
+      "name": "minerchk_hostslist",
+      "requested_url": "https://raw.githubusercontent.com/Hestat/minerchk/master/hostslist.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 11075,
+      "counts": {
+        "domains": 368,
+        "ip_networks": 0,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://urlhaus.abuse.ch/downloads/hostfile/",
+      "name": "urlhaus_hostfile",
+      "requested_url": "https://urlhaus.abuse.ch/downloads/hostfile/",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 42136,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 1691,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://myip.ms/files/blacklist/htaccess/latest_blacklist.txt",
+      "name": "myip_ms_latest_blacklist",
+      "requested_url": "https://myip.ms/files/blacklist/htaccess/latest_blacklist.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 17143,
+      "counts": {
+        "domains": 224,
+        "ip_networks": 0,
+        "url_path_regexes": 0,
+        "url_regexes": 300
+      },
+      "fetched_url": "https://openphish.com/feed.txt",
+      "name": "openphish_feed",
+      "requested_url": "https://openphish.com/feed.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 528651,
+      "counts": {
+        "domains": 28042,
+        "ip_networks": 0,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/futpib/policeman-rulesets/master/examples/simple_domains_blacklist.txt",
+      "name": "policeman_simple_domains_blacklist",
+      "requested_url": "https://raw.githubusercontent.com/futpib/policeman-rulesets/master/examples/simple_domains_blacklist.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 25568,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 1785,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://report.cs.rutgers.edu/DROP/attackers",
+      "name": "rutgers_drop_attackers",
+      "requested_url": "https://report.cs.rutgers.edu/DROP/attackers",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 13684,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 938,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://sblam.com/blacklist.txt",
+      "name": "sblam_blacklist",
+      "requested_url": "https://sblam.com/blacklist.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 36511,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 2567,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/scriptzteam/badIPS/main/ips.txt",
+      "name": "scriptzteam_badips",
+      "requested_url": "https://raw.githubusercontent.com/scriptzteam/badIPS/main/ips.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 37202,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 2545,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/socks_proxy_7d.ipset",
+      "name": "firehol_socks_proxy_7d",
+      "requested_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/socks_proxy_7d.ipset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 5511,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 334,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/sslproxies_1d.ipset",
+      "name": "firehol_sslproxies_1d",
+      "requested_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/sslproxies_1d.ipset",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 80995524,
+      "counts": {
+        "domains": 1159946,
+        "ip_networks": 190819,
+        "url_path_regexes": 92106,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-static-trails.txt",
+      "name": "stamparm_maltrail_static_trails",
+      "requested_url": "https://raw.githubusercontent.com/stamparm/aux/master/maltrail-static-trails.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 19777,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 1395,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=1.1.1.1",
+      "name": "tor_bulk_exit_list",
+      "requested_url": "https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=1.1.1.1",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 245178,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 9620,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://view.sentinel.turris.cz/greylist-data/greylist-latest.csv",
+      "name": "turris_greylist_latest",
+      "requested_url": "https://view.sentinel.turris.cz/greylist-data/greylist-latest.csv",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 3241259,
+      "counts": {
+        "domains": 5507,
+        "ip_networks": 13384,
+        "url_path_regexes": 0,
+        "url_regexes": 62762
+      },
+      "fetched_url": "https://urlhaus.abuse.ch/downloads/text/",
+      "name": "urlhaus_text_urls",
+      "requested_url": "https://urlhaus.abuse.ch/downloads/text/",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 2841,
+      "counts": {
+        "domains": 0,
+        "ip_networks": 92,
+        "url_path_regexes": 0,
+        "url_regexes": 0
+      },
+      "fetched_url": "https://www.spamhaus.org/drop/dropv6.txt",
+      "name": "spamhaus_dropv6",
+      "requested_url": "https://www.spamhaus.org/drop/dropv6.txt",
+      "transport": "https",
+      "warnings": []
+    },
+    {
+      "bytes": 977990,
+      "counts": {
+        "domains": 4945,
+        "ip_networks": 8069,
+        "url_path_regexes": 0,
+        "url_regexes": 13073
+      },
+      "fetched_url": "https://tracker.viriback.com/dump.php",
+      "name": "viriback_dump",
+      "requested_url": "https://tracker.viriback.com/dump.php",
+      "transport": "https",
+      "warnings": []
+    }
+  ],
+  "totals": {
+    "blocked_domains.txt": 905676,
+    "blocked_ip.txt": 401711,
+    "blocked_url_paths.txt": 92106,
+    "blocked_urls.txt": 76135
+  },
+  "warnings": []
+}
